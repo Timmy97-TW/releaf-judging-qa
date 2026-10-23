@@ -24,6 +24,9 @@ tiles: [
   { href: 'dayof.html', title_en: 'Day Sheet', title_zh: '當天流程',
     blurb_en: 'Taipei to Paris, the 11:30 arrival, the laptop and the cable, and who stands where in room J03.',
     blurb_zh: '從台北到巴黎、11:30 到場、筆電與網路線，以及 J03 會談室裡誰站哪裡。' },
+  { href: 'timeline.html', title_en: 'The Year in Evidence', title_zh: '一年的證據',
+    blurb_en: 'The dated results in the order they happened, with the figure each one produced. Learn the month, not the date.',
+    blurb_zh: '有日期的結果，依發生順序排列，並附上當時產出的圖。記月份，不要記日期。' },
   { href: 'facts.html#gaps', title_en: 'The Honest List', title_zh: '誠實清單',
     blurb_en: 'The places where your own pages disagree, or claim more than the data shows. Judges find these. Get there first.',
     blurb_zh: '你們頁面彼此矛盾、或說得比數據更多的地方。評審會找到，你們要先找到。' }

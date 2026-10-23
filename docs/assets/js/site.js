@@ -10,7 +10,8 @@
     { href: 'seats.html',    en: 'Mic Map',      zh: '麥克風地圖' },
     { href: 'delivery.html', en: 'Delivery',     zh: '答題技巧' },
     { href: 'opening.html',  en: 'Opening Five', zh: '五分鐘開場' },
-    { href: 'dayof.html',    en: 'Day Sheet',    zh: '當天流程' }
+    { href: 'dayof.html',    en: 'Day Sheet',    zh: '當天流程' },
+    { href: 'timeline.html', en: 'Timeline',     zh: '時間軸' }
   ];
 
   var LEAF = '<svg class="leaf" viewBox="0 0 24 24" fill="none" aria-hidden="true">' +
