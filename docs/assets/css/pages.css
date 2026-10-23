@@ -146,21 +146,91 @@ mark { background: #fff2a8; color: inherit; border-radius: 3px; padding: 0 1px; 
 .arrow { color: var(--faint); }
 
 /* ── Delivery ── */
-.shape { counter-reset: s; display: grid; gap: .6rem; }
-.shape li { counter-increment: s; list-style: none; display: grid; grid-template-columns: auto minmax(0,1fr); gap: 1rem;
-  background: var(--paper-3); border-radius: var(--r); padding: 1rem 1.15rem; border: 1px solid var(--rule-soft); }
-.shape li::before { content: counter(s); font-family: var(--font-mono); color: var(--accent); font-size: .875rem; }
-.shape b { display: block; margin-bottom: .2rem; }
-.shape span { font-size: .9375rem; color: var(--ink-2); }
 
-.ph-group { margin-top: 1.5rem; }
-.ph-group h4 { color: var(--accent-deep); font-size: .75rem; text-transform: uppercase; letter-spacing: .05em; margin-bottom: .6rem; }
-.ph-group ul { list-style: none; padding: 0; margin: 0; display: grid; gap: .4rem; }
-.ph-group li { background: var(--paper-2); border-radius: var(--r-sm); padding: .6rem .85rem; font-size: .9375rem; }
+/* the five-part shape, as a rail of numbered steps */
+.shape { counter-reset: s; list-style: none; padding: 0; margin: 0; }
+.shape li {
+  counter-increment: s;
+  display: grid; grid-template-columns: 3.25rem minmax(0, 1fr); gap: 0 1.5rem;
+  padding: 1.6rem 0; border-top: 1px solid var(--rule-soft);
+}
+.shape li:first-child { border-top: 0; padding-top: .5rem; }
+.shape li::before {
+  content: counter(s, decimal-leading-zero);
+  grid-row: 1 / span 2;
+  font-family: var(--font-display); font-size: 1.5rem; font-weight: 500;
+  letter-spacing: -.03em; color: var(--rule-2, #b9b9c0); line-height: 1.15;
+  font-variant-numeric: tabular-nums;
+}
+.shape b { font-size: 1.1875rem; font-weight: 600; letter-spacing: -.018em; line-height: 1.25; }
+.shape span { font-size: 1rem; color: var(--muted); line-height: 1.55; margin-top: .3rem; }
+@media (max-width: 560px) {
+  .shape li { grid-template-columns: 2.25rem minmax(0, 1fr); gap: 0 1rem; }
+  .shape li::before { font-size: 1.1rem; }
+  .shape b { font-size: 1.0625rem; }
+}
 
-.trap-list { list-style: none; padding: 0; margin: 0; display: grid; gap: .4rem; }
-.trap-list li { display: grid; grid-template-columns: auto 1fr; gap: .7rem; font-size: .9375rem; padding: .55rem 0; border-bottom: 1px solid var(--rule-soft); }
-.trap-list li::before { content: "×"; color: var(--red); font-weight: 700; }
+/* the worked example, tinted by which part of the shape each sentence is */
+.xscript { border: 1px solid var(--rule-soft); border-radius: var(--r-lg); overflow: hidden; }
+.xscript .judge {
+  background: var(--paper-2); padding: 1rem 1.35rem; font-size: .9375rem; color: var(--muted);
+  border-bottom: 1px solid var(--rule-soft);
+}
+.xscript .judge b { color: var(--ink-2); font-weight: 600; }
+.xscript .said { padding: 1.35rem; font-size: 1.0625rem; line-height: 1.75; }
+.xscript .said em { font-style: italic; }
+.said .s1, .said .s2, .said .s3, .said .s4, .said .s5 {
+  border-radius: 4px; padding: .1em .12em; margin: 0 -.12em;
+  box-decoration-break: clone; -webkit-box-decoration-break: clone;
+}
+.said .s1 { background: #f0eefb; }
+.said .s2 { background: #e7f3ec; }
+.said .s3 { background: #e8f1fb; }
+.said .s4 { background: #fdf2e6; }
+.said .s5 { background: #f3f3f5; }
+.xlegend { display: flex; flex-wrap: wrap; gap: .4rem .9rem; padding: 0 1.35rem 1.25rem; }
+.xlegend span { display: inline-flex; align-items: center; gap: .4rem; font-size: .75rem; color: var(--muted); }
+.xlegend i { width: .7rem; height: .7rem; border-radius: 3px; display: block; }
+
+/* phrases */
+.ph-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 1.75rem 2.5rem; }
+.ph-group h4 {
+  font-size: .6875rem; text-transform: uppercase; letter-spacing: .07em; color: var(--faint);
+  font-weight: 600; margin: 0 0 .85rem; padding-bottom: .55rem; border-bottom: 1px solid var(--rule-soft);
+}
+.ph-group ul { list-style: none; padding: 0; margin: 0; display: grid; gap: .85rem; }
+.ph-group li { font-size: 1rem; line-height: 1.5; color: var(--ink-2); position: relative; padding-left: 1.1rem; }
+.ph-group li::before {
+  content: "“"; position: absolute; left: 0; top: .1em;
+  font-family: var(--font-display); font-size: 1.25rem; color: var(--rule-2, #b9b9c0); line-height: 1;
+}
+
+/* do / do not, as two hairline columns */
+.twoup { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem 3rem; }
+.twoup h4 { font-size: 1rem; margin-bottom: .9rem; display: flex; align-items: center; gap: .5rem; }
+.twoup h4 .m { font-size: 1.1rem; line-height: 1; }
+.twoup ul { list-style: none; padding: 0; margin: 0; }
+.twoup li { font-size: .9375rem; color: var(--ink-2); padding: .7rem 0; border-top: 1px solid var(--rule-soft); line-height: 1.5; }
+
+/* numbered habits */
+.habits { counter-reset: h; list-style: none; padding: 0; margin: 0; }
+.habits li {
+  counter-increment: h; display: grid; grid-template-columns: 2rem minmax(0, 1fr); gap: 1rem;
+  font-size: 1rem; color: var(--ink-2); padding: .95rem 0; border-top: 1px solid var(--rule-soft);
+  line-height: 1.5;
+}
+.habits li::before {
+  content: counter(h, decimal-leading-zero);
+  font-family: var(--font-mono); font-size: .75rem; color: var(--faint);
+  padding-top: .25em; font-variant-numeric: tabular-nums;
+}
+
+/* plain check list used on opening / day sheet */
+.trap-list { list-style: none; padding: 0; margin: 0; }
+.trap-list li {
+  display: grid; grid-template-columns: 1.1rem 1fr; gap: .8rem; font-size: 1rem; color: var(--ink-2);
+  padding: .85rem 0; border-top: 1px solid var(--rule-soft); line-height: 1.5;
+}
 
 /* ── Opening / day ── */
 .slide { display: grid; grid-template-columns: minmax(0,1fr) auto; gap: .5rem 1rem; border-top: 1px solid var(--rule-soft); padding: 1.2rem 0; }

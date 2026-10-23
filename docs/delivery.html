@@ -10,10 +10,10 @@
 </head>
 <body>
 
-<header class="hero wrap">
+<header class="hero wrap narrow">
   <p class="eyebrow" data-en="05 · Delivery Lab" data-zh="05 · 答題技巧"></p>
   <h1 data-en="The same answer, scored twice" data-zh="同樣的答案，兩種分數"></h1>
-  <p class="lede" style="max-width:62ch"
+  <p class="lede"
      data-en="Two students can know the same thing and score differently, because one of them answered the question and the other one talked. Shape matters more than vocabulary, and it is the part you can fix in a week."
      data-zh="兩個學生知道同一件事，分數卻不同，因為其中一個回答了問題，另一個只是在講話。結構比詞彙重要，而結構正是一週內能練好的部分。"></p>
 </header>
@@ -21,22 +21,44 @@
 <section class="wrap narrow">
   <div class="sec-head">
     <h2 data-en="The shape of a good answer" data-zh="好答案的形狀"></h2>
-    <p data-en="Sixty to ninety seconds, in this order. Judges hear hundreds of answers; this order is the one that sounds like someone who did the work."
+    <p data-en="Sixty to ninety seconds, in this order. Judges hear hundreds of answers, and this order is the one that sounds like someone who did the work."
        data-zh="六十到九十秒，照這個順序。評審聽過上百個回答，這個順序聽起來最像真的做過事的人。"></p>
   </div>
   <ol class="shape" id="shape"></ol>
+</section>
 
-  <div class="note note-a" style="margin-top:1.5rem">
-    <p style="margin:0 0 .5rem"><strong data-en="Worked example" data-zh="範例"></strong></p>
-    <p style="margin:0" class="only-en">
-      <em>Judge: "How do you know the bacteria stay inside the loop?"</em><br>
-      "The membrane is a 0.2 micrometre hollow fiber, and <em>Bacillus subtilis</em> cells are larger than that, so they cannot cross. We tested it by plating both sides after a run: the lumen plate grew and the shell plate had no colonies. That is two single platings, with no replicate and no detection limit, so I would call it consistent with retention rather than a log reduction. A seven log retention test is the measurement we would run next."
-    </p>
-    <p style="margin:0" class="only-zh">
-      <em>評審：「你們怎麼知道細菌真的留在迴路裡？」</em><br>
-      「薄膜是 0.2 µm 的中空纖維，<em>Bacillus subtilis</em> 的菌體比它大，過不去。我們在一次運轉後把兩側都塗盤：管內側長菌，殼側沒有菌落。那是兩次單一塗盤，沒有重複、也沒有偵測極限，所以我會說它『與截留一致』，而不是 log reduction。下一步要做的量測是七個對數的截留測試。」
-    </p>
+<section class="wrap narrow">
+  <div class="sec-head">
+    <h2 data-en="One answer, taken apart" data-zh="拆開一個回答"></h2>
+    <p data-en="The same five parts, in a real answer to a question your panel is likely to ask. Each colour is one part of the shape above."
+       data-zh="同樣的五個部分，放進一個評審很可能會問的真實回答裡。每個顏色對應上面的一個部分。"></p>
   </div>
+
+  <div class="xscript">
+    <p class="judge" style="margin:0">
+      <b data-en="Judge" data-zh="評審"></b>
+      <span data-en="How do you know the bacteria stay inside the loop?" data-zh="你們怎麼知道細菌真的留在迴路裡？"></span>
+    </p>
+    <div class="said only-en">
+      <span class="s1">The membrane is a 0.2 micrometre hollow fiber, and <em>Bacillus subtilis</em> cells are larger than that, so they cannot cross.</span>
+      <span class="s2">We tested it by plating both sides after a run: the lumen plate grew, and the shell plate had no colonies.</span>
+      <span class="s3">That is two single platings, with no replicate and no detection limit,</span>
+      <span class="s4">so I would call it consistent with retention rather than a log reduction.</span>
+      <span class="s5">A seven log retention test is the measurement we would run next.</span>
+    </div>
+    <div class="said only-zh">
+      <span class="s1">薄膜是 0.2 µm 的中空纖維，<em>Bacillus subtilis</em> 的菌體比它大，過不去。</span>
+      <span class="s2">我們在一次運轉後把兩側都塗盤：管內側長菌，殼側沒有菌落。</span>
+      <span class="s3">那是兩次單一塗盤，沒有重複、也沒有偵測極限，</span>
+      <span class="s4">所以我會說它「與截留一致」，而不是 log reduction。</span>
+      <span class="s5">下一步要做的量測是七個對數的截留測試。</span>
+    </div>
+    <div class="xlegend" id="legend"></div>
+  </div>
+
+  <p class="note note-a" style="margin-top:1.25rem"
+     data-en="Notice what is missing: no history of how the membrane was chosen, no thanks, no apology. Seventy-eight words, about thirty seconds, and the judge already has the claim, the evidence and the limit."
+     data-zh="注意沒有出現的東西：沒有交代薄膜怎麼選的、沒有道謝、沒有道歉。七十八個字、大約三十秒，評審就同時拿到論點、證據與限制。"></p>
 </section>
 
 <section class="wrap narrow">
@@ -45,8 +67,8 @@
     <p data-en="The session is in English, and under pressure nobody invents good phrasing. Learn one from each group so it is there when you need it."
        data-zh="會談用英文進行，而人在壓力下不會臨場想出好句子。每一組背一句，需要時才叫得出來。"></p>
   </div>
-  <div id="phrases"></div>
-  <p class="note" style="margin-top:1.25rem"
+  <div class="ph-grid" id="phrases"></div>
+  <p class="note" style="margin-top:1.75rem"
      data-en="Asking a judge to repeat or rephrase a question is explicitly allowed, and it is not a weakness. Answering the wrong question is."
      data-zh="請評審重說或換句話說，是規則明確允許的，而且不算弱點。回答錯的問題才算。"></p>
 </section>
@@ -54,44 +76,43 @@
 <section class="wrap narrow">
   <div class="sec-head">
     <h2 data-en="How to say you do not know" data-zh="怎麼說「我不知道」"></h2>
+    <p data-en="The official guidance says it plainly: if you do not know, say so, because recognising gaps is part of good science. The craft is to recognise the gap and still show work."
+       data-zh="官方指引寫得很直接：不知道就說不知道，因為辨認出缺口本身就是科學的一部分。技巧在於承認缺口的同時，仍然展示你做過的事。"></p>
   </div>
-  <div class="grid g2">
-    <div class="card">
-      <h4 data-en="Three moves that work" data-zh="三個有效的做法"></h4>
-      <ul style="padding-left:1.1rem;margin:.5rem 0 0;font-size:.9375rem;color:var(--ink-2)">
+  <div class="twoup">
+    <div>
+      <h4><span class="m" style="color:var(--accent)">✓</span><span data-en="Three moves that work" data-zh="三個有效的做法"></span></h4>
+      <ul>
         <li data-en="Name the gap, then the nearest thing you did measure." data-zh="說出缺口，再說最接近的、你真的量過的東西。"></li>
         <li data-en="Say where the number lives, and offer to show it on screen." data-zh="說出那個數字在哪一頁，並主動提議現場打開給評審看。"></li>
         <li data-en="Say what result would settle it, in one clause." data-zh="用一個子句說出什麼結果能解決這件事。"></li>
       </ul>
     </div>
-    <div class="card">
-      <h4 data-en="Three that cost you" data-zh="三個會失分的做法"></h4>
-      <ul style="padding-left:1.1rem;margin:.5rem 0 0;font-size:.9375rem;color:var(--ink-2)">
+    <div>
+      <h4><span class="m" style="color:var(--red)">×</span><span data-en="Three that cost you" data-zh="三個會失分的做法"></span></h4>
+      <ul>
         <li data-en="Guessing a number. A judge who catches one invented figure discounts all of them." data-zh="猜一個數字。評審抓到一個編的數字，就會把其他數字一起打折。"></li>
         <li data-en="Answering a different, easier question than the one asked." data-zh="回答另一個比較簡單的問題，而不是被問的那個。"></li>
         <li data-en="Going straight to future plans with nothing behind it." data-zh="後面什麼都沒有，就直接跳到未來計畫。"></li>
       </ul>
     </div>
   </div>
-  <p class="lede-sm" style="margin-top:1rem"
-     data-en="The official guidance says it plainly: if you do not know an answer, say so, because recognising gaps is part of good science. The trick is to recognise the gap and still show work."
-     data-zh="官方指引寫得很直接：不知道就說不知道，因為辨認出缺口本身就是科學的一部分。技巧在於承認缺口的同時，仍然展示你做過的事。"></p>
 </section>
 
 <section class="wrap narrow">
   <div class="sec-head">
     <h2 data-en="Eleven habits that cost teams points" data-zh="十一個讓隊伍失分的習慣"></h2>
-    <p data-en="Read this list to each other after every mock session and say which ones you did."
-       data-zh="每次模擬結束後互相讀一遍，說出自己犯了哪幾個。"></p>
+    <p data-en="Read this list to each other after every mock session, and say out loud which ones you did."
+       data-zh="每次模擬結束後互相讀一遍，並說出自己犯了哪幾個。"></p>
   </div>
-  <ul class="trap-list" id="traps"></ul>
+  <ol class="habits" id="traps"></ol>
 </section>
 
 <section class="wrap narrow">
   <div class="sec-head">
     <h2 data-en="The traps in our own answers" data-zh="我們自己答案裡的陷阱"></h2>
-    <p data-en="Every question in the bank carries the mistake students are most likely to make on it. These are the ones that recur across domains."
-       data-zh="題庫裡每一題都附上最容易犯的錯。以下是跨領域反覆出現的那些。"></p>
+    <p data-en="Every question in the bank carries the mistake a student is most likely to make on it. Open a domain to see the ones that recur."
+       data-zh="題庫裡每一題都附上最容易犯的錯。展開一個領域，看看反覆出現的是哪些。"></p>
   </div>
   <div id="common"></div>
 </section>
@@ -113,6 +134,16 @@
     document.getElementById('shape').innerHTML = h;
   }
 
+  function drawLegend() {
+    var tints = ['#f0eefb', '#e7f3ec', '#e8f1fb', '#fdf2e6', '#f3f3f5'];
+    var h = '';
+    for (var i = 0; i < CONTENT.answerShape.length; i++) {
+      h += '<span><i style="background:' + tints[i] + '"></i>' +
+        S.esc(S.t(CONTENT.answerShape[i], 'k')) + '</span>';
+    }
+    document.getElementById('legend').innerHTML = h;
+  }
+
   function drawPhrases() {
     var h = '';
     for (var i = 0; i < CONTENT.phrases.length; i++) {
@@ -131,7 +162,6 @@
   }
 
   function drawCommon() {
-    /* show the trap lines from the bank, grouped by domain, a sample per domain */
     var byDom = {}, i;
     for (i = 0; i < QUESTIONS.length; i++) {
       var q = QUESTIONS[i], t = S.t(q, 'trap');
@@ -144,18 +174,21 @@
       var d = META.domains[i], list = byDom[d.id];
       if (!list || !list.length) continue;
       h += '<details class="d"><summary><span>' + S.esc(S.p({ en: d.en, zh: d.zh })) +
-        '</span><span class="src">' + list.length + '</span></summary><div style="padding:.6rem 0 0 1.2rem">';
+        '</span><span class="src" style="margin-left:auto">' + list.length + '</span></summary>' +
+        '<div style="padding:.9rem 0 .4rem 1.2rem">';
       for (var j = 0; j < Math.min(list.length, 8); j++) {
-        h += '<p style="margin:0 0 .7rem;font-size:.9375rem"><strong>' + S.esc(list[j].q) + '</strong><br>' +
-          '<span style="color:var(--red)">×</span> ' + S.esc(list[j].t) + '</p>';
+        h += '<p style="margin:0 0 1rem;font-size:.9375rem;line-height:1.5">' +
+          '<strong style="display:block;margin-bottom:.15rem">' + S.esc(list[j].q) + '</strong>' +
+          '<span style="color:var(--muted)">' + S.esc(list[j].t) + '</span></p>';
       }
-      h += '<a href="mock.html" class="src">' + (S.lang === 'zh' ? '在模擬會場練這個領域 ↗' : 'Drill this domain in the mock room ↗') + '</a>';
-      h += '</div></details>';
+      h += '<a href="mock.html" class="src">' +
+        (S.lang === 'zh' ? '在模擬會場練這個領域 ↗' : 'Drill this domain in the mock room ↗') +
+        '</a></div></details>';
     }
     document.getElementById('common').innerHTML = h;
   }
 
-  S.onLang(function () { drawShape(); drawPhrases(); drawTraps(); drawCommon(); });
+  S.onLang(function () { drawShape(); drawLegend(); drawPhrases(); drawTraps(); drawCommon(); });
 })();
 </script>
 </body>
