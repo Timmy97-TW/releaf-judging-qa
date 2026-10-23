@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Term Trainer · ReLEAF Judging Trainer</title>
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/pages.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M4 20c0-8 5.5-14.5 16-15.5C19.5 14 14 20 4 20Z' fill='%231a7f45'/%3E%3C/svg%3E">
+</head>
+<body>
+
+<header class="hero wrap">
+  <p class="eyebrow" data-en="02 · Term Trainer" data-zh="02 · 術語訓練"></p>
+  <h1 data-en="If you say it, you can define it" data-zh="說得出口，就要定義得出來"></h1>
+  <p class="lede" style="max-width:62ch"
+     data-en="The fastest way to lose a specialist judge is to use a word you cannot explain. Three keywords come first, because that is how you will recall it under pressure. Then one compact definition that already says why it is in your project."
+     data-zh="要在專業評審面前失分，最快的方法就是用一個自己解釋不出來的詞。先給三個關鍵字，因為在壓力下你是靠它們想起答案的。接著是一句精簡定義，裡面就包含它為什麼出現在你們的專題裡。"></p>
+</header>
+
+<section class="wrap">
+  <div class="quiz" id="quiz">
+    <div>
+      <p class="q-lab" id="qlab"></p>
+      <p class="q-term" id="qterm"></p>
+    </div>
+    <div class="q-kw" id="qkw" hidden></div>
+    <p class="q-hidden" id="qhint"></p>
+    <p class="q-def" id="qdef" hidden></p>
+    <div class="btn-row">
+      <button class="btn btn-ghost btn-sm" id="reveal" type="button"></button>
+      <button class="btn btn-ghost btn-sm" id="next" type="button"></button>
+      <label style="display:flex;align-items:center;gap:.4rem;font-size:.8125rem;color:rgba(255,255,255,.6);margin-left:auto">
+        <input type="checkbox" id="auto" style="accent-color:#fff"><span id="autol"></span>
+      </label>
+    </div>
+    <p class="src" id="qsrc"></p>
+  </div>
+  <p class="lede-sm" style="margin-top:1rem"
+     data-en="Say the three keywords out loud before you reveal. On the plane, do ten each and mark the ones you miss."
+     data-zh="先把三個關鍵字唸出來，再按顯示。在飛機上每人練十個，記下想不出來的那些。"></p>
+</section>
+
+<div class="bar">
+  <div class="wrap">
+    <input class="search" id="q" type="search" autocomplete="off"
+           data-ph-en="Search terms: DNPH, hollow fiber, MAD, ethylene, GMO…"
+           data-ph-zh="搜尋術語：DNPH、中空纖維、MAD、乙烯、GMO……">
+    <div class="bar-row">
+      <div class="chips" id="cats"></div>
+      <span class="count-l" id="count"></span>
+    </div>
+  </div>
+</div>
+
+<section class="wrap" style="padding-top:1.5rem">
+  <div class="tlist" id="out"></div>
+  <p class="note" id="empty" hidden
+     data-en="No term matches. Search a shorter stem, for example “membr” or “光”."
+     data-zh="沒有符合的術語。試試更短的字根，例如「membr」或「光」。"></p>
+</section>
+
+<script src="assets/js/site.js"></script>
+<script src="data/meta.js"></script>
+<script src="data/terms.js"></script>
+<script>
+(function () {
+  var S = window.Site;
+  var state = { q: '', cat: 'all' };
+  var order = [], cur = 0, revealed = false, timer = null;
+
+  var L = {
+    lab:   { en: 'Random term · say the three keywords', zh: '隨機術語 · 說出三個關鍵字' },
+    hint:  { en: 'Keywords hidden. Answer out loud, then reveal.', zh: '關鍵字已隱藏。先出聲回答，再顯示。' },
+    rev:   { en: 'Reveal', zh: '顯示答案' },
+    hide:  { en: 'Hide', zh: '隱藏' },
+    next:  { en: 'Next term', zh: '下一個' },
+    auto:  { en: 'Rotate every 12s', zh: '每 12 秒自動換' }
+  };
+
+  function catName(id) {
+    for (var i = 0; i < META.cats.length; i++) if (META.cats[i].id === id) return S.p({ en: META.cats[i].en, zh: META.cats[i].zh });
+    return id;
+  }
+
+  /* ── quiz box ── */
+  function shuffleOrder() {
+    order = []; for (var i = 0; i < TERMS.length; i++) order.push(i);
+    order = S.shuffle(order); cur = 0;
+  }
+
+  function paintQuiz() {
+    if (!TERMS.length) return;
+    var t = TERMS[order[cur]];
+    document.getElementById('qlab').textContent = S.p(L.lab);
+    document.getElementById('qterm').textContent = t.term;
+    document.getElementById('reveal').textContent = revealed ? S.p(L.hide) : S.p(L.rev);
+    document.getElementById('next').textContent = S.p(L.next);
+    document.getElementById('autol').textContent = S.p(L.auto);
+    var kw = S.lang === 'zh' && t.kw_zh && t.kw_zh.length ? t.kw_zh : t.kw_en || [];
+    var h = '';
+    for (var i = 0; i < kw.length; i++) h += '<span>' + S.esc(kw[i]) + '</span>';
+    document.getElementById('qkw').innerHTML = h;
+    document.getElementById('qkw').hidden = !revealed;
+    document.getElementById('qdef').textContent = S.t(t, 'def');
+    document.getElementById('qdef').hidden = !revealed;
+    document.getElementById('qhint').textContent = revealed ? '' : S.p(L.hint);
+    document.getElementById('qhint').hidden = revealed;
+    document.getElementById('qsrc').innerHTML = revealed ? S.srcLink(t.src) : '';
+  }
+
+  function nextTerm() {
+    cur = (cur + 1) % order.length;
+    if (cur === 0) order = S.shuffle(order);
+    revealed = false; paintQuiz();
+  }
+
+  document.getElementById('reveal').addEventListener('click', function () { revealed = !revealed; paintQuiz(); });
+  document.getElementById('next').addEventListener('click', nextTerm);
+  document.getElementById('auto').addEventListener('change', function (e) {
+    if (timer) { clearInterval(timer); timer = null; }
+    if (e.target.checked) timer = setInterval(nextTerm, 12000);
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.target.tagName === 'INPUT') return;
+    if (e.key === ' ') { e.preventDefault(); revealed = !revealed; paintQuiz(); }
+    if (e.key === 'ArrowRight' || e.key === 'n') nextTerm();
+  });
+
+  /* ── list ── */
+  function hay(t) {
+    return [t.term, t.def_en, t.def_zh, (t.kw_en || []).join(' '), (t.kw_zh || []).join(' '), t.src, t.cat].join(' ').toLowerCase();
+  }
+  function mark(text, q) {
+    var s = S.esc(text);
+    if (!q) return s;
+    try { return s.replace(new RegExp('(' + q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'ig'), '<mark>$1</mark>'); }
+    catch (e) { return s; }
+  }
+
+  function drawChips() {
+    var counts = {}, i;
+    for (i = 0; i < TERMS.length; i++) counts[TERMS[i].cat] = (counts[TERMS[i].cat] || 0) + 1;
+    var h = '<button class="chip" data-c="all" aria-pressed="' + (state.cat === 'all') + '">' +
+      (S.lang === 'zh' ? '全部' : 'All') + '<span class="c">' + TERMS.length + '</span></button>';
+    for (i = 0; i < META.cats.length; i++) {
+      var c = META.cats[i];
+      if (!counts[c.id]) continue;
+      h += '<button class="chip" data-c="' + c.id + '" aria-pressed="' + (state.cat === c.id) + '">' +
+        S.esc(S.p({ en: c.en, zh: c.zh })) + '<span class="c">' + counts[c.id] + '</span></button>';
+    }
+    document.getElementById('cats').innerHTML = h;
+  }
+
+  function drawList() {
+    var q = state.q.toLowerCase().trim(), h = '', shown = 0;
+    for (var i = 0; i < TERMS.length; i++) {
+      var t = TERMS[i];
+      if (state.cat !== 'all' && t.cat !== state.cat) continue;
+      if (q && hay(t).indexOf(q) < 0) continue;
+      shown++;
+      var kw = S.lang === 'zh' && t.kw_zh && t.kw_zh.length ? t.kw_zh : t.kw_en || [];
+      var kh = '';
+      for (var j = 0; j < kw.length; j++) kh += '<span>' + mark(kw[j], q) + '</span>';
+      h += '<div class="trow">' +
+        '<div class="th"><span class="tt">' + mark(t.term, q) + '</span>' +
+        '<span class="pill">' + S.esc(catName(t.cat)) + '</span></div>' +
+        '<div class="kw">' + kh + '</div>' +
+        '<p class="td">' + mark(S.t(t, 'def'), q) + '</p>' +
+        '<div class="tb">' + S.srcLink(t.src) + '</div></div>';
+    }
+    document.getElementById('out').innerHTML = h;
+    document.getElementById('empty').hidden = shown > 0;
+    document.getElementById('count').textContent = S.lang === 'zh'
+      ? shown + ' / ' + TERMS.length + ' 個' : shown + ' of ' + TERMS.length;
+  }
+
+  document.getElementById('q').addEventListener('input', function (e) { state.q = e.target.value; drawList(); });
+  document.getElementById('cats').addEventListener('click', function (e) {
+    var b = e.target.closest('.chip'); if (!b) return;
+    state.cat = b.getAttribute('data-c'); drawChips(); drawList();
+  });
+
+  shuffleOrder();
+  S.onLang(function () { paintQuiz(); drawChips(); drawList(); });
+})();
+</script>
+</body>
+</html>

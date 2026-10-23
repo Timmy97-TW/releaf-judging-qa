@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mic Map · ReLEAF Judging Trainer</title>
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/pages.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M4 20c0-8 5.5-14.5 16-15.5C19.5 14 14 20 4 20Z' fill='%231a7f45'/%3E%3C/svg%3E">
+</head>
+<body>
+
+<header class="hero wrap">
+  <p class="eyebrow" data-en="04 · Mic Map" data-zh="04 · 麥克風地圖"></p>
+  <h1 data-en="Seven seats, no pauses" data-zh="七個位置，不要停頓"></h1>
+  <p class="lede" style="max-width:62ch"
+     data-en="The podium holds seven speakers who can reach the microphone without climbing over each other. Each one owns a territory, and every question that belongs to two people has a rule decided now, not in the room."
+     data-zh="台上能順利走到麥克風前的，實際上就是七個人。每個人負責一塊領域；每一題「兩個人都沾到」的問題，現在就定好規則，不要到現場才想。"></p>
+  <div class="btn-row" style="margin-top:1.5rem">
+    <a class="btn btn-accent" href="#drill" data-en="Go to the drill" data-zh="前往分派演練"></a>
+    <a class="btn btn-ghost" href="#double" data-en="Double-dip rules" data-zh="重疊題規則"></a>
+  </div>
+</header>
+
+<section class="wrap">
+  <div class="sec-head">
+    <h2 data-en="The seven territories" data-zh="七塊領域"></h2>
+    <p data-en="Write a name on each card before the first drill. One name per seat, and that student reads their own pages until they could give a lesson on them."
+       data-zh="第一次演練前，先在每張卡上寫一個名字。一個位置一個人，那位同學要把自己的頁面讀到可以拿去上課的程度。"></p>
+  </div>
+  <div class="seatgrid" id="seats"></div>
+  <p class="note note-a" style="margin-top:1.25rem"
+     data-en="Seat 7 is the safety net, not the leftovers. It takes anything unclaimed, every question about the team, the next step and who did what, and it is the hardest seat to prepare, so give it to a student who can think on their feet."
+     data-zh="第 7 位是安全網，不是剩下的。它承接所有沒人認領的題目，以及關於團隊、下一步、誰做了什麼的所有問題。這是最難準備的位置，要交給反應快的同學。"></p>
+</section>
+
+<section class="wrap" id="double">
+  <div class="sec-head">
+    <h2 data-en="When a question belongs to two people" data-zh="當一題屬於兩個人"></h2>
+    <p data-en="These ten come up most. Memorise who opens. The second person adds one sentence, not a second answer."
+       data-zh="以下十種最常出現。記住誰先開口。第二個人只補一句話，不是再回答一次。"></p>
+  </div>
+  <div id="routes"></div>
+</section>
+
+<section class="wrap">
+  <div class="sec-head">
+    <h2 data-en="Load per seat" data-zh="各位置的題量"></h2>
+    <p data-en="How many questions in the bank land on each seat. A seat carrying far more than its share should hand a sub-area to a neighbour before you fly."
+       data-zh="題庫裡落到每個位置的題數。某個位置明顯超載時，出發前就把一個子領域交給旁邊的人。"></p>
+  </div>
+  <table class="t" id="load"></table>
+</section>
+
+<section class="wrap" id="drill">
+  <div class="sec-head">
+    <h2 data-en="Assignment drill" data-zh="分派演練"></h2>
+    <p data-en="One person reads the question out loud. The seven of you say the seat number together, in under two seconds. Then reveal. This is the only drill that fixes the silent-look-around problem."
+       data-zh="由一個人把題目唸出來，七個人在兩秒內一起喊出位置編號，然後翻開答案。只有這個演練能解決「互看一圈沒人回答」的問題。"></p>
+  </div>
+
+  <div class="card-2">
+    <p class="src" id="dcount"></p>
+    <p class="qq" id="dq" style="font-family:var(--font-display);font-size:clamp(1.15rem,1rem + .9vw,1.5rem);font-weight:600;letter-spacing:-.02em;line-height:1.25;margin:.5rem 0 1rem"
+       data-en="Press Start. Say the seat number out loud before you reveal." data-zh="按「開始」。先喊出位置編號，再翻開答案。"></p>
+
+    <div class="chips" id="guess" hidden></div>
+
+    <div id="dans" hidden style="margin-top:1.1rem;border-top:1px solid var(--rule);padding-top:1.1rem">
+      <div class="meta" id="dseat" style="display:flex;gap:.5rem;flex-wrap:wrap"></div>
+      <p id="dwhy" style="font-size:.9375rem;color:var(--ink-2);margin:.8rem 0 0"></p>
+    </div>
+
+    <div class="btn-row" style="margin-top:1.1rem">
+      <button class="btn btn-accent" id="dstart" type="button"></button>
+      <button class="btn btn-line" id="dnext" type="button" hidden></button>
+      <span class="count-l" id="dscore"></span>
+    </div>
+  </div>
+
+  <div class="grid g3" style="margin-top:1.25rem">
+    <div class="card card-soft">
+      <h4 data-en="Round 1 · by domain" data-zh="第一輪 · 按領域"></h4>
+      <p class="lede-sm" data-en="Say the seat. Easy mode: the question names its field."
+         data-zh="喊出位置。簡單模式：題目會提到領域名稱。"></p>
+    </div>
+    <div class="card card-soft">
+      <h4 data-en="Round 2 · overlaps only" data-zh="第二輪 · 只練重疊題"></h4>
+      <p class="lede-sm" data-en="Only questions with a backup seat. Say both numbers, in order."
+         data-zh="只出有備援位置的題目。把兩個編號依序喊出來。"></p>
+    </div>
+    <div class="card card-soft">
+      <h4 data-en="Round 3 · standing up" data-zh="第三輪 · 站著做"></h4>
+      <p class="lede-sm" data-en="Stand in the real order and step forward when it is yours. Movement is half of the problem."
+         data-zh="按實際順序站好，是你的題就往前一步。走位本身就是一半的問題。"></p>
+    </div>
+  </div>
+</section>
+
+<script src="assets/js/site.js"></script>
+<script src="data/content.js"></script>
+<script src="data/meta.js"></script>
+<script src="data/bank.js"></script>
+<script>
+(function () {
+  var S = window.Site;
+  var SEATS = CONTENT.seats;
+  var byId = {};
+  for (var i = 0; i < SEATS.length; i++) byId[SEATS[i].id] = SEATS[i];
+
+  var L = {
+    start: { en: 'Start', zh: '開始' },
+    next:  { en: 'Next', zh: '下一題' },
+    answers: { en: 'answers', zh: '回答' },
+    backup: { en: 'then', zh: '接著' },
+    pick: { en: 'Tap the seat you think it is', zh: '點選你認為的位置' },
+    right: { en: 'Right', zh: '答對' },
+    wrong: { en: 'Not this one', zh: '不是這個' },
+    none: { en: 'No overlap: this one is clean.', zh: '沒有重疊：這題很單純。' }
+  };
+
+  function seatName(id) { var s = byId[id]; return s ? S.t(s, 'name').replace(/&amp;/g, '&') : (id === 'any' ? S.lang === 'zh' ? '任何人' : 'Anyone' : id); }
+  function seatNum(id) { var s = byId[id]; return s ? s.n : 0; }
+
+  function drawSeats() {
+    var h = '';
+    for (var i = 0; i < SEATS.length; i++) {
+      var s = SEATS[i];
+      var pg = '';
+      for (var j = 0; j < s.pages.length; j++) {
+        pg += '<a href="' + S.wiki(s.pages[j]) + '" target="_blank" rel="noopener">' + S.esc(s.pages[j]) + '</a>';
+      }
+      var n = 0;
+      for (j = 0; j < QUESTIONS.length; j++) if (QUESTIONS[j].seat === s.id) n++;
+      h += '<div class="seatcard"><p class="sn">' + (S.lang === 'zh' ? '第 ' + s.n + ' 位' : 'Seat ' + s.n) + '</p>' +
+        '<h3>' + S.t(s, 'name') + '</h3>' +
+        '<p class="owns">' + S.esc(S.t(s, 'owns')) + '</p>' +
+        '<p class="nots">' + S.esc(S.t(s, 'not')) + '</p>' +
+        '<div class="pgs">' + pg + '</div>' +
+        '<p class="cnt">' + (S.lang === 'zh' ? n + ' 題在題庫裡' : n + ' questions in the bank') + '</p></div>';
+    }
+    document.getElementById('seats').innerHTML = h;
+  }
+
+  function drawRoutes() {
+    var h = '';
+    for (var i = 0; i < CONTENT.routing.length; i++) {
+      var r = CONTENT.routing[i];
+      h += '<div class="route"><div class="rq">' + S.esc(S.t(r, 'q')) + '</div>' +
+        '<div class="rs"><span class="seat-badge"><span class="n">' + seatNum(r.a) + '</span>' + S.esc(seatName(r.a)) + '</span>' +
+        '<span class="arrow">→</span>' +
+        '<span class="pill pill-line">' + seatNum(r.b) + ' ' + S.esc(seatName(r.b)) + '</span></div>' +
+        '<div class="rr">' + S.esc(S.t(r, 'rule')) + '</div></div>';
+    }
+    document.getElementById('routes').innerHTML = h;
+  }
+
+  function drawLoad() {
+    var counts = {}, types = {}, i, q;
+    for (i = 0; i < QUESTIONS.length; i++) {
+      q = QUESTIONS[i];
+      counts[q.seat] = (counts[q.seat] || 0) + 1;
+      if (q.backup && byId[q.backup]) types[q.backup] = (types[q.backup] || 0) + 1;
+    }
+    var h = '<thead><tr><th>' + (S.lang === 'zh' ? '位置' : 'Seat') + '</th><th>' +
+      (S.lang === 'zh' ? '主答' : 'Owns') + '</th><th>' + (S.lang === 'zh' ? '備援' : 'Backs up') + '</th><th>' +
+      (S.lang === 'zh' ? '主要頁面' : 'Main pages') + '</th></tr></thead><tbody>';
+    for (i = 0; i < SEATS.length; i++) {
+      var s = SEATS[i];
+      h += '<tr><td><strong>' + s.n + ' · ' + S.t(s, 'name') + '</strong></td>' +
+        '<td>' + (counts[s.id] || 0) + '</td><td>' + (types[s.id] || 0) + '</td>' +
+        '<td class="src">' + S.esc(s.pages.join(', ')) + '</td></tr>';
+    }
+    document.getElementById('load').innerHTML = h + '</tbody>';
+  }
+
+  /* ── drill ── */
+  var deck = [], di = -1, score = { n: 0, ok: 0 }, answered = false;
+
+  function buildDeck() { deck = S.shuffle(QUESTIONS.slice()); di = -1; }
+
+  function paintGuess(picked) {
+    var q = deck[di], h = '';
+    for (var i = 0; i < SEATS.length; i++) {
+      var s = SEATS[i];
+      var st = '';
+      if (picked) {
+        if (s.id === q.seat) st = ' style="background:var(--accent);color:#fff;border-color:var(--accent)"';
+        else if (s.id === picked) st = ' style="background:var(--red-wash);color:#8e2a23;border-color:#f3cfcb"';
+      }
+      h += '<button class="chip" data-s="' + s.id + '"' + st + '>' + s.n + ' · ' + S.t(s, 'name') + '</button>';
+    }
+    document.getElementById('guess').innerHTML = h;
+    document.getElementById('guess').hidden = false;
+  }
+
+  function dnext() {
+    if (di + 1 >= deck.length) buildDeck();
+    di++;
+    answered = false;
+    var q = deck[di];
+    document.getElementById('dcount').textContent = (S.lang === 'zh' ? '題目 ' : 'Question ') + (di + 1) +
+      ' · ' + S.p(L.pick);
+    document.getElementById('dq').textContent = S.t(q, 'q');
+    document.getElementById('dans').hidden = true;
+    document.getElementById('dstart').hidden = true;
+    document.getElementById('dnext').hidden = false;
+    document.getElementById('dnext').textContent = S.p(L.next);
+    paintGuess(null);
+    paintScore();
+  }
+
+  function paintScore() {
+    document.getElementById('dscore').textContent = score.n
+      ? (S.lang === 'zh' ? score.ok + ' / ' + score.n + ' 分派正確' : score.ok + ' of ' + score.n + ' routed right')
+      : '';
+  }
+
+  function reveal(picked) {
+    if (answered) return;
+    answered = true;
+    var q = deck[di];
+    score.n++;
+    if (picked === q.seat) score.ok++;
+    paintGuess(picked);
+    var m = '<span class="seat-badge"><span class="n">' + seatNum(q.seat) + '</span>' + S.esc(seatName(q.seat)) +
+      ' ' + S.p(L.answers) + '</span>';
+    if (q.backup && byId[q.backup] && q.backup !== q.seat) {
+      m += '<span class="pill pill-line">' + S.p(L.backup) + ' ' + seatNum(q.backup) + ' · ' + S.esc(seatName(q.backup)) + '</span>';
+    } else {
+      m += '<span class="pill">' + S.p(L.none) + '</span>';
+    }
+    m += '<span class="pill ' + (q.tier === 'A' ? 'pill-a' : 'pill-b') + '">' + q.tier + '</span>';
+    document.getElementById('dseat').innerHTML = m;
+    document.getElementById('dwhy').textContent = S.t(q, 'a');
+    document.getElementById('dans').hidden = false;
+    paintScore();
+  }
+
+  document.getElementById('dstart').addEventListener('click', function () { buildDeck(); dnext(); });
+  document.getElementById('dnext').addEventListener('click', dnext);
+  document.getElementById('guess').addEventListener('click', function (e) {
+    var b = e.target.closest('.chip'); if (!b) return;
+    reveal(b.getAttribute('data-s'));
+  });
+
+  S.onLang(function () {
+    drawSeats(); drawRoutes(); drawLoad();
+    document.getElementById('dstart').textContent = S.p(L.start);
+    if (di >= 0) { var p = null; paintGuess(p); document.getElementById('dq').textContent = S.t(deck[di], 'q'); }
+    paintScore();
+  });
+})();
+</script>
+</body>
+</html>

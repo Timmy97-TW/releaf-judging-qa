@@ -1,0 +1,1863 @@
+{
+ "domain": "entrepreneurship",
+ "facts": [
+  {
+   "id": "entrepreneurship-f1",
+   "label_en": "Taiwan farms under 2 hectares",
+   "label_zh": "台灣 2 公頃以下的小農場占比",
+   "value": "99.2% of farms; 85.3% of farmland",
+   "detail_en": "Together these small farms manage 85.3% of the island's agricultural land; the average farm is about 0.9 to 1.1 ha and the average farmer is 63.5 years old.",
+   "detail_zh": "這些小農場合計管理全島 85.3% 的農地；平均農場約 0.9 至 1.1 公頃，農民平均年齡 63.5 歲。",
+   "src": "geospatial-analysis#Taiwan agricultural demographics",
+   "confidence": "stated"
+  },
+  {
+   "id": "entrepreneurship-f2",
+   "label_en": "Reference farm in the financial model",
+   "label_zh": "財務模型使用的參考農場",
+   "value": "1 ha, 3 crop types, 22 000 plants/ha",
+   "detail_en": "The average Taiwanese farm is 0.77 ha by census (DGBAS 2020) and 1.1 ha in a 2015 report (FFTC); the model rounds to 1 ha and calculates everything per hectare.",
+   "detail_zh": "台灣平均農場依普查為 0.77 公頃（DGBAS 2020），2015 年報告為 1.1 公頃（FFTC）；模型取 1 公頃，所有數字以每公頃計算。",
+   "src": "entrepreneurship#Financial projection",
+   "confidence": "consistent"
+  },
+  {
+   "id": "entrepreneurship-f3",
+   "label_en": "Market sizing: TAM, SAM, SOM",
+   "label_zh": "市場規模：TAM、SAM、SOM",
+   "value": "570 M farms / 399 M farms / SOM 'hard to quantify'",
+   "detail_en": "TAM is about 570 million farms worldwide (Ritchie and Roser 2021). SAM is 399 million, the 70% of farmers who report climate impact (Bayer 2023 survey). The page says SOM is hard to quantify and quotes about 4.7 million organic farms.",
+   "detail_zh": "TAM 約 5.7 億個農場（Ritchie 與 Roser 2021）。SAM 為 3.99 億個，即 70% 回報受氣候影響的農民（Bayer 2023 調查）。頁面說 SOM 難以量化，並引用全球約 470 萬個有機農場。",
+   "src": "entrepreneurship#Industry analysis",
+   "confidence": "stated"
+  },
+  {
+   "id": "entrepreneurship-f4",
+   "label_en": "Bioprotectant market size",
+   "label_zh": "生物保護劑市場規模",
+   "value": "US$9.4 B (2024) to US$22.8 B (2030)",
+   "detail_en": "The wider protectant industry is US$77.17 B; chemical fertilizer/protectant is US$216.52 B in 2025, projected to US$299.69 B by 2030. Biological products are the small, fast-growing part.",
+   "detail_zh": "整體保護劑產業為 771.7 億美元；化學肥料／保護劑 2025 年為 2165.2 億美元，預估 2030 年達 2996.9 億美元。生物產品是規模較小、成長較快的部分。",
+   "src": "entrepreneurship#Overview of the global protectant industry",
+   "confidence": "stated"
+  },
+  {
+   "id": "entrepreneurship-f5",
+   "label_en": "Organic share of farmland",
+   "label_zh": "有機農地比例",
+   "value": "3.47% of Taiwan farmland (2024); 2.1% worldwide (2023)",
+   "detail_en": "The Entrepreneurship page says 3.47% is organic and eco-friendly farmland in Taiwan; the Laws and Geospatial pages say about 3.7%. The two pages use different figures.",
+   "detail_zh": "創業頁面說台灣有機及友善農地占 3.47%；法規頁與地理空間頁寫約 3.7%，兩頁數字不同。",
+   "src": "entrepreneurship#Stakeholder analysis; laws-and-regulations#Where Does ReLEAF Sit?",
+   "confidence": "conflict"
+  },
+  {
+   "id": "entrepreneurship-f6",
+   "label_en": "Farmer price, Year 1, one hectare",
+   "label_zh": "第一年每公頃農民價格",
+   "value": "About US$5550 (NT$175 400)",
+   "detail_en": "Two bioreactors US$4560, three moisture sensors US$380, first refill cartridge US$90, freight/set-up/warranty US$520. Our cost is US$2775. The FAQ rounds it to US$5531. These are planning estimates, not quotes.",
+   "detail_zh": "兩台生物反應器 4560 美元、三個濕度感測器 380 美元、首個補充匣 90 美元、運費／安裝／保固 520 美元；我們的成本為 2775 美元。FAQ 四捨五入為 5531 美元。這些是規劃估算，不是報價。",
+   "src": "entrepreneurship#Variable cost and price per hectare",
+   "confidence": "consistent"
+  },
+  {
+   "id": "entrepreneurship-f7",
+   "label_en": "Pricing rule",
+   "label_zh": "定價規則",
+   "value": "Price = 2 x full cost, same for every farm",
+   "detail_en": "Full cost counts parts, warranty reserve, freight, set-up visits and expired stock. After Year 1 a farmer pays about US$90 a year for a refill cartridge that costs us about US$45.",
+   "detail_zh": "完整成本包含零件、保固準備金、運費、安裝拜訪與過期庫存。第一年後，農民每年約付 90 美元買補充匣，我們的成本約 45 美元。",
+   "src": "entrepreneurship#Choices we made as a social enterprise",
+   "confidence": "stated"
+  },
+  {
+   "id": "entrepreneurship-f8",
+   "label_en": "Fixed cost, Years 0 to 4",
+   "label_zh": "第 0 至 4 年固定成本",
+   "value": "About US$627 000",
+   "detail_en": "Team of 3 in Years 0-1, 4 in Years 2-3, 5 in Years 4-5, paid NT$50 000 a month for 14 months plus 20% on-costs; running costs US$14 000 a year; Year 0 also has about US$53 000 of machines and R&D.",
+   "detail_zh": "團隊第 0-1 年 3 人、第 2-3 年 4 人、第 4-5 年 5 人，月薪 NT$50 000、14 個月，另加 20% 雜支；營運費每年 14 000 美元；第 0 年另有約 53 000 美元機器與研發。",
+   "src": "entrepreneurship#Fixed cost",
+   "confidence": "stated"
+  },
+  {
+   "id": "entrepreneurship-f9",
+   "label_en": "Break-even area",
+   "label_zh": "損益兩平面積",
+   "value": "About 226 ha (about 226 farms, about 57 a year)",
+   "detail_en": "627 000 / 2775 = 226 ha. The page says the figure leaves out renewal profit and the cost of the free pilot. The choices table rounds it to about 230 ha and about US$2800 per hectare.",
+   "detail_zh": "627 000 / 2775 = 226 公頃。頁面說此數字未計入續購利潤與免費試點的成本。選擇表四捨五入為約 230 公頃、每公頃約 2800 美元。",
+   "src": "entrepreneurship#Break-even analysis",
+   "confidence": "consistent"
+  },
+  {
+   "id": "entrepreneurship-f10",
+   "label_en": "Growth plan: paying hectares sold",
+   "label_zh": "成長計畫：付費公頃數",
+   "value": "0 / 20 / 50 / 80 / 100 / 120 ha, Years 0 to 5",
+   "detail_en": "Year 1 adds a 4 ha free pilot supplied at our cost. The plan sells 20 paying hectares in Year 1, before field results exist.",
+   "detail_zh": "第 1 年另加 4 公頃成本價免費試點。計畫在第 1 年、田間結果出爐前就賣出 20 付費公頃。",
+   "src": "entrepreneurship#Growth plan",
+   "confidence": "stated"
+  },
+  {
+   "id": "entrepreneurship-f11",
+   "label_en": "Cash curve under the growth plan",
+   "label_zh": "成長計畫的現金曲線",
+   "value": "Low point -US$196 000 (Year 1); +US$60 000 (Year 4); +US$251 000 (Year 5)",
+   "detail_en": "Cumulative cash turns positive in Year 4. The US$196 000 low point is the funding the plan needs.",
+   "detail_zh": "累計現金在第 4 年轉正。最低點 19.6 萬美元即是計畫所需的資金。",
+   "src": "entrepreneurship#Growth plan",
+   "confidence": "stated"
+  },
+  {
+   "id": "entrepreneurship-f12",
+   "label_en": "Investor return, growth plan",
+   "label_zh": "成長計畫的投資人報酬",
+   "value": "IRR 24% before tax; 2.3x money back by Year 5",
+   "detail_en": "IRR is 21% after an estimated 20% tax (unconfirmed). NPV is US$111 000 at a 10% discount rate and -US$4000 at 25%. Payback is 3.6 years counted from Year 1.",
+   "detail_zh": "估計 20% 稅後 IRR 為 21%（稅率未確認）。NPV 在 10% 貼現率為 111 000 美元，25% 時為 -4000 美元。從第 1 年算起回收期 3.6 年。",
+   "src": "entrepreneurship#Return for investors",
+   "confidence": "stated"
+  },
+  {
+   "id": "entrepreneurship-f13",
+   "label_en": "Conservative case (70% of planned hectares)",
+   "label_zh": "保守情境（只達計畫公頃的 70%）",
+   "value": "Break-even Year 6; funding US$236 000; IRR -7%",
+   "detail_en": "Investors get 0.7 times their money back by Year 5 and NPV at 10% is -US$109 000. Payback is not within 5 years.",
+   "detail_zh": "投資人到第 5 年只拿回 0.7 倍，10% 的 NPV 為 -109 000 美元，5 年內無法回收。",
+   "src": "entrepreneurship#Return for investors",
+   "confidence": "stated"
+  },
+  {
+   "id": "entrepreneurship-f14",
+   "label_en": "What the farmer must gain",
+   "label_zh": "農民必須獲得的效益",
+   "value": "About US$1900 a year to pay back in 3 years",
+   "detail_en": "This is the page's own stated main risk, together with the fact that the complete system has not been validated on the target commercial crop in the field.",
+   "detail_zh": "這是頁面自己列出的主要風險之一，另一個是完整系統尚未在目標商業作物的田間驗證。",
+   "src": "entrepreneurship#Summary",
+   "confidence": "stated"
+  },
+  {
+   "id": "entrepreneurship-f15",
+   "label_en": "Competitor price points",
+   "label_zh": "競品價格區間",
+   "value": "NT$80 000 to 100 000 for sensing only or protectant production only",
+   "detail_en": "ReLEAF combines sensing, response and production; its first-year package is about NT$175 400. The page calls this competitive pricing.",
+   "detail_zh": "ReLEAF 整合感測、反應與生產；第一年套組約 NT$175 400。頁面稱此為有競爭力的價格。",
+   "src": "entrepreneurship#Strategic positioning",
+   "confidence": "consistent"
+  },
+  {
+   "id": "entrepreneurship-f16",
+   "label_en": "Competitors in the comparison table",
+   "label_zh": "比較表中的競品",
+   "value": "Syngenta, Pinsoa Chemical, CH Biotech, Advanced Green Biotechnology, AgriWeather",
+   "detail_en": "Only AgriWeather and ReLEAF are marked yes for real-time automated sensing and for on-site on-demand production; only ReLEAF is yes on all four features. Hardware-only systems such as AgriTalk are described in the text.",
+   "detail_zh": "只有 AgriWeather 與 ReLEAF 在即時自動感測和現場即時生產標為是；四項特色全為是的只有 ReLEAF。文字另提到 AgriTalk 等純硬體系統。",
+   "src": "entrepreneurship#Competitor analysis",
+   "confidence": "stated"
+  },
+  {
+   "id": "entrepreneurship-f17",
+   "label_en": "Go-to-market channel",
+   "label_zh": "上市通路",
+   "value": "B2B through agricultural distributors",
+   "detail_en": "Launch sells to distributors who sell on to farmers, with cooperatives, extension stations and TARI as trust channels. Expansion order: Taiwan, Philippines, Thailand, US, EU.",
+   "detail_zh": "初期賣給農業經銷商，再由經銷商賣給農民，並透過合作社、農業改良場與 TARI 建立信任。擴張順序：台灣、菲律賓、泰國、美國、歐盟。",
+   "src": "entrepreneurship#Distribution",
+   "confidence": "stated"
+  },
+  {
+   "id": "entrepreneurship-f18",
+   "label_en": "Sales objectives",
+   "label_zh": "銷售目標",
+   "value": "First pilots 2027; 2+ pilot partners by end 2027; 1+ long-term agreement in 2028",
+   "detail_en": "A pilot deploys 5 to 10 systems for one season. Pilot farms are meant to reach 10-15% higher yield and 20-30% less spraying versus their own previous season before a referral discount starts.",
+   "detail_zh": "試點為一季部署 5 至 10 套系統。試點農場須相較自己上一季達到產量增加 10-15%、噴藥減少 20-30%，才啟動推薦折扣。",
+   "src": "entrepreneurship#Sales objectives",
+   "confidence": "stated"
+  },
+  {
+   "id": "entrepreneurship-f19",
+   "label_en": "Pilot size, three different numbers",
+   "label_zh": "試點規模：三種數字",
+   "value": "20 to 50 devices / 5 to 10 systems / four pilot farms",
+   "detail_en": "The pilot is planned for October 2027 to June 2028 with 20 to 50 devices, but the sales section says 5 to 10 systems and the FAQ says first field data will come from four pilot farms.",
+   "detail_zh": "試點規劃在 2027 年 10 月至 2028 年 6 月使用 20 至 50 台裝置，但銷售章節說 5 至 10 套，FAQ 說首批田間資料來自四個試點農場。",
+   "src": "entrepreneurship#Target crop field testing; entrepreneurship#Frequently asked questions",
+   "confidence": "conflict"
+  },
+  {
+   "id": "entrepreneurship-f20",
+   "label_en": "Funding stages table",
+   "label_zh": "資金階段表",
+   "value": "US$4630-9260; 15 430-30 860; 30 860; 1545-4630",
+   "detail_en": "Four stages: proof of concept (university innovation grants), technical feasibility (small biotech sponsorship), local commercialization and compliance (local government subsidy), market entry (angel fund or incubator). These add up to about US$52 000-76 000. After iGEM: Ministry of Agriculture innovation programs; for the first pilot: agricultural biotech investors, climate-tech funds, accelerators.",
+   "detail_zh": "四階段：概念驗證（大學創新補助）、技術可行性（小型生技企業贊助）、在地商業化與法遵（地方政府補助）、進入市場（天使基金或孵化器）。總和約 52 000-76 000 美元。iGEM 之後：農業部創新計畫；首次試點：農業生技投資人、氣候科技基金、加速器。",
+   "src": "entrepreneurship#Investments",
+   "confidence": "consistent"
+  },
+  {
+   "id": "entrepreneurship-f21",
+   "label_en": "Taiwan fertilizer registration time",
+   "label_zh": "台灣肥料登記時間",
+   "value": "About 1 month if standard; 1 to 2 years for ReLEAF",
+   "detail_en": "A product matching an existing standard specification registers in about a month. Our protein protectants are new, so we must add crop toxicity and efficacy trial reports and plan one to two years. A biopesticide route would need GLP toxicology and multi-season trials, taking several years.",
+   "detail_zh": "符合現有標準規格的產品約一個月可登記。我們的蛋白質保護劑屬新型，須另交作物毒性與肥效試驗報告，規劃一至兩年。走生物農藥需 GLP 毒理與多季田間試驗，要好幾年。",
+   "src": "entrepreneurship#Regulation follow-up",
+   "confidence": "stated"
+  },
+  {
+   "id": "entrepreneurship-f22",
+   "label_en": "Regulatory work timeline",
+   "label_zh": "法規工作時程",
+   "value": "Phase 1 to Oct 2027; Phase 2 Oct 2027-Oct 2030",
+   "detail_en": "Phase 1 seeks written answers on product category and contained-use status. Phase 2 submits the registration dossier. Philippine preparation starts Oct 2030. The Gantt chart shows different expansion dates.",
+   "detail_zh": "第 1 階段取得產品類別與密閉使用的書面答覆；第 2 階段送交登記資料；菲律賓準備自 2030 年 10 月起。甘特圖的擴張日期則不同。",
+   "src": "entrepreneurship#Regulatory work approval timeline",
+   "confidence": "conflict"
+  },
+  {
+   "id": "entrepreneurship-f23",
+   "label_en": "Roadmap (Gantt)",
+   "label_zh": "路線圖（甘特圖）",
+   "value": "5 phases, Dec 2025 to Apr 2032; 6 of 19 activities done",
+   "detail_en": "Phase 1 (concept validation, to 13 Nov 2026) is 100%. Phase 2 soil testing, safety and filing runs to Oct 2027 at about 15%. Taiwan pilot trials run 28 Oct 2027 to 24 Jun 2028.",
+   "detail_zh": "第 1 階段（概念驗證，至 2026 年 11 月 13 日）完成 100%。第 2 階段土壤測試、安全與法規申請至 2027 年 10 月，約 15%。台灣試點田間試驗為 2027 年 10 月 28 日至 2028 年 6 月 24 日。",
+   "src": "entrepreneurship-roadmap",
+   "confidence": "stated"
+  },
+  {
+   "id": "entrepreneurship-f24",
+   "label_en": "Expansion market scores",
+   "label_zh": "擴張市場評分",
+   "value": "US 32; Philippines 25; Thailand 22; Taiwan 21; EU 20; Vietnam 16; Indonesia 16; Malaysia 13",
+   "detail_en": "Eight categories, maximum 40; Tier 1 is 24 or more. The US is first on score but entry ease is 1 of 5, so the Philippines is first abroad. These are the team's own scores, not official ratings.",
+   "detail_zh": "八個類別、滿分 40；24 分以上為第一級。美國分數最高但進入難易度只有 1/5，所以菲律賓是第一個海外市場。這些是團隊自己的評分，不是官方評等。",
+   "src": "laws-and-regulations#Table 7",
+   "confidence": "stated"
+  },
+  {
+   "id": "entrepreneurship-f25",
+   "label_en": "Written regulator confirmations",
+   "label_zh": "主管機關書面確認",
+   "value": "None, in any of eight markets",
+   "detail_en": "The checks for written regulator confirmation (bioreactor B4, culture C5, permeate P4) are all marked N everywhere, so every regulatory score is capped.",
+   "detail_zh": "各市場的主管機關書面確認項目（反應器 B4、菌株 C5、滲出液 P4）全部標為 N，因此所有法規分數都有上限。",
+   "src": "laws-and-regulations#Tables 9-11",
+   "confidence": "stated"
+  },
+  {
+   "id": "entrepreneurship-f26",
+   "label_en": "Prototype build cost",
+   "label_zh": "原型製作成本",
+   "value": "NT$83 028 (about US$2800)",
+   "detail_en": "Bacterial kit NT$52 578 plus bioreactor NT$30 450, one hand-built unit. The page says this is the only cost figure and is not a unit cost at volume; no techno-economic analysis is shown.",
+   "detail_zh": "菌株套組 NT$52 578 加反應器 NT$30 450，為一台手工製作的單機。頁面說這是唯一的成本數字，不是量產單位成本；也未顯示技術經濟分析。",
+   "src": "biomanufacturing#Field Deployment",
+   "confidence": "stated"
+  },
+  {
+   "id": "entrepreneurship-f27",
+   "label_en": "Capital per hectare in the Math Model",
+   "label_zh": "數學模型中每公頃資本",
+   "value": "US$3800 (4.05 x 20 L units at US$937.50)",
+   "detail_en": "The business plan prices US$2280 of hardware per hectare and says it has not been rebuilt on this figure. At a 12 or 18 hour harvest cycle the Math Model's capital would be US$9120 or US$13 679 a hectare.",
+   "detail_zh": "商業計畫每公頃硬體定價 2280 美元，並說明尚未依此數字重算。若採 12 或 18 小時收穫週期，數學模型的資本將是每公頃 9120 或 13 679 美元。",
+   "src": "entrepreneurship#Assumptions; model",
+   "confidence": "conflict"
+  },
+  {
+   "id": "entrepreneurship-f28",
+   "label_en": "Enzyme dose per hectare per spray",
+   "label_zh": "每公頃每次噴灑的酵素劑量",
+   "value": "203 U (business plan) vs 37.6 kU (Math Model)",
+   "detail_en": "The Math Model figure is 185 times larger, needs about four 20 L reactors per hectare instead of two 1 L ones, and neither dose has been validated in a field.",
+   "detail_zh": "數學模型的數字大 185 倍，每公頃約需四台 20 公升反應器，而非兩台 1 公升；兩個劑量都未在田間驗證。",
+   "src": "entrepreneurship#Pricing model",
+   "confidence": "conflict"
+  },
+  {
+   "id": "entrepreneurship-f29",
+   "label_en": "Lab efficacy evidence",
+   "label_zh": "實驗室療效證據",
+   "value": "About 70% more chlorophyll: 1.74 vs 1.03 mg/g",
+   "detail_en": "Arabidopsis given ACC deaminase before 100 mM NaCl; one plate per condition, and the page says runs disagree on the best application timing. Tomato has not been tested.",
+   "detail_zh": "阿拉伯芥在 100 mM NaCl 前先給 ACC deaminase；每個條件一盤，頁面也說各次實驗對最佳施用時機不一致。番茄尚未測試。",
+   "src": "entrepreneurship#Target crop field testing",
+   "confidence": "stated"
+  },
+  {
+   "id": "entrepreneurship-f30",
+   "label_en": "Social enterprise choices",
+   "label_zh": "社會企業的選擇",
+   "value": "Free 4 ha pilot; subsidies only after cash turns positive",
+   "detail_en": "The free pilot at our cost deepens the cash low to about US$196 000. Our own subsidy starts after Year 4; until then support comes from the pilot and partner subsidies. If sales hit only 70%, committing our money earlier could put the business at risk.",
+   "detail_zh": "成本價免費試點使現金最低點加深至約 19.6 萬美元。我們自己的補貼在第 4 年後才開始；在此之前靠試點與夥伴補助。若銷售只達 70%，太早投入自有資金可能讓公司陷入風險。",
+   "src": "entrepreneurship#Choices we made as a social enterprise",
+   "confidence": "stated"
+  },
+  {
+   "id": "entrepreneurship-f31",
+   "label_en": "Target crop: tomato",
+   "label_zh": "目標作物：番茄",
+   "value": "3627.94 ha; 22 953 kg/ha; NT$152.9/kg average",
+   "detail_en": "Counties with the warmest tomato-season nights grow 85% of Taiwan's tomatoes; every county warmed 0.9 to 2.0 C in November-December. Director Wu advised tomato over rice because rice is overproduced.",
+   "detail_zh": "夜間升溫最明顯的縣市生產全台 85% 的番茄；11-12 月各縣市升溫 0.9 至 2.0 °C。吳主任建議選番茄而非稻米，因為稻米生產過剩。",
+   "src": "geospatial-analysis#Impact: current reach and future prospect",
+   "confidence": "stated"
+  },
+  {
+   "id": "entrepreneurship-f32",
+   "label_en": "CH Biotech (正瀚生技) role",
+   "label_zh": "正瀚生技的角色",
+   "value": "Industry briefing 9 July 2026; quote 5 Sept 2026",
+   "detail_en": "Taiwan biostimulant company. Its regulatory researchers briefed us on authorities in Taiwan, the EU and the US, and advised settling regulations market by market. The wiki shows advice, not a contract.",
+   "detail_zh": "台灣生物刺激素公司。其法規研究人員向我們說明台灣、歐盟與美國的主管機關，並建議逐一市場先釐清法規。維基只顯示建議，沒有合約。",
+   "src": "laws-and-regulations#Industrial Perspective: Cheng Han Biotechnology; entrepreneurship#Stakeholder analysis",
+   "confidence": "stated"
+  },
+  {
+   "id": "entrepreneurship-f33",
+   "label_en": "Risk register ratings",
+   "label_zh": "風險登記表評級",
+   "value": "Cost exceeds farmer budget: probability Medium, impact High",
+   "detail_en": "Membrane leakage Low-Medium / Medium; containment breach Low / High; farmer distrust Medium / Medium; slow cooperative adoption Medium / Medium. Cost mitigation: test 20% higher cost or 20% lower price; fall back to co-op purchase, NGO bulk buying, rental or cartridge subscription.",
+   "detail_zh": "膜洩漏 低-中／中；密閉破損 低／高；農民不信任 中／中；合作社採用緩慢 中／中。成本風險的因應：測試成本高 20% 或售價低 20%；備案為合作購買、NGO 大量採購、租賃或匣式訂閱。",
+   "src": "entrepreneurship#Potential risks",
+   "confidence": "stated"
+  }
+ ],
+ "terms": [
+  {
+   "term": "Social enterprise",
+   "kw_en": [
+    "commercial revenue",
+    "social mission",
+    "not an NGO"
+   ],
+   "kw_zh": [
+    "商業收入",
+    "社會使命",
+    "不是 NGO"
+   ],
+   "def_en": "A business that earns money to pay for its own operation and a social goal, unlike an NGO that relies on donations. ReLEAF uses a fixed price of 2 times cost, a free pilot and later subsidies to help small farmers.",
+   "def_zh": "用商業收入維持營運並達成社會目標的事業，不同於靠捐款的 NGO。ReLEAF 以成本 2 倍的固定價格、免費試點與日後補貼來幫助小農。",
+   "cat": "business",
+   "src": "entrepreneurship#What is a social enterprise business model?"
+  },
+  {
+   "term": "Social business model canvas",
+   "kw_en": [
+    "nine blocks",
+    "beneficiaries",
+    "payers"
+   ],
+   "kw_zh": [
+    "九大區塊",
+    "受益者",
+    "付費者"
+   ],
+   "def_en": "A one-page business plan adapted for social ventures. It separates beneficiaries (who gains) from payers (who funds), because here they can differ. ReLEAF fills in partners, activities, resources, channels, cost structure and revenue.",
+   "def_zh": "為社會事業調整的一頁式商業計畫。它把受益者（受惠者）與付費者（出資者）分開，因為兩者可能不同。ReLEAF 填入夥伴、活動、資源、通路、成本結構與收入。",
+   "cat": "business",
+   "src": "entrepreneurship#Social business model canvas"
+  },
+  {
+   "term": "Value proposition",
+   "kw_en": [
+    "promise to customer",
+    "on-site factory",
+    "two in one"
+   ],
+   "kw_zh": [
+    "對客戶的承諾",
+    "現場工廠",
+    "二合一"
+   ],
+   "def_en": "The reason a customer should choose you. ReLEAF's is an on-site, on-demand field factory that senses stress and makes the protectant, instead of the farmer deciding when, where and how much to spray.",
+   "def_zh": "客戶選擇你的理由。ReLEAF 的價值主張是現場、隨需的田間工廠：自動感測壓力並生產保護劑，不用農民自己決定何時、何處、噴多少。",
+   "cat": "business",
+   "src": "entrepreneurship#Value proposition"
+  },
+  {
+   "term": "TAM (total addressable market)",
+   "kw_en": [
+    "everyone who could buy",
+    "570 M farms",
+    "top of funnel"
+   ],
+   "kw_zh": [
+    "所有可能買家",
+    "5.7 億農場",
+    "漏斗頂端"
+   ],
+   "def_en": "The whole demand for a product if everyone who could use it did. ReLEAF's is about 570 million farms worldwide. It is a ceiling, not a forecast, because our plan models only Taiwan.",
+   "def_zh": "假設所有可能使用者都買時的總需求。ReLEAF 的 TAM 約為全球 5.7 億個農場。這是上限而非預測，因為我們的計畫只模擬台灣。",
+   "cat": "business",
+   "src": "entrepreneurship#Industry analysis"
+  },
+  {
+   "term": "SAM (serviceable available market)",
+   "kw_en": [
+    "part you can reach",
+    "399 M farms",
+    "climate-hit 70%"
+   ],
+   "kw_zh": [
+    "可服務的部分",
+    "3.99 億農場",
+    "受氣候影響 70%"
+   ],
+   "def_en": "The slice of the TAM your product and channels can actually serve. ReLEAF uses 399 million farms, the 70% of farmers reporting climate impact in a Bayer survey, which is a share of farmers, not a measured market.",
+   "def_zh": "TAM 中你的產品與通路實際能服務的部分。ReLEAF 用 3.99 億個農場，即 Bayer 調查中 70% 回報受氣候影響的農民，這是農民比例，不是實測市場。",
+   "cat": "business",
+   "src": "entrepreneurship#Industry analysis"
+  },
+  {
+   "term": "SOM (serviceable obtainable market)",
+   "kw_en": [
+    "share you can win",
+    "hard to quantify",
+    "Taiwan plan"
+   ],
+   "kw_zh": [
+    "能拿下的份額",
+    "難以量化",
+    "台灣計畫"
+   ],
+   "def_en": "The share of the SAM you can realistically win in the near term. ReLEAF's page says SOM is hard to quantify; its real near-term target is the Taiwan plan of 226 paying hectares to break even.",
+   "def_zh": "短期內你實際能贏得的 SAM 份額。ReLEAF 頁面說 SOM 難以量化；實際的近期目標是台灣計畫中損益兩平所需的 226 付費公頃。",
+   "cat": "business",
+   "src": "entrepreneurship#Industry analysis"
+  },
+  {
+   "term": "Unit economics",
+   "kw_en": [
+    "per unit",
+    "price minus cost",
+    "per hectare"
+   ],
+   "kw_zh": [
+    "每單位",
+    "售價減成本",
+    "每公頃"
+   ],
+   "def_en": "Revenue and cost for one unit of what you sell. ReLEAF uses one hectare: a farm pays about US$5550, it costs us about US$2775, leaving about US$2775 toward fixed costs and profit.",
+   "def_zh": "賣出一個單位所得的收入與成本。ReLEAF 以一公頃為單位：農場付約 5550 美元，我們成本約 2775 美元，剩下約 2775 美元用來支付固定成本與利潤。",
+   "cat": "business",
+   "src": "entrepreneurship#Variable cost and price per hectare"
+  },
+  {
+   "term": "Contribution (per hectare)",
+   "kw_en": [
+    "price minus variable cost",
+    "US$2775",
+    "covers fixed cost"
+   ],
+   "kw_zh": [
+    "售價減變動成本",
+    "2775 美元",
+    "用來攤固定成本"
+   ],
+   "def_en": "What each sale leaves after its own direct cost, available to pay fixed costs and then profit. ReLEAF's Year 1 contribution is about US$2775 per hectare; renewals add about US$45.",
+   "def_zh": "每筆銷售扣除直接成本後剩下的金額，用來支付固定成本，之後才是利潤。ReLEAF 第一年每公頃貢獻約 2775 美元；續購約再多 45 美元。",
+   "cat": "business",
+   "src": "entrepreneurship#Variable cost and price per hectare"
+  },
+  {
+   "term": "Fixed cost",
+   "kw_en": [
+    "does not change with sales",
+    "staff and rent",
+    "US$627 000"
+   ],
+   "kw_zh": [
+    "不隨銷量改變",
+    "人事與租金",
+    "62.7 萬美元"
+   ],
+   "def_en": "A cost you pay whether you sell one unit or many, such as salaries, rent and R&D. ReLEAF's fixed cost is about US$627 000 over Years 0 to 4, mostly a team growing from 3 to 5 people.",
+   "def_zh": "不論賣一個或很多都要付的成本，例如薪資、租金與研發。ReLEAF 第 0 至 4 年固定成本約 62.7 萬美元，主要是從 3 人增加到 5 人的團隊。",
+   "cat": "business",
+   "src": "entrepreneurship#Fixed cost"
+  },
+  {
+   "term": "Variable cost",
+   "kw_en": [
+    "rises with each sale",
+    "parts and freight",
+    "US$2775 per ha"
+   ],
+   "kw_zh": [
+    "隨每筆銷售增加",
+    "零件與運費",
+    "每公頃 2775 美元"
+   ],
+   "def_en": "A cost that grows with each unit sold. For ReLEAF this is the hardware, sensors, cartridge, freight, set-up visits and warranty for each hectare, about US$2775.",
+   "def_zh": "隨每賣出一個單位而增加的成本。對 ReLEAF 來說是每公頃的硬體、感測器、補充匣、運費、安裝拜訪與保固，約 2775 美元。",
+   "cat": "business",
+   "src": "entrepreneurship#Variable cost and price per hectare"
+  },
+  {
+   "term": "Cost-plus pricing (2 x cost)",
+   "kw_en": [
+    "price from cost",
+    "transparent",
+    "same for every farm"
+   ],
+   "kw_zh": [
+    "由成本定價",
+    "透明",
+    "每個農場相同"
+   ],
+   "def_en": "Setting price by adding a fixed markup to full cost. ReLEAF's markup is 2 times cost for every farm, so farmers can see what they pay for and small farms pay no extra.",
+   "def_zh": "在完整成本上加固定加成來定價。ReLEAF 的加成是成本的 2 倍、每個農場相同，農民看得懂價格，小農也不會多付。",
+   "cat": "business",
+   "src": "entrepreneurship#Choices we made as a social enterprise"
+  },
+  {
+   "term": "Break-even",
+   "kw_en": [
+    "revenue equals cost",
+    "226 hectares",
+    "Year 4"
+   ],
+   "kw_zh": [
+    "收入等於成本",
+    "226 公頃",
+    "第 4 年"
+   ],
+   "def_en": "The point where total revenue covers total cost. ReLEAF needs about 226 paying hectares to cover US$627 000 of fixed costs; cumulative cash turns positive in Year 4 of the growth plan.",
+   "def_zh": "總收入剛好抵過總成本的點。ReLEAF 需約 226 付費公頃才能涵蓋 62.7 萬美元固定成本；成長計畫中累計現金於第 4 年轉正。",
+   "cat": "business",
+   "src": "entrepreneurship#Break-even analysis"
+  },
+  {
+   "term": "Payback period",
+   "kw_en": [
+    "time to recover cost",
+    "3.6 years investor",
+    "farmer 3 years"
+   ],
+   "kw_zh": [
+    "回收成本的時間",
+    "投資人 3.6 年",
+    "農民 3 年"
+   ],
+   "def_en": "How long until money put in is earned back. The wiki gives 3.6 years for investors from Year 1, and says a farmer must gain about US$1900 a year to pay back in 3 years.",
+   "def_zh": "投入的錢要多久才賺回來。維基給出投資人自第 1 年起 3.6 年，並指出農民每年需獲益約 1900 美元才能在 3 年內回本。",
+   "cat": "business",
+   "src": "entrepreneurship#Return for investors"
+  },
+  {
+   "term": "Cumulative cash / funding need",
+   "kw_en": [
+    "running total of cash",
+    "lowest point",
+    "-US$196 000"
+   ],
+   "kw_zh": [
+    "現金累計值",
+    "最低點",
+    "-19.6 萬美元"
+   ],
+   "def_en": "The running total of cash in minus cash out. Its lowest point is how much outside money must be raised. ReLEAF's low point is -US$196 000 in Year 1.",
+   "def_zh": "現金流入減流出的累計值。最低點就是必須對外募集的資金。ReLEAF 的最低點是第 1 年的 -19.6 萬美元。",
+   "cat": "business",
+   "src": "entrepreneurship#Growth plan"
+  },
+  {
+   "term": "IRR (internal rate of return)",
+   "kw_en": [
+    "yearly return rate",
+    "24% before tax",
+    "compare to alternatives"
+   ],
+   "kw_zh": [
+    "年報酬率",
+    "稅前 24%",
+    "與其他投資比較"
+   ],
+   "def_en": "The yearly rate of return that makes all the money in and out add up to zero. ReLEAF's growth plan gives 24% before tax; the conservative case gives about -7%.",
+   "def_zh": "讓所有現金流入流出加總為零的年報酬率。ReLEAF 成長計畫稅前為 24%；保守情境約為 -7%。",
+   "cat": "business",
+   "src": "entrepreneurship#Return for investors"
+  },
+  {
+   "term": "NPV (net present value)",
+   "kw_en": [
+    "future cash in today's money",
+    "discount rate",
+    "US$111 000 at 10%"
+   ],
+   "kw_zh": [
+    "未來現金折成現值",
+    "貼現率",
+    "10% 時 11.1 萬美元"
+   ],
+   "def_en": "Future cash flows converted into today's money using a discount rate, minus what you put in. ReLEAF's NPV is US$111 000 at 10% but -US$4000 at 25%.",
+   "def_zh": "用貼現率把未來現金流折成現在的價值，再扣掉投入。ReLEAF 的 NPV 在 10% 為 11.1 萬美元，25% 時為 -4000 美元。",
+   "cat": "business",
+   "src": "entrepreneurship#Return for investors"
+  },
+  {
+   "term": "Sensitivity analysis / conservative case",
+   "kw_en": [
+    "what if sales fall",
+    "70% of plan",
+    "break-even Year 6"
+   ],
+   "kw_zh": [
+    "銷量下降會怎樣",
+    "計畫的 70%",
+    "第 6 年損益兩平"
+   ],
+   "def_en": "Re-running a model with worse inputs to see how fragile it is. ReLEAF's conservative case sells only 70% of planned hectares: break-even slips to Year 6 and IRR drops to about -7%.",
+   "def_zh": "用較差的輸入重算模型，看它有多脆弱。ReLEAF 的保守情境只賣出計畫公頃的 70%：損益兩平延到第 6 年，IRR 降到約 -7%。",
+   "cat": "model",
+   "src": "entrepreneurship#Return for investors"
+  },
+  {
+   "term": "De-risk",
+   "kw_en": [
+    "reduce investor risk",
+    "prove step by step",
+    "field data"
+   ],
+   "kw_zh": [
+    "降低投資人風險",
+    "逐步證明",
+    "田間資料"
+   ],
+   "def_en": "To remove uncertainty so a funder is more willing to invest. For ReLEAF that means field trial data, containment proof and a clear regulatory pathway, which the wiki says funders need to see.",
+   "def_zh": "消除不確定性，讓出資者更願意投入。對 ReLEAF 來說就是田間試驗資料、密閉性證明與明確的法規路徑，維基說這些是出資者需要看到的。",
+   "cat": "business",
+   "src": "entrepreneurship#Investments"
+  },
+  {
+   "term": "LOI (letter of intent)",
+   "kw_en": [
+    "non-binding promise",
+    "evidence of demand",
+    "none on wiki"
+   ],
+   "kw_zh": [
+    "無約束力的意向",
+    "需求證據",
+    "維基沒有"
+   ],
+   "def_en": "A short signed note saying a buyer or partner intends to deal, without being bound. Investors use it as evidence of demand. The ReLEAF wiki records no LOI, only advice and verbal support.",
+   "def_zh": "買家或夥伴簽署、表示有合作意願但無法律約束的簡短文件。投資人常用它當作需求證據。ReLEAF 維基沒有記錄任何 LOI，只有建議與口頭支持。",
+   "cat": "business",
+   "src": "entrepreneurship#Sales objectives"
+  },
+  {
+   "term": "CAC (customer acquisition cost)",
+   "kw_en": [
+    "cost to win one customer",
+    "distributors lower it",
+    "referral discount"
+   ],
+   "kw_zh": [
+    "獲得一位客戶的成本",
+    "經銷商降低成本",
+    "推薦折扣"
+   ],
+   "def_en": "The total sales and marketing spend divided by customers won. The wiki gives no CAC figure; its plan lowers CAC by selling through distributors and cooperatives and by a referral discount after pilots succeed.",
+   "def_zh": "銷售與行銷總花費除以新增客戶數。維基沒有給出 CAC 數字；計畫透過經銷商、合作社，以及試點成功後的推薦折扣來降低 CAC。",
+   "cat": "business",
+   "src": "entrepreneurship#Distribution; entrepreneurship#Promotion and advertising"
+  },
+  {
+   "term": "B2B (business-to-business)",
+   "kw_en": [
+    "sell to middlemen",
+    "distributors",
+    "then farmers"
+   ],
+   "kw_zh": [
+    "賣給中間商",
+    "經銷商",
+    "再到農民"
+   ],
+   "def_en": "Selling to other businesses, not directly to end users. ReLEAF sells to agricultural distributors who then reach farmers, because they have the connections and trust a small team lacks.",
+   "def_zh": "賣給其他企業，而不是直接賣給最終使用者。ReLEAF 賣給農業經銷商，再由他們接觸農民，因為他們有小團隊缺少的人脈與信任。",
+   "cat": "business",
+   "src": "entrepreneurship#Distribution"
+  },
+  {
+   "term": "Pilot programme",
+   "kw_en": [
+    "small real-world trial",
+    "one season",
+    "success metrics"
+   ],
+   "kw_zh": [
+    "小規模實地試驗",
+    "一個作季",
+    "成功指標"
+   ],
+   "def_en": "A limited trial with real users before wider sales. ReLEAF plans a first pilot of 5 to 10 systems for one season, and Taiwan field trials with 20 to 50 devices, judged on crop loss and spray events.",
+   "def_zh": "在擴大銷售前，用真實使用者做的小規模試驗。ReLEAF 規劃首批 5 至 10 套系統試用一季，以及 20 至 50 台裝置的台灣田間試驗，以作物損失與噴藥次數評估。",
+   "cat": "business",
+   "src": "entrepreneurship#Sales process; entrepreneurship#Target crop field testing"
+  },
+  {
+   "term": "Printer-and-ink (cartridge) model",
+   "kw_en": [
+    "buy device once",
+    "refill cartridges",
+    "recurring revenue"
+   ],
+   "kw_zh": [
+    "設備買一次",
+    "補充匣",
+    "經常性收入"
+   ],
+   "def_en": "A business where a reusable device is sold once and a consumable is bought repeatedly. Prof. Chen suggested it: the bioreactor is the printer, the Bacillus subtilis cartridge is the ink, about US$90 a year.",
+   "def_zh": "一次賣出可重複使用的設備、再持續賣耗材的模式。陳教授提出此建議：生物反應器是印表機，枯草桿菌補充匣是墨水，每年約 90 美元。",
+   "cat": "business",
+   "src": "entrepreneurship#Cartridge design"
+  },
+  {
+   "term": "Cooperative / shared ownership",
+   "kw_en": [
+    "group buys one machine",
+    "farmers' association",
+    "rental"
+   ],
+   "kw_zh": [
+    "團體共買一台",
+    "農會",
+    "租賃"
+   ],
+   "def_en": "Several farmers or an association owning and using one device together. The Math Model and Geospatial pages say individual ownership is out of reach for farms under 2 ha, so sharing is the structure the numbers allow.",
+   "def_zh": "多位農民或農會共同擁有並使用一台設備。數學模型與地理空間頁面指出 2 公頃以下的農場難以個別擁有，所以共享是數字允許的結構。",
+   "cat": "business",
+   "src": "geospatial-analysis#Business plan"
+  },
+  {
+   "term": "Subsidy",
+   "kw_en": [
+    "government help",
+    "lowers upfront cost",
+    "TARI"
+   ],
+   "kw_zh": [
+    "政府補助",
+    "降低前期成本",
+    "TARI"
+   ],
+   "def_en": "Money from government or partners that lowers what the buyer pays. Officials at Smart Agriweek said they would support products like ReLEAF; ReLEAF's own subsidy starts after Year 4.",
+   "def_zh": "政府或夥伴提供、降低買方支付金額的資金。Smart Agriweek 的官員表示願意支持像 ReLEAF 這樣的產品；ReLEAF 自己的補貼在第 4 年後才開始。",
+   "cat": "business",
+   "src": "entrepreneurship#Who pays and who benefits"
+  },
+  {
+   "term": "Barrier to entry",
+   "kw_en": [
+    "what stops competitors",
+    "need several skills",
+    "regulation and capital"
+   ],
+   "kw_zh": [
+    "什麼擋住競爭者",
+    "需多種能力",
+    "法規與資金"
+   ],
+   "def_en": "Something that makes it hard for newcomers to enter a market. ReLEAF lists investment cost, branding trust, technology that must work as one system, and access to specialised resources.",
+   "def_zh": "讓新進者難以進入市場的因素。ReLEAF 列出投資成本、品牌信任、必須整合運作的技術，以及特殊資源的取得。",
+   "cat": "business",
+   "src": "entrepreneurship#Barriers to entry"
+  },
+  {
+   "term": "FTO (freedom to operate)",
+   "kw_en": [
+    "check existing patents",
+    "avoid infringing",
+    "key activity"
+   ],
+   "kw_zh": [
+    "檢查現有專利",
+    "避免侵權",
+    "關鍵活動"
+   ],
+   "def_en": "A check that selling your product will not infringe someone else's patents. ReLEAF lists verifying FTO alongside existing patents and planned patent applications as key activities.",
+   "def_zh": "確認販售產品不會侵犯他人專利的檢查。ReLEAF 把查核現有專利的 FTO 與規劃中的專利申請列為關鍵活動。",
+   "cat": "business",
+   "src": "entrepreneurship#Key activities"
+  },
+  {
+   "term": "SWOT / PESTEL",
+   "kw_en": [
+    "internal and external",
+    "strengths to threats",
+    "six outside forces"
+   ],
+   "kw_zh": [
+    "內部與外部",
+    "優勢到威脅",
+    "六種外部力量"
+   ],
+   "def_en": "Two checklists. SWOT lists strengths, weaknesses, opportunities and threats. PESTEL looks at political, economic, social, technological, environmental and legal forces. ReLEAF uses both to find risks such as organic rules and membrane blockage.",
+   "def_zh": "兩種檢核表。SWOT 列出優勢、劣勢、機會與威脅；PESTEL 檢視政治、經濟、社會、科技、環境與法律力量。ReLEAF 用它們找出有機規範、膜堵塞等風險。",
+   "cat": "business",
+   "src": "entrepreneurship#SWOT analysis; entrepreneurship#PESTEL analysis"
+  },
+  {
+   "term": "Biostimulant (plant biostimulant)",
+   "kw_en": [
+    "improves stress tolerance",
+    "not a pesticide",
+    "PFC 6(B)"
+   ],
+   "kw_zh": [
+    "提升逆境耐受",
+    "不是農藥",
+    "PFC 6(B)"
+   ],
+   "def_en": "A product that helps plants cope with stress without killing pests or giving nutrients. ReLEAF aims its cell-free output at this category, which is cheaper to register than a pesticide, so it limits its claims to abiotic stress.",
+   "def_zh": "幫助植物應付逆境、但不是殺蟲殺菌或提供養分的產品。ReLEAF 將無細胞產物定位在此類別，登記比農藥便宜，所以只主張非生物逆境。",
+   "cat": "law",
+   "src": "laws-and-regulations#Function → Claim → Classification"
+  },
+  {
+   "term": "Contained use vs environmental release",
+   "kw_en": [
+    "sealed device",
+    "no live cells leave",
+    "regulatory route"
+   ],
+   "kw_zh": [
+    "密閉裝置",
+    "活菌不外洩",
+    "法規路徑"
+   ],
+   "def_en": "Contained use means engineered microbes stay inside sealed equipment; environmental release means they are put into the field. ReLEAF argues for contained use, but its Laws page says Taiwan's framework is unconfirmed.",
+   "def_zh": "密閉使用指基改微生物留在密閉設備內；環境釋放指放入田間。ReLEAF 主張屬密閉使用，但法規頁說台灣的適用框架尚未確認。",
+   "cat": "law",
+   "src": "laws-and-regulations#Exploring the Gray"
+  },
+  {
+   "term": "Organic certification",
+   "kw_en": [
+    "bans GMO products",
+    "Art. 3 and 15",
+    "not our market"
+   ],
+   "kw_zh": [
+    "禁止基改產品",
+    "第 3、15 條",
+    "不是我們的市場"
+   ],
+   "def_en": "A label that follows legal organic rules. Taiwan's Organic Agriculture Promotion Act excludes GMOs and their products, so even cell-free output from an engineered strain cannot be claimed organic; ReLEAF targets conventional smallholders.",
+   "def_zh": "依法定有機規範核發的標章。台灣有機農業促進法排除基改生物及其產品，所以即使是基改菌株生產的無細胞產物也不能宣稱有機；ReLEAF 的對象是慣行小農。",
+   "cat": "law",
+   "src": "entrepreneurship#Organic farming and genetically modified organism (GMO) concerns"
+  },
+  {
+   "term": "Scale-out vs scale-up",
+   "kw_en": [
+    "copy the unit",
+    "same conditions",
+    "support systems limit"
+   ],
+   "kw_zh": [
+    "複製單位",
+    "相同條件",
+    "支援系統是限制"
+   ],
+   "def_en": "Scale-up makes one vessel bigger; scale-out runs more identical units. ReLEAF scales out. The membrane is the last limit; oxygen, energy, medium supply and pumping bind first.",
+   "def_zh": "放大是把單一容器做大；複製擴產是運行更多相同單位。ReLEAF 選擇複製擴產。薄膜是最後的限制，氧氣、能源、培養基供應與泵送才先卡住。",
+   "cat": "hardware",
+   "src": "biomanufacturing#Scaling"
+  },
+  {
+   "term": "Techno-economic analysis (TEA)",
+   "kw_en": [
+    "cost per unit of product",
+    "break-even yield",
+    "not done"
+   ],
+   "kw_zh": [
+    "每單位產品成本",
+    "損益兩平產量",
+    "尚未完成"
+   ],
+   "def_en": "A study that sets production and operating cost against output to get cost per unit of product. The wiki says one would be needed and shows only the NT$83 028 prototype cost.",
+   "def_zh": "把生產與營運成本對照產量，算出每單位產品成本的研究。維基說需要做一份，目前只顯示 NT$83 028 的原型成本。",
+   "cat": "business",
+   "src": "biomanufacturing#Field Deployment"
+  }
+ ],
+ "questions": [
+  {
+   "q_en": "Where do you see your product in the greater market, and how will you implement it?",
+   "q_zh": "你們的產品在更大的市場中定位在哪裡？打算如何落實？",
+   "type": "impact",
+   "tier": "A",
+   "pages": [
+    "entrepreneurship",
+    "geospatial-analysis"
+   ],
+   "seat": "biz",
+   "backup": "ihp",
+   "kw_en": [
+    "Taiwan small farms",
+    "distributors and pilots",
+    "tomato first"
+   ],
+   "kw_zh": [
+    "台灣小農",
+    "經銷商與試點",
+    "先做番茄"
+   ],
+   "a_en": "Our first market is Taiwan's small farms: 99.2% are under 2 hectares and the average is about one hectare. We would sell through agricultural distributors and run pilots with cooperatives, research farms and extension offices, starting with tomato. After Taiwan the order is the Philippines, Thailand, the US and the EU. The honest limit is that we have lab results only, so the pilot planned from October 2027 has to prove it in a field first.",
+   "a_zh": "我們第一個市場是台灣的小農：99.2% 的農場不到 2 公頃，平均約 1 公頃。我們會透過農業經銷商銷售，並與合作社、研究農場和改良場做試點，第一個作物是番茄。台灣之後依序是菲律賓、泰國、美國和歐盟。老實說，我們目前只有實驗室結果，所以從 2027 年 10 月開始的試點必須先在田間證明。",
+   "trap_en": "Answering with the global 570 million farms. That is the TAM, not where you start.",
+   "trap_zh": "拿全球 5.7 億個農場回答。那是 TAM，不是你們的起點。",
+   "basis": "like GEMS-TAIWAN 2025: where in the greater market?"
+  },
+  {
+   "q_en": "Have you identified funding sources or investors who could de-risk the technology enough to bring it to market?",
+   "q_zh": "你們是否找到能協助降低技術風險、把產品推向市場的資金來源或投資人？",
+   "type": "impact",
+   "tier": "A",
+   "pages": [
+    "entrepreneurship"
+   ],
+   "seat": "biz",
+   "backup": "ihp",
+   "kw_en": [
+    "no investor committed",
+    "staged funding types",
+    "evidence de-risks"
+   ],
+   "kw_zh": [
+    "尚無投資人承諾",
+    "分階段資金類型",
+    "證據降低風險"
+   ],
+   "a_en": "Not yet: no investor has committed, and our wiki names types of funding, not signed backers. Early on, university innovation grants and a small biotech sponsor; then a local government subsidy; for the first pilot, agricultural biotech investors, climate-tech funds and accelerators. What de-risks it for them is field trial data, a clear regulatory pathway and containment proof. In our growth plan, funding the US$196,000 low point returns 2.3 times by Year 5.",
+   "a_zh": "還沒有：目前沒有任何投資人承諾，維基列的是資金類型，不是已簽約的支持者。早期是大學創新補助和小型生技企業贊助，接著是地方政府補助，首次試點則是農業生技投資人、氣候科技基金和加速器。能降低他們風險的是田間試驗資料、明確的法規路徑與密閉性證明。依成長計畫，資助 19.6 萬美元的最低點，到第 5 年可拿回 2.3 倍。",
+   "trap_en": "Implying named investors or letters of interest exist. The wiki records none.",
+   "trap_zh": "暗示已有具名投資人或意向書。維基沒有任何記錄。",
+   "basis": "like GEMS-TAIWAN 2025: investors to de-risk"
+  },
+  {
+   "q_en": "How would you improve the project if you were given funding?",
+   "q_zh": "如果給你們資金，你們會如何改進這個專案？",
+   "type": "impact",
+   "tier": "A",
+   "pages": [
+    "entrepreneurship"
+   ],
+   "seat": "biz",
+   "backup": "hw",
+   "kw_en": [
+    "containment proof",
+    "tomato field pilot",
+    "cartridge redesign"
+   ],
+   "kw_zh": [
+    "密閉性證明",
+    "番茄田間試點",
+    "補充匣改良"
+   ],
+   "a_en": "First, containment proof: escape-frequency and membrane-integrity tests, verified by a recognized institute such as TARI, so regulators can answer us. Second, a tomato field pilot of 20 to 50 devices from October 2027 to June 2028, because our plant results are in Arabidopsis only. Third, the cartridge: connect it to irrigation and keep the culture viable for six months. Our funding table asks about US$30,860 for local pilot-scale and compliance work.",
+   "a_zh": "第一，密閉性證明：做逃逸頻率與膜完整性測試，請 TARI 這類認可機構驗證，讓主管機關能給我們答覆。第二，在 2027 年 10 月到 2028 年 6 月，用 20 到 50 台裝置做番茄田間試點，因為目前植物結果只在阿拉伯芥。第三，改良補充匣：接上灌溉系統，並讓菌液可存活六個月。資金表中在地試點與法遵準備約需 30 860 美元。",
+   "trap_en": "Listing every future idea. Rank three: containment, field pilot, cartridge.",
+   "trap_zh": "把所有未來點子都列出來。只排出三項：密閉性、田間試點、補充匣。",
+   "basis": "like GEMS-TAIWAN 2025: improve if given funding"
+  },
+  {
+   "q_en": "May I ask about the cost?",
+   "q_zh": "請問成本是多少？",
+   "type": "fact",
+   "tier": "A",
+   "pages": [
+    "entrepreneurship"
+   ],
+   "seat": "biz",
+   "backup": "hw",
+   "kw_en": [
+    "US$5550 first year",
+    "US$90 refills",
+    "planning estimate"
+   ],
+   "kw_zh": [
+    "第一年 5550 美元",
+    "每年 90 美元補充匣",
+    "規劃估算"
+   ],
+   "a_en": "For a one-hectare farm, about US$5,550 in Year 1, which is NT$175,400: two bioreactors, three moisture sensors, one cartridge, plus freight, set-up and warranty. After that, about US$90 a year for the refill cartridge. That price is twice our own cost of about US$2,775. These are planning estimates, not quotes, and they rest on a dose assumption that no crop has tested yet.",
+   "a_zh": "一公頃的農場第一年約 5,550 美元，也就是 NT$175,400：包含兩台生物反應器、三個濕度感測器、一個補充匣，加上運費、安裝與保固。之後每年補充匣約 90 美元。這個價格是我們成本約 2,775 美元的兩倍。這些是規劃估算，不是報價，而且建立在一個還沒有任何作物測試過的劑量假設上。",
+   "trap_en": "Quoting only the US$2280 bioreactor and forgetting the sensors, cartridge and set-up.",
+   "trap_zh": "只講 2280 美元的反應器，漏掉感測器、補充匣與安裝。",
+   "basis": "like GEMS-TAIWAN 2024: may I ask about the cost?"
+  },
+  {
+   "q_en": "How could you scale this?",
+   "q_zh": "你們要怎麼擴大規模？",
+   "type": "impact",
+   "tier": "A",
+   "pages": [
+    "biomanufacturing",
+    "entrepreneurship",
+    "model"
+   ],
+   "seat": "biz",
+   "backup": "hw",
+   "kw_en": [
+    "scale out not up",
+    "support systems bind",
+    "20 to 120 hectares"
+   ],
+   "kw_zh": [
+    "複製擴產而非放大",
+    "支援系統先卡住",
+    "20 到 120 公頃"
+   ],
+   "a_en": "We scale out: we replicate the same one-litre-class module, because that keeps wall shear, flux and fouling margin unchanged. Our table works one module up to eight, and the membrane is the last limit; oxygen transfer, energy, medium supply and pumping bind first. Commercially, the plan grows from 20 paying hectares in Year 1 to 120 in Year 5. Our Math Model says a 100-hectare association would need a 41-fold scale-up, which we have not shown.",
+   "a_zh": "我們用複製擴產：複製同一個模組，因為這樣壁面剪切、通量與堵塞餘裕都不變。我們把一個模組算到八個，薄膜是最後才受限的，先卡住的是氧氣傳輸、能源、培養基供應和泵送。商業上，計畫從第 1 年的 20 付費公頃成長到第 5 年的 120 公頃。數學模型說 100 公頃的農會需要放大 41 倍，這我們還沒有證明。",
+   "trap_en": "Saying 'make the vessel bigger'. We chose scale-out, not scale-up.",
+   "trap_zh": "回答「把容器做大」。我們選的是複製擴產，不是放大。",
+   "basis": "like GEMS-TAIWAN 2024: how could you scale this?"
+  },
+  {
+   "q_en": "Why a social enterprise and not a conventional business, and what drove that choice?",
+   "q_zh": "為什麼是社會企業而不是一般企業？是什麼促成這個選擇？",
+   "type": "design",
+   "tier": "A",
+   "pages": [
+    "entrepreneurship"
+   ],
+   "seat": "biz",
+   "backup": "ihp",
+   "kw_en": [
+    "revenue funds mission",
+    "no industrial farms first",
+    "fixed 2x price"
+   ],
+   "kw_zh": [
+    "收入支持使命",
+    "先不做大農場",
+    "固定 2 倍價格"
+   ],
+   "a_en": "A social enterprise uses commercial revenue to fund a social mission, unlike an NGO. Our users are small farmers who struggle to afford technology, so for four years we chose not to target industrial farms, which would reach break-even faster. Price is fixed at twice cost for everyone, there is a free 4-hectare pilot, and profit funds subsidies once cash turns positive in Year 4. The cost is lower profit and a deeper cash low of about US$196,000.",
+   "a_zh": "社會企業用商業收入支持社會使命，這和靠捐款的 NGO 不同。我們的使用者是負擔不起新科技的小農，所以前四年我們選擇不鎖定能更快損益兩平的大型農場。價格對所有人固定為成本的兩倍，有 4 公頃免費試點，第 4 年現金轉正後再用利潤做補貼。代價是利潤較低、現金最低點更深，約 19.6 萬美元。",
+   "trap_en": "Saying 'we are a non-profit'. We earn revenue and return money to investors.",
+   "trap_zh": "說「我們是非營利」。我們有收入，也要回報投資人。",
+   "basis": "like Timmy's website: why a social enterprise"
+  },
+  {
+   "q_en": "How big is your market, and how did you work that out?",
+   "q_zh": "你們的市場有多大？是怎麼算出來的？",
+   "type": "fact",
+   "tier": "A",
+   "pages": [
+    "entrepreneurship"
+   ],
+   "seat": "biz",
+   "backup": "ihp",
+   "kw_en": [
+    "TAM 570 M farms",
+    "SAM 399 M farms",
+    "SOM hard to quantify"
+   ],
+   "kw_zh": [
+    "TAM 5.7 億農場",
+    "SAM 3.99 億農場",
+    "SOM 難以量化"
+   ],
+   "a_en": "Our total addressable market is about 570 million farms worldwide. The serviceable part is 399 million farms, the 70% of farmers who report being hit by climate stress in a Bayer survey. For the obtainable share, our page says it is hard to quantify. The honest limit is that our actual plan models Taiwan only: 226 paying hectares to break even.",
+   "a_zh": "我們的總可觸及市場約為全球 5.7 億個農場。可服務的部分是 3.99 億個，也就是 Bayer 調查中 70% 回報受氣候壓力影響的農民。可獲得的份額，我們的頁面說難以量化。老實說，實際計畫只模擬台灣：需要 226 付費公頃才損益兩平。",
+   "trap_en": "Treating the 70% survey share as a measured market. It is a share of farmers.",
+   "trap_zh": "把 70% 的調查比例當成實測市場。那只是農民的比例。",
+   "basis": "like ICJFLS 2025: unmet market needs"
+  },
+  {
+   "q_en": "How did you validate your business model?",
+   "q_zh": "你們如何驗證商業模式？",
+   "type": "validate",
+   "tier": "A",
+   "pages": [
+    "entrepreneurship",
+    "human-practices"
+   ],
+   "seat": "ihp",
+   "backup": "biz",
+   "kw_en": [
+    "12 deployment talks",
+    "plan changed",
+    "no sales yet"
+   ],
+   "kw_zh": [
+    "12 場部署訪談",
+    "計畫因此修改",
+    "尚無銷售"
+   ],
+   "a_en": "We tested it against people, not sales. Our deployment pipeline had 12 conversations from February to October with professors, CH Biotech, Agriweather, a research station director and the World Vegetable Center. They changed the plan: we dropped price competition with chemicals, added missing factory, labor and waste costs, and narrowed to tomato. The limit is that we have no sales, no signed purchase intent and no field data yet.",
+   "a_zh": "我們是用訪談驗證，不是用銷售。部署管線從二月到十月共有 12 場對話，對象包括教授、正瀚生技、阿龜微氣候、改良場主任與世界蔬菜中心。他們改變了計畫：我們放棄和化學肥料比價、補進遺漏的工廠、人力與廢棄物成本，並聚焦番茄。限制是我們還沒有銷售、沒有簽署的購買意向，也沒有田間資料。",
+   "trap_en": "Calling interviews 'validation of demand'. Advice is not willingness to pay.",
+   "trap_zh": "把訪談說成「需求已驗證」。建議不等於付費意願。",
+   "basis": "like KU Leuven 2025: how did you validate your business model?"
+  },
+  {
+   "q_en": "What is your cost advantage over existing products?",
+   "q_zh": "你們相較現有產品的成本優勢是什麼？",
+   "type": "compare",
+   "tier": "A",
+   "pages": [
+    "entrepreneurship"
+   ],
+   "seat": "biz",
+   "backup": "ihp",
+   "kw_en": [
+    "two functions one package",
+    "NT$80-100k each",
+    "cheaper after Year 1"
+   ],
+   "kw_zh": [
+    "兩種功能一個套組",
+    "各 8-10 萬台幣",
+    "第一年後更便宜"
+   ],
+   "a_en": "Our advantage is two functions in one package, not a lower total price. The wiki gives competitor products at about NT$80,000 to 100,000 for either sensing or protectant production alone, while our first-year package for one hectare is about NT$175,400, then only about US$90 a year. So we land near the price of buying both separately, and cheaper in later years. We have not compared against a farmer's current chemical spending.",
+   "a_zh": "我們的優勢是一個套組有兩種功能，不是總價比較低。維基列出競品單獨感測或單獨生產保護劑約 NT$80,000 到 100,000，而我們一公頃第一年套組約 NT$175,400，之後每年只要約 90 美元。所以我們接近分開買兩樣的價格，後續年份則更便宜。我們還沒有和農民目前的化學藥劑支出做比較。",
+   "trap_en": "Claiming 'cheaper than competitors' without saying it is about the price of two products.",
+   "trap_zh": "說「比競品便宜」，卻沒說明只是接近買兩樣的價格。",
+   "basis": "like ICJFLS 2025: what is your cost advantage?"
+  },
+  {
+   "q_en": "Why do small farms matter for your business, and what do the numbers say?",
+   "q_zh": "為什麼小農場對你們的事業很重要？數字怎麼說？",
+   "type": "fact",
+   "tier": "A",
+   "pages": [
+    "geospatial-analysis",
+    "entrepreneurship"
+   ],
+   "seat": "biz",
+   "backup": "dry",
+   "kw_en": [
+    "99.2% under 2 ha",
+    "average about 1 ha",
+    "farmer age 63.5"
+   ],
+   "kw_zh": [
+    "99.2% 不到 2 公頃",
+    "平均約 1 公頃",
+    "農民平均 63.5 歲"
+   ],
+   "a_en": "In Taiwan, 99.2% of farms are under 2 hectares, they manage 85.3% of the farmland, and the average farm is about one hectare. So we model one hectare as the reference farm and price per hectare. The average farmer is 63.5 years old, so walking the field is getting harder, which supports automation. The limit is size: Taiwan's small market is why we plan to expand abroad after validating here.",
+   "a_zh": "台灣 99.2% 的農場不到 2 公頃，管理 85.3% 的農地，平均農場約 1 公頃。所以我們以 1 公頃作為參考農場，並按每公頃定價。農民平均 63.5 歲，下田巡視越來越困難，這支持自動化。限制在規模：台灣市場小，所以我們在這裡驗證後計畫擴張到海外。",
+   "trap_en": "Quoting 99.2% as the share of farmland. It is the share of farms; they hold 85.3% of the land.",
+   "trap_zh": "把 99.2% 說成農地比例。那是農場數的比例，農地是 85.3%。",
+   "basis": "like ICJFLS 2025: unmet market needs"
+  },
+  {
+   "q_en": "Why did you set the price at twice your cost, the same for every farm?",
+   "q_zh": "為什麼把價格定為成本的兩倍，而且每個農場都一樣？",
+   "type": "design",
+   "tier": "A",
+   "pages": [
+    "entrepreneurship"
+   ],
+   "seat": "biz",
+   "backup": "ihp",
+   "kw_en": [
+    "transparent for farmers",
+    "no extra for small farms",
+    "pays fixed costs"
+   ],
+   "kw_zh": [
+    "對農民透明",
+    "小農不多付",
+    "支付固定成本"
+   ],
+   "a_en": "Farmers can see exactly what they pay for, and no farm pays more for being small. The markup covers our fixed costs of about US$627,000, and it gives about US$2,800 of profit per hectare, so break-even is about 226 hectares. The trade-off is that a one-hectare farm pays about US$5,550 in Year 1, and the wiki says a farmer must gain about US$1,900 a year to pay back in three years.",
+   "a_zh": "農民可以清楚看見付的錢買了什麼，小農也不會因為規模小而多付。這個加成要支付我們約 62.7 萬美元的固定成本，每公頃約有 2,800 美元利潤，所以損益兩平約 226 公頃。取捨是一公頃的農場第一年要付約 5,550 美元，而維基說農民每年需獲益約 1,900 美元才能在三年內回本。",
+   "trap_en": "Saying the price is 'cheap'. It is transparent, and the farmer payback is still unproven.",
+   "trap_zh": "說價格「很便宜」。它是透明的，但農民的回本仍未證實。",
+   "basis": "design-check on pricing"
+  },
+  {
+   "q_en": "Walk me through how you calculated your break-even point.",
+   "q_zh": "請說明你們的損益兩平是怎麼算的。",
+   "type": "validate",
+   "tier": "A",
+   "pages": [
+    "entrepreneurship"
+   ],
+   "seat": "biz",
+   "backup": "dry",
+   "kw_en": [
+    "fixed cost / contribution",
+    "627 000 / 2775",
+    "226 hectares"
+   ],
+   "kw_zh": [
+    "固定成本除以貢獻",
+    "627 000 / 2775",
+    "226 公頃"
+   ],
+   "a_en": "We divide fixed costs by contribution per hectare: about US$627,000 over Years 0 to 4, divided by US$2,775, which is roughly 226 hectares, or about 57 one-hectare farms a year. Contribution is the US$5,550 price minus our US$2,775 cost. The page says the figure leaves out renewal profit and the cost of the free pilot. And it assumes the hardware and dose behind our US$2,280 bioreactor price, which no crop has tested.",
+   "a_zh": "我們用固定成本除以每公頃貢獻：第 0 到 4 年約 62.7 萬美元，除以 2,775 美元，約 226 公頃，也就是每年約 57 個一公頃農場。貢獻是 5,550 美元售價減去 2,775 美元成本。頁面說這個數字沒有計入續購利潤和免費試點的成本。它也假設了 2,280 美元反應器背後的硬體與劑量，而這還沒有任何作物測試過。",
+   "trap_en": "Calling 226 'cautious' on all counts. It leaves out both renewal profit and pilot cost.",
+   "trap_zh": "把 226 說成全面保守。它同時漏掉了續購利潤與試點成本。",
+   "basis": "like KU Leuven 2025: business model validation"
+  },
+  {
+   "q_en": "How do you know farmers will actually pay for this?",
+   "q_zh": "你們怎麼知道農民真的願意付錢？",
+   "type": "validate",
+   "tier": "A",
+   "pages": [
+    "human-practices",
+    "entrepreneurship"
+   ],
+   "seat": "ihp",
+   "backup": "biz",
+   "kw_en": [
+    "signals not measurement",
+    "affordable accessible practical",
+    "no price survey"
+   ],
+   "kw_zh": [
+    "訊號而非量測",
+    "負擔得起、容易取得、實用",
+    "沒有價格調查"
+   ],
+   "a_en": "We have signals, not a measurement. Over 30 smallholder farmers at the Taipei Expo said they accept technology if it is affordable, accessible and practical, and officials at Smart Agriweek said they would subsidize products like ours. We have not run a price survey or collected signed purchase intent. Our plan sells 20 paying hectares in Year 1, before field results exist, so the pilot is where we test whether farmers pay.",
+   "a_zh": "我們有的是訊號，不是量測。台北博覽會上超過 30 位小農說，只要負擔得起、容易取得又實用，他們不排斥科技；Smart Agriweek 的官員也說願意補助類似的產品。我們沒有做價格調查，也沒有簽署的購買意向。計畫在第 1 年、田間結果出來前就賣出 20 付費公頃，所以試點才是檢驗農民是否付錢的地方。",
+   "trap_en": "Claiming farmers 'want to buy'. They said they are open if it is affordable.",
+   "trap_zh": "說農民「想要買」。他們說的是如果負擔得起就不排斥。",
+   "basis": "like Science-Tokyo 2025: support farmer adoption"
+  },
+  {
+   "q_en": "What happens to the business if you sell much less than planned?",
+   "q_zh": "如果銷售遠低於計畫，這個事業會怎樣？",
+   "type": "gap",
+   "tier": "A",
+   "pages": [
+    "entrepreneurship"
+   ],
+   "seat": "biz",
+   "backup": "dry",
+   "kw_en": [
+    "70% of plan",
+    "break-even Year 6",
+    "IRR about -7%"
+   ],
+   "kw_zh": [
+    "計畫的 70%",
+    "第 6 年損益兩平",
+    "IRR 約 -7%"
+   ],
+   "a_en": "We modeled a conservative case at 70% of planned hectares. Break-even slips from Year 4 to Year 6, funding needed rises from US$196,000 to US$236,000, and investors get only 0.7 times their money back by Year 5, an IRR of about minus 7%. So the plan is sensitive to sales. That is why we spend our own profits on farmer subsidies only after cash turns positive.",
+   "a_zh": "我們模擬了只達計畫公頃 70% 的保守情境。損益兩平從第 4 年延到第 6 年，所需資金從 19.6 萬美元增加到 23.6 萬美元，投資人到第 5 年只拿回 0.7 倍，IRR 約 -7%。所以這個計畫對銷量很敏感。這也是為什麼我們要等現金轉正後，才用自己的利潤補貼農民。",
+   "trap_en": "Hiding the downside case. Judges respect a team that shows it.",
+   "trap_zh": "隱藏不利情境。評審會尊重有展示它的團隊。",
+   "basis": "like Tsinglan 2025: long-term funding challenges"
+  },
+  {
+   "q_en": "Can ReLEAF be used on organic farms?",
+   "q_zh": "ReLEAF 可以用在有機農場嗎？",
+   "type": "boundary",
+   "tier": "A",
+   "pages": [
+    "entrepreneurship",
+    "laws-and-regulations"
+   ],
+   "seat": "biz",
+   "backup": "ihp",
+   "kw_en": [
+    "No",
+    "GMO products excluded",
+    "conventional smallholders"
+   ],
+   "kw_zh": [
+    "不可以",
+    "排除基改產品",
+    "慣行小農"
+   ],
+   "a_en": "No, and we say so plainly. Taiwan's Organic Agriculture Promotion Act excludes genetically modified organisms and their products, and US and EU rules are similar, so a sealed membrane does not make the output organic. We target conventional and sustainable smallholders and will make no organic claim without written approval from authorities. Only about 3.47% of Taiwan's farmland is organic. Note that our largest farmer interview round, over 30 farmers, was with organic farmers.",
+   "a_zh": "不可以，我們直接說明。台灣有機農業促進法排除基改生物及其產品，美國和歐盟規範類似，所以即使有密閉薄膜，產物也不能算有機。我們的對象是慣行與永續的小農，沒有主管機關的書面核准，我們不會做任何有機宣稱。台灣只有約 3.47% 的農地是有機。要注意的是，我們最大的一輪農民訪談，超過 30 位，訪問的是有機農民。",
+   "trap_en": "Saying 'cell-free means organic is fine'. The production method itself is restricted.",
+   "trap_zh": "說「無細胞所以有機也行」。生產方式本身就受限。",
+   "basis": "boundary on organic farming; Biomanufacturing says 'built around organic', see gaps"
+  },
+  {
+   "q_en": "Why did you pick tomato as your target crop?",
+   "q_zh": "為什麼選番茄作為目標作物？",
+   "type": "design",
+   "tier": "A",
+   "pages": [
+    "geospatial-analysis",
+    "human-practices",
+    "entrepreneurship"
+   ],
+   "seat": "biz",
+   "backup": "plant",
+   "kw_en": [
+    "valuable and heat-sensitive",
+    "rice overproduced",
+    "no tomato data yet"
+   ],
+   "kw_zh": [
+    "高價值又怕熱",
+    "稻米生產過剩",
+    "尚無番茄資料"
+   ],
+   "a_en": "Director Wu advised a commercially valuable crop that suffers from stress, and said rice is overproduced in Taiwan. Tomato fruit set falls above about 32 degrees by day and 20 at night, Taiwan grows about 3,628 hectares, and the counties that grow 85% of it warmed 1.9 to 2.0 degrees in winter nights. The honest limit: our plant results are Arabidopsis only, and no tomato dose has been tested.",
+   "a_zh": "吳主任建議選一個有商業價值、又受逆境之苦的作物，並說台灣稻米生產過剩。番茄在日溫超過約 32 度、夜溫超過 20 度時結果率下降，台灣種植約 3,628 公頃，而生產 85% 番茄的縣市，冬季夜溫升高 1.9 到 2.0 度。老實說，我們的植物結果只在阿拉伯芥，沒有測試過任何番茄劑量。",
+   "trap_en": "Saying our experiments were on tomato. They were on Arabidopsis.",
+   "trap_zh": "說我們的實驗是用番茄做的。實際上是阿拉伯芥。",
+   "basis": "like NUS_Singapore 2021: validate before farmer use"
+  },
+  {
+   "q_en": "Why not just sell the protectant in a bottle, or use an irrigation controller like Agriweather's?",
+   "q_zh": "為什麼不直接賣瓶裝保護劑，或用像阿龜微氣候那樣的灌溉控制系統？",
+   "type": "compare",
+   "tier": "A",
+   "pages": [
+    "entrepreneurship",
+    "human-practices"
+   ],
+   "seat": "biz",
+   "backup": "hw",
+   "kw_en": [
+    "no shipping or cold chain",
+    "made when needed",
+    "irrigation link planned"
+   ],
+   "kw_zh": [
+    "無運輸與冷鏈",
+    "需要時才生產",
+    "規劃接灌溉"
+   ],
+   "a_en": "A bottle needs shipping, storage and a farmer who knows when and how much to spray. Our unit makes the protectant on site when sensors and the forecast call for it. But Agriweather's founder, Mr. Lu, told us a system tied into irrigation does everything for the farmer and is more convenient, because ours leaves the farmer to collect and apply the protectant by hand or by drone. So we are planning an irrigation connection, which is not built yet.",
+   "a_zh": "瓶裝需要運輸、儲存，也需要農民知道何時、噴多少。我們的裝置在感測器和預報需要時，才在現場生產保護劑。但阿龜微氣候創辦人盧先生告訴我們，連接灌溉的系統會替農民做完一切，比較方便，因為我們的系統要農民自己去取、用手或無人機施用。所以我們正在規劃接上灌溉，但目前還沒有做出來。",
+   "trap_en": "Dismissing the competitor. Mr. Lu's point is a real weakness we admit.",
+   "trap_zh": "否定競品。盧先生指出的是我們承認的真實弱點。",
+   "basis": "alternatives probe: why not X (Mr. Lu, Agriweather)"
+  },
+  {
+   "q_en": "How do you compete with cheap chemical pesticides and fertilizers?",
+   "q_zh": "你們如何和便宜的化學農藥與肥料競爭？",
+   "type": "compare",
+   "tier": "A",
+   "pages": [
+    "entrepreneurship"
+   ],
+   "seat": "biz",
+   "backup": "plant",
+   "kw_en": [
+    "cannot win on price",
+    "fewer sprays less runoff",
+    "pilot targets"
+   ],
+   "kw_zh": [
+    "價格贏不了",
+    "少噴藥少流失",
+    "試點目標"
+   ],
+   "a_en": "We cannot beat them on price. Professor Chen told us this, and we removed price competition with chemical fertilizers from our plan. Our case is different: fewer spray days, less chemical runoff, and protection that arrives before stress. Our pilot targets are 10 to 15% higher yield and 20 to 30% less spraying against each farm's own previous season. We have not measured either yet.",
+   "a_zh": "我們價格上贏不了。陳教授這樣告訴我們，所以我們從計畫中移除了與化學肥料比價。我們的主張不一樣：少噴藥天數、減少化學物流失，以及在壓力來臨前就有保護。試點目標是相較每個農場自己的上一季，產量增加 10 到 15%、噴藥減少 20 到 30%。這兩項我們都還沒有量測。",
+   "trap_en": "Claiming we are cheaper than chemicals. The wiki says we are not.",
+   "trap_zh": "宣稱比化學藥劑便宜。維基說我們不是。",
+   "basis": "like TSINGHUA 2025: customer acquisition and cost"
+  },
+  {
+   "q_en": "Your Math Model says individual ownership is out of reach, yet your business plan sells a package to a one-hectare farm. Which is it?",
+   "q_zh": "你們的數學模型說個別擁有是做不到的，但商業計畫卻把套組賣給一公頃的農場。到底是哪一個？",
+   "type": "gap",
+   "tier": "A",
+   "pages": [
+    "model",
+    "geospatial-analysis",
+    "entrepreneurship"
+   ],
+   "seat": "dry",
+   "backup": "biz",
+   "kw_en": [
+    "pages answer differently",
+    "shared by association",
+    "plan not rebuilt"
+   ],
+   "kw_zh": [
+    "兩頁答案不同",
+    "農會共享",
+    "計畫尚未重算"
+   ],
+   "a_en": "Our pages answer this differently, and we should say so. The financial model prices a one-hectare farm buying its own package for about US$5,550. Our Math Model and Geospatial page conclude that at today's spec one fleet serves 2.5 hectares, so individual ownership is out of reach and a farmers' association must share it. The business plan already allows group purchase, rental and subsidy, but its base case has not been rebuilt on shared ownership.",
+   "a_zh": "我們的頁面對這題的答案不同，我們應該說清楚。財務模型把約 5,550 美元的套組賣給一公頃的農場。數學模型與地理空間頁面則結論是，依目前規格，一組設備只服務 2.5 公頃，個別擁有做不到，必須由農會共享。商業計畫已允許團購、租賃與補助，但基本情境還沒有依共享所有權重算。",
+   "trap_en": "Picking one answer silently. Name the disagreement and the fallback.",
+   "trap_zh": "默默選一個答案。要指出分歧與備案。",
+   "basis": "like KU Leuven 2025: business model coherence"
+  },
+  {
+   "q_en": "How does your Math Model change your cost and dose assumptions?",
+   "q_zh": "數學模型如何改變你們的成本與劑量假設？",
+   "type": "integrate",
+   "tier": "A",
+   "pages": [
+    "entrepreneurship",
+    "model"
+   ],
+   "seat": "dry",
+   "backup": "biz",
+   "kw_en": [
+    "203 U vs 37.6 kU",
+    "185 times larger",
+    "US$3800 vs US$2280"
+   ],
+   "kw_zh": [
+    "203 U 對 37.6 kU",
+    "大 185 倍",
+    "3800 對 2280 美元"
+   ],
+   "a_en": "They disagree, and we show both. The business plan assumes 203 units of enzyme per hectare per spray, two one-litre bioreactors and US$2,280 of hardware. The Math Model scales our plate result to 37.6 kilo-units, 185 times more, about four twenty-litre units and US$3,800 of capital per hectare. Neither dose is validated in a field. The tomato trials decide which is right, and the break-even area would move with the answer.",
+   "a_zh": "它們不一致，我們兩個都呈現。商業計畫假設每公頃每次噴灑 203 單位酵素、兩台 1 公升反應器與 2,280 美元硬體。數學模型把盤式實驗結果放大到 37.6 千單位，大了 185 倍，約需四台 20 公升單位，每公頃資本 3,800 美元。兩種劑量都沒在田間驗證。番茄試驗會決定哪個對，損益兩平的面積也會隨之改變。",
+   "trap_en": "Quoting only the cheaper figure. The 185-times gap is on our own page.",
+   "trap_zh": "只講較便宜的數字。185 倍的差距就寫在我們自己的頁面上。",
+   "basis": "model-to-business integration"
+  },
+  {
+   "q_en": "How did your conversations with experts change your business plan?",
+   "q_zh": "和專家的對話如何改變你們的商業計畫？",
+   "type": "integrate",
+   "tier": "A",
+   "pages": [
+    "human-practices",
+    "entrepreneurship"
+   ],
+   "seat": "ihp",
+   "backup": "biz",
+   "kw_en": [
+    "printer and ink",
+    "missing costs added",
+    "Southeast Asia and France"
+   ],
+   "kw_zh": [
+    "印表機與墨水",
+    "補上遺漏成本",
+    "東南亞與法國"
+   ],
+   "a_en": "Several conversations changed it. Professor Chen gave us the printer-and-ink model and told us to drop price competition with chemicals. Director Wu showed we had missed factory, labor, culture and waste costs, and moved us from rice to tomato. Mr. Lu pushed us toward an irrigation connection and a staged adoption plan. BIO-Asia led us to Southeast Asia, and Mr. Quillere to France first for Europe. These are advice, not contracts.",
+   "a_zh": "好幾場對話改變了計畫。陳教授給了我們印表機與墨水的模式，並要我們放棄和化學藥劑比價。吳主任指出我們漏掉工廠、人力、菌液培養與廢棄物成本，並讓我們從稻米改為番茄。盧先生促使我們考慮接灌溉和分階段的採用計畫。BIO-Asia 讓我們看向東南亞，Quillere 先生讓我們把法國當作進入歐洲的第一站。這些是建議，不是合約。",
+   "trap_en": "Listing meetings without saying what changed. Always pair each person with one change.",
+   "trap_zh": "只列出會議卻沒說改了什麼。每位專家都要配一項改變。",
+   "basis": "integration probe: HP to business plan"
+  },
+  {
+   "q_en": "What if the regulator classes your product as a pesticide or a GMO release?",
+   "q_zh": "如果主管機關把你們的產品歸類為農藥或基改釋放呢？",
+   "type": "boundary",
+   "tier": "B",
+   "pages": [
+    "entrepreneurship",
+    "laws-and-regulations"
+   ],
+   "seat": "biz",
+   "backup": "wet1",
+   "kw_en": [
+    "abiotic claims only",
+    "fallback model C",
+    "no written confirmation"
+   ],
+   "kw_zh": [
+    "只主張非生物逆境",
+    "備案模式 C",
+    "尚無書面確認"
+   ],
+   "a_en": "We planned for that. We keep claims to abiotic stress because a biopesticide route needs GLP toxicology and multi-season trials, taking several years. If on-farm use of the engineered culture is refused, our fallback is model C: central production, with only the cell-free permeate distributed. The honest limit is that no regulator has given us written confirmation in any market, so this is a plan, not an approval.",
+   "a_zh": "我們有預先規劃。我們把主張限制在非生物逆境，因為走生物農藥路線需要 GLP 毒理與多季試驗，要花好幾年。如果現場使用基改菌株被拒絕，備案是模式 C：集中生產，只配送無細胞滲出液。老實說，沒有任何市場的主管機關給過我們書面確認，所以這是計畫，不是核准。",
+   "trap_en": "Saying regulators have approved the approach. None has confirmed anything in writing.",
+   "trap_zh": "說主管機關已認可這個做法。沒有任何機關書面確認過。",
+   "basis": "regulatory boundary probe"
+  },
+  {
+   "q_en": "What does regulation cost you in time and money?",
+   "q_zh": "法規對你們造成多少時間與金錢成本？",
+   "type": "gap",
+   "tier": "A",
+   "pages": [
+    "entrepreneurship",
+    "laws-and-regulations"
+   ],
+   "seat": "biz",
+   "backup": "dry",
+   "kw_en": [
+    "1 to 2 years",
+    "standard list is 1 month",
+    "registration cost not counted"
+   ],
+   "kw_zh": [
+    "一至兩年",
+    "標準規格一個月",
+    "登記費用未計入"
+   ],
+   "a_en": "Our time estimate is one to two years for a Taiwan fertilizer registration, mostly field efficacy trials, because protein-based protectants are not on the standard list. A product matching an existing standard takes about a month. But our financial model lists product registration as not counted, so regulatory cost is a known hole in the numbers. A biopesticide route would take several years, which is why we avoid it.",
+   "a_zh": "我們估計台灣肥料登記需要一到兩年，主要是田間肥效試驗，因為蛋白質保護劑不在標準名單上。符合現有標準的產品約一個月。但財務模型明確列出產品登記費用未計入，所以法規成本是數字中已知的缺口。生物農藥路線要好幾年，這就是我們避開的原因。",
+   "trap_en": "Giving a time but no money. Say the cost is not in our model.",
+   "trap_zh": "只講時間不講金額。要說明成本沒有算進模型。",
+   "basis": "regulatory cost as a barrier"
+  },
+  {
+   "q_en": "Which Taiwanese laws and regulators decide whether you can sell this?",
+   "q_zh": "哪些台灣法律與主管機關決定你們能否販售？",
+   "type": "fact",
+   "tier": "A",
+   "pages": [
+    "laws-and-regulations",
+    "entrepreneurship"
+   ],
+   "seat": "biz",
+   "backup": "wet1",
+   "kw_en": [
+    "Fertilizer Management Act",
+    "Agriculture and Food Agency",
+    "APHIA for pesticides"
+   ],
+   "kw_zh": [
+    "肥料管理法",
+    "農糧署",
+    "防檢署管農藥"
+   ],
+   "a_en": "Taiwan's Ministry of Agriculture oversees both routes. The Agriculture and Food Agency registers fertilizers under the Fertilizer Management Act, and APHIA handles pesticides under the Pesticide Management Act. Taiwan's fertilizer categories include plant growth auxiliary materials, which is where we aim the cell-free output. No authority has classified our proteins yet, so that is our target category, not a decision. The bioreactor needs a separate equipment-safety assessment.",
+   "a_zh": "台灣農業部管轄這兩條路線。農糧署依肥料管理法登記肥料，防檢署依農藥管理法處理農藥。台灣的肥料類別包含植物生長輔助劑類，這就是我們瞄準的無細胞產物類別。目前還沒有任何機關為我們的蛋白質分類，所以這是我們的目標類別，不是決定。生物反應器另需設備安全評估。",
+   "trap_en": "Saying the product 'is' a fertilizer. It is a target classification.",
+   "trap_zh": "說產品「就是」肥料。那只是目標分類。",
+   "basis": "regulatory fact check"
+  },
+  {
+   "q_en": "Is your containment-based regulatory pathway confirmed in Taiwan?",
+   "q_zh": "你們以密閉為基礎的法規路徑在台灣確認了嗎？",
+   "type": "gap",
+   "tier": "A",
+   "pages": [
+    "entrepreneurship",
+    "laws-and-regulations"
+   ],
+   "seat": "biz",
+   "backup": "wet1",
+   "kw_en": [
+    "not confirmed",
+    "pages differ",
+    "will not claim certified"
+   ],
+   "kw_zh": [
+    "尚未確認",
+    "兩頁說法不同",
+    "不宣稱已認證"
+   ],
+   "a_en": "Not confirmed. Our Entrepreneurship page describes a pathway where a sealed device is classed as contained-use equipment, and our plan seeks written answers by October 2027. But our Laws page says we found no general Taiwan contained-use framework that clearly covers this case, and no regulator has confirmed anything in writing in any of the eight markets. We treat it as unresolved and will not call ourselves certified.",
+   "a_zh": "尚未確認。創業頁面描述了把密閉裝置視為密閉使用設備的路徑，我們的計畫是在 2027 年 10 月前取得書面答覆。但法規頁面說我們沒有找到明確涵蓋這種情況的台灣一般密閉使用框架，八個市場也都沒有主管機關書面確認。我們視它為未解決，也不會宣稱已認證。",
+   "trap_en": "Saying 'APHIA says it is contained use, so we are fine'. The Laws page says it is unresolved.",
+   "trap_zh": "說「防檢署說這是密閉使用，所以沒問題」。法規頁說這仍未解決。",
+   "basis": "inconsistency between Entrepreneurship and Laws pages"
+  },
+  {
+   "q_en": "Why the Philippines after Taiwan, and not the United States or Europe?",
+   "q_zh": "為什麼台灣之後是菲律賓，而不是美國或歐洲？",
+   "type": "design",
+   "tier": "B",
+   "pages": [
+    "laws-and-regulations",
+    "entrepreneurship"
+   ],
+   "seat": "biz",
+   "backup": "ihp",
+   "kw_en": [
+    "scored 8 markets",
+    "US entry ease 1 of 5",
+    "Philippines has named regulator"
+   ],
+   "kw_zh": [
+    "評分八個市場",
+    "美國進入難易度 1/5",
+    "菲律賓有明確主管機關"
+   ],
+   "a_en": "We scored eight markets on regulation, farmland, farm structure, entry ease, technology acceptance and deployment fit. The US scored highest at 32, but entry ease was 1 out of 5 because of distance and federal plus state rules. The Philippines scored 25, has a named regulator, FPA, and is 1,150 kilometres away, so it goes first abroad, then Thailand. These are our own scores, not official ratings.",
+   "a_zh": "我們針對法規、農地、農場結構、進入難易度、科技接受度與部署適配度，為八個市場打分數。美國最高為 32 分，但因距離與聯邦與各州雙重規範，進入難易度只有 5 分之 1。菲律賓得 25 分，有明確的主管機關 FPA，距離 1,150 公里，所以是第一個海外市場，接著是泰國。這些是我們自己的評分，不是官方評等。",
+   "trap_en": "Saying 'because the Philippines has loose laws'. The page says it has a clear regulator to consult first.",
+   "trap_zh": "說「因為菲律賓法規鬆」。頁面說的是它有明確的主管機關可先諮詢。",
+   "basis": "like ICT-MUMBAI 2025: go-to-market strategy"
+  },
+  {
+   "q_en": "What are your milestones from here to commercialization?",
+   "q_zh": "從現在到商業化，你們的里程碑是什麼？",
+   "type": "impact",
+   "tier": "B",
+   "pages": [
+    "entrepreneurship-roadmap",
+    "entrepreneurship"
+   ],
+   "seat": "biz",
+   "backup": "ihp",
+   "kw_en": [
+    "Phase 1 done",
+    "Taiwan pilot Oct 2027",
+    "6 of 19 done"
+   ],
+   "kw_zh": [
+    "第 1 階段完成",
+    "2027 年 10 月台灣試點",
+    "19 項完成 6 項"
+   ],
+   "a_en": "Our Gantt chart has five phases from December 2025 to April 2032. Phase 1, concept validation, is complete at the Jamboree. Next are soil testing, safety and regulatory consultations to October 2027, then Taiwan pilot field trials with smallholders from October 2027 to June 2028, then regional expansion. Six of nineteen activities are done. The limit: later dates depend on regulator answers, and our text and chart disagree on some expansion dates.",
+   "a_zh": "我們的甘特圖從 2025 年 12 月到 2032 年 4 月共五個階段。第 1 階段概念驗證在大會時完成。接著是到 2027 年 10 月的土壤測試、安全與法規諮詢，然後是 2027 年 10 月到 2028 年 6 月與小農的台灣試點田間試驗，再來是區域擴張。19 項活動完成 6 項。限制是後面的日期取決於主管機關答覆，而且文字與圖表在某些擴張日期上不一致。",
+   "trap_en": "Giving only the vision. Give the next two dated steps.",
+   "trap_zh": "只講願景。要給出接下來兩個有日期的步驟。",
+   "basis": "like BWYA 2025: when commercially available"
+  },
+  {
+   "q_en": "Small farmers cannot afford US$5,550 upfront. How will they pay?",
+   "q_zh": "小農付不起一開始的 5,550 美元，他們要怎麼付？",
+   "type": "design",
+   "tier": "A",
+   "pages": [
+    "entrepreneurship",
+    "biomanufacturing"
+   ],
+   "seat": "biz",
+   "backup": "ihp",
+   "kw_en": [
+    "group purchase",
+    "rent or subscribe",
+    "partner subsidies"
+   ],
+   "kw_zh": [
+    "團體共買",
+    "租賃或訂閱",
+    "夥伴補助"
+   ],
+   "a_en": "We offer several ways to buy. Groups of farmers can buy a bioreactor together, rent one for a trial, subscribe to cartridges, or receive partner subsidies from programs such as TARI and the government. The hardware is a low-cost reusable base with replaceable seasonal cartridges, following Professor Chen's printer-and-ink idea. The honest limit: we show no rental price yet, only that rental and per-fen service pricing are planned.",
+   "a_zh": "我們提供多種購買方式。農民可以團體共買一台、先租來試用、訂閱補充匣，或透過 TARI 與政府等計畫取得夥伴補助。硬體是低成本、可重複使用的基座，搭配可更換的季節性補充匣，源自陳教授印表機與墨水的構想。老實說，我們還沒有顯示租賃價格，只說明規劃了租賃與以分地計價的服務模式。",
+   "trap_en": "Giving only 'subsidies'. Show the range of purchase options and admit no rental price yet.",
+   "trap_zh": "只說「補助」。要列出各種購買方式，並承認還沒有租賃價格。",
+   "basis": "like Science-Tokyo 2025: support farmer adoption"
+  },
+  {
+   "q_en": "What is your relationship with CH Biotech: partner or competitor?",
+   "q_zh": "你們和正瀚生技是什麼關係：夥伴還是競爭者？",
+   "type": "integrate",
+   "tier": "B",
+   "pages": [
+    "laws-and-regulations",
+    "entrepreneurship",
+    "human-practices"
+   ],
+   "seat": "biz",
+   "backup": "ihp",
+   "kw_en": [
+    "adviser",
+    "also sells biostimulants",
+    "no contract on wiki"
+   ],
+   "kw_zh": [
+    "顧問",
+    "也賣生物刺激素",
+    "維基沒有合約"
+   ],
+   "a_en": "Mostly an adviser. CH Biotech is a Taiwan biostimulant company, so it could also be a competitor, and our stakeholder grid puts it under keep completely informed. In July its regulatory researchers briefed us on authorities in Taiwan, the EU and the US, and in September Director Liu warned that we must show undeniable proof of no bacterial escape. They told us to settle regulations market by market. We have no contract or commercial agreement with them on our wiki.",
+   "a_zh": "主要是顧問。正瀚生技是台灣的生物刺激素公司，所以也可能是競爭者，我們的利害關係人圖把它放在「完整告知」。七月其法規研究人員向我們說明台灣、歐盟與美國的主管機關，九月劉主任提醒我們必須提出無細菌逃逸的確切證明。他們建議逐一市場先釐清法規。我們的維基上沒有和他們的合約或商業協議。",
+   "trap_en": "Calling CH Biotech 'our partner' as if there were a contract. It is an adviser.",
+   "trap_zh": "把正瀚生技說成「我們的夥伴」好像有合約。它是顧問。",
+   "basis": "partnership probe"
+  },
+  {
+   "q_en": "Do you plan to patent ReLEAF, or will it be open?",
+   "q_zh": "你們打算申請專利，還是會公開？",
+   "type": "boundary",
+   "tier": "B",
+   "pages": [
+    "entrepreneurship",
+    "entrepreneurship-roadmap",
+    "contribution"
+   ],
+   "seat": "biz",
+   "backup": "dry",
+   "kw_en": [
+    "patents planned",
+    "FTO check",
+    "MIT and CC BY tools"
+   ],
+   "kw_zh": [
+    "規劃專利",
+    "FTO 查核",
+    "MIT 與 CC BY 工具"
+   ],
+   "a_en": "Both, for different things. Our business canvas lists planned patent applications and a freedom-to-operate check against existing patents, and Phase 0 explores protection for our optimized circuits and strains. Our Gantt marks IP on strains and circuits done, but the wiki does not state a filing. Our digital twin software is released under the MIT license and our hardware files under CC BY 4.0, so others can reuse the tools.",
+   "a_zh": "兩者都有，用在不同東西上。商業模式圖列出規劃中的專利申請，以及對現有專利的自由實施查核，第 0 階段也在探討保護我們優化的電路與菌株。甘特圖把菌株與電路的智慧財產標為完成，但維基沒有說明已送件。我們的數位孿生軟體以 MIT 授權釋出，硬體檔案採用 CC BY 4.0，讓其他人可重複使用這些工具。",
+   "trap_en": "Saying 'we filed a patent'. The wiki does not say a filing exists.",
+   "trap_zh": "說「我們已申請專利」。維基沒有說已有送件。",
+   "basis": "IP and openness probe"
+  },
+  {
+   "q_en": "What does one dose of protectant cost you to make?",
+   "q_zh": "製造一劑保護劑對你們的成本是多少？",
+   "type": "gap",
+   "tier": "A",
+   "pages": [
+    "biomanufacturing",
+    "entrepreneurship"
+   ],
+   "seat": "hw",
+   "backup": "biz",
+   "kw_en": [
+    "no cost per dose yet",
+    "NT$83 028 prototype",
+    "analysis not done"
+   ],
+   "kw_zh": [
+    "尚無每劑成本",
+    "原型 NT$83 028",
+    "分析未完成"
+   ],
+   "a_en": "We do not have a cost per dose yet. The only cost we have measured is our hand-built prototype: NT$83,028, about US$2,800, for one unit including the bacterial kit, which is not a unit cost at volume. A techno-economic analysis would set operating costs against that to give cost per unit of protectant and a break-even yield, and we have not done it. Our planning price uses a dose assumption that no crop has tested.",
+   "a_zh": "我們目前還沒有每劑成本。唯一實測的成本是手工製作的原型：一台含菌株套組為 NT$83,028，約 2,800 美元，這不是量產的單位成本。技術經濟分析會把營運成本對照這個數字，算出每單位保護劑成本與損益兩平產量，而我們還沒有完成。我們的規劃價格用了一個沒有任何作物測試過的劑量假設。",
+   "trap_en": "Dividing the prototype price by something to invent a per-dose cost.",
+   "trap_zh": "把原型價格隨便除一個數字，編出每劑成本。",
+   "basis": "like Leiden 2023: what reduces cost?"
+  },
+  {
+   "q_en": "What is the biggest risk to your business?",
+   "q_zh": "你們事業最大的風險是什麼？",
+   "type": "impact",
+   "tier": "A",
+   "pages": [
+    "entrepreneurship"
+   ],
+   "seat": "biz",
+   "backup": "hw",
+   "kw_en": [
+    "cost exceeds farmer budget",
+    "fallback ownership models",
+    "breach is high impact"
+   ],
+   "kw_zh": [
+    "成本超出農民預算",
+    "備案所有權模式",
+    "破損影響大"
+   ],
+   "a_en": "Our register rates production cost exceeding the farmer's budget as medium probability and high impact. The mitigation names a sensitivity test at 20% higher cost or 20% lower price, and fallbacks: cooperative purchase, NGO bulk buying, seasonal rental or cartridge subscription. The wiki shows our 70%-sales case instead of that exact test. On the biological side, a physical housing breach is rated low probability but high impact.",
+   "a_zh": "我們的風險登記表把生產成本超出農民預算評為中機率、高影響。因應措施是測試成本高 20% 或售價低 20% 的敏感度，以及備案：合作社購買、NGO 大量採購、季節性租賃或匣式訂閱。維基展示的是 70% 銷量情境，而不是這個確切的測試。生物面來說，外殼物理破損被評為低機率但高影響。",
+   "trap_en": "Naming only scientific risks. Lead with cost because that is the market risk.",
+   "trap_zh": "只講科學風險。先講成本，因為那是市場風險。",
+   "basis": "like Tsinglan 2025: long-term challenges"
+  },
+  {
+   "q_en": "Why should an investor believe your 24% return?",
+   "q_zh": "投資人為什麼要相信你們的 24% 報酬？",
+   "type": "validate",
+   "tier": "B",
+   "pages": [
+    "entrepreneurship"
+   ],
+   "seat": "biz",
+   "backup": "dry",
+   "kw_en": [
+    "planning case",
+    "assumptions untested",
+    "NPV at 25% negative"
+   ],
+   "kw_zh": [
+    "規劃情境",
+    "假設未驗證",
+    "25% 時 NPV 為負"
+   ],
+   "a_en": "They should treat it as a planning case. The 24% rests on price at twice cost, sales rising from 20 paying hectares in Year 1 to 120 in Year 5, and a dose no crop has tested. The 20% tax is unconfirmed, and interest, inflation and product registration are not counted. At a 25% discount rate the net present value is minus US$4,000. Our own conservative case returns about minus 7%.",
+   "a_zh": "他們應該把它當作規劃情境。24% 建立在價格為成本兩倍、銷量從第 1 年 20 付費公頃成長到第 5 年 120 公頃，以及一個沒有作物測試過的劑量上。20% 稅率未確認，利息、通膨與產品登記也沒計入。貼現率 25% 時，淨現值為 -4,000 美元。我們自己的保守情境報酬約為 -7%。",
+   "trap_en": "Presenting 24% as a forecast. It is the growth plan, not the base expectation.",
+   "trap_zh": "把 24% 當成預測。它是成長計畫，不是基本預期。",
+   "basis": "financial credibility probe"
+  },
+  {
+   "q_en": "How does making culture medium from hay change your economics?",
+   "q_zh": "用乾草自製培養基如何改變你們的經濟模型？",
+   "type": "integrate",
+   "tier": "B",
+   "pages": [
+    "entrepreneurship",
+    "contribution",
+    "sustainability"
+   ],
+   "seat": "biz",
+   "backup": "ihp",
+   "kw_en": [
+    "farmers make medium",
+    "no medium sales counted",
+    "needs processing"
+   ],
+   "kw_zh": [
+    "農民自製培養基",
+    "未計入培養基銷售",
+    "需要加工"
+   ],
+   "a_en": "Farmers can make the bacterial medium from hay, so they do not buy it from us, which lowers their yearly cost. In our test after 18 hours, a 1:1:2 mix of hay, okara and sugarcane gave OD600 0.720 against 0.573 for LB. Our financial base case counts no medium sales, so that revenue is left out. The limit: preparation needs processing, so it would run more realistically through cooperatives or research stations than individual farmers.",
+   "a_zh": "農民可以用乾草自製細菌培養基，不必向我們購買，這降低了他們的年度成本。我們測試 18 小時後，乾草、豆渣與甘蔗渣以 1:1:2 混合的 OD600 為 0.720，LB 為 0.573。財務基本情境沒有計入培養基銷售，所以這部分收入沒算進去。限制是製備需要加工，比較實際的做法是透過合作社或研究站，而不是個別農民。",
+   "trap_en": "Saying farmers brew medium at home easily. The contribution page says it needs processing.",
+   "trap_zh": "說農民在家就能輕鬆自製。貢獻頁面說需要加工。",
+   "basis": "like SUS-TECH 2025: cut costs"
+  }
+ ],
+ "gaps": [
+  {
+   "issue_en": "Contained-use status is stated two ways. The Entrepreneurship page says a sealed device can be classed as contained-use equipment and lists 'contained-use answers in Taiwan by Oct 2027' as a highlight. The Laws page says no general Taiwan contained-use GMO framework clearly covers this case, marks it 'unconfirmed', and shows no written regulator confirmation in any of the eight markets (checks B4, C5, P4 all N).",
+   "issue_zh": "密閉使用的狀態有兩種說法。創業頁面說密閉裝置可歸為密閉使用設備，並把「2027 年 10 月前取得台灣密閉使用答覆」列為重點；法規頁面則說沒有明確涵蓋此情況的台灣一般密閉使用基改框架，標為「未確認」，且八個市場都沒有主管機關書面確認（B4、C5、P4 全為 N）。",
+   "where": "entrepreneurship; laws-and-regulations",
+   "say_en": "We believe our sealed design supports a contained-use route, but no regulator has confirmed it in writing. We are asking for written answers by October 2027 and will not call ourselves certified.",
+   "say_zh": "我們相信密閉設計支持密閉使用的路徑，但沒有任何主管機關書面確認。我們計畫在 2027 年 10 月前取得書面答覆，在那之前不會宣稱已通過認證。"
+  },
+  {
+   "issue_en": "Dose and hardware cost per hectare disagree between our pages. The business plan assumes 203 U per hectare per spray, two 1 L bioreactors and US$2280 of hardware, built on a hand-built prototype that cost NT$83 028 (about US$2800) for one unit. The Math Model gets 37.6 kU (185 times more), about four 20 L units and US$3800 of capital per hectare, and the business plan says it has not been rebuilt on that figure. No cost per dose or techno-economic analysis is shown, and neither dose has been tested on a crop. The price, the break-even area and the investor return all move with this number.",
+   "issue_zh": "各頁對每公頃劑量與硬體成本的說法不一致。商業計畫假設每公頃每次噴灑 203 U、兩台 1 公升反應器、2280 美元硬體，並以一台手工原型（NT$83 028，約 2800 美元）為基礎；數學模型得到 37.6 kU（大 185 倍）、約四台 20 公升單位、每公頃資本 3800 美元，商業計畫也說明尚未依此重算。維基沒有每劑成本或技術經濟分析，兩種劑量也都沒有在作物上測試。售價、損益兩平面積與投資人報酬都會隨這個數字改變。",
+   "where": "entrepreneurship; model; biomanufacturing",
+   "say_en": "We show both numbers side by side because we do not yet know which is right. The tomato pilot decides the dose, and the price and break-even area will be recalculated with it.",
+   "say_zh": "我們把兩個數字並列，因為還不知道哪個才對。番茄試點會決定劑量，售價與損益兩平面積會隨之重算。"
+  },
+  {
+   "issue_en": "There is no traceable number for the farmer's benefit or payback. The business plan says a farmer must gain about US$1900 a year to pay back in 3 years, but gives no baseline for what a farmer loses or spends on chemicals. The Math Model puts the weather loss on ordinary paddy at US$138 per hectare per crop, so payback is 68 years at full efficacy; it cites the Geospatial analysis for US$1931 net benefit and 4.9 years, 14 times higher, but the Geospatial page text does not show that figure. Efficacy itself comes from one Arabidopsis plate per condition (about 70% more chlorophyll) with no field or tomato yield data.",
+   "issue_zh": "農民效益與回本期沒有可追溯的數字。商業計畫說農民每年需獲益約 1900 美元才能在 3 年內回本，但沒有給出農民目前損失或化學藥劑支出的基準。數學模型把一般稻田的天氣損失定為每公頃每作 138 美元，所以在完全有效時回本要 68 年；它引用地理空間分析的淨效益 1931 美元與 4.9 年，高出 14 倍，但地理空間頁面的文字並未顯示這個數字。療效本身只來自每條件一盤阿拉伯芥（葉綠素約多 70%），沒有田間或番茄產量資料。",
+   "where": "entrepreneurship; model; geospatial-analysis",
+   "say_en": "We have not measured the farmer's yield gain in a field, so we cannot give a proven payback. Our two models disagree by a factor of 14, and a yield endpoint in the tomato pilot is what would settle it.",
+   "say_zh": "我們還沒有在田間量測農民的產量增益，所以不能給出經證實的回本期。兩個模型差了 14 倍，番茄試點中的產量終點指標才能解決這個問題。"
+  },
+  {
+   "issue_en": "The ownership model is not consistent. The financial model sells a package to a 1 ha farm at a fixed price of 2 times cost, 'the same for every farm'. The Math Model and Geospatial page conclude that, at the current spec, one fleet serves 2.5 ha and individual ownership is out of reach for farms under 2 ha, so a farmers' association must share it. The business canvas also lists 'tiered pricing models, cross-subsidies', which does not match 'same price for every farm'. Rental and per-fen service pricing are planned but no rental price is shown.",
+   "issue_zh": "所有權模式並不一致。財務模型以成本 2 倍的固定價格把套組賣給 1 公頃農場，「每個農場相同」；數學模型與地理空間頁面卻結論是，依目前規格一組設備服務 2.5 公頃，2 公頃以下農場無法個別擁有，必須由農會共享。商業模式圖又寫「分級定價、交叉補貼」，與「每個農場同價」不符。租賃與以分地計價的服務已列入規劃，但沒有顯示租賃價格。",
+   "where": "entrepreneurship; model; geospatial-analysis; human-practices",
+   "say_en": "Our base case prices a one-hectare package, but our own modeling says sharing through a farmers' association is more realistic. The plan includes group purchase and rental, and we have not yet rebuilt the numbers around them.",
+   "say_zh": "我們的基本情境是以一公頃套組定價，但自己的模型說透過農會共享更實際。計畫包含團購與租賃，但數字還沒有圍繞它們重建。"
+  },
+  {
+   "issue_en": "The organic story contradicts itself. Entrepreneurship, Laws and the FAQ say ReLEAF cannot be used on organic farms (Taiwan Organic Agriculture Promotion Act, Art. 3 and 15). Biomanufacturing says 'farmers want to say their crops are organic, and the bioreactor was built around that'. Geospatial says organic is the segment 'most predisposed to adopt' and a Nantou farmer wanted an organic-compatible product. Our biggest farmer interview round (over 30 farmers) was with organic farmers, yet they are not our market. Organic share is 3.47% on one page and about 3.7% on two others.",
+   "issue_zh": "有機的說法自相矛盾。創業頁、法規頁與 FAQ 說 ReLEAF 不能用在有機農場（有機農業促進法第 3、15 條）。生物製造頁卻說「農民希望能說他們的作物是有機的，生物反應器就是為此而建」。地理空間頁說有機是「最傾向採用」的族群，南投一位農民也想要有機相容的產品。我們最大的一輪農民訪談（30 位以上）訪問的是有機農民，但他們不是我們的市場。有機比例一頁寫 3.47%，另兩頁寫約 3.7%。",
+   "where": "entrepreneurship; laws-and-regulations; biomanufacturing; geospatial-analysis; human-practices",
+   "say_en": "Organic farms are not our market, because the law excludes products from engineered organisms even when they are cell-free. We learned from organic farmers early on, and we will make no organic claim without written approval.",
+   "say_zh": "有機農場不是我們的市場，因為法律連無細胞但由基改生物生產的產品也排除。我們早期從有機農民身上學到很多，但沒有書面核准，我們不會做任何有機宣稱。"
+  },
+  {
+   "issue_en": "The market-size numbers are loose. TAM is about 570 million farms and SAM 399 million is simply 70% of that, taken from a Bayer survey of farmers in eight countries, so it is a share of farmers, not a measured market. The page says SOM is hard to quantify and quotes 4.7 million organic farms, which are the farms ReLEAF excludes. 'Over 97% of farmers worldwide are conventional' is derived from 2.1% of agricultural land being organic, which is land, not farmers. The financial model covers Taiwan only, and the page itself says Taiwan's limited market is a reason to expand.",
+   "issue_zh": "市場規模的數字不夠紮實。TAM 約 5.7 億個農場，SAM 3.99 億只是其中 70%，來自 Bayer 對八國農民的調查，所以是農民比例，不是實測市場。頁面說 SOM 難以量化，並引用 470 萬個有機農場，而有機農場正是 ReLEAF 排除的對象。「全球超過 97% 的農民是慣行農民」是從 2.1% 的農地為有機推出來的，那是農地不是農民。財務模型只涵蓋台灣，頁面自己也說台灣市場有限是擴張的理由。",
+   "where": "entrepreneurship; laws-and-regulations",
+   "say_en": "The global figures are context, not a forecast. Our plan is built on Taiwan: about 226 paying hectares to break even, and we have not derived a proper obtainable market beyond that.",
+   "say_zh": "全球數字是背景，不是預測。我們的計畫以台灣為基礎：約 226 付費公頃損益兩平，除此之外我們沒有推導出完整的可獲得市場。"
+  },
+  {
+   "issue_en": "Evidence of demand and money is thin, and some numbers disagree. No investor, buyer, LOI or willingness-to-pay survey is on the wiki. Year 1 sells 20 paying hectares before field results exist, and at 70% of plan the investor loses money (IRR about -7%). The 'cheaper than competitors' claim compares NT$80 000-100 000 for one function with NT$175 400 for both, which is about the same. Product registration cost is not counted and tax is unconfirmed. The funding stage table adds up to about US$52 000-76 000 against a US$196 000 funding need. Pilot size is 20-50 devices, 5-10 systems or four farms depending on the section, and expansion dates differ between the text (Philippines from Oct 2030) and the Gantt chart (Philippine and Vietnam preparation from Oct 2028).",
+   "issue_zh": "需求與資金的證據薄弱，部分數字也不一致。維基上沒有任何投資人、買家、意向書或付費意願調查。第 1 年在田間結果出來前就賣出 20 付費公頃，而達計畫 70% 時投資人虧損（IRR 約 -7%）。「比競品便宜」的說法是把單一功能 NT$80 000-100 000 與兩種功能 NT$175 400 比較，其實差不多。產品登記成本未計入，稅率未確認。資金階段表加總約 52 000-76 000 美元，而資金需求為 196 000 美元。試點規模依章節為 20-50 台、5-10 套或四個農場；擴張日期文字（菲律賓自 2030 年 10 月）與甘特圖（菲律賓與越南準備自 2028 年 10 月）也不同。",
+   "where": "entrepreneurship; entrepreneurship-roadmap; human-practices",
+   "say_en": "We have advice and verbal support, not signed commitments, and our plan is a planning case. The pilot, with a final pilot size and dates, is where we will turn that into evidence.",
+   "say_zh": "我們有的是建議與口頭支持，不是簽署的承諾，計畫是規劃情境。試點（包含最終的試點規模與日期）才會把這些轉成證據。"
+  }
+ ]
+}

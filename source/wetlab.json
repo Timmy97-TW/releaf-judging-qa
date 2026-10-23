@@ -1,0 +1,2191 @@
+{
+ "domain": "wetlab",
+ "facts": [
+  {
+   "id": "wetlab-f1",
+   "label_en": "Parts on the iGEM Registry",
+   "label_zh": "iGEM Registry 上的零件數",
+   "value": "35 parts",
+   "detail_en": "Five interchangeable modules, grouped by assembly level: 1 Level 2 device, 3 circuit units, 3 green-light cassettes, 8 constitutive cassettes, 8 secretion fusions, 8 cargo sequences, 4 regulatory parts.",
+   "detail_zh": "五個可互換的模組，依組裝層級分組：1 個 Level 2 裝置、3 個光電路單元、3 個綠光卡匣、8 個持續表現卡匣、8 個分泌融合、8 個目標蛋白序列、4 個調控零件。",
+   "src": "parts#The collection",
+   "confidence": "stated"
+  },
+  {
+   "id": "wetlab-f2",
+   "label_en": "Level 2 device",
+   "label_zh": "Level 2 裝置",
+   "value": "BBa_260MVA1K, 10 293 bp",
+   "detail_en": "Four modules (PCB production, CcaS-m3, CcaR, PcpcG2-veg cassette) in one pSTK shuttle vector; EcoRI alone cuts it to 10 293 bp, EcoRI plus BtsI gives 7543 bp.",
+   "detail_zh": "四個模組（PCB 生產、CcaS-m3、CcaR、PcpcG2-veg 卡匣）放在同一個 pSTK 穿梭載體；只用 EcoRI 切出 10 293 bp，EcoRI 加 BtsI 切出 7543 bp。",
+   "src": "engineering#Cloning, inducible circuit cycle 5; parts#The collection",
+   "confidence": "stated"
+  },
+  {
+   "id": "wetlab-f3",
+   "label_en": "What CcaS-m3 and CcaR do",
+   "label_zh": "CcaS-m3 與 CcaR 的功能",
+   "value": "CcaS-m3 → CcaR → PcpcG2-veg",
+   "detail_en": "CcaS-m3 is the green-light kinase; with phycocyanobilin bound it autophosphorylates under green light, passes the phosphate to CcaR, and phosphorylated CcaR switches on PcpcG2-veg.",
+   "detail_zh": "CcaS-m3 是綠光感測激酶；結合 phycocyanobilin 後在綠光下自磷酸化，再把磷酸基傳給 CcaR，磷酸化的 CcaR 打開 PcpcG2-veg。",
+   "src": "parts#The collection; engineering#Cloning, inducible circuit",
+   "confidence": "stated"
+  },
+  {
+   "id": "wetlab-f4",
+   "label_en": "Chromophore supply",
+   "label_zh": "發色團的來源",
+   "value": "ho1-pcyA: heme → biliverdin IXα → PCB",
+   "detail_en": "Ho1 oxidizes the cell's own heme to biliverdin IXα and PcyA reduces it to phycocyanobilin, which CcaS-m3 must bind before it can respond to light.",
+   "detail_zh": "Ho1 把細胞自己的血基質氧化成 biliverdin IXα，PcyA 再還原成 phycocyanobilin；CcaS-m3 要先結合它才能感光。",
+   "src": "engineering#Cloning, inducible circuit cycle 2",
+   "confidence": "stated"
+  },
+  {
+   "id": "wetlab-f5",
+   "label_en": "Promoter for ccaR",
+   "label_zh": "ccaR 使用的啟動子",
+   "value": "Pveg (constitutive)",
+   "detail_en": "The transduction module uses the constitutive promoter Pveg 'to keep expression steady'; it was never changed at any point in the build.",
+   "detail_zh": "轉導模組用持續表現的啟動子 Pveg 讓表現量「保持穩定」；整個建構過程從未更換。",
+   "src": "contribution#Parts; engineering#Cloning, cycle 4 table",
+   "confidence": "stated"
+  },
+  {
+   "id": "wetlab-f6",
+   "label_en": "Promoters for the photoreceptor",
+   "label_zh": "光受體使用的啟動子",
+   "value": "PlepA and PliaG",
+   "detail_en": "Both are constitutive, so CcaS-m3 is always made (unlike the xylose or IPTG induction in Castillo-Hair 2019). Both versions were built, giving Level 2 devices ACDI (PlepA) and ABDI (PliaG).",
+   "detail_zh": "兩者都是持續表現，所以 CcaS-m3 一直都有（不像 Castillo-Hair 2019 用木糖或 IPTG 誘導）。兩個版本都做了，得到 Level 2 裝置 ACDI（PlepA）與 ABDI（PliaG）。",
+   "src": "engineering#Cloning, cycle 2 and cycle 5",
+   "confidence": "stated"
+  },
+  {
+   "id": "wetlab-f7",
+   "label_en": "Light colours and LEDs",
+   "label_zh": "光的顏色與 LED",
+   "value": "green 525 nm; red LEDs 640 nm (or 630 nm)",
+   "detail_en": "Designed on in green, off in red. The wiki says CcaSR needs about 672 nm red to switch off but the red LEDs emit 640 nm; one DNPH section quotes red as 630 nm. The 520 nm and 660 nm figures are not on the wiki.",
+   "detail_zh": "設計是綠光開、紅光關。wiki 說 CcaSR 約需 672 nm 紅光才能關閉，但紅光 LED 是 640 nm；DNPH 一節又寫 630 nm。wiki 上沒有 520 nm 與 660 nm 這兩個數字。",
+   "src": "results#Optogenetic control, What it settles; results#DNPH assay",
+   "confidence": "conflict"
+  },
+  {
+   "id": "wetlab-f8",
+   "label_en": "ACC deaminase (ACCD)",
+   "label_zh": "ACC 去胺酶（ACCD）",
+   "value": "AcdS from Pseudomonas putida UW4",
+   "detail_en": "Breaks down ACC, the precursor of the stress hormone ethylene, so a stressed plant makes less ethylene. It is a true enzyme, so one copy works repeatedly.",
+   "detail_zh": "分解 ACC（壓力荷爾蒙乙烯的前驅物），讓受壓植物少產乙烯。它是真正的酵素，一個分子可以重複作用。",
+   "src": "parts#Cargo sequences; protein-design#ACC deaminase",
+   "confidence": "stated"
+  },
+  {
+   "id": "wetlab-f9",
+   "label_en": "LEA14",
+   "label_zh": "LEA14",
+   "value": "151 residues, Arabidopsis At1g01470",
+   "detail_en": "A late embryogenesis abundant protein that helps cells survive drying and salt. It is not an enzyme, so one copy protects one thing and is not reused.",
+   "detail_zh": "晚期胚胎發生豐富蛋白，幫助細胞度過乾旱與鹽害。它不是酵素，一個分子只保護一個對象，不會重複使用。",
+   "src": "parts#Cargo sequences; protein-design#What went to the wet lab",
+   "confidence": "stated"
+  },
+  {
+   "id": "wetlab-f10",
+   "label_en": "BoPep4",
+   "label_zh": "BoPep4",
+   "value": "23 residues, broccoli, receptor PEPR1",
+   "detail_en": "A plant elicitor peptide from Brassica oleracea var. italica that switches on the plant's own defense signaling by binding PEPR1.",
+   "detail_zh": "來自花椰菜的植物激發子胜肽，結合 PEPR1 受體，啟動植物自己的防禦訊號。",
+   "src": "parts#Cargo sequences; protein-design#What went to the wet lab",
+   "confidence": "stated"
+  },
+  {
+   "id": "wetlab-f11",
+   "label_en": "Size of ACCD",
+   "label_zh": "ACCD 的分子量",
+   "value": "36 kDa vs about 41 kDa",
+   "detail_en": "Engineering quotes about 36 kDa, Results quotes a theoretical 41 kDa; the reactor blot shows a band near 42 kDa, but the light-plate blots show bands just below 100 kDa or between 75 and 100 kDa.",
+   "detail_zh": "Engineering 寫約 36 kDa，Results 寫理論值約 41 kDa；反應器的西方墨點條帶約 42 kDa，但光盤的墨點條帶在 100 kDa 以下或 75 至 100 kDa 之間。",
+   "src": "engineering#Bioreactor cycle 5; results#Membrane bioreactor, Containment and release; results#Optogenetic control",
+   "confidence": "conflict"
+  },
+  {
+   "id": "wetlab-f12",
+   "label_en": "WB800",
+   "label_zh": "WB800",
+   "value": "8 protease genes deleted",
+   "detail_en": "nprE, aprE, epr, bpr, mpr, nprB, vpr and wprA are knocked out; WB800 derives from the six-protease WB600 with vpr and wprA also inactivated.",
+   "detail_zh": "nprE、aprE、epr、bpr、mpr、nprB、vpr、wprA 八個蛋白酶基因被剔除；WB800 由六蛋白酶缺失的 WB600 再失活 vpr 與 wprA 而來。",
+   "src": "engineering#Cloning, cycle 5 design; engineering#Into Bacillus subtilis, strain WB800",
+   "confidence": "stated"
+  },
+  {
+   "id": "wetlab-f13",
+   "label_en": "Why the host moved to WB800",
+   "label_zh": "為什麼改用 WB800",
+   "value": "168 gave barely detectable ACCD",
+   "detail_en": "In the first integrated run, 168 secreted very little ACCD, probably because it secretes proteases that degrade it; 168 transformations also limited progress. No 168 vs WB800 pair ran under the same conditions.",
+   "detail_zh": "第一次整合運轉中，168 分泌的 ACCD 極少，可能是自己分泌的蛋白酶把它分解掉；168 的轉形也拖慢進度。168 與 WB800 從未在相同條件下並排比較。",
+   "src": "engineering#Bioreactor cycles 5, 6 and 7 learn steps",
+   "confidence": "stated"
+  },
+  {
+   "id": "wetlab-f14",
+   "label_en": "Signal peptides",
+   "label_zh": "訊號肽",
+   "value": "Csn (chitosanase) and SamyQ (α-amylase, 93 bp)",
+   "detail_en": "Both were tested because the best signal peptide for the protectants was unknown. Literature: Csn 33.8% secretion in E. coli, SamyQ about 90% for α-amylase in B. subtilis; never compared directly or with ACCD.",
+   "detail_zh": "兩種都測，因為不知道哪個訊號肽最適合。文獻：Csn 在大腸桿菌約 33.8% 分泌，SamyQ 在枯草桿菌分泌 α-澱粉酶約 90%；兩者從未直接比較，也沒有搭配 ACCD 的資料。",
+   "src": "results#Protein expression; parts#Parts we built on",
+   "confidence": "stated"
+  },
+  {
+   "id": "wetlab-f15",
+   "label_en": "Golden Gate levels",
+   "label_zh": "Golden Gate 的層級",
+   "value": "L0 BbsI/BpiI, L1 BsaI, L2 one shuttle plasmid",
+   "detail_en": "Level 0 single parts go into pSTK-0 (chloramphenicol); Level 1 transcription units go into pSTK-1A to 1D (ampicillin); Level 2 joins four units into one ~10 kb plasmid.",
+   "detail_zh": "Level 0 單一零件放進 pSTK-0（氯黴素抗性）；Level 1 轉錄單元放進 pSTK-1A 至 1D（安比西林抗性）；Level 2 把四個單元合成一個約 10 kb 的質體。",
+   "src": "engineering#Cloning, cycle 1 to cycle 3",
+   "confidence": "stated"
+  },
+  {
+   "id": "wetlab-f16",
+   "label_en": "First kit that failed",
+   "label_zh": "第一套失敗的系統",
+   "value": "MoClo 2.0: no usable Level 1 clone",
+   "detail_en": "High background (empty vectors, off-target bands) and low Golden Gate efficiency; the data are not shown. The SubtiToolKit, supplied by Dr Joaquín Caro-Astorga, replaced it; the wiki records that as luck.",
+   "detail_zh": "背景很高（空載體、非預期條帶），Golden Gate 效率低，數據未呈現。之後改用 Dr Joaquín Caro-Astorga 提供的 SubtiToolKit；wiki 自述這是運氣。",
+   "src": "engineering#Cloning, cycle 1",
+   "confidence": "stated"
+  },
+  {
+   "id": "wetlab-f17",
+   "label_en": "Antibiotic marker clash",
+   "label_zh": "抗生素標記衝突",
+   "value": "pGEM-T Easy and Level 1 vectors both ampicillin",
+   "detail_en": "The TA-cloning intermediate shared its marker with every Level 1 destination vector, so cycle 3 cloned straight into pSTK-0C (chloramphenicol). 16 of 16 Csn-LEA14 colonies gave the expected 811 bp.",
+   "detail_zh": "TA 選殖的中間載體和所有 Level 1 目標載體用同一種抗生素，所以第 3 輪改成直接選殖進 pSTK-0C（氯黴素）。16 個 Csn-LEA14 菌落全部得到預期的 811 bp。",
+   "src": "engineering#Cloning, cycle 3",
+   "confidence": "stated"
+  },
+  {
+   "id": "wetlab-f18",
+   "label_en": "Module 1 rebuild",
+   "label_zh": "模組 1 重建",
+   "value": "11 of 12 colonies at 1833 bp",
+   "detail_en": "PtagC+RBS-Ho1:pcyA-L3S2P21 replaced Pveg-RBS0-B0015 (which sequenced clean but gave no expression signal); clone 1 was sequence-verified and used for Level 2.",
+   "detail_zh": "PtagC+RBS-Ho1:pcyA-L3S2P21 取代 Pveg-RBS0-B0015（後者定序正確但沒有表現訊號）；12 個菌落中 11 個得到 1833 bp，選殖株 1 經定序後用於 Level 2。",
+   "src": "engineering#Cloning, cycle 4",
+   "confidence": "stated"
+  },
+  {
+   "id": "wetlab-f19",
+   "label_en": "Recombination worry",
+   "label_zh": "重組疑慮",
+   "value": "raised in cycle 3, undone in cycle 4",
+   "detail_en": "Repeated Pveg, RBS0 and B0015 might recombine in B. subtilis; module 4's terminator was swapped and then put back after Professor Huang said recombination in Bacillus is probably not the issue.",
+   "detail_zh": "重複的 Pveg、RBS0 與 B0015 可能在枯草桿菌內重組；模組 4 的終止子換過又換回來，因為 Huang 教授認為重組在 Bacillus 中大概不是問題。",
+   "src": "engineering#Cloning, cycle 3 and cycle 4 details",
+   "confidence": "stated"
+  },
+  {
+   "id": "wetlab-f20",
+   "label_en": "Level 2 junction evidence",
+   "label_zh": "Level 2 接點證據",
+   "value": "3 clones x 3 junctions, 375 / 632 / 661 bp",
+   "detail_en": "ACDI clones X1, X3, X9 were positive at all three internal junctions on 19 September; the 1:7 insert-to-vector ratio was carried forward. No Level 2 construct has been sequenced end to end.",
+   "detail_zh": "ACDI 的 X1、X3、X9 三株在 9 月 19 日於三個內部接點全部呈陽性；插入片段與載體比例 1:7 被沿用。沒有任何 Level 2 構築經過全長定序。",
+   "src": "engineering#Cloning, cycle 5",
+   "confidence": "stated"
+  },
+  {
+   "id": "wetlab-f21",
+   "label_en": "Sequencing claims across pages",
+   "label_zh": "各頁面對定序的說法",
+   "value": "7 vs 9 Level 1 parts; Level 2 'not yet returned'",
+   "detail_en": "Parts says seven Level 1 parts sequence-confirmed; Biomanufacturing says nine Level 1 modules sequenced; Development says Level 2 sequencing has not returned; Results says constructs verified by colony PCR and Sanger.",
+   "detail_zh": "Parts 說七個 Level 1 零件已定序確認；Biomanufacturing 說九個 Level 1 模組已定序；Development 說 Level 2 定序尚未回來；Results 說構築經菌落 PCR 與 Sanger 驗證。",
+   "src": "parts#Abstract; biomanufacturing; development#ACCD production; results#Protectant production",
+   "confidence": "conflict"
+  },
+  {
+   "id": "wetlab-f22",
+   "label_en": "Electroporation into WB800",
+   "label_zh": "WB800 的電穿孔",
+   "value": "OD600 2.2, 1.5 M trehalose washes, 250 ohm",
+   "detail_en": "The 168 protocol failed on WB800. The WB800 protocol: grow to OD600 2.2, wash four times with 1.5 M trehalose buffer, resuspend in 1/40 volume. Best voltage: 2.3 kV for the 10 kb CcaSR plasmid (370 colonies vs 268 at 2.1 and 233 at 2.5 kV); 1.1 kV in a 0.1 cm cuvette for BoPep4.",
+   "detail_zh": "168 的方法在 WB800 上失敗。WB800 的方法：長到 OD600 2.2，用 1.5 M 海藻糖緩衝液洗四次，以 1/40 體積回溶。最佳電壓：10 kb 的 CcaSR 質體是 2.3 kV（370 個菌落，2.1 kV 為 268、2.5 kV 為 233）；BoPep4 用 0.1 cm 電擊杯 1.1 kV。",
+   "src": "engineering#Into Bacillus subtilis, strain WB800",
+   "confidence": "stated"
+  },
+  {
+   "id": "wetlab-f23",
+   "label_en": "Reporter proteins",
+   "label_zh": "報告蛋白",
+   "value": "AmilCP and GanA both failed",
+   "detail_en": "AmilCP constructs were sequence-verified but cells stayed colourless (A588 0.082 vs 0.081); the GanA screen of 24 colonies gave no band at 3535 bp. The reporter strategy was dropped.",
+   "detail_zh": "AmilCP 構築經定序正確但菌體沒有顏色（A588 為 0.082 對 0.081）；GanA 篩 24 個菌落，3535 bp 處都沒有條帶。報告蛋白策略因此放棄。",
+   "src": "engineering#Cloning, constitutive output module cycles 1 and 2; results#The chromoprotein reporter",
+   "confidence": "stated"
+  },
+  {
+   "id": "wetlab-f24",
+   "label_en": "Which strains were made",
+   "label_zh": "實際做出哪些菌株",
+   "value": "ACCD in 168 and WB800; others only in WB800 lists",
+   "detail_en": "Cycle 5 says only Csn-AcdS-Histag was electroporated into 168. Results says all constructs were verified and transformed into WB800, but the WB800 electroporation table lists AcdS 2.1, AcdS 2.2, the CcaSR circuit and two BoPep4 constructs, not the LEA14 cassettes.",
+   "detail_zh": "第 5 輪說只有 Csn-AcdS-Histag 被電穿孔進 168。Results 說所有構築都已驗證並轉入 WB800，但 WB800 電穿孔表只列 AcdS 2.1、AcdS 2.2、CcaSR 電路與兩個 BoPep4 構築，沒有 LEA14 卡匣。",
+   "src": "engineering#Cloning, constitutive output module cycle 5; results#Protein expression",
+   "confidence": "conflict"
+  },
+  {
+   "id": "wetlab-f25",
+   "label_en": "ELISA: three protectants",
+   "label_zh": "ELISA：三種保護蛋白",
+   "value": "ACCD about 16 µg/mL, LEA14 and BoPep4 about 6",
+   "detail_en": "Key-results headline: ACCD about three times the other two. The wild-type Csn constructs in Table 2 give 12.1 to 13.4 vs 6.1 to 6.3 µg/mL (about twofold); the reactor gave 10.7 vs 5.8 vs 6.2.",
+   "detail_zh": "重點結果的說法：ACCD 約為另外兩者的三倍。Table 2 中野生型 Csn 構築為 12.1 至 13.4 對 6.1 至 6.3 µg/mL（約兩倍）；反應器為 10.7、5.8、6.2。",
+   "src": "results#Protein expression, ELISA: production of ACCD, LEA and BoPep4; results#Protectant function",
+   "confidence": "conflict"
+  },
+  {
+   "id": "wetlab-f26",
+   "label_en": "ELISA background",
+   "label_zh": "ELISA 背景值",
+   "value": "1.3 µg/mL vs 4.6 to 5.5 µg/mL",
+   "detail_en": "Plasmid-free WB800 reads 1.3 µg/mL in the reactor and light-plate runs, but 5.45 and 4.56 µg/mL (8 h, 12 h) in the construct-comparison table; the standard curve spans 0.093 to 3 µg/mL, below every value in that table.",
+   "detail_zh": "不含質體的 WB800 在反應器與光盤實驗中讀到 1.3 µg/mL，但在構築比較表中是 5.45 與 4.56 µg/mL（8 小時、12 小時）；標準曲線範圍是 0.093 至 3 µg/mL，低於該表所有數值。",
+   "src": "results#Protectant function, ELISA Table 2; development#ACCD production",
+   "confidence": "conflict"
+  },
+  {
+   "id": "wetlab-f27",
+   "label_en": "PLP requirement (DNPH)",
+   "label_zh": "PLP 需求（DNPH）",
+   "value": "39 and 48 vs 21 and 32 nmol α-KB mL-1 h-1",
+   "detail_en": "With PLP: Csn 39, SamyQ 48. Without PLP: Csn 21, plasmid-free WB800 32. Csn+PLP is 13.7 nmol above the WB800 baseline; every later assay carries PLP.",
+   "detail_zh": "加 PLP：Csn 為 39、SamyQ 為 48。不加：Csn 為 21，不含質體的 WB800 為 32。Csn+PLP 比 WB800 基線高 13.7 nmol；之後每次檢測都加 PLP。",
+   "src": "results#Protein expression, DNPH assay: ACCD activity and the PLP requirement; results#DNPH assay",
+   "confidence": "stated"
+  },
+  {
+   "id": "wetlab-f28",
+   "label_en": "Codon-optimised vs wild type",
+   "label_zh": "密碼子優化 vs 野生型",
+   "value": "AcdS 2.1 about 9 vs 12 to 13 µg/mL",
+   "detail_en": "Recoded ACCD came out below wild type; BoPep4 2.1 and 2.2 (about 6.3 and 5.4 µg/mL at 12 h) came out above wild-type BoPep4 (about 4.7). Predicted gains were mostly lost when MF001 was swapped for RiboJ + RBS0.",
+   "detail_zh": "重新編碼的 ACCD 低於野生型；BoPep4 2.1 與 2.2（12 小時約 6.3 與 5.4 µg/mL）高於野生型 BoPep4（約 4.7）。把 MF001 換成 RiboJ + RBS0 後，預測的增益大多消失。",
+   "src": "results#Protein expression; engineering#Cloning, constitutive output module cycle 4",
+   "confidence": "stated"
+  },
+  {
+   "id": "wetlab-f29",
+   "label_en": "Yield in the reactor shell",
+   "label_zh": "反應器殼側產量",
+   "value": "2.5 to 6.5 µg/mL, peak at 12 h",
+   "detail_en": "Nine shell-side samples to 72 h (WB800, AcdS 2.1): 4.80, 3.75, 6.52, 5.99, 3.35, 5.75, 2.50, 3.01, 2.61 µg/mL. Plasmid-free WB800 reads 1.3. The team calls overall yield low, not at optimal physiological levels.",
+   "detail_zh": "九個殼側樣本到 72 小時（WB800、AcdS 2.1）：4.80、3.75、6.52、5.99、3.35、5.75、2.50、3.01、2.61 µg/mL。不含質體的 WB800 為 1.3。團隊自評整體產量偏低，未達理想生理濃度。",
+   "src": "engineering#Bioreactor cycle 8; results#Product in the permeate",
+   "confidence": "stated"
+  },
+  {
+   "id": "wetlab-f30",
+   "label_en": "Protein vs activity timing",
+   "label_zh": "蛋白量與活性的時間差",
+   "value": "ELISA peak 12 h; DNPH peak 18 h",
+   "detail_en": "Activity reaches about 30 nmol α-KB mL-1 h-1 at 18 h; specific activity 6.3 U/mg at 18 h and 5 to 8.4 U/mg after. Working explanation: ACCD needs time to form a multimer and bind PLP outside the cell; not measured.",
+   "detail_zh": "活性在 18 小時達約 30 nmol α-KB mL-1 h-1；比活性 18 小時為 6.3 U/mg，之後在 5 至 8.4 U/mg。目前的解釋：ACCD 需要時間在細胞外組成多聚體並結合 PLP；尚未量測。",
+   "src": "results#Product in the permeate; engineering#Bioreactor cycle 8 details",
+   "confidence": "stated"
+  },
+  {
+   "id": "wetlab-f31",
+   "label_en": "Activity to 72 hours",
+   "label_zh": "活性延續到 72 小時",
+   "value": "Results: to 72 h; Development: assay stops at 36 h",
+   "detail_en": "Results says shell-side ACCD stays active through 72 h; Development says DNPH was not carried past 36 h; Engineering says the 48 and 72 h points are on the team's chart but not in the rate numbers.",
+   "detail_zh": "Results 說殼側 ACCD 到 72 小時仍有活性；Development 說 DNPH 只做到 36 小時；Engineering 說 48 與 72 小時的點在團隊的圖上，但不在速率數字裡。",
+   "src": "results#Product in the permeate; development#ACCD production; engineering#Bioreactor cycle 8 details",
+   "confidence": "conflict"
+  },
+  {
+   "id": "wetlab-f32",
+   "label_en": "Lumen vs shell",
+   "label_zh": "管腔側 vs 殼側",
+   "value": "ACCD 10.7 vs 10.5, LEA14 5.8 vs 5.9, BoPep4 6.2 vs 5.4 µg/mL",
+   "detail_en": "One WB800 run with samples from both sides; a second run agrees. This is why later runs sample the shell side only.",
+   "detail_zh": "一次 WB800 運轉同時取兩側樣本；第二次運轉結果一致。因此後來只取殼側樣本。",
+   "src": "engineering#Bioreactor cycle 6",
+   "confidence": "stated"
+  },
+  {
+   "id": "wetlab-f33",
+   "label_en": "Light-plate induction result",
+   "label_zh": "光盤誘導結果",
+   "value": "ELISA 12 to 13 µg/mL in all four conditions",
+   "detail_en": "At 13 h DNPH gave about 10 (green) vs 0.7 (red) nmol α-KB mL-1 h-1; at 16 h about 1 vs 3.7. Dark baseline before illumination was already about 3.0 µg/mL vs 1.3 for plasmid-free cells. Development: p = 0.72 for colour on DNPH.",
+   "detail_zh": "13 小時 DNPH 為約 10（綠光）對 0.7（紅光）nmol α-KB mL-1 h-1；16 小時約 1 對 3.7。照光前的暗處基線已有約 3.0 µg/mL，不含質體的細胞為 1.3。Development：顏色對 DNPH 的 p = 0.72。",
+   "src": "results#Optogenetic control, ELISA and DNPH assay; development#ACCD production",
+   "confidence": "conflict"
+  },
+  {
+   "id": "wetlab-f34",
+   "label_en": "Containment test",
+   "label_zh": "隔離測試",
+   "value": "no shell-side colonies, 2 platings, no replicates",
+   "detail_en": "6 June: 2 mL of shell liquid plated; later a lumen-vs-shell pair, lumen grew, shell none after 24 h at 37 °C. No replicate, no recorded detection limit, no log reduction. Membrane pores 0.2 µm vs cells 0.8 to 2.0 µm; vesicles and debris (20 to 200 nm) can pass.",
+   "detail_zh": "6 月 6 日：取 2 mL 殼側液體塗盤；之後有管腔對殼側的成對測試，管腔長菌、殼側在 37 °C 24 小時後無菌落。沒有重複、沒有記錄偵測極限、沒有量化減少倍數。膜孔 0.2 µm，細胞 0.8 至 2.0 µm；囊泡與碎片（20 至 200 nm）可以通過。",
+   "src": "results#Membrane bioreactor, Containment and release",
+   "confidence": "stated"
+  },
+  {
+   "id": "wetlab-f35",
+   "label_en": "Unrun variant panel",
+   "label_zh": "尚未檢測的變體組",
+   "value": "10 BoPep4 and LEA14 variants, no activity assay",
+   "detail_en": "Includes S15A (about 100x weaker) and G17A (more than 4000x weaker) as loss-of-function controls. The activity assay that would rank the truncations has not been run. The His tag position is stated as C-terminal in one place and N-terminal in another.",
+   "detail_zh": "包含 S15A（約弱 100 倍）與 G17A（弱超過 4000 倍）作為失去功能的對照。可以替截短版排序的活性檢測尚未進行。His 標籤位置一處寫 C 端、另一處寫 N 端。",
+   "src": "engineering#Cloning, constitutive output module cycle 7",
+   "confidence": "conflict"
+  },
+  {
+   "id": "wetlab-f36",
+   "label_en": "Protocol sheets",
+   "label_zh": "實驗流程表",
+   "value": "25 sheets; 3 produced no result",
+   "detail_en": "10 cloning, 8 protein production, 5 plant, 2 bioreactor. The Bradford assay, large-scale extraction, and purification and dialysis sheets produced no result on the wiki.",
+   "detail_zh": "10 份選殖、8 份蛋白生產、5 份植物、2 份生物反應器。Bradford 測定、大量萃取、純化與透析三份在 wiki 上沒有產出結果。",
+   "src": "experiments#Abstract",
+   "confidence": "stated"
+  },
+  {
+   "id": "wetlab-f37",
+   "label_en": "Earlier parts reused",
+   "label_zh": "沿用的既有零件",
+   "value": "14 earlier Registry parts",
+   "detail_en": "Includes Pveg BBa_K143012, ccaSm3* BBa_K3317069, CcaR BBa_K5431017, ho1-pcyA BBa_K4354012, SamyQ BBa_K1074014 and the B0015 terminator.",
+   "detail_zh": "包含 Pveg BBa_K143012、ccaSm3* BBa_K3317069、CcaR BBa_K5431017、ho1-pcyA BBa_K4354012、SamyQ BBa_K1074014 與 B0015 終止子。",
+   "src": "parts#Parts we built on",
+   "confidence": "stated"
+  },
+  {
+   "id": "wetlab-f38",
+   "label_en": "Open acceptor cassette",
+   "label_zh": "可替換目標基因的卡匣",
+   "value": "CDS replacable cassette-mScarlet-I (Draft)",
+   "detail_en": "PcpcG2-veg and EEBD-RBS0 in front of an sfGFP and mScarlet-I dropout, so a future team can put another protectant in the cargo slot. It is a Draft entry with no documentation tag yet.",
+   "detail_zh": "PcpcG2-veg 與 EEBD-RBS0 後面接 sfGFP 加 mScarlet-I 的替換區，未來團隊可以把別的保護蛋白放進去。它是 Draft 狀態，尚無文件標示。",
+   "src": "parts#The collection",
+   "confidence": "stated"
+  }
+ ],
+ "terms": [
+  {
+   "term": "CcaSR",
+   "kw_en": [
+    "two-component system",
+    "green on, red off",
+    "phosphate relay"
+   ],
+   "kw_zh": [
+    "雙組分系統",
+    "綠光開紅光關",
+    "磷酸基傳遞"
+   ],
+   "def_en": "A green/red light-sensing two-component system: the kinase CcaS-m3 senses light and passes a phosphate to the regulator CcaR. ReLEAF uses it in WB800 so a green LED can start ACC deaminase production.",
+   "def_zh": "綠光／紅光感測的雙組分系統：激酶 CcaS-m3 感光後把磷酸基傳給調控蛋白 CcaR。ReLEAF 在 WB800 中用它，讓綠光 LED 啟動 ACC 去胺酶的生產。",
+   "cat": "biology",
+   "src": "parts"
+  },
+  {
+   "term": "CcaS-m3",
+   "kw_en": [
+    "miniaturized photoreceptor",
+    "histidine kinase",
+    "needs PCB"
+   ],
+   "kw_zh": [
+    "縮小版光受體",
+    "組胺酸激酶",
+    "需要 PCB"
+   ],
+   "def_en": "An optimized, smaller variant of the CcaS green-light histidine kinase (BBa_K3317069). Once loaded with phycocyanobilin it autophosphorylates under green light. ReLEAF drives it from the constitutive PlepA or PliaG promoter.",
+   "def_zh": "CcaS 綠光組胺酸激酶的最佳化縮小版（BBa_K3317069）。結合 phycocyanobilin 後在綠光下自磷酸化。ReLEAF 用持續表現的 PlepA 或 PliaG 啟動子表現它。",
+   "cat": "biology",
+   "src": "parts"
+  },
+  {
+   "term": "CcaR",
+   "kw_en": [
+    "response regulator",
+    "takes the phosphate",
+    "activates PcpcG2-veg"
+   ],
+   "kw_zh": [
+    "反應調控蛋白",
+    "接收磷酸基",
+    "啟動 PcpcG2-veg"
+   ],
+   "def_en": "The response regulator that receives the phosphoryl group from CcaS-m3 and then binds the PcpcG2-veg promoter to turn it on. ReLEAF expresses it from the constitutive promoter Pveg to keep its level steady.",
+   "def_zh": "接收 CcaS-m3 磷酸基的反應調控蛋白，之後結合 PcpcG2-veg 啟動子並將它打開。ReLEAF 用持續表現的 Pveg 讓它的量保持穩定。",
+   "cat": "biology",
+   "src": "parts"
+  },
+  {
+   "term": "ho1-pcyA",
+   "kw_en": [
+    "heme oxygenase fusion",
+    "heme to biliverdin to PCB",
+    "module 1"
+   ],
+   "kw_zh": [
+    "血基質氧化酶融合",
+    "血基質到 PCB",
+    "模組 1"
+   ],
+   "def_en": "A fusion of heme oxygenase 1 and phycocyanobilin:ferredoxin oxidoreductase. Ho1 turns heme into biliverdin IXα and PcyA turns that into phycocyanobilin, the chromophore CcaS-m3 needs. Cells do not make it naturally.",
+   "def_zh": "血基質氧化酶 1 與 phycocyanobilin:ferredoxin oxidoreductase 的融合酵素。Ho1 把血基質變成 biliverdin IXα，PcyA 再變成 CcaS-m3 需要的發色團 phycocyanobilin。",
+   "cat": "biology",
+   "src": "engineering"
+  },
+  {
+   "term": "Phycocyanobilin (PCB)",
+   "kw_en": [
+    "light-absorbing chromophore",
+    "made from heme",
+    "CcaS-m3 binds it"
+   ],
+   "kw_zh": [
+    "吸光發色團",
+    "由血基質合成",
+    "CcaS-m3 結合"
+   ],
+   "def_en": "A light-absorbing pigment that CcaS-m3 must bind before it can sense green light. ReLEAF's cells make it from their own heme using ho1-pcyA. The wiki shows no direct measurement that PCB is made.",
+   "def_zh": "CcaS-m3 必須先結合才能感測綠光的吸光色素。ReLEAF 的細胞用 ho1-pcyA 由自身血基質合成。wiki 沒有直接量測 PCB 是否有生成。",
+   "cat": "biology",
+   "src": "parts"
+  },
+  {
+   "term": "PcpcG2-veg",
+   "kw_en": [
+    "green-light promoter",
+    "177 bp hybrid",
+    "CcaR-activated"
+   ],
+   "kw_zh": [
+    "綠光啟動子",
+    "177 bp 混合型",
+    "被 CcaR 啟動"
+   ],
+   "def_en": "The hybrid green-light-inducible promoter (177 bp, BBa_26GJIT8W). Phosphorylated CcaR switches it on, so the protectant is made only in green light. It sits in front of every light-gated cassette.",
+   "def_zh": "混合型的綠光誘導啟動子（177 bp，BBa_26GJIT8W）。磷酸化的 CcaR 會打開它，所以保護蛋白只在綠光下生產。所有受光控的卡匣都放在它後面。",
+   "cat": "biology",
+   "src": "parts"
+  },
+  {
+   "term": "Pveg",
+   "kw_en": [
+    "constitutive promoter",
+    "always on",
+    "BBa_K143012"
+   ],
+   "kw_zh": [
+    "持續表現啟動子",
+    "一直開著",
+    "BBa_K143012"
+   ],
+   "def_en": "A constitutive B. subtilis promoter from an earlier iGEM part. ReLEAF uses it for ccaR in the light circuit and for every protectant cassette in the constitutive module that produced the bench results.",
+   "def_zh": "來自舊 iGEM 零件的枯草桿菌持續表現啟動子。ReLEAF 用它表現光電路中的 ccaR，也用在產出所有桌面數據的持續表現模組的每個保護蛋白卡匣。",
+   "cat": "biology",
+   "src": "parts"
+  },
+  {
+   "term": "PliaG and PlepA",
+   "kw_en": [
+    "constitutive promoters",
+    "photoreceptor expression",
+    "two Level 2 versions"
+   ],
+   "kw_zh": [
+    "持續表現啟動子",
+    "光受體表現",
+    "兩個 Level 2 版本"
+   ],
+   "def_en": "Two constitutive promoters that express CcaS-m3 at a steady level instead of using an inducer. Both versions were built, giving Level 2 devices ACDI (PlepA) and ABDI (PliaG); the wiki cannot choose between them yet.",
+   "def_zh": "兩個讓 CcaS-m3 穩定表現而不需誘導劑的持續表現啟動子。兩個版本都做了，得到 Level 2 裝置 ACDI（PlepA）與 ABDI（PliaG）；目前 wiki 還無法分出優劣。",
+   "cat": "biology",
+   "src": "engineering"
+  },
+  {
+   "term": "EEBD (E. coli expression blocking device)",
+   "kw_en": [
+    "double terminator",
+    "dif sites",
+    "quiet in E. coli"
+   ],
+   "kw_zh": [
+    "雙終止子",
+    "dif 位點",
+    "在大腸桿菌中不表現"
+   ],
+   "def_en": "A double terminator flanked by dif sites, built into the EEBD-RBS0 part. It stops a cargo gene being expressed while cloned in E. coli and is removed in B. subtilis, so toxic proteins do not build up during cloning.",
+   "def_zh": "兩側有 dif 位點的雙終止子，包在 EEBD-RBS0 零件裡。目標基因在大腸桿菌中選殖時不表現，進入枯草桿菌後被移除，避免毒性蛋白在選殖時累積。",
+   "cat": "biology",
+   "src": "engineering"
+  },
+  {
+   "term": "ACC deaminase (ACCD)",
+   "kw_en": [
+    "breaks down ACC",
+    "lowers ethylene",
+    "true enzyme"
+   ],
+   "kw_zh": [
+    "分解 ACC",
+    "降低乙烯",
+    "真正的酵素"
+   ],
+   "def_en": "An enzyme from Pseudomonas putida UW4 that breaks ACC, the precursor of the stress hormone ethylene, into α-ketobutyrate and ammonia. It is ReLEAF's lead protectant and the only one carried through the reactor and the light circuit.",
+   "def_zh": "來自 Pseudomonas putida UW4 的酵素，把壓力荷爾蒙乙烯的前驅物 ACC 分解成 α-酮丁酸與氨。它是 ReLEAF 的主力保護蛋白，也是唯一走完反應器與光電路的一個。",
+   "cat": "biology",
+   "src": "parts"
+  },
+  {
+   "term": "LEA14",
+   "kw_en": [
+    "late embryogenesis abundant",
+    "protects proteins",
+    "not an enzyme"
+   ],
+   "kw_zh": [
+    "晚期胚胎發生豐富蛋白",
+    "保護蛋白質",
+    "不是酵素"
+   ],
+   "def_en": "A 151-residue Arabidopsis protein (At1g01470) that helps cells survive drying and salt. Not an enzyme, so one copy protects one thing. ReLEAF built it as a secreted protectant; the wiki cites overexpression raising salt tolerance.",
+   "def_zh": "Arabidopsis 的 151 個胺基酸蛋白（At1g01470），幫助細胞度過乾旱與鹽害。不是酵素，一個分子只保護一個對象。ReLEAF 把它做成分泌型保護蛋白；wiki 引用過量表現可提高耐鹽性。",
+   "cat": "biology",
+   "src": "parts"
+  },
+  {
+   "term": "BoPep4",
+   "kw_en": [
+    "23-residue peptide",
+    "broccoli elicitor",
+    "PEPR1 receptor"
+   ],
+   "kw_zh": [
+    "23 個胺基酸胜肽",
+    "花椰菜激發子",
+    "PEPR1 受體"
+   ],
+   "def_en": "A 23-residue plant elicitor peptide from broccoli that binds the receptor PEPR1 and switches on the plant's own defenses. ReLEAF built it with recodings and truncations. Applied alone without stress, it inhibited Arabidopsis growth.",
+   "def_zh": "來自花椰菜的 23 個胺基酸植物激發子胜肽，結合 PEPR1 受體啟動植物自己的防禦。ReLEAF 做了重新編碼與截短版。沒有逆境時單獨施用會抑制 Arabidopsis 生長。",
+   "cat": "biology",
+   "src": "parts"
+  },
+  {
+   "term": "PLP (pyridoxal 5′-phosphate)",
+   "kw_en": [
+    "ACCD cofactor",
+    "added to the assay",
+    "raises activity"
+   ],
+   "kw_zh": [
+    "ACCD 輔因子",
+    "加進檢測",
+    "提高活性"
+   ],
+   "def_en": "The coenzyme ACC deaminase needs. In the DNPH assay, adding PLP raised activity, so ReLEAF supplies it in every later assay. The team also argues secreted ACCD may load PLP slowly outside the cell, which was not measured.",
+   "def_zh": "ACC 去胺酶需要的輔酶。DNPH 檢測加入 PLP 後活性上升，所以之後每次檢測都補充。團隊也推測分泌出來的 ACCD 在細胞外結合 PLP 較慢，但尚未量測。",
+   "cat": "biology",
+   "src": "results"
+  },
+  {
+   "term": "Bacillus subtilis 168",
+   "kw_en": [
+    "wild-type lab strain",
+    "makes proteases",
+    "early runs"
+   ],
+   "kw_zh": [
+    "野生型實驗菌株",
+    "會分泌蛋白酶",
+    "早期運轉"
+   ],
+   "def_en": "The standard wild-type laboratory strain, non-pathogenic and a natural secretor. ReLEAF's reactor runs up to September used it, but it made barely detectable ACC deaminase, probably because its proteases degrade the product.",
+   "def_zh": "標準的野生型實驗菌株，無致病性且天然會分泌蛋白。ReLEAF 9 月之前的反應器運轉都用它，但 ACC 去胺酶幾乎偵測不到，可能是它的蛋白酶分解了產物。",
+   "cat": "biology",
+   "src": "engineering"
+  },
+  {
+   "term": "WB800",
+   "kw_en": [
+    "eight proteases deleted",
+    "protects secreted protein",
+    "production strain"
+   ],
+   "kw_zh": [
+    "缺八種蛋白酶",
+    "保護分泌蛋白",
+    "生產菌株"
+   ],
+   "def_en": "A 168 derivative lacking eight extracellular proteases (nprE, aprE, epr, bpr, mpr, nprB, vpr, wprA), so secreted proteins survive better. ReLEAF's host for the light circuit, light-plate runs and the later reactor runs.",
+   "def_zh": "168 的衍生株，缺少八種胞外蛋白酶（nprE、aprE、epr、bpr、mpr、nprB、vpr、wprA），分泌的蛋白質更容易存活。是 ReLEAF 光電路、光盤實驗與後期反應器運轉的宿主。",
+   "cat": "biology",
+   "src": "engineering"
+  },
+  {
+   "term": "Signal peptide",
+   "kw_en": [
+    "export tag",
+    "N-terminal",
+    "Sec pathway"
+   ],
+   "kw_zh": [
+    "輸出標籤",
+    "接在 N 端",
+    "Sec 路徑"
+   ],
+   "def_en": "A short N-terminal tag that sends a protein out of the cell through the Sec pathway. ReLEAF fused Csn or SamyQ in front of each cargo. The Sec pathway needs the protein unfolded, which may be why AmilCP failed.",
+   "def_zh": "接在蛋白質 N 端的短標籤，讓蛋白質經 Sec 路徑運出細胞。ReLEAF 在每個目標蛋白前接 Csn 或 SamyQ。Sec 路徑要求蛋白質未折疊，這可能是 AmilCP 失敗的原因。",
+   "cat": "biology",
+   "src": "results"
+  },
+  {
+   "term": "Csn",
+   "kw_en": [
+    "chitosanase signal",
+    "BBa_26NXOP7S fusion",
+    "33.8% in E. coli"
+   ],
+   "kw_zh": [
+    "幾丁聚醣酶訊號肽",
+    "BBa_26NXOP7S 融合",
+    "大腸桿菌 33.8%"
+   ],
+   "def_en": "The chitosanase signal peptide, one of two secretion tags used. Published data give 33.8% secretion of its own cargo in E. coli. Used for Csn-AcdS-Histag, the construct run in the first reactor cycle.",
+   "def_zh": "幾丁聚醣酶的訊號肽，是使用的兩種分泌標籤之一。文獻顯示在大腸桿菌中對自身目標蛋白分泌約 33.8%。用於 Csn-AcdS-Histag，也就是第一次反應器運轉的構築。",
+   "cat": "biology",
+   "src": "results"
+  },
+  {
+   "term": "SamyQ",
+   "kw_en": [
+    "α-amylase signal",
+    "93 bp",
+    "about 90% secretion"
+   ],
+   "kw_zh": [
+    "α-澱粉酶訊號肽",
+    "93 bp",
+    "約 90% 分泌"
+   ],
+   "def_en": "The α-amylase signal peptide (BBa_K1074014, 93 bp), reported at about 90% secretion for α-amylase in B. subtilis. Used in six of the eight secretion fusions and in the WB800 reactor runs.",
+   "def_zh": "α-澱粉酶訊號肽（BBa_K1074014，93 bp），文獻報告在枯草桿菌分泌 α-澱粉酶約 90%。用在八個分泌融合中的六個，也用於 WB800 反應器運轉。",
+   "cat": "biology",
+   "src": "parts"
+  },
+  {
+   "term": "His tag (6×His)",
+   "kw_en": [
+    "six histidines",
+    "lets us detect it",
+    "anti-His"
+   ],
+   "kw_zh": [
+    "六個組胺酸",
+    "用來偵測",
+    "抗 His 抗體"
+   ],
+   "def_en": "Six histidines added to a protein so anti-His antibodies and the Cayman ELISA kit can detect it, and Ni-NTA can purify it. ReLEAF's ELISA counts the tag whether or not the protein is folded or active.",
+   "def_zh": "加在蛋白質上的六個組胺酸，讓抗 His 抗體與 Cayman ELISA 套組能偵測它，Ni-NTA 也能純化。ReLEAF 的 ELISA 不管蛋白是否摺疊或有活性，只要有標籤都會計入。",
+   "cat": "biology",
+   "src": "experiments"
+  },
+  {
+   "term": "Golden Gate assembly",
+   "kw_en": [
+    "type IIS enzymes",
+    "one-pot reaction",
+    "ordered joins"
+   ],
+   "kw_zh": [
+    "IIS 型限制酶",
+    "一鍋式反應",
+    "無縫接合"
+   ],
+   "def_en": "A cloning method where a type IIS enzyme (BsaI, BbsI/BpiI) cuts outside its site, leaving designed overhangs so many parts join in order in one tube with ligase. ReLEAF used it at every level.",
+   "def_zh": "一種選殖方法：IIS 型限制酶（BsaI、BbsI/BpiI）在辨識位點外切割，留下設計好的突出端，讓許多零件在同一管內與連接酶依序接合。ReLEAF 每一層級都用它。",
+   "cat": "biology",
+   "src": "experiments"
+  },
+  {
+   "term": "MoClo 2.0",
+   "kw_en": [
+    "first assembly system",
+    "high background",
+    "no usable clone"
+   ],
+   "kw_zh": [
+    "第一套組裝系統",
+    "背景很高",
+    "沒有可用選殖株"
+   ],
+   "def_en": "The Modular Cloning kit ReLEAF used first. It gave screens full of empty vectors and off-target bands and no usable Level 1 clone, so the team moved to the SubtiToolKit. The failed data are not shown.",
+   "def_zh": "ReLEAF 最先用的模組化選殖套組。篩選結果充滿空載體與非預期條帶，沒有任何可用的 Level 1 選殖株，所以改用 SubtiToolKit。失敗的數據未呈現。",
+   "cat": "biology",
+   "src": "engineering"
+  },
+  {
+   "term": "SubtiToolKit (STK)",
+   "kw_en": [
+    "Bacillus part kit",
+    "from Caro-Astorga",
+    "pSTK vectors"
+   ],
+   "kw_zh": [
+    "枯草桿菌零件套組",
+    "來自 Caro-Astorga",
+    "pSTK 載體"
+   ],
+   "def_en": "A bioengineering kit for B. subtilis and other Gram-positive bacteria, supplied to ReLEAF by Dr Joaquín Caro-Astorga. It provides the pSTK vectors and parts (RBS0, EEBD, B0015) used for all Level 0, 1 and 2 builds.",
+   "def_zh": "適用枯草桿菌與其他革蘭氏陽性菌的生物工程套組，由 Dr Joaquín Caro-Astorga 提供給 ReLEAF。提供所有 Level 0、1、2 建構用的 pSTK 載體與零件（RBS0、EEBD、B0015）。",
+   "cat": "biology",
+   "src": "engineering"
+  },
+  {
+   "term": "Level 0 / 1 / 2",
+   "kw_en": [
+    "part, unit, device",
+    "BbsI then BsaI",
+    "four units in one plasmid"
+   ],
+   "kw_zh": [
+    "零件、單元、裝置",
+    "先 BbsI 後 BsaI",
+    "四個單元一個質體"
+   ],
+   "def_en": "Assembly tiers: Level 0 holds a single part, Level 1 joins promoter, RBS, coding sequence and terminator into one transcription unit, Level 2 joins four units into one plasmid. ReLEAF's Level 2 device is about 10 kb.",
+   "def_zh": "組裝層級：Level 0 放單一零件，Level 1 把啟動子、RBS、編碼序列與終止子接成一個轉錄單元，Level 2 把四個單元接成一個質體。ReLEAF 的 Level 2 裝置約 10 kb。",
+   "cat": "biology",
+   "src": "engineering"
+  },
+  {
+   "term": "pGEM-T Easy (TA cloning)",
+   "kw_en": [
+    "T-overhang vector",
+    "fast intermediate",
+    "ampicillin clash"
+   ],
+   "kw_zh": [
+    "T 突出端載體",
+    "快速中間步驟",
+    "抗生素衝突"
+   ],
+   "def_en": "A vector with single T overhangs that ligates PCR products carrying A overhangs directly. ReLEAF used it as a Level 0 intermediate in cycle 2, then dropped it because it shares ampicillin resistance with the Level 1 vectors.",
+   "def_zh": "帶單一 T 突出端的載體，可直接接上帶 A 突出端的 PCR 產物。ReLEAF 在第 2 輪用它當 Level 0 中間載體，之後因它與 Level 1 載體同為安比西林抗性而放棄。",
+   "cat": "biology",
+   "src": "engineering"
+  },
+  {
+   "term": "pSTK-EXP1 / pSTK-EXP2",
+   "kw_en": [
+    "shuttle vectors",
+    "E. coli and Bacillus",
+    "Level 1 vs Level 2"
+   ],
+   "kw_zh": [
+    "穿梭載體",
+    "大腸桿菌與枯草桿菌",
+    "Level 1 對 Level 2"
+   ],
+   "def_en": "Shuttle plasmids that replicate in both E. coli and B. subtilis. EXP1 carries single constitutive cassettes; EXP2 carries the four-module Level 2 circuit. Selection in Bacillus is erythromycin at 5 µg/mL.",
+   "def_zh": "能在大腸桿菌與枯草桿菌中複製的穿梭質體。EXP1 放單一持續表現卡匣；EXP2 放四模組的 Level 2 電路。枯草桿菌用 5 µg/mL erythromycin 篩選。",
+   "cat": "biology",
+   "src": "engineering"
+  },
+  {
+   "term": "E. coli DH5α",
+   "kw_en": [
+    "cloning host",
+    "chemical transformation",
+    "assembly first goes here"
+   ],
+   "kw_zh": [
+    "選殖宿主",
+    "化學轉形",
+    "組裝先在這裡"
+   ],
+   "def_en": "The E. coli strain used to assemble and screen every construct by chemical transformation before the plasmid is moved into B. subtilis. The EEBD keeps cargo genes quiet in it.",
+   "def_zh": "用化學轉形組裝並篩選每個構築的大腸桿菌菌株，之後質體才轉入枯草桿菌。EEBD 讓目標基因在其中保持不表現。",
+   "cat": "biology",
+   "src": "experiments"
+  },
+  {
+   "term": "Colony PCR",
+   "kw_en": [
+    "screen colonies",
+    "band size only",
+    "sequencing decides"
+   ],
+   "kw_zh": [
+    "篩選菌落",
+    "只看條帶大小",
+    "定序才定案"
+   ],
+   "def_en": "PCR using a bacterial colony as the template, run on a gel to check insert size. It cannot catch point mutations, and at ReLEAF right-sized bands sometimes came from wrong clones, so sequencing stayed the deciding check.",
+   "def_zh": "以菌落直接當模板做 PCR，跑膠看插入片段大小。它抓不到點突變，ReLEAF 也出現過大小正確但選殖株錯誤的條帶，所以定序仍是最後判斷。",
+   "cat": "assay",
+   "src": "experiments"
+  },
+  {
+   "term": "Junction PCR and double digest",
+   "kw_en": [
+    "order of modules",
+    "375, 632, 661 bp",
+    "10 293 bp"
+   ],
+   "kw_zh": [
+    "模組順序",
+    "375、632、661 bp",
+    "10 293 bp"
+   ],
+   "def_en": "How the Level 2 plasmid was checked without end-to-end sequencing: primers across each of three module junctions show the order, and EcoRI and EcoRI plus BtsI digests show the length. Neither reads the sequence between.",
+   "def_zh": "在沒有全長定序下檢查 Level 2 質體的方法：跨三個模組接點的引子顯示順序，EcoRI 與 EcoRI 加 BtsI 的酵素切割顯示長度。兩者都沒讀接點之間的序列。",
+   "cat": "assay",
+   "src": "engineering"
+  },
+  {
+   "term": "Electroporation",
+   "kw_en": [
+    "high-voltage pulse",
+    "voltage depends on construct",
+    "colonies counted"
+   ],
+   "kw_zh": [
+    "高壓脈衝",
+    "電壓隨構築而異",
+    "計算菌落"
+   ],
+   "def_en": "A brief high-voltage pulse that opens pores so plasmid DNA enters cells. ReLEAF used it for B. subtilis, with 3 hours recovery in SOC. Best voltage moved with strain, construct and cuvette gap, between 1.1 and 2.3 kV.",
+   "def_zh": "短暫的高壓脈衝打開細胞孔洞，讓質體 DNA 進入。ReLEAF 用它轉形枯草桿菌，之後在 SOC 恢復 3 小時。最佳電壓隨菌株、構築與電擊杯間距而變，在 1.1 至 2.3 kV 之間。",
+   "cat": "assay",
+   "src": "engineering"
+  },
+  {
+   "term": "Electrocompetent cells",
+   "kw_en": [
+    "prepared cells",
+    "OD and washes differ",
+    "trehalose for WB800"
+   ],
+   "kw_zh": [
+    "預備好的細胞",
+    "OD 與洗滌不同",
+    "WB800 用海藻糖"
+   ],
+   "def_en": "Cells washed so they survive a pulse. 168: harvest at OD600 0.85 to 0.95, two washes. WB800: grow to OD600 2.2, four washes with 1.5 M trehalose buffer, because it tolerates electroporation worse.",
+   "def_zh": "經過洗滌、能承受電擊的細胞。168：在 OD600 0.85 至 0.95 收取，洗兩次。WB800：長到 OD600 2.2，用 1.5 M 海藻糖緩衝液洗四次，因為它對電穿孔的耐受較差。",
+   "cat": "assay",
+   "src": "engineering"
+  },
+  {
+   "term": "Sanger sequencing",
+   "kw_en": [
+    "read the DNA",
+    "per clone",
+    "deciding check"
+   ],
+   "kw_zh": [
+    "讀出 DNA 序列",
+    "逐株檢查",
+    "最終判斷"
+   ],
+   "def_en": "Reading the base sequence of a plasmid insert. ReLEAF used it to confirm Level 0 and Level 1 clones. No Level 2 construct has been sequenced end to end.",
+   "def_zh": "讀出質體插入片段的鹼基序列。ReLEAF 用它確認 Level 0 與 Level 1 選殖株。沒有任何 Level 2 構築被全長定序。",
+   "cat": "assay",
+   "src": "engineering"
+  },
+  {
+   "term": "Western blot",
+   "kw_en": [
+    "anti-His band",
+    "size and presence",
+    "not quantitative alone"
+   ],
+   "kw_zh": [
+    "抗 His 條帶",
+    "大小與有無",
+    "單獨不能定量"
+   ],
+   "def_en": "Proteins separated by size, then probed with an anti-His antibody to show whether the tagged protein is there and how big. ReLEAF used it for the reactor time course and the light plate; band sizes were not always the expected one.",
+   "def_zh": "蛋白質依大小分離後用抗 His 抗體偵測，看有沒有標籤蛋白與大小。ReLEAF 用於反應器時間序列與光盤實驗；條帶大小不一定符合預期。",
+   "cat": "assay",
+   "src": "results"
+  },
+  {
+   "term": "Competitive anti-His ELISA",
+   "kw_en": [
+    "amount of tagged protein",
+    "standard curve 0.093 to 3",
+    "not activity"
+   ],
+   "kw_zh": [
+    "標籤蛋白的量",
+    "標準曲線 0.093 至 3",
+    "不是活性"
+   ],
+   "def_en": "A Cayman kit assay that estimates His-tagged protein as µg/mL against a six-point standard curve. It counts the protein whether folded or active. ReLEAF's control values and out-of-range readings limit how far the numbers can be pushed.",
+   "def_zh": "Cayman 套組的檢測，以六點標準曲線估計 His 標籤蛋白的 µg/mL 濃度。不論蛋白是否摺疊或有活性都會計入。ReLEAF 的對照值與超出範圍的讀數限制了數字能解讀的程度。",
+   "cat": "assay",
+   "src": "experiments"
+  },
+  {
+   "term": "DNPH assay",
+   "kw_en": [
+    "ACCD activity",
+    "α-ketobutyrate",
+    "colour at 540 nm"
+   ],
+   "kw_zh": [
+    "ACCD 活性",
+    "α-酮丁酸",
+    "540 nm 顏色"
+   ],
+   "def_en": "A colorimetric assay: 2,4-dinitrophenylhydrazine reacts with α-ketobutyrate, the product of ACC deaminase, giving colour read at 540 nm against a standard curve. ReLEAF scaled it down twenty-fold to a 96-well plate.",
+   "def_zh": "比色檢測：2,4-二硝基苯肼與 ACC 去胺酶的產物 α-酮丁酸反應，在 540 nm 讀取顏色並對照標準曲線。ReLEAF 把它縮小二十倍到 96 孔盤。",
+   "cat": "assay",
+   "src": "experiments"
+  },
+  {
+   "term": "α-ketobutyrate (α-KB)",
+   "kw_en": [
+    "ACCD product",
+    "what DNPH detects",
+    "activity unit"
+   ],
+   "kw_zh": [
+    "ACCD 的產物",
+    "DNPH 偵測對象",
+    "活性單位"
+   ],
+   "def_en": "The molecule released when ACC deaminase splits ACC (together with ammonia). The DNPH assay measures it; activity is reported as nmol α-KB per mL per hour, and one unit releases 1 µmol per hour.",
+   "def_zh": "ACC 去胺酶分解 ACC 時釋出的分子（連同氨）。DNPH 檢測它；活性以每毫升每小時 nmol α-KB 表示，一個單位為每小時釋出 1 µmol。",
+   "cat": "assay",
+   "src": "results"
+  },
+  {
+   "term": "AmilCP",
+   "kw_en": [
+    "blue chromoprotein",
+    "reporter that failed",
+    "folds too fast"
+   ],
+   "kw_zh": [
+    "藍色色蛋白",
+    "失敗的報告蛋白",
+    "折疊太快"
+   ],
+   "def_en": "A blue-purple chromoprotein used as a visible reporter for secretion. Constructs were sequence-verified but cells stayed colourless (A588 0.082 vs 0.081). The team thinks it folds in the cell before the Sec pathway can export it; untested.",
+   "def_zh": "作為分泌可見指標的藍紫色色蛋白。構築經定序正確，但菌體沒有顏色（A588 為 0.082 對 0.081）。團隊推測它在細胞內折疊太快，Sec 路徑來不及輸出；尚未驗證。",
+   "cat": "assay",
+   "src": "engineering"
+  },
+  {
+   "term": "GanA (β-galactosidase)",
+   "kw_en": [
+    "second reporter",
+    "seven-part reaction",
+    "never obtained"
+   ],
+   "kw_zh": [
+    "第二個報告蛋白",
+    "七個零件反應",
+    "始終沒做出來"
+   ],
+   "def_en": "A B. subtilis β-galactosidase, tried as a second secretion reporter read with X-gal or ONPG. A seven-part Golden Gate reaction never gave a sequence-verified clone, so reporters were dropped for direct Western and ELISA tests.",
+   "def_zh": "枯草桿菌的 β-半乳糖苷酶，當作第二個分泌報告蛋白，用 X-gal 或 ONPG 判讀。七個零件的 Golden Gate 反應始終沒有得到定序正確的選殖株，於是放棄報告蛋白，改直接用西方墨點與 ELISA。",
+   "cat": "assay",
+   "src": "engineering"
+  },
+  {
+   "term": "Codon optimisation (start-region recoding)",
+   "kw_en": [
+    "first 15 codons",
+    "ViennaRNA",
+    "ribosome site opens"
+   ],
+   "kw_zh": [
+    "前 15 個密碼子",
+    "ViennaRNA",
+    "核糖體結合位開放"
+   ],
+   "def_en": "Synonymous recoding of the first codons after the start so the mRNA start region is less folded. About 50 000 variants per construct were folded; eight cassettes were ordered. Gains shrank once RiboJ + RBS0 replaced MF001.",
+   "def_zh": "同義重新編碼起始密碼子後的前幾個密碼子，讓 mRNA 起始區較不摺疊。每個構築模擬約 50 000 個變體；訂購了八個卡匣。把 MF001 換成 RiboJ + RBS0 後增益縮小。",
+   "cat": "model",
+   "src": "engineering"
+  },
+  {
+   "term": "Lumen and shell",
+   "kw_en": [
+    "cells inside",
+    "protein outside",
+    "0.2 µm membrane"
+   ],
+   "kw_zh": [
+    "細胞在內側",
+    "蛋白在外側",
+    "0.2 µm 膜"
+   ],
+   "def_en": "The two sides of the hollow-fiber module. Culture circulates in the lumen; secreted protein crosses the 0.2 µm membrane into the cell-free shell, where it is sampled. Only whole cells are known to be held back.",
+   "def_zh": "中空纖維模組的兩側。培養液在管腔循環；分泌的蛋白穿過 0.2 µm 的膜進入無細胞的殼側被取樣。目前只知道整顆細胞會被擋住。",
+   "cat": "hardware",
+   "src": "results"
+  },
+  {
+   "term": "DBTL cycle",
+   "kw_en": [
+    "design build test learn",
+    "12 cloning cycles",
+    "failures recorded"
+   ],
+   "kw_zh": [
+    "設計建造測試學習",
+    "12 輪選殖",
+    "失敗也留紀錄"
+   ],
+   "def_en": "Design, build, test, learn: the loop ReLEAF used to report each result. The cloning write-up has twelve cycles across three pipelines and keeps failed ones, such as MoClo 2.0, AmilCP and GanA.",
+   "def_zh": "設計、建造、測試、學習：ReLEAF 用來記錄每項成果的循環。選殖寫作有三條管線共十二輪，並保留失敗的，例如 MoClo 2.0、AmilCP 與 GanA。",
+   "cat": "biology",
+   "src": "engineering"
+  },
+  {
+   "term": "Erythromycin selection",
+   "kw_en": [
+    "5 µg/mL",
+    "keeps the plasmid",
+    "second growth phase"
+   ],
+   "kw_zh": [
+    "5 µg/mL",
+    "留住質體",
+    "第二段生長"
+   ],
+   "def_en": "The antibiotic that keeps B. subtilis carrying the plasmid. In the first reactor run the culture grew again after about 47 h, which the team attributes to erythromycin breaking down and cells shedding the plasmid; daily top-ups removed it.",
+   "def_zh": "讓枯草桿菌保有質體的抗生素。第一次反應器運轉在約 47 小時後培養物再度生長，團隊認為是 erythromycin 分解、細胞丟掉質體；每天補充後這現象就消失。",
+   "cat": "biology",
+   "src": "engineering"
+  },
+  {
+   "term": "Registry part (BBa_26…)",
+   "kw_en": [
+    "iGEM Registry entry",
+    "35 team parts",
+    "composite or basic"
+   ],
+   "kw_zh": [
+    "iGEM Registry 條目",
+    "35 個團隊零件",
+    "複合或基本"
+   ],
+   "def_en": "A documented, deposited DNA part. ReLEAF's 35 entries span a Level 2 device, circuit units, cassettes, secretion fusions, cargo sequences and regulatory parts, built from 14 earlier parts. Each lists sequence, level, function and validation status.",
+   "def_zh": "已登錄並有文件的 DNA 零件。ReLEAF 的 35 個條目涵蓋 Level 2 裝置、電路單元、卡匣、分泌融合、目標蛋白序列與調控零件，由 14 個舊零件組成。每個條目列出序列、層級、功能與驗證狀態。",
+   "cat": "biology",
+   "src": "parts"
+  }
+ ],
+ "questions": [
+  {
+   "q_en": "How does your CcaSR light switch work, step by step?",
+   "q_zh": "你們的 CcaSR 光開關是怎麼一步一步運作的？",
+   "type": "fact",
+   "tier": "A",
+   "pages": [
+    "parts",
+    "engineering"
+   ],
+   "seat": "wet1",
+   "backup": "wet2",
+   "kw_en": [
+    "CcaS-m3 senses green",
+    "CcaR passes signal",
+    "PcpcG2-veg on"
+   ],
+   "kw_zh": [
+    "CcaS-m3 感測綠光",
+    "CcaR 傳遞訊號",
+    "PcpcG2-veg 開啟"
+   ],
+   "a_en": "Thank you. It is a two-component system. The cell first makes phycocyanobilin from its own heme, using ho1 and pcyA. CcaS-m3 binds it, and under green light it passes a phosphate to CcaR. Phosphorylated CcaR then switches on the PcpcG2-veg promoter in front of ACC deaminase. It is designed on in green and off in red. Our data show green higher than red in places, but not yet a clean on and off.",
+   "a_zh": "謝謝。這是一個雙組分系統。細胞先用 ho1 和 pcyA 把自己的血基質做成 phycocyanobilin。CcaS-m3 結合它，在綠光下把磷酸基傳給 CcaR。磷酸化的 CcaR 再打開 ACC 去胺酶前面的 PcpcG2-veg 啟動子。設計上是綠光開、紅光關。我們的數據顯示綠光有些地方高於紅光，但還不是乾淨的開關。",
+   "trap_en": "Stopping at 'green turns it on' and claiming a finished switch; the Results data are weaker than that.",
+   "trap_zh": "只說「綠光就會打開」並宣稱開關已完成；Results 的數據沒有那麼強。",
+   "basis": "like standard 'walk us through the circuit' openers"
+  },
+  {
+   "q_en": "What are your three protectants, and what does each one do?",
+   "q_zh": "你們的三種保護蛋白是什麼？各自的作用是什麼？",
+   "type": "fact",
+   "tier": "A",
+   "pages": [
+    "description",
+    "parts",
+    "protein-design"
+   ],
+   "seat": "wet2",
+   "backup": "wet1",
+   "kw_en": [
+    "ACCD cuts ethylene",
+    "LEA14 shields proteins",
+    "BoPep4 triggers defense"
+   ],
+   "kw_zh": [
+    "ACCD 降乙烯",
+    "LEA14 保護蛋白",
+    "BoPep4 啟動防禦"
+   ],
+   "a_en": "ACC deaminase, from Pseudomonas putida, breaks down ACC, the precursor of the stress hormone ethylene. LEA14 is an Arabidopsis protein that protects other proteins from drought and salt damage. BoPep4 is a 23-residue broccoli peptide that switches on the plant's own defenses through the PEPR1 receptor. Only ACC deaminase went through the light circuit and the reactor. LEA14 and BoPep4 were built as parts for later integration.",
+   "a_zh": "ACC 去胺酶來自 Pseudomonas putida，分解 ACC，也就是壓力荷爾蒙乙烯的前驅物。LEA14 是 Arabidopsis 的蛋白，保護其他蛋白不受乾旱與鹽害傷害。BoPep4 是花椰菜的 23 個胺基酸胜肽，透過 PEPR1 受體啟動植物自己的防禦。只有 ACC 去胺酶走完光電路與反應器。LEA14 和 BoPep4 是為了之後整合而做成的零件。",
+   "trap_en": "Saying all three are 'integrated into the system'; only ACCD is.",
+   "trap_zh": "說三個都「整合進系統」；實際只有 ACCD。",
+   "basis": "like Munich 2025: 'what exactly does your product do'"
+  },
+  {
+   "q_en": "What are Level 0, Level 1 and Level 2 in your Golden Gate assembly?",
+   "q_zh": "你們 Golden Gate 組裝裡的 Level 0、Level 1、Level 2 是什麼？",
+   "type": "fact",
+   "tier": "A",
+   "pages": [
+    "engineering",
+    "parts"
+   ],
+   "seat": "wet1",
+   "backup": "wet2",
+   "kw_en": [
+    "L0 single part",
+    "L1 transcription unit",
+    "L2 four units"
+   ],
+   "kw_zh": [
+    "L0 單一零件",
+    "L1 轉錄單元",
+    "L2 四個單元"
+   ],
+   "a_en": "Level 0 holds one part, for example a cargo with its signal peptide and His tag, cut with BbsI into pSTK-0, which is chloramphenicol resistant. Level 1 joins promoter, RBS, coding sequence and terminator into one transcription unit with BsaI, in ampicillin vectors. Level 2 joins four Level 1 units into one plasmid of about 10 kb: PCB production, CcaS-m3, CcaR, and the green-light cassette.",
+   "a_zh": "Level 0 放單一零件，例如帶訊號肽與 His 標籤的目標蛋白，用 BbsI 接進有氯黴素抗性的 pSTK-0。Level 1 用 BsaI 把啟動子、RBS、編碼序列、終止子接成一個轉錄單元，放在安比西林抗性的載體。Level 2 把四個 Level 1 單元接成一個約 10 kb 的質體：PCB 生產、CcaS-m3、CcaR 與綠光卡匣。",
+   "trap_en": "Mixing up which enzyme goes with which level, or forgetting the antibiotic markers differ.",
+   "trap_zh": "搞混哪種酵素對應哪個層級，或忘記各層抗生素標記不同。",
+   "basis": "like standard 'explain your assembly standard'"
+  },
+  {
+   "q_en": "Which of your three proteins was secreted most, and by how much?",
+   "q_zh": "三種蛋白中哪一個分泌最多？多多少？",
+   "type": "fact",
+   "tier": "A",
+   "pages": [
+    "results"
+   ],
+   "seat": "wet2",
+   "backup": "wet1",
+   "kw_en": [
+    "ACCD about 16",
+    "others about 6",
+    "two to three times"
+   ],
+   "kw_zh": [
+    "ACCD 約 16",
+    "其他約 6",
+    "兩到三倍"
+   ],
+   "a_en": "ACC deaminase. In our ELISA of WB800 supernatants it reached about 16 micrograms per millilitre, while LEA14 and BoPep4 were each about 6, roughly three times lower. All three were secreted. In a second ELISA with the wild-type constructs, the gap was nearer twofold, 12 to 13 against about 6. So the safe summary is two to three times. These are His-tag readings, not purified yield.",
+   "a_zh": "ACC 去胺酶。WB800 上清液的 ELISA 中，它約 16 微克／毫升，LEA14 和 BoPep4 各約 6，大約低三倍。三種都有分泌。第二個用野生型構築的 ELISA，差距接近兩倍，12 至 13 對約 6。所以穩妥的說法是兩到三倍。這是 His 標籤的讀值，不是純化後的產量。",
+   "trap_en": "Quoting 'three times' as a firm number without the other ELISA that gives about two times.",
+   "trap_zh": "把「三倍」當成確定數字，卻沒提另一個 ELISA 只有約兩倍。",
+   "basis": "like Munich 2025: 'which is higher and by how much'"
+  },
+  {
+   "q_en": "What is PLP, and why do you add it to your activity assay?",
+   "q_zh": "PLP 是什麼？為什麼要加進活性檢測？",
+   "type": "fact",
+   "tier": "A",
+   "pages": [
+    "results",
+    "engineering"
+   ],
+   "seat": "wet2",
+   "backup": "wet1",
+   "kw_en": [
+    "pyridoxal phosphate",
+    "ACCD cofactor",
+    "activity went up"
+   ],
+   "kw_zh": [
+    "磷酸吡哆醛",
+    "ACCD 輔因子",
+    "活性上升"
+   ],
+   "a_en": "PLP, pyridoxal 5-prime-phosphate, is the cofactor ACC deaminase needs. In our DNPH assay, adding it raised activity: about 39 for Csn and 48 for SamyQ, against 21 for Csn without it. So every later assay carries PLP. The limit is the host background: plasmid-free WB800 read about 32 in the same test, so the net signal above background is modest.",
+   "a_zh": "PLP，也就是磷酸吡哆醛，是 ACC 去胺酶需要的輔因子。在 DNPH 檢測中加入後活性上升：Csn 約 39、SamyQ 約 48，沒加 PLP 的 Csn 約 21。所以之後每次檢測都加 PLP。限制是宿主背景：不含質體的 WB800 在同一測試讀到約 32，所以高於背景的淨訊號不大。",
+   "trap_en": "Saying PLP 'proves the enzyme works' without mentioning the host-only control is already high.",
+   "trap_zh": "說加 PLP 就「證明酵素有活性」，卻沒提只有宿主的對照本身就很高。",
+   "basis": "like standard 'what controls did the assay have'"
+  },
+  {
+   "q_en": "What did you find when you optimised electroporation?",
+   "q_zh": "你們優化電穿孔時發現了什麼？",
+   "type": "fact",
+   "tier": "A",
+   "pages": [
+    "engineering",
+    "results"
+   ],
+   "seat": "wet1",
+   "backup": "wet2",
+   "kw_en": [
+    "21 vs 8 colonies",
+    "WB800 needs trehalose",
+    "voltage depends on construct"
+   ],
+   "kw_zh": [
+    "21 對 8 個菌落",
+    "WB800 需海藻糖",
+    "電壓隨構築而異"
+   ],
+   "a_en": "Three things. In strain 168, 2.1 kilovolts gave 21 colonies and 2.3 gave 8. The 168 protocol failed on WB800, which needed growth to OD 2.2 and washes in 1.5 molar trehalose. And the best voltage depends on the construct: 2.3 kilovolts for our 10 kb CcaSR plasmid, 1.1 in a thinner cuvette for BoPep4. Those are single counts per condition, not replicated.",
+   "a_zh": "三件事。168 菌株用 2.1 kV 得到 21 個菌落，2.3 kV 只有 8 個。168 的方法在 WB800 失敗，需要長到 OD 2.2 並用 1.5 M 海藻糖洗。最佳電壓還隨構築而變：10 kb 的 CcaSR 質體是 2.3 kV，BoPep4 在較窄的電擊杯用 1.1 kV。這些都是每個條件單次計數，沒有重複。",
+   "trap_en": "Presenting one 'optimal voltage' for the whole project.",
+   "trap_zh": "把一個「最佳電壓」說成適用整個專案。",
+   "basis": "like standard 'optimisation of a protocol'"
+  },
+  {
+   "q_en": "Why is CcaR on the Pveg promoter, and the photoreceptor on PliaG or PlepA?",
+   "q_zh": "為什麼 CcaR 用 Pveg 啟動子，光受體用 PliaG 或 PlepA？",
+   "type": "design",
+   "tier": "A",
+   "pages": [
+    "engineering",
+    "parts",
+    "contribution"
+   ],
+   "seat": "wet1",
+   "backup": "wet2",
+   "kw_en": [
+    "constitutive promoters",
+    "steady expression",
+    "light acts at output"
+   ],
+   "kw_zh": [
+    "持續表現啟動子",
+    "表現量穩定",
+    "光作用在輸出端"
+   ],
+   "a_en": "All three are constitutive promoters, so the receptor and the regulator are always made and only the output promoter, PcpcG2-veg, answers to light. Pveg keeps ccaR steady. The original 2019 system induced the receptor with xylose or IPTG, and ours is constantly expressed so it responds continuously to green. We built both PlepA and PliaG versions and could not choose between them without a graded induction curve.",
+   "a_zh": "三個都是持續表現的啟動子，所以受體與調控蛋白一直都有，只有輸出端的 PcpcG2-veg 對光有反應。Pveg 讓 ccaR 的量保持穩定。2019 年的原始系統用木糖或 IPTG 誘導受體，我們的則持續表現，所以對綠光持續有反應。PlepA 與 PliaG 兩個版本都做了，沒有分級誘導曲線就無法選出哪個比較好。",
+   "trap_en": "Claiming Pveg was picked for a measured reason; the wiki only says it keeps expression steady.",
+   "trap_zh": "宣稱選 Pveg 有量測依據；wiki 只說它讓表現量穩定。",
+   "basis": "like standard 'why this promoter'"
+  },
+  {
+   "q_en": "Why did you choose WB800 instead of wild-type 168?",
+   "q_zh": "為什麼選 WB800 而不是野生型 168？",
+   "type": "design",
+   "tier": "A",
+   "pages": [
+    "engineering",
+    "results"
+   ],
+   "seat": "wet1",
+   "backup": "wet2",
+   "kw_en": [
+    "8 proteases deleted",
+    "168 degraded product",
+    "no controlled pair"
+   ],
+   "kw_zh": [
+    "刪除 8 種蛋白酶",
+    "168 分解產物",
+    "沒有對照組"
+   ],
+   "a_en": "WB800 has eight extracellular proteases deleted, so it should break down less of the protein it secretes. In our first reactor run, 168 gave barely detectable ACC deaminase, probably because of its proteases, and 168 transformations were also holding us back. The honest limit: we never ran 168 and WB800 side by side in the reactor, and the two runs also differed in signal peptide, so the evidence is suggestive, not controlled.",
+   "a_zh": "WB800 刪除了八種胞外蛋白酶，所以應該較少分解自己分泌的蛋白。第一次反應器運轉中，168 幾乎偵測不到 ACC 去胺酶，可能是它的蛋白酶造成的，168 的轉形也拖慢進度。誠實的限制是：我們從未在反應器中把 168 和 WB800 並排比較，兩次運轉的訊號肽也不同，所以證據只是有暗示性，不是對照實驗。",
+   "trap_en": "Saying WB800 'gave X-fold more protein'; that comparison was never controlled.",
+   "trap_zh": "說 WB800「多產了幾倍蛋白」；這個比較從未做過對照。",
+   "basis": "like Munich 2025: 'why this chassis'"
+  },
+  {
+   "q_en": "Why did you rebuild module 1 with a different promoter, RBS and terminator?",
+   "q_zh": "為什麼用不同的啟動子、RBS 和終止子重建模組 1？",
+   "type": "design",
+   "tier": "A",
+   "pages": [
+    "engineering"
+   ],
+   "seat": "wet1",
+   "backup": "wet2",
+   "kw_en": [
+    "Pveg version failed",
+    "recombination worry",
+    "11 of 12 colonies"
+   ],
+   "kw_zh": [
+    "Pveg 版本失敗",
+    "重組疑慮",
+    "12 株中 11 株"
+   ],
+   "a_en": "Two reasons stacked. The Pveg version gave no expression signal even though it sequenced clean, and we worried that repeating Pveg, RBS0 and B0015 across modules could recombine in Bacillus. We rebuilt it with PtagC, a different RBS and the L3S2P21 terminator: 11 of 12 colonies gave the 1833 bp band, and clone 1 was sequenced. Professor Huang later said recombination is probably not the issue, so the module 1 rebuild is what we kept.",
+   "a_zh": "兩個原因疊加。Pveg 版本即使定序正確也沒有表現訊號，而且我們擔心各模組重複的 Pveg、RBS0、B0015 會在枯草桿菌內重組。我們改用 PtagC、不同的 RBS 與 L3S2P21 終止子重建：12 個菌落中 11 個得到 1833 bp 條帶，選殖株 1 經過定序。Huang 教授之後說重組大概不是問題，所以我們保留的是模組 1 的重建。",
+   "trap_en": "Presenting recombination as a confirmed problem; the wiki says the premise did not survive.",
+   "trap_zh": "把重組說成已證實的問題；wiki 說這個前提沒有成立。",
+   "basis": "like standard 'what did you change after a failure and why'"
+  },
+  {
+   "q_en": "Why did you build every cargo with a constitutive promoter before testing it under light?",
+   "q_zh": "為什麼每個目標蛋白都先用持續表現啟動子做，再測光控？",
+   "type": "design",
+   "tier": "A",
+   "pages": [
+    "engineering",
+    "contribution"
+   ],
+   "seat": "wet1",
+   "backup": "wet2",
+   "kw_en": [
+    "separate the causes",
+    "protectant or switch",
+    "bench results not light"
+   ],
+   "kw_zh": [
+    "分離原因",
+    "是蛋白還是開關",
+    "桌面數據不是光控"
+   ],
+   "a_en": "To separate causes. If a protectant cannot be detected, the constitutive version tells us whether the problem is the protein or the light switch in front of it. It also means every protein, plant and reactor result on our wiki came from the constitutive module. Our Engineering page says plainly that none of the reactor numbers is the light switch doing anything.",
+   "a_zh": "為了分離原因。如果偵測不到保護蛋白，持續表現版本能告訴我們問題出在蛋白還是前面的光開關。這也表示 wiki 上所有蛋白、植物與反應器結果都來自持續表現模組。Engineering 頁面直接說明，反應器的數字沒有一個是光開關在作用。",
+   "trap_en": "Letting a judge assume the reactor and plant data came from light-triggered production.",
+   "trap_zh": "讓評審以為反應器與植物數據來自光觸發的生產。",
+   "basis": "like standard 'is your final system what you tested'"
+  },
+  {
+   "q_en": "How do you know your Level 2 plasmid is correct? Is it sequenced?",
+   "q_zh": "你們怎麼知道 Level 2 質體是對的？有定序嗎？",
+   "type": "validate",
+   "tier": "A",
+   "pages": [
+    "engineering",
+    "parts"
+   ],
+   "seat": "wet1",
+   "backup": "wet2",
+   "kw_en": [
+    "three junction PCRs",
+    "double digest length",
+    "not end-to-end sequenced"
+   ],
+   "kw_zh": [
+    "三個接點 PCR",
+    "雙酵素切割長度",
+    "沒有全長定序"
+   ],
+   "a_en": "Not end to end, and I will say that plainly. Three ACDI clones were positive at all three internal junctions, 375, 632 and 661 base pairs, so the four modules are in the right order. A digest gave 10 293 bp with EcoRI and 7543 with EcoRI plus BtsI, so the length is right. Neither reads the 10 kb between them. The Level 1 units were sequenced.",
+   "a_zh": "沒有全長定序，我直接說明。三株 ACDI 在三個內部接點（375、632、661 bp）都呈陽性，所以四個模組順序正確。酵素切割用 EcoRI 得到 10 293 bp，EcoRI 加 BtsI 得到 7543 bp，所以長度正確。兩者都沒有讀接點之間的 10 kb 序列。Level 1 單元則有定序。",
+   "trap_en": "Saying 'the construct was verified by sequencing' for Level 2; the wiki says it was not.",
+   "trap_zh": "說 Level 2「經定序驗證」；wiki 明說沒有。",
+   "basis": "like Munich 2025: 'how do you know your construct is right'"
+  },
+  {
+   "q_en": "How did you screen colonies, and is a correct-sized band enough?",
+   "q_zh": "你們怎麼篩選菌落？大小正確的條帶就夠了嗎？",
+   "type": "validate",
+   "tier": "A",
+   "pages": [
+    "engineering",
+    "experiments"
+   ],
+   "seat": "wet1",
+   "backup": "wet2",
+   "kw_en": [
+    "colony PCR",
+    "size is not identity",
+    "sequencing decides"
+   ],
+   "kw_zh": [
+    "菌落 PCR",
+    "大小不等於正確",
+    "定序定案"
+   ],
+   "a_en": "We used colony PCR with primers across the junction or insert, read on an agarose gel. A band of the right size is not enough. In our reporter cycles, many gels showed bands near the expected size, but sequencing showed the colonies did not carry the construct. So sequencing stayed the deciding check for Level 0 and Level 1. For Level 2 we added junction primers and digests.",
+   "a_zh": "我們用跨接點或插入片段的引子做菌落 PCR，再用瓊脂糖膠判讀。大小正確的條帶並不夠。在報告蛋白的幾輪實驗中，很多膠上條帶接近預期大小，但定序顯示菌落並沒有帶到構築。所以 Level 0 和 Level 1 仍以定序為最終判斷。Level 2 則加上接點引子與酵素切割。",
+   "trap_en": "Treating a right-sized band as proof of a correct clone.",
+   "trap_zh": "把大小正確的條帶當成選殖株正確的證據。",
+   "basis": "like standard 'how did you verify your clones'"
+  },
+  {
+   "q_en": "How do you know your ELISA numbers are your protein and not background?",
+   "q_zh": "你們怎麼知道 ELISA 數字是你們的蛋白，不是背景？",
+   "type": "validate",
+   "tier": "A",
+   "pages": [
+    "results",
+    "development"
+   ],
+   "seat": "wet2",
+   "backup": "wet1",
+   "kw_en": [
+    "plasmid-free control",
+    "1.3 vs 5 background",
+    "above the standard curve"
+   ],
+   "kw_zh": [
+    "不含質體對照",
+    "背景 1.3 對 5",
+    "超出標準曲線"
+   ],
+   "a_en": "Partly. In the reactor and light-plate runs, plasmid-free WB800 reads 1.3 micrograms per millilitre and our samples sit above that. But in the construct comparison table the WB800 control reads 4.6 to 5.5, about the same as LEA14 and BoPep4, and every value there is above the 3 microgram top standard. So ACC deaminase is clearly above background; LEA14 and BoPep4 are not clearly separated from it.",
+   "a_zh": "部分可以。在反應器與光盤實驗中，不含質體的 WB800 讀到 1.3 微克／毫升，我們的樣本高於這個值。但在構築比較表中，WB800 對照讀到 4.6 至 5.5，與 LEA14 和 BoPep4 差不多，而且表中每個數值都超過 3 微克的最高標準品。所以 ACC 去胺酶明顯高於背景；LEA14 和 BoPep4 則沒有明確和背景分開。",
+   "trap_en": "Claiming all three proteins were quantified when the control itself reads close to two of them.",
+   "trap_zh": "宣稱三種蛋白都被定量，但對照組本身就接近其中兩個。",
+   "basis": "like Munich 2025: 'what is your negative control reading'"
+  },
+  {
+   "q_en": "How do you know the ACC deaminase is active, and not just present?",
+   "q_zh": "你們怎麼知道 ACC 去胺酶有活性，而不只是存在？",
+   "type": "validate",
+   "tier": "A",
+   "pages": [
+    "results",
+    "engineering"
+   ],
+   "seat": "wet2",
+   "backup": "wet1",
+   "kw_en": [
+    "ELISA counts protein",
+    "DNPH counts activity",
+    "peaks six hours apart"
+   ],
+   "kw_zh": [
+    "ELISA 計蛋白",
+    "DNPH 計活性",
+    "高峰差六小時"
+   ],
+   "a_en": "We run two assays on the same samples. ELISA counts His-tagged protein whether it is folded or not, and the DNPH assay detects alpha-ketobutyrate, the enzyme's product. In the reactor shell, protein peaked at 12 hours, about 6.5 micrograms per millilitre, and activity at 18 hours. The limit is that each point is a single well, and the host alone already gives some DNPH signal.",
+   "a_zh": "我們對同樣的樣本做兩種檢測。ELISA 不管蛋白是否摺疊都會計入，DNPH 偵測酵素的產物 α-酮丁酸。在反應器殼側，蛋白在 12 小時達高峰，約 6.5 微克／毫升，活性則在 18 小時。限制是每個時間點只有單一孔，而且宿主本身就有一些 DNPH 訊號。",
+   "trap_en": "Saying ELISA alone shows the enzyme works.",
+   "trap_zh": "只用 ELISA 就說酵素有作用。",
+   "basis": "like standard 'protein present vs functional'"
+  },
+  {
+   "q_en": "How do you know the transformed Bacillus colonies carry your construct?",
+   "q_zh": "你們怎麼知道轉形後的枯草桿菌菌落帶有你們的構築？",
+   "type": "validate",
+   "tier": "B",
+   "pages": [
+    "engineering",
+    "results"
+   ],
+   "seat": "wet1",
+   "backup": "wet2",
+   "kw_en": [
+    "colony PCR after electroporation",
+    "23 of 23 lanes",
+    "168 run not screened"
+   ],
+   "kw_zh": [
+    "電穿孔後菌落 PCR",
+    "23 株全有條帶",
+    "168 沒篩選"
+   ],
+   "a_en": "A colony count cannot show that, so we screen with colony PCR. For BoPep4 2.1 in WB800, all 23 transformants gave the band, and a second six-colony screen gave five of six. The gap is the first 168 voltage test: there, 21 colonies at 2.1 kilovolts were counted, but no colony PCR is on record. Also, not every WB800 construct has a recorded electroporation, for example the LEA14 cassettes.",
+   "a_zh": "菌落數量本身無法證明，所以我們用菌落 PCR 篩選。WB800 中 BoPep4 2.1 的 23 個轉形株全部有條帶，另一次六個菌落的篩選有五個有條帶。缺口在最早的 168 電壓測試：2.1 kV 數了 21 個菌落，但沒有菌落 PCR 紀錄。另外並非每個 WB800 構築都有電穿孔紀錄，例如 LEA14 卡匣。",
+   "trap_en": "Saying all constructs were verified in WB800; the electroporation table does not list the LEA14 cassettes.",
+   "trap_zh": "說所有構築都在 WB800 驗證過；電穿孔表沒有列出 LEA14 卡匣。",
+   "basis": "like standard 'how do you know it is in the cell'"
+  },
+  {
+   "q_en": "How strong is your evidence that no cells get through to the shell side?",
+   "q_zh": "你們有多確定沒有細胞穿過膜進到殼側？",
+   "type": "validate",
+   "tier": "A",
+   "pages": [
+    "results",
+    "engineering"
+   ],
+   "seat": "wet2",
+   "backup": "hw",
+   "kw_en": [
+    "two platings",
+    "no replicates",
+    "0.2 micron vs vesicles"
+   ],
+   "kw_zh": [
+    "兩次塗盤",
+    "沒有重複",
+    "0.2 微米對囊泡"
+   ],
+   "a_en": "Preliminary. We have two platings: on 6 June, 2 millilitres of shell liquid grew nothing, and in a later run the lumen plate grew while the shell plate showed no colonies after 24 hours at 37 degrees. Each was a single plating, with no replicate and no recorded detection limit, so we cannot give a log reduction. The pores are 0.2 micrometres, cells are 0.8 to 2, but vesicles and debris can pass.",
+   "a_zh": "屬於初步證據。我們有兩次塗盤：6 月 6 日取 2 毫升殼側液體沒長出東西；之後一次運轉中管腔盤長菌，殼側盤在 37 度 24 小時後沒有菌落。每次都是單次塗盤，沒有重複也沒有記錄偵測極限，所以給不出對數減少值。膜孔 0.2 微米，細胞 0.8 至 2 微米，但囊泡與碎片可以通過。",
+   "trap_en": "Saying 'the membrane guarantees containment'.",
+   "trap_zh": "說「膜保證可以隔離」。",
+   "basis": "like Munich 2025: 'how many replicates for the safety claim'"
+  },
+  {
+   "q_en": "Why did you not stay with MoClo 2.0?",
+   "q_zh": "為什麼不繼續用 MoClo 2.0？",
+   "type": "compare",
+   "tier": "A",
+   "pages": [
+    "engineering"
+   ],
+   "seat": "wet1",
+   "backup": "wet2",
+   "kw_en": [
+    "no usable Level 1 clone",
+    "SubtiToolKit for Bacillus",
+    "extra Level 0 step"
+   ],
+   "kw_zh": [
+    "沒有可用 Level 1",
+    "專為 Bacillus 的套組",
+    "多一個 Level 0 步驟"
+   ],
+   "a_en": "We started with it and it did not work for us. The screens were full of empty vectors and off-target bands, Golden Gate efficiency was low, and no trial gave a usable Level 1 clone, so we have no data to show. Dr Joaquín Caro-Astorga then supplied the SubtiToolKit, built for Bacillus. We also added a Level 0 step so every part was sequenced first. It cost a day but removed the ambiguity.",
+   "a_zh": "我們一開始就用它，但對我們行不通。篩選結果滿是空載體和非預期條帶，Golden Gate 效率低，沒有任何一次得到可用的 Level 1 選殖株，所以沒有數據可以呈現。之後 Dr Joaquín Caro-Astorga 提供了專為 Bacillus 設計的 SubtiToolKit。我們也加了 Level 0 步驟，讓每個零件先定序。多花一天，但消除了模糊地帶。",
+   "trap_en": "Blaming MoClo itself; the wiki only says it did not work for this build.",
+   "trap_zh": "把問題歸咎於 MoClo 本身；wiki 只說它對這次建構沒有用。",
+   "basis": "like standard 'why not use the standard kit'"
+  },
+  {
+   "q_en": "Which signal peptide is better, Csn or SamyQ?",
+   "q_zh": "Csn 和 SamyQ 哪個訊號肽比較好？",
+   "type": "compare",
+   "tier": "B",
+   "pages": [
+    "results",
+    "engineering"
+   ],
+   "seat": "wet2",
+   "backup": "wet1",
+   "kw_en": [
+    "both tested",
+    "two variables changed",
+    "never compared directly"
+   ],
+   "kw_zh": [
+    "兩個都測",
+    "同時改了兩個變數",
+    "從未直接比較"
+   ],
+   "a_en": "We cannot say yet. We tested both because the best one for our proteins was unknown. In the DNPH test with PLP, the SamyQ construct gave 48 against 39 for Csn, but those constructs also differ in codon usage, so two things changed at once. Literature gives about 90 percent secretion for SamyQ and 33.8 for Csn, from different systems and never with ACC deaminase.",
+   "a_zh": "目前還不能說。我們兩個都測，因為不知道哪個最適合我們的蛋白。加 PLP 的 DNPH 檢測中，SamyQ 構築為 48，Csn 為 39，但這兩個構築的密碼子使用也不同，所以同時改了兩個變數。文獻上 SamyQ 約 90% 分泌、Csn 約 33.8%，來自不同系統，也從未搭配 ACC 去胺酶。",
+   "trap_en": "Declaring SamyQ the winner from the DNPH numbers.",
+   "trap_zh": "從 DNPH 數字就宣布 SamyQ 勝出。",
+   "basis": "like standard 'which variant is best and how do you know'"
+  },
+  {
+   "q_en": "Why light as the switch? Why not a chemical inducer or a temperature-sensing promoter?",
+   "q_zh": "為什麼用光當開關？為什麼不用化學誘導劑或感溫啟動子？",
+   "type": "compare",
+   "tier": "A",
+   "pages": [
+    "description",
+    "engineering"
+   ],
+   "seat": "wet1",
+   "backup": "dry",
+   "kw_en": [
+    "threshold depends on crop",
+    "sensing moved out of cell",
+    "controller decides"
+   ],
+   "kw_zh": [
+    "門檻取決於作物",
+    "感測移出細胞",
+    "控制器決定"
+   ],
+   "a_en": "Our first design had the bacteria sense temperature themselves, with a DesK-DesR system. Experts told us containment and precision were problems. And a stress threshold belongs to the crop, not the stress: tuber formation stops above 25 degrees in potato, but sorghum loses yield only above 32.5. So we moved the threshold into a microcontroller that switches a green light. We did not test a chemical inducer.",
+   "a_zh": "我們最早的設計是讓細菌用 DesK-DesR 系統自己感測溫度。專家告訴我們隔離與精準度都有問題。而且壓力的門檻屬於作物，不是壓力本身：馬鈴薯超過 25 度塊莖就停止形成，高粱要超過 32.5 度才開始減產。所以我們把門檻移到微控制器，由它控制綠光。我們沒有測試化學誘導劑。",
+   "trap_en": "Claiming light was tested against other inducers; it was a design argument.",
+   "trap_zh": "宣稱曾拿光和其他誘導方式比較過；那是設計上的論證。",
+   "basis": "like standard 'why this input signal'"
+  },
+  {
+   "q_en": "Why Bacillus subtilis and not E. coli to make the protein?",
+   "q_zh": "為什麼用枯草桿菌，而不是大腸桿菌來生產蛋白？",
+   "type": "compare",
+   "tier": "B",
+   "pages": [
+    "description",
+    "biomanufacturing",
+    "engineering"
+   ],
+   "seat": "wet1",
+   "backup": "wet2",
+   "kw_en": [
+    "natural secretor",
+    "non-pathogenic",
+    "no head-to-head"
+   ],
+   "kw_zh": [
+    "天然分泌者",
+    "無致病性",
+    "沒有直接比較"
+   ],
+   "a_en": "Bacillus subtilis is non-pathogenic and a natural secretor, so the protein goes into the medium and can be collected without breaking cells open. That matches a reactor where protein crosses a membrane and cells stay in. We used E. coli only for cloning, with the expression blocking device keeping cargo off there. We did not run a head-to-head secretion test against E. coli.",
+   "a_zh": "枯草桿菌無致病性，也是天然的分泌者，蛋白會進到培養液，不必破壞細胞就能收集。這符合蛋白穿過膜、細胞留在內側的反應器設計。我們只把大腸桿菌用於選殖，並用表現阻擋裝置讓目標基因在那裡不表現。我們沒有做與大腸桿菌直接比較的分泌測試。",
+   "trap_en": "Claiming Bacillus secretes better than E. coli with data; there is none on the wiki.",
+   "trap_zh": "宣稱有數據顯示枯草桿菌分泌比大腸桿菌好；wiki 上沒有。",
+   "basis": "like standard 'why this chassis over the usual one'"
+  },
+  {
+   "q_en": "Why electroporation? Why not natural transformation?",
+   "q_zh": "為什麼用電穿孔？為什麼不用自然轉形？",
+   "type": "compare",
+   "tier": "B",
+   "pages": [
+    "engineering"
+   ],
+   "seat": "wet1",
+   "backup": "wet2",
+   "kw_en": [
+    "strain variability",
+    "10 kb plasmid",
+    "natural transformation untried"
+   ],
+   "kw_zh": [
+    "菌株差異",
+    "10 kb 質體",
+    "自然轉形未試"
+   ],
+   "a_en": "Standard transformation in Bacillus varies a lot between strains, and electroporation was more controllable, so we optimised it per strain. The cost showed with the 10 kb Level 2 plasmid: we found electroporation extremely difficult. Our own write-up says natural transformation might have been easier and faster. We did not test it.",
+   "a_zh": "標準的枯草桿菌轉形在不同菌株間差異很大，電穿孔比較可控，所以我們逐株優化。代價在 10 kb 的 Level 2 質體上顯現：我們發現電穿孔極為困難。我們自己的紀錄也說自然轉形可能更容易、更快。我們沒有測試它。",
+   "trap_en": "Saying natural transformation would not have worked; it was not tried.",
+   "trap_zh": "說自然轉形行不通；其實根本沒試。",
+   "basis": "like standard 'why not the alternative method'"
+  },
+  {
+   "q_en": "Why do you test culture supernatant and not purified protein?",
+   "q_zh": "為什麼測試培養上清液，而不是純化後的蛋白？",
+   "type": "compare",
+   "tier": "B",
+   "pages": [
+    "experiments",
+    "results"
+   ],
+   "seat": "wet2",
+   "backup": "wet1",
+   "kw_en": [
+    "protein in medium",
+    "purification untested",
+    "dose in dilutions"
+   ],
+   "kw_zh": [
+    "蛋白在培養液中",
+    "純化沒有結果",
+    "以稀釋倍數表示劑量"
+   ],
+   "a_en": "The design is protein in the medium crossing a membrane, so supernatant is the product. We have a Ni-NTA purification and dialysis sheet, but it produced no result on the wiki, and neither did large-scale extraction or the Bradford assay. The hydroponic plant trials used dilutions of culture against a plasmid-free WB800 culture. So we can state a dilution, not a mass of protein per plant.",
+   "a_zh": "設計上就是蛋白在培養液中穿過膜，所以上清液就是產品。我們有 Ni-NTA 純化與透析流程，但 wiki 上沒有產出結果，大量萃取與 Bradford 測定也沒有。水耕的植物實驗用的是培養液的稀釋，對照是不含質體的 WB800 培養液。所以我們能說稀釋倍數，不能說每株植物的蛋白質量。",
+   "trap_en": "Saying plants were treated with purified enzyme because one Results line says so.",
+   "trap_zh": "因為 Results 有一句這麼寫，就說植物是用純化酵素處理。",
+   "basis": "like standard 'what exactly did you apply to the plants'"
+  },
+  {
+   "q_en": "Can your system make proteins other than these three?",
+   "q_zh": "你們的系統能生產這三個以外的蛋白嗎？",
+   "type": "boundary",
+   "tier": "A",
+   "pages": [
+    "parts",
+    "contribution",
+    "description"
+   ],
+   "seat": "wet1",
+   "backup": "wet2",
+   "kw_en": [
+    "modular design",
+    "open cassette",
+    "not yet demonstrated"
+   ],
+   "kw_zh": [
+    "模組化設計",
+    "可替換卡匣",
+    "尚未證明"
+   ],
+   "a_en": "The design is modular, so promoters, sensors and cargos can be swapped independently. We registered an open cassette, with an sfGFP and mScarlet-I dropout where the cargo goes, so a future team can add its own protectant. But it is a Draft entry and we have not shown another protein through it. Only ACC deaminase has been put behind the green-light promoter.",
+   "a_zh": "設計是模組化的，啟動子、感測器與目標蛋白可以各自替換。我們登錄了一個開放卡匣，目標蛋白位置放的是 sfGFP 加 mScarlet-I 的替換區，讓未來團隊放入自己的保護蛋白。但它是 Draft 狀態，我們也沒有證明其他蛋白可以通過它。目前只有 ACC 去胺酶放在綠光啟動子之後。",
+   "trap_en": "Saying 'yes, any protein' without noting only ACCD was tested light-gated.",
+   "trap_zh": "只說「可以，任何蛋白」，沒提只有 ACCD 測過光控。",
+   "basis": "like standard 'is the platform general'"
+  },
+  {
+   "q_en": "Could you put BoPep4 or LEA14 under the light switch?",
+   "q_zh": "你們可以把 BoPep4 或 LEA14 放到光開關之後嗎？",
+   "type": "boundary",
+   "tier": "B",
+   "pages": [
+    "description",
+    "parts",
+    "results"
+   ],
+   "seat": "wet2",
+   "backup": "wet1",
+   "kw_en": [
+    "built as parts",
+    "only ACCD light-gated",
+    "BoPep4 harms without stress"
+   ],
+   "kw_zh": [
+    "已做成零件",
+    "只有 ACCD 受光控",
+    "無逆境時 BoPep4 有害"
+   ],
+   "a_en": "They are built as parts for later integration, but only ACC deaminase has run light-gated. LEA14 and BoPep4 were made behind the constitutive promoter and secreted by WB800. One caution from our plant data: BoPep4 alone slowed Arabidopsis growth when there was no stress. That suggests a leaky switch would matter more for BoPep4. We have not tested it light-gated.",
+   "a_zh": "它們已做成零件，準備之後整合，但只有 ACC 去胺酶跑過光控。LEA14 和 BoPep4 是放在持續表現啟動子後面，由 WB800 分泌。植物數據有一個提醒：沒有逆境時，單獨施用 BoPep4 會減緩 Arabidopsis 生長。這表示開關若有漏表現，對 BoPep4 的影響會更大。我們沒有測試過它的光控版本。",
+   "trap_en": "Implying all three proteins are already on the light switch.",
+   "trap_zh": "暗示三個蛋白都已經接在光開關上。",
+   "basis": "like standard 'what if you swap the cargo'"
+  },
+  {
+   "q_en": "Would your strain keep the plasmid on a farm, without antibiotic?",
+   "q_zh": "你們的菌株在農場沒有抗生素的情況下能保有質體嗎？",
+   "type": "boundary",
+   "tier": "B",
+   "pages": [
+    "engineering",
+    "results"
+   ],
+   "seat": "wet1",
+   "backup": "hw",
+   "kw_en": [
+    "erythromycin in every run",
+    "second growth at 47 h",
+    "no antibiotic-free run"
+   ],
+   "kw_zh": [
+    "每次都加 erythromycin",
+    "47 小時後再生長",
+    "沒有無抗生素實驗"
+   ],
+   "a_en": "We do not know. Every reactor run used erythromycin at 5 micrograms per millilitre. In our first run the culture grew a second time after about 47 hours, which we think was erythromycin breaking down and cells shedding the plasmid. When we topped up erythromycin each morning in the later 77-hour run, that second phase disappeared. The wiki shows no antibiotic-free run, so plasmid stability without selection is open.",
+   "a_zh": "我們不知道。每次反應器運轉都用 5 微克／毫升的 erythromycin。第一次運轉在約 47 小時後培養物又長了一次，我們認為是 erythromycin 分解、細胞丟掉質體。後來 77 小時的運轉每天早上補充 erythromycin，第二段生長就消失了。wiki 上沒有無抗生素的實驗，所以沒有選擇壓力下質體是否穩定仍是未知。",
+   "trap_en": "Assuming the plasmid is stable because the strain grew well.",
+   "trap_zh": "因為菌長得好就假設質體穩定。",
+   "basis": "like standard 'what about real-world deployment'"
+  },
+  {
+   "q_en": "How did low protein yield change what you did in the lab?",
+   "q_zh": "蛋白產量低如何改變你們在實驗室的做法？",
+   "type": "integrate",
+   "tier": "A",
+   "pages": [
+    "engineering",
+    "results"
+   ],
+   "seat": "wet2",
+   "backup": "dry",
+   "kw_en": [
+    "50 000 variants folded",
+    "8 cassettes ordered",
+    "gain shrank after RiboJ"
+   ],
+   "kw_zh": [
+    "模擬 50 000 個變體",
+    "訂購 8 個卡匣",
+    "換 RiboJ 後增益縮小"
+   ],
+   "a_en": "Low yield sent the cargo sequence to our dry lab. They folded about 50 000 recoded variants per construct and we ordered eight cassettes, predicted to open the ribosome start site 1.3 to 1.9 times. Then we built them behind RiboJ plus RBS0 instead of MF001, and most of the predicted gain went away. In ELISA, recoded ACC deaminase was lower than wild type, about 9 against 12 to 13, while BoPep4 2.1 and 2.2 were higher.",
+   "a_zh": "產量低，把目標蛋白序列送到了乾實驗室。他們對每個構築模擬約 50 000 個重新編碼的變體，我們訂購了八個卡匣，預測可使核糖體起始位開放 1.3 至 1.9 倍。之後我們把它們建在 RiboJ 加 RBS0 後面，而不是 MF001，大部分預測的增益就消失了。ELISA 中，重新編碼的 ACC 去胺酶低於野生型，約 9 對 12 至 13，BoPep4 2.1 與 2.2 則較高。",
+   "trap_en": "Saying codon optimisation 'improved yield' across the board.",
+   "trap_zh": "說密碼子優化全面「提高了產量」。",
+   "basis": "like standard 'how did modelling change experiments'"
+  },
+  {
+   "q_en": "How did protein design change what you built? For example, where does the His tag go on BoPep4?",
+   "q_zh": "蛋白設計如何改變你們的建構？例如 BoPep4 的 His 標籤放在哪裡？",
+   "type": "integrate",
+   "tier": "A",
+   "pages": [
+    "protein-design",
+    "engineering",
+    "results"
+   ],
+   "seat": "wet2",
+   "backup": "wet1",
+   "kw_en": [
+    "design says N-terminal tag",
+    "built cassettes say C-terminal",
+    "records disagree"
+   ],
+   "kw_zh": [
+    "設計說 N 端標籤",
+    "建構寫 C 端",
+    "紀錄互相矛盾"
+   ],
+   "a_en": "Protein design said put the tag on the front, because a C-terminal tag caps the group that makes BoPep4's strongest contact with its receptor. But our built cassettes are described as SamyQ-BoPep4-Histag with a C-terminal tag, and our own records disagree on tag position. So the simulation and the wet lab conflict, and no activity assay is on record for the BoPep4 variants to settle it. I would say that openly.",
+   "a_zh": "蛋白設計建議把標籤放在前面，因為 C 端標籤會蓋住 BoPep4 與受體最強接觸的那個基團。但我們建好的卡匣寫的是 SamyQ-BoPep4-Histag，標籤在 C 端，而且我們自己的紀錄對標籤位置的描述也不一致。所以模擬和濕實驗互相衝突，而且 BoPep4 變體沒有活性檢測紀錄可以釐清。我會公開說明這點。",
+   "trap_en": "Saying the wet lab followed the design; the tag position suggests it did not for BoPep4.",
+   "trap_zh": "說濕實驗依照設計做；標籤位置顯示 BoPep4 並沒有。",
+   "basis": "like Munich 2025: 'how did the model change the build'"
+  },
+  {
+   "q_en": "How did the reactor results change your wet-lab plan?",
+   "q_zh": "反應器的結果如何改變你們濕實驗的計畫？",
+   "type": "integrate",
+   "tier": "A",
+   "pages": [
+    "engineering"
+   ],
+   "seat": "wet2",
+   "backup": "hw",
+   "kw_en": [
+    "168 switched to WB800",
+    "shell equals lumen",
+    "sample shell only"
+   ],
+   "kw_zh": [
+    "168 改成 WB800",
+    "殼側等於管腔",
+    "只取殼側"
+   ],
+   "a_en": "Three changes. First, 168 gave barely detectable ACC deaminase in the reactor, so we moved to WB800. Second, we added the DNPH assay on advice, to show the protein is active, not only present. Third, one WB800 run read 10.7 micrograms per millilitre on the lumen side and 10.5 on the shell side, and a later run agreed, so we sample only the shell side. It removes a contamination route.",
+   "a_zh": "三個改變。第一，168 在反應器中幾乎偵測不到 ACC 去胺酶，所以改用 WB800。第二，依建議加入 DNPH 檢測，證明蛋白有活性，而不只是存在。第三，一次 WB800 運轉管腔側為 10.7 微克／毫升、殼側為 10.5，之後一次運轉也一致，所以我們只取殼側樣本。這也去掉了一條污染途徑。",
+   "trap_en": "Forgetting that only two runs back the 'shell equals lumen' decision.",
+   "trap_zh": "忘了「殼側等於管腔」的決定只有兩次運轉支持。",
+   "basis": "like standard 'how did one subsystem feed back to another'"
+  },
+  {
+   "q_en": "Your Parts page says seven Level 1 parts are sequence-confirmed; another page says nine. Which is right?",
+   "q_zh": "Parts 頁面說七個 Level 1 零件已定序確認，另一頁說九個。哪個才對？",
+   "type": "gap",
+   "tier": "A",
+   "pages": [
+    "parts",
+    "biomanufacturing",
+    "development",
+    "engineering"
+   ],
+   "seat": "wet1",
+   "backup": "wet2",
+   "kw_en": [
+    "pages disagree",
+    "Level 2 not sequenced",
+    "show the gels"
+   ],
+   "kw_zh": [
+    "頁面互相不一致",
+    "Level 2 沒有定序",
+    "拿出膠圖"
+   ],
+   "a_en": "I would not defend one number. Engineering is the most detailed: Level 0 and Level 1 clones were checked by colony PCR and sequencing, and no Level 2 construct is sequenced end to end. Parts says seven, Biomanufacturing says nine, and Development says Level 2 sequencing had not yet returned. Those pages were written at different times. I can show the gels and say exactly what is and is not sequenced.",
+   "a_zh": "我不會硬護某一個數字。Engineering 最詳細：Level 0 和 Level 1 選殖株經菌落 PCR 與定序檢查，沒有任何 Level 2 構築經過全長定序。Parts 說七個，Biomanufacturing 說九個，Development 說 Level 2 定序尚未回來。這些頁面是在不同時間寫的。我可以拿出膠圖，並明確說哪些有定序、哪些沒有。",
+   "trap_en": "Picking a number to look consistent, or saying everything was sequenced.",
+   "trap_zh": "為了看起來一致而挑一個數字，或說全部都定序過。",
+   "basis": "wiki cross-page conflict"
+  },
+  {
+   "q_en": "Your Results page says green light switches ACC deaminase on. Do your data show that?",
+   "q_zh": "Results 說綠光能打開 ACC 去胺酶。你們的數據真的顯示這點嗎？",
+   "type": "gap",
+   "tier": "A",
+   "pages": [
+    "results",
+    "development"
+   ],
+   "seat": "wet2",
+   "backup": "wet1",
+   "kw_en": [
+    "green sometimes higher",
+    "ELISA flat",
+    "unconfirmed"
+   ],
+   "kw_zh": [
+    "綠光有時較高",
+    "ELISA 持平",
+    "尚未確認"
+   ],
+   "a_en": "Only partly. At 13 hours DNPH activity was about 10 under green against 0.7 under red, but at 16 hours it flipped, 1 against 3.7. ELISA protein was flat, 12 to 13 micrograms in all four conditions. Our Development page says light-dependent regulation is unconfirmed. Possible causes are light spilling between wells and red LEDs at 640 nanometres instead of about 672, but we have not tested either. We need biological replicates and loading controls.",
+   "a_zh": "只有部分。13 小時 DNPH 活性綠光約 10、紅光 0.7，但 16 小時反過來，1 對 3.7。ELISA 蛋白持平，四個條件都是 12 至 13 微克。Development 頁面也寫光控調節尚未確認。可能原因是孔與孔之間漏光，以及紅光 LED 是 640 nm 而不是約 672 nm，但這兩點都沒有測試。我們需要生物重複與上樣量對照。",
+   "trap_en": "Repeating the headline 'green switches it on' without the 16-hour reversal.",
+   "trap_zh": "只重複標題「綠光打開它」，不提 16 小時的反轉。",
+   "basis": "wiki conflict: Results headline vs Development"
+  },
+  {
+   "q_en": "Is your switch leaky? What does it do in the dark or under red light?",
+   "q_zh": "你們的開關會漏嗎？在黑暗或紅光下會怎樣？",
+   "type": "gap",
+   "tier": "A",
+   "pages": [
+    "results",
+    "development"
+   ],
+   "seat": "wet1",
+   "backup": "wet2",
+   "kw_en": [
+    "3.0 µg/mL in the dark",
+    "red also high",
+    "not a tight switch"
+   ],
+   "kw_zh": [
+    "暗處 3.0 µg/mL",
+    "紅光也很高",
+    "不是緊密的開關"
+   ],
+   "a_en": "It looks leaky, or at least not off. After 12 hours in the dark the culture already held about 3.0 micrograms per millilitre of tagged ACC deaminase, against 1.3 for plasmid-free cells, and it did not rise on illumination. In the first Western blots, red light also gave a strong band. We suspect red LED mismatch and light spill, untested. So we claim a built circuit, not a tight switch.",
+   "a_zh": "看起來有漏表現，至少沒有完全關閉。在暗處培養 12 小時後，培養物已有約 3.0 微克／毫升的標籤 ACC 去胺酶，不含質體的細胞是 1.3，而且照光後並沒有上升。最初的西方墨點中，紅光也出現很強的條帶。我們懷疑是紅光 LED 不匹配與漏光，但未測試。所以我們宣稱的是建好的電路，不是緊密的開關。",
+   "trap_en": "Claiming red light switches it off.",
+   "trap_zh": "宣稱紅光能把它關掉。",
+   "basis": "like standard 'how leaky is your inducible system'"
+  },
+  {
+   "q_en": "Is your electroporation optimisation statistically solid?",
+   "q_zh": "你們的電穿孔優化在統計上站得住腳嗎？",
+   "type": "gap",
+   "tier": "B",
+   "pages": [
+    "engineering",
+    "results"
+   ],
+   "seat": "wet1",
+   "backup": "wet2",
+   "kw_en": [
+    "single counts",
+    "dilutions not comparable",
+    "small differences"
+   ],
+   "kw_zh": [
+    "單次計數",
+    "稀釋倍數不可比",
+    "差異很小"
+   ],
+   "a_en": "No. We report one count per condition and no error bars. Some plates were at a 1 in 2 000 000 dilution and some undiluted, so those counts cannot be compared. For WB800 with AcdS 2.1, 434 against 403 colonies is a small difference. What we can say is that viability falls at high voltage, and the best setting moved with construct and cuvette gap. For 168, no colony PCR is on record.",
+   "a_zh": "不夠。我們每個條件只報單次計數，沒有誤差棒。有些盤是 1 比 2 000 000 稀釋，有些沒稀釋，這些計數不能互相比較。WB800 搭配 AcdS 2.1，434 對 403 個菌落差異很小。我們能說的是：電壓高時存活率下降，最佳設定隨構築與電擊杯間距而變。168 的測試沒有菌落 PCR 紀錄。",
+   "trap_en": "Quoting 2.1 kV as 'optimal' for WB800 on a 434 vs 403 difference.",
+   "trap_zh": "用 434 對 403 的差異就說 2.1 kV 是 WB800 的「最佳」。",
+   "basis": "like Munich 2025: 'is the difference significant'"
+  },
+  {
+   "q_en": "Your Results page says the enzyme stays active in the shell for 72 hours. What do the activity data cover?",
+   "q_zh": "Results 說酵素在殼側 72 小時都有活性。活性數據涵蓋到哪裡？",
+   "type": "gap",
+   "tier": "A",
+   "pages": [
+    "results",
+    "development",
+    "engineering"
+   ],
+   "seat": "wet2",
+   "backup": "hw",
+   "kw_en": [
+    "ELISA to 72 h",
+    "DNPH page says 36 h",
+    "chart vs numbers"
+   ],
+   "kw_zh": [
+    "ELISA 到 72 小時",
+    "DNPH 頁面寫 36 小時",
+    "圖與數字不一致"
+   ],
+   "a_en": "The protein part is solid: ELISA read the shell side at nine points to 72 hours, always above the 1.3 control, peaking at 12 hours. For activity, our pages differ. Results says activity holds to 72 hours; Development says DNPH stopped at 36; Engineering says the 48 and 72 hour points are on our chart but not in the rate numbers. Every point is a single well. I would say activity is shown to 36 hours with confidence.",
+   "a_zh": "蛋白部分很穩：ELISA 在殼側取九個時間點到 72 小時，都高於 1.3 的對照，高峰在 12 小時。活性部分我們各頁說法不同。Results 說活性維持到 72 小時；Development 說 DNPH 只做到 36 小時；Engineering 說 48 和 72 小時的點在圖上，但不在速率數字裡。每個點都是單一孔。我會說有把握的是活性到 36 小時。",
+   "trap_en": "Repeating '72 hours active' as one clean fact.",
+   "trap_zh": "把「72 小時有活性」當成一個乾淨的事實重複。",
+   "basis": "wiki cross-page conflict"
+  },
+  {
+   "q_en": "You tried two reporter proteins. What happened and what did you learn?",
+   "q_zh": "你們試了兩個報告蛋白。結果如何？學到了什麼？",
+   "type": "gap",
+   "tier": "B",
+   "pages": [
+    "engineering",
+    "results"
+   ],
+   "seat": "wet1",
+   "backup": "wet2",
+   "kw_en": [
+    "AmilCP colourless",
+    "GanA never obtained",
+    "test protectants directly"
+   ],
+   "kw_zh": [
+    "AmilCP 無顏色",
+    "GanA 始終做不出",
+    "直接測保護蛋白"
+   ],
+   "a_en": "Both failed. AmilCP constructs were sequence-verified but cells stayed colourless, with absorbance at 588 nanometres 0.082 against 0.081. We think it folds too fast for the Sec pathway, but did not test that. GanA never gave a sequence-verified clone: 24 colonies, no band at the right size. A seven-part reaction cost more time than it saved, so we tested the protectants directly by Western blot and ELISA.",
+   "a_zh": "兩個都失敗了。AmilCP 構築經定序正確但菌體沒有顏色，588 nm 吸光度 0.082 對 0.081。我們認為它折疊太快，Sec 路徑運不出去，但沒有驗證。GanA 始終沒有得到定序正確的選殖株：24 個菌落，沒有大小正確的條帶。七個零件的反應花的時間比省下的多，所以我們改用西方墨點與 ELISA 直接測保護蛋白。",
+   "trap_en": "Hiding the failures or blaming 'bad luck'.",
+   "trap_zh": "隱藏失敗，或歸咎於運氣不好。",
+   "basis": "like standard 'what failed and what did you learn'"
+  },
+  {
+   "q_en": "Your ACC deaminase should be about 41 kDa. Why do some of your blots show bands near 100?",
+   "q_zh": "你們的 ACC 去胺酶應該約 41 kDa。為什麼有些墨點的條帶接近 100？",
+   "type": "gap",
+   "tier": "B",
+   "pages": [
+    "results",
+    "engineering"
+   ],
+   "seat": "wet2",
+   "backup": "wet1",
+   "kw_en": [
+    "reactor blot 42 kDa",
+    "light-plate blots 75 to 100",
+    "oligomer idea untested"
+   ],
+   "kw_zh": [
+    "反應器墨點 42 kDa",
+    "光盤墨點 75 至 100",
+    "寡聚體想法未驗證"
+   ],
+   "a_en": "Good catch. The reactor blot shows a band near 42 kilodaltons, matching the expected size. The light-plate blots show bands just below 100, or between 75 and 100. We also saw our Csn construct run lower than the SamyQ one. We suspect oligomers or aggregates, since the enzyme can form them, but we could not quantify aggregation, so it is untested. The larger SamyQ form was still active in DNPH.",
+   "a_zh": "好問題。反應器墨點的條帶接近 42 kDa，符合預期大小。光盤墨點的條帶在 100 kDa 下方，或 75 至 100 之間。我們也看到 Csn 構築跑得比 SamyQ 構築低。我們懷疑是寡聚體或聚集體，因為這個酵素會形成它們，但我們無法量化聚集，所以沒有驗證。較大的 SamyQ 形式在 DNPH 中仍有活性。",
+   "trap_en": "Saying the band is 'the right protein' without addressing the size mismatch.",
+   "trap_zh": "不處理大小不符，就說那條帶「是正確的蛋白」。",
+   "basis": "like Munich 2025: 'why is the band at the wrong size'"
+  },
+  {
+   "q_en": "What is the next step for protein yield?",
+   "q_zh": "蛋白產量的下一步是什麼？",
+   "type": "impact",
+   "tier": "A",
+   "pages": [
+    "engineering",
+    "results"
+   ],
+   "seat": "wet2",
+   "backup": "wet1",
+   "kw_en": [
+    "yield is low",
+    "peak at 12 h then falls",
+    "variant panel unassayed"
+   ],
+   "kw_zh": [
+    "產量偏低",
+    "12 小時後下降",
+    "變體組未檢測"
+   ],
+   "a_en": "Honestly, yield is low: shell-side ACC deaminase peaked around 6.5 micrograms per millilitre at 12 hours and then fell, so a longer run is not a larger harvest. Our own write-up points to expression elements such as promoter strength. We also built ten BoPep4 and LEA14 variants, including two designed as weak controls, but the activity assay to rank them has not been run. That is what we owe.",
+   "a_zh": "老實說，產量偏低：殼側 ACC 去胺酶在 12 小時達約 6.5 微克／毫升高峰後下降，所以跑更久不會收穫更多。我們自己的紀錄指出可以優化啟動子強度等表現元件。我們也做了十個 BoPep4 和 LEA14 的變體，包含兩個設計成弱活性的對照，但可以替它們排序的活性檢測還沒進行。這是我們欠的工作。",
+   "trap_en": "Promising a yield target; the wiki states none.",
+   "trap_zh": "承諾一個產量目標；wiki 沒有提出任何目標。",
+   "basis": "like standard 'what is next'"
+  },
+  {
+   "q_en": "What can a future iGEM team reuse from your wet-lab work?",
+   "q_zh": "未來的 iGEM 團隊可以重用你們濕實驗的哪些成果？",
+   "type": "impact",
+   "tier": "A",
+   "pages": [
+    "parts",
+    "contribution",
+    "engineering"
+   ],
+   "seat": "wet1",
+   "backup": "wet2",
+   "kw_en": [
+    "35 Registry parts",
+    "strain-specific protocols",
+    "constitutive module first"
+   ],
+   "kw_zh": [
+    "35 個 Registry 零件",
+    "分菌株的流程",
+    "先建持續表現模組"
+   ],
+   "a_en": "Thirty-five Registry parts, from cargo sequences to the Level 2 device, built on 14 earlier parts. We also give strain-specific electroporation protocols for 168 and WB800, the DNPH assay scaled to a 96-well plate, and an open cassette for new cargo. Our advice is the order we learned: build the constitutive expression module, confirm the cargo, then put the light circuit in front.",
+   "a_zh": "35 個 Registry 零件，從目標蛋白序列到 Level 2 裝置，建立在 14 個舊零件之上。我們也提供 168 和 WB800 各自的電穿孔流程、縮小到 96 孔盤的 DNPH 檢測，以及放新蛋白用的開放卡匣。我們的建議是我們學到的順序：先建持續表現模組、確認目標蛋白，再把光電路接在前面。",
+   "trap_en": "Listing parts without saying which are characterised and which only 'Experiment' or 'Design'.",
+   "trap_zh": "只列零件，沒說哪些有特性分析、哪些只是 Experiment 或 Design 狀態。",
+   "basis": "like standard 'contribution to the community'"
+  },
+  {
+   "q_en": "If you redid the cloning, what would you change first?",
+   "q_zh": "如果重做選殖，你們會先改什麼？",
+   "type": "impact",
+   "tier": "A",
+   "pages": [
+    "engineering"
+   ],
+   "seat": "wet1",
+   "backup": "wet2",
+   "kw_en": [
+    "avoid 10 kb electroporation",
+    "validate every module",
+    "fix glycerol stocks"
+   ],
+   "kw_zh": [
+    "避開 10 kb 電穿孔",
+    "驗證每個模組",
+    "修正甘油菌種"
+   ],
+   "a_en": "Three things, all in our own write-up. First, electroporating a plasmid over 10 kb was extremely difficult, so we would look at natural transformation. Second, one positive module does not tell you the others are right, so we would validate every module. Third, we could not recover the ABDI strain from its glycerol stock and had to re-electroporate, so we would fix our glycerol stock preparation and storage.",
+   "a_zh": "三件事，都在我們自己的紀錄裡。第一，電穿孔超過 10 kb 的質體極為困難，所以我們會研究自然轉形。第二，一個模組呈陽性不代表其他模組正確，所以我們會驗證每一個模組。第三，ABDI 菌株無法從甘油菌種復活，只能重新電穿孔，所以我們會修正甘油菌種的製備與保存。",
+   "trap_en": "Answering with only success stories.",
+   "trap_zh": "只講成功的故事。",
+   "basis": "like standard 'what would you do differently'"
+  }
+ ],
+ "gaps": [
+  {
+   "issue_en": "Sequencing claims disagree. Level 2 has never been sequenced end to end, yet Results says constructs were verified by colony PCR and Sanger, Parts says seven Level 1 parts are sequence-confirmed, Biomanufacturing says nine, Development says Level 2 sequencing had not returned, and the Engineering Level 2 text says assembly followed 'sequencing confirmation'.",
+   "issue_zh": "各頁對定序的說法不一致。Level 2 從未全長定序，但 Results 說構築經菌落 PCR 與 Sanger 驗證、Parts 說七個 Level 1 零件已定序、Biomanufacturing 說九個、Development 說 Level 2 定序尚未回來，Engineering 的 Level 2 文字又說組裝後有「定序確認」。",
+   "where": "engineering; parts; results; biomanufacturing; development",
+   "say_en": "Level 0 and Level 1 clones were checked by colony PCR and Sanger. The Level 2 plasmid was checked by three junction PCRs in three clones and by two digests, so order and length are confirmed, but the 10 kb in between is not sequenced.",
+   "say_zh": "Level 0 和 Level 1 選殖株用菌落 PCR 加 Sanger 檢查。Level 2 質體用三個接點 PCR（三株）與兩種酵素切割檢查，所以順序與長度確認了，但中間的 10 kb 沒有定序。"
+  },
+  {
+   "issue_en": "The 'ACCD about three times the other two' headline is not stable. Fig 13 gives about 16 vs 6 µg/mL for AcdS 2.1; the construct table gives about 12 to 13 vs 6 for wild type (twofold) and 8 to 9.5 for AcdS 2.1 (about 1.5-fold); the reactor gives 10.7 vs 5.8 vs 6.2. The plasmid-free WB800 control reads 1.3 in some runs but 4.6 to 5.5 in the construct table, similar to LEA14 and BoPep4, and every table value exceeds the 3 µg/mL top standard.",
+   "issue_zh": "「ACCD 約為另外兩者的三倍」這個標題不穩定。Fig 13 的 AcdS 2.1 約 16 對 6 µg/mL；構築表中野生型約 12 至 13 對 6（兩倍），AcdS 2.1 為 8 至 9.5（約 1.5 倍）；反應器為 10.7、5.8、6.2。不含質體的 WB800 對照在有些實驗是 1.3，在構築表卻是 4.6 至 5.5，與 LEA14 和 BoPep4 相近，而且表中每個數值都超過 3 µg/mL 的最高標準品。",
+   "where": "results; engineering; development",
+   "say_en": "ACC deaminase is clearly the highest, about two to three times the others depending on the experiment. LEA14 and BoPep4 are close to the host background in the comparison table, so I would not rank them against each other.",
+   "say_zh": "ACC 去胺酶明顯最高，依實驗不同約為其他的兩到三倍。在比較表中 LEA14 和 BoPep4 接近宿主背景，所以我不會替它們互相排名。"
+  },
+  {
+   "issue_en": "Light control is claimed more strongly than the data show. Results key results say green light switches ACCD on, but ELISA protein is flat (about 12 to 13 µg/mL in every condition), DNPH reverses between 13 h and 16 h, the 12 h pre-culture text says red was higher at 3 h and 8 h while the figure text says green was higher, the dark baseline is already about 3 µg/mL, and Development gives p = 0.72 for colour. Red LEDs are 640 nm (630 nm in one section) against about 672 nm needed. The 520 nm on and 660 nm off figures are not on the wiki.",
+   "issue_zh": "光控的說法比數據強。Results 重點說綠光打開 ACCD，但 ELISA 蛋白是持平的（各條件約 12 至 13 µg/mL）、DNPH 在 13 與 16 小時反轉、12 小時預培養的文字說紅光在 3 與 8 小時較高而圖說寫綠光較高、暗處基線已有約 3 µg/mL、Development 給出顏色 p = 0.72。紅光 LED 是 640 nm（一節寫 630 nm），所需約 672 nm。wiki 上沒有 520 nm 開、660 nm 關這兩個數字。",
+   "where": "results; development; engineering",
+   "say_en": "We built the circuit and saw green responses in some readings, but we do not yet have a clean, replicated on and off. The light plate also has spill between wells and mismatched red LEDs, which we have not tested as causes.",
+   "say_zh": "我們建好了電路，也在部分讀值看到綠光反應，但還沒有乾淨、有重複的開與關。光盤也有孔間漏光與紅光 LED 不匹配的問題，這些原因我們還沒測試。"
+  },
+  {
+   "issue_en": "Which Level 2 clone was tested is unclear. Three-junction evidence is for ACDI (PlepA photoreceptor); the light-plate blots used ABDI (PliaG), whose clone V7 was only checked one junction at a time and which could not be recovered from glycerol. Later work used ABDQ (SamyQ-AcdS 2.1), for which the wiki shows a single 632 bp colony PCR. Parts says the light-sensing unit is deposited behind PliaG, and the Engineering device table lists PliaG for both devices.",
+   "issue_zh": "測試的是哪個 Level 2 選殖株並不清楚。三個接點的證據是 ACDI（PlepA 光受體）；光盤墨點用的是 ABDI（PliaG），其選殖株 V7 只逐一檢查過單一接點，也無法從甘油菌種復活。後期用 ABDQ（SamyQ-AcdS 2.1），wiki 只呈現一張 632 bp 的菌落 PCR。Parts 說光感測單元放在 PliaG 後面，Engineering 的裝置表兩個裝置都列 PliaG。",
+   "where": "engineering; results; parts",
+   "say_en": "The strongest junction evidence is for the PlepA version, ACDI. The light-plate experiments used the PliaG strains, ABDI and later ABDQ, which have less cloning evidence on the wiki. I would say that and not claim they are equivalent.",
+   "say_zh": "接點證據最完整的是 PlepA 版本 ACDI。光盤實驗用的是 PliaG 菌株，ABDI 與後來的 ABDQ，wiki 上的選殖證據比較少。我會直接說明，不宣稱它們等價。"
+  },
+  {
+   "issue_en": "The 72-hour activity claim is not consistently supported. Results says shell-side ACCD is active to 72 h with specific activity 6 to 8 U/mg; Development says the DNPH assay was not carried past 36 h; Engineering says the 48 and 72 h activity points are only on the team's chart. Every DNPH point is a single well, the plasmid-free host already gives DNPH signal (about 32 vs 39 with PLP), and the 1 h ELISA signal is probably carry-over from the inoculum.",
+   "issue_zh": "72 小時活性的說法沒有一致的支持。Results 說殼側 ACCD 到 72 小時有活性，比活性 6 至 8 U/mg；Development 說 DNPH 只做到 36 小時；Engineering 說 48 與 72 小時的活性點只出現在團隊的圖上。每個 DNPH 點都是單一孔，不含質體的宿主本身就有 DNPH 訊號（約 32，對照加 PLP 的 39），1 小時的 ELISA 訊號也可能是接種物帶來的。",
+   "where": "results; development; engineering",
+   "say_en": "Protein in the shell is above control for all nine samples to 72 hours. Activity is shown with confidence to 36 hours; the later points are on our chart but are not in the numbers we quote. Everything is single-well.",
+   "say_zh": "殼側蛋白在九個樣本直到 72 小時都高於對照。活性有把握的是到 36 小時；之後的點在我們的圖上，但不在我們引用的數字裡。全部都是單一孔。"
+  },
+  {
+   "issue_en": "The BoPep4 His tag position conflicts. Protein Design says the tag must go on the N-terminus because a C-terminal His tag abolishes the key salt bridge and sends N-His constructs; the built cassettes (SamyQ-BoPep4-Histag, Parts, Results, Contribution) are described with a C-terminal tag; Engineering says its own records give C-terminal in the design text, N-terminal in the construct table, and has primers for both orientations. No activity assay exists for the BoPep4 variant panel.",
+   "issue_zh": "BoPep4 的 His 標籤位置互相矛盾。Protein Design 說標籤必須放 N 端，因為 C 端 His 會破壞關鍵鹽橋，並送出 N-His 構築；建好的卡匣（SamyQ-BoPep4-Histag，見 Parts、Results、Contribution）卻寫成 C 端標籤；Engineering 說自己的紀錄設計文字寫 C 端、構築表寫 N 端，引子兩種方向都有。BoPep4 變體組也沒有活性檢測。",
+   "where": "protein-design; parts; engineering; results",
+   "say_en": "The simulation says N-terminal, and our records are not consistent on what was built. Our ELISA detects the tag either way, so we know the protein is there, not whether the peptide is active. The variant panel's activity assay has not been run.",
+   "say_zh": "模擬建議 N 端，而我們的紀錄對實際建了什麼並不一致。ELISA 不論標籤在哪端都能偵測，所以我們知道蛋白存在，但不知道胜肽是否有活性。變體組的活性檢測尚未進行。"
+  },
+  {
+   "issue_en": "The case for WB800 over 168 is not a controlled comparison, and strain coverage is inconsistent. The reactor runs compare 168 with Csn-AcdS (cycle 5) against WB800 with SamyQ-AcdS 2.1 (cycle 6), so strain, signal peptide and codon usage all changed; 168 and WB800 were never compared in the reactor. Biomanufacturing says WB800 took the loop twice in October, Engineering says three times. Results says all constructs were transformed into WB800 but the WB800 electroporation table has no LEA14 cassette, and it includes an 'AcdS 2.2' that is not among the registered or ordered AcdS variants.",
+   "issue_zh": "WB800 優於 168 的論據不是對照比較，菌株涵蓋範圍也不一致。反應器比較的是 168 搭 Csn-AcdS（第 5 輪）與 WB800 搭 SamyQ-AcdS 2.1（第 6 輪），菌株、訊號肽、密碼子都變了；168 與 WB800 從未在反應器中直接比較。Biomanufacturing 說 WB800 在 10 月上線兩次，Engineering 說三次。Results 說所有構築都已轉入 WB800，但 WB800 電穿孔表沒有 LEA14 卡匣，且出現未列入登錄或訂購清單的「AcdS 2.2」。",
+   "where": "engineering; results; biomanufacturing; parts",
+   "say_en": "168 gave barely detectable ACC deaminase and WB800 gave measurable protein, and eight protease deletions are a sound reason. But the two runs differ in more than the strain, so I would call it a well-motivated switch, not a proven fold-change.",
+   "say_zh": "168 幾乎偵測不到 ACC 去胺酶，WB800 則有可量測的蛋白，而且刪除八種蛋白酶是合理的理由。但兩次運轉不只菌株不同，所以我會說這是有道理的轉換，不是已證實的倍數提升。"
+  },
+  {
+   "issue_en": "Results says the plant assays used 'purified enzyme', but the Experiments page says the purification and dialysis, large-scale extraction and Bradford sheets produced no result on the wiki, and the hydroponic trials were done with dilutions of culture against a plasmid-free WB800 culture. The wiki does not state which BoPep4 or ACCD construct was applied to plants, and gives no mass dose per plant.",
+   "issue_zh": "Results 說植物實驗用了「純化酵素」，但 Experiments 頁說純化與透析、大量萃取與 Bradford 三份流程在 wiki 上沒有結果，水耕實驗用的是培養液稀釋，對照是不含質體的 WB800 培養液。wiki 沒有說明施用在植物上的是哪個 BoPep4 或 ACCD 構築，也沒有每株植物的質量劑量。",
+   "where": "results; experiments",
+   "say_en": "We applied filtered culture supernatant at stated dilutions, such as 1 in 40, with a plasmid-free WB800 culture as the control. We did not purify and dose by mass, so I cannot give micrograms per plant.",
+   "say_zh": "我們施用的是過濾後的培養上清液，以標示的稀釋倍數（例如 1/40）使用，並以不含質體的 WB800 培養液作對照。我們沒有純化後依質量給劑量，所以給不出每株植物的微克數。"
+  }
+ ]
+}

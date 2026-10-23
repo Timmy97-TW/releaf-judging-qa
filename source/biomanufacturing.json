@@ -1,0 +1,2019 @@
+{
+ "domain": "biomanufacturing",
+ "facts": [
+  {
+   "id": "biomanufacturing-f1",
+   "label_en": "Longest run with the secreting strain",
+   "label_zh": "分泌型菌株的最長運轉",
+   "value": "102.4 h, OD600 0.84 to 3.77",
+   "detail_en": "Four days unattended in the incubator on 1 to 6 September; growth model R² 0.991 and transmembrane pressure within about ±0.1 bar. The strain was B. subtilis 168 with constitutive ACC deaminase, not WB800.",
+   "detail_zh": "9 月 1 至 6 日在培養箱內無人看管連續運轉四天；生長模型 R² 0.991，跨膜壓差維持在約 ±0.1 bar。菌株是持續表現 ACC deaminase 的 B. subtilis 168，不是 WB800。",
+   "src": "biomanufacturing#The bioreactor system",
+   "confidence": "stated"
+  },
+  {
+   "id": "biomanufacturing-f2",
+   "label_en": "Why Bacillus subtilis",
+   "label_zh": "為什麼選枯草桿菌",
+   "value": "Non-pathogenic, secretes protein",
+   "detail_en": "The wiki gives three reasons: non-pathogenic strains are FDA GRAS, it is easy to engineer, and it secretes recombinant protein into the medium so cells never have to be broken open.",
+   "detail_zh": "wiki 給的三個理由：非致病菌株被 FDA 列為 GRAS、容易改造、會把重組蛋白分泌到培養基中，所以不必把細胞打破。",
+   "src": "hardware-bioreactor#2.2 Why Bacillus subtilis and Perfusion Hollow Fiber",
+   "confidence": "stated"
+  },
+  {
+   "id": "biomanufacturing-f3",
+   "label_en": "Why WB800 and not 168",
+   "label_zh": "為什麼用 WB800 而不是 168",
+   "value": "WB800 lacks 8 secretory proteases",
+   "detail_en": "Strain 168 grew well but secreted very little ACC deaminase, consistent with its wild-type extracellular proteases degrading the product. Later cycles used WB800.",
+   "detail_zh": "168 長得很好但幾乎沒分泌 ACC deaminase，與它野生型的胞外蛋白酶分解產物一致；之後的循環改用 WB800。",
+   "src": "results#Growth in the reactor",
+   "confidence": "stated"
+  },
+  {
+   "id": "biomanufacturing-f4",
+   "label_en": "Which strain was in which run",
+   "label_zh": "各次運轉用的菌株",
+   "value": "168 to Sept; WB800 in Oct (per this page)",
+   "detail_en": "Biomanufacturing says every run to September was 168 and WB800 took the loop twice in October. Hardware: Bioreactor and Results say every cycle after the first used WB800.",
+   "detail_zh": "Biomanufacturing 頁說 9 月以前每次都是 168，WB800 在 10 月上機兩次；Hardware: Bioreactor 與 Results 頁則說第一次之後的循環都用 WB800。",
+   "src": "biomanufacturing#Synthetic biology for agricultural biomanufacturing",
+   "confidence": "conflict"
+  },
+  {
+   "id": "biomanufacturing-f5",
+   "label_en": "Membrane module",
+   "label_zh": "膜模組",
+   "value": "0.2 µm PES hollow fiber, 1 L working volume",
+   "detail_en": "Biophsep mPES Minilab cartridge. Culture runs in the lumen; cells stay in the loop while smaller soluble proteins cross to the shell side and leave as permeate. The page says there is no downstream train.",
+   "detail_zh": "Biophsep mPES Minilab 濾芯。培養液走內腔，細胞留在迴路，較小的可溶性蛋白穿過到殼側成為透過液離開；本頁說沒有下游純化流程。",
+   "src": "biomanufacturing#The bioreactor system",
+   "confidence": "stated"
+  },
+  {
+   "id": "biomanufacturing-f6",
+   "label_en": "Module geometry",
+   "label_zh": "模組幾何",
+   "value": "11 fibers, 200 cm² (or 8 fibers, 150 cm²)",
+   "detail_en": "Team records give both. The 16 August water test (pressure drop 1.03 times the open-tube prediction) agrees with eleven fibers; the vendor line on Results says eight fibers and 150 cm². The shear table uses eight fibers.",
+   "detail_zh": "團隊紀錄兩種都有。8 月 16 日的水測（壓降為開管預測的 1.03 倍）與 11 條纖維吻合；Results 頁的廠商規格寫 8 條、150 cm²。剪切表用 8 條。",
+   "src": "biomanufacturing#Where the geometry comes from",
+   "confidence": "conflict"
+  },
+  {
+   "id": "biomanufacturing-f7",
+   "label_en": "Containment test",
+   "label_zh": "細胞阻留測試",
+   "value": "Lumen plate grew, shell plate did not",
+   "detail_en": "Medium from both sides plated, 24 h at 37 °C: colonies from the lumen, none from the shell. Each test was a single plating with no replicates and the detection limit was not recorded. No log reduction was measured.",
+   "detail_zh": "兩側培養液塗盤，37 °C 24 小時：內腔有菌落、殼側沒有。每次測試只塗一次、沒有重複，也沒記錄偵測極限，沒有量測對數減少值。",
+   "src": "results#Containment and release",
+   "confidence": "stated"
+  },
+  {
+   "id": "biomanufacturing-f8",
+   "label_en": "Product in the permeate",
+   "label_zh": "透過液中的產物",
+   "value": "ACCD above 2 µg/mL for 72 h",
+   "detail_en": "In cycle 4 shell ELISA peaked near 6.5 µg/mL at 12 h and settled at 2.5 to 3 µg/mL from 36 h; activity (DNPH) was near zero to 12 h and rose from 18 h.",
+   "detail_zh": "第 4 輪殼側 ELISA 在 12 小時達高峰約 6.5 µg/mL，36 小時後穩定在 2.5 至 3 µg/mL；DNPH 活性到 12 小時都接近零，18 小時起上升。",
+   "src": "results#Product in the permeate",
+   "confidence": "stated"
+  },
+  {
+   "id": "biomanufacturing-f9",
+   "label_en": "Lumen versus shell",
+   "label_zh": "內腔與殼側濃度",
+   "value": "Both sides read about the same",
+   "detail_en": "In the second integrated cycle ELISA gave 4 to 8 µg/mL on both sides (Hardware: Bioreactor quotes 10.7 and 10.5 µg/mL), so the membrane does not concentrate or purify the protein.",
+   "detail_zh": "第二輪整合運轉兩側 ELISA 都是 4 至 8 µg/mL（Hardware: Bioreactor 引用 10.7 與 10.5 µg/mL），表示膜不會濃縮或純化蛋白。",
+   "src": "results#Product in the permeate",
+   "confidence": "conflict"
+  },
+  {
+   "id": "biomanufacturing-f10",
+   "label_en": "Design perfusion at one module",
+   "label_zh": "單一模組的設計灌流量",
+   "value": "2 LMH = 0.67 mL/min = 0.96 L/day",
+   "detail_en": "200 cm² at 2 LMH. That is about ten turnovers of the 100 mL loop a day. It is computed from module geometry, not measured.",
+   "detail_zh": "200 cm² 在 2 LMH 下。相當於每天約十次更換 100 mL 迴路的體積。這是由模組幾何算出，不是實測。",
+   "src": "biomanufacturing#Cell-specific perfusion rate",
+   "confidence": "stated"
+  },
+  {
+   "id": "biomanufacturing-f11",
+   "label_en": "Fouling headroom",
+   "label_zh": "堵塞餘裕",
+   "value": "J/Jcrit = 0.04 (46 LMH vs 2 LMH)",
+   "detail_en": "Shear-induced diffusion model at 263 mL/min, wall shear 4064 s⁻¹. Flux could rise about 23-fold before fouling limits. The model treats the feed as cells in water.",
+   "detail_zh": "剪切誘導擴散模型，263 mL/min、壁剪切率 4064 s⁻¹。通量可提高約 23 倍才會受堵塞限制。模型把進料當成水中的細胞。",
+   "src": "biomanufacturing#Critical flux and the fouling margin",
+   "confidence": "stated"
+  },
+  {
+   "id": "biomanufacturing-f12",
+   "label_en": "Cell-specific perfusion rate",
+   "label_zh": "每顆細胞灌流率",
+   "value": "0.0007 nL/cell/day",
+   "detail_en": "About thirty times under the 0.02 to 0.5 band used in modern perfusion. Reaching 0.02 needs about 60 LMH, above the 46 LMH fouling threshold, and about 29 L of medium a day.",
+   "detail_zh": "比現代灌流常用的 0.02 至 0.5 範圍低約三十倍。要到 0.02 需約 60 LMH，高於 46 LMH 的堵塞門檻，每天約需 29 L 培養基。",
+   "src": "biomanufacturing#Cell-specific perfusion rate",
+   "confidence": "stated"
+  },
+  {
+   "id": "biomanufacturing-f13",
+   "label_en": "Washout does not apply",
+   "label_zh": "不會被沖洗掉",
+   "value": "D can exceed µ",
+   "detail_en": "A 0.2 µm membrane retains 1 to 2 µm rods, so permeate leaves and biomass does not. The measured growth rate on run 6 was 0.286 per hour.",
+   "detail_zh": "0.2 µm 的膜擋住 1 至 2 µm 的桿菌，透過液流出但菌體留下，所以稀釋率可以大於生長率。run 6 量到的生長率是 0.286 每小時。",
+   "src": "biomanufacturing#Cell-specific perfusion rate",
+   "confidence": "stated"
+  },
+  {
+   "id": "biomanufacturing-f14",
+   "label_en": "Wall shear at the pump floor",
+   "label_zh": "幫浦最低轉速的壁剪切率",
+   "value": "4881 s⁻¹ at 230 mL/min",
+   "detail_en": "Eight-fiber calculation. Conventional hollow-fiber microfiltration runs at 2000 to 8000 s⁻¹; Maiorella put the balance point nearer 1500 to 3000. Only the lowest pump setting sits inside the band.",
+   "detail_zh": "以 8 條纖維計算。一般中空纖維微過濾在 2000 至 8000 s⁻¹，Maiorella 認為平衡點在 1500 至 3000 附近。只有最低的幫浦設定落在範圍內。",
+   "src": "biomanufacturing#Wall shear and the operating envelope",
+   "confidence": "stated"
+  },
+  {
+   "id": "biomanufacturing-f15",
+   "label_en": "Oxygen limit",
+   "label_zh": "氧氣限制",
+   "value": "kLa 12.5 h⁻¹ needed at OD 1.454",
+   "detail_en": "A 100 mL loop at 30% saturation holds 0.006 mmol against 0.174 mmol per hour consumed, so a stoppage exhausts it in about two minutes. Oxygen caps cell density before anything else.",
+   "detail_zh": "100 mL 迴路在 30% 飽和度只有 0.006 mmol，每小時耗 0.174 mmol，停擺約兩分鐘就用完。氧氣比任何其他因素更早限制細胞密度。",
+   "src": "biomanufacturing#Oxygen, energy and dead time",
+   "confidence": "stated"
+  },
+  {
+   "id": "biomanufacturing-f16",
+   "label_en": "Solar sizing",
+   "label_zh": "太陽能容量估算",
+   "value": "45 W panel: 101 Wh/day vs 72 to 192 Wh/day",
+   "detail_en": "Sized on Taiwan's worst-case winter sun, about three peak hours, at 75% efficiency. At a 5 W mid-point draw the panel supplies 0.84 of need; 53 W would close it. The pump's real draw is unmeasured.",
+   "detail_zh": "以臺灣冬季最差日照（約三個尖峰日照小時）、75% 效率估算。以 5 W 中間值計，面板只供應需求的 0.84；53 W 才夠。幫浦實際耗電尚未量測。",
+   "src": "biomanufacturing#Oxygen, energy and dead time",
+   "confidence": "stated"
+  },
+  {
+   "id": "biomanufacturing-f17",
+   "label_en": "Scale-out, not scale-up",
+   "label_zh": "水平複製而非放大",
+   "value": "ReLEAF scales out",
+   "detail_en": "Scale-up needs mass transfer, oxygen, heat, mixing and membrane area re-established at the new size. Scale-out replicates a characterised unit. Linear scale-up of tangential-flow filtration was carried 400-fold by van Reis (1997).",
+   "detail_zh": "放大要在新尺寸重新確立質傳、氧氣、散熱、混合與膜面積；水平複製則重複已知特性的單元。van Reis (1997) 曾將切向流過濾線性放大 400 倍。",
+   "src": "biomanufacturing#Scaling",
+   "confidence": "stated"
+  },
+  {
+   "id": "biomanufacturing-f18",
+   "label_en": "One module to eight",
+   "label_zh": "一個模組到八個",
+   "value": "Medium 0.96 to 7.7 L/day; power 3-8 W to 24-64 W",
+   "detail_en": "Membrane area, permeate and shear scale by construction. What binds is medium supply for an unattended week, pumping and energy per module, and oxygen transfer per unit. Membrane binds last.",
+   "detail_zh": "膜面積、透過量與剪切率依設計等比放大。真正受限的是無人看管一週的培養基供應、每個模組的泵送與能源，以及每個單元的氧傳遞。膜最後才成為限制。",
+   "src": "biomanufacturing#Scaling",
+   "confidence": "stated"
+  },
+  {
+   "id": "biomanufacturing-f19",
+   "label_en": "Loop delay",
+   "label_zh": "迴路延遲",
+   "value": "CcaSR half-time 105.1 ± 1.5 min",
+   "detail_en": "From the literature (Castillo-Hair 2019). The shell exchange time is 150 min at 2 LMH, so dead time over time constant runs 0.7 to 7.0. The device is specified for stress that develops over hours to days.",
+   "detail_zh": "數值來自文獻 (Castillo-Hair 2019)。2 LMH 時殼側交換時間為 150 分鐘，死區時間與時間常數之比在 0.7 至 7.0。裝置針對數小時到數天內發展的逆境。",
+   "src": "biomanufacturing#Scaling",
+   "confidence": "stated"
+  },
+  {
+   "id": "biomanufacturing-f20",
+   "label_en": "Prototype build cost",
+   "label_zh": "原型機建造成本",
+   "value": "NT$83 028 (about US$2800)",
+   "detail_en": "Bacterial kit NT$52 578 plus bioreactor NT$30 450, hand-built, one unit. The page says this is the only cost figure; cost per unit of protectant needs a techno-economic analysis not yet done.",
+   "detail_zh": "菌種套組 NT$52 578 加生物反應器 NT$30 450，手工、一台。本頁說這是唯一的成本數字；每單位保護蛋白的成本需要尚未做的技術經濟分析。",
+   "src": "biomanufacturing#Field Deployment",
+   "confidence": "stated"
+  },
+  {
+   "id": "biomanufacturing-f21",
+   "label_en": "Farmer package price",
+   "label_zh": "農民套組價格",
+   "value": "About US$5550 in year 1, US$90 a year after",
+   "detail_en": "One hectare: two 1 L bioreactors, three moisture sensors, one refill cartridge. Price is twice our full cost (US$2775). Break-even about 226 paying hectares over Years 0 to 4.",
+   "detail_zh": "一公頃：兩台 1 L 生物反應器、三個濕度感測器、一個補充匣。售價為完整成本的兩倍（US$2775）。損益兩平約 226 公頃付費面積（第 0 至 4 年）。",
+   "src": "entrepreneurship#Financial projection",
+   "confidence": "stated"
+  },
+  {
+   "id": "biomanufacturing-f22",
+   "label_en": "Business-plan dose vs Math Model dose",
+   "label_zh": "商業計畫與數學模型的劑量",
+   "value": "203 U vs 37.6 kU per ha per spray",
+   "detail_en": "The two differ by 185 times. Business plan assumes a targeted dose per tomato plant and two 1 L units per hectare; Math Model scales a plate rate through a canopy factor and needs 81 L of vessel per hectare. Neither is validated in a field.",
+   "detail_zh": "兩者相差 185 倍。商業計畫假設每株番茄的精準劑量、每公頃兩台 1 L；數學模型把培養皿用量乘上冠層係數，每公頃需 81 L 容器。兩者都沒有田間驗證。",
+   "src": "entrepreneurship#Pricing model",
+   "confidence": "conflict"
+  },
+  {
+   "id": "biomanufacturing-f23",
+   "label_en": "Fleet coverage",
+   "label_zh": "一組設備涵蓋面積",
+   "value": "10 x 20 L covers 2.5 ha at 4.3% of the calendar",
+   "detail_en": "Math Model: nine passes of 5.4 days is 49 reactor-days in a 120-day crop, so one fleet is idle most of the time and individual ownership does not pay back.",
+   "detail_zh": "數學模型：九次施用、每次 5.4 天，共 49 個反應器日，在約 120 天的作物期中，一組設備大多時間閒置，個人擁有回收不了。",
+   "src": "model#Payback and fleet utilization",
+   "confidence": "stated"
+  },
+  {
+   "id": "biomanufacturing-f24",
+   "label_en": "Three regulatory parts",
+   "label_zh": "三個法規部分",
+   "value": "Equipment, contained GMM, cell-free permeate",
+   "detail_en": "Bioreactor: equipment safety. Culture: genetically modified microorganism for contained use (EU Directive 2009/41/EC). Permeate: classified by composition, function and claim, in the EU possibly PFC 6(B) plant biostimulant.",
+   "detail_zh": "生物反應器：設備安全。菌液：基因改造微生物的封閉使用（歐盟 Directive 2009/41/EC）。透過液：依成分、功能與宣稱分類，在歐盟可能是 PFC 6(B) 植物生物刺激素。",
+   "src": "biomanufacturing#Regulation and biosafety",
+   "confidence": "stated"
+  },
+  {
+   "id": "biomanufacturing-f25",
+   "label_en": "EU knockout for the culture",
+   "label_zh": "歐盟對菌株的淘汰條件",
+   "value": "Four allowed microbe groups; B. subtilis not one",
+   "detail_en": "Regulation 2019/1009 limits microbial biostimulants to Azotobacter, Azospirillum, Rhizobium and mycorrhizal fungi. Culture scores 1 of 5. The non-microbial cell-free route (PFC 6(B)) is still being investigated.",
+   "detail_zh": "Regulation 2019/1009 把微生物生物刺激素限於 Azotobacter、Azospirillum、Rhizobium 和菌根真菌。菌株得分 1/5。無細胞的非微生物路線 (PFC 6(B)) 仍在研究中。",
+   "src": "laws-and-regulations#European Union",
+   "confidence": "stated"
+  },
+  {
+   "id": "biomanufacturing-f26",
+   "label_en": "Taiwan fertilizer route",
+   "label_zh": "臺灣肥料路線",
+   "value": "Fertilizer Management Act, 16 pre-recognised strains",
+   "detail_en": "Fertilizer category 植物生長輔助劑類 exists but does not automatically cover a protein formulation. WB800 is unlikely to be on the 2011 simplified list of 16 safe strains, so a full dossier is expected. No contained-use GMO framework was identified.",
+   "detail_zh": "肥料種類中有「植物生長輔助劑類」，但不代表蛋白質配方自動適用。WB800 不太可能在 2011 年 16 株簡化名單上，預期需完整申請資料。也未找到明確的封閉使用 GMO 架構。",
+   "src": "laws-and-regulations#Taiwan",
+   "confidence": "stated"
+  },
+  {
+   "id": "biomanufacturing-f27",
+   "label_en": "Taiwan self-use carve-out",
+   "label_zh": "臺灣自用例外",
+   "value": "Act exempts own-use organic fertilizer",
+   "detail_en": "The Act does not apply to organic fertilizer farmers make for their own use, and bars repackaging, mixing or diluting registered fertilizer for sale. Whether an engineered, purchased culture fits the carve-out needs a regulator ruling.",
+   "detail_zh": "該法不適用農民自用的有機肥料，並禁止為銷售而分裝、混合或稀釋已登記肥料。買來的基因改造菌是否適用此例外，需主管機關裁定。",
+   "src": "laws-and-regulations#Taiwan",
+   "confidence": "stated"
+  },
+  {
+   "id": "biomanufacturing-f28",
+   "label_en": "Organic farming",
+   "label_zh": "有機農業",
+   "value": "Taiwan: GMO products excluded, about 3.7% of land",
+   "detail_en": "The Organic Agriculture Promotion Act excludes products of GMOs whatever the containment. Certified organic is likely closed to ReLEAF. The Biomanufacturing page says farmers want to say their crops are organic and the reactor was built around that.",
+   "detail_zh": "有機農業促進法排除 GMO 產物，無論有無阻隔。認證有機對 ReLEAF 很可能行不通（約佔耕地 3.7%）。Biomanufacturing 頁卻說農民想標示有機、反應器就是為此而設計。",
+   "src": "laws-and-regulations#Organic Farming Compatibility",
+   "confidence": "conflict"
+  },
+  {
+   "id": "biomanufacturing-f29",
+   "label_en": "Written confirmations",
+   "label_zh": "書面確認",
+   "value": "None in any market",
+   "detail_en": "The scoring checks for written regulator confirmation (B4, C5, P4) are N in all eight markets. A potential pathway is not an approval.",
+   "detail_zh": "評分中「取得主管機關書面確認」(B4、C5、P4) 在八個市場全是 N。可能的路徑不等於核准。",
+   "src": "laws-and-regulations#Guidelines Expansion and Data",
+   "confidence": "stated"
+  },
+  {
+   "id": "biomanufacturing-f30",
+   "label_en": "Market ranking",
+   "label_zh": "市場排序",
+   "value": "US 32, Philippines 25, Thailand 22, Taiwan 21, EU 20",
+   "detail_en": "Out of 40, equal weights. Sequence: Taiwan, Philippines, Thailand, United States, Vietnam/Indonesia, EU, Malaysia. The US scores 1 of 5 on entry ease; the ranking covers abiotic cell-free uses only.",
+   "detail_zh": "滿分 40、等權重。順序：臺灣、菲律賓、泰國、美國、越南/印尼、歐盟、馬來西亞。美國進入容易度僅 1/5；排序只涵蓋非生物逆境的無細胞用途。",
+   "src": "laws-and-regulations#Expansion Markets",
+   "confidence": "stated"
+  },
+  {
+   "id": "biomanufacturing-f31",
+   "label_en": "United States route",
+   "label_zh": "美國路徑",
+   "value": "TSCA 40 CFR 725; MCAN 90 days",
+   "detail_en": "Engineered microbe: EPA Toxic Substances Control Act biotechnology rules; a Microbial Commercial Activity Notice 90 days before commercialising, and a field-test application 60 days before trials. ACCD could be read as a plant growth regulator under FIFRA.",
+   "detail_zh": "工程菌：EPA 有毒物質管制法 (TSCA) 生物技術規定；商業化前 90 天提出 MCAN，田間試驗前 60 天提出申請。ACCD 可能被視為 FIFRA 下的植物生長調節劑。",
+   "src": "laws-and-regulations#Rationale by Market",
+   "confidence": "stated"
+  },
+  {
+   "id": "biomanufacturing-f32",
+   "label_en": "Industry warning on escape",
+   "label_zh": "業界對逃逸的警告",
+   "value": "Director Liu, CH Biotech, 5 Sept 2026",
+   "detail_en": "Quoted: any bacterial residue outside the hollow fiber would mean serious trouble, and regulators would need undeniable proof of no escape. Taiwan's APHIA told us its review takes about 30 days once a file is complete.",
+   "detail_zh": "引述：若中空纖維外發現細菌殘留會有大麻煩，需向主管機關提出無可否認的證據證明沒有逃逸。APHIA 告知文件齊全後審查約 30 天。",
+   "src": "laws-and-regulations#Industrial Perspective: Cheng Han Biotechnology (CH Biotech)",
+   "confidence": "stated"
+  },
+  {
+   "id": "biomanufacturing-f33",
+   "label_en": "Software that runs the rig",
+   "label_zh": "控制反應器的軟體",
+   "value": "App Lab app ver. 4.13, UI v6.2.2",
+   "detail_en": "Runs on the Arduino Uno Q: microcontroller firmware holds the interlocks, a Python backend computes OD, growth rate, membrane values and pH control and logs to disk, and a browser interface sends pump and valve commands. Run 7 ran on it for 77 h.",
+   "detail_zh": "跑在 Arduino Uno Q 上：微控制器韌體負責所有安全聯鎖，Python 後端計算 OD、生長率、膜參數與 pH 控制並寫入紀錄，瀏覽器介面送出幫浦與閥門指令。run 7 用它跑了 77 小時。",
+   "src": "digital-twin-app",
+   "confidence": "stated"
+  },
+  {
+   "id": "biomanufacturing-f34",
+   "label_en": "Models and the loop",
+   "label_zh": "模型與迴路",
+   "value": "Models run on recorded data after each run",
+   "detail_en": "Autoencoder flagged the photometer 26.7 h early; Kalman filter beat persistence by 41% at 2 h on run 4; a growth rate registered on 1 October (0.2705 to 0.3300) held on run 6 (0.286). Green light is tested on the light plate only. A person approves induction.",
+   "detail_zh": "自編碼器提前 26.7 小時標出光度計異常；Kalman 濾波在 run 4 的 2 小時預測比持續性預測好 41%；10 月 1 日登記的生長率（0.2705 至 0.3300）在 run 6 成立（0.286）。綠光只在光盤測試。誘導由人核准。",
+   "src": "software#The 434-hour run",
+   "confidence": "stated"
+  },
+  {
+   "id": "biomanufacturing-f35",
+   "label_en": "Next Digital Twin status",
+   "label_zh": "下一版數位孿生的狀態",
+   "value": "Browser app on demo data",
+   "detail_en": "Seven tabs and an Ask tab where a farmer pastes their own AI key; it can explain but cannot move a valve or the light. On the wiki it shows demo data and the chat is off. It is not driving the rig.",
+   "detail_zh": "七個分頁，Ask 分頁讓農民貼上自己的 AI 金鑰；它只能解釋，不能操作閥門或燈。在 wiki 上顯示示範資料、聊天功能關閉。它沒有在控制反應器。",
+   "src": "software#The next Digital Twin",
+   "confidence": "stated"
+  },
+  {
+   "id": "biomanufacturing-f36",
+   "label_en": "What the twin still lacks",
+   "label_zh": "孿生目前缺少的部分",
+   "value": "Five things not in the twin",
+   "detail_en": "Loop temperature probe not responding, dissolved oxygen calibration did not hold, green light not built into the bioreactor, light inside a dense culture not measured, photometer beam lost above about OD 2.7.",
+   "detail_zh": "迴路溫度探頭沒反應、溶氧校正無法維持、綠光尚未裝進生物反應器、濃密培養中的光強未量測、OD 約 2.7 以上光度計光束消失。",
+   "src": "software#Current limits",
+   "confidence": "stated"
+  }
+ ],
+ "terms": [
+  {
+   "term": "Perfusion culture",
+   "kw_en": [
+    "fresh medium in",
+    "product out",
+    "cells kept"
+   ],
+   "kw_zh": [
+    "持續換新培養基",
+    "產物持續移出",
+    "細胞留下"
+   ],
+   "def_en": "Continuous culture in which medium flows through while a filter keeps the cells inside. ReLEAF uses it so one culture makes protein repeatedly instead of being harvested after each batch.",
+   "def_zh": "培養基持續流過、濾膜把細胞留在槽內的連續培養。ReLEAF 用它讓同一批菌反覆產蛋白，而不是每批結束就收掉。",
+   "cat": "hardware",
+   "src": "biomanufacturing"
+  },
+  {
+   "term": "Hollow-fiber membrane module",
+   "kw_en": [
+    "0.2 µm fibers",
+    "lumen and shell",
+    "retains cells"
+   ],
+   "kw_zh": [
+    "0.2 µm 纖維",
+    "內腔與殼側",
+    "擋住細胞"
+   ],
+   "def_en": "A cartridge of thin porous tubes. Culture runs inside the tubes (lumen); small soluble protein crosses the wall to the shell side. In ReLEAF it is both the separation step and the containment barrier.",
+   "def_zh": "由許多細多孔管組成的濾芯。培養液在管內（內腔）流動，小分子可溶蛋白穿過管壁到殼側。在 ReLEAF 中它同時是分離步驟與阻隔屏障。",
+   "cat": "hardware",
+   "src": "biomanufacturing"
+  },
+  {
+   "term": "Lumen / shell side",
+   "kw_en": [
+    "inside the tube",
+    "outside the tube",
+    "cells vs permeate"
+   ],
+   "kw_zh": [
+    "管內側",
+    "管外側",
+    "細胞對透過液"
+   ],
+   "def_en": "Lumen is the inside of each fiber, where the engineered culture circulates. Shell is the space outside the fibers, where the cell-free product collects. Results compare the two sides to show cells stay in and protein passes.",
+   "def_zh": "內腔是每條纖維的內部，工程菌液在此循環；殼側是纖維外的空間，無細胞的產物在此收集。Results 比較兩側，證明細胞留在內、蛋白能通過。",
+   "cat": "hardware",
+   "src": "results"
+  },
+  {
+   "term": "Cross-flow (tangential flow)",
+   "kw_en": [
+    "sweeps the wall",
+    "not through it",
+    "limits cake"
+   ],
+   "kw_zh": [
+    "沿壁掃過",
+    "不直接穿過",
+    "減少濾餅"
+   ],
+   "def_en": "Culture flows along the membrane surface rather than straight through it, which keeps cells from piling up on the wall. It is the basis of the formal scale-up method ReLEAF follows.",
+   "def_zh": "培養液沿著膜表面流動而不是直接穿過，避免細胞堆積在膜壁。這是 ReLEAF 採用的正式放大方法的基礎。",
+   "cat": "hardware",
+   "src": "biomanufacturing"
+  },
+  {
+   "term": "Transmembrane pressure (TMP)",
+   "kw_en": [
+    "lumen minus shell",
+    "drives permeate",
+    "fouling trend"
+   ],
+   "kw_zh": [
+    "內腔減殼側",
+    "推動透過液",
+    "堵塞趨勢"
+   ],
+   "def_en": "The pressure difference across the membrane. A pinch valve raises it to push product to the shell side. A creeping rise over a run signals fouling, so ReLEAF reads it as a trend, not a single value.",
+   "def_zh": "膜兩側的壓力差。夾管閥提高它來把產物推向殼側。運轉中緩慢上升代表堵塞，所以 ReLEAF 看的是趨勢而非單一數值。",
+   "cat": "hardware",
+   "src": "biomanufacturing"
+  },
+  {
+   "term": "Permeate",
+   "kw_en": [
+    "cell-free stream",
+    "leaves the machine",
+    "the product"
+   ],
+   "kw_zh": [
+    "無細胞液流",
+    "離開機器",
+    "就是產品"
+   ],
+   "def_en": "The liquid that crosses the membrane to the shell side. It contains the secreted protectant plus medium components and small debris. It is what reaches the plant and what would be regulated as the product.",
+   "def_zh": "穿過膜到殼側的液體，含有分泌的保護蛋白，以及培養基成分和小碎片。它是送到植物的東西，也是法規上被當成產品的部分。",
+   "cat": "hardware",
+   "src": "biomanufacturing"
+  },
+  {
+   "term": "Critical flux (J_crit)",
+   "kw_en": [
+    "46 LMH",
+    "below it no cake",
+    "J/Jcrit 0.04"
+   ],
+   "kw_zh": [
+    "46 LMH",
+    "低於它不堵塞",
+    "J/Jcrit 0.04"
+   ],
+   "def_en": "The permeate flux below which cells do not build up on the membrane. ReLEAF calculated 46 LMH from the shear-induced diffusion model and compared it with a 2 LMH design flux. It is a model result, not a measurement.",
+   "def_zh": "低於此透過通量時，細胞不會堆積在膜上。ReLEAF 用剪切誘導擴散模型算出 46 LMH，並與 2 LMH 的設計通量比較。這是模型結果，不是實測。",
+   "cat": "model",
+   "src": "biomanufacturing"
+  },
+  {
+   "term": "LMH",
+   "kw_en": [
+    "liters per m² per hour",
+    "flux unit",
+    "200 cm² module"
+   ],
+   "kw_zh": [
+    "每平方公尺每小時公升數",
+    "通量單位",
+    "200 cm² 模組"
+   ],
+   "def_en": "Unit of permeate flux: liters of liquid per square meter of membrane per hour. At 200 cm², 2 LMH is 0.67 mL/min; run 7 used 51 LMH.",
+   "def_zh": "透過通量單位：每平方公尺膜每小時通過的公升數。膜面積 200 cm² 時 2 LMH 等於 0.67 mL/min；run 7 用了 51 LMH。",
+   "cat": "hardware",
+   "src": "biomanufacturing"
+  },
+  {
+   "term": "Membrane fouling",
+   "kw_en": [
+    "cells pile up",
+    "pressure creeps up",
+    "permeability drops"
+   ],
+   "kw_zh": [
+    "細胞堆積",
+    "壓力慢慢升",
+    "通透性下降"
+   ],
+   "def_en": "Build-up of cells, protein or debris on the membrane that raises pressure and cuts flow. In run 7, permeability halved from 2520 to 1210 LMH/bar over 77 hours, far from a cleaning point.",
+   "def_zh": "細胞、蛋白或碎屑堆積在膜上，使壓力升高、流量下降。run 7 在 77 小時內通透性從 2520 降到 1210 LMH/bar，減半，但離需要清洗還很遠。",
+   "cat": "hardware",
+   "src": "software"
+  },
+  {
+   "term": "Wall shear rate",
+   "kw_en": [
+    "flow past the wall",
+    "4881 s⁻¹ at floor",
+    "cells vs sweeping"
+   ],
+   "kw_zh": [
+    "流過管壁的速度",
+    "最低轉速 4881 s⁻¹",
+    "掃膜與傷細胞的平衡"
+   ],
+   "def_en": "How fast liquid is sheared at the fiber wall. High shear sweeps the membrane clean but can harm cells. ReLEAF's lowest pump setting gives 4881 s⁻¹ for eight fibers, in the upper half of the usual band.",
+   "def_zh": "液體在纖維壁被剪切的速度。剪切高能掃淨膜面，但可能傷害細胞。ReLEAF 最低的幫浦設定在 8 條纖維下為 4881 s⁻¹，落在常用範圍的上半部。",
+   "cat": "model",
+   "src": "biomanufacturing"
+  },
+  {
+   "term": "Cell-specific perfusion rate",
+   "kw_en": [
+    "medium per cell",
+    "0.0007 nL/day",
+    "30x under band"
+   ],
+   "kw_zh": [
+    "每顆細胞的培養基量",
+    "0.0007 nL/天",
+    "低於常用範圍 30 倍"
+   ],
+   "def_en": "Volume of medium delivered per cell per day. Modern perfusion runs 0.02 to 0.5 nL; ReLEAF's design point is 0.0007, so cells are fed very lean. Feeding at the band would need medium the unit cannot carry for a week.",
+   "def_zh": "每顆細胞每天獲得的培養基體積。現代灌流為 0.02 至 0.5 nL；ReLEAF 的設計點是 0.0007，細胞吃得很少。若要達到該範圍，培養基量無法支撐無人看管一週。",
+   "cat": "model",
+   "src": "biomanufacturing"
+  },
+  {
+   "term": "Dilution rate and washout",
+   "kw_en": [
+    "D versus µ",
+    "chemostat rule",
+    "membrane breaks it"
+   ],
+   "kw_zh": [
+    "稀釋率對生長率",
+    "恆化器規則",
+    "膜讓規則失效"
+   ],
+   "def_en": "In a chemostat, culture washes out if dilution rate exceeds growth rate. With a 0.2 µm membrane keeping the cells, ReLEAF's dilution can exceed growth without washout. The twin shows the actual dilution D in the app.",
+   "def_zh": "恆化器中若稀釋率大於生長率，菌會被沖掉。ReLEAF 的 0.2 µm 膜把細胞留住，稀釋率可以超過生長率也不會沖掉。App 會顯示實際稀釋率 D。",
+   "cat": "model",
+   "src": "biomanufacturing"
+  },
+  {
+   "term": "kLa (oxygen transfer)",
+   "kw_en": [
+    "oxygen into liquid",
+    "12.5 h⁻¹ needed",
+    "closed loop"
+   ],
+   "kw_zh": [
+    "氧氣進入液體的速度",
+    "需 12.5 h⁻¹",
+    "封閉迴路"
+   ],
+   "def_en": "How fast oxygen is driven from gas into liquid. ReLEAF needs 12.5 per hour at OD 1.454, easy in a sparged fermenter but hard in a closed loop with no gas port, so oxygen caps cell density.",
+   "def_zh": "氧氣從氣體進入液體的速率。ReLEAF 在 OD 1.454 需要每小時 12.5，噴氣式發酵槽輕鬆做到，但沒有氣體埠的封閉迴路很難，所以氧氣限制細胞密度。",
+   "cat": "hardware",
+   "src": "biomanufacturing"
+  },
+  {
+   "term": "Scale-out vs scale-up",
+   "kw_en": [
+    "replicate the unit",
+    "not enlarge",
+    "oxygen and power bind"
+   ],
+   "kw_zh": [
+    "複製單元",
+    "不是放大",
+    "氧氣和電力成為限制"
+   ],
+   "def_en": "Scale-up enlarges one vessel and must re-establish mass transfer, oxygen, heat and mixing. Scale-out copies a unit already characterised. ReLEAF scales out; in the eight-module table the membrane is the last thing to bind.",
+   "def_zh": "放大是把單一容器變大，需重新確立質傳、氧氣、散熱與混合；水平複製是重複已知特性的單元。ReLEAF 採水平複製；八模組表中膜最後才受限。",
+   "cat": "business",
+   "src": "biomanufacturing"
+  },
+  {
+   "term": "Process analytical technology (PAT)",
+   "kw_en": [
+    "measure in the stream",
+    "no sample drawn",
+    "reference beam"
+   ],
+   "kw_zh": [
+    "在管線中量測",
+    "不需取樣",
+    "參考光束"
+   ],
+   "def_en": "Measuring a process while it runs. The inline photometer reads turbidity without drawing a sample, and a reference beam separates an instrument fault from a real culture event.",
+   "def_zh": "在製程進行時直接量測。管線內光度計不取樣就讀濁度，參考光束能分辨是儀器故障還是培養真的出了狀況。",
+   "cat": "hardware",
+   "src": "biomanufacturing"
+  },
+  {
+   "term": "Bacillus subtilis WB800",
+   "kw_en": [
+    "8 proteases removed",
+    "secretion host",
+    "BSL-1"
+   ],
+   "kw_zh": [
+    "缺 8 種蛋白酶",
+    "分泌宿主",
+    "BSL-1"
+   ],
+   "def_en": "A lab strain lacking eight secretory proteases so secreted protein is not degraded. Strain 168 grew well but made little detectable enzyme. Both are non-pathogenic and handled at BSL-1.",
+   "def_zh": "缺少八種分泌型蛋白酶的實驗菌株，分泌的蛋白不會被分解。168 長得好但幾乎測不到酵素。兩者都不致病，在 BSL-1 操作。",
+   "cat": "biology",
+   "src": "results"
+  },
+  {
+   "term": "Secretion (Sec pathway, signal peptide)",
+   "kw_en": [
+    "Csn or SamyQ",
+    "exported unfolded",
+    "no lysis"
+   ],
+   "kw_zh": [
+    "Csn 或 SamyQ",
+    "以未摺疊狀態輸出",
+    "不用破菌"
+   ],
+   "def_en": "A signal peptide on the protein sends it out of the cell through the Sec pathway, which needs the protein unfolded. ReLEAF uses Csn or SamyQ so product can be collected without breaking cells. A rapid-folding chromoprotein failed to secrete.",
+   "def_zh": "蛋白上的訊號肽讓它經 Sec 路徑輸出細胞，過程需蛋白保持未摺疊。ReLEAF 用 Csn 或 SamyQ，不必破菌就能收集產物。快速摺疊的色素蛋白無法有效分泌。",
+   "cat": "biology",
+   "src": "results"
+  },
+  {
+   "term": "GRAS",
+   "kw_en": [
+    "generally recognised safe",
+    "FDA label",
+    "nontoxigenic strains"
+   ],
+   "kw_zh": [
+    "公認安全",
+    "FDA 分類",
+    "不產毒菌株"
+   ],
+   "def_en": "FDA status for substances regarded as safe under good manufacturing practice. The wiki cites it for non-pathogenic, nontoxigenic B. subtilis strains as one reason for choosing it. It describes the host, not the engineered product.",
+   "def_zh": "FDA 對在良好製造規範下被視為安全物質的分類。wiki 引用它說明非致病、不產毒的枯草桿菌是選擇理由之一。它講的是宿主，不是工程後的產品。",
+   "cat": "law",
+   "src": "hardware-bioreactor"
+  },
+  {
+   "term": "CcaSR optogenetic system",
+   "kw_en": [
+    "green light on",
+    "red light off",
+    "105 min half-time"
+   ],
+   "kw_zh": [
+    "綠光開啟",
+    "紅光關閉",
+    "半衰時間 105 分鐘"
+   ],
+   "def_en": "A light-switched gene circuit: green light makes the sensor CcaS activate CcaR, which turns on the protectant gene. ReLEAF uses it so production starts only when needed. Its long activation half-time dominates loop delay.",
+   "def_zh": "以光控制的基因線路：綠光讓感測器 CcaS 活化 CcaR，開啟保護蛋白基因。ReLEAF 用它讓生產只在需要時啟動。它很長的活化半衰時間主導迴路延遲。",
+   "cat": "biology",
+   "src": "biomanufacturing"
+  },
+  {
+   "term": "Genetically modified microorganism (GMM), contained use",
+   "kw_en": [
+    "engineered microbe",
+    "inside a closed system",
+    "separate rules"
+   ],
+   "kw_zh": [
+    "工程微生物",
+    "在封閉系統內",
+    "另有規範"
+   ],
+   "def_en": "A GMM handled inside containment so it does not reach the environment. ReLEAF regulates the engineered B. subtilis cartridge separately as contained use (EU Directive 2009/41/EC); the Taiwan framework is unconfirmed.",
+   "def_zh": "在隔離設施內操作、不會進入環境的基因改造微生物。ReLEAF 把工程枯草桿菌匣獨立視為封閉使用 (EU Directive 2009/41/EC)；臺灣適用架構尚未確認。",
+   "cat": "law",
+   "src": "laws-and-regulations"
+  },
+  {
+   "term": "Plant biostimulant (PFC 6(B))",
+   "kw_en": [
+    "abiotic stress claim",
+    "non-microbial",
+    "EU fertilising products"
+   ],
+   "kw_zh": [
+    "非生物逆境宣稱",
+    "非微生物",
+    "歐盟肥料產品"
+   ],
+   "def_en": "EU Regulation 2019/1009 category for products that improve plant tolerance to abiotic stress. 6(B) is the non-microbial branch. ReLEAF's cell-free permeate may fit; the engineered culture cannot use the microbial branch.",
+   "def_zh": "歐盟 Regulation 2019/1009 中改善植物對非生物逆境耐受性的產品類別。6(B) 是非微生物分支。ReLEAF 的無細胞透過液可能符合；工程菌本身不能走微生物分支。",
+   "cat": "law",
+   "src": "laws-and-regulations"
+  },
+  {
+   "term": "CMC 7 (microbial positive list)",
+   "kw_en": [
+    "four microbe groups",
+    "B. subtilis not listed",
+    "culture knockout"
+   ],
+   "kw_zh": [
+    "四類微生物",
+    "枯草桿菌不在內",
+    "菌株被淘汰"
+   ],
+   "def_en": "EU component material category for microorganisms in biostimulants, limited to Azotobacter, mycorrhizal fungi, Rhizobium and Azospirillum. B. subtilis is absent, so the culture scores 1 of 5 in EU rankings.",
+   "def_zh": "歐盟生物刺激素中微生物的成分類別，只限 Azotobacter、菌根真菌、Rhizobium 和 Azospirillum。枯草桿菌不在內，所以歐盟排序中菌株得 1/5。",
+   "cat": "law",
+   "src": "laws-and-regulations"
+  },
+  {
+   "term": "Fertilizer Management Act (肥料管理法)",
+   "kw_en": [
+    "registration certificate",
+    "AFA registers",
+    "own-use exemption"
+   ],
+   "kw_zh": [
+    "需登記證",
+    "農糧署登記",
+    "自用例外"
+   ],
+   "def_en": "Taiwan law needing a registration certificate before fertilizer is made, imported or sold. It lists 植物生長輔助劑類 as a category, exempts farmers' own-use organic fertilizer, and bars repackaging or diluting registered product for sale.",
+   "def_zh": "臺灣要求肥料製造、輸入或販售前須取得登記證的法律。列有「植物生長輔助劑類」，豁免農民自用有機肥，並禁止為銷售而分裝或稀釋已登記產品。",
+   "cat": "law",
+   "src": "laws-and-regulations"
+  },
+  {
+   "term": "Agro-pesticides Management Act (農藥管理法)",
+   "kw_en": [
+    "APHIA handles",
+    "pathogen claims",
+    "gray mold track"
+   ],
+   "kw_zh": [
+    "動植物防疫檢疫署",
+    "病原防治宣稱",
+    "灰黴病路線"
+   ],
+   "def_en": "Taiwan's pesticide law, run by APHIA. It would apply only if ReLEAF claims pathogen control, such as BoPep4 against gray mold after the Jamboree. The abiotic-stress claims are aimed at the fertilizer route instead.",
+   "def_zh": "臺灣的農藥法規，由防檢署執行。只有在 ReLEAF 宣稱防治病原時才適用，例如 Jamboree 之後 BoPep4 對抗灰黴病。非生物逆境的宣稱則走肥料路線。",
+   "cat": "law",
+   "src": "laws-and-regulations"
+  },
+  {
+   "term": "TSCA Part 725 / MCAN",
+   "kw_en": [
+    "US engineered microbes",
+    "90-day notice",
+    "exemption possible"
+   ],
+   "kw_zh": [
+    "美國工程微生物",
+    "90 天通知",
+    "可能豁免"
+   ],
+   "def_en": "EPA biotechnology rules under the Toxic Substances Control Act, 40 CFR Part 725. A Microbial Commercial Activity Notice is due 90 days before commercialising; some recipient organisms are exempt. ReLEAF's status is still to be determined.",
+   "def_zh": "EPA 依有毒物質管制法制定的生物技術規則（40 CFR Part 725）。商業化前 90 天須提出微生物商業活動通知 (MCAN)；部分受體生物可豁免。ReLEAF 的適用情形尚待確定。",
+   "cat": "law",
+   "src": "laws-and-regulations"
+  },
+  {
+   "term": "FIFRA plant regulator risk",
+   "kw_en": [
+    "US pesticide law",
+    "ACCD lowers ethylene",
+    "non-FIFRA ruling"
+   ],
+   "kw_zh": [
+    "美國農藥法",
+    "ACCD 降低乙烯",
+    "非 FIFRA 認定"
+   ],
+   "def_en": "The US pesticide law. Because ACC deaminase lowers ethylene, a regulator could read it as a plant growth regulator. The plan is to request an EPA non-FIFRA determination.",
+   "def_zh": "美國農藥法。因為 ACC deaminase 會降低乙烯，主管機關可能視它為植物生長調節劑。計畫是向 EPA 申請「非 FIFRA」認定。",
+   "cat": "law",
+   "src": "laws-and-regulations"
+  },
+  {
+   "term": "Organic eligibility vs containment",
+   "kw_en": [
+    "GMO products excluded",
+    "membrane not enough",
+    "certifier decides"
+   ],
+   "kw_zh": [
+    "GMO 產物被排除",
+    "膜不足以解決",
+    "由驗證機構決定"
+   ],
+   "def_en": "Organic standards in Taiwan, the US, the EU and Malaysia restrict inputs made with genetic engineering, regardless of whether live cells remain. Retaining the bacteria does not by itself make the product organic.",
+   "def_zh": "臺灣、美國、歐盟與馬來西亞的有機標準限制以基因工程製成的投入物，不管有沒有活菌殘留。把細菌擋住本身不會讓產品變成有機。",
+   "cat": "law",
+   "src": "laws-and-regulations"
+  },
+  {
+   "term": "Expansion scoring (40-point)",
+   "kw_en": [
+    "8 criteria",
+    "tiers 24 and 18",
+    "knockout caps"
+   ],
+   "kw_zh": [
+    "八項標準",
+    "24 與 18 分界",
+    "淘汰條件封頂"
+   ],
+   "def_en": "Eight scores (bioreactor, culture, output laws, farmland, farm size, entry ease, technology acceptance, deployment fit) summed to 40. Tier 1 is 24 or more. A positive-list knockout, as in the EU, caps the culture score at 1.",
+   "def_zh": "八項分數（反應器、菌株、產品法規、農地面積、農場規模、進入容易度、技術接受度、部署適合度）加總 40 分。24 分以上為第 1 級。如歐盟的正面表列淘汰會把菌株分數封頂在 1。",
+   "cat": "business",
+   "src": "laws-and-regulations"
+  },
+  {
+   "term": "Techno-economic analysis",
+   "kw_en": [
+    "cost per unit",
+    "break-even yield",
+    "not yet done"
+   ],
+   "kw_zh": [
+    "每單位成本",
+    "損益兩平產量",
+    "尚未完成"
+   ],
+   "def_en": "A calculation setting production and running cost against output to give cost per unit of protectant. The Biomanufacturing page says ReLEAF has only a hand-built prototype cost and has not done this analysis.",
+   "def_zh": "把生產與營運成本對照產出，算出每單位保護蛋白成本的分析。Biomanufacturing 頁說 ReLEAF 目前只有手工原型的成本，尚未做這項分析。",
+   "cat": "business",
+   "src": "biomanufacturing"
+  },
+  {
+   "term": "Cold chain",
+   "kw_en": [
+    "refrigerated storage",
+    "shipping",
+    "shelf life"
+   ],
+   "kw_zh": [
+    "冷藏儲存",
+    "運送",
+    "保存期限"
+   ],
+   "def_en": "Refrigerated storage and transport that a shipped biological needs. A protectant made on the farm never enters it, but every farm then needs its own machine, which is the trade ReLEAF's case rests on.",
+   "def_zh": "運送的生物製劑所需的冷藏儲存與運輸。在農場現做的保護蛋白不必進入冷鏈，但每個農場就需要自己的機器，ReLEAF 的論點正建立在這個取捨上。",
+   "cat": "business",
+   "src": "biomanufacturing"
+  },
+  {
+   "term": "AIoT (digital twin vs model vs shadow)",
+   "kw_en": [
+    "live data plus models",
+    "return to the vessel",
+    "a person approves"
+   ],
+   "kw_zh": [
+    "即時資料加模型",
+    "回饋到反應器",
+    "由人核准"
+   ],
+   "def_en": "AIoT: sensors and valves wired to a board that logs readings, with models fitted to the logs. A digital twin closes the loop back to the vessel; a shadow gets live data but needs a person to act. ReLEAF's loop is not yet closed.",
+   "def_zh": "AIoT：感測器和閥門接到會記錄讀值的板子，模型再用這些紀錄擬合。數位孿生會把結果回饋到反應器；數位影子有即時資料但需人來行動。ReLEAF 的迴路尚未閉合。",
+   "cat": "software",
+   "src": "software"
+  },
+  {
+   "term": "Arduino App Lab / Uno Q rig app",
+   "kw_en": [
+    "firmware holds interlocks",
+    "Python backend",
+    "browser UI"
+   ],
+   "kw_zh": [
+    "韌體負責聯鎖",
+    "Python 後端",
+    "瀏覽器介面"
+   ],
+   "def_en": "The software that runs the rig, ver. 4.13 with UI v6.2.2. Firmware on the microcontroller samples instruments and trips the pressure interlock; the Linux-side backend computes and logs; the browser interface holds no interlock.",
+   "def_zh": "控制反應器的軟體，版本 4.13、介面 v6.2.2。微控制器韌體取樣儀器並觸發壓力聯鎖；Linux 端後端負責計算與記錄；瀏覽器介面本身沒有聯鎖。",
+   "cat": "software",
+   "src": "digital-twin-app"
+  },
+  {
+   "term": "Persistence forecast / Kalman filter",
+   "kw_en": [
+    "no-change baseline",
+    "41% better at 2 h",
+    "weighs noise"
+   ],
+   "kw_zh": [
+    "假設不變的基準",
+    "2 小時好 41%",
+    "考慮雜訊"
+   ],
+   "def_en": "Persistence predicts the next value equals the last. The Kalman filter also weighs each reading against noise and a trend. It beat persistence by 41% at 2 h on run 4 but by 0% at 2 h on run 7.",
+   "def_zh": "持續性預測假設下一個值等於上一個。Kalman 濾波還會把每個讀值與雜訊和趨勢比較。在 run 4 的 2 小時預測好 41%，在 run 7 的 2 小時則好 0%。",
+   "cat": "model",
+   "src": "software"
+  },
+  {
+   "term": "Dead time and time constant (θ/τ)",
+   "kw_en": [
+    "delay over response",
+    "0.7 to 7.0",
+    "slow loop"
+   ],
+   "kw_zh": [
+    "延遲比反應時間",
+    "0.7 至 7.0",
+    "反應慢的迴路"
+   ],
+   "def_en": "Dead time θ is the total delay from sensing to effect, dominated by the 105 min CcaSR half-time. Time constant τ is the shell exchange time. The ratio says the loop is controllable but slow.",
+   "def_zh": "死區時間 θ 是從感測到產生效果的總延遲，由 105 分鐘的 CcaSR 半衰時間主導。時間常數 τ 是殼側交換時間。比值顯示迴路可控制但很慢。",
+   "cat": "model",
+   "src": "biomanufacturing"
+  },
+  {
+   "term": "Escape frequency and kill switch",
+   "kw_en": [
+    "below 1 in 10⁸",
+    "auxotrophy",
+    "planned, not built"
+   ],
+   "kw_zh": [
+    "低於 1/10⁸",
+    "營養缺陷",
+    "規劃中、未建造"
+   ],
+   "def_en": "Fraction of cells that survive outside containment. The Laws page plans biocontainment (auxotrophy or kill switch) with a target below 1 in 10⁸ cells, a commonly cited benchmark. None of this is built yet.",
+   "def_zh": "逃出隔離後仍存活的細胞比例。Laws 頁規劃生物阻隔（營養缺陷或自殺開關），目標低於每 10⁸ 個細胞 1 個，是常被引用的標準。目前都還沒建造。",
+   "cat": "biology",
+   "src": "laws-and-regulations"
+  },
+  {
+   "term": "DNPH assay vs ELISA (in the permeate)",
+   "kw_en": [
+    "amount vs activity",
+    "α-ketobutyrate",
+    "peaks six hours apart"
+   ],
+   "kw_zh": [
+    "數量對活性",
+    "α-酮丁酸",
+    "高峰差六小時"
+   ],
+   "def_en": "Anti-His ELISA counts ACC deaminase protein; DNPH measures its activity as α-ketobutyrate. In the 72 h run, ELISA peaked at 12 h and activity at 18 h, so protein appears before working enzyme.",
+   "def_zh": "anti-His ELISA 計算 ACC deaminase 蛋白量；DNPH 以 α-酮丁酸測活性。在 72 小時運轉中，ELISA 在 12 小時達高峰、活性在 18 小時，所以蛋白比有活性的酵素先出現。",
+   "cat": "assay",
+   "src": "results"
+  }
+ ],
+ "questions": [
+  {
+   "type": "fact",
+   "tier": "A",
+   "seat": "hw",
+   "backup": "wet2",
+   "pages": [
+    "biomanufacturing",
+    "software",
+    "results"
+   ],
+   "q_en": "What is the longest run your bioreactor has done, and which strain was in it?",
+   "q_zh": "你們的生物反應器最長跑了多久？當時用的是哪一株菌？",
+   "kw_en": [
+    "102.4 hours",
+    "strain 168",
+    "WB800 77 hours"
+   ],
+   "kw_zh": [
+    "102.4 小時",
+    "168 菌株",
+    "WB800 跑 77 小時"
+   ],
+   "a_en": "The longest run with a secreting strain was 102.4 hours, four days unattended, OD600 from 0.84 to 3.77, pressure steady within about 0.1 bar. That was Bacillus subtilis 168, not our production strain. With WB800 the longest clean run is 77 hours, reaching OD 3.34. Our wild-type run 3 lasted 434 hours, but it made no protein. We have not run WB800 beyond about three days.",
+   "a_zh": "有分泌蛋白的菌株，最長是 102.4 小時，無人看管四天，OD600 從 0.84 到 3.77，壓力穩定在約 0.1 bar 內。但那是 Bacillus subtilis 168，不是我們的生產菌株。WB800 最長的乾淨運轉是 77 小時，OD 到 3.34。野生型 run 3 跑了 434 小時，但它不產蛋白。WB800 我們還沒跑超過約三天。",
+   "trap_en": "Quoting 102.4 h as the WB800 production strain, or forgetting that the 434 h run was wild type with nothing secreted.",
+   "trap_zh": "把 102.4 小時說成是 WB800 生產菌株，或忘了 434 小時那次是野生型、沒有分泌任何蛋白。",
+   "basis": "like GEMS-Taiwan 2025 hardware: 'how scalable / when available' follow-up; strain provenance conflicts on the wiki (see gaps)"
+  },
+  {
+   "type": "fact",
+   "tier": "A",
+   "seat": "biz",
+   "backup": "ihp",
+   "pages": [
+    "laws-and-regulations",
+    "biomanufacturing"
+   ],
+   "q_en": "Which laws would apply to ReLEAF in Taiwan, and has any authority told you yes?",
+   "q_zh": "ReLEAF 在臺灣會適用哪些法規？有沒有任何主管機關跟你們說可以？",
+   "kw_en": [
+    "three components",
+    "Fertilizer Management Act",
+    "no written yes"
+   ],
+   "kw_zh": [
+    "三個部分",
+    "肥料管理法",
+    "沒有書面同意"
+   ],
+   "a_en": "We split it into three parts. The cell-free permeate is aimed at the Fertilizer Management Act, where Taiwan lists plant growth auxiliary materials. The engineered culture needs a contained-use route, and we did not find a clear Taiwan framework. The bioreactor is equipment. No authority has confirmed any of this in writing; those checks are still marked no. We learned the routes from legal sources and Cheng Han Biotechnology.",
+   "a_zh": "我們把它拆成三部分。無細胞的透過液以肥料管理法為目標，臺灣的肥料種類有植物生長輔助劑類。工程菌需要封閉使用的路徑，但我們沒找到明確的臺灣架構。生物反應器則屬於設備。目前沒有任何主管機關以書面確認，這些檢查項目仍是否。這些路徑來自法規原文和正瀚生技的說明。",
+   "trap_en": "Saying 'we are registered' or 'it is approved'. Only potential pathways exist; none is an approval.",
+   "trap_zh": "說成「我們已經登記」或「已核准」。目前只有可能的路徑，沒有任何核准。",
+   "basis": "like Hardware bank 2025 'Where do you see your product in the greater market?'; pathway-not-approval finding on laws-and-regulations"
+  },
+  {
+   "type": "fact",
+   "tier": "A",
+   "seat": "hw",
+   "backup": "dry",
+   "pages": [
+    "biomanufacturing"
+   ],
+   "q_en": "How much medium does one of your modules use in a day, and how did you get that number?",
+   "q_zh": "你們一個模組一天用掉多少培養基？這個數字怎麼來的？",
+   "kw_en": [
+    "2 LMH design flux",
+    "0.96 L per day",
+    "computed not measured"
+   ],
+   "kw_zh": [
+    "設計通量 2 LMH",
+    "每天 0.96 L",
+    "計算而非實測"
+   ],
+   "a_en": "At the design flux of 2 liters per square meter per hour, our 200 square centimeter membrane passes 0.67 mL per minute, which is 0.96 liters a day, about ten turnovers of the 100 mL loop. It is arithmetic from the module geometry, not a measurement. Our actual runs drew permeate at 12 to 24 mL per minute, so the daily figure for those runs is higher.",
+   "a_zh": "設計通量是每平方公尺每小時 2 公升，我們 200 平方公分的膜每分鐘透過 0.67 mL，也就是一天 0.96 公升，約等於 100 mL 迴路換十次。這是由模組幾何算出來的，不是實測。實際運轉我們每分鐘取 12 到 24 mL 透過液，所以那些運轉的每日量比較高。",
+   "trap_en": "Presenting 0.96 L a day as what the runs used. The runs drew far more per minute.",
+   "trap_zh": "把每天 0.96 L 說成實際運轉用量。實際運轉每分鐘取得的量大得多。",
+   "basis": "like Hardware bank 'May I ask about the cost?' style number checks; calculation sheet of 23 Sept"
+  },
+  {
+   "type": "fact",
+   "tier": "A",
+   "seat": "dry",
+   "backup": "hw",
+   "pages": [
+    "digital-twin-app",
+    "software"
+   ],
+   "q_en": "What software actually runs your rig today?",
+   "q_zh": "現在實際控制你們反應器的是什麼軟體？",
+   "kw_en": [
+    "App Lab v4.13",
+    "firmware interlocks",
+    "person decides"
+   ],
+   "kw_zh": [
+    "App Lab v4.13",
+    "韌體聯鎖",
+    "由人決定"
+   ],
+   "a_en": "A single app built in Arduino App Lab, version 4.13 with interface v6.2.2, on the Uno Q board. Firmware on the microcontroller samples the sensors and holds the safety interlocks, including opening the pinch valve above 0.70 bar. A Python side computes OD, growth rate and pH control and logs everything. Run 7 used it for 77 hours. The models run afterwards on recorded data, and a person makes every decision.",
+   "a_zh": "是在 Arduino App Lab 做的一個 app，版本 4.13、介面 v6.2.2，跑在 Uno Q 板子上。微控制器上的韌體負責取樣感測器和所有安全聯鎖，包含壓力超過 0.70 bar 就打開夾管閥。Python 端計算 OD、生長率、控制 pH 並記錄所有資料。run 7 用它跑了 77 小時。模型是跑完之後用記錄資料分析，每個決定都由人做。",
+   "trap_en": "Saying the digital twin controls the reactor automatically, or that the newer browser twin is what is running the rig.",
+   "trap_zh": "說數位孿生會自動控制反應器，或說新的瀏覽器孿生在控制反應器。",
+   "basis": "like Bioreactors bank (Timmy): 'what does the digital twin still know if sensors are unplugged?'; INSA Lyon 2022 hardware-software link"
+  },
+  {
+   "type": "fact",
+   "tier": "B",
+   "seat": "biz",
+   "backup": "hw",
+   "pages": [
+    "biomanufacturing",
+    "entrepreneurship"
+   ],
+   "q_en": "What does one unit cost to build, and what would a farmer pay?",
+   "q_zh": "一台要花多少錢造？農民要付多少？",
+   "kw_en": [
+    "NT$83 028 prototype",
+    "US$5550 first year",
+    "US$90 refill"
+   ],
+   "kw_zh": [
+    "原型 NT$83 028",
+    "第一年 US$5550",
+    "補充匣 US$90"
+   ],
+   "a_en": "Our hand-built prototype cost NT$83 028, about US$2800: NT$52 578 for the bacterial kit and NT$30 450 for the bioreactor. For a farmer, the business plan prices one hectare at about US$5550 in year one, twice our cost, then about US$90 a year for a refill cartridge. We have not calculated cost per dose of protectant; that analysis is still to be done.",
+   "a_zh": "我們手工做的原型花了 NT$83 028，約 US$2800：菌種套組 NT$52 578，生物反應器 NT$30 450。對農民，商業計畫是一公頃第一年約 US$5550，是我們成本的兩倍，之後每年補充匣約 US$90。每劑保護蛋白的成本我們還沒算，那項分析還沒做。",
+   "trap_en": "Quoting the prototype cost as the price at volume. The wiki says it is a one-unit hand-built cost.",
+   "trap_zh": "把原型成本當成量產價格。wiki 明確說它是一台手工製作的成本。",
+   "basis": "like GEMS-Taiwan 2024 hardware: 'May I ask about the cost?'"
+  },
+  {
+   "type": "design",
+   "tier": "A",
+   "seat": "wet2",
+   "backup": "wet1",
+   "pages": [
+    "hardware-bioreactor",
+    "results",
+    "biomanufacturing"
+   ],
+   "q_en": "Why did you choose Bacillus subtilis WB800 as the production chassis?",
+   "q_zh": "為什麼選 Bacillus subtilis WB800 當生產宿主？",
+   "kw_en": [
+    "non-pathogenic secretor",
+    "168 lost product",
+    "WB800 no proteases"
+   ],
+   "kw_zh": [
+    "不致病的分泌者",
+    "168 產物被分解",
+    "WB800 缺蛋白酶"
+   ],
+   "a_en": "Good question. B. subtilis is non-pathogenic, easy to engineer, and secretes protein into the medium, so we never break the cells open. We started with strain 168, which grew well but made almost no detectable enzyme, probably because its own proteases chewed the product. WB800 lacks eight of those proteases. We did not run a head-to-head against E. coli or yeast, so I cannot claim it beats them.",
+   "a_zh": "好問題。B. subtilis 不致病、容易改造，又會把蛋白分泌到培養基，所以不必把細胞打破。我們一開始用 168，它長得很好但幾乎測不到酵素，可能是自己的蛋白酶把產物分解了。WB800 缺少八種這類蛋白酶。我們沒有和大腸桿菌或酵母做對照，所以不能說它比它們好。",
+   "trap_en": "Claiming it is better than E. coli or yeast. The wiki gives no such comparison.",
+   "trap_zh": "宣稱它比大腸桿菌或酵母好。wiki 裡沒有這種比較。",
+   "basis": "like Leiden 2022 biomanufacturing: 'what made E. coli the right chassis?'"
+  },
+  {
+   "type": "design",
+   "tier": "A",
+   "seat": "hw",
+   "backup": "wet2",
+   "pages": [
+    "biomanufacturing",
+    "hardware-bioreactor",
+    "results"
+   ],
+   "q_en": "Why secrete the protein instead of breaking the cells open and purifying it?",
+   "q_zh": "為什麼讓蛋白分泌出來，而不是把細胞打破再純化？",
+   "kw_en": [
+    "cells stay intact",
+    "membrane separates",
+    "no purification"
+   ],
+   "kw_zh": [
+    "細胞保持完整",
+    "膜負責分離",
+    "沒有純化"
+   ],
+   "a_en": "Secretion keeps the cells intact, so one culture keeps producing for days, and the same membrane that holds the cells lets the protein through. That is why the page says there is no downstream train. In our second integrated cycle, ELISA read about the same on both sides of the membrane. The limit is that the permeate is not purified. It still carries medium and small debris.",
+   "a_zh": "分泌讓細胞保持完整，同一批菌可以連續生產好幾天，而擋住細胞的同一片膜也讓蛋白通過，所以本頁說沒有下游純化流程。在第二輪整合運轉中，膜兩側的 ELISA 讀值差不多。限制是透過液沒有純化，還帶有培養基和小碎片。",
+   "trap_en": "Saying the membrane purifies the protein. It only separates cells from the liquid; lumen and shell read the same.",
+   "trap_zh": "說膜會純化蛋白。它只是把細胞和液體分開；內腔與殼側的讀值是一樣的。",
+   "basis": "like NUS 2021 biomanufacturing: 'why light control was worth the extra engineering' (design-justification pattern)"
+  },
+  {
+   "type": "design",
+   "tier": "A",
+   "seat": "hw",
+   "backup": "dry",
+   "pages": [
+    "biomanufacturing",
+    "hardware-bioreactor"
+   ],
+   "q_en": "Why a continuous perfusion loop instead of a normal batch fermenter?",
+   "q_zh": "為什麼用連續灌流迴路，而不是一般的批次發酵槽？",
+   "kw_en": [
+    "no harvest per cycle",
+    "membrane is containment",
+    "medium is the cost"
+   ],
+   "kw_zh": [
+    "不用每批收菌",
+    "膜兼具阻隔",
+    "培養基是代價"
+   ],
+   "a_en": "A batch fermenter harvests the cells after each cycle. Ours keeps the culture circulating and removes product continuously, so one culture supports repeated production, and the membrane doubles as containment. The cost is medium. Feeding cells at normal perfusion rates would take about 29 liters a day, which is the binding constraint for a unit left in a field for a week. We have not run that.",
+   "a_zh": "批次發酵槽每個循環結束就要收菌。我們讓培養持續循環、持續移出產物，同一批菌可以重複生產，而且膜同時是阻隔。代價是培養基。若用一般灌流的餵養量，每天約要 29 公升，這是無人看管放在田間一週時的限制。這個條件我們沒有實際跑過。",
+   "trap_en": "Selling perfusion as free. Medium supply for an unattended week is the stated binding constraint.",
+   "trap_zh": "把灌流說成沒有代價。無人看管一週的培養基供應是 wiki 明說的限制。",
+   "basis": "like NUS 2021 hardware: 'why build your own bioreactor instead of buying a benchtop fermenter, and what did you give up?'"
+  },
+  {
+   "type": "design",
+   "tier": "A",
+   "seat": "biz",
+   "backup": "hw",
+   "pages": [
+    "biomanufacturing",
+    "laws-and-regulations"
+   ],
+   "q_en": "Why did you design the system so that regulation treats it as three separate parts?",
+   "q_zh": "為什麼把系統設計成法規上看起來是三個獨立的部分？",
+   "kw_en": [
+    "equipment, culture, permeate",
+    "keep organism inside",
+    "function and claim"
+   ],
+   "kw_zh": [
+    "設備、菌液、透過液",
+    "生物留在機器內",
+    "功能與宣稱"
+   ],
+   "a_en": "Because each part raises a different question. The bioreactor is equipment, the engineered culture is a contained microorganism, and the cell-free permeate is classified by what it claims to do. Keeping the organism inside the machine gives the strain and the product two independent paths. The limit: containment does not decide the product's classification, and our proof of containment is two single platings without replicates.",
+   "a_zh": "因為每個部分會引發不同的法規問題。生物反應器是設備，工程菌是封閉使用的微生物，無細胞的透過液則依它宣稱的功能分類。把生物留在機器內，菌株和產品就有兩條獨立的路徑。限制是阻隔本身不能決定產品的分類，而且我們的阻隔證據只是兩次沒有重複的單次塗盤。",
+   "trap_en": "Implying containment alone settles classification or approval. The wiki says it does not.",
+   "trap_zh": "暗示光靠阻隔就能決定分類或核准。wiki 明說不能。",
+   "basis": "regulation-as-design pattern on laws-and-regulations (function, claim, classification, requirement, market access)"
+  },
+  {
+   "type": "design",
+   "tier": "B",
+   "seat": "hw",
+   "backup": "biz",
+   "pages": [
+    "biomanufacturing"
+   ],
+   "q_en": "Why do you scale out by copying units instead of building a bigger reactor?",
+   "q_zh": "為什麼用複製單元的方式擴大，而不是蓋一台更大的反應器？",
+   "kw_en": [
+    "replicate known unit",
+    "linear scale-up",
+    "same fiber length"
+   ],
+   "kw_zh": [
+    "複製已知單元",
+    "線性放大",
+    "相同纖維長度"
+   ],
+   "a_en": "Scaling up one vessel means re-establishing oxygen supply, mixing, heat removal and membrane area at the new size. Copying a unit keeps every module at conditions we have already characterised. Tangential-flow filtration has a formal linear method for this, carried 400-fold in the literature, and a lab hollow-fiber module has the same fiber length as an industrial one. Our eight-module table is arithmetic, not a build.",
+   "a_zh": "放大單一容器，要在新尺寸重新確立氧氣供應、混合、散熱和膜面積。複製單元則讓每個模組都維持在我們已經了解的條件。切向流過濾有正式的線性放大方法，文獻中曾放大 400 倍，而且實驗室的中空纖維模組與工業用的纖維長度相同。我們的八模組表只是計算，不是實際建造。",
+   "trap_en": "Saying we tested eight modules. The table is a calculation from one module.",
+   "trap_zh": "說我們測試過八個模組。那張表是從一個模組推算的。",
+   "basis": "like GEMS-Taiwan 2024 hardware: 'How could you scale this?'; BNUZH/BWYA 2025 scale-up questions"
+  },
+  {
+   "type": "validate",
+   "tier": "A",
+   "seat": "wet2",
+   "backup": "hw",
+   "pages": [
+    "results",
+    "biomanufacturing",
+    "safety-and-security"
+   ],
+   "q_en": "How do you know the engineered cells stay behind the membrane?",
+   "q_zh": "你們怎麼知道工程菌被擋在膜後面？",
+   "kw_en": [
+    "lumen grew, shell clean",
+    "single plating",
+    "no detection limit"
+   ],
+   "kw_zh": [
+    "內腔長、殼側乾淨",
+    "單次塗盤",
+    "沒有偵測極限"
+   ],
+   "a_en": "We plated medium from both sides of the running bioreactor. After 24 hours at 37 degrees the lumen plate grew and the shell side showed no colonies, which fits cells larger than the 0.2 micron pores. Honestly, each test was a single plating with no replicates, the detection limit was not recorded, and no log reduction was measured. A seven-log retention challenge is planned, not done.",
+   "a_zh": "我們把運轉中反應器兩側的培養液都塗盤。37 度 24 小時後，內腔那盤有長，殼側沒有菌落，與細胞比 0.2 微米孔徑大一致。老實說，每次測試都只塗一次、沒有重複，偵測極限沒有記錄，也沒量測對數減少值。七個對數的阻留挑戰測試是計畫，還沒做。",
+   "trap_en": "Saying 'proved zero escape'. It is preliminary evidence from two unreplicated platings.",
+   "trap_zh": "說「證明零逃逸」。這只是兩次沒有重複的塗盤得到的初步證據。",
+   "basis": "like Munich 2025: replicates?; CH Biotech warning on 'undeniable proof'"
+  },
+  {
+   "type": "validate",
+   "tier": "A",
+   "seat": "wet2",
+   "backup": "dry",
+   "pages": [
+    "results"
+   ],
+   "q_en": "How do you know the protein in the permeate is active and not just present?",
+   "q_zh": "你們怎麼知道透過液裡的蛋白是有活性的，而不只是存在？",
+   "kw_en": [
+    "ELISA amount",
+    "DNPH activity",
+    "six hour lag"
+   ],
+   "kw_zh": [
+    "ELISA 量",
+    "DNPH 活性",
+    "落後六小時"
+   ],
+   "a_en": "We ran two assays on the same shell samples. Anti-His ELISA counts the protein; the DNPH assay measures the product alpha-ketobutyrate, so it shows activity. In the 72 hour run, ELISA peaked near 6.5 micrograms per mL at 12 hours, activity stayed near zero until 18 hours, then held. The limits are single samples per time point and an untested explanation, that the enzyme needs time to mature.",
+   "a_zh": "我們對同一批殼側樣品做兩種分析。anti-His ELISA 計算蛋白量；DNPH 測產物 α-酮丁酸，所以代表活性。在 72 小時運轉中，ELISA 在 12 小時達高峰約 6.5 µg/mL，活性到 18 小時前都接近零，之後維持。限制是每個時間點只有單一樣品，而且「酵素需要時間成熟」這個解釋還沒測試。",
+   "trap_en": "Treating ELISA concentration as proof of function. The two peaks are six hours apart.",
+   "trap_zh": "把 ELISA 濃度當成有功能的證明。兩個高峰差了六小時。",
+   "basis": "like Great Bay 2025 model: enzyme activity and production levels; Munich 2025 measurement"
+  },
+  {
+   "type": "validate",
+   "tier": "A",
+   "seat": "hw",
+   "backup": "dry",
+   "pages": [
+    "software",
+    "biomanufacturing",
+    "results"
+   ],
+   "q_en": "How do you know the membrane is not fouling during a run?",
+   "q_zh": "你們怎麼知道運轉時膜沒有被堵塞？",
+   "kw_en": [
+    "TMP trend",
+    "permeability halved",
+    "trend not single reading"
+   ],
+   "kw_zh": [
+    "跨膜壓差趨勢",
+    "通透性減半",
+    "看趨勢不是單點"
+   ],
+   "a_en": "We read it from the pressure trend. In run 7 the extra pressure across the membrane rose only from 1.9 to 4.4 kPa over 77 hours, though permeability halved from 2520 to 1210 liters per square meter per hour per bar. Shear from the pressure sensors and the flow meter agrees to 2.8 percent. Our transducers resolve only plus or minus 10 kPa, so we read trends, and a finer sensor is the cheapest upgrade.",
+   "a_zh": "我們用壓力趨勢判斷。run 7 在 77 小時內膜的額外壓差只從 1.9 升到 4.4 kPa，不過通透性從 2520 降到 1210 LMH/bar，減半。由壓力感測器和流量計算出的剪切率相差 2.8%。我們的壓力傳感器解析度只有正負 10 kPa，所以看趨勢，換更精細的感測器是最便宜的升級。",
+   "trap_en": "Quoting a kPa trend without admitting it is smaller than the sensor resolution the wiki states.",
+   "trap_zh": "講出 kPa 趨勢，卻沒承認它比 wiki 寫的感測器解析度還小。",
+   "basis": "like Hardware bank: 'how did you validate against a commercial instrument?' pattern"
+  },
+  {
+   "type": "validate",
+   "tier": "B",
+   "seat": "dry",
+   "backup": "hw",
+   "pages": [
+    "software",
+    "results"
+   ],
+   "q_en": "Your forecast model beat a baseline. How do you know it was not just fitted to its own data?",
+   "q_zh": "你們的預測模型贏過基準線。你們怎麼知道它不是只對自己的資料過擬合？",
+   "kw_en": [
+    "registered 1 October",
+    "0.286 inside interval",
+    "run 7 0% at 2 h"
+   ],
+   "kw_zh": [
+    "10 月 1 日登記",
+    "0.286 落在區間內",
+    "run 7 的 2 小時是 0%"
+   ],
+   "a_en": "For the growth rate we wrote the prediction down on 1 October, before any WB800 bioreactor run: 0.2986 per hour, interval 0.2705 to 0.3300. Run 6 gave 0.286, inside it. For the Kalman forecast, it beat the no-change baseline by 41 percent at 2 hours on run 4, but 0 percent at 2 hours on run 7. Only the growth rate was scored; curve shape and time to OD 0.5 were not.",
+   "a_zh": "生長率這一項，我們在 10 月 1 日、任何 WB800 生物反應器運轉之前就先寫下預測：每小時 0.2986，區間 0.2705 到 0.3300。run 6 的結果是 0.286，落在區間內。Kalman 預測在 run 4 的 2 小時比不變基準好 41%，但在 run 7 的 2 小時是 0%。只有生長率有評分，曲線形狀和達到 OD 0.5 的時間沒有評分。",
+   "trap_en": "Quoting only the 41 percent. Run 7 showed 0 percent at 2 hours.",
+   "trap_zh": "只講 41%。run 7 在 2 小時是 0%。",
+   "basis": "like Munich 2025: replicates / held-out test; registered-prediction pattern on software"
+  },
+  {
+   "type": "compare",
+   "tier": "A",
+   "seat": "biz",
+   "backup": "ihp",
+   "pages": [
+    "biomanufacturing",
+    "hardware-bioreactor",
+    "laws-and-regulations",
+    "geospatial-analysis"
+   ],
+   "q_en": "Why not make the protectant in a factory and sell it in a bottle, like Kelpak?",
+   "q_zh": "為什麼不在工廠生產、裝瓶賣，像 Kelpak 那樣？",
+   "kw_en": [
+    "no cold chain",
+    "fresh known dose",
+    "every farm needs a machine"
+   ],
+   "kw_zh": [
+    "免冷鏈",
+    "新鮮、劑量已知",
+    "每個農場要一台機器"
+   ],
+   "a_en": "A bottle needs cold storage and shipping, and peptides can lose potency before use. Made on the farm, the protectant is fresh and the dose is known. Our parcel-level map found that even same-county fertilizer deliveries travel real road distances. The honest trade is that every farm needs its own machine, and we have not computed cost per dose against what farmers buy today. The pilot of five to ten units is meant to answer that.",
+   "a_zh": "瓶裝要冷藏和運送，胜肽可能在使用前就失去效力。在農場現做，保護蛋白是新鮮的，劑量也清楚。我們的地籍級地圖發現，連同縣市的肥料配送都要走實際的路程。誠實的取捨是每個農場都要有自己的機器，而且我們還沒算出每劑成本來和農民現在買的東西比較。五到十台的試點就是要回答這件事。",
+   "trap_en": "Claiming on-site is cheaper. The page says that comparison is not yet computed.",
+   "trap_zh": "宣稱現場生產比較便宜。本頁明說這個比較還沒算。",
+   "basis": "like Hardware bank 2025: 'What is your cost advantage?' and Toulouse 2021 biomanufacturing: 'cheap synthetic alternatives already exist'"
+  },
+  {
+   "type": "compare",
+   "tier": "A",
+   "seat": "hw",
+   "backup": "biz",
+   "pages": [
+    "hardware-bioreactor",
+    "laws-and-regulations"
+   ],
+   "q_en": "Why not just put the engineered bacteria on the roots? That would be simpler than a machine.",
+   "q_zh": "為什麼不直接把工程菌放在根部？那樣比做一台機器簡單。",
+   "kw_en": [
+    "first design was root bacteria",
+    "release cannot be controlled",
+    "containment problem"
+   ],
+   "kw_zh": [
+    "最初設計是根部細菌",
+    "釋放後無法控制",
+    "轉成阻隔問題"
+   ],
+   "a_en": "That was our first design, a transgenic root bacterium. We dropped it for biosafety: once released, expression, dose and spread cannot be controlled. Also, lab B. subtilis lacks motility and biofilm, so it would struggle in soil anyway. Keeping the organism in a machine turns a release problem into a containment problem. The cost is a machine per farm, and the law pages treat direct application as a different, harder question.",
+   "a_zh": "那是我們最初的設計，一種轉殖的根部細菌。我們因為生物安全放棄：一旦釋放，表現量、劑量和擴散都無法控制。另外，實驗室的 B. subtilis 沒有運動力、不能形成生物膜，在土壤裡本來就很難存活。把生物留在機器裡，是把釋放問題變成阻隔問題。代價是每個農場要一台機器，而且法規頁把直接施用視為另一個更難的問題。",
+   "trap_en": "Forgetting that the root-colonising design was ReLEAF's own first idea and was dropped on purpose.",
+   "trap_zh": "忘了根部定殖是 ReLEAF 自己最初的點子，而且是刻意放棄的。",
+   "basis": "like NUS 2021 biomanufacturing: field validation before farmer use; design-history from hardware-bioreactor 2.1"
+  },
+  {
+   "type": "compare",
+   "tier": "A",
+   "seat": "biz",
+   "backup": "ihp",
+   "pages": [
+    "laws-and-regulations",
+    "biomanufacturing"
+   ],
+   "q_en": "How does your regulatory position in the EU compare with Taiwan?",
+   "q_zh": "你們在歐盟和臺灣的法規處境有什麼不同？",
+   "kw_en": [
+    "EU has PFC 6(B)",
+    "B. subtilis not on list",
+    "Taiwan contained use unresolved"
+   ],
+   "kw_zh": [
+    "歐盟有 PFC 6(B)",
+    "枯草桿菌不在名單",
+    "臺灣封閉使用未確認"
+   ],
+   "a_en": "The EU gives a clear category for the cell-free output: non-microbial plant biostimulants, PFC 6(B), which includes abiotic stress tolerance. But its microbial list holds four groups and B. subtilis is not one, so our culture scores 1 out of 5 there. In Taiwan a fertilizer category exists, but we found no clear contained-use framework, and WB800 is unlikely to be on the 16-strain list. In both, we have only potential pathways.",
+   "a_zh": "歐盟對無細胞產物有明確類別：非微生物植物生物刺激素 PFC 6(B)，包含非生物逆境耐受性。但它的微生物名單只有四類，枯草桿菌不在內，所以我們的菌株在那裡得 1/5。臺灣有肥料類別，但我們找不到明確的封閉使用架構，而且 WB800 不太可能在 16 株名單內。兩邊我們都只有可能的路徑。",
+   "trap_en": "Saying the EU is easier. The output route is clear, the culture is knocked out.",
+   "trap_zh": "說歐盟比較容易。產品路線清楚，但菌株被淘汰。",
+   "basis": "Table 6 and Table 10 comparison on laws-and-regulations; like Hardware bank 'market' questions"
+  },
+  {
+   "type": "compare",
+   "tier": "B",
+   "seat": "hw",
+   "backup": "dry",
+   "pages": [
+    "biomanufacturing"
+   ],
+   "q_en": "Why a hollow-fiber module rather than a stirred tank with a filter on the side?",
+   "q_zh": "為什麼用中空纖維模組，而不是旁邊接濾膜的攪拌槽？",
+   "kw_en": [
+    "formal scale-out method",
+    "same fiber length",
+    "no gas port"
+   ],
+   "kw_zh": [
+    "有正式水平複製方法",
+    "相同纖維長度",
+    "沒有氣體埠"
+   ],
+   "a_en": "Tangential-flow filtration has a formal method for scaling, and hollow fiber suits it: a lab module has the same fiber length as an industrial one, so our module is the unit cell to copy. That is why we picked it over a stirred tank. What we gave up is oxygen. A stirred tank can sparge; our closed loop has no gas port, so oxygen limits cell density first. We calculate a transfer rate of 12.5 per hour is needed at OD 1.454.",
+   "a_zh": "切向流過濾有正式的放大方法，中空纖維很適合：實驗室模組的纖維長度與工業用的相同，所以我們的模組就是要複製的單元。這就是選它而不選攪拌槽的原因。我們放棄的是氧氣。攪拌槽可以通氣；我們的封閉迴路沒有氣體埠，所以氧氣最先限制細胞密度。我們計算在 OD 1.454 時需要每小時 12.5 的氧傳遞率 (kLa)。",
+   "trap_en": "Saying hollow fiber is better in general. The wiki chose it for the scale-out method and accepts an oxygen limit.",
+   "trap_zh": "說中空纖維整體比較好。wiki 是為了水平複製方法而選它，並接受氧氣限制。",
+   "basis": "like NUS 2021 hardware: 'what did you give up?'"
+  },
+  {
+   "type": "compare",
+   "tier": "A",
+   "seat": "biz",
+   "backup": "ihp",
+   "pages": [
+    "laws-and-regulations"
+   ],
+   "q_en": "The United States scored higher than the Philippines. Why go to the Philippines first?",
+   "q_zh": "美國的分數比菲律賓高，為什麼先去菲律賓？",
+   "kw_en": [
+    "US 32, Philippines 25",
+    "entry ease 1 of 5",
+    "names engineered organisms"
+   ],
+   "kw_zh": [
+    "美國 32、菲律賓 25",
+    "進入容易度 1/5",
+    "明文處理工程生物"
+   ],
+   "a_en": "The US ranks first at 32 points but scores 1 out of 5 on entry ease: it is about 12 650 kilometers away, has two overlapping regimes, no federal biostimulant definition, and a risk ACCD is read as a plant growth regulator. The Philippines scores 25, the only Asian market naming engineered organisms in its fertilizer system, with provisional registration after one season. The scoring is our own qualitative synthesis, and no regulator has confirmed anything in writing.",
+   "a_zh": "美國以 32 分排第一，但進入容易度只有 1/5：距離約 12 650 公里、有兩套重疊的制度、沒有聯邦層級的生物刺激素定義，而且 ACCD 可能被視為植物生長調節劑。菲律賓 25 分，是亞洲唯一在肥料制度中明文處理工程生物的市場，一季之後可有暫時登記。這個評分是我們自己的質性整理，沒有主管機關書面確認。",
+   "trap_en": "Hiding that the Philippines has very small farms (0.79 ha average) and scored low on market size.",
+   "trap_zh": "不提菲律賓農場很小（平均 0.79 公頃）、市場規模分數低。",
+   "basis": "like Hardware bank 2025: 'What is your go-to-market strategy?'; Table 7 on laws-and-regulations"
+  },
+  {
+   "type": "boundary",
+   "tier": "A",
+   "seat": "biz",
+   "backup": "ihp",
+   "pages": [
+    "laws-and-regulations",
+    "geospatial-analysis",
+    "biomanufacturing"
+   ],
+   "q_en": "Could organic farmers use ReLEAF, since no engineered bacteria reach the field?",
+   "q_zh": "既然工程菌不會進到田裡，有機農民能用 ReLEAF 嗎？",
+   "kw_en": [
+    "GMO products excluded",
+    "membrane not enough",
+    "likely closed"
+   ],
+   "kw_zh": [
+    "GMO 產物被排除",
+    "膜不夠",
+    "很可能不行"
+   ],
+   "a_en": "Probably not, and we say so. Taiwan's Organic Agriculture Promotion Act excludes products of genetically modified organisms whatever the containment, and the US, EU and Malaysia are similar. Certified organic is about 3.7 percent of cultivated land. Our membrane keeps cells out of the product, but that does not change how the protein was made. We would need written answers from the Ministry and a certifier before any organic claim.",
+   "a_zh": "大概不行，我們也這樣說。臺灣的有機農業促進法排除基因改造生物的產物，不管有沒有阻隔，美國、歐盟和馬來西亞也類似。認證有機約佔耕地 3.7%。我們的膜讓細胞不進入產品，但不會改變蛋白是怎麼製成的。要做有機宣稱前，我們需要農業部和驗證機構的書面回覆。",
+   "trap_en": "Repeating the Biomanufacturing line that the reactor was built around organic claims, without the Laws page caveat.",
+   "trap_zh": "照念 Biomanufacturing 頁「反應器為有機宣稱而設計」那句，卻不提 Laws 頁的但書。",
+   "basis": "conflict between biomanufacturing#Regulation and biosafety and laws-and-regulations#Organic Farming; like Science-Tokyo 2025 'farmer adoption'"
+  },
+  {
+   "type": "boundary",
+   "tier": "A",
+   "seat": "hw",
+   "backup": "biz",
+   "pages": [
+    "results",
+    "biomanufacturing",
+    "safety-and-security"
+   ],
+   "q_en": "What happens if the membrane tears or a fitting leaks and nobody is at the farm?",
+   "q_zh": "如果膜破了或接頭漏了，而農場沒有人，會怎麼樣？",
+   "kw_en": [
+    "pressure trip 0.70 bar",
+    "droplet sensor",
+    "pressure alone missed a leak"
+   ],
+   "kw_zh": [
+    "壓力跳脫 0.70 bar",
+    "液滴感測器",
+    "只看壓力漏掉了洩漏"
+   ],
+   "a_en": "Three safeguards exist: the microcontroller opens the pinch valve above 0.70 bar, pressure and flow are logged, and a droplet sensor sits under the rig. But in our own run a leak at a feeding valve raised lumen pressure instead of dropping it, with transmembrane pressure unchanged, so pressure alone missed it. We concluded a dedicated leak detector is needed for unattended use. A membrane-integrity alarm is designed on the Laws page, not built.",
+   "a_zh": "有三道防護：微控制器在壓力超過 0.70 bar 時打開夾管閥、持續記錄壓力和流量、機器下方有液滴感測器。但在我們自己的運轉中，進料閥洩漏反而讓內腔壓力上升，跨膜壓差沒變，所以只看壓力漏掉了。我們的結論是無人看管需要專用的洩漏偵測器。膜完整性警報在 Laws 頁是設計，還沒建造。",
+   "trap_en": "Saying pressure monitoring detects leaks. Our own leak event showed it does not on its own.",
+   "trap_zh": "說壓力監測可以偵測洩漏。我們自己的洩漏事件顯示單靠它做不到。",
+   "basis": "like NUS 2021 hardware: contamination / failure handling; Results 'Pressure and sampling'"
+  },
+  {
+   "type": "boundary",
+   "tier": "A",
+   "seat": "hw",
+   "backup": "dry",
+   "pages": [
+    "biomanufacturing"
+   ],
+   "q_en": "Could one unit run a week in a field with no one looking after it?",
+   "q_zh": "一台機器可以在田裡一週無人照顧嗎？",
+   "kw_en": [
+    "4 days at bench",
+    "medium, oxygen, power",
+    "duty-cycle pump"
+   ],
+   "kw_zh": [
+    "實驗室跑過 4 天",
+    "培養基、氧氣、電力",
+    "間歇運轉幫浦"
+   ],
+   "a_en": "Not yet. Our longest unattended run was about four days, and in an incubator, not a field. Three things bind: medium, since conventional feeding would need about 29 liters a day; oxygen, where the 100 mL loop runs out in about two minutes if transfer stops; and power, since a 45 watt panel gives 101 watt-hours against a 72 to 192 draw. Running the pump on a duty cycle is the first experiment, and settling in the fibers is unmeasured.",
+   "a_zh": "還不行。我們最長的無人看管運轉約四天，而且是在培養箱不是田裡。有三件事是限制：培養基，一般餵養法每天約要 29 公升；氧氣，氧傳遞一中斷 100 mL 迴路約兩分鐘就用完；電力，45 瓦面板一天 101 瓦時，而需求是 72 到 192。讓幫浦間歇運轉是第一個要做的實驗，纖維內沉降的問題還沒量測。",
+   "trap_en": "Claiming field readiness because of the 102 hour run. It was on a bench in an incubator.",
+   "trap_zh": "因為跑過 102 小時就說可以上田。那是在培養箱內的實驗桌上。",
+   "basis": "like BNUZH/BWYA 2025 hardware: 'do you plan to upscale / when available?'; NUS 2021 'what to validate before farm use'"
+  },
+  {
+   "type": "boundary",
+   "tier": "B",
+   "seat": "dry",
+   "backup": "hw",
+   "pages": [
+    "software",
+    "next-digital-twin",
+    "digital-twin-app"
+   ],
+   "q_en": "Could your digital twin switch on the green light by itself?",
+   "q_zh": "你們的數位孿生可以自己打開綠光嗎？",
+   "kw_en": [
+    "light not in bioreactor",
+    "recorded data only",
+    "person approves"
+   ],
+   "kw_zh": [
+    "綠光還沒裝進反應器",
+    "只用記錄資料",
+    "由人核准"
+   ],
+   "a_en": "No. Green light was tested on the light-programmable array only and is not built into the bioreactor. The models run on recorded data after each run, and a person approves any induction. The assays cannot yet set how long to induce. The newer browser twin, with a weather tab and an Ask tab, shows demo data on the wiki and is not driving the rig. It can explain readings but cannot move a valve or the light.",
+   "a_zh": "不行。綠光只在光控陣列上測試過，還沒裝進生物反應器。模型是每次運轉後用記錄資料分析，任何誘導都由人核准。分析方法目前還無法決定誘導多久。新的瀏覽器孿生有天氣分頁和 Ask 分頁，在 wiki 上顯示的是示範資料，沒有在控制反應器；它能解釋讀值，但不能操作閥門或燈。",
+   "trap_en": "Presenting the next Digital Twin as a working controller.",
+   "trap_zh": "把下一版數位孿生說成正在運作的控制器。",
+   "basis": "like Bioreactors bank (Timmy): 'what does the digital twin still know?'; INSA Lyon 2022 hardware-software integration"
+  },
+  {
+   "type": "boundary",
+   "tier": "A",
+   "seat": "biz",
+   "backup": "dry",
+   "pages": [
+    "laws-and-regulations"
+   ],
+   "q_en": "What if a regulator decides your permeate is a pesticide and not a biostimulant?",
+   "q_zh": "如果主管機關認定你們的透過液是農藥而不是生物刺激素呢？",
+   "kw_en": [
+    "the claim decides",
+    "gray mold track separate",
+    "ACCD as growth regulator"
+   ],
+   "kw_zh": [
+    "宣稱決定分類",
+    "灰黴病路線另外處理",
+    "ACCD 被當成生長調節劑"
+   ],
+   "a_en": "The claim decides the route. Abiotic stress claims point to fertilizer or biostimulant; a pathogen-control claim, such as BoPep4 against gray mold after the Jamboree, may trigger a separate pesticide path with efficacy, toxicology and residue studies. In the US, ACCD might be read as a plant growth regulator, so we would ask the EPA for a non-FIFRA determination. Our market ranking does not cover the pesticide path at all.",
+   "a_zh": "宣稱決定路線。非生物逆境宣稱指向肥料或生物刺激素；防治病原的宣稱，例如 Jamboree 之後 BoPep4 對抗灰黴病，可能觸發另一條農藥路徑，需要藥效、毒理和殘留研究。在美國，ACCD 可能被視為植物生長調節劑，所以我們會向 EPA 申請非 FIFRA 認定。我們的市場排序完全沒有涵蓋農藥路徑。",
+   "trap_en": "Saying gray mold control is already part of the project. It is a post-Jamboree research idea; high school teams could not test it.",
+   "trap_zh": "說防治灰黴病已經是專題的一部分。那是 Jamboree 之後的研究想法；高中組無法測試。",
+   "basis": "Dual-track strategy on laws-and-regulations; like Science-Tokyo 2025 farmer adoption / regulation probes"
+  },
+  {
+   "type": "integrate",
+   "tier": "A",
+   "seat": "dry",
+   "backup": "hw",
+   "pages": [
+    "software",
+    "results"
+   ],
+   "q_en": "Give an example where a failure in the reactor changed your software or your hardware.",
+   "q_zh": "請舉一個反應器出問題而改變你們軟體或硬體的例子。",
+   "kw_en": [
+    "run 5 bubbles",
+    "acceptance gate",
+    "permeate halved"
+   ],
+   "kw_zh": [
+    "run 5 氣泡",
+    "接受閘門",
+    "透過液減半"
+   ],
+   "a_en": "Run 5 broke down after about ten hours: bubbles in a sixth of the measurement windows and the reference beam drifting 4.8-fold. For run 6 we halved the permeate flow to 12 mL per minute and added an acceptance gate that holds the last good value when a reading fails its checks. Run 6 read cleanly to OD 2.71 and run 7 to 3.34. Earlier, the 434 hour failure of the photometer is what trained the fault detector.",
+   "a_zh": "run 5 約十小時後就壞了：六分之一的量測視窗有氣泡，參考光束漂移 4.8 倍。run 6 我們把透過液流量減半到每分鐘 12 mL，並加上接受閘門，讀值沒通過檢查就保留上一個好的值。run 6 乾淨地讀到 OD 2.71，run 7 讀到 3.34。更早之前，434 小時那次光度計的故障，就是訓練故障偵測器的資料。",
+   "trap_en": "Saying the fix was only software. Two changes: lower permeate flow and the acceptance gate.",
+   "trap_zh": "說只改了軟體。其實是兩個改變：降低透過液流量，加上接受閘門。",
+   "basis": "like INSA Lyon 2022 hardware: 'how do hardware and software work together?'; Munich 2025 model-lab loop"
+  },
+  {
+   "type": "integrate",
+   "tier": "A",
+   "seat": "biz",
+   "backup": "hw",
+   "pages": [
+    "laws-and-regulations",
+    "safety-and-security"
+   ],
+   "q_en": "How did regulation change what you plan to build?",
+   "q_zh": "法規如何改變了你們打算建造的東西？",
+   "kw_en": [
+    "regulation as design",
+    "claims set evidence",
+    "planned containment upgrades"
+   ],
+   "kw_zh": [
+    "法規即設計",
+    "宣稱決定證據",
+    "規劃中的阻隔升級"
+   ],
+   "a_en": "We treat regulation as product design: the claim sets the evidence we must generate, and the three parts are assessed separately. Already built: a sealed replaceable culture cartridge, a pressure trip and a leak sensor. Planned after the Jamboree, not built: chromosomal integration with antibiotic markers removed, a kill switch or auxotrophy aiming below one escapee in 10 to the 8 cells, a seven-log retention test, and a membrane-integrity alarm.",
+   "a_zh": "我們把法規當成產品設計：宣稱決定我們要產生的證據，三個部分分開評估。已經建好的有：密封可更換的菌匣、壓力跳脫和洩漏感測器。Jamboree 之後規劃但還沒建造的有：把基因嵌入染色體並移除抗生素標記、目標低於每 10 的 8 次方個細胞逃出 1 個的自殺開關或營養缺陷、七個對數的阻留測試，以及膜完整性警報。",
+   "trap_en": "Describing planned containment upgrades (kill switch, 7-log test) as done.",
+   "trap_zh": "把規劃中的阻隔升級（自殺開關、七個對數測試）說成已完成。",
+   "basis": "Table 18 'Requirements ReLEAF has yet to conquer' on laws-and-regulations; Safety page"
+  },
+  {
+   "type": "integrate",
+   "tier": "B",
+   "seat": "dry",
+   "backup": "biz",
+   "pages": [
+    "model",
+    "entrepreneurship",
+    "biomanufacturing"
+   ],
+   "q_en": "How do your reactor numbers connect to the cost of protecting a hectare?",
+   "q_zh": "你們的反應器數字如何連到保護一公頃的成本？",
+   "kw_en": [
+    "dose sets reactor count",
+    "203 U vs 37.6 kU",
+    "not field validated"
+   ],
+   "kw_zh": [
+    "劑量決定反應器數量",
+    "203 U 對 37.6 kU",
+    "沒有田間驗證"
+   ],
+   "a_en": "The dose sets the number of reactors, and our two plans disagree by 185 times. The business plan assumes 203 units per hectare per spray and two 1 liter reactors. The Math Model scales a plate rate through a canopy factor to 37.6 kilo-units and 81 liters of vessel, costing US$3800 a hectare. Neither dose has been tested on a crop, so the business plan is not yet rebuilt on the Math Model figure.",
+   "a_zh": "劑量決定反應器數量，而我們兩份計畫相差 185 倍。商業計畫假設每公頃每次噴施 203 單位，用兩台 1 公升反應器。數學模型把培養皿的用量乘上冠層係數，得到 37.6 千單位和 81 公升容器，每公頃資本 US$3800。兩個劑量都沒在作物上測試過，所以商業計畫還沒有改用數學模型的數字重算。",
+   "trap_en": "Quoting one hectare figure as settled. The wiki flags the 185-fold disagreement itself.",
+   "trap_zh": "把其中一個每公頃數字當成定案。wiki 自己標示了這個 185 倍的差距。",
+   "basis": "entrepreneurship#Pricing model and model#Links to the bench; like Great Bay 2025 model-to-lab"
+  },
+  {
+   "type": "gap",
+   "tier": "A",
+   "seat": "wet2",
+   "backup": "hw",
+   "pages": [
+    "biomanufacturing",
+    "results",
+    "laws-and-regulations"
+   ],
+   "q_en": "What have you not shown about the permeate that a regulator would ask for?",
+   "q_zh": "關於透過液，有哪些法規單位會問、但你們還沒證明的？",
+   "kw_en": [
+    "viable cells with limit",
+    "residual DNA",
+    "7-log retention"
+   ],
+   "kw_zh": [
+    "含偵測極限的活菌數",
+    "殘留 DNA",
+    "七個對數阻留"
+   ],
+   "a_en": "Several things. We have no viable-cell count with a recorded detection limit, no residual recombinant DNA measurement, and no spore test. Fragments of 20 to 200 nanometers may cross a 0.2 micron membrane. Our retention evidence is two unreplicated platings. The Laws page plans a seven-log retention challenge and permeate release testing by plating and qPCR. What we did show is ELISA and DNPH activity in the shell for 72 hours.",
+   "a_zh": "有好幾項。我們沒有記錄偵測極限的活菌數、沒有殘留重組 DNA 的量測，也沒有孢子測試。20 到 200 奈米的碎片可能通過 0.2 微米的膜。我們的阻留證據只有兩次沒有重複的塗盤。Laws 頁計畫做七個對數的阻留挑戰，以及用塗盤和 qPCR 做透過液放行檢測。我們有做到的是殼側 72 小時的 ELISA 和 DNPH 活性。",
+   "trap_en": "Saying the permeate is sterile or DNA-free. Neither was measured.",
+   "trap_zh": "說透過液是無菌或不含 DNA。這兩項都沒量測。",
+   "basis": "CH Biotech 5 Sept 2026 quote; like Munich 2025 measurement limits"
+  },
+  {
+   "type": "gap",
+   "tier": "A",
+   "seat": "hw",
+   "backup": "dry",
+   "pages": [
+    "biomanufacturing",
+    "software"
+   ],
+   "q_en": "Your page says fouling headroom is 0.04, yet your runs drew much more permeate. Explain.",
+   "q_zh": "你們頁面說堵塞餘裕是 0.04，但實際運轉取的透過液多得多。請說明。",
+   "kw_en": [
+    "0.04 is the design point",
+    "runs 36-72 LMH",
+    "46 LMH threshold"
+   ],
+   "kw_zh": [
+    "0.04 是設計點",
+    "運轉 36 至 72 LMH",
+    "門檻 46 LMH"
+   ],
+   "a_en": "You are right to push. The 0.04 compares a 2 LMH design flux with a calculated 46 LMH threshold. Our runs drew 12 to 24 mL per minute, which is 36 to 72 LMH, and two of three were above 46. Fouling still stayed low, but the shell valve was opened intermittently, 90 collections in run 7, and we have not calculated the time-averaged flux. So 0.04 describes the design point, not those runs.",
+   "a_zh": "你問得對。0.04 是 2 LMH 的設計通量對上算出的 46 LMH 門檻。我們實際運轉每分鐘取 12 到 24 mL，也就是 36 到 72 LMH，三次中有兩次高於 46。堵塞仍然很低，但殼側閥門是間歇打開的，run 7 有 90 次收集，我們還沒算出時間平均通量。所以 0.04 描述的是設計點，不是那幾次運轉。",
+   "trap_en": "Defending 0.04 as if it applied to the runs.",
+   "trap_zh": "硬說 0.04 適用於那幾次運轉。",
+   "basis": "internal inconsistency: biomanufacturing#Critical flux vs software run table (72, 36, 51 LMH)"
+  },
+  {
+   "type": "gap",
+   "tier": "A",
+   "seat": "wet2",
+   "backup": "hw",
+   "pages": [
+    "results",
+    "hardware-bioreactor",
+    "software"
+   ],
+   "q_en": "What went wrong in your bioreactor work?",
+   "q_zh": "你們的生物反應器工作中，哪些地方出了問題？",
+   "kw_en": [
+    "168 made no enzyme",
+    "KOH corroded valve",
+    "leak and lost data"
+   ],
+   "kw_zh": [
+    "168 沒產酵素",
+    "KOH 腐蝕閥門",
+    "洩漏與資料遺失"
+   ],
+   "a_en": "Quite a lot. Strain 168 made almost no detectable enzyme. In cycle 4, 1 M potassium hydroxide corroded the feeding valve, so automated pH dosing was withdrawn; we could not separate it from the peroxide used for cleaning. A feeding valve leaked at about 37 hours. About ten hours of data were lost to a computer update. Run 5's photometer broke down after ten hours. Our AmilCP reporter never showed colour.",
+   "a_zh": "不少。168 菌株幾乎測不到酵素。第 4 輪中，1 M 氫氧化鉀腐蝕了進料閥，所以自動加鹼被撤掉；我們分不出是它還是清潔用的過氧化氫造成的。進料閥在約 37 小時漏了。約十小時的資料因電腦更新而遺失。run 5 的光度計十小時後就壞了。AmilCP 報告蛋白從來沒有顯色。",
+   "trap_en": "Hiding the corrosion cause. We could not tell KOH from peroxide.",
+   "trap_zh": "隱瞞腐蝕原因。我們分不出是 KOH 還是過氧化氫。",
+   "basis": "like Munich 2025: what failed; Results 'pH and antibiotic resupply'"
+  },
+  {
+   "type": "gap",
+   "tier": "A",
+   "seat": "biz",
+   "backup": "ihp",
+   "pages": [
+    "biomanufacturing",
+    "entrepreneurship",
+    "model"
+   ],
+   "q_en": "What is your cost per dose of protectant?",
+   "q_zh": "你們每一劑保護蛋白的成本是多少？",
+   "kw_en": [
+    "not computed",
+    "dose never tested on crop",
+    "payback 68 vs 4.9 years"
+   ],
+   "kw_zh": [
+    "還沒算",
+    "劑量未在作物測試",
+    "回收期 68 年對 4.9 年"
+   ],
+   "a_en": "We do not have one. The only cost we can stand behind is the hand-built prototype. The business plan prices per hectare from an assumed dose that no crop has received, and our Math Model gives a dose 185 times higher. Payback is 68 years on the Math Model's loss estimate and 4.9 years on the geospatial estimate. A techno-economic analysis and the five-to-ten unit pilot are what would give a real number.",
+   "a_zh": "我們沒有這個數字。唯一能負責的成本是手工原型。商業計畫是用一個沒有任何作物接受過的假設劑量，按公頃定價；數學模型算出的劑量則高 185 倍。回收期依數學模型的損失估計是 68 年，依地理空間估計是 4.9 年。技術經濟分析和五到十台的試點才能給出真正的數字。",
+   "trap_en": "Inventing a per-dose price. The wiki says none exists.",
+   "trap_zh": "編一個每劑價格。wiki 說沒有。",
+   "basis": "like Hardware bank 2025 'What is your cost advantage?'; Leiden 2023 'what specifically reduces the cost?'"
+  },
+  {
+   "type": "impact",
+   "tier": "A",
+   "seat": "biz",
+   "backup": "ihp",
+   "pages": [
+    "entrepreneurship",
+    "laws-and-regulations",
+    "biomanufacturing"
+   ],
+   "q_en": "What is your path to a first real farm, and what stops you today?",
+   "q_zh": "你們走到第一個真正農場的路徑是什麼？今天卡在哪裡？",
+   "kw_en": [
+    "classification first",
+    "membrane tests",
+    "5-10 pilot units"
+   ],
+   "kw_zh": [
+    "先釐清分類",
+    "膜阻留測試",
+    "五到十台試點"
+   ],
+   "a_en": "Regulators come first. From November 2026 we plan classification consultations with the Agriculture and Food Agency and APHIA, plus retention and escape testing at a government-recognised institute. A Taiwan pilot and dossier would follow, and five to ten units run one season with cooperatives before any sale. Today we have no written regulator answer, and Taiwan has no confirmed contained-use framework for our strain.",
+   "a_zh": "先處理法規。從 2026 年 11 月起，我們計畫向農糧署和防檢署諮詢分類，並在政府認可的機構做阻留與逃逸頻率測試。接著是臺灣試點和申請文件，賣出任何一台之前，先和合作社跑一季五到十台。目前我們沒有任何書面的主管機關回覆，臺灣對我們的菌株也沒有確認的封閉使用架構。",
+   "trap_en": "Skipping regulation and starting with sales. The plan sequences sales after written answers and a pilot.",
+   "trap_zh": "跳過法規直接談銷售。計畫是先有書面回覆和試點，才進入銷售。",
+   "basis": "like Hardware bank 2025: 'go-to-market' and 'funding / de-risk'; NUS 2021 'validate before a farmer could use it'"
+  },
+  {
+   "type": "impact",
+   "tier": "A",
+   "seat": "biz",
+   "backup": "ihp",
+   "pages": [
+    "model",
+    "geospatial-analysis",
+    "entrepreneurship"
+   ],
+   "q_en": "Can a Taiwanese smallholder afford this? 99 percent of farmers have under two hectares.",
+   "q_zh": "臺灣小農負擔得起嗎？99% 的農民農地都不到兩公頃。",
+   "kw_en": [
+    "shared ownership",
+    "4.3% of calendar",
+    "break-even 226 ha"
+   ],
+   "kw_zh": [
+    "共同擁有",
+    "只用 4.3% 的時間",
+    "損益兩平 226 公頃"
+   ],
+   "a_en": "Not individually. Our Math Model finds one ten-unit fleet covers 2.5 hectares yet runs on only 4.3 percent of the calendar, so a single farm owning one sits idle. Both our geospatial and math pages conclude a shared asset through a farmers' association is the only structure that works. We also list cooperative buying, seasonal rental and cartridge subscriptions. Those prices are planning estimates, and payback is unsettled.",
+   "a_zh": "個別農民負擔不起。數學模型發現一組十台的設備可涵蓋 2.5 公頃，但只用到 4.3% 的時間，單一農場擁有就是閒置。地理空間頁和數學頁都結論：透過農會共同擁有是唯一可行的結構。我們也列出合作社集體購買、季節租賃和補充匣訂閱。這些價格是規劃估計，回收期也還沒定論。",
+   "trap_en": "Promising a payback period. The two pages disagree: 68 years versus 4.9.",
+   "trap_zh": "保證一個回收期。兩個頁面不一致：68 年對 4.9 年。",
+   "basis": "like Science-Tokyo 2025 'support farmer adoption'; Tsinghua 2025 customer acquisition cost"
+  },
+  {
+   "type": "impact",
+   "tier": "A",
+   "seat": "hw",
+   "backup": "biz",
+   "pages": [
+    "biomanufacturing",
+    "model"
+   ],
+   "q_en": "If you scaled this a hundred times, what breaks first?",
+   "q_zh": "如果規模放大一百倍，什麼會最先出問題？",
+   "kw_en": [
+    "membrane binds last",
+    "oxygen, power, medium",
+    "41x for 100 ha"
+   ],
+   "kw_zh": [
+    "膜最後才受限",
+    "氧氣、電力、培養基",
+    "100 公頃要放大 41 倍"
+   ],
+   "a_en": "Not the membrane. Copying units keeps shear, flux and fouling margin the same by construction. What binds is everything around it: oxygen transfer per unit, power, which goes from 3 to 8 watts to 24 to 64 watts at eight modules, medium supply at 7.7 liters a day, and pumping. The Math Model says a 100 hectare association needs 8106 liters, a 41 times scale-up from our spec. None of this has been built.",
+   "a_zh": "不是膜。複製單元讓剪切率、通量和堵塞餘裕在設計上保持不變。受限的是周邊的一切：每個單元的氧傳遞、電力（八個模組時從 3 到 8 瓦變成 24 到 64 瓦）、每天 7.7 公升的培養基供應，以及泵送。數學模型說 100 公頃的農會需要 8106 公升，比我們的規格放大 41 倍。這些都還沒建造。",
+   "trap_en": "Saying the membrane is the bottleneck at scale. The wiki table says it binds last.",
+   "trap_zh": "說放大後膜是瓶頸。wiki 的表說膜最後才受限。",
+   "basis": "like BWYA/ICT-Mumbai 2025: 'how scalable is the product?'; GEMS-Taiwan 2024 'How could you scale this?'"
+  },
+  {
+   "type": "impact",
+   "tier": "B",
+   "seat": "biz",
+   "backup": "ihp",
+   "pages": [
+    "laws-and-regulations"
+   ],
+   "q_en": "What would you need to prove before a regulator or farmer could rely on ReLEAF?",
+   "q_zh": "要讓主管機關或農民能信賴 ReLEAF，你們還需要證明什麼？",
+   "kw_en": [
+    "cell-free proof",
+    "identity and stability",
+    "written answers"
+   ],
+   "kw_zh": [
+    "無細胞證明",
+    "身分與穩定性",
+    "書面回覆"
+   ],
+   "a_en": "Four things, all planned and not done. Biosafety of the strain: genes in the chromosome, escape testing, soil survival over 28 to 90 days in three soils. Proof of cell-free output: a seven-log retention challenge and batch release testing. An identity and stability dossier, with under 15 percent variation across three lots and 12 months of stability. And written regulator answers from Taiwan and the Philippines within six months.",
+   "a_zh": "四件事，都是計畫、還沒做。菌株的生物安全：基因整合進染色體、逃逸測試、在三種土壤中做 28 到 90 天的存活測試。無細胞產物的證明：七個對數的阻留挑戰和批次放行檢測。身分與穩定性資料，三批之間變異低於 15%，並有 12 個月的穩定性。最後是在六個月內取得臺灣與菲律賓主管機關的書面回覆。",
+   "trap_en": "Listing the Table 18 targets as results. They are proposed internal targets.",
+   "trap_zh": "把 Table 18 的目標當成成果。它們是擬定的內部目標。",
+   "basis": "Table 18 on laws-and-regulations; like NUS 2021 biomanufacturing 'what would you need to validate'"
+  },
+  {
+   "type": "impact",
+   "tier": "A",
+   "seat": "biz",
+   "backup": "hw",
+   "pages": [
+    "laws-and-regulations",
+    "entrepreneurship"
+   ],
+   "q_en": "Who is responsible if the engineered bacteria ever got out of a farm unit?",
+   "q_zh": "如果工程菌真的從農場的機器逃出去，誰負責？",
+   "kw_en": [
+    "not stated on wiki",
+    "operator model decides",
+    "regulators ask"
+   ],
+   "kw_zh": [
+    "wiki 沒有寫",
+    "營運模式決定",
+    "主管機關會問"
+   ],
+   "a_en": "Honestly, our wiki does not assign liability. What it does set out is who would hold the manufacturing licenses under three models: company-operated, farmer-operated, or central production with only permeate distributed. Company operation keeps licenses with us, and central production is the fallback if on-farm use of the engineered culture is refused. We plan to ask regulators whether farm-side production counts as manufacture and whether a sealed cartridge is a GMO release.",
+   "a_zh": "老實說，我們的 wiki 沒有指定責任歸屬。它有寫的是三種模式下誰持有製造許可：公司營運、農民營運，或集中生產、只配送透過液。公司營運讓許可留在我們這裡，若農場使用工程菌被拒絕，集中生產是備案。我們計畫向主管機關詢問：農場端生產算不算製造、密封菌匣算不算 GMO 釋放。",
+   "trap_en": "Making up an insurance or liability arrangement. None is on the wiki.",
+   "trap_zh": "編造保險或責任安排。wiki 上沒有。",
+   "basis": "Table 18 'Business model and licensing exposure'; like Hardware bank 2025 'maintain service quality at scale'"
+  }
+ ],
+ "gaps": [
+  {
+   "issue_en": "Strain, volume and run provenance disagree across pages. Biomanufacturing says every run to September was strain 168 and WB800 ran only twice in October; Hardware: Bioreactor and Results say every cycle after the first used WB800, and Results reports a 72 h WB800 permeate series (cycle 4) while the Digital Twin run table lists the 1 to 6 September run as 168. The abstract says a 400 mL bioreactor; the same page says 1 L working volume since September and 300 mL before; Results says 500 mL for several cycles.",
+   "issue_zh": "各頁對菌株、體積與運轉來源的說法不一致。Biomanufacturing 說 9 月前每次都是 168、WB800 只在 10 月跑兩次；Hardware: Bioreactor 與 Results 說第一次之後都用 WB800，Results 還有 72 小時 WB800 透過液數據（第 4 輪），但 Digital Twin 的運轉表把 9 月 1 至 6 日那次列為 168。摘要寫 400 mL 生物反應器，同頁又說 9 月起工作體積 1 L、之前 300 mL，Results 則有數輪是 500 mL。",
+   "where": "biomanufacturing, hardware-bioreactor, results, software",
+   "say_en": "Say which numbers you can place: the 102.4 h run was strain 168, and the October runs were WB800. Admit that the cycle numbering on Results and the run numbering on the Digital Twin page were written separately and that you would check the raw files before quoting a strain next to a number.",
+   "say_zh": "只講你能確定的：102.4 小時那次是 168，10 月的運轉是 WB800。坦白承認 Results 的循環編號和 Digital Twin 的運轉編號是分開寫的，引用數字配菌株之前要先查原始檔案。"
+  },
+  {
+   "issue_en": "The headline run and the product do not line up. The 102.4 h run is the 'longest reactor run' with ACC deaminase secretion, but Results says strain 168 secreted very little ACC deaminase. Biomanufacturing says permeate concentration and activity are not yet quantified, while Results shows ELISA above 2 µg/mL and DNPH activity in the shell for 72 h. The 434 h wild-type run is longer than 102.4 h. ACCD figures also vary: about 16 µg/mL (Results Fig. 13), 12 to 13 and 9 (variants), 6.5 peak at 12 h (72 h run), 10.7 lumen and 10.5 shell (Hardware), about 5 flat (Digital Twin).",
+   "issue_zh": "主打的運轉與產物對不起來。102.4 小時是有 ACC deaminase 分泌的「最長運轉」，但 Results 說 168 菌株幾乎沒分泌 ACC deaminase。Biomanufacturing 說透過液濃度與活性尚未量化，Results 卻有殼側 72 小時 ELISA 高於 2 µg/mL 和 DNPH 活性。434 小時的野生型運轉比 102.4 小時更長。ACCD 數字也不一：約 16 µg/mL（Results 圖 13）、12 至 13 和 9（變體）、72 小時運轉 12 小時高峰 6.5、Hardware 的內腔 10.7 殼側 10.5、Digital Twin 的約 5 且持平。",
+   "where": "biomanufacturing, results, software, hardware-bioreactor",
+   "say_en": "Say that the 102.4 h run shows the loop holds a culture, and the protein evidence comes from the WB800 runs, which were shorter. Give a range of 2.5 to 8.5 µg/mL for the permeate and say the values come from different constructs, times and preparations, each a single series.",
+   "say_zh": "說 102.4 小時證明迴路能維持培養，蛋白的證據來自較短的 WB800 運轉。透過液濃度給 2.5 至 8.5 µg/mL 的範圍，並說明數值來自不同構築、時間與製備，每組都是單一系列。"
+  },
+  {
+   "issue_en": "Containment evidence is thinner than the claim. Two plating tests, single platings, no replicates, no recorded detection limit, undocumented incubation for the June sample, no log reduction. The same membrane recovers the product and is the only containment, with no kill or filtration step after it. Cell size is quoted as 0.8 to 3 µm (Biomanufacturing), 0.8 to 2.0 µm wide (Results) and 0.25 to 1.0 µm (Safety). Residual DNA, spores and vesicles of 20 to 200 nm were not tested. CH Biotech told us regulators need undeniable proof.",
+   "issue_zh": "阻隔證據比宣稱薄弱。只有兩次塗盤測試，單次、無重複、沒記錄偵測極限、6 月樣品的培養條件沒記錄、沒有對數減少值。同一片膜既回收產物又是唯一的阻隔，後面沒有殺菌或過濾步驟。細胞大小在三頁寫法不同：0.8 至 3 µm (Biomanufacturing)、寬 0.8 至 2.0 µm (Results)、0.25 至 1.0 µm (Safety)。殘留 DNA、孢子和 20 至 200 nm 的囊泡都沒測。正瀚生技告訴我們主管機關要無可否認的證據。",
+   "where": "results, biomanufacturing, safety-and-security, laws-and-regulations",
+   "say_en": "Say it is preliminary evidence consistent with retention, and name what is missing: replicates, a recorded detection limit, a seven-log challenge, and DNA and spore tests. Say the pore size is 0.2 µm and the cells are larger, so the physics supports it, but we have not measured the margin.",
+   "say_zh": "說這是與阻留一致的初步證據，並講出缺少什麼：重複實驗、有記錄的偵測極限、七個對數挑戰，以及 DNA 與孢子測試。說孔徑 0.2 µm、細胞比它大，原理上合理，但我們沒有量測安全餘裕。"
+  },
+  {
+   "issue_en": "The fouling and geometry numbers are inconsistent. J/Jcrit of 0.04 is at a 2 LMH design flux, but runs 5, 6 and 7 drew 72, 36 and 51 LMH, above the 46 LMH threshold in two of them. Module geometry is 11 fibers and 200 cm² on the bench check and 8 fibers and 150 cm² in the vendor line. Cross-flow is quoted as 263, about 305 and about 371 mL/min. The fouling trend of 1.9 to 4.4 kPa is smaller than the transducer resolution of ±10 kPa. The oxygen calculation uses OD 1.454 as carrying capacity while runs reached OD 3.77.",
+   "issue_zh": "堵塞與幾何數字不一致。J/Jcrit 0.04 是在 2 LMH 設計通量，但 run 5、6、7 實際取 72、36、51 LMH，其中兩次高於 46 LMH 門檻。模組幾何在實測是 11 條、200 cm²，廠商規格寫 8 條、150 cm²。交叉流速寫成 263、約 305 和約 371 mL/min。堵塞趨勢 1.9 至 4.4 kPa 比壓力傳感器解析度 ±10 kPa 還小。氧氣計算把 OD 1.454 當承載量，但實際運轉到 OD 3.77。",
+   "where": "biomanufacturing, software, results, hardware-bioreactor",
+   "say_en": "Say that 0.04 is a design-point calculation and that the runs used higher, intermittent permeate draws, so you read fouling from the pressure trend, not from the margin. Say the 11-fiber geometry is the one checked against the bench, and the shear table is deliberately the higher, eight-fiber case.",
+   "say_zh": "說 0.04 是設計點的計算，實際運轉的透過液取量較高且是間歇的，所以堵塞是看壓力趨勢而不是看餘裕。說 11 條纖維是和實驗桌比對過的幾何，剪切表刻意採用較高的 8 條纖維情況。"
+  },
+  {
+   "issue_en": "The scale and cost story uses two different machines. The Math Model and Geospatial price a 20 L unit at US$937.50 (NT$30 000), but the unit actually built is 1 L, whose bioreactor part cost NT$30 450, and the business plan prices two 1 L bioreactors at US$2280 our cost. The wiki shows no 20 L unit built or quoted. Doses differ 185-fold (203 U vs 37.6 kU per ha per spray). The Math Model's throughput is a 5 h batch cycle; the business plan uses a 1 L batch every 16 h; the perfusion page gives 0.96 L a day. Payback is 68 years (Math Model) vs 4.9 years (Geospatial). Doses per run and plants covered per run are not stated on the Biomanufacturing page.",
+   "issue_zh": "規模與成本的敘述用了兩台不同的機器。數學模型與地理空間頁把 20 L 單元定價 US$937.50（NT$30 000），但實際做出來的是 1 L，其生物反應器部分成本 NT$30 450，商業計畫兩台 1 L 的成本是 US$2280。wiki 沒顯示 20 L 單元被建造或報價。劑量差 185 倍（每公頃每次 203 U 對 37.6 kU）。數學模型的產能是 5 小時批次循環，商業計畫是每 16 小時 1 L，灌流頁是每天 0.96 L。回收期 68 年（數學模型）對 4.9 年（地理空間）。每次運轉能做幾劑、涵蓋幾株植物，Biomanufacturing 頁沒有寫。",
+   "where": "model, geospatial-analysis, entrepreneurship, biomanufacturing",
+   "say_en": "Say plainly that these are three planning scenarios and none is validated on a crop. The 1 L unit is the one we built; the 20 L figure is a modeled costing basis. Say the pilot is meant to measure the real dose and cost per hectare.",
+   "say_zh": "直接說這是三個規劃情境，沒有一個在作物上驗證過。我們做出來的是 1 L 的機器，20 L 是模型用的成本基準。試點就是要量測真正的劑量和每公頃成本。"
+  },
+  {
+   "issue_en": "Organic farming and claims are described inconsistently. Biomanufacturing says farmers want to say their crops are organic and the bioreactor was built around that; Laws says Taiwan excludes GMO products from certified organic whatever the containment, and Geospatial says this excludes ReLEAF, while also saying a GMO-derived treatment may be the only input a transitioning organic farmer would consider. BoPep4 is a drought signal on Biomanufacturing, a salinity protectant in the Laws tables, and a gray mold candidate after the Jamboree. The EU section says bacteria vials would be sold separately, while the model elsewhere is a sealed cartridge replaced by the farmer.",
+   "issue_zh": "有機農業與宣稱的描述不一致。Biomanufacturing 說農民想標示有機、反應器是為此設計；Laws 說臺灣不論有無阻隔都把 GMO 產物排除在認證有機之外，Geospatial 也說這排除了 ReLEAF，卻又說正在轉型有機的農民可能只願意考慮 GMO 衍生的處理。BoPep4 在 Biomanufacturing 是乾旱訊號，在 Laws 表中是耐鹽保護蛋白，Jamboree 之後又是灰黴病候選。歐盟段落說菌液瓶會另外販售，其他地方的模式是農民自行更換的密封菌匣。",
+   "where": "biomanufacturing, laws-and-regulations, geospatial-analysis, entrepreneurship",
+   "say_en": "Say that the design keeps live cells out of the product, which helps with safety, but it does not make the product organic under the Taiwan Act. Say the target market is conventional smallholders, and the organic question needs written answers from the Ministry and a certifier.",
+   "say_zh": "說設計讓活菌不進入產品，對安全有幫助，但依臺灣的法律不會讓產品變成有機。說目標市場是慣行小農，有機問題需要農業部和驗證機構的書面回覆。"
+  },
+  {
+   "issue_en": "Photometer and run counts do not match across pages. Biomanufacturing quotes R² 0.9999 against a TiO₂ dose and 0.9998 for the BioDrop; the Results table gives 0.987 (ours) and 0.991 (BioDrop) for TiO₂, 0.995 in the text up to OD 1.2, and 0.992 for SiO₂. Results counts six bioreactor runs; the Digital Twin page lists seven. The photometer was calibrated to OD 1.2 (TiO₂) and 2.5 (SiO₂), while runs were read to 3.77 and the beam fails above about 2.7, so higher readings are not calibrated and photometer readings are turbidity, not cell counts.",
+   "issue_zh": "光度計與運轉次數在各頁不一致。Biomanufacturing 引用對 TiO₂ 劑量 R² 0.9999、BioDrop 0.9998；Results 表中 TiO₂ 是 0.987（我們）與 0.991（BioDrop），文字寫 OD 1.2 以內 0.995，SiO₂ 是 0.992。Results 說六次生物反應器運轉，Digital Twin 頁列出七次。光度計校正範圍是 OD 1.2 (TiO₂) 與 2.5 (SiO₂)，但運轉讀到 3.77，光束在約 2.7 以上就失效，所以更高的讀值未經校正，而且光度計讀的是濁度不是細胞數。",
+   "where": "biomanufacturing, results, software",
+   "say_en": "Quote the Results table values and say the calibration used nonliving particles to OD 1.2 to 2.5. Say higher readings are indicative only, and we have not calibrated against plate counts.",
+   "say_zh": "引用 Results 表中的數值，並說校正是用非生物顆粒做到 OD 1.2 至 2.5。說更高的讀值只供參考，我們還沒用平板計數校正。"
+  },
+  {
+   "issue_en": "Not on the wiki at all: liability if engineered bacteria escape or a farmer misuses a unit; why B. subtilis over E. coli or yeast (no head-to-head); a farm-scale containment test; the cost per dose; a Taiwan contained-use GMO framework (unresolved); and any written regulator confirmation (none in any market). The Biomanufacturing page cites EU Directive 2009/41/EC for contained use, but the Laws page does not analyse it. The rig software's version label reads ver. 4.13 with UI v6.2.2, while the Software page lists firmware v4.2.2 and backend v6.2.2; the wiki does not name who wrote the v4.13 app, and the next Digital Twin is a demo.",
+   "issue_zh": "wiki 完全沒寫的：工程菌逃逸或農民誤用時誰負責；為什麼選 B. subtilis 而不是大腸桿菌或酵母（沒有直接比較）；農場規模的阻隔測試；每劑成本；臺灣的封閉使用 GMO 架構（未確定）；以及任何書面的主管機關確認（所有市場都沒有）。Biomanufacturing 頁引用歐盟 Directive 2009/41/EC 作為封閉使用，但 Laws 頁沒有分析它。反應器軟體的版本標示是 ver. 4.13、UI v6.2.2，而 Software 頁寫韌體 v4.2.2、後端 v6.2.2；wiki 沒有指名誰寫了 v4.13 的 app，下一版數位孿生只是示範。",
+   "where": "laws-and-regulations, biomanufacturing, software, digital-twin-app, next-digital-twin",
+   "say_en": "Say 'we did not test that' or 'it is not on our wiki', then pivot to the nearest thing you did: the three-part regulatory split, the cartridge design, and the four questions we plan to send every regulator. Do not describe the next Digital Twin as running the rig.",
+   "say_zh": "說「我們沒有測試這個」或「我們的 wiki 沒有寫」，然後轉到最接近的實作：三部分的法規拆分、菌匣設計，以及我們計畫寄給每個主管機關的四個問題。不要把下一版數位孿生說成正在控制反應器。"
+  }
+ ]
+}

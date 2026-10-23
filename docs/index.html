@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ReLEAF Judging Trainer · GEMS Taiwan iGEM 2026</title>
+<meta name="description" content="Twenty minutes of questions, seven students, one wiki. Preparation for the GEMS Taiwan judging session at the iGEM 2026 Grand Jamboree.">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/pages.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M4 20c0-8 5.5-14.5 16-15.5C19.5 14 14 20 4 20Z' fill='%231a7f45'/%3E%3C/svg%3E">
+</head>
+<body>
+
+<header class="hero wrap">
+  <p class="eyebrow" data-en="GEMS Taiwan · iGEM 2026 · Biomanufacturing Village" data-zh="GEMS Taiwan · iGEM 2026 · 生物製造村"></p>
+  <h1 data-en="Twenty minutes of questions." data-zh="二十分鐘的提問。"></h1>
+  <h1 class="h1-muted" data-en="Seven of you at the microphone." data-zh="七個人站在麥克風前。"></h1>
+  <p class="lede" style="max-width:58ch;margin-top:1.25rem"
+     data-en="The judges have already watched your video and read your wiki. They are not there to hear the project again. They are there to find out whether you understand it. This site is where you get ready for that."
+     data-zh="評審已經看過你們的影片、讀過你們的 wiki。他們不是來再聽一次專題介紹，而是來確認你們是不是真的懂自己的專題。這個網站就是為那二十分鐘做準備的地方。"></p>
+  <div class="btn-row" style="margin-top:1.75rem">
+    <a class="btn btn-accent" href="mock.html" data-en="Enter the mock room" data-zh="進入模擬會場"></a>
+    <a class="btn btn-ghost" href="seats.html" data-en="Find your seat" data-zh="找到你的位置"></a>
+  </div>
+</header>
+
+<section class="wrap" id="session">
+  <div class="sess">
+    <div class="sess-when">
+      <p class="pill pill-r" data-en="First shift of the Jamboree" data-zh="全場第一輪"></p>
+      <div class="sess-date">
+        <strong data-en="Fri 13 Nov" data-zh="11 月 13 日（五）"></strong>
+        <span data-en="12:00 – 12:25 Paris · 19:00 – 19:25 Taipei" data-zh="巴黎 12:00 – 12:25 · 台北 19:00 – 19:25"></span>
+      </div>
+      <p class="cd" id="countdown" aria-live="polite"></p>
+    </div>
+    <dl class="sess-facts">
+      <div><dt data-en="Room" data-zh="會談室"></dt><dd>J03</dd></div>
+      <div><dt data-en="Arrive" data-zh="到場"></dt><dd data-en="11:30 – 11:50, Judging Zone" data-zh="11:30 – 11:50，Judging Zone"></dd></div>
+      <div><dt data-en="Shape" data-zh="流程"></dt><dd data-en="5 min update + 20 min Q&amp;A" data-zh="5 分鐘更新 + 20 分鐘問答"></dd></div>
+      <div><dt data-en="Judges" data-zh="評審"></dt><dd data-en="4, all in the room" data-zh="4 位，全部在現場"></dd></div>
+      <div><dt data-en="Nominated" data-zh="提名"></dt><dd data-en="Measurement · Hardware · Integrated HP" data-zh="最佳量測 · 最佳硬體 · 整合人文實踐"></dd></div>
+      <div><dt data-en="Language" data-zh="語言"></dt><dd data-en="English. Asking for a repeat is allowed." data-zh="英文。可以請評審重說一次。"></dd></div>
+    </dl>
+  </div>
+  <p class="note note-w" style="margin-top:1.25rem"
+     data-en="No online judges this year, and you are the first team of the day. Nobody will be warmed up, including the panel. Your first answer sets the tone for the whole twenty minutes, so rehearse the first two minutes until they are boring."
+     data-zh="今年沒有線上評審，而你們是當天第一組。包括評審在內，沒有人是熱機完成的狀態。第一個回答會決定接下來二十分鐘的氣氛，所以把開場兩分鐘練到無聊為止。"></p>
+</section>
+
+<section class="wrap">
+  <div class="sec-head">
+    <h2 data-en="Eight rooms to work through" data-zh="八個練習房間"></h2>
+    <p data-en="Work left to right. The first three build what you know, the next two decide who says it, the last three decide how it lands."
+       data-zh="由左至右使用。前三個建立你知道的內容，中間兩個決定由誰回答，最後三個決定答案聽起來如何。"></p>
+  </div>
+  <div class="grid g2" id="tiles"></div>
+</section>
+
+<section class="wrap narrow">
+  <div class="sec-head">
+    <h2 data-en="Five things that decide this session" data-zh="決定這場會談的五件事"></h2>
+    <p data-en="Read these once a day until you fly."
+       data-zh="在出發前每天讀一次。"></p>
+  </div>
+  <ol class="rules" id="rules"></ol>
+</section>
+
+<section class="wrap narrow">
+  <div class="sec-head">
+    <h2 data-en="What is in here" data-zh="這裡有什麼"></h2>
+  </div>
+  <div class="grid g4" id="counts"></div>
+  <p class="lede-sm" style="margin-top:1.25rem"
+     data-en="Everything is drawn from your own wiki as it stands frozen, plus the questions judges actually asked teams in 2025. Where your pages disagree with each other, this site says so instead of hiding it, because the judges will find those places too."
+     data-zh="所有內容都取自凍結後的 wiki，加上 2025 年評審實際問過各隊的問題。當你們的頁面彼此矛盾時，這個網站會直接指出來，因為評審也會找到那些地方。"></p>
+</section>
+
+<script src="assets/js/site.js"></script>
+<script src="data/content.js"></script>
+<script src="data/index.js"></script>
+<script>
+(function () {
+  var S = window.Site;
+
+  function tiles() {
+    var h = '';
+    for (var i = 0; i < CONTENT.tiles.length; i++) {
+      var t = CONTENT.tiles[i];
+      h += '<a class="tile" href="' + t.href + '">' +
+        '<span class="n">' + ('0' + (i + 1)) + '</span>' +
+        '<h3>' + S.esc(S.t(t, 'title')) + '</h3>' +
+        '<p>' + S.esc(S.t(t, 'blurb')) + '</p></a>';
+    }
+    document.getElementById('tiles').innerHTML = h;
+  }
+
+  function rules() {
+    var h = '';
+    for (var i = 0; i < CONTENT.rules.length; i++) {
+      var r = CONTENT.rules[i];
+      h += '<li><h4>' + S.esc(S.t(r, 'head')) + '</h4><p>' + S.esc(S.t(r, 'body')) + '</p></li>';
+    }
+    document.getElementById('rules').innerHTML = h;
+  }
+
+  function counts() {
+    var c = window.INDEX_COUNTS || {};
+    var rows = [
+      { n: c.facts || 0, en: 'facts with a wiki source', zh: '條有 wiki 來源的事實' },
+      { n: c.terms || 0, en: 'terms, three keywords each', zh: '個術語，每個三個關鍵字' },
+      { n: c.questions || 0, en: 'questions written for your project', zh: '題為你們專題量身出的問題' },
+      { n: c.gaps || 0, en: 'weak points to answer honestly', zh: '個要誠實面對的弱點' }
+    ];
+    var h = '';
+    for (var i = 0; i < rows.length; i++) {
+      h += '<div class="card card-soft"><p class="stat">' + rows[i].n + '</p>' +
+           '<p class="stat-l">' + S.esc(S.lang === 'zh' ? rows[i].zh : rows[i].en) + '</p></div>';
+    }
+    document.getElementById('counts').innerHTML = h;
+  }
+
+  var TARGET = Date.UTC(2026, 10, 13, 11, 0, 0); // 12:00 Paris = 11:00 UTC
+  function countdown() {
+    var el = document.getElementById('countdown');
+    var ms = TARGET - Date.now();
+    if (ms <= 0) { el.textContent = S.lang === 'zh' ? '就是現在。' : 'This is it.'; return; }
+    var d = Math.floor(ms / 864e5), h = Math.floor(ms / 36e5) % 24, m = Math.floor(ms / 6e4) % 60;
+    el.textContent = S.lang === 'zh'
+      ? '距離開場 ' + d + ' 天 ' + h + ' 小時 ' + m + ' 分'
+      : d + ' days, ' + h + ' hours, ' + m + ' minutes to go';
+  }
+
+  function draw() { tiles(); rules(); counts(); countdown(); }
+  S.onLang(draw);
+  setInterval(countdown, 30000);
+})();
+</script>
+</body>
+</html>

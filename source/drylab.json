@@ -1,0 +1,2029 @@
+{
+ "domain": "drylab",
+ "facts": [
+  {
+   "id": "drylab-f1",
+   "label_en": "Fault alarm lead time",
+   "label_zh": "故障警報提前時間",
+   "value": "26.7 h",
+   "detail_en": "The autoencoder flagged the in-line photometer at 216.3 h, and the OD channel failed at 243.0 h in the 434-hour run.",
+   "detail_zh": "在 434 小時的實驗中，autoencoder 於 216.3 小時就標記出 in-line photometer 異常，OD 通道在 243.0 小時才失效。",
+   "src": "software#The 434-hour run",
+   "confidence": "stated"
+  },
+  {
+   "id": "drylab-f2",
+   "label_en": "Fault alarm false-alarm rate",
+   "label_zh": "故障警報的誤報率",
+   "value": "6.1%",
+   "detail_en": "False alarms on unseen quiet windows. The figure appears on Development and Results, not in the Digital Twin text itself.",
+   "detail_zh": "指在沒看過的平靜時段中的誤報。這個數字出現在 Development 與 Results 頁，Digital Twin 頁的文字裡沒有。",
+   "src": "development#Criteria validation",
+   "confidence": "stated"
+  },
+  {
+   "id": "drylab-f3",
+   "label_en": "Sensor axis vs process axis",
+   "label_zh": "感測器軸與製程軸",
+   "value": "0% / 73% and 100% / 0%",
+   "detail_en": "At 120-160 h the process axis fired in 73% of windows and the sensor axis in none (OD really fell 0.93 to 0.72). At 220-240 h the sensor axis fired in 100% and the process axis in none.",
+   "detail_zh": "120 到 160 小時，製程軸在 73% 的視窗響起、感測器軸為 0（OD 真的從 0.93 掉到 0.72）；220 到 240 小時，感測器軸 100% 響起、製程軸為 0。",
+   "src": "software#The 434-hour run",
+   "confidence": "stated"
+  },
+  {
+   "id": "drylab-f4",
+   "label_en": "Kalman filter error at 2 h (run 4)",
+   "label_zh": "Kalman 濾波器 2 小時預測誤差（run 4）",
+   "value": "0.040 vs 0.067",
+   "detail_en": "Forecast error of the Kalman filter against persistence (predict no change) on the 102-hour run of 2 to 6 September; 41% less error. Results names the metric as RMSE.",
+   "detail_zh": "在 9/2 到 9/6 的 102 小時實驗中，Kalman 濾波器對上 persistence（預測不變）的誤差，少 41%。Results 頁說明這個指標是 RMSE。",
+   "src": "software#Batch forecasting",
+   "confidence": "stated"
+  },
+  {
+   "id": "drylab-f5",
+   "label_en": "Forecast error at longer horizons (run 4)",
+   "label_zh": "較長預測時距的誤差（run 4）",
+   "value": "0.083 / 0.192 / 0.310",
+   "detail_en": "Kalman at 4, 8 and 12 h against persistence 0.132, 0.256 and 0.373, so 38%, 25% and 17% better.",
+   "detail_zh": "Kalman 在 4、8、12 小時的誤差，對上 persistence 的 0.132、0.256、0.373，分別好 38%、25%、17%。",
+   "src": "software#Batch forecasting",
+   "confidence": "stated"
+  },
+  {
+   "id": "drylab-f6",
+   "label_en": "Repeat on run 7 (WB800, settings unchanged)",
+   "label_zh": "run 7 重複驗證（WB800，參數不變）",
+   "value": "0%, 13%, 24%, 24%",
+   "detail_en": "Kalman against persistence at 2, 4, 8 and 12 h. At 2 h both score 0.070, so there is no gain at the shortest horizon.",
+   "detail_zh": "Kalman 對 persistence 在 2、4、8、12 小時的改善。2 小時兩者都是 0.070，最短時距沒有優勢。",
+   "src": "software#Batch forecasting",
+   "confidence": "stated"
+  },
+  {
+   "id": "drylab-f7",
+   "label_en": "Pre-registered growth rate",
+   "label_zh": "事先登記的生長速率",
+   "value": "0.2986 h-1 (0.2705 to 0.3300)",
+   "detail_en": "Registered on 1 October, before any WB800 bioreactor run, with a 90% interval and a pass rule: the fitted r must fall inside the interval.",
+   "detail_zh": "10 月 1 日、在任何 WB800 生物反應器實驗之前登記，含 90% 區間與通過標準：擬合的 r 必須落在區間內。",
+   "src": "software#Registered forecast",
+   "confidence": "stated"
+  },
+  {
+   "id": "drylab-f8",
+   "label_en": "Observed growth rate on run 6",
+   "label_zh": "run 6 的實際生長速率",
+   "value": "0.286 ± 0.010 h-1",
+   "detail_en": "Doubling time 145 min, R2 0.978 on quarter-hourly medians from 1.5 to 6.5 h. Inside the registered interval, 13 days after registration.",
+   "detail_zh": "倍增時間 145 分鐘，以每 15 分鐘中位數在 1.5 到 6.5 小時擬合，R2 0.978，落在登記區間內（登記後 13 天）。",
+   "src": "software#What run 6 gave",
+   "confidence": "stated"
+  },
+  {
+   "id": "drylab-f9",
+   "label_en": "Parts of the registration that were not scored",
+   "label_zh": "登記中未計分的部分",
+   "value": "shape and time to OD 0.5",
+   "detail_en": "Only r was scored. The prior trace missed the first 7 h by 30% and passed its ceiling of 1.005 before hour 7. Time to OD 0.5 was 3.6 h against a predicted 6.1 h from OD 0.14.",
+   "detail_zh": "只有 r 計分。先驗曲線前 7 小時偏差 30%，且在第 7 小時前就超過上限 1.005；達到 OD 0.5 的時間是 3.6 小時，預測值為 6.1 小時（起始 OD 0.14）。",
+   "src": "software#What run 6 gave",
+   "confidence": "stated"
+  },
+  {
+   "id": "drylab-f10",
+   "label_en": "Light-plate prior skill",
+   "label_zh": "光照盤先驗的預測表現",
+   "value": "within 7% vs 29-68%",
+   "detail_en": "Leave-one-arm-out: the 24 h OD of each held-out arm predicted from its first 8 h. Logistic fit r = 0.299 ± 0.017 h-1, K = 1.005, NRMSE 1.9%.",
+   "detail_zh": "留一組驗證：用前 8 小時預測被留出那一組的 24 小時 OD，誤差在 7% 內，沒有先驗則為 29 到 68%。Logistic 擬合 r = 0.299 ± 0.017 h-1，K = 1.005，NRMSE 1.9%。",
+   "src": "software#Light plate",
+   "confidence": "stated"
+  },
+  {
+   "id": "drylab-f11",
+   "label_en": "What a digital twin is, per the team",
+   "label_zh": "團隊對 digital twin 的定義",
+   "value": "return to the vessel",
+   "detail_en": "A digital model is updated by hand and a digital shadow receives live data but needs a person to act. A twin returns its result to the vessel. Today the models run on recorded data and a person makes every decision.",
+   "detail_zh": "digital model 靠人工更新；digital shadow 接收即時資料但需要人來行動；twin 會把結果送回反應器。目前模型跑在記錄下來的資料上，所有決定都由人做。",
+   "src": "software#Digital Twin and ReLEAF's System",
+   "confidence": "stated"
+  },
+  {
+   "id": "drylab-f12",
+   "label_en": "Channels that are live on the reactor",
+   "label_zh": "反應器上已即時運作的通道",
+   "value": "OD600, pH, flow, pressure x4",
+   "detail_en": "Valves are under live control. The green light was tested separately but is not integrated; dissolved oxygen and loop temperature are not working.",
+   "detail_zh": "閥門可即時控制。綠光另外測試過但尚未整合；溶氧與迴路溫度都還不能用。",
+   "src": "software#What our digital twin measures",
+   "confidence": "stated"
+  },
+  {
+   "id": "drylab-f13",
+   "label_en": "Seven runs vs six runs",
+   "label_zh": "七次實驗還是六次",
+   "value": "7 vs 6",
+   "detail_en": "Digital Twin lists seven bioreactor runs (434 h run 3, 77 h run 7). Development says six runs with 102.4 h the longest. The two pages count differently.",
+   "detail_zh": "Digital Twin 頁列出七次實驗（run 3 為 434 小時、run 7 為 77 小時）；Development 頁說六次、最長 102.4 小時。兩頁算法不同。",
+   "src": "software#Every run so far",
+   "confidence": "conflict"
+  },
+  {
+   "id": "drylab-f14",
+   "label_en": "Leaf sensor offset",
+   "label_zh": "葉片感測器偏差",
+   "value": "+1.2 to +1.9 C (3 sites)",
+   "detail_en": "Text says the leaf sensor reads 1.2 to 1.9 C warm. The table shows the room site at +0.47 ± 0.46 C (runs -0.09 to +0.97), and Results says -0.2 to +1.8 C. Leaf wetness read 0.0% because it was never wetted.",
+   "detail_zh": "文字寫葉片感測器偏高 1.2 到 1.9 °C；但表格中 room 地點為 +0.47 ± 0.46 °C（各次 -0.09 到 +0.97），Results 頁寫 -0.2 到 +1.8 °C。葉片濕度全程 0.0%，因為從未弄濕。",
+   "src": "software#The leaf and air sensors on the bench",
+   "confidence": "conflict"
+  },
+  {
+   "id": "drylab-f15",
+   "label_en": "Rice blast rule (BLASTAM)",
+   "label_zh": "稻熱病規則（BLASTAM）",
+   "value": "wet 10 h at 22-25 C",
+   "detail_en": "A wet period counts as infection if the leaf stays wet at least 10 h at a mean of 22 to 25 C; none below 15 C or above 25 C. Forecast hours count as wet at RH 90% or more. Not checked against Taiwanese disease records, and it does not switch the green light.",
+   "detail_zh": "葉片濕潤至少 10 小時且平均 22 到 25 °C 才算感染條件；低於 15 °C 或高於 25 °C 不感染。預報時段以相對濕度達 90% 視為濕潤。尚未用台灣病害紀錄檢驗，也不會控制綠光。",
+   "src": "software#Leaf wetness and the rice blast rule",
+   "confidence": "stated"
+  },
+  {
+   "id": "drylab-f16",
+   "label_en": "Code release",
+   "label_zh": "程式碼釋出",
+   "value": "MIT license",
+   "detail_en": "Firmware v4.2.2, backend v6.2.2 and interface v6.2.2 run on an Arduino Uno Q. Source is at gitlab.igem.org/2026/software/gems-taiwan/digital-twin, with rig-app/ and next-twin/.",
+   "detail_zh": "韌體 v4.2.2、後端 v6.2.2、介面 v6.2.2 跑在 Arduino Uno Q 上。原始碼在 gitlab.igem.org/2026/software/gems-taiwan/digital-twin，含 rig-app/ 與 next-twin/。",
+   "src": "software#License",
+   "confidence": "stated"
+  },
+  {
+   "id": "drylab-f17",
+   "label_en": "Stress index search",
+   "label_zh": "壓力指數的搜尋範圍",
+   "value": "32,767 combinations",
+   "detail_en": "All 2^15 - 1 combinations of fifteen candidate stresses were fitted per crop and scored on years the fit had not seen. Heat adds nothing once wind, light and badly timed water are in.",
+   "detail_zh": "對每一期稻作擬合十五個候選壓力因子的 2^15 - 1 種組合，並用沒看過的年份評分。加入風、光、水分時機之後，高溫沒有額外貢獻。",
+   "src": "model#Stress index from the harvest record",
+   "confidence": "stated"
+  },
+  {
+   "id": "drylab-f18",
+   "label_en": "Stress index accuracy",
+   "label_zh": "壓力指數的準確度",
+   "value": "32% less error (second crop)",
+   "detail_en": "Against the no-weather trend, county error is 32% lower in the second crop. In the first crop, island error over 2016 to 2025 is 419 kg/ha for the trend and 365 for the model.",
+   "detail_zh": "對照不含天氣的趨勢模型，第二期稻作的縣市誤差少 32%；第一期稻作 2016 到 2025 年全島誤差為趨勢模型 419 kg/ha、本模型 365 kg/ha。",
+   "src": "model#Stress index from the harvest record",
+   "confidence": "stated"
+  },
+  {
+   "id": "drylab-f19",
+   "label_en": "Blind test of the 2026 first-crop forecast",
+   "label_zh": "2026 第一期稻作預測的盲測",
+   "value": "7.9% vs 8.8% (4 of 16 counties)",
+   "detail_en": "Frozen on 26 September before any county published. Four counties are too few to establish prospective performance. The second crop is harvested in November, so the better-fitting model is not yet tested blind.",
+   "detail_zh": "9 月 26 日、在任何縣市公布前凍結。四個縣市不足以證明預測能力；第二期稻作 11 月才收成，所以擬合較好的那個模型還沒有盲測。",
+   "src": "model#Stress index from the harvest record",
+   "confidence": "stated"
+  },
+  {
+   "id": "drylab-f20",
+   "label_en": "Dose, vessel and capital per hectare",
+   "label_zh": "每公頃的劑量、容器與資本",
+   "value": "37.6 kU, 81 L, US$3800",
+   "detail_en": "37.6 kU per application, 339 kU in a nine-pass season. Ten 20 L units (200 L) cover 2.5 ha. 100 ha needs 8106 L and US$379,992. All of it carries the canopy correction.",
+   "detail_zh": "每次施用 37.6 kU，九次施用的一季 339 kU。十個 20 L 單元（共 200 L）可服務 2.5 公頃；100 公頃需要 8106 L 與 US$379,992。全部都含 canopy correction。",
+   "src": "model#Links to the bench and to Geospatial Analysis",
+   "confidence": "stated"
+  },
+  {
+   "id": "drylab-f21",
+   "label_en": "Payback on the Block 1 loss figure",
+   "label_zh": "以區塊 1 損失數字算的回收期",
+   "value": "68 years (efficacy 1)",
+   "detail_en": "Block 1 attributes US$138 per hectare per crop of weather loss. Five years would need an efficacy of 14, more than the whole loss. Shared across 2.5 ha: 27 years.",
+   "detail_zh": "區塊 1 估計每公頃每期天氣損失為 US$138。要 5 年回收需要 14 倍效能，超過損失本身。若由 2.5 公頃共用則為 27 年。",
+   "src": "model#Payback and fleet utilization",
+   "confidence": "stated"
+  },
+  {
+   "id": "drylab-f22",
+   "label_en": "Payback on the Geospatial figure",
+   "label_zh": "以 Geospatial 數字算的回收期",
+   "value": "4.9 years (US$1931/ha/crop)",
+   "detail_en": "Quoted on the Math Model page as Geospatial's result, 14 times the loss Block 1 attributes to weather. The figure is not shown on the Geospatial Analysis page itself.",
+   "detail_zh": "這是 Math Model 頁引用的 Geospatial 結果，是區塊 1 天氣損失的 14 倍；但 Geospatial Analysis 頁本身並沒有呈現這個數字。",
+   "src": "model#Payback and fleet utilization",
+   "confidence": "conflict"
+  },
+  {
+   "id": "drylab-f23",
+   "label_en": "Delivery timing",
+   "label_zh": "供應時程",
+   "value": "5.4 days vs 3-day forecast",
+   "detail_en": "One hectare takes 5.4 days on ten 20 L units, so 2.4 days of production precede any forecast that justifies it. Production must be banked, which makes shelf life the controlling quantity.",
+   "detail_zh": "一公頃要用十個 20 L 單元花 5.4 天，比三天預報多出 2.4 天，所以必須預先備貨，保存期限因此成為關鍵。",
+   "src": "model#Timing constraints on delivery",
+   "confidence": "stated"
+  },
+  {
+   "id": "drylab-f24",
+   "label_en": "Activity of the secreted enzyme in culture",
+   "label_zh": "培養液中分泌酵素的活性變化",
+   "value": "26% in 3 h, or a rise",
+   "detail_en": "One unreplicated tube fell from 0.5503 to 0.1414 mM (half-time 0.7 to 1.5 h). A replicated run rose from 8.3 to 18.1 nmol per mL per h over 8 h of light. Neither measures a harvested preparation.",
+   "detail_zh": "一支沒有重複的試管在 3 小時內由 0.5503 降到 0.1414 mM（半衰期 0.7 到 1.5 小時）；有重複的一次實驗在 8 小時光照中由 8.3 升到 18.1 nmol/mL/h。兩者都不是在量收成後的製劑。",
+   "src": "model#Induction and activity in culture",
+   "confidence": "stated"
+  },
+  {
+   "id": "drylab-f25",
+   "label_en": "Harvest cycle behind the capital figure",
+   "label_zh": "資本數字背後的收成週期",
+   "value": "5 h cycle; 12 h gives US$9120",
+   "detail_en": "The ledger uses a 5-hour harvest cycle. A 72 h ELISA run peaks at 12 h. At 12 h the vessel is 195 L and US$9120 per hectare; at 18 h, 292 L and US$13,679.",
+   "detail_zh": "帳本使用 5 小時收成週期；72 小時 ELISA 實驗在 12 小時達到高峰。若為 12 小時，每公頃 195 L、US$9120；18 小時則為 292 L、US$13,679。",
+   "src": "model#From plate dose to capital per hectare",
+   "confidence": "stated"
+  },
+  {
+   "id": "drylab-f26",
+   "label_en": "Farm size in Taiwan",
+   "label_zh": "台灣的農場規模",
+   "value": "99.2% under 2 ha",
+   "detail_en": "Small farms hold 85.3% of farmland; the average farmer is 63.5 years old and warming has risen from 0.11 to 0.29 C per decade since 1991.",
+   "detail_zh": "小農（不到 2 公頃）占 99.2%，掌握 85.3% 的農地；農民平均年齡 63.5 歲；1991 年後升溫速度由每十年 0.11 °C 升到 0.29 °C。",
+   "src": "geospatial-analysis#Taiwan agricultural demographics",
+   "confidence": "stated"
+  },
+  {
+   "id": "drylab-f27",
+   "label_en": "Fertilizer routing model",
+   "label_zh": "肥料配送路網模型",
+   "value": "2,792,536 parcels, 346 nodes",
+   "detail_en": "613 fertilizer companies routed by road-network distance to farmland in their own county; parcels aggregated by township into 346 demand nodes over about 743,500 ha.",
+   "detail_zh": "613 家肥料公司依道路網路距離配送到本縣市農地；2,792,536 筆地塊依鄉鎮合併成 346 個需求節點，約 743,500 公頃。",
+   "src": "geospatial-analysis#Centralized vs. decentralized agriculture",
+   "confidence": "stated"
+  },
+  {
+   "id": "drylab-f28",
+   "label_en": "Night-time heat and yield",
+   "label_zh": "夜間高溫與產量",
+   "value": "about 10% per 1 C",
+   "detail_en": "From Peng et al. 2004, a 25-year record at IRRI in the Philippines (1979 to 2003). It is a published result from another country, not a Taiwan measurement.",
+   "detail_zh": "來自 Peng 等人 2004 年在菲律賓 IRRI 的 25 年紀錄（1979 到 2003）。這是外國的已發表結果，不是台灣的量測。",
+   "src": "geospatial-analysis#Global climate stress",
+   "confidence": "stated"
+  },
+  {
+   "id": "drylab-f29",
+   "label_en": "Tomato versus rice as target crop",
+   "label_zh": "番茄與稻米何者為目標作物",
+   "value": "3627.94 ha, NT$152.9/kg",
+   "detail_en": "Rice is overproduced, per Director Wu. Tomatoes average NT$152.9/kg; counties from Miaoli to Kaohsiung warmed 1.9 to 2.0 C on Nov-Dec nights, and with Yunlin and Changhua grow 85% of tomatoes. The Math Model still prices a rice hectare.",
+   "detail_zh": "吳主任指出稻米生產過剩。番茄平均每公斤 NT$152.9；苗栗到高雄各縣市 11、12 月夜間升溫 1.9 到 2.0 °C，加上雲林、彰化共占全台番茄 85%。但 Math Model 仍以稻田一公頃計算。",
+   "src": "geospatial-analysis#Impact: current reach and future prospect",
+   "confidence": "stated"
+  },
+  {
+   "id": "drylab-f30",
+   "label_en": "Molecular dynamics set",
+   "label_zh": "分子動力學的規模",
+   "value": "9 runs, 30 ns, one seed",
+   "detail_en": "All nine runs are BoPEP4 on the PEPR1 ectodomain (5GR8), ff19SB / OPC, 4 fs steps, about 127,600 atoms, 25.9 GPU-hours on one A100. No replicate seeds and no bench check.",
+   "detail_zh": "九條軌跡全部是 BoPEP4 對 PEPR1 胞外域（5GR8）；ff19SB / OPC、4 fs 時間步長、約 127,600 個原子、一張 A100 共 25.9 GPU 小時。沒有重複種子，也沒有實驗室驗證。",
+   "src": "md-simulations#ff19SB / OPC, 4 fs HMR, 30 ns on one A100",
+   "confidence": "stated"
+  },
+  {
+   "id": "drylab-f31",
+   "label_en": "6xHis tag on the C-terminus in MD",
+   "label_zh": "MD 中 C 端 6xHis 標籤",
+   "value": "salt bridge absent (table reads 2.4%)",
+   "detail_en": "The tagged construct passed the original distance gate, but a distance-and-angle test found the bidentate Asn23-Arg487 salt bridge missing in every frame against 100% for the untagged peptide. The 2.4% in the table counts a neutral amide oxygen, not a salt bridge. The tag moved to the N-terminus.",
+   "detail_zh": "帶標籤的構築通過了原本的距離標準，但用距離加角度的檢驗發現 Asn23-Arg487 雙齒鹽橋在每一個畫面都不存在，無標籤版本則為 100%。表格中的 2.4% 計算的是一個中性醯胺氧，不是鹽橋。標籤因此移到 N 端。",
+   "src": "protein-design-molecular-dynamics#Histidine tag",
+   "confidence": "stated"
+  },
+  {
+   "id": "drylab-f32",
+   "label_en": "HADDOCK score content",
+   "label_zh": "HADDOCK 分數反映什麼",
+   "value": "93% length and charge; rho +0.05",
+   "detail_en": "A July 30 audit found the score across BoPEP4 variants 93% explained by length and net charge, and uncorrelated with Pearce's measured activities. Across 68 clusters Spearman rho is -0.21 against fnat.",
+   "detail_zh": "7 月 30 日的稽核發現 BoPEP4 各變體的分數有 93% 可由長度與淨電荷解釋，與 Pearce 的實測活性幾乎無關（rho 約 +0.05）；68 個 cluster 與 fnat 的 Spearman rho 為 -0.21。",
+   "src": "protein-design-sprints#Reading a docking score",
+   "confidence": "stated"
+  },
+  {
+   "id": "drylab-f33",
+   "label_en": "LEA14 AlphaFold gate",
+   "label_zh": "LEA14 的 AlphaFold 關卡",
+   "value": "ipTM 0.16 vs 0.85 and 0.78",
+   "detail_en": "The threshold was set before the run. Two known complexes passed (TIR1 0.85, COI1 0.78) and LEA14 with AtPP2-B11 scored 0.16, while ASK1 with AtPP2-B11 scored 0.86 in the same prediction. The strand stopped and no complex figure is shown.",
+   "detail_zh": "門檻在實驗前就設定。兩個已知複合體通過（TIR1 0.85、COI1 0.78），LEA14 與 AtPP2-B11 只有 0.16；同一次預測中 ASK1 與 AtPP2-B11 為 0.86。這條線因此停止，也不放複合體圖。",
+   "src": "protein-design-sprints#The AlphaFold gate",
+   "confidence": "stated"
+  },
+  {
+   "id": "drylab-f34",
+   "label_en": "What went to the wet lab",
+   "label_zh": "送進濕實驗的設計",
+   "value": "ladder + 2 controls; 5 LEA14; ACCD wild type",
+   "detail_en": "BoPEP4 1-23, 7-23, 9-23, 15-23 plus G17A and S15A controls, all N-terminal 6xHis; five LEA14 constructs; ACC deaminase wild type only (a four-cysteine variant was designed and held).",
+   "detail_zh": "BoPEP4 的 1-23、7-23、9-23、15-23，加上 G17A、S15A 兩個對照，全部使用 N 端 6xHis；五個 LEA14 構築；ACC deaminase 只送野生型（四個半胱胺酸的變體已設計但暫緩）。",
+   "src": "protein-design#What went to the wet lab",
+   "confidence": "stated"
+  },
+  {
+   "id": "drylab-f35",
+   "label_en": "Protein design checked against the cloning record",
+   "label_zh": "蛋白質設計與選殖紀錄核對",
+   "value": "6 corrections (14 Oct)",
+   "detail_en": "Neither LEA14 truncation reached a sequence-verified construct. The N-terminal His tag applies to the BoPEP4 order after 16 August; June and July cassettes and every LEA14 and ACCD construct carry a C-terminal 6xHis.",
+   "detail_zh": "兩個 LEA14 截短版都沒有達到定序確認的構築；N 端 His 標籤只適用於 8 月 16 日之後的 BoPEP4 訂單；6、7 月的卡匣以及所有 LEA14 與 ACCD 構築都是 C 端 6xHis。",
+   "src": "drylab-notebook#Saturday 10 October",
+   "confidence": "stated"
+  },
+  {
+   "id": "drylab-f36",
+   "label_en": "Codon optimization in the lab",
+   "label_zh": "密碼子最佳化的實驗室結果",
+   "value": "BoPep4 6.3 / 5.4 vs 4.7 µg/mL",
+   "detail_en": "At 12 h the ViennaRNA-recoded BoPep4 2.1 and 2.2 beat wild type, but ACC deaminase AcdS 2.1 (about 9) was lower than wild type (12 to 13 µg/mL). The prediction held for one cargo and not the other.",
+   "detail_zh": "12 小時時，ViennaRNA 重新編碼的 BoPep4 2.1 與 2.2 高於野生型（6.3、5.4 對 4.7 µg/mL），但 ACC deaminase 的 AcdS 2.1（約 9）低於野生型（12 到 13 µg/mL）。預測對其中一個基因成立，另一個不成立。",
+   "src": "results#ELISA: wild-type and codon-optimized variants",
+   "confidence": "stated"
+  }
+ ],
+ "terms": [
+  {
+   "term": "Digital twin",
+   "kw_en": [
+    "returns result to vessel",
+    "not model or shadow",
+    "closed loop not yet"
+   ],
+   "kw_zh": [
+    "結果送回反應器",
+    "不是 model 或 shadow",
+    "閉環尚未完成"
+   ],
+   "def_en": "Software that mirrors the reactor and sends its decisions back to it. A digital model is updated by hand and a shadow only receives data. Ours runs on recorded data and a person decides.",
+   "def_zh": "鏡像反應器並把決策送回去的軟體。digital model 靠人工更新，shadow 只接收資料。我們的目前跑在記錄資料上，由人做決定。",
+   "cat": "software",
+   "src": "software"
+  },
+  {
+   "term": "AIoT",
+   "kw_en": [
+    "sensors plus models",
+    "board logs readings",
+    "models learn from data"
+   ],
+   "kw_zh": [
+    "感測器加模型",
+    "開發板記錄讀值",
+    "模型從資料學習"
+   ],
+   "def_en": "AI plus Internet of Things: reactor sensors and valves wired to a board that logs every reading, a leaf sensor by the crop, and models that learn from those readings.",
+   "def_zh": "AI 加物聯網：反應器的感測器與閥門接到會記錄每筆讀值的開發板，田邊有葉片感測器，模型從這些讀值學習。",
+   "cat": "software",
+   "src": "software"
+  },
+  {
+   "term": "Autoencoder (fault model)",
+   "kw_en": [
+    "trained on healthy 120 h",
+    "reconstruction error",
+    "two axes"
+   ],
+   "kw_zh": [
+    "用健康的 120 小時訓練",
+    "重建誤差",
+    "兩條軸"
+   ],
+   "def_en": "A neural network trained only on healthy data. When new readings reconstruct badly, it raises an alarm. Ours scores a sensor axis and a process axis separately and flagged the photometer 26.7 h early.",
+   "def_zh": "只用健康資料訓練的神經網路，新讀值重建得很差時就發出警報。我們的分成感測器軸與製程軸分開評分，提早 26.7 小時標出 photometer 異常。",
+   "cat": "software",
+   "src": "software"
+  },
+  {
+   "term": "Sensor axis vs process axis",
+   "kw_en": [
+    "reference beam",
+    "growth rate",
+    "instrument vs culture"
+   ],
+   "kw_zh": [
+    "參考光束",
+    "生長速率",
+    "儀器對培養物"
+   ],
+   "def_en": "The sensor axis watches the reference beam, which never passes through the culture, so it sees instrument faults. The process axis watches specific growth rate, so it sees culture events. Together they separate the two.",
+   "def_zh": "感測器軸看參考光束（不經過培養液），所以抓儀器故障；製程軸看比生長速率，所以抓培養物變化。兩者合起來能分辨是儀器還是培養物出問題。",
+   "cat": "software",
+   "src": "software"
+  },
+  {
+   "term": "Kalman filter",
+   "kw_en": [
+    "state estimate",
+    "weighs reading vs noise",
+    "2 to 12 h ahead"
+   ],
+   "kw_zh": [
+    "狀態估計",
+    "權衡讀值與雜訊",
+    "提前 2 到 12 小時"
+   ],
+   "def_en": "A forecasting method that keeps a running estimate of the culture's state and weighs each new reading against its noise. It is the batch forecast model in our twin and beat persistence on both scored runs.",
+   "def_zh": "持續維護培養狀態估計，並把每筆新讀值和雜訊一起權衡的預測方法。它是我們 twin 的批次預測模型，在兩次計分的實驗中都勝過 persistence。",
+   "cat": "model",
+   "src": "software"
+  },
+  {
+   "term": "Persistence baseline",
+   "kw_en": [
+    "predict no change",
+    "simplest benchmark",
+    "must beat it"
+   ],
+   "kw_zh": [
+    "預測不變",
+    "最簡單的基準",
+    "一定要贏過它"
+   ],
+   "def_en": "A forecast that says the next value equals the last one. If a model cannot beat it, it adds nothing. At 2 h on run 7 our Kalman filter only tied it.",
+   "def_zh": "預測下一個值等於上一個值的做法。模型若贏不了它就沒有價值。在 run 7 的 2 小時，我們的 Kalman 只和它打平。",
+   "cat": "model",
+   "src": "software"
+  },
+  {
+   "term": "RMSE and forecast horizon",
+   "kw_en": [
+    "typical error size",
+    "hours ahead",
+    "0.040 vs 0.067"
+   ],
+   "kw_zh": [
+    "典型誤差大小",
+    "往前預測幾小時",
+    "0.040 對 0.067"
+   ],
+   "def_en": "RMSE is the typical size of a forecast error. The horizon is how many hours ahead the forecast looks. Our errors are for the photometer reading and grow from 2 h to 12 h.",
+   "def_zh": "RMSE 是預測誤差的典型大小，時距是往前預測幾小時。我們的誤差是針對 photometer 讀值，從 2 小時到 12 小時逐漸變大。",
+   "cat": "model",
+   "src": "software"
+  },
+  {
+   "term": "Pre-registration",
+   "kw_en": [
+    "written before the run",
+    "pass rule fixed",
+    "r inside interval"
+   ],
+   "kw_zh": [
+    "實驗前先寫下",
+    "通過標準固定",
+    "r 落在區間內"
+   ],
+   "def_en": "Publishing the prediction and the pass rule before the test run. We registered a growth rate and 90% interval on 1 October, 13 days before run 6 scored it.",
+   "def_zh": "在測試實驗前公布預測值與通過標準。我們在 10 月 1 日登記生長速率與 90% 區間，13 天後用 run 6 計分。",
+   "cat": "model",
+   "src": "software"
+  },
+  {
+   "term": "Specific growth rate (r)",
+   "kw_en": [
+    "per hour",
+    "doubling time",
+    "0.286 h-1"
+   ],
+   "kw_zh": [
+    "每小時",
+    "倍增時間",
+    "0.286 h-1"
+   ],
+   "def_en": "How fast a culture grows per hour. Run 6 gave 0.286 ± 0.010 h-1, a doubling time of 145 min. Over the fitted window a straight line fit as well as an exponential.",
+   "def_zh": "培養物每小時的生長速度。run 6 得到 0.286 ± 0.010 h-1，倍增時間 145 分鐘。在擬合時段內，直線和指數的擬合一樣好。",
+   "cat": "model",
+   "src": "software"
+  },
+  {
+   "term": "Logistic growth prior",
+   "kw_en": [
+    "r, K and X0",
+    "from light plate",
+    "rate transferred, ceiling not"
+   ],
+   "kw_zh": [
+    "r、K、X0",
+    "來自光照盤",
+    "速率可轉移，上限不行"
+   ],
+   "def_en": "A growth curve with a ceiling K, fitted to the light plate (r 0.299 h-1, K 1.005) and used as a starting guess for the reactor. The rate carried over to the bioreactor; the ceiling did not.",
+   "def_zh": "有上限 K 的生長曲線，用光照盤資料擬合（r 0.299 h-1，K 1.005），當作反應器的起始預測。速率可以轉移到生物反應器，上限則不行。",
+   "cat": "model",
+   "src": "software"
+  },
+  {
+   "term": "BLASTAM rule",
+   "kw_en": [
+    "rice blast",
+    "wet 10 h at 22-25 C",
+    "RH 90% counts wet"
+   ],
+   "kw_zh": [
+    "稻熱病",
+    "濕潤 10 小時、22-25 °C",
+    "相對濕度 90% 算濕"
+   ],
+   "def_en": "A Japanese rule for leaf-blast infection from leaf wetness and temperature. The twin shows the warning to the grower but it does not switch the green light, and it is unchecked against Taiwanese records.",
+   "def_zh": "依葉面濕潤與溫度推估稻熱病感染的日本規則。twin 只把警告顯示給農民，不會控制綠光，也還沒有用台灣紀錄檢驗。",
+   "cat": "plant",
+   "src": "software"
+  },
+  {
+   "term": "Acceptance gate (OD600)",
+   "kw_en": [
+    "holds last good value",
+    "bubbles and level shifts",
+    "31 of 1083 rejected"
+   ],
+   "kw_zh": [
+    "保留上一個好值",
+    "氣泡與位準跳動",
+    "1083 中拒絕 31"
+   ],
+   "def_en": "A filter on the in-line photometer that rejects windows with bubbles or sudden shifts and holds the last good value. Run 6 turned away 31 of 1083 windows, run 7 81 of 5009.",
+   "def_zh": "對 in-line photometer 的過濾器，遇到氣泡或突然位移就拒絕該視窗並保留上一個好值。run 6 拒絕 1083 個視窗中的 31 個，run 7 為 5009 中的 81 個。",
+   "cat": "hardware",
+   "src": "software"
+  },
+  {
+   "term": "Wall shear and TMP",
+   "kw_en": [
+    "pressure and flow cross-check",
+    "agree to 2.8%",
+    "fouling trace"
+   ],
+   "kw_zh": [
+    "壓力與流量互相驗證",
+    "相差 2.8%",
+    "結垢趨勢"
+   ],
+   "def_en": "Wall shear is the force of flow on the membrane; TMP is trans-membrane pressure. The twin computes both from the pressure transducers and flow meter, which check each other, and tracks fouling from them.",
+   "def_zh": "壁剪應力是流體作用在膜上的力，TMP 是跨膜壓力。twin 由壓力傳感器與流量計算出兩者，兩種感測器互相驗證，並以此追蹤結垢。",
+   "cat": "hardware",
+   "src": "software"
+  },
+  {
+   "term": "Stress index",
+   "kw_en": [
+    "fitted to harvest record",
+    "32,767 combinations",
+    "32% less error"
+   ],
+   "kw_zh": [
+    "用收成紀錄擬合",
+    "32,767 種組合",
+    "誤差少 32%"
+   ],
+   "def_en": "A score of how hard weather pushes a rice crop, with weights fitted to 25 years of county yields instead of expert judgment. It decides only whether to act, not how much.",
+   "def_zh": "衡量天氣對稻作壓力的分數，權重由 25 年縣市產量擬合，而不是靠專家判斷。它只決定要不要行動，不決定用量。",
+   "cat": "model",
+   "src": "model"
+  },
+  {
+   "term": "County trend baseline",
+   "kw_en": [
+    "yield below trend",
+    "no-weather model",
+    "held-out years"
+   ],
+   "kw_zh": [
+    "低於趨勢的產量",
+    "不含天氣的模型",
+    "留出的年份"
+   ],
+   "def_en": "The expected yield for a county from its own history without weather. A season below it counts as stressed, and the index is scored on years it has not seen against this baseline.",
+   "def_zh": "只用縣市自身歷史、不含天氣所預期的產量。低於它的季節視為受壓力，指數在沒看過的年份上對照這條基準評分。",
+   "cat": "model",
+   "src": "model"
+  },
+  {
+   "term": "Hill function (CcaSR curve)",
+   "kw_en": [
+    "light to output",
+    "K1/2 4.66, n 1.88",
+    "published, untested by us"
+   ],
+   "kw_zh": [
+    "光強對輸出",
+    "K1/2 4.66、n 1.88",
+    "文獻值，我們沒測過"
+   ],
+   "def_en": "An S-shaped curve linking green light intensity to gene output, from Castillo-Hair et al. 2019. The model uses it to set the lamp, but every induction we ran was at one intensity.",
+   "def_zh": "連結綠光強度與基因輸出的 S 形曲線，出自 Castillo-Hair 等人 2019。模型用它設定燈光，但我們所有誘導實驗都只用一種強度。",
+   "cat": "model",
+   "src": "model"
+  },
+  {
+   "term": "Canopy correction",
+   "kw_en": [
+    "plate to field",
+    "x2.44",
+    "modeled not measured"
+   ],
+   "kw_zh": [
+    "從培養皿到田間",
+    "乘 2.44",
+    "模型值不是量測"
+   ],
+   "def_en": "The factor that scales a dose from a seedling plate to a rice canopy, from leaf area index 4.5 against 0.115. It spans 1.68 to 3.52 and every dollar figure inherits it.",
+   "def_zh": "把劑量從幼苗培養皿放大到稻株冠層的係數，由葉面積指數 4.5 對 0.115 推算，範圍 1.68 到 3.52，所有金額數字都承襲它。",
+   "cat": "model",
+   "src": "model"
+  },
+  {
+   "term": "kU (activity unit)",
+   "kw_en": [
+    "activity not mass",
+    "37.6 kU per ha",
+    "from DNPH reading"
+   ],
+   "kw_zh": [
+    "活性而非質量",
+    "每公頃 37.6 kU",
+    "來自 DNPH 讀值"
+   ],
+   "def_en": "A unit of enzyme activity. The dose of 37.6 kU per hectare comes from the secreted activity of one DNPH reading, which is below the quantitation limit.",
+   "def_zh": "酵素活性單位。每公頃 37.6 kU 的劑量來自一次 DNPH 讀值的分泌活性，而該讀值低於定量極限。",
+   "cat": "model",
+   "src": "model"
+  },
+  {
+   "term": "Efficacy and payback",
+   "kw_en": [
+    "share of loss recovered",
+    "68 years at 1",
+    "14x gap"
+   ],
+   "kw_zh": [
+    "回收的損失比例",
+    "效能 1 時 68 年",
+    "相差 14 倍"
+   ],
+   "def_en": "Efficacy is the share of a weather loss the protectant recovers; payback is capital divided by efficacy times loss. No run of ours bounds efficacy, so payback is plotted across the whole axis.",
+   "def_zh": "效能是保護劑挽回的天氣損失比例；回收期是資本除以（效能乘以損失）。我們沒有任何實驗能界定效能，所以回收期畫成整條效能軸。",
+   "cat": "business",
+   "src": "model"
+  },
+  {
+   "term": "Fleet utilization",
+   "kw_en": [
+    "49 reactor-days",
+    "4.3% of calendar",
+    "2.5 ha per fleet"
+   ],
+   "kw_zh": [
+    "49 個反應器日",
+    "日曆的 4.3%",
+    "每組服務 2.5 公頃"
+   ],
+   "def_en": "How much of the year the reactors actually run. Ten 20 L units need 49 reactor-days for a nine-pass season, so one fleet runs 4.3% of the calendar and serves 2.5 ha, which argues for shared ownership.",
+   "def_zh": "反應器一年實際運轉的比例。十個 20 L 單元跑一季九次施用需要 49 個反應器日，一組只用日曆的 4.3%、服務 2.5 公頃，所以主張共有。",
+   "cat": "business",
+   "src": "model"
+  },
+  {
+   "term": "Climate volatility index",
+   "kw_en": [
+    "diurnal and seasonal range",
+    "rainfall variability",
+    "weights unpublished"
+   ],
+   "kw_zh": [
+    "日溫差與季節溫差",
+    "降雨變異",
+    "權重未公布"
+   ],
+   "def_en": "A score of how unstable a place's weather is, built from temperature ranges and rainfall variability. It is overlaid on small-farm parcels in QGIS to find farmers with the least capacity to adapt.",
+   "def_zh": "衡量一地天氣有多不穩定的分數，由溫度範圍與降雨變異組成。我們在 QGIS 把它疊在小農地塊上，找出最缺乏調適能力的農民。",
+   "cat": "model",
+   "src": "geospatial-analysis"
+  },
+  {
+   "term": "ERA5 reanalysis",
+   "kw_en": [
+    "gridded weather record",
+    "2001 to 2025",
+    "fits the stress terms"
+   ],
+   "kw_zh": [
+    "網格化天氣紀錄",
+    "2001 到 2025",
+    "用來擬合壓力因子"
+   ],
+   "def_en": "A global weather dataset built by re-running observations through a weather model. We use daily ERA5 from 2001 to 2025 to build the fifteen candidate stress terms and the night-warming maps.",
+   "def_zh": "把觀測資料重新跑過天氣模型所建立的全球氣象資料集。我們用 2001 到 2025 的逐日 ERA5 建立十五個候選壓力因子與夜間升溫地圖。",
+   "cat": "model",
+   "src": "geospatial-analysis"
+  },
+  {
+   "term": "GIS demand node",
+   "kw_en": [
+    "township aggregate",
+    "346 nodes",
+    "2.79 million parcels"
+   ],
+   "kw_zh": [
+    "以鄉鎮合併",
+    "346 個節點",
+    "279 萬筆地塊"
+   ],
+   "def_en": "A unit in the fertilizer routing model: parcels summed by township. 2,792,536 parcels became 346 nodes over about 743,500 ha, each reached by road distance from companies in the same county.",
+   "def_zh": "肥料配送模型中的單位：把地塊依鄉鎮加總。2,792,536 筆地塊合成 346 個節點、約 743,500 公頃，各節點由同縣市公司以道路距離配送。",
+   "cat": "model",
+   "src": "geospatial-analysis"
+  },
+  {
+   "term": "Molecular dynamics (MD)",
+   "kw_en": [
+    "atoms move over time",
+    "30 ns, one seed",
+    "BoPEP4 only"
+   ],
+   "kw_zh": [
+    "原子隨時間移動",
+    "30 ns、單一種子",
+    "只做 BoPEP4"
+   ],
+   "def_en": "A simulation of every atom in a complex moving in water. We ran nine 30 ns trajectories of BoPEP4 on PEPR1 to test whether docked contacts persist. It says nothing about binding strength, and nothing was checked at the bench.",
+   "def_zh": "模擬複合體所有原子在水中運動。我們跑了九條 30 ns 的 BoPEP4 對 PEPR1 軌跡，檢驗對接出的接觸是否持續。它不能說明結合強度，也沒有在實驗室驗證。",
+   "cat": "biology",
+   "src": "md-simulations"
+  },
+  {
+   "term": "ff19SB / OPC / HMR",
+   "kw_en": [
+    "protein force field",
+    "water model",
+    "4 fs time step"
+   ],
+   "kw_zh": [
+    "蛋白質力場",
+    "水模型",
+    "4 fs 時間步長"
+   ],
+   "def_en": "The settings of our MD: ff19SB describes the protein, OPC the water, and hydrogen mass repartitioning (HMR) allows a 4 femtosecond step so 30 ns per system fits on one A100.",
+   "def_zh": "我們 MD 的設定：ff19SB 描述蛋白質、OPC 描述水，氫質量重分配（HMR）讓時間步長可到 4 飛秒，所以 30 ns 可以在一張 A100 上完成。",
+   "cat": "biology",
+   "src": "md-simulations"
+  },
+  {
+   "term": "Salt bridge occupancy and clamp",
+   "kw_en": [
+    "fraction of frames",
+    "Asn23 to Arg487",
+    "named contacts beat RMSD"
+   ],
+   "kw_zh": [
+    "占畫面比例",
+    "Asn23 對 Arg487",
+    "指名接觸勝過 RMSD"
+   ],
+   "def_en": "The share of simulation frames in which a contact exists. The key one is the Asn23 carboxylate gripping Arg487. We judge constructs on named contacts like this because RMSD tracked the salt bridge poorly (Spearman +0.29).",
+   "def_zh": "模擬畫面中某個接觸存在的比例。關鍵的是 Asn23 羧基抓住 Arg487。我們用這類指名接觸來判斷構築，因為 RMSD 與鹽橋的相關很弱（Spearman +0.29）。",
+   "cat": "biology",
+   "src": "md-simulations"
+  },
+  {
+   "term": "BoPEP4 and PEPR1",
+   "kw_en": [
+    "23-residue elicitor peptide",
+    "receptor kinase",
+    "C-terminal anchor"
+   ],
+   "kw_zh": [
+    "23 個胺基酸的誘導肽",
+    "受體激酶",
+    "C 端錨點"
+   ],
+   "def_en": "BoPEP4 is a Brassica oleracea plant elicitor peptide that switches on a plant's own stress response by binding the receptor PEPR1. Its free C-terminal carboxylate is the anchor.",
+   "def_zh": "BoPEP4 是甘藍的植物誘導肽，結合受體 PEPR1 後啟動植物自身的逆境反應。它自由的 C 端羧基是錨點。",
+   "cat": "biology",
+   "src": "protein-design"
+  },
+  {
+   "term": "GRAFT pipeline",
+   "kw_en": [
+    "Generate Restraints Assembly",
+    "Flex then Triage",
+    "one pipeline, three protectants"
+   ],
+   "kw_zh": [
+    "產生、限制、組裝",
+    "Flex 再分級",
+    "一條流程三種保護劑"
+   ],
+   "def_en": "Our protein design workflow: Generate candidates, Restraints, Assembly (docking), Flex (MD) and Triage. The same steps run on BoPEP4, LEA14 and ACC deaminase, and the evidence decides how far each goes.",
+   "def_zh": "我們的蛋白質設計流程：Generate 產生候選、Restraints、Assembly（對接）、Flex（MD）、Triage 分級。BoPEP4、LEA14、ACC deaminase 走同一流程，證據多寡決定能走多遠。",
+   "cat": "biology",
+   "src": "protein-design-methodology"
+  },
+  {
+   "term": "HADDOCK and fnat",
+   "kw_en": [
+    "restraint-driven docking",
+    "fraction native contacts",
+    "score is not accuracy"
+   ],
+   "kw_zh": [
+    "受限條件的對接",
+    "原生接觸比例",
+    "分數不等於準確度"
+   ],
+   "def_en": "HADDOCK docks molecules using restraints and gives each model a score. fnat is the fraction of crystal contacts a model recovers. In our runs the score did not track fnat, so we graded against 5GR8.",
+   "def_zh": "HADDOCK 依限制條件對接並給每個模型打分；fnat 是模型重現的晶體接觸比例。在我們的實驗中分數和 fnat 沒有對應，所以改用 5GR8 評分。",
+   "cat": "software",
+   "src": "protein-design-sprints"
+  },
+  {
+   "term": "CAPRI tiers",
+   "kw_en": [
+    "acceptable medium high",
+    "graded against 5GR8",
+    "26 / 3 / 0"
+   ],
+   "kw_zh": [
+    "acceptable、medium、high",
+    "對照 5GR8 評分",
+    "26 / 3 / 0"
+   ],
+   "def_en": "The community grading of a predicted complex against a known structure. Of 68 BoPEP4 clusters, 26 were acceptable, 3 medium and none high; a medium model can still miss the key contact.",
+   "def_zh": "社群用來把預測的複合體對照已知結構分級的標準。68 個 BoPEP4 cluster 中，26 個 acceptable、3 個 medium、沒有 high；medium 的模型仍可能漏掉關鍵接觸。",
+   "cat": "software",
+   "src": "protein-design-methodology"
+  },
+  {
+   "term": "AlphaFold ipTM",
+   "kw_en": [
+    "interface confidence",
+    "not activity",
+    "0.73 for a dead peptide"
+   ],
+   "kw_zh": [
+    "界面信心分數",
+    "不等於活性",
+    "失活肽也有 0.73"
+   ],
+   "def_en": "AlphaFold's confidence in how two chains sit together. It gave 0.73 to a peptide published as over 4000-fold inactive and 0.74 to BoPEP4, so we use it only as a structural confidence estimate.",
+   "def_zh": "AlphaFold 對兩條鏈如何結合的信心分數。它給已發表為失活 4000 倍以上的肽 0.73、給 BoPEP4 0.74，所以我們只當作結構信心的參考。",
+   "cat": "software",
+   "src": "protein-design-methodology"
+  },
+  {
+   "term": "Truncation ladder",
+   "kw_en": [
+    "cut the N-terminus",
+    "1-23 7-23 9-23 15-23",
+    "9-23 is the production length"
+   ],
+   "kw_zh": [
+    "切短 N 端",
+    "1-23、7-23、9-23、15-23",
+    "9-23 是生產長度"
+   ],
+   "def_en": "A series of BoPEP4 constructs cut from the front end, to find how short it can be before the interface fails. 9-23 has 33% less mass; all four rungs went to the bench.",
+   "def_zh": "從 BoPEP4 前端逐步切短的一組構築，找出多短還不會破壞界面。9-23 質量少 33%；四個長度都已送到實驗室。",
+   "cat": "biology",
+   "src": "protein-design-sprints"
+  },
+  {
+   "term": "Alanine scan",
+   "kw_en": [
+    "swap one side chain",
+    "18 mutants",
+    "hotspots K7 R9 R11 E12 H14 K18 H22 N23"
+   ],
+   "kw_zh": [
+    "逐一換成丙胺酸",
+    "18 個突變",
+    "熱點 K7、R9、R11、E12、H14、K18、H22、N23"
+   ],
+   "def_en": "Replacing one residue at a time with alanine to see which positions the interface cannot lose. Ours found eight hotspots but missed S15A and G17A, which published work shows are strongly weakened.",
+   "def_zh": "逐一把殘基換成丙胺酸，看界面不能失去哪些位置。我們找到八個熱點，但沒看出 S15A 與 G17A，而已發表研究顯示它們活性大幅下降。",
+   "cat": "biology",
+   "src": "protein-design-sprints"
+  },
+  {
+   "term": "ACC deaminase variants",
+   "kw_en": [
+    "no mutant sent",
+    "cysteine removal held",
+    "DDMut error 1.14-2.24"
+   ],
+   "kw_zh": [
+    "沒有送突變體",
+    "半胱胺酸移除暫緩",
+    "DDMut 誤差 1.14 到 2.24"
+   ],
+   "def_en": "ACC deaminase is a PLP enzyme, so it was not docked. We screened 17 point changes with ConSurf and DDMut, designed C41V, C67A, C162A, C282A, and sent only wild type.",
+   "def_zh": "ACC deaminase 是 PLP 酵素，所以沒有對接。我們用 ConSurf 與 DDMut 篩選 17 個點突變，設計出 C41V、C67A、C162A、C282A，但只送出野生型。",
+   "cat": "biology",
+   "src": "protein-design-sprints"
+  },
+  {
+   "term": "ConSurf and DDMut",
+   "kw_en": [
+    "conservation grade",
+    "stability change",
+    "one predictor only"
+   ],
+   "kw_zh": [
+    "保守度分級",
+    "穩定度變化",
+    "只有一個預測器"
+   ],
+   "def_en": "ConSurf grades how conserved each position is across 150 homologs; DDMut predicts a stability change. Only DDMut ran, with a published error wider than most differences it was used to read.",
+   "def_zh": "ConSurf 依 150 個同源序列為每個位置的保守度分級；DDMut 預測穩定度變化。只跑了 DDMut，其已發表的誤差比它所要判讀的多數差異還寬。",
+   "cat": "software",
+   "src": "protein-design-sprints"
+  },
+  {
+   "term": "ViennaRNA recoding",
+   "kw_en": [
+    "mRNA folding near start",
+    "unpaired probability",
+    "ranking is leader-specific"
+   ],
+   "kw_zh": [
+    "起始附近的 mRNA 折疊",
+    "未配對機率",
+    "排名只適用該 leader"
+   ],
+   "def_en": "A tool that predicts how mRNA folds. We recoded the start of each cargo to open the ribosome site. After the leader changed to RiboJ plus RBS0, six of eight ordered cassettes still beat wild type, not the two BoPep4 ones.",
+   "def_zh": "預測 mRNA 如何折疊的工具。我們重新編碼各基因起始處以打開核糖體結合位點。leader 換成 RiboJ 加 RBS0 之後，八個已訂購卡匣中有六個仍勝過野生型，但兩個 BoPep4 沒有。",
+   "cat": "software",
+   "src": "protein-design-sprints"
+  },
+  {
+   "term": "AtPP2-B11 and LEA14 partner",
+   "kw_en": [
+    "F-box protein",
+    "only published partner",
+    "interface unpredictable"
+   ],
+   "kw_zh": [
+    "F-box 蛋白",
+    "唯一已發表的夥伴",
+    "界面無法預測"
+   ],
+   "def_en": "AtPP2-B11 is the only published binding partner of LEA14. AlphaFold could not predict their interface (ipTM 0.16) while controls passed, so the LEA14 docking strand stopped by prior agreement.",
+   "def_zh": "AtPP2-B11 是 LEA14 唯一已發表的結合夥伴。控制組都通過時，AlphaFold 卻無法預測兩者的界面（ipTM 0.16），所以 LEA14 的對接依事先約定停止。",
+   "cat": "biology",
+   "src": "protein-design-sprints"
+  }
+ ],
+ "questions": [
+  {
+   "q_en": "What is the virtual model in your digital twin? If I unplug the sensors, what does it still know?",
+   "q_zh": "你們 digital twin 裡的虛擬模型到底是什麼？如果把感測器拔掉，它還知道什麼？",
+   "type": "fact",
+   "tier": "A",
+   "pages": [
+    "software",
+    "drylab-notebook"
+   ],
+   "seat": "dry",
+   "backup": "hw",
+   "kw_en": [
+    "state estimate",
+    "growth prior",
+    "batch record"
+   ],
+   "kw_zh": [
+    "狀態估計",
+    "生長先驗",
+    "批次紀錄"
+   ],
+   "a_en": "Good question. The virtual model is a set of models plus a record, not the sensors. Unplugged, it still holds the logistic growth prior from the light plate, whatever state the Kalman filter last estimated, the stored batch record of past runs, and the weather forecast. It cannot know the current OD, so it can only project forward from the prior, and its sensor alarm would be blind. Today a person still decides.",
+   "a_zh": "好問題。虛擬模型是一組模型加上紀錄，不是感測器本身。拔掉感測器後，它仍保有光照盤得到的 logistic 生長先驗、Kalman 濾波器最後估計的狀態、過去實驗的批次紀錄，以及氣象預報。但它不知道目前的 OD，只能從先驗往前推，感測器警報也失效。目前仍是由人做決定。",
+   "trap_en": "Saying the twin keeps knowing the culture without sensors. It only projects from a prior and old state.",
+   "trap_zh": "說成沒有感測器 twin 也能知道培養狀況；其實只能憑先驗與舊狀態往前推。",
+   "basis": "team's own question, Bioreactors sheet (Timmy); answer assembled from software, no direct wiki statement"
+  },
+  {
+   "q_en": "What does your fault-detection autoencoder do, and how early did it catch a problem?",
+   "q_zh": "你們的故障偵測 autoencoder 在做什麼？提早多久抓到問題？",
+   "type": "fact",
+   "tier": "A",
+   "pages": [
+    "software",
+    "development"
+   ],
+   "seat": "dry",
+   "backup": "hw",
+   "kw_en": [
+    "26.7 h lead",
+    "6.1% false alarms",
+    "trained on healthy 120 h"
+   ],
+   "kw_zh": [
+    "提前 26.7 小時",
+    "誤報 6.1%",
+    "用健康 120 小時訓練"
+   ],
+   "a_en": "It flagged the failing in-line photometer 26.7 hours before the OD channel gave out, at a 6.1% false-alarm rate on unseen quiet windows. We trained it only on the healthy first 120 hours of a 434-hour run. The limit is that this is one run and one failure, so we have not shown it generalizes.",
+   "a_zh": "它在 OD 通道失效前 26.7 小時就標出 in-line photometer 異常，在沒看過的平靜時段誤報率 6.1%。我們只用 434 小時實驗中健康的前 120 小時訓練。限制是這只有一次實驗、一次故障，還不能說它能推廣。",
+   "trap_en": "Forgetting the false-alarm rate or claiming it works on any fault.",
+   "trap_zh": "忘了說誤報率，或宣稱它能抓任何故障。",
+   "basis": "like INSA Lyon 2022: how do hardware and software work together"
+  },
+  {
+   "q_en": "How do you know your forecast is better than just assuming nothing changes?",
+   "q_zh": "你們怎麼知道預測比「假設什麼都不變」更好？",
+   "type": "validate",
+   "tier": "A",
+   "pages": [
+    "software",
+    "results"
+   ],
+   "seat": "dry",
+   "backup": "hw",
+   "kw_en": [
+    "persistence baseline",
+    "0.040 vs 0.067",
+    "tied at 2 h on run 7"
+   ],
+   "kw_zh": [
+    "persistence 基準",
+    "0.040 對 0.067",
+    "run 7 的 2 小時打平"
+   ],
+   "a_en": "We scored it against persistence, which predicts no change. On the 102-hour run the Kalman filter's error at 2 hours was 0.040 against 0.067, 41% lower, and still better at 12 hours. On a repeat run with settings unchanged it tied at 2 hours and won by 24% at 8 and 12 hours. It forecasts the photometer reading, not biomass.",
+   "a_zh": "我們拿它和 persistence（預測不變）比較。在 102 小時的實驗中，Kalman 濾波器 2 小時的誤差是 0.040，persistence 是 0.067，少 41%，到 12 小時仍較好。在參數不變的重複實驗中，2 小時打平，8 與 12 小時好 24%。它預測的是 photometer 讀值，不是生物量。",
+   "trap_en": "Quoting only the 41% and hiding that run 7 tied at 2 h.",
+   "trap_zh": "只講 41%，沒說 run 7 在 2 小時打平。",
+   "basis": "like TAU-Israel 2025: how do you validate predictive accuracy"
+  },
+  {
+   "q_en": "You say you pre-registered a prediction. What exactly did you register, and did it pass?",
+   "q_zh": "你們說有事先登記預測，登記了什麼？有通過嗎？",
+   "type": "validate",
+   "tier": "A",
+   "pages": [
+    "software",
+    "development"
+   ],
+   "seat": "dry",
+   "backup": "plant",
+   "kw_en": [
+    "written 1 Oct",
+    "0.2705 to 0.3300",
+    "0.286 passed"
+   ],
+   "kw_zh": [
+    "10 月 1 日登記",
+    "0.2705 到 0.3300",
+    "0.286 通過"
+   ],
+   "a_en": "On 1 October, before any WB800 bioreactor run, we registered a growth rate of 0.2986 per hour with a 90% interval of 0.2705 to 0.3300. Run 6 gave 0.286 ± 0.010, inside it. Only that rate was scored. The curve shape and time to OD 0.5 missed, and a straight line fit the window as well as an exponential.",
+   "a_zh": "10 月 1 日，在任何 WB800 生物反應器實驗之前，我們登記了生長速率 0.2986 h-1，90% 區間 0.2705 到 0.3300。run 6 得到 0.286 ± 0.010，落在區間內。但只有速率計分，曲線形狀與到達 OD 0.5 的時間都沒中，而且在擬合時段內直線和指數擬合得一樣好。",
+   "trap_en": "Saying the whole forecast passed. Only r was scored.",
+   "trap_zh": "說整個預測都通過；其實只有 r 計分。",
+   "basis": "like TAU-Israel 2025: pre-registered; partial blind test"
+  },
+  {
+   "q_en": "Why does your autoencoder have two separate axes?",
+   "q_zh": "為什麼你們的 autoencoder 要分成兩條軸？",
+   "type": "design",
+   "tier": "A",
+   "pages": [
+    "software"
+   ],
+   "seat": "dry",
+   "backup": "hw",
+   "kw_en": [
+    "reference beam",
+    "growth rate",
+    "tell instrument from culture"
+   ],
+   "kw_zh": [
+    "參考光束",
+    "生長速率",
+    "分辨儀器與培養物"
+   ],
+   "a_en": "Because a falling OD could be the culture or a failing instrument. The sensor axis watches the reference beam, which never passes through the culture. The process axis watches growth rate. At 120 to 160 hours only the process axis fired and the density really fell. At 220 to 240 hours only the sensor axis fired while OD still looked clean.",
+   "a_zh": "因為 OD 下降可能是培養物的問題，也可能是儀器壞了。感測器軸看不經過培養液的參考光束，製程軸看生長速率。120 到 160 小時只有製程軸響，密度確實下降；220 到 240 小時只有感測器軸響，但 OD 看起來還很正常。",
+   "trap_en": "Describing it as one anomaly score. The two axes are the point.",
+   "trap_zh": "把它講成單一的異常分數；兩條軸才是重點。",
+   "basis": "design check"
+  },
+  {
+   "q_en": "Why did you choose a Kalman filter instead of a simple fitted curve or a bigger model?",
+   "q_zh": "為什麼選 Kalman 濾波器，而不是簡單的擬合曲線或更大的模型？",
+   "type": "compare",
+   "tier": "A",
+   "pages": [
+    "software"
+   ],
+   "seat": "dry",
+   "backup": "hw",
+   "kw_en": [
+    "old data weighs too much",
+    "exponential over-assumes",
+    "weighs noise"
+   ],
+   "kw_zh": [
+    "舊資料權重太大",
+    "指數假設過頭",
+    "權衡雜訊"
+   ],
+   "a_en": "We compared four models. A global straight line weighs old data as much as new, and an exponential assumes growth keeps accelerating. A local linear fit came close. The Kalman filter also weighs each reading against its noise, so we kept it. We did not test a neural forecaster, so we cannot say how it would compare.",
+   "a_zh": "我們比較了四種模型。全域直線把舊資料和新資料看得一樣重，指數則假設生長一直加速；局部線性很接近。Kalman 還會把每筆讀值和雜訊一起權衡，所以我們選它。我們沒有測試神經網路預測器，所以不知道它會比較如何。",
+   "trap_en": "Claiming it beat deep learning. We never ran that comparison.",
+   "trap_zh": "宣稱它贏過深度學習；我們沒做過這個比較。",
+   "basis": "like SUSTech 2025: could a simpler model have done it"
+  },
+  {
+   "q_en": "Why build your own twin instead of using commercial bioprocess software?",
+   "q_zh": "為什麼自己做 twin，不用商業的生物製程軟體？",
+   "type": "compare",
+   "tier": "A",
+   "pages": [
+    "software"
+   ],
+   "seat": "dry",
+   "backup": "hw",
+   "kw_en": [
+    "no head-to-head",
+    "runs unattended on board",
+    "MIT licence"
+   ],
+   "kw_zh": [
+    "沒有直接比較",
+    "在板子上無人值守",
+    "MIT 授權"
+   ],
+   "a_en": "We did not benchmark against commercial software, so I cannot claim ours is better. What we built is for a reactor beside a rice field with no operator: it runs on an Arduino Uno Q, logs every reading, judges whether sensor data can be trusted, and is released under the MIT licence so other teams can reuse it.",
+   "a_zh": "我們沒有和商業軟體做過比較，所以不能說自己的比較好。我們做的是給稻田旁、沒有操作員的反應器用：它跑在 Arduino Uno Q 上，記錄每筆讀值，判斷感測資料可不可信，並以 MIT 授權釋出讓其他隊伍重用。",
+   "trap_en": "Claiming it is better than commercial tools without a comparison.",
+   "trap_zh": "沒有比較就說自己比商業工具好。",
+   "basis": "like INSA Lyon 2022: software and hardware together"
+  },
+  {
+   "q_en": "Would your digital twin work on a different organism or a bigger reactor?",
+   "q_zh": "你們的 digital twin 能用在別的菌種或更大的反應器嗎？",
+   "type": "boundary",
+   "tier": "A",
+   "pages": [
+    "software",
+    "model"
+   ],
+   "seat": "dry",
+   "backup": "hw",
+   "kw_en": [
+    "only B. subtilis runs",
+    "rate moved, ceiling did not",
+    "not tested"
+   ],
+   "kw_zh": [
+    "只有枯草桿菌",
+    "速率轉移、上限沒有",
+    "沒有測試"
+   ],
+   "a_en": "We have not tested that. Every run so far is Bacillus subtilis, 168 or WB800, in a small hollow fiber loop of 300 mL to 1 L. The closest thing we did is carry the plate growth rate into the bioreactor: the rate transferred, but the ceiling did not. The 20-liter unit in the Math Model is a sizing figure, and the wiki records no run at that size.",
+   "a_zh": "我們沒有測試過。到目前為止所有實驗都是枯草桿菌（168 或 WB800），在 300 mL 到 1 L 的小型中空纖維迴路裡。最接近的是把培養盤的生長速率帶進生物反應器：速率可以轉移，上限不行。Math Model 裡的 20 公升單元是估算用的尺寸，wiki 沒有這個規模的實驗紀錄。",
+   "trap_en": "Saying it scales. Only paper sizing exists.",
+   "trap_zh": "說它可以放大；目前只有紙上估算。",
+   "basis": "like Estonia/XJTLU: why this organism; scale-up probe"
+  },
+  {
+   "q_en": "How did the light plate experiment change what your twin does?",
+   "q_zh": "光照盤實驗如何改變你們 twin 的做法？",
+   "type": "integrate",
+   "tier": "A",
+   "pages": [
+    "software",
+    "drylab-notebook"
+   ],
+   "seat": "dry",
+   "backup": "wet2",
+   "kw_en": [
+    "growth prior",
+    "7% vs 29-68%",
+    "rate transferred"
+   ],
+   "kw_zh": [
+    "生長先驗",
+    "7% 對 29-68%",
+    "速率可轉移"
+   ],
+   "a_en": "It gave the twin a starting guess. A logistic fit to six light arms, r of 0.299 per hour, predicted each held-out arm's 24-hour OD within 7% from its first 8 hours, against 29 to 68% error without it. We registered that fit, and the bioreactor rate came back at 0.286. The plate ceiling did not carry over.",
+   "a_zh": "它給了 twin 一個起始猜測。用六個光照組擬合的 logistic（r 為 0.299 h-1），只看前 8 小時就能把被留出那組的 24 小時 OD 預測到 7% 以內，沒有先驗時誤差是 29 到 68%。我們登記了這個擬合，生物反應器的速率是 0.286。培養盤的上限沒有轉移。",
+   "trap_en": "Saying the plate shows green light controls production. It was a growth readout only.",
+   "trap_zh": "說光照盤證明綠光控制生產；它只是生長的讀值。",
+   "basis": "like Heidelberg 2025: both directions, lab changes model"
+  },
+  {
+   "q_en": "What can your twin not do yet?",
+   "q_zh": "你們的 twin 還有什麼做不到？",
+   "type": "gap",
+   "tier": "A",
+   "pages": [
+    "software",
+    "development"
+   ],
+   "seat": "dry",
+   "backup": "hw",
+   "kw_en": [
+    "loop not closed",
+    "green light not integrated",
+    "DO and loop temperature"
+   ],
+   "kw_zh": [
+    "閉環未完成",
+    "綠光未整合",
+    "溶氧與迴路溫度"
+   ],
+   "a_en": "Quite a lot, and we list it. The loop is not closed: a person decides every induction, and the green light is not integrated into the bioreactor. Dissolved oxygen calibration did not hold, the loop temperature probe was not responding, light inside the culture is not measured, and the photometer loses its beam above about OD 2.7 to 3.3.",
+   "a_zh": "有不少，而且我們都列出來了。閉環還沒完成：每次誘導都由人決定，綠光也還沒整合到生物反應器。溶氧校正沒有維持、迴路溫度探頭沒有回應、培養液內的光強沒有量測，而且 photometer 在大約 OD 2.7 到 3.3 以上會失去光束。",
+   "trap_en": "Saying the system is automatic. A person still decides.",
+   "trap_zh": "說系統是全自動；其實仍由人決定。",
+   "basis": "honesty probe"
+  },
+  {
+   "q_en": "How accurate is your leaf sensor?",
+   "q_zh": "你們的葉片感測器有多準？",
+   "type": "gap",
+   "tier": "A",
+   "pages": [
+    "software",
+    "results"
+   ],
+   "seat": "dry",
+   "backup": "hw",
+   "kw_en": [
+    "reads warm, site varies",
+    "never wetted",
+    "bench only"
+   ],
+   "kw_zh": [
+    "讀值偏高且隨地點變",
+    "從未弄濕",
+    "只在實驗桌上"
+   ],
+   "a_en": "On the bench it reads warmer than the air sensor, by 1.7 and 1.3 degrees at two sites but only 0.5 at the third, so no fixed offset corrects it. The leaf wetness channel read 0.0 percent throughout because we never wetted it, so it is untested. Nothing has been put on a plant yet.",
+   "a_zh": "在實驗桌上，它比空氣感測器讀得高：兩個地點分別高 1.7 與 1.3 度，第三個地點只高 0.5 度，所以沒有固定的偏差值能校正。葉片濕度通道全程讀 0.0%，因為我們從沒把它弄濕，所以是未測試的。目前還沒有裝到植物上。",
+   "trap_en": "Quoting a single offset such as 1.5 C. The offset changes by site.",
+   "trap_zh": "只講單一偏差，例如 1.5 °C；偏差隨地點改變。",
+   "basis": "like Munich 2025: replicates / calibration"
+  },
+  {
+   "q_en": "Could another team actually run your software?",
+   "q_zh": "別隊真的能跑你們的軟體嗎？",
+   "type": "impact",
+   "tier": "A",
+   "pages": [
+    "software"
+   ],
+   "seat": "dry",
+   "backup": "hw",
+   "kw_en": [
+    "MIT licence",
+    "GitLab repo",
+    "rig-app and next-twin"
+   ],
+   "kw_zh": [
+    "MIT 授權",
+    "GitLab 倉庫",
+    "rig-app 與 next-twin"
+   ],
+   "a_en": "The code is public under the MIT licence on iGEM's GitLab, in two parts: rig-app for the running instrument and next-twin for the browser version. The firmware, backend and interface are v4.2.2, v6.2.2 and v6.2.2 on an Arduino Uno Q. The wiki does not say any outside team has run it yet.",
+   "a_zh": "程式碼以 MIT 授權公開在 iGEM 的 GitLab，分兩部分：跑儀器的 rig-app 與瀏覽器版的 next-twin。韌體、後端、介面分別是 v4.2.2、v6.2.2、v6.2.2，跑在 Arduino Uno Q 上。wiki 沒有說有外部隊伍用過。",
+   "trap_en": "Saying others already use it. The wiki does not show that.",
+   "trap_zh": "說已有別隊在用；wiki 沒有這樣的紀錄。",
+   "basis": "like Peking 2025: did you publish the code; NJU: has anyone used it"
+  },
+  {
+   "q_en": "How did you build your stress index, and how do you know it works?",
+   "q_zh": "你們的壓力指數怎麼建立？怎麼知道有效？",
+   "type": "validate",
+   "tier": "A",
+   "pages": [
+    "model"
+   ],
+   "seat": "dry",
+   "backup": "plant",
+   "kw_en": [
+    "32,767 combinations",
+    "held-out years",
+    "32% less error"
+   ],
+   "kw_zh": [
+    "32,767 種組合",
+    "留出的年份",
+    "誤差少 32%"
+   ],
+   "a_en": "We fitted its weights to 25 years of county rice yields. For each crop we tried all 32,767 combinations of fifteen weather stresses and scored each on years it had not seen. In the second crop county error is 32% lower than a no-weather trend. The 2026 first-crop forecast is frozen, but only four of sixteen counties have reported.",
+   "a_zh": "我們用 25 年縣市稻米產量擬合權重。對每一期稻作，試了十五個天氣壓力因子的全部 32,767 種組合，並用沒看過的年份評分。第二期稻作的縣市誤差比不含天氣的趨勢模型少 32%。2026 年第一期稻作預測已凍結，但十六個縣市只有四個公布。",
+   "trap_en": "Saying 32% is a prospective result. It is on held-out past years; the blind test has only four counties.",
+   "trap_zh": "把 32% 說成前瞻性結果；那是留出的過去年份，盲測只有四個縣市。",
+   "basis": "like TAU-Israel 2025: trend baseline; 32 percent reduction"
+  },
+  {
+   "q_en": "Your Math Model and Geospatial Analysis disagree on payback. Which one is right?",
+   "q_zh": "Math Model 和 Geospatial Analysis 的回收期不一致，哪一個才對？",
+   "type": "gap",
+   "tier": "A",
+   "pages": [
+    "model",
+    "geospatial-analysis"
+   ],
+   "seat": "dry",
+   "backup": "biz",
+   "kw_en": [
+    "68 years vs 4.9",
+    "14 times apart",
+    "different stress definitions"
+   ],
+   "kw_zh": [
+    "68 年對 4.9 年",
+    "相差 14 倍",
+    "壓力定義不同"
+   ],
+   "a_en": "We do not know yet, and the Math Model page says so. Its loss figure of US$138 per hectare per crop gives 68 years at full efficacy. The figure it attributes to Geospatial is US$1931, about 4.9 years, 14 times higher. They use different stress definitions and chlorophyll versus yield. A yield endpoint and one stress definition would settle it.",
+   "a_zh": "目前還不知道，Math Model 頁也這樣寫。它的損失數字每公頃每期 US$138，在效能為 1 時回收期 68 年；它歸給 Geospatial 的數字是 US$1931，約 4.9 年，高 14 倍。兩者壓力定義不同，一個用葉綠素、一個用產量。需要產量終點與統一的壓力定義才能解決。",
+   "trap_en": "Picking the friendlier number (4.9 years). Neither is established.",
+   "trap_zh": "挑比較好看的 4.9 年；兩個數字都還沒被確立。",
+   "basis": "honesty probe; model vs geospatial tension"
+  },
+  {
+   "q_en": "What is your climate volatility index and how was it built?",
+   "q_zh": "你們的氣候波動指數是什麼？怎麼建立的？",
+   "type": "design",
+   "tier": "A",
+   "pages": [
+    "geospatial-analysis"
+   ],
+   "seat": "dry",
+   "backup": "ihp",
+   "kw_en": [
+    "diurnal and seasonal range",
+    "rainfall variability",
+    "weights not published"
+   ],
+   "kw_zh": [
+    "日溫差與季節溫差",
+    "降雨變異",
+    "權重未公布"
+   ],
+   "a_en": "It is a score of how unstable a place's weather is, built from mean diurnal temperature range, seasonal temperature range, precipitation variability and some other terms. We laid it over parcel maps of farms under two hectares in QGIS. The page does not publish the weights or the full list of terms, so I can describe the idea but not hand over the formula.",
+   "a_zh": "它是衡量一地天氣有多不穩定的分數，由平均日溫差、季節溫差、降雨變異係數以及其他項目組成。我們在 QGIS 把它疊在兩公頃以下農場的地塊圖上。頁面沒有公布權重與完整項目，所以我能說明概念，但沒辦法給出公式。",
+   "trap_en": "Giving a specific formula or weights that are not on the page.",
+   "trap_zh": "說出頁面上沒有的公式或權重。",
+   "basis": "design check"
+  },
+  {
+   "q_en": "How did the geospatial work change your project?",
+   "q_zh": "地理空間分析如何改變你們的專案？",
+   "type": "integrate",
+   "tier": "A",
+   "pages": [
+    "geospatial-analysis",
+    "model",
+    "drylab-notebook"
+   ],
+   "seat": "dry",
+   "backup": "biz",
+   "kw_en": [
+    "99.2% under 2 ha",
+    "shared ownership",
+    "tomato vs rice"
+   ],
+   "kw_zh": [
+    "99.2% 不到 2 公頃",
+    "共有模式",
+    "番茄對稻米"
+   ],
+   "a_en": "It changed the ownership model and reopened the crop. Because 99.2% of farms are under two hectares, one reactor fleet covering 2.5 hectares cannot be bought by one farm, so we point to a shared asset through farmers' associations. It also showed rice is overproduced, so on 12 October we reopened the question of which crop to map.",
+   "a_zh": "它改變了擁有模式，也讓作物選擇重新討論。因為 99.2% 的農場不到兩公頃，一組涵蓋 2.5 公頃的設備不是單一農戶買得起，所以我們指向透過農會共有。它也顯示稻米生產過剩，所以 10 月 12 日我們重新檢討要為哪種作物畫地圖。",
+   "trap_en": "Saying the maps proved demand. They show where risk and small farms overlap.",
+   "trap_zh": "說地圖證明了需求；它只顯示風險與小農重疊的地方。",
+   "basis": "like Heidelberg 2025: HP and model in both directions"
+  },
+  {
+   "q_en": "Where would you deploy ReLEAF first?",
+   "q_zh": "ReLEAF 會先部署在哪裡？",
+   "type": "impact",
+   "tier": "A",
+   "pages": [
+    "geospatial-analysis",
+    "model"
+   ],
+   "seat": "dry",
+   "backup": "biz",
+   "kw_en": [
+    "shared fleets",
+    "west-central counties",
+    "crop choice open"
+   ],
+   "kw_zh": [
+    "共用設備",
+    "中西部縣市",
+    "作物仍未定"
+   ],
+   "a_en": "We have not fixed a first site. The maps point at the west-central counties, where small farms overlap with high climate volatility and where tomatoes warmed 1.9 to 2.0 degrees on winter nights. The Math Model prices one rice hectare, so the crop is open. Whatever we choose, a fleet serves about 2.5 hectares through an association.",
+   "a_zh": "我們還沒決定第一個地點。地圖指向中西部縣市：小農與高氣候波動重疊，番茄冬季夜間升溫 1.9 到 2.0 度。Math Model 以一公頃稻田計價，所以作物仍未定。不論選哪個，一組設備約服務 2.5 公頃，透過農會共用。",
+   "trap_en": "Naming a deployment site as decided.",
+   "trap_zh": "把部署地點說成已決定。",
+   "basis": "scale / next step"
+  },
+  {
+   "q_en": "Does the night-time heat finding, 10 percent yield loss per degree, apply to Taiwan?",
+   "q_zh": "夜間高溫每升一度減產約 10% 的結果，適用台灣嗎？",
+   "type": "boundary",
+   "tier": "A",
+   "pages": [
+    "geospatial-analysis"
+   ],
+   "seat": "dry",
+   "backup": "plant",
+   "kw_en": [
+    "IRRI Philippines 2004",
+    "not a Taiwan measurement",
+    "Taiwan warming is local"
+   ],
+   "kw_zh": [
+    "菲律賓 IRRI 2004",
+    "不是台灣量測",
+    "台灣暖化資料是另一回事"
+   ],
+   "a_en": "Not directly. That 10 percent comes from Peng and colleagues' 25-year record at the IRRI farm in the Philippines, in 2004. We did not measure it in Taiwan. What we did compute for Taiwan is warming: tomato-county winter nights warmed 0.9 to 2.0 degrees between 1961-1990 and 2015-2024. We did not turn that into a yield loss.",
+   "a_zh": "不能直接套用。那個 10% 來自 Peng 等人 2004 年在菲律賓 IRRI 農場 25 年的紀錄，不是我們在台灣量的。我們針對台灣算的是升溫：番茄產區冬季夜間在 1961-1990 與 2015-2024 之間升溫 0.9 到 2.0 度，但沒有把它換算成減產。",
+   "trap_en": "Presenting the 10 percent as a Taiwan result.",
+   "trap_zh": "把 10% 說成台灣的結果。",
+   "basis": "like IZJU 2025: literature values from a different system"
+  },
+  {
+   "q_en": "How much protectant does one hectare need, and what does the equipment cost?",
+   "q_zh": "一公頃需要多少保護劑？設備要花多少錢？",
+   "type": "fact",
+   "tier": "B",
+   "pages": [
+    "model"
+   ],
+   "seat": "dry",
+   "backup": "biz",
+   "kw_en": [
+    "37.6 kU per application",
+    "81 L of vessel",
+    "US$3800 per hectare"
+   ],
+   "kw_zh": [
+    "每次 37.6 kU",
+    "81 L 容器",
+    "每公頃 US$3800"
+   ],
+   "a_en": "The model gives 37.6 kU of protectant per application and 339 kU in a nine-pass season, which needs 81 liters of vessel running all season and about US$3800 of capital per hectare. Ten 20-liter units cover 2.5 hectares. These are scenario figures: they all carry a modeled canopy correction of 2.44, so they are not validated rice doses.",
+   "a_zh": "模型算出每次施用 37.6 kU，九次施用的一季為 339 kU，需要 81 公升容器整季運轉，每公頃資本約 US$3800。十個 20 公升單元可服務 2.5 公頃。這些是情境數字：全部都含 2.44 的模型化冠層校正，所以不是經過驗證的稻田劑量。",
+   "trap_en": "Quoting the dollar figure without saying it inherits the canopy correction.",
+   "trap_zh": "只報金額，沒說它承襲了冠層校正。",
+   "basis": "like Peking 2025: how much of your product is needed"
+  },
+  {
+   "q_en": "Why did you anchor the dose on the experiment that worked rather than the smallest effective dose?",
+   "q_zh": "為什麼劑量以有效的那次實驗為準，而不是最小有效劑量？",
+   "type": "design",
+   "tier": "B",
+   "pages": [
+    "model"
+   ],
+   "seat": "dry",
+   "backup": "plant",
+   "kw_en": [
+    "dose that worked",
+    "dose never varied",
+    "one plate would fix it"
+   ],
+   "kw_zh": [
+    "有效的那個劑量",
+    "劑量從沒變過",
+    "一個培養皿就能解決"
+   ],
+   "a_en": "Because it is the only dose we have a record for. Experiment 9 applied 1.67 mL across a 78.5 square centimeter plate and varied salt and timing but never the amount, so the smallest dose that works is unknown. A single plate with neat, 1 to 3, 1 to 10 and 1 to 30 arms would locate it, and every row below would move.",
+   "a_zh": "因為這是我們唯一有紀錄的劑量。實驗 9 在 78.5 平方公分的培養皿上施用 1.67 mL，改變了鹽濃度與時機，但從沒改變施用量，所以最小有效劑量未知。只要一個含原液、1:3、1:10、1:30 的培養皿就能找出來，下面每一列數字都會跟著變。",
+   "trap_en": "Calling 37.6 kU the minimum or the recommended dose.",
+   "trap_zh": "把 37.6 kU 說成最小或建議劑量。",
+   "basis": "like Munich 2025: minimum production; never varied dose"
+  },
+  {
+   "q_en": "How long does the enzyme last after the reactor makes it?",
+   "q_zh": "反應器做出來的酵素能保存多久？",
+   "type": "gap",
+   "tier": "B",
+   "pages": [
+    "model"
+   ],
+   "seat": "dry",
+   "backup": "wet2",
+   "kw_en": [
+    "no shelf-life measurement",
+    "fell in one tube",
+    "rose in a replicated run"
+   ],
+   "kw_zh": [
+    "沒有保存期限量測",
+    "一支試管下降",
+    "重複實驗反而上升"
+   ],
+   "a_en": "We do not know. One unreplicated tube fell to 26% in three hours, an apparent half-time of 0.7 to 1.5 hours, while a replicated run rose over eight hours of light. Both measured live culture, not a harvested preparation. Holding a cooled or formulated stock and re-assaying it at 0.5, 1, 2, 4 and 28 hours would answer it.",
+   "a_zh": "我們不知道。一支沒有重複的試管在三小時內降到 26%，視半衰期 0.7 到 1.5 小時；但有重複的實驗在八小時光照中反而上升。兩者量的都是培養中的活細胞，不是收成後的製劑。把冷藏或調配過的保存液在 0.5、1、2、4、28 小時重新測定才能回答。",
+   "trap_en": "Quoting a half-life of 1.5 hours as established. It is one tube.",
+   "trap_zh": "把 1.5 小時半衰期當成確定值；那只是一支試管。",
+   "basis": "honesty probe"
+  },
+  {
+   "q_en": "How did wet lab data change the math model?",
+   "q_zh": "濕實驗數據如何改變數學模型？",
+   "type": "integrate",
+   "tier": "B",
+   "pages": [
+    "model",
+    "software"
+   ],
+   "seat": "dry",
+   "backup": "wet2",
+   "kw_en": [
+    "efficacy 0.58 withdrawn",
+    "5 h cycle vs 12 h peak",
+    "activity 22-fold apart"
+   ],
+   "kw_zh": [
+    "撤回效能 0.58",
+    "5 小時對 12 小時高峰",
+    "活性相差 22 倍"
+   ],
+   "a_en": "In three ways. An efficacy of 0.58 from Arabidopsis on agar was withdrawn because it cannot bound rice yield. A 72-hour ELISA run peaking at 12 hours questioned our five-hour harvest cycle, and a 12-hour cycle raises capital from US$3800 to US$9120. Two DNPH readings 22-fold apart show the activity term is not settled.",
+   "a_zh": "有三個方面。阿拉伯芥在培養基上得到的效能 0.58 被撤回，因為它不能界定稻米產量。72 小時 ELISA 在 12 小時達高峰，讓我們質疑五小時收成週期；若為 12 小時，資本從 US$3800 增加到 US$9120。兩次相差 22 倍的 DNPH 讀值，顯示活性項還沒有定論。",
+   "trap_en": "Saying the lab confirmed the model. Mostly the lab weakened it.",
+   "trap_zh": "說實驗室證實了模型；多半是實驗室削弱了模型。",
+   "basis": "like DTU 2025: model changed lab; lab changed model"
+  },
+  {
+   "q_en": "Can a single farm own a ReLEAF reactor?",
+   "q_zh": "單一農戶能擁有一台 ReLEAF 反應器嗎？",
+   "type": "impact",
+   "tier": "B",
+   "pages": [
+    "model",
+    "geospatial-analysis"
+   ],
+   "seat": "dry",
+   "backup": "biz",
+   "kw_en": [
+    "covers 2.5 ha",
+    "runs 4.3% of calendar",
+    "shared through associations"
+   ],
+   "kw_zh": [
+    "服務 2.5 公頃",
+    "只用日曆 4.3%",
+    "透過農會共用"
+   ],
+   "a_en": "On our arithmetic, no. A ten-unit fleet covers about 2.5 hectares and runs only 4.3% of the calendar, so one farm's reactor would sit idle most of its life. With 99% of Taiwanese farmers working under two hectares, a shared asset held by a farmers' association is the only structure the numbers allow. Both pages reach that from different directions.",
+   "a_zh": "依我們的算術，不行。一組十個單元約服務 2.5 公頃，卻只用日曆的 4.3%，單一農戶的反應器大部分時間閒置。台灣 99% 的農民耕地不到兩公頃，由農會持有共用資產是數字唯一允許的結構。兩個頁面從不同方向得到同樣結論。",
+   "trap_en": "Promising a per-farm product.",
+   "trap_zh": "承諾每個農戶都有自己的機器。",
+   "basis": "scale / real world"
+  },
+  {
+   "q_en": "What happens if the forecast only gives you three days notice?",
+   "q_zh": "如果氣象預報只提前三天，會怎麼樣？",
+   "type": "boundary",
+   "tier": "B",
+   "pages": [
+    "model"
+   ],
+   "seat": "dry",
+   "backup": "hw",
+   "kw_en": [
+    "5.4 days vs 3",
+    "bank the stock",
+    "shelf life controls"
+   ],
+   "kw_zh": [
+    "5.4 天對 3 天",
+    "要預先備貨",
+    "保存期限是關鍵"
+   ],
+   "a_en": "Then the reactor cannot wait for the forecast. One hectare takes 5.4 days on ten 20-liter units, so 2.4 days of production come before any forecast that would justify it. It has to produce through the season and use the forecast to decide when stock is released. That makes shelf life the controlling quantity, and we have not measured it.",
+   "a_zh": "那反應器就不能等預報。一公頃要用十個 20 公升單元花 5.4 天，比任何能支持行動的預報多出 2.4 天。它必須整季持續生產，用預報決定何時使用庫存。這讓保存期限成為關鍵，但我們還沒有量過。",
+   "trap_en": "Saying the forecast triggers production on demand.",
+   "trap_zh": "說預報一來就能即時生產。",
+   "basis": "like Heidelberg 2025: forecast not reactive"
+  },
+  {
+   "q_en": "What did molecular dynamics tell you about your purification tag?",
+   "q_zh": "分子動力學對你們的純化標籤告訴了你們什麼？",
+   "type": "fact",
+   "tier": "B",
+   "pages": [
+    "protein-design-molecular-dynamics",
+    "md-simulations"
+   ],
+   "seat": "dry",
+   "backup": "wet1",
+   "kw_en": [
+    "C-terminal 6xHis",
+    "salt bridge gone vs 100%",
+    "tag moved to N-terminus"
+   ],
+   "kw_zh": [
+    "C 端 6xHis",
+    "鹽橋消失對 100%",
+    "標籤移到 N 端"
+   ],
+   "a_en": "It showed a tag on the C-terminus abolishes the contact the peptide depends on. The tagged BoPEP4 passed our original distance gate, but a distance and angle test found the bidentate Asn23 to Arg487 salt bridge missing in every frame, against 100% untagged, because the carboxylate is used up in the bond to the tag. We moved the tag to the N-terminus for the orders after 16 August.",
+   "a_zh": "它顯示 C 端加標籤會破壞肽依賴的那個接觸。帶標籤的 BoPEP4 通過了原本的距離標準，但用距離加角度檢驗，Asn23 對 Arg487 的雙齒鹽橋在每個畫面都不存在，未加標籤則是 100%，因為羧基被用來與標籤形成鍵結。8 月 16 日之後的訂單我們改成 N 端標籤。",
+   "trap_en": "Saying all built constructs have the N-terminal tag. June and July cassettes and the Parts list have C-terminal tags.",
+   "trap_zh": "說所有做出來的構築都是 N 端標籤；6、7 月卡匣與 Parts 清單都是 C 端標籤。",
+   "basis": "like Peng 2025 style: concrete example of dry lab changing the build"
+  },
+  {
+   "q_en": "How reliable is your molecular dynamics? Did you run replicates?",
+   "q_zh": "你們的分子動力學可靠嗎？有跑重複嗎？",
+   "type": "validate",
+   "tier": "B",
+   "pages": [
+    "md-simulations",
+    "protein-design-molecular-dynamics"
+   ],
+   "seat": "dry",
+   "backup": "wet2",
+   "kw_en": [
+    "30 ns, one seed",
+    "apo noise floor 0.5 A",
+    "nothing tested at bench"
+   ],
+   "kw_zh": [
+    "30 ns、單一種子",
+    "apo 雜訊底線 0.5 Å",
+    "沒有實驗驗證"
+   ],
+   "a_en": "Honestly, limited. Each of the nine runs is 30 nanoseconds with one seed, so a difference between two runs may be two relaxation paths. The apo receptor sets a noise floor of about half an angstrom on receptor-side numbers. 30 ns is far too short to show binding strength. Nothing has been checked at the bench, so this is a hypothesis about what to build next.",
+   "a_zh": "老實說有限。九條軌跡都只有 30 奈秒、單一種子，兩個結果的差異可能只是兩條不同的鬆弛路徑。apo 受體給出接收器側數字約半埃的雜訊底線。30 ns 遠不足以顯示結合強度。完全沒有在實驗室驗證，所以這只是關於接下來要做什麼的假設。",
+   "trap_en": "Claiming MD shows binding affinity.",
+   "trap_zh": "宣稱 MD 顯示了結合強度。",
+   "basis": "like PekingHSC 2025: verification vs validation"
+  },
+  {
+   "q_en": "Why did you pick the 9-23 version of BoPEP4 as the production peptide?",
+   "q_zh": "為什麼選 BoPEP4 的 9-23 當生產用的肽？",
+   "type": "design",
+   "tier": "B",
+   "pages": [
+    "protein-design",
+    "protein-design-sprints",
+    "protein-design-molecular-dynamics"
+   ],
+   "seat": "dry",
+   "backup": "wet2",
+   "kw_en": [
+    "33% less mass",
+    "half the charge",
+    "MD says least stable"
+   ],
+   "kw_zh": [
+    "質量少 33%",
+    "電荷減半",
+    "MD 顯示最不穩"
+   ],
+   "a_en": "Mostly manufacturing. Against full length, 9-23 has 33% less mass, one trypsin-type cut site instead of three, and half the positive charge, so less sticks to the producer cells. The cost is a published up to tenfold activity loss, and in our MD it was the least stable untagged rung at 77.1% clamp integrity. So we sent the whole ladder and let the bench decide.",
+   "a_zh": "主要是為了製造。相較於全長，9-23 質量少 33%、胰蛋白酶型切位只有一個而不是三個、正電荷減半，所以較少黏在生產細胞上。代價是已發表的最多十倍活性損失，而且在我們的 MD 中它是未加標籤構築裡最不穩定的，clamp 完整度 77.1%。所以我們把整個長度系列都送去，讓實驗室決定。",
+   "trap_en": "Saying 9-23 is the best binder. It was chosen for manufacturability.",
+   "trap_zh": "說 9-23 是最好的結合者；它是為了可製造性而選的。",
+   "basis": "design check"
+  },
+  {
+   "q_en": "Why didn't you just rank your peptide designs by docking score?",
+   "q_zh": "為什麼不直接用對接分數替肽設計排名？",
+   "type": "compare",
+   "tier": "B",
+   "pages": [
+    "protein-design-sprints",
+    "protein-design-methodology"
+   ],
+   "seat": "dry",
+   "backup": "wet1",
+   "kw_en": [
+    "93% length and charge",
+    "rho +0.05",
+    "best score on wrong construct"
+   ],
+   "kw_zh": [
+    "93% 是長度與電荷",
+    "rho +0.05",
+    "最高分卻是錯的構築"
+   ],
+   "a_en": "Because we audited it and it did not work. HADDOCK score across BoPEP4 variants was 93% explained by length and charge alone, and uncorrelated with published activities, rho about plus 0.05. The C-terminal tag scored best and was the construct chemistry rules out. So we judged constructs on named contacts and occupancy over time instead of on score.",
+   "a_zh": "因為我們稽核過，它沒有用。BoPEP4 各變體的 HADDOCK 分數有 93% 單靠長度與電荷就能解釋，與已發表活性無相關（rho 約 +0.05）。C 端標籤的分數最好，卻是化學上被排除的構築。所以我們改用指名的接觸與隨時間的占有率來判斷，而不是看分數。",
+   "trap_en": "Saying the docking score picked our constructs.",
+   "trap_zh": "說是對接分數挑出我們的構築。",
+   "basis": "like Toronto 2025: other modelling approaches"
+  },
+  {
+   "q_en": "Why didn't you engineer a better ACC deaminase?",
+   "q_zh": "為什麼不改造出更好的 ACC deaminase？",
+   "type": "compare",
+   "tier": "B",
+   "pages": [
+    "protein-design",
+    "protein-design-sprints"
+   ],
+   "seat": "dry",
+   "backup": "wet2",
+   "kw_en": [
+    "amount beats quality",
+    "assay medium pH",
+    "cysteine variant held"
+   ],
+   "kw_zh": [
+    "數量比品質重要",
+    "培養基 pH",
+    "半胱胺酸變體暫緩"
+   ],
+   "a_en": "Because the enzyme meets far less ACC than it could handle, so how much active enzyme is present matters more than how good it is. The modeling pointed to the medium instead: moving it to pH 7.0 shortens clearance roughly 14-fold. We designed a four-cysteine variant for shelf life but held it, and the stability design F156C and the pH design V293T both failed on conservation and stability.",
+   "a_zh": "因為酵素遇到的 ACC 遠少於它能處理的量，所以有多少活性酵素比酵素多好更重要。模型指向的是培養基：改成 pH 7.0 可讓清除速度快約 14 倍。我們設計了四個半胱胺酸的變體來延長保存期限，但暫緩，穩定度設計 F156C 與 pH 設計 V293T 則都因保守度與穩定度而失敗。",
+   "trap_en": "Saying we engineered ACC deaminase. Only wild type was sent.",
+   "trap_zh": "說我們改造了 ACC deaminase；其實只送了野生型。",
+   "basis": "like Great Bay 2025: why structural modeling of the protein"
+  },
+  {
+   "q_en": "What failed in your protein design work?",
+   "q_zh": "你們的蛋白質設計中什麼失敗了？",
+   "type": "gap",
+   "tier": "B",
+   "pages": [
+    "protein-design-methodology",
+    "protein-design-sprints"
+   ],
+   "seat": "dry",
+   "backup": "wet1",
+   "kw_en": [
+    "nine docking runs neutral termini",
+    "LEA14 gate failed",
+    "controls invisible to docking"
+   ],
+   "kw_zh": [
+    "九次對接用了中性末端",
+    "LEA14 關卡失敗",
+    "對照組在對接中看不出"
+   ],
+   "a_en": "Several things. Nine docking runs were built with neutral termini, deleting the carboxylate that anchors the peptide, and nobody noticed for two months. None came within 4 angstroms of the crystal. The LEA14 prediction failed a gate we set in advance and we stopped. A variant named Y156C turned out to be F156C. And docking could not see our two weak controls.",
+   "a_zh": "有好幾件。九次對接用了中性末端，等於刪掉固定肽的羧基，兩個月都沒有人發現，沒有任何結果距離晶體結構小於 4 埃。LEA14 的預測沒通過我們事先設定的關卡，所以我們停止。一個叫 Y156C 的變體其實是 F156C。對接也看不出我們兩個弱活性對照組。",
+   "trap_en": "Presenting the pipeline as finished and reliable.",
+   "trap_zh": "把流程說成已完成而且可靠。",
+   "basis": "honesty probe"
+  },
+  {
+   "q_en": "Does a good docking score mean the peptide will protect the plant?",
+   "q_zh": "對接分數好，代表這個肽就能保護植物嗎？",
+   "type": "boundary",
+   "tier": "B",
+   "pages": [
+    "protein-design-methodology",
+    "protein-design-sprints"
+   ],
+   "seat": "dry",
+   "backup": "plant",
+   "kw_en": [
+    "recognition step only",
+    "no binding assay",
+    "function read in the cell"
+   ],
+   "kw_zh": [
+    "只回答辨識這一步",
+    "沒有結合實驗",
+    "功能要在細胞裡看"
+   ],
+   "a_en": "No. A clean, well scored model only says the sequence can do the recognition step. It does not show the peptide reaches the receptor, survives the apoplast, or triggers the immune response. We ran no binding assay. On plants, BoPEP4 at 1 in 40 carried plants green under salt, but that was a single plate with no statistics yet.",
+   "a_zh": "不能。分數好、結構乾淨的模型只說明序列能完成辨識這一步，不代表肽會到達受體、能在質外體存活或啟動免疫反應。我們沒有做結合實驗。在植物上，BoPEP4 稀釋 40 倍能讓植物在鹽逆境下保持綠色，但那只是一個培養皿，還沒有統計。",
+   "trap_en": "Treating in silico binding as proof of protection.",
+   "trap_zh": "把電腦預測的結合當成保護效果的證明。",
+   "basis": "like Great Bay 2025: correlation between predictions and testing"
+  },
+  {
+   "q_en": "What from your protein design was actually validated in the lab, and what only in silico?",
+   "q_zh": "蛋白質設計中哪些在實驗室驗證過，哪些只在電腦中？",
+   "type": "validate",
+   "tier": "B",
+   "pages": [
+    "protein-design",
+    "drylab-notebook",
+    "results",
+    "parts"
+   ],
+   "seat": "dry",
+   "backup": "wet2",
+   "kw_en": [
+    "ACCD wild type made and active",
+    "BoPEP4 made, tag position differs",
+    "no binding or function test"
+   ],
+   "kw_zh": [
+    "ACCD 野生型有做出且有活性",
+    "BoPEP4 有做出但標籤位置不同",
+    "沒有結合或功能測試"
+   ],
+   "a_en": "Validated: wild-type ACC deaminase is made and active, 2.5 to 8.5 micrograms per mL. BoPEP4 is made, about 6, and ViennaRNA recoding helped BoPEP4 but not ACC deaminase. Only in silico: the ladder, tag placement, S15A and G17A controls, and cysteine variants. Neither LEA14 truncation is sequence-verified, and no binding assay has been run.",
+   "a_zh": "驗證過的：野生型 ACC deaminase 已做出且有活性，2.5 到 8.5 µg/mL。BoPEP4 有做出，約 6 µg/mL，ViennaRNA 重新編碼對 BoPEP4 有幫助，對 ACC deaminase 則沒有。只在電腦中的：長度系列、標籤位置、S15A 與 G17A 對照、半胱胺酸變體。兩個 LEA14 截短版都沒有定序確認，也沒有做結合實驗。",
+   "trap_en": "Listing design outcomes as lab results.",
+   "trap_zh": "把設計結果列成實驗室結果。",
+   "basis": "like Great Bay 2025: correlation between modeling predictions and real testing"
+  },
+  {
+   "q_en": "How did the dry lab change which protectant constructs the wet lab built?",
+   "q_zh": "乾實驗室如何改變濕實驗做哪些保護劑構築？",
+   "type": "integrate",
+   "tier": "B",
+   "pages": [
+    "protein-design",
+    "protein-design-sprints",
+    "drylab-notebook"
+   ],
+   "seat": "dry",
+   "backup": "wet1",
+   "kw_en": [
+    "tag to N-terminus",
+    "ladder sent whole",
+    "ACCD wild type only"
+   ],
+   "kw_zh": [
+    "標籤移到 N 端",
+    "長度系列全送",
+    "ACCD 只送野生型"
+   ],
+   "a_en": "In four ways. The BoPEP4 tag moved to the N-terminus for orders after 16 August. Nothing computational separated the truncations, so the whole ladder plus S15A and G17A controls went out. ACC deaminase went as wild type only. And the lab pushed back: the cloning record showed the June and July cassettes still carry a C-terminal His tag.",
+   "a_zh": "有四個方面。8 月 16 日之後的訂單，BoPEP4 標籤移到 N 端。沒有任何計算能分開各個截短版，所以整個長度系列加上 S15A、G17A 對照全部送出。ACC deaminase 只送野生型。而且實驗室也回頭修正：選殖紀錄顯示 6、7 月的卡匣仍是 C 端 His 標籤。",
+   "trap_en": "Saying the dry lab chose what was built. The wet lab record corrected the dry lab too.",
+   "trap_zh": "說是乾實驗室決定了做什麼；選殖紀錄也修正了乾實驗室。",
+   "basis": "like Heidelberg 2025: both directions"
+  },
+  {
+   "q_en": "What are the next experiments for your protein design?",
+   "q_zh": "你們蛋白質設計接下來的實驗是什麼？",
+   "type": "impact",
+   "tier": "B",
+   "pages": [
+    "protein-design-molecular-dynamics",
+    "protein-design-sprints"
+   ],
+   "seat": "dry",
+   "backup": "wet2",
+   "kw_en": [
+    "secretion assay of truncations",
+    "full-length K7A",
+    "PLP occupancy and W112A"
+   ],
+   "kw_zh": [
+    "截短版分泌實驗",
+    "全長 K7A",
+    "PLP 占有率與 W112A"
+   ],
+   "a_en": "The wiki names several. A secretion assay comparing the truncated constructs with wild-type BoPEP4, since shorter is a manufacturability hypothesis. A full-length K7A mutant to test the Lys7 anchor. A PLP occupancy measurement for ACC deaminase variants. And W112A on LEA14, a one-codon test of where its partner binds. None has results yet.",
+   "a_zh": "wiki 列出幾項。比較截短版與野生型 BoPEP4 的分泌實驗，因為變短只是可製造性的假設；全長 K7A 突變體，用來檢驗 Lys7 錨點；ACC deaminase 變體的 PLP 占有率量測；以及 LEA14 的 W112A，用一個密碼子檢驗夥伴結合位置。目前都還沒有結果。",
+   "trap_en": "Announcing results for experiments that have not been run.",
+   "trap_zh": "宣布還沒做的實驗的結果。",
+   "basis": "next step; stated on wiki"
+  },
+  {
+   "q_en": "Can your protein design pipeline be applied to other proteins?",
+   "q_zh": "你們的蛋白質設計流程可以用在其他蛋白質嗎？",
+   "type": "boundary",
+   "tier": "B",
+   "pages": [
+    "protein-design-methodology",
+    "protein-design"
+   ],
+   "seat": "dry",
+   "backup": "wet1",
+   "kw_en": [
+    "same steps, evidence decides",
+    "enzymes are not docked",
+    "one strand stopped"
+   ],
+   "kw_zh": [
+    "同樣步驟、證據決定",
+    "酵素不對接",
+    "一條線中止"
+   ],
+   "a_en": "Partly, and we tested it on three. The same steps ran on a peptide, a folded protein and an enzyme, with the available evidence deciding how far each went. The peptide went all the way. ACC deaminase skipped docking because its cofactor and substrate are covalent. LEA14 stopped when its partner could not be predicted. Docking is not a general tool.",
+   "a_zh": "部分可以，我們用三個蛋白質測過。同樣的步驟用在一個肽、一個折疊蛋白質和一個酵素上，現有證據決定各自能走多遠。肽走完全程；ACC deaminase 因為輔因子與受質是共價結合而跳過對接；LEA14 因為夥伴無法預測而中止。對接不是通用工具。",
+   "trap_en": "Saying the pipeline works on any protein.",
+   "trap_zh": "說這個流程對任何蛋白質都有效。",
+   "basis": "boundary probe"
+  },
+  {
+   "q_en": "In one sentence, how does your protein design pipeline work?",
+   "q_zh": "用一句話說，你們的蛋白質設計流程是怎麼運作的？",
+   "type": "fact",
+   "tier": "B",
+   "pages": [
+    "protein-design",
+    "protein-design-methodology"
+   ],
+   "seat": "dry",
+   "backup": "wet1",
+   "kw_en": [
+    "GRAFT five stages",
+    "docking then MD then triage",
+    "recognition only"
+   ],
+   "kw_zh": [
+    "GRAFT 五階段",
+    "對接、MD、分級",
+    "只驗證辨識"
+   ],
+   "a_en": "GRAFT has five stages: Generate candidates, build Restraints, Assemble by docking, Flex with molecular dynamics, and Triage with five independent checks, where a model must pass all five. It tests whether a molecule can recognise its partner, not whether that produces a plant response. Three protectants went through it: BoPEP4, LEA14 and ACC deaminase.",
+   "a_zh": "GRAFT 有五個階段：產生候選（Generate）、建立限制條件（Restraints）、對接組裝（Assembly）、用分子動力學檢驗（Flex），以及用五個獨立檢查分級（Triage），模型必須全部通過。它檢驗的是分子能不能辨識夥伴，而不是會不會引起植物反應。BoPEP4、LEA14、ACC deaminase 三種保護劑都跑過。",
+   "trap_en": "Describing it as a prediction of whether the peptide protects plants.",
+   "trap_zh": "把它說成預測肽是否能保護植物。",
+   "basis": "orientation question"
+  }
+ ],
+ "gaps": [
+  {
+   "issue_en": "Payback is in dispute by a factor of 14 between the Math Model and Geospatial Analysis. Math Model Block 1 attributes US$138 per hectare per crop of weather loss (68 years at full efficacy); it quotes Geospatial as US$1931 per hectare per crop (4.9 years). Earlier team notes said about 8.2 times; the current wiki text says 14. The Geospatial Analysis page itself does not show the US$1931 figure or its chlorophyll-to-yield calculation.",
+   "issue_zh": "Math Model 與 Geospatial Analysis 的回收期相差 14 倍。Math Model 區塊 1 估計每公頃每期天氣損失 US$138（效能為 1 時 68 年）；它引用 Geospatial 為每公頃每期 US$1931（4.9 年）。團隊較早的筆記說約 8.2 倍，目前 wiki 文字寫 14 倍。Geospatial Analysis 頁本身沒有呈現 US$1931 這個數字，也沒有呈現葉綠素換算成產量的計算。",
+   "where": "model#Payback and fleet utilization; geospatial-analysis",
+   "say_en": "Use the wiki's number, 14 times, and say the two pages are not yet estimates of the same hectare: different stress definitions and a chlorophyll step versus a yield step. Do not defend either figure. What would settle it is a yield endpoint, one stress definition, and agreement on one or two protected crops a year.",
+   "say_zh": "用 wiki 上的數字，14 倍，並說明兩頁還不是對同一公頃的估計：壓力定義不同，一個用葉綠素、一個用產量。不要替任何一個數字辯護。要解決它需要產量終點、統一的壓力定義，以及對每年保護一次還是兩次達成共識。"
+  },
+  {
+   "issue_en": "An 86.3% / 25.3% figure that the team has used has no traceable source. I searched the text of all pages and found neither number in prose or tables.",
+   "issue_zh": "團隊用過的 86.3% / 25.3% 這組數字查不到來源。我搜尋了所有頁面的文字，在段落與表格中都找不到這兩個數字。",
+   "where": "not found on any page (searched all live txt files)",
+   "say_en": "Do not quote it. If a judge raises it, say we cannot trace it to a measurement on our wiki and we do not rely on it, then offer the numbers we can source: 32% less county error, 0.040 vs 0.067, 26.7 h lead time.",
+   "say_zh": "不要引用。如果評審提到，就說我們無法把它追溯到 wiki 上的某個量測，所以不依賴它，然後改講有來源的數字：縣市誤差少 32%、0.040 對 0.067、提前 26.7 小時。"
+  },
+  {
+   "issue_en": "The forecast win is smaller than the headline. At 2 h on run 7 the Kalman filter ties persistence at 0.070 (0% better). It forecasts the photometer reading, not biomass, because most of the run is above the linear range. Development says the models beat persistence 'out to 12 h' without naming the run.",
+   "issue_zh": "預測的優勢比標題小。在 run 7 的 2 小時，Kalman 與 persistence 同為 0.070（沒有改善）。它預測的是 photometer 讀值，不是生物量，因為大部分時間超出線性範圍。Development 頁寫「到 12 小時都勝過 persistence」，但沒有指明是哪一次實驗。",
+   "where": "software#Batch forecasting; development#Detect, Forecast & Activate",
+   "say_en": "Say 41% at 2 h on the 102-hour run, 24% at 8 and 12 h on a repeat, and a tie at 2 h on the repeat. Say plainly that we forecast the photometer reading and only two runs were scored.",
+   "say_zh": "說 102 小時實驗在 2 小時好 41%，重複實驗在 8 與 12 小時好 24%，重複實驗在 2 小時打平。並明說我們預測的是 photometer 讀值，而且只有兩次實驗計分。"
+  },
+  {
+   "issue_en": "The leaf sensor offset is quoted three ways. Software text and Development say it reads 1.2 to 1.9 C warm. The same page's table shows the room site at +0.47 ± 0.46 C (runs -0.09 to +0.97). Results says -0.2 to +1.8 C. The wetness channel was never wetted.",
+   "issue_zh": "葉片感測器偏差有三種說法。Software 文字與 Development 寫偏高 1.2 到 1.9 °C；同頁表格顯示 room 地點為 +0.47 ± 0.46 °C（各次 -0.09 到 +0.97）；Results 寫 -0.2 到 +1.8 °C。濕度通道從未弄濕。",
+   "where": "software#The leaf and air sensors on the bench; results; development",
+   "say_en": "Say the offset changes by site, from about 0.5 to 1.7 degrees, so one fixed correction does not work. It is bench-only, with no leaf, and wetness is untested. Do not recite 1.2 to 1.9 as the range.",
+   "say_zh": "說偏差隨地點改變，約 0.5 到 1.7 度，所以不能用單一固定校正。它只在桌上測試、沒有葉片，濕度也未測試。不要把 1.2 到 1.9 當成範圍背出來。"
+  },
+  {
+   "issue_en": "Tag position in what was built does not match the protein-design story. The design says the BoPEP4 tag must be on the N-terminus because a C-terminal tag removes the salt bridge. But Parts lists every Level 0 part with a C-terminal His tag, the 14 October cloning check says the June and July cassettes and every LEA14 and ACC deaminase construct carry a C-terminal 6xHis, and the Protein Design page calls the LEA14 constructs N-His. The 9-23 peptide is not in Parts; 15-23 is. The BoPep4 ELISA (about 6 ug/mL) was on the C-His cassettes.",
+   "issue_zh": "實際做出來的標籤位置與蛋白質設計的敘述不符。設計說 BoPEP4 標籤必須在 N 端，因為 C 端標籤會破壞鹽橋。但 Parts 把所有 Level 0 零件都列為 C 端 His 標籤；10 月 14 日的選殖核對說 6、7 月卡匣以及所有 LEA14 與 ACC deaminase 構築都是 C 端 6xHis；Protein Design 頁卻說 LEA14 構築是 N-His。9-23 肽不在 Parts 中，15-23 才在。BoPep4 的 ELISA（約 6 µg/mL）是用 C-His 卡匣量的。",
+   "where": "protein-design; drylab-notebook#Saturday 10 October; parts",
+   "say_en": "Say the tag move applies to the BoPEP4 order after 16 August, and that the constructs we have measured so far still carry the C-terminal tag. The cleavage and secretion data are about production, not about receptor binding. Do not say every construct is N-terminal.",
+   "say_zh": "說標籤移到 N 端只適用於 8 月 16 日之後的 BoPEP4 訂單，目前量過的構築仍是 C 端標籤。分泌與切割的數據只代表生產，不代表受體結合。不要說所有構築都是 N 端。"
+  },
+  {
+   "issue_en": "Very little of the protein design is tested outside the computer. No binding assay has been run, MD was one 30 ns seed per system on BoPEP4 only, neither LEA14 truncation is sequence-verified, the 26 September notebook says none of it is yet applied to a plant, and the Methodology page states that numerical values inside its figures are illustrative of the expected shape, not measurements from a completed run.",
+   "issue_zh": "蛋白質設計在電腦之外幾乎沒有被測試。沒有做結合實驗；MD 只做 BoPEP4，每個系統單一種 30 ns 種子；兩個 LEA14 截短版都沒有定序確認；9 月 26 日的筆記說還沒有任何設計用在植物上；Methodology 頁也說明圖中的數值是預期形狀的示意，不是完成實驗的量測。",
+   "where": "protein-design-methodology; md-simulations; drylab-notebook",
+   "say_en": "Say the protein design chose what to build and ruled things out, and that the bench has to decide whether any of it works. Name the next tests: truncation secretion assay, full-length K7A, PLP occupancy, W112A. Say which figure values are illustrative if asked.",
+   "say_zh": "說蛋白質設計決定了要做什麼、排除了哪些，而是否有效要由實驗桌決定。講出下一步實驗：截短版分泌實驗、全長 K7A、PLP 占有率、W112A。被問到時說明哪些圖的數值只是示意。"
+  },
+  {
+   "issue_en": "K18R is described two ways. Protein Design and Sprints say it was withdrawn because the Lys18 contact held only 53.7% of frames. The MD page says this does not rule out K18R and it remains untested. Separately, the MD text says the tagged salt bridge was missing in every frame while its table shows 2.4%, which the footnote explains as a neutral amide oxygen.",
+   "issue_zh": "K18R 有兩種描述。Protein Design 與 Sprints 說因為 Lys18 接觸只占 53.7% 的畫面而撤回；MD 頁則說這不排除 K18R，仍未測試。另外，MD 文字說帶標籤構築的鹽橋在每個畫面都不存在，但表格顯示 2.4%，註腳解釋那是一個中性醯胺氧。",
+   "where": "protein-design-molecular-dynamics; protein-design-sprints#6 K18R; protein-design",
+   "say_en": "Say K18R was not ordered because its rationale weakened, and a dedicated simulation would be needed to say more. For the tag, say the salt bridge is absent and the 2.4% is a different atom.",
+   "say_zh": "說 K18R 因為理由變弱而沒有訂購，要多說什麼需要專門的模擬。關於標籤，說鹽橋不存在，2.4% 是另一個原子。"
+  },
+  {
+   "issue_en": "Several geospatial claims are thinner than they look. The 10% per degree night-heat loss is from the Philippines in 2004. The volatility index weights and full term list are not published. The soil class with the highest volatility (sandy loam) is also the one the geomorphology heuristic assigns most broadly. The Math Model prices a rice hectare, while Geospatial says tomatoes are a better target and rice is overproduced. The notebook says 358 townships and the other pages say 346 demand nodes.",
+   "issue_zh": "有幾項地理空間的說法比看起來薄弱。夜間高溫每度減產 10% 來自 2004 年的菲律賓。波動指數的權重與完整項目沒有公布。波動最高的土壤類型（砂質壤土）也是地貌分類法指派最廣的類型。Math Model 以稻田計價，但 Geospatial 認為番茄是更好的目標、稻米生產過剩。筆記寫 358 個鄉鎮，其他頁寫 346 個需求節點。",
+   "where": "geospatial-analysis; model; drylab-notebook#Saturday 26 September",
+   "say_en": "Say the maps show where small farms and unstable weather overlap, not a measured Taiwan yield loss. The first crop is still open, the index recipe is incomplete on the page, and 346 is the number of demand nodes in the fertilizer model.",
+   "say_zh": "說地圖顯示的是小農與不穩定天氣重疊的地方，不是量測到的台灣減產。第一個作物還沒定，指數配方在頁面上不完整，346 是肥料模型的需求節點數。"
+  },
+  {
+   "issue_en": "Run counts and instrument ranges differ between pages. Digital Twin lists seven bioreactor runs and a 434-hour run 3; Development and the Contribution page say six runs with 102.4 h the longest. The photometer is quoted as slope 1.018 (R2 0.995) to OD 1.2 on Digital Twin and 0.995 to OD 2.5 on Development; the first is TiO2 and the second silica.",
+   "issue_zh": "各頁的實驗次數與儀器範圍不一致。Digital Twin 列出七次生物反應器實驗與 434 小時的 run 3；Development 與 Contribution 寫六次、最長 102.4 小時。photometer 在 Digital Twin 寫斜率 1.018（R2 0.995）到 OD 1.2，在 Development 寫 0.995 到 OD 2.5；前者是 TiO2，後者是二氧化矽。",
+   "where": "software#Every run so far; development#Monitor; contribution",
+   "say_en": "Say seven runs, with the 434-hour one on wild type at 22 C in the first 243 usable hours. For the photometer, name the standard: TiO2 tracks to OD 1.2, silica to OD 2.5. Defer instrument detail to the hardware seat.",
+   "say_zh": "說七次實驗，其中 434 小時那次是 22 °C 的野生型，前 243 小時可用。photometer 要說明用的標準：TiO2 到 OD 1.2，二氧化矽到 OD 2.5。儀器細節交給硬體組員。"
+  }
+ ]
+}

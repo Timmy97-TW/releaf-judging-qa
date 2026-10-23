@@ -1,0 +1,2079 @@
+{
+ "domain": "hardware",
+ "facts": [
+  {
+   "id": "hardware-f1",
+   "label_en": "Bioreactor working culture volume",
+   "label_zh": "生物反應器的培養體積",
+   "value": "1 L",
+   "detail_en": "A 1 L stirred bottle; prototypes 1 and 3 ran 500 mL, prototype 2 ran 1 L, and the commercial design keeps 1 L.",
+   "detail_zh": "1 L 攪拌瓶；原型 1、3 用 500 mL，原型 2 用 1 L，商用設計維持 1 L。",
+   "src": "hardware-bioreactor#7.1.1 Specifications",
+   "confidence": "stated"
+  },
+  {
+   "id": "hardware-f2",
+   "label_en": "Hollow-fiber module",
+   "label_zh": "中空纖維模組規格",
+   "value": "mPES, 0.2 µm, 200 cm², 11 fibers",
+   "detail_en": "Cobetter MiniLab module, fibers 1 mm inner diameter and 0.60 m long. The first June growth runs used a larger module of about 1.3 m².",
+   "detail_zh": "Cobetter MiniLab 模組，纖維內徑 1 mm、長 0.60 m。六月最初的生長實驗用的是約 1.3 m² 的較大模組。",
+   "src": "hardware-bioreactor#7.1.1 Specifications",
+   "confidence": "stated"
+  },
+  {
+   "id": "hardware-f3",
+   "label_en": "Shell-side plating after 24 h at 37 °C",
+   "label_zh": "殼側培養液塗盤結果",
+   "value": "0 colonies (lumen plate grew)",
+   "detail_en": "Two platings in all, both clean on the shell side; each was a single plating with no replicate count or detection limit recorded.",
+   "detail_zh": "共兩次塗盤，殼側都沒有菌落；每次都只有單一盤，沒有記錄重複數與偵測極限。",
+   "src": "hardware-bioreactor#8 Containment & Safety",
+   "confidence": "stated"
+  },
+  {
+   "id": "hardware-f4",
+   "label_en": "Recommended operating point",
+   "label_zh": "建議操作點",
+   "value": "263 mL/min at TMP 0.30 bar",
+   "detail_en": "Shear rate about 4060 s-1, inside the vendor window of 2000 to 6000 s-1; axial TMP non-uniformity 28%. The 0.30 bar is a design choice from water tests, not a TMP measured in a culture run.",
+   "detail_zh": "剪切率約 4060 s-1，在廠商建議的 2000 至 6000 s-1 範圍內；軸向 TMP 不均勻度 28%。0.30 bar 是由水測試推得的設計值，不是培養實驗中量到的 TMP。",
+   "src": "hardware-bioreactor#4.1 Hollow Fiber Membrane, prototype 3",
+   "confidence": "conflict"
+  },
+  {
+   "id": "hardware-f5",
+   "label_en": "Pressure drop model",
+   "label_zh": "壓降模型",
+   "value": "ΔP = aQ + bQ², R² 0.995",
+   "detail_en": "Fitted through the origin on 16 Aug 2026, with and without the module (R² 0.9950 and 0.9954); the residuals show no trend.",
+   "detail_zh": "2026 年 8 月 16 日對有、無模組兩種配置做過原點二次式擬合（R² 0.9950 與 0.9954），殘差無趨勢。",
+   "src": "hardware-bioreactor#4.1 prototype 3",
+   "confidence": "stated"
+  },
+  {
+   "id": "hardware-f6",
+   "label_en": "Share of pressure drop caused by plumbing",
+   "label_zh": "管路造成的壓降比例",
+   "value": "46% to 55%",
+   "detail_en": "Valves, fittings and the flow cuvette cause 46% of the total drop at 120 mL/min and 55% at 450 mL/min. Not subtracting them would overstate the membrane resistance about twofold.",
+   "detail_zh": "閥、接頭與流動比色槽在 120 mL/min 佔總壓降 46%，450 mL/min 佔 55%。不扣除的話，薄膜阻力會被高估約兩倍。",
+   "src": "hardware-bioreactor#4.1 prototype 3",
+   "confidence": "stated"
+  },
+  {
+   "id": "hardware-f7",
+   "label_en": "Pressure sensors",
+   "label_zh": "壓力感測器",
+   "value": "BP8G-AGB, 0 to 1 MPa, 3 on the rig, 4 in the cabinet design",
+   "detail_en": "Ceramic transmitters at about US$12 each, 1.0% of full scale overall. The lab rig reads feed, retentate and permeate; the Digital Twin page lists four channels.",
+   "detail_zh": "陶瓷壓力傳送器，每個約 US$12，整體精度滿量程 1.0%。實驗台量進料、回流、滲透三點；Digital Twin 頁面列的是四個通道。",
+   "src": "hardware-bioreactor#4.1 prototype 1; software#Within the bioreactor",
+   "confidence": "conflict"
+  },
+  {
+   "id": "hardware-f8",
+   "label_en": "Flow meter",
+   "label_zh": "流量計",
+   "value": "ZJ-TM02 Hall-effect, 2580 pulses per L",
+   "detail_en": "Checked against simultaneous hand collection at R² = 0.995. It replaced hand measurement because hand readings depended on who took them.",
+   "detail_zh": "與同步手動收集比對 R² = 0.995。因為手動讀數會因人而異，所以改用流量計。",
+   "src": "measurement#Flow and pressure monitoring",
+   "confidence": "stated"
+  },
+  {
+   "id": "hardware-f9",
+   "label_en": "Pump choice",
+   "label_zh": "幫浦選擇",
+   "value": "Peristaltic BP1000, 1 L/min",
+   "detail_en": "A magnetic pump was tried for long runs but could not push culture medium or lift liquid from the bottle (below 200 mL/min against a 263 target), so there is no data from it.",
+   "detail_zh": "為了長時間運轉曾測試磁力幫浦，但推不動培養基也抽不起瓶中液體（低於 200 mL/min，目標 263），所以沒有數據。",
+   "src": "hardware-bioreactor#4.1 prototype 4; engineering#Bioreactor",
+   "confidence": "stated"
+  },
+  {
+   "id": "hardware-f10",
+   "label_en": "Pinch valve effect on TMP",
+   "label_zh": "夾管閥對 TMP 的效果",
+   "value": "0.03 to 0.16 bar average; 20 to 30 mL per minute",
+   "detail_en": "Closing the servo pinch valve for 60 s during a shell sample raises the mean TMP and gives about 20 to 30 mL of shell permeate.",
+   "detail_zh": "取殼側樣品時關閉伺服夾管閥 60 秒，平均 TMP 上升，約得 20 至 30 mL 殼側滲透液。",
+   "src": "hardware-bioreactor#4.2 prototype 4",
+   "confidence": "stated"
+  },
+  {
+   "id": "hardware-f11",
+   "label_en": "Automatic pH rule",
+   "label_zh": "自動 pH 控制規則",
+   "value": "At pH 6.8 add 5 mL of 1 M KOH per minute until pH 7.0",
+   "detail_en": "Worked only on the first night of run 7: 1 M KOH corroded the dosing-line Luer valve, so pH was then adjusted by hand once a day. Engineering says four valves broke in a row.",
+   "detail_zh": "只在第 7 次運轉的第一晚有效：1 M KOH 腐蝕了加液管路的 Luer 閥，之後改為每天手動調 pH。Engineering 頁面說連續壞了四顆閥。",
+   "src": "hardware-bioreactor#4.2 prototype 4; engineering#Bioreactor cycle 8",
+   "confidence": "conflict"
+  },
+  {
+   "id": "hardware-f12",
+   "label_en": "Clean-in-place sterilization",
+   "label_zh": "原位清洗滅菌",
+   "value": "100 mL 35% H2O2 in 900 mL water, then about five 1 L washes",
+   "detail_en": "Circulated 15 minutes, checked with starch-iodide paper until no peroxide reacts. It replaced the autoclave because the assembled loop and probes cannot be autoclaved. No sterility assay of the result is reported.",
+   "detail_zh": "循環 15 分鐘，用澱粉碘化物試紙檢查到過氧化氫消失為止。因為組裝好的管路與探頭不能高壓滅菌才改用此法。頁面沒有報告滅菌效果的檢測。",
+   "src": "hardware-bioreactor#4.2 prototype 3",
+   "confidence": "stated"
+  },
+  {
+   "id": "hardware-f13",
+   "label_en": "First integrated run, 1 Sep 2026",
+   "label_zh": "第一次整合運轉（2026/9/1）",
+   "value": "116 h, 102.4 h logged",
+   "detail_en": "B. subtilis 168 at 37 °C. Plateau at about 40 h, second growth from about 47 h, put down to erythromycin loss and plasmid loss. Pressure reading unstable throughout; about 10 h lost to a computer restart.",
+   "detail_zh": "B. subtilis 168、37 °C。約 40 小時進入平台期，約 47 小時後出現第二次生長，推測是紅黴素降解與質體流失。壓力讀值全程不穩；電腦重啟損失約 10 小時。",
+   "src": "hardware-bioreactor#4.2 prototype 1; engineering#cycle 5",
+   "confidence": "stated"
+  },
+  {
+   "id": "hardware-f14",
+   "label_en": "Run 6 growth, 14 Oct 2026",
+   "label_zh": "第 6 次運轉生長（2026/10/14）",
+   "value": "OD600 0.14 to 2.71 in 37 h, 0.286 h-1",
+   "detail_en": "WB800. The rate fell inside the interval 0.2705 to 0.3300 h-1 registered on 1 Oct (point forecast 0.2986). A Luer valve then broke at 38 h and the light path was knocked out of line.",
+   "detail_zh": "WB800。生長率落在 10/1 事先登記的區間 0.2705 至 0.3300 h-1 內（預測值 0.2986）。38 小時時 Luer 閥斷裂，光路也被震歪。",
+   "src": "hardware-bioreactor#4.2 prototype 3; software#Registered forecast",
+   "confidence": "stated"
+  },
+  {
+   "id": "hardware-f15",
+   "label_en": "Longest clean run, 17 Oct 2026",
+   "label_zh": "最長且乾淨的運轉（2026/10/17）",
+   "value": "77 h, OD600 to 3.34",
+   "detail_en": "Nine shell samples from 1 to 72 h: ELISA 2.5 to 6.5 µg/mL peaking at 12 h, DNPH activity from 18 h. Fouling signal rose 1.9 to 4.4 kPa.",
+   "detail_zh": "九次殼側取樣（1 至 72 小時）：ELISA 2.5 至 6.5 µg/mL、12 小時最高，DNPH 活性從 18 小時起出現。污垢訊號由 1.9 升至 4.4 kPa。",
+   "src": "hardware-bioreactor#5.2; software#Every run so far",
+   "confidence": "stated"
+  },
+  {
+   "id": "hardware-f16",
+   "label_en": "How many bioreactor runs",
+   "label_zh": "生物反應器運轉次數",
+   "value": "3, 4, 6 or 7 depending on the page",
+   "detail_en": "Hardware summary says three integrated runs, the Bioreactor page has four integrated prototypes, Development and Contribution say six runs, the Digital Twin table lists seven.",
+   "detail_zh": "硬體摘要說三次整合運轉，Bioreactor 頁有四個整合原型，Development 與 Contribution 說六次，Digital Twin 表列七次。",
+   "src": "hardware-bioreactor#Summary; development#Bioreactor; software#Every run so far",
+   "confidence": "conflict"
+  },
+  {
+   "id": "hardware-f17",
+   "label_en": "ACC deaminase, lumen vs shell side",
+   "label_zh": "ACC deaminase 管腔側與殼側濃度",
+   "value": "ELISA 10.7 vs 10.5 µg/mL (run 5)",
+   "detail_en": "Most samples read above the top ELISA standard (about 3 µg/mL), so they are extrapolated. The time course from the same run peaks at 7.5 vs 7.2 µg/mL, and Development quotes 8.5 vs 8.0 for another run.",
+   "detail_zh": "多數樣品超出 ELISA 最高標準品（約 3 µg/mL），數值是外插的。同一次運轉的時間序列最高為 7.5 對 7.2 µg/mL，Development 另引用 8.5 對 8.0。",
+   "src": "hardware-bioreactor#5.1; development#Produce",
+   "confidence": "conflict"
+  },
+  {
+   "id": "hardware-f18",
+   "label_en": "Fouling trend",
+   "label_zh": "污垢趨勢",
+   "value": "Extra pressure 2.0 to 3.8 kPa (run 6), 1.9 to 4.4 kPa (run 7)",
+   "detail_en": "Measured against a clean-water sweep of the same module. Permeability halved from 2520 to 1210 LMH/bar, yet no cleaning threshold was reached. One module, so no replacement interval follows.",
+   "detail_zh": "與同一模組的清水掃描比較。滲透率由 2520 降到 1210 LMH/bar（減半），但未達清洗門檻。只有一個模組，無法訂出更換週期。",
+   "src": "software#Every run so far; engineering#Bioreactor cycle 7",
+   "confidence": "stated"
+  },
+  {
+   "id": "hardware-f19",
+   "label_en": "Containment layers actually built",
+   "label_zh": "實際已建的圍阻層",
+   "value": "1 built (membrane); 2 planned",
+   "detail_en": "The hardware page says pressure alarm and droplet sensor are planned and numbers are only displayed today. Safety and Biomanufacturing pages describe them in the present tense, and firmware has a 0.70 bar trip.",
+   "detail_zh": "硬體頁說壓力警報與滴漏感測器是規劃中，目前壓力只是顯示。Safety 與 Biomanufacturing 頁用現在式描述，韌體則有 0.70 bar 跳脫。",
+   "src": "hardware-bioreactor#9.2.1; safety-and-security#Bioreactor safety",
+   "confidence": "conflict"
+  },
+  {
+   "id": "hardware-f20",
+   "label_en": "Commercial cabinet size",
+   "label_zh": "商用機櫃尺寸",
+   "value": "About 400 x 240 x 620 mm, not built",
+   "detail_en": "Same 1 L loop, 7-inch touchscreen, four pressure sensors, pH and temperature probes. Output per day, power draw and weight are listed as not yet known.",
+   "detail_zh": "同樣 1 L 迴路、7 吋觸控螢幕、四個壓力感測器、pH 與溫度探頭。每日產量、耗電與重量都列為未知。",
+   "src": "hardware-bioreactor#7.3.1 Specifications",
+   "confidence": "stated"
+  },
+  {
+   "id": "hardware-f21",
+   "label_en": "Bioreactor known parts cost",
+   "label_zh": "生物反應器已知零件成本",
+   "value": "US$1022.67",
+   "detail_en": "Membrane US$245 is the largest line; the Pro photometer (US$371.78) is counted inside. Controller, mainboard, KOH pump and stir bar are not listed, so the true total is higher.",
+   "detail_zh": "薄膜 US$245 為最大單項；Pro 光度計（US$371.78）已含在內。控制器、主板、KOH 幫浦與攪拌子未列入，實際總額更高。",
+   "src": "hardware-bioreactor#10.1 Materials List & Cost",
+   "confidence": "stated"
+  },
+  {
+   "id": "hardware-f22",
+   "label_en": "Photometer optics",
+   "label_zh": "光度計光學設計",
+   "value": "600 nm amber LED, 2 mm path, 90:10 splitter",
+   "detail_en": "Two GY-302 lux sensors, readings scaled by 5 to a 10 mm path, an Arduino Uno Q that runs without a computer, one OD point about every 10 minutes.",
+   "detail_zh": "兩個 GY-302 照度感測器，讀值乘 5 換算成 10 mm 光徑，Arduino Uno Q 不需外接電腦，約每 10 分鐘一個 OD 點。",
+   "src": "hardware-photometer#7.2.1 Specifications",
+   "confidence": "stated"
+  },
+  {
+   "id": "hardware-f23",
+   "label_en": "Pro photometer vs BioDrop",
+   "label_zh": "Pro 光度計對照 BioDrop",
+   "value": "Median 3.8% apart (TiO2); slope 1.001, 0.12 OD low (SiO2)",
+   "detail_en": "The wiki also gives slope 0.942 (Description), 1.018 to OD 1.2 (Digital Twin) and 0.995 to OD 2.5 (Engineering). All are on particle standards, none on cells.",
+   "detail_zh": "wiki 另有斜率 0.942（Description）、OD 1.2 內 1.018（Digital Twin）、OD 2.5 內 0.995（Engineering）。全都是顆粒標準品，沒有細胞。",
+   "src": "hardware-photometer#5.2 Calibration; description; software#R1",
+   "confidence": "conflict"
+  },
+  {
+   "id": "hardware-f24",
+   "label_en": "Pro vs Slim cost and scale",
+   "label_zh": "Pro 與 Slim 的成本與讀值比例",
+   "value": "US$371.78 vs US$235.29; x5.57",
+   "detail_en": "Slim is 36.71% cheaper, 72 mm tall, R² 0.992 on silica (Pro 0.974), reads about one fifth of the Pro, from one silica run and no culture.",
+   "detail_zh": "Slim 便宜 36.71%、高 72 mm、矽膠珠 R² 0.992（Pro 為 0.974），讀值約為 Pro 的五分之一，只有一次矽膠實驗，沒有菌液。",
+   "src": "hardware-photometer#7.1 Which One to Use",
+   "confidence": "stated"
+  },
+  {
+   "id": "hardware-f25",
+   "label_en": "Long in-line run",
+   "label_zh": "長時間在線運轉",
+   "value": "434 h, first ~240 h clean",
+   "detail_en": "Wild-type 168 at 22 °C, run 3. The reference channel failed after about 240 h, around a pump replacement. The sensor alarm flagged it 26.7 h before the OD channel failed (216.3 h vs 243.0 h).",
+   "detail_zh": "野生型 168、22 °C，第 3 次運轉。約 240 小時後參考通道失效，時間接近更換幫浦。感測器警報比 OD 通道失效（243.0 小時）早 26.7 小時（216.3 小時）示警。",
+   "src": "hardware-photometer#5.1; software#The 434-hour run",
+   "confidence": "stated"
+  },
+  {
+   "id": "hardware-f26",
+   "label_en": "Bubble handling in the photometer",
+   "label_zh": "光度計的氣泡處理",
+   "value": "7.5° tilt; 97% of bubble readings flagged, 0 clean rejected",
+   "detail_en": "Burst of 16, drop 2, median plus or minus 3 MAD, then two gates. Worst bubble error fell from 2.44 to 0.016 OD. Engineering and Development say a 10° tilt; the Pro base is 7.5° and the Slim wedge 10°.",
+   "detail_zh": "16 次一組、丟 2 個、取中位數加減 3 MAD，再加兩道閘門。最壞氣泡誤差由 2.44 降到 0.016 OD。Engineering 與 Development 寫 10° 傾斜；Pro 底座是 7.5°、Slim 楔形是 10°。",
+   "src": "hardware-photometer#8.1; measurement#Software algorithm calibration",
+   "confidence": "consistent"
+  },
+  {
+   "id": "hardware-f27",
+   "label_en": "Outside builders of the Slim",
+   "label_zh": "外部同學組裝 Slim",
+   "value": "3 builders, about 2 hours",
+   "detail_en": "15 and 16 Oct 2026; an engineer, a Boy Scout and a beginner. Three guide changes resulted. The beginner could not do the soldered board alone.",
+   "detail_zh": "2026 年 10 月 15、16 日；工程師、童軍與新手各一位。因此修改了三處說明。新手無法獨自完成焊接板。",
+   "src": "hardware-photometer#6.2 Outside Builders",
+   "confidence": "stated"
+  },
+  {
+   "id": "hardware-f28",
+   "label_en": "LPA layout and cost",
+   "label_zh": "LPA 配置與成本",
+   "value": "24 cultures, 6 conditions, US$65.52",
+   "detail_en": "4 x 6 array, 4 replicates per condition, Arduino Uno R4 WiFi, three IRLZ44N MOSFETs, PWM pins 9, 10, 11 at analogWrite 5, 31, 255 (about 2%, 12%, 100%).",
+   "detail_zh": "4 x 6 陣列，每個條件 4 重複，Arduino Uno R4 WiFi、三顆 IRLZ44N MOSFET，PWM 腳位 9、10、11 設 5、31、255（約 2%、12%、100%）。",
+   "src": "hardware-diopal#4.1 Specifications",
+   "confidence": "stated"
+  },
+  {
+   "id": "hardware-f29",
+   "label_en": "LED matching",
+   "label_zh": "LED 配對",
+   "value": "40 LEDs measured; groups within 0.4 to 1.8%",
+   "detail_en": "Before matching, green varied 26% and red 22%. Matching did not make three distinct tiers, so tiers come from PWM.",
+   "detail_zh": "配對前綠光差 26%、紅光差 22%。配對無法做出三個明顯分開的強度，因此強度由 PWM 設定。",
+   "src": "hardware-diopal#2.2 DBTL Cycle 2",
+   "confidence": "stated"
+  },
+  {
+   "id": "hardware-f30",
+   "label_en": "First LPA culture run, 19 Sep 2026",
+   "label_zh": "LPA 第一次培養（2026/9/19）",
+   "value": "OD600 0.91 to 1.01 at 24 h, six arms",
+   "detail_en": "WB800, 12 of 24 wells used. Light leaked between wells, so the arms are not compared as light doses. Logistic fit r = 0.299 h-1, doubling 139 min.",
+   "detail_zh": "WB800，24 孔只用了 12 孔。孔間漏光，所以各組不能當作光劑量比較。邏輯斯蒂擬合 r = 0.299 h-1，倍增時間 139 分鐘。",
+   "src": "hardware-diopal#3.1 First Culture Run",
+   "confidence": "stated"
+  },
+  {
+   "id": "hardware-f31",
+   "label_en": "LPA shaker failure and fix",
+   "label_zh": "LPA 振盪失效與修正",
+   "value": "Post snapped; fixes not re-tested",
+   "detail_en": "Overnight on a shaker a bottom-plate post broke and the white tube holder leaked light. Fixed with four screws, reinforced joints and a black holder with 4 wall loops; a second shaker run began 18 Oct.",
+   "detail_zh": "過夜振盪時底板支柱斷裂，白色試管座漏光。修正為四顆螺絲、加固焊點、黑色四圈牆厚試管座；第二次振盪實驗 10/18 開始。",
+   "src": "hardware-diopal#2.3 DBTL Cycle 3",
+   "confidence": "stated"
+  },
+  {
+   "id": "hardware-f32",
+   "label_en": "LED wavelengths",
+   "label_zh": "LED 波長",
+   "value": "520/660 nm vs ~535/~670 nm",
+   "detail_en": "Home says 520 nm green and 660 nm red. Photometer, Contribution and Geospatial say about 535 and 670 nm. The LPA page gives no wavelength, and Development lists verifying the real wavelengths as future work.",
+   "detail_zh": "Home 寫綠光 520 nm、紅光 660 nm。Photometer、Contribution、Geospatial 寫約 535 與 670 nm。LPA 頁沒有給波長，Development 把確認實際波長列為未來工作。",
+   "src": "home; hardware-photometer#7.2.2; development#LPA",
+   "confidence": "conflict"
+  },
+  {
+   "id": "hardware-f33",
+   "label_en": "Light reported in lux",
+   "label_zh": "光量以勒克斯表示",
+   "value": "lux, not photon flux",
+   "detail_en": "Lux is weighted for human vision, so it cannot compare green with red or match a published dose. Fixture readings were about 2.3 to 2.4 klux green and 390 to 430 lux red; the Measurement plate map uses 220, 510 and 3850 lux green.",
+   "detail_zh": "勒克斯是依人眼感光加權，無法比較綠光與紅光，也無法對照文獻劑量。治具讀值綠光約 2.3 至 2.4 klux、紅光 390 至 430 lux；Measurement 的孔位圖用綠光 220、510、3850 lux。",
+   "src": "hardware-diopal#Summary; measurement#Optogenetic control",
+   "confidence": "conflict"
+  },
+  {
+   "id": "hardware-f34",
+   "label_en": "Floating hydroponics plate",
+   "label_zh": "漂浮水耕板",
+   "value": "13 seedlings, 42.27 cm³ sealed air, 16 printed pieces",
+   "detail_en": "Every 3.5 g added sinks it about 1 mm; predicted freeboard 4.8 mm at 71.3 g, but no printed plate has been weighed or measured. About US$1.80 of PLA, no adhesives or fasteners.",
+   "detail_zh": "每增加 3.5 g 約下沉 1 mm；71.3 g 時預測乾舷 4.8 mm，但從未量測實際列印的板。PLA 約 US$1.80，不需膠水或螺絲。",
+   "src": "hardware-hydroponics#4.1, 4.3, 5.1",
+   "confidence": "stated"
+  },
+  {
+   "id": "hardware-f35",
+   "label_en": "Leaf sensor bench test, 10 Oct 2026",
+   "label_zh": "葉片感測器桌上測試（2026/10/10）",
+   "value": "Leaf reads warm; wetness 0.0%",
+   "detail_en": "540 paired readings with an air sensor and no leaf. Site means were +1.71, +1.31 and +0.47 °C, quoted as 1.2 to 1.9 elsewhere. The wetness channel read 0.0% on every sample because it was never wetted.",
+   "detail_zh": "與空氣感測器並排、沒有葉片，共 540 組讀值。各地點平均為 +1.71、+1.31、+0.47 °C，他處引用為 1.2 至 1.9。濕潤度通道全部讀 0.0%，因為從未弄濕。",
+   "src": "software#The leaf and air sensors on the bench; results#Field sensors",
+   "confidence": "conflict"
+  },
+  {
+   "id": "hardware-f36",
+   "label_en": "Documentation set",
+   "label_zh": "文件資料",
+   "value": "Notebook 82 pages, 30 weeks; 6 PDFs",
+   "detail_en": "Hardware notebook 23 Mar to 17 Oct 2026. Guides: bioreactor assembly 10 pages, brochure 17, user manual 16, Pro 12, Slim 13, LPA 10. STL files and cost tables are on each page.",
+   "detail_zh": "硬體筆記本 2026/3/23 至 10/17，共 82 頁、30 週。指南：生物反應器組裝 10 頁、型錄 17、使用手冊 16、Pro 12、Slim 13、LPA 10。各頁附 STL 檔與成本表。",
+   "src": "hardware; hardware-notebook",
+   "confidence": "stated"
+  }
+ ],
+ "terms": [
+  {
+   "term": "Perfusion bioreactor",
+   "kw_en": [
+    "fresh medium in",
+    "waste and product out",
+    "cells stay"
+   ],
+   "kw_zh": [
+    "新鮮培養基進",
+    "廢液與產物出",
+    "細胞留在內"
+   ],
+   "def_en": "A culture vessel where medium flows through while the cells are kept inside. ReLEAF uses it so the protectant can be collected as a steady stream and the engineered bacteria never leave the machine.",
+   "def_zh": "培養基持續流過、細胞被留在系統內的培養裝置。ReLEAF 用它讓保護蛋白能穩定收集，而基因改造細菌不會離開機器。",
+   "cat": "hardware",
+   "src": "hardware-bioreactor"
+  },
+  {
+   "term": "Hollow-fiber membrane",
+   "kw_en": [
+    "straw-like fibers",
+    "0.2 µm pores",
+    "cells in, enzyme out"
+   ],
+   "kw_zh": [
+    "吸管狀纖維",
+    "0.2 µm 孔徑",
+    "細胞留、酵素過"
+   ],
+   "def_en": "A cartridge of thin porous tubes. Culture flows inside the tubes (lumen); anything smaller than 0.2 µm crosses the wall to the shell side. ReLEAF's module is mPES, 200 cm², 11 fibers.",
+   "def_zh": "由許多多孔細管組成的濾匣。菌液流過管內（管腔），小於 0.2 µm 的東西穿過管壁到殼側。ReLEAF 的模組是 mPES、200 cm²、11 條纖維。",
+   "cat": "hardware",
+   "src": "hardware-bioreactor"
+  },
+  {
+   "term": "Lumen and shell side",
+   "kw_en": [
+    "inside the fibers",
+    "outside the fibers",
+    "one wall between"
+   ],
+   "kw_zh": [
+    "纖維內側",
+    "纖維外側",
+    "中間隔一層膜"
+   ],
+   "def_en": "Lumen is the inside of the fibers, where the culture circulates. Shell is the space around them, where the product collects. The membrane wall is the only place the two circuits touch.",
+   "def_zh": "管腔是纖維內側，菌液在此循環；殼側是纖維外圍，產物在此收集。膜壁是兩個迴路唯一接觸的地方。",
+   "cat": "hardware",
+   "src": "hardware-bioreactor"
+  },
+  {
+   "term": "Transmembrane pressure (TMP)",
+   "kw_en": [
+    "pressure across the wall",
+    "(feed+retentate)/2 minus permeate",
+    "fouling signal"
+   ],
+   "kw_zh": [
+    "膜兩側壓差",
+    "進料與回流平均減滲透",
+    "污垢指標"
+   ],
+   "def_en": "The mean lumen pressure minus the shell pressure. It is the driving force for filtration, and a rising trend at the same flow suggests fouling. ReLEAF computes it from three pressure transducers.",
+   "def_zh": "管腔平均壓力減去殼側壓力，是過濾的驅動力；相同流量下上升代表可能發生污垢。ReLEAF 由三個壓力傳送器計算。",
+   "cat": "hardware",
+   "src": "hardware-bioreactor#4.1"
+  },
+  {
+   "term": "Membrane fouling",
+   "kw_en": [
+    "cake on the wall",
+    "pressure rises",
+    "permeability falls"
+   ],
+   "kw_zh": [
+    "細胞堆積在膜壁",
+    "壓力上升",
+    "滲透率下降"
+   ],
+   "def_en": "Cells and debris building up on the membrane so it passes less liquid. ReLEAF watches it as extra pressure above a clean-water baseline: 2.0 to 3.8 kPa in run 6, 1.9 to 4.4 kPa in run 7.",
+   "def_zh": "細胞與碎屑堆積在膜上，使通過量下降。ReLEAF 用超出清水基線的額外壓力來看：第 6 次 2.0 至 3.8 kPa，第 7 次 1.9 至 4.4 kPa。",
+   "cat": "hardware",
+   "src": "software#Every run so far"
+  },
+  {
+   "term": "Permeate flux (LMH)",
+   "kw_en": [
+    "liters per m² per hour",
+    "36 to 72 in runs",
+    "2 in scaling table"
+   ],
+   "kw_zh": [
+    "每平方公尺每小時公升數",
+    "實驗 36 至 72",
+    "規模表用 2"
+   ],
+   "def_en": "How much liquid crosses the membrane per area per hour. Runs used 72, 36 and 51 LMH (24, 12, 17 mL/min over 200 cm²); the scaling table assumes a 2 LMH design flux.",
+   "def_zh": "每單位膜面積每小時通過的液量。實驗用 72、36、51 LMH（200 cm² 上 24、12、17 mL/min）；規模表假設設計通量 2 LMH。",
+   "cat": "hardware",
+   "src": "software; biomanufacturing#Scaling"
+  },
+  {
+   "term": "Wall shear rate",
+   "kw_en": [
+    "fluid scrubbing the wall",
+    "about 4060 per second",
+    "vendor 2000 to 6000"
+   ],
+   "kw_zh": [
+    "液體沖刷管壁",
+    "約 4060 每秒",
+    "廠商 2000 至 6000"
+   ],
+   "def_en": "How fast fluid is sheared at the fiber wall; it sweeps cells off the membrane. At 263 mL/min through 11 fibers it is about 4060 s-1. Cell tolerance to this shear was not measured.",
+   "def_zh": "流體在纖維壁被剪切的速率，可把細胞沖離膜面。263 mL/min 流過 11 條纖維約 4060 s-1。細胞對此剪切的耐受性沒有量測。",
+   "cat": "hardware",
+   "src": "hardware-bioreactor#4.1; measurement"
+  },
+  {
+   "term": "Peristaltic pump",
+   "kw_en": [
+    "squeezes the tubing",
+    "closed fluid path",
+    "tubing wears"
+   ],
+   "kw_zh": [
+    "擠壓管子",
+    "流體路徑封閉",
+    "管子會磨損"
+   ],
+   "def_en": "A pump that moves liquid by squeezing flexible tubing from outside, so the fluid never touches the pump. ReLEAF's main pump; its tubing wear caused early leaks, and a magnetic pump could not replace it.",
+   "def_zh": "從外側擠壓軟管推動液體的幫浦，液體不接觸幫浦本體。是 ReLEAF 的主幫浦；管子磨損曾造成早期漏液，磁力幫浦也無法取代它。",
+   "cat": "hardware",
+   "src": "hardware-bioreactor#4.1"
+  },
+  {
+   "term": "Pinch valve",
+   "kw_en": [
+    "servo clamps return line",
+    "raises TMP",
+    "pushes product out"
+   ],
+   "kw_zh": [
+    "伺服夾住回流管",
+    "提高 TMP",
+    "把產物推出去"
+   ],
+   "def_en": "A servo-driven clamp on the culture return tube. Closing it lifts transmembrane pressure to drive protectant across the membrane. Added after Prof. Chang found nothing was pushing product out.",
+   "def_zh": "夾在菌液回流管上的伺服夾。關閉時提高跨膜壓差，把保護蛋白推過膜。因張嘉修教授指出沒有東西推動產物而加入。",
+   "cat": "hardware",
+   "src": "hardware-bioreactor#6.1"
+  },
+  {
+   "term": "Luer valve",
+   "kw_en": [
+    "three-way stopcock",
+    "sampling port",
+    "servo-automated"
+   ],
+   "kw_zh": [
+    "三通閥",
+    "取樣口",
+    "伺服自動化"
+   ],
+   "def_en": "A small three-way valve with Luer connectors, used for sampling and dosing. Some became servo-driven. A hydrogen peroxide step and 1 M KOH each broke a Luer valve during runs.",
+   "def_zh": "附 Luer 接頭的小型三通閥，用於取樣與加液，部分改為伺服驅動。過氧化氫清洗與 1 M KOH 都曾在運轉中弄壞 Luer 閥。",
+   "cat": "hardware",
+   "src": "hardware-bioreactor#4.2"
+  },
+  {
+   "term": "Clean-in-place (CIP)",
+   "kw_en": [
+    "no autoclave",
+    "35% H2O2 diluted first",
+    "starch-iodide check"
+   ],
+   "kw_zh": [
+    "不用高壓滅菌",
+    "35% 過氧化氫先稀釋",
+    "澱粉碘化物試紙"
+   ],
+   "def_en": "Sterilizing the assembled loop by circulating hydrogen peroxide, then rinsing until test paper shows none left. Used because probes and the loop cannot be autoclaved. Sterility itself is not assayed.",
+   "def_zh": "把過氧化氫打進組裝好的管路循環滅菌，再沖洗到試紙測不到為止。因為探頭與管路不能高壓滅菌。滅菌效果本身沒有被檢測。",
+   "cat": "hardware",
+   "src": "hardware-bioreactor#4.2"
+  },
+  {
+   "term": "OD600",
+   "kw_en": [
+    "cloudiness at 600 nm",
+    "stand-in for cell density",
+    "scattering not absorption"
+   ],
+   "kw_zh": [
+    "600 nm 混濁度",
+    "代表細胞量",
+    "靠散射不是吸收"
+   ],
+   "def_en": "Optical density at 600 nm, the usual stand-in for how many bacteria are in a culture. ReLEAF reads it in the flowing loop, scaled from a 2 mm path to the standard 1 cm.",
+   "def_zh": "600 nm 的光密度，是估計菌量的常用指標。ReLEAF 在流動迴路中即時讀取，並從 2 mm 光徑換算到標準 1 cm。",
+   "cat": "hardware",
+   "src": "hardware-photometer"
+  },
+  {
+   "term": "In-line photometer",
+   "kw_en": [
+    "reads inside the loop",
+    "no sample drawn",
+    "Pro and Slim"
+   ],
+   "kw_zh": [
+    "在迴路內讀取",
+    "不抽樣",
+    "Pro 與 Slim"
+   ],
+   "def_en": "Our own OD600 meter plumbed into the culture loop. Nobody sells one for this job. It avoids hand sampling, which disturbs the culture and risks contamination. Pro costs US$371.78, Slim US$235.29.",
+   "def_zh": "我們自製、接在培養迴路內的 OD600 計。市面上沒有這種產品。它避免手動抽樣造成的擾動與污染風險。Pro 成本 US$371.78，Slim US$235.29。",
+   "cat": "hardware",
+   "src": "hardware-photometer"
+  },
+  {
+   "term": "Reference channel (beam splitter)",
+   "kw_en": [
+    "10% of the light",
+    "tracks LED drift",
+    "ratio cancels drift"
+   ],
+   "kw_zh": [
+    "10% 的光",
+    "追蹤 LED 漂移",
+    "比值抵消漂移"
+   ],
+   "def_en": "A 90:10 beam splitter sends 10% of the LED light to a second sensor that never sees the culture. OD comes from the sample-to-reference ratio, so slow LED drift is not read as growth.",
+   "def_zh": "90:10 分光器把 10% 的 LED 光送到不經過菌液的第二個感測器。OD 由樣品與參考的比值得出，LED 緩慢漂移不會被當成生長。",
+   "cat": "hardware",
+   "src": "hardware-photometer#7.2.2"
+  },
+  {
+   "term": "Blank",
+   "kw_en": [
+    "zero reference",
+    "taken on medium",
+    "dirty cuvette reads 4x high"
+   ],
+   "kw_zh": [
+    "歸零參考",
+    "用培養基校零",
+    "髒比色槽會高估四倍"
+   ],
+   "def_en": "The reading with no cells, used to set zero. Blanking ReLEAF on medium but the BioDrop on water caused about 20% disagreement early on. A blank taken through a dirty cuvette once read four times high.",
+   "def_zh": "沒有細胞時的讀值，用來歸零。早期 ReLEAF 用培養基校零、BioDrop 用水校零，造成約 20% 差異。透過髒比色槽校零曾讀高四倍。",
+   "cat": "hardware",
+   "src": "hardware-photometer#5.2.4"
+  },
+  {
+   "term": "BioDrop",
+   "kw_en": [
+    "benchtop spectrophotometer",
+    "reference instrument",
+    "reads one sample"
+   ],
+   "kw_zh": [
+    "桌上型分光光度計",
+    "對照儀器",
+    "一次量一個樣品"
+   ],
+   "def_en": "The benchtop cuvette spectrophotometer the photometer was checked against. It cannot sit in a loop. Prof. Chang advised diluting samples above OD 1, so silica samples were diluted 2x or 4x.",
+   "def_zh": "用來對照光度計的桌上型比色槽分光光度計，無法裝在迴路中。張嘉修教授建議 OD 1 以上要稀釋，所以矽膠樣品稀釋 2 倍或 4 倍再換算。",
+   "cat": "hardware",
+   "src": "hardware-photometer#5.2"
+  },
+  {
+   "term": "TiO2 and SiO2 standards",
+   "kw_en": [
+    "non-growing particles",
+    "mass added is truth",
+    "silica is the iGEM standard"
+   ],
+   "kw_zh": [
+    "不會生長的顆粒",
+    "加入質量為標準",
+    "矽膠是 iGEM 標準"
+   ],
+   "def_en": "Particle suspensions used instead of culture to calibrate OD, because cells grow, settle and lyse. TiO2 (August) was cheaper; 1 µm silica (10 October) is iGEM's standard. Neither equals real cells.",
+   "def_zh": "用顆粒懸浮液代替菌液校正 OD，因為細胞會生長、沉降、裂解。TiO2（8 月）較便宜；1 µm 矽膠珠（10 月）是 iGEM 標準。兩者都不等於真正的細胞。",
+   "cat": "hardware",
+   "src": "hardware-photometer#5.2.1"
+  },
+  {
+   "term": "MAD filter",
+   "kw_en": [
+    "median plus or minus 3 MAD",
+    "16 readings keep 14",
+    "resists bubbles"
+   ],
+   "kw_zh": [
+    "中位數加減 3 MAD",
+    "讀 16 個留 14 個",
+    "抗氣泡干擾"
+   ],
+   "def_en": "Median absolute deviation. Each reading is a burst of 16; readings beyond the median plus or minus 3 MAD are rejected, so one or two bubble spikes cannot drag the result as an average would.",
+   "def_zh": "中位數絕對偏差。每次讀 16 個，超出中位數加減 3 MAD 的讀值被剔除，一兩個氣泡尖峰不會像平均值那樣拉歪結果。",
+   "cat": "software",
+   "src": "hardware-photometer#8.1"
+  },
+  {
+   "term": "Acceptance gates",
+   "kw_en": [
+    "spread gate 0.03 OD",
+    "jump gate 5%",
+    "worst error 2.44 to 0.016"
+   ],
+   "kw_zh": [
+    "離散閘 0.03 OD",
+    "跳變閘 5%",
+    "最壞誤差 2.44 降至 0.016"
+   ],
+   "def_en": "Two checks after the filter. One rejects a reading if two estimators differ by over 0.03 OD; the other holds back jumps over 0.05 OD or 5% until three readings agree. Needed because a full-air cell reads steadily and wrongly.",
+   "def_zh": "濾波之後的兩道檢查。一道在兩種估計值差超過 0.03 OD 時剔除該讀值；另一道把超過 0.05 OD 或 5% 的跳變先擋住，等三次讀值一致才接受。因為整個比色槽充滿空氣時讀值穩定卻是錯的。",
+   "cat": "software",
+   "src": "hardware-photometer#8.1"
+  },
+  {
+   "term": "Arduino Uno Q and mainboard",
+   "kw_en": [
+    "Linux side plus microcontroller",
+    "one mainboard",
+    "modules plug in"
+   ],
+   "kw_zh": [
+    "Linux 加微控制器",
+    "單一主板",
+    "感測器模組可插拔"
+   ],
+   "def_en": "Uno Q is the small computer that runs the photometer and bioreactor with no laptop attached. Owl Lab's mainboard brings every pin out with 12 V to 5 V and 3.3 V conversion, so sensors plug in as modules.",
+   "def_zh": "Uno Q 是不需接筆電就能運行光度計與反應器的小電腦。Owl Lab 的主板把所有腳位引出並提供 12 V 轉 5 V 與 3.3 V，感測器可以模組方式插上。",
+   "cat": "hardware",
+   "src": "hardware-bioreactor#6.2"
+  },
+  {
+   "term": "STS3215 servo",
+   "kw_en": [
+    "serial bus servo",
+    "UART",
+    "replaced PCA9685"
+   ],
+   "kw_zh": [
+    "串列匯流排伺服",
+    "UART 通訊",
+    "取代 PCA9685"
+   ],
+   "def_en": "A 12 V servo driven over UART that drives the pinch valve and automated Luer valves. Chosen on Owl Lab's advice because the PCA9685 driver could stop at 85 degrees when told 90, risking a pressure spike.",
+   "def_zh": "透過 UART 驅動的 12 V 伺服，用於夾管閥與自動 Luer 閥。依 Owl Lab 建議選用，因為 PCA9685 驅動板下指令 90 度時可能停在 85 度，造成壓力突波。",
+   "cat": "hardware",
+   "src": "hardware-bioreactor#6.2"
+  },
+  {
+   "term": "Pressure transducer BP8G-AGB",
+   "kw_en": [
+    "ceramic, 0 to 1 MPa",
+    "1% of full scale",
+    "read as a trend"
+   ],
+   "kw_zh": [
+    "陶瓷、0 至 1 MPa",
+    "精度 1% 滿量程",
+    "看趨勢不看單點"
+   ],
+   "def_en": "Jingfeng ceramic pressure sensor. A 1 MPa part working at a few tens of kPa, so a single absolute value is not trusted. A 0 to 100 kPa sensor would read about ±1 kPa and is the suggested upgrade.",
+   "def_zh": "精工陶瓷壓力感測器。1 MPa 的零件實際只工作在幾十 kPa，所以不信任單一絕對值。建議升級為 0 至 100 kPa 的感測器，約 ±1 kPa 解析度。",
+   "cat": "hardware",
+   "src": "hardware-bioreactor#4.1; biomanufacturing"
+  },
+  {
+   "term": "Hall-effect flow meter",
+   "kw_en": [
+    "magnet on a rotor",
+    "pulses per liter",
+    "validated R² 0.995"
+   ],
+   "kw_zh": [
+    "轉子上的磁鐵",
+    "每公升脈衝數",
+    "驗證 R² 0.995"
+   ],
+   "def_en": "Flow meter where a magnet on a spinning rotor gives one pulse per pass; pulse rate gives flow. ZJ-TM02 gives 2580 pulses per liter and agreed with hand collection at R² = 0.995.",
+   "def_zh": "轉子上的磁鐵每轉過一次產生一個脈衝，脈衝頻率對應流量。ZJ-TM02 每公升 2580 個脈衝，與手動收集相符，R² = 0.995。",
+   "cat": "hardware",
+   "src": "measurement#Flow and pressure monitoring"
+  },
+  {
+   "term": "Hagen–Poiseuille",
+   "kw_en": [
+    "laminar pressure drop",
+    "theory for open tubes",
+    "0.90 to 1.26 of theory"
+   ],
+   "kw_zh": [
+    "層流壓降公式",
+    "開放管的理論值",
+    "實測為理論 0.90 至 1.26 倍"
+   ],
+   "def_en": "The textbook formula for pressure loss in smooth laminar flow through tubes. We used it to check the module: net drop was 0.90 to 0.96 times theory from 113 to 263 mL/min, which suggests all 11 fibers are open.",
+   "def_zh": "層流通過圓管壓降的教科書公式。我們用來檢查模組：113 至 263 mL/min 時，扣除管路後的壓降為理論的 0.90 至 0.96 倍，顯示 11 條纖維都是通的。",
+   "cat": "model",
+   "src": "hardware-bioreactor#4.1"
+  },
+  {
+   "term": "Light Plate Apparatus (LPA)",
+   "kw_en": [
+    "24 tubes",
+    "6 light conditions",
+    "US$65.52"
+   ],
+   "kw_zh": [
+    "24 支試管",
+    "6 種光條件",
+    "US$65.52"
+   ],
+   "def_en": "A 4 x 6 LED array that lights 24 cultures under green or red at three intensities, four replicates each. It characterizes the CcaSR switch at fixed doses; it does not control the reactor.",
+   "def_zh": "4 x 6 的 LED 陣列，用綠光或紅光三種強度照射 24 管培養，每條件四重複。用來在固定劑量下鑑定 CcaSR 開關，並不控制反應器。",
+   "cat": "hardware",
+   "src": "hardware-diopal"
+  },
+  {
+   "term": "DiOPAL",
+   "kw_en": [
+    "name for the LPA",
+    "dry lab notebook term",
+    "slug hardware-diopal"
+   ],
+   "kw_zh": [
+    "LPA 的名稱",
+    "乾實驗筆記本用語",
+    "網址 hardware-diopal"
+   ],
+   "def_en": "The team's name for the light plate in the Dry Lab Notebook and the page address (hardware-diopal). The page itself is titled LPA, and the hardware menu says LPA. If a judge says DiOPAL, they mean the LPA.",
+   "def_zh": "團隊在 Dry Lab Notebook 與網址（hardware-diopal）中對光盤的稱呼。頁面標題與硬體選單都寫 LPA。評審說 DiOPAL 就是指 LPA。",
+   "cat": "hardware",
+   "src": "drylab-notebook; hardware-diopal"
+  },
+  {
+   "term": "PWM (pulse-width modulation)",
+   "kw_en": [
+    "on-off fast switching",
+    "duty cycle sets brightness",
+    "2%, 12%, 100%"
+   ],
+   "kw_zh": [
+    "快速開關",
+    "工作週期決定亮度",
+    "2%、12%、100%"
+   ],
+   "def_en": "Switching an LED on and off very fast; the share of time on (duty cycle) sets brightness. The LPA uses analogWrite 5, 31 and 255 for low, mid and high, fixed in code for the whole run.",
+   "def_zh": "把 LED 極快速地開關，開啟時間的比例（工作週期）決定亮度。LPA 以 analogWrite 5、31、255 設低、中、高，整個實驗期間固定。",
+   "cat": "hardware",
+   "src": "hardware-diopal#4.1"
+  },
+  {
+   "term": "MOSFET (IRLZ44N)",
+   "kw_en": [
+    "electronic switch",
+    "one per intensity tier",
+    "logic-level"
+   ],
+   "kw_zh": [
+    "電子開關",
+    "每個強度一顆",
+    "邏輯準位驅動"
+   ],
+   "def_en": "A transistor used as a fast electronic switch. Three IRLZ44N MOSFETs, one per intensity tier, are driven by Arduino PWM pins and each switches a green and a red column of four LEDs.",
+   "def_zh": "當作快速電子開關的電晶體。三顆 IRLZ44N MOSFET，每個強度一顆，由 Arduino PWM 腳位驅動，各自切換一欄綠光與一欄紅光各四顆 LED。",
+   "cat": "hardware",
+   "src": "hardware-diopal#4.3"
+  },
+  {
+   "term": "CcaS/CcaR",
+   "kw_en": [
+    "green on, red off",
+    "two-component light sensor",
+    "from literature"
+   ],
+   "kw_zh": [
+    "綠光開、紅光關",
+    "雙組分光感測系統",
+    "來自文獻"
+   ],
+   "def_en": "A light-sensing two-component system in engineered B. subtilis: green light activates CcaS, which switches on CcaR and the production genes; red switches it back. Characterized in B. subtilis by Castillo-Hair et al. 2019.",
+   "def_zh": "基因改造 B. subtilis 中的雙組分光感測系統：綠光啟動 CcaS，進而開啟 CcaR 與生產基因；紅光使其關閉。Castillo-Hair 等人 2019 年在 B. subtilis 中鑑定。",
+   "cat": "biology",
+   "src": "hardware-diopal#4.2"
+  },
+  {
+   "term": "Lux vs photon flux",
+   "kw_en": [
+    "lux weights human eye",
+    "photon flux is what cells get",
+    "not yet converted"
+   ],
+   "kw_zh": [
+    "勒克斯依人眼加權",
+    "細胞受到的是光子通量",
+    "尚未換算"
+   ],
+   "def_en": "Lux counts light the way a human eye sees it, peaking near 555 nm. Cells respond to photons, so the dose should be in µmol per m² per s. ReLEAF reports only lux, so doses cannot be compared with papers.",
+   "def_zh": "勒克斯依人眼感光計量，峰值約 555 nm。細胞反應的是光子，劑量應以 µmol/m²/s 表示。ReLEAF 只有勒克斯，劑量無法與文獻比較。",
+   "cat": "hardware",
+   "src": "hardware-diopal; engineering#Light plate apparatus"
+  },
+  {
+   "term": "LED matching",
+   "kw_en": [
+    "measure each LED",
+    "groups of four",
+    "within 0.4 to 1.8%"
+   ],
+   "kw_zh": [
+    "逐顆量測",
+    "四顆一組",
+    "差異 0.4 至 1.8%"
+   ],
+   "def_en": "Measuring 40 cheap LEDs one by one and wiring similar ones into the same column, so the four replicates get the same light. It makes columns consistent; the tier levels still come from PWM.",
+   "def_zh": "逐顆量測 40 顆便宜 LED，把相近的接在同一欄，使四個重複得到相同的光。它讓各欄一致；強度層級仍靠 PWM。",
+   "cat": "hardware",
+   "src": "hardware-diopal#2.2"
+  },
+  {
+   "term": "Plasmid stability and erythromycin",
+   "kw_en": [
+    "selection antibiotic",
+    "second growth at 47 h",
+    "topped up daily"
+   ],
+   "kw_zh": [
+    "篩選抗生素",
+    "47 小時第二次生長",
+    "每天補充"
+   ],
+   "def_en": "Erythromycin keeps cells holding the plasmid. Run 4 grew twice, thought to be erythromycin degrading and plasmid loss. When erythromycin was topped up each morning in run 7, the second growth did not appear.",
+   "def_zh": "紅黴素讓細胞保留質體。第 4 次運轉出現兩次生長，推測是紅黴素降解與質體流失。第 7 次每天補充紅黴素後，第二次生長沒有再出現。",
+   "cat": "biology",
+   "src": "hardware-bioreactor#4.2"
+  },
+  {
+   "term": "Sensor alarm (autoencoder)",
+   "kw_en": [
+    "trained on healthy 120 h",
+    "sensor axis and process axis",
+    "26.7 h early warning"
+   ],
+   "kw_zh": [
+    "用健康的前 120 小時訓練",
+    "感測軸與製程軸",
+    "提早 26.7 小時"
+   ],
+   "def_en": "A model that learns normal sensor behavior and flags drift. It watched the reference beam separately from growth, so it could tell a failing photometer from a culture event, and flagged the 434 h run's failure 26.7 h early.",
+   "def_zh": "學習正常感測行為並標示異常的模型。它把參考光束與生長分開看，因此能分辨光度計故障與培養事件，並在 434 小時運轉中提早 26.7 小時示警。",
+   "cat": "software",
+   "src": "software#The 434-hour run"
+  },
+  {
+   "term": "Leaf sensor (SN-3001-YM-N01)",
+   "kw_en": [
+    "leaf temperature",
+    "leaf wetness",
+    "bench only"
+   ],
+   "kw_zh": [
+    "葉溫",
+    "葉面濕潤度",
+    "只在桌上測過"
+   ],
+   "def_en": "A Modbus RS485 sensor read by an ESP32 that reports a leaf's temperature and surface wetness, paired with an SHT31 air sensor. Tested only in air on 10 October; wetness never wetted, nothing on a plant.",
+   "def_zh": "透過 ESP32 以 Modbus RS485 讀取、回報葉溫與葉面濕潤度的感測器，搭配 SHT31 空氣感測器。僅在 10 月 10 日於空氣中測試；濕潤度從未弄濕，也沒有放在植物上。",
+   "cat": "hardware",
+   "src": "software#The leaf and air sensors on the bench"
+  },
+  {
+   "term": "Floating plate and freeboard",
+   "kw_en": [
+    "sealed air pontoons",
+    "13 seed holes",
+    "freeboard 4.8 mm predicted"
+   ],
+   "kw_zh": [
+    "密封空氣浮筒",
+    "13 個種子孔",
+    "預測乾舷 4.8 mm"
+   ],
+   "def_en": "A printed plate that floats on its own sealed air chambers so roots stay at one depth as the medium falls. Freeboard is how high the slab rides above the water; the predicted value was never measured.",
+   "def_zh": "靠自身密封空氣室漂浮的列印板，培養液下降時根部深度不變。乾舷是板面高出水面的距離；預測值從未實測。",
+   "cat": "hardware",
+   "src": "hardware-hydroponics#4.3"
+  },
+  {
+   "term": "Containment (physical vs kill switch)",
+   "kw_en": [
+    "membrane is the barrier",
+    "advice from Dr. Brophy",
+    "size exclusion only"
+   ],
+   "kw_zh": [
+    "膜是主要屏障",
+    "Brophy 博士的建議",
+    "只靠尺寸篩除"
+   ],
+   "def_en": "Keeping engineered cells in by a physical barrier instead of a genetic kill switch. The 0.2 µm pore stops whole cells but lets vesicles and debris through, so the shell side is plated after module changes.",
+   "def_zh": "用物理屏障而不是基因自殺開關把工程細胞留住。0.2 µm 孔徑擋得住完整細胞，但讓囊泡與碎屑通過，所以換模組後要對殼側塗盤。",
+   "cat": "hardware",
+   "src": "hardware-bioreactor#6.3, #8"
+  },
+  {
+   "term": "BSL-1 and GRAS",
+   "kw_en": [
+    "non-pathogenic chassis",
+    "FDA GRAS strains",
+    "autoclave 121 °C"
+   ],
+   "kw_zh": [
+    "非致病宿主",
+    "FDA 認定 GRAS",
+    "121 °C 高壓滅菌"
+   ],
+   "def_en": "Biosafety level 1 work with a non-pathogenic B. subtilis chassis; the FDA classes nontoxigenic strains as Generally Recognized as Safe. Waste is autoclaved at 121 °C for 15 to 30 minutes or bleached.",
+   "def_zh": "以非致病的 B. subtilis 為宿主進行第一級生物安全實驗；FDA 將無毒株列為公認安全（GRAS）。廢棄物以 121 °C 滅菌 15 至 30 分鐘或漂白水處理。",
+   "cat": "biology",
+   "src": "safety-and-security; hardware-bioreactor#2.2"
+  },
+  {
+   "term": "Registered forecast",
+   "kw_en": [
+    "written before the run",
+    "pass band 0.2705 to 0.3300",
+    "scored 0.286"
+   ],
+   "kw_zh": [
+    "跑之前先登記",
+    "通過區間 0.2705 至 0.3300",
+    "結果 0.286"
+   ],
+   "def_en": "A prediction committed in writing before the experiment, with a pass criterion. On 1 Oct 2026 we registered a growth rate of 0.2986 h-1; run 6 gave 0.286 h-1, inside the interval.",
+   "def_zh": "實驗前以書面登記的預測與通過條件。2026 年 10 月 1 日登記生長率 0.2986 h-1；第 6 次運轉得到 0.286 h-1，落在區間內。",
+   "cat": "model",
+   "src": "software#Registered forecast"
+  },
+  {
+   "term": "Dissolved oxygen (DO) probe",
+   "kw_en": [
+    "two probes tried",
+    "calibration did not hold",
+    "not on the reactor"
+   ],
+   "kw_zh": [
+    "試過兩支探頭",
+    "校正維持不住",
+    "未裝在反應器上"
+   ],
+   "def_en": "A sensor for oxygen in the liquid. Two were tried; calibration did not hold and neither can be autoclaved, so no DO record exists. Oxygen limitation is suspected but unmeasured.",
+   "def_zh": "量測液體中氧氣的感測器。試過兩支，校正無法維持且都不能高壓滅菌，所以沒有任何 DO 紀錄。懷疑氧氣不足但未量測。",
+   "cat": "hardware",
+   "src": "software#Current limits; development#Monitor"
+  },
+  {
+   "term": "Scale-out",
+   "kw_en": [
+    "copy the module",
+    "membrane never binds",
+    "pumps, power, medium bind"
+   ],
+   "kw_zh": [
+    "複製模組",
+    "膜不是瓶頸",
+    "幫浦、電力、培養基才是"
+   ],
+   "def_en": "Growing capacity by adding identical modules, not a bigger vessel. From one to eight modules, the table says membrane area never limits; medium draw, pumping and energy do.",
+   "def_zh": "用增加相同模組而不是放大容器來增加產能。從一個到八個模組，表中顯示膜面積不是限制；培養基用量、泵送與能耗才是。",
+   "cat": "hardware",
+   "src": "biomanufacturing#Scaling; hardware-bioreactor#9.2.7"
+  }
+ ],
+ "questions": [
+  {
+   "q_en": "What membrane do you use in the bioreactor, and what exactly does it do?",
+   "q_zh": "你們的生物反應器用什麼薄膜？它實際上做什麼？",
+   "type": "fact",
+   "tier": "A",
+   "pages": [
+    "hardware-bioreactor"
+   ],
+   "seat": "hw",
+   "backup": "wet2",
+   "kw_en": [
+    "mPES 0.2 µm",
+    "11 fibers 200 cm²",
+    "size, not molecule"
+   ],
+   "kw_zh": [
+    "mPES 0.2 µm",
+    "11 條纖維 200 cm²",
+    "依尺寸不依分子"
+   ],
+   "a_en": "It is a Cobetter mPES hollow-fiber module with 0.2 µm pores, 200 cm² of area and 11 fibers, each 1 mm wide and 0.60 m long. The culture runs inside the fibers. Anything smaller than 0.2 µm, including the secreted enzyme, crosses to the shell side; whole cells cannot. It sorts by size, not by molecule, so vesicles and debris pass too.",
+   "a_zh": "這是 Cobetter 的 mPES 中空纖維模組，孔徑 0.2 µm、面積 200 cm²、11 條纖維，每條內徑 1 mm、長 0.60 m。菌液在纖維內流動，小於 0.2 µm 的東西，包括分泌出來的酵素，會穿過到殼側，完整的細胞過不去。它依尺寸篩選，不是依分子，所以囊泡和碎屑也會通過。",
+   "trap_en": "Saying the membrane blocks everything except the protein. The engineering page withdrew an old 50 kDa cut-off claim; it is 0.2 µm microfiltration.",
+   "trap_zh": "說薄膜只讓蛋白質通過。Engineering 頁已撤回舊的 50 kDa 截留分子量說法；它是 0.2 µm 微過濾。",
+   "basis": "like UPenn 2021: what exactly is the device"
+  },
+  {
+   "q_en": "What does your bioreactor cost to build?",
+   "q_zh": "你們的生物反應器造價多少？",
+   "type": "fact",
+   "tier": "A",
+   "pages": [
+    "hardware-bioreactor",
+    "biomanufacturing"
+   ],
+   "seat": "hw",
+   "backup": "biz",
+   "kw_en": [
+    "US$1022.67 known parts",
+    "membrane US$245",
+    "list incomplete"
+   ],
+   "kw_zh": [
+    "已知零件 US$1022.67",
+    "薄膜 US$245",
+    "清單不完整"
+   ],
+   "a_en": "The known parts on our materials list add up to US$1022.67. The biggest lines are the hollow-fiber membrane at US$245 and the Pro photometer, US$371.78, which sits inside that total. The controller, mainboard, KOH pump and stir bar are not on the list yet, so the true figure is higher. The business page puts the whole prototype, with the bacterial kit, near NT$83,000, about US$2800.",
+   "a_zh": "材料清單上已知的零件總共 US$1022.67。最大的是薄膜 US$245，以及 Pro 光度計 US$371.78，後者已包含在總額內。控制器、主板、KOH 幫浦和攪拌子還沒列入，所以實際金額更高。商業頁面把整個原型加上細菌套組算在約 NT$83,000，大約 US$2800。",
+   "trap_en": "Quoting US$1022.67 as the full cost. The page itself says it is only the known costs and the list counts four pressure sensors where the rig runs three.",
+   "trap_zh": "把 US$1022.67 當成全部成本。頁面自己說這只是已知成本，而且清單算了四個壓力感測器，實驗台只用三個。",
+   "basis": "like Bank 38: may I ask about the cost"
+  },
+  {
+   "q_en": "How big is the commercial unit, and has it been built?",
+   "q_zh": "商用機器多大？已經做出來了嗎？",
+   "type": "fact",
+   "tier": "B",
+   "pages": [
+    "hardware-bioreactor",
+    "description"
+   ],
+   "seat": "hw",
+   "backup": "biz",
+   "kw_en": [
+    "400 x 240 x 620 mm",
+    "not built yet",
+    "output unknown"
+   ],
+   "kw_zh": [
+    "400 x 240 x 620 mm",
+    "還沒做出來",
+    "產量未知"
+   ],
+   "a_en": "About 400 by 240 by 620 mm, a cabinet that stands beside the crop. It keeps the same one-liter loop, with a 7-inch touchscreen, four pressure sensors, and pH and temperature probes. It has not been built. We do not know its output per day, power draw or weight yet, because those need a built unit. What we built and ran is the open lab rack on a 600 by 900 mm panel.",
+   "a_zh": "大約 400 x 240 x 620 mm，是放在作物旁邊的機櫃。它保留同樣的 1 L 迴路，有 7 吋觸控螢幕、四個壓力感測器，以及 pH 與溫度探頭。它還沒有做出來。每日產量、耗電和重量目前都不知道，因為需要做出實機才能量。我們實際建造並運轉的是裝在 600 x 900 mm 面板上的開放式實驗台。",
+   "trap_en": "Describing the cabinet as a tested prototype. Everything we ran was the lab rack in an incubator.",
+   "trap_zh": "把機櫃說成已測試的原型。我們實際跑的都是在培養箱裡的實驗台。",
+   "basis": "like NUS 2021: does it scale beyond a flask"
+  },
+  {
+   "q_en": "What wavelength does your photometer use, and why that one?",
+   "q_zh": "你們的光度計用什麼波長？為什麼選它？",
+   "type": "fact",
+   "tier": "A",
+   "pages": [
+    "hardware-photometer"
+   ],
+   "seat": "hw",
+   "backup": "dry",
+   "kw_en": [
+    "600 nm amber",
+    "standard OD600",
+    "between CcaS peaks"
+   ],
+   "kw_zh": [
+    "600 nm 琥珀光",
+    "標準 OD600",
+    "位於 CcaS 兩峰之間"
+   ],
+   "a_en": "600 nm, from an amber LED through a 2 mm flow cuvette. Software scales the reading by five to the standard 1 cm path. We chose it for three reasons: OD600 is the standard so readings compare with the BioDrop, at 600 nm the culture dims the beam mainly by scattering, and amber sits between the green and red peaks of CcaS/CcaR, so the photometer does not switch production on or off.",
+   "a_zh": "600 nm，用琥珀色 LED 穿過 2 mm 的流動比色槽。軟體把讀值乘五，換算成標準 1 cm 光徑。選它有三個理由：OD600 是標準，所以能和 BioDrop 比較；600 nm 下菌液主要靠散射使光變弱；琥珀光位於 CcaS/CcaR 的綠光與紅光峰之間，所以光度計不會誤開關生產。",
+   "trap_en": "Mixing it up with the 520 or 535 nm green that drives the circuit. The photometer light is deliberately a different color.",
+   "trap_zh": "把它和啟動電路的 520 或 535 nm 綠光搞混。光度計的光刻意選不同顏色。",
+   "basis": "like INSA 2022: why that sensor"
+  },
+  {
+   "q_en": "How many bioreactor runs have you done, and what was the longest?",
+   "q_zh": "你們跑了幾次生物反應器？最長多久？",
+   "type": "fact",
+   "tier": "A",
+   "pages": [
+    "hardware-bioreactor",
+    "software",
+    "development"
+   ],
+   "seat": "hw",
+   "backup": "dry",
+   "kw_en": [
+    "7 runs on twin page",
+    "116 h integrated",
+    "77 h clean"
+   ],
+   "kw_zh": [
+    "twin 頁列 7 次",
+    "整合運轉 116 小時",
+    "最長乾淨 77 小時"
+   ],
+   "a_en": "The Digital Twin table lists seven runs from June to October. Four were fully integrated: 1 September, 8, 14 and 17 October. The first integrated run lasted 116 hours, with 102 hours logged. The longest clean run was 77 hours in October. Separately, the photometer logged 434 hours on a wild-type culture. Other pages count three or six runs, so I use the twin table.",
+   "a_zh": "Digital Twin 的表列出六月到十月共七次運轉，其中四次是完整整合：9 月 1 日，以及 10 月 8、14、17 日。第一次整合運轉 116 小時，記錄到 102 小時。最長的乾淨運轉是 10 月的 77 小時。另外，光度計在野生型菌液上記錄了 434 小時。其他頁面寫三次或六次，我以 twin 的表為準。",
+   "trap_en": "Quoting one number without saying which page. Judges may have read the summary that says three integrated runs, or Development's six.",
+   "trap_zh": "只說一個數字卻不說根據哪一頁。評審可能讀過寫三次整合運轉的摘要，或 Development 的六次。",
+   "basis": "like Bank 36: how could you scale this (numbers must match)"
+  },
+  {
+   "q_en": "Why did you move from releasing bacteria on the roots to a bioreactor?",
+   "q_zh": "你們為什麼從把細菌放在根部改成用生物反應器？",
+   "type": "design",
+   "tier": "A",
+   "pages": [
+    "hardware-bioreactor",
+    "description"
+   ],
+   "seat": "hw",
+   "backup": "ihp",
+   "kw_en": [
+    "biosafety first",
+    "release is uncontrollable",
+    "contain the organism"
+   ],
+   "kw_zh": [
+    "生物安全優先",
+    "釋放後無法控制",
+    "把菌關在機器裡"
+   ],
+   "a_en": "Biosafety was the main reason. Once a transgenic organism is released, its expression, dose and spread can no longer be controlled. Also, lab strains of B. subtilis lack motility and biofilm, so they would struggle in a field anyway. So we keep the organism in a machine and send out only its product. That turned a release problem into a containment problem. Experts like Prof. Chen and Dr. Brophy pushed us that way.",
+   "a_zh": "主要原因是生物安全。基因改造生物一旦釋放，它的表現、劑量和擴散就再也無法控制。而且實驗室的 B. subtilis 菌株缺乏運動能力和生物膜，在田間本來就很難存活。所以我們把菌留在機器裡，只送出它的產物。這把釋放問題變成圍阻問題。陳教授和 Brophy 博士等專家也把我們推向這個方向。",
+   "trap_en": "Saying the bacteria 'cannot survive anyway' as the main reason. The main reason on the page is loss of control over dose and spread.",
+   "trap_zh": "把『反正活不了』當主要理由。頁面上的主因是劑量與擴散失控。",
+   "basis": "like NUS 2021: why build your own instead"
+  },
+  {
+   "q_en": "Why did you add a pinch valve to the bioreactor?",
+   "q_zh": "你們為什麼在生物反應器加夾管閥？",
+   "type": "design",
+   "tier": "A",
+   "pages": [
+    "hardware-bioreactor"
+   ],
+   "seat": "hw",
+   "backup": "ihp",
+   "kw_en": [
+    "no force across wall",
+    "closing raises TMP",
+    "20 to 30 mL per minute"
+   ],
+   "kw_zh": [
+    "沒有力量推過膜",
+    "關閉提高 TMP",
+    "每分鐘 20 至 30 mL"
+   ],
+   "a_en": "Prof. Chang pointed out in June that nothing pushed the protectant from the lumen to the shell side. A higher flow only recirculates fluid. So a servo pinch valve clamps the return line and raises transmembrane pressure. In run 7, closing it for one minute lifted mean TMP from about 0.03 to 0.16 bar and gave roughly 20 to 30 mL of permeate. We chose a servo over a stepper because a stepper lets go when power is cut.",
+   "a_zh": "張教授在六月指出，沒有任何東西把保護蛋白從管腔推向殼側，單純加大流量只會讓液體循環。所以我們用伺服夾管閥夾住回流管，提高跨膜壓差。第 7 次運轉中，關閉一分鐘讓平均 TMP 從約 0.03 升到 0.16 bar，得到約 20 至 30 mL 滲透液。選伺服不選步進馬達，因為步進馬達斷電就會鬆開。",
+   "trap_en": "Claiming the valve was our own idea. It came from Prof. Chang's review; say so.",
+   "trap_zh": "說夾管閥是我們自己的點子。它來自張教授的審查，要講出來。",
+   "basis": "like LCG 2024: expert changed a hardware requirement"
+  },
+  {
+   "q_en": "Why did you build an in-line photometer with a reference channel and a 2 mm path?",
+   "q_zh": "你們為什麼要做有參考通道、2 mm 光徑的在線光度計？",
+   "type": "design",
+   "tier": "A",
+   "pages": [
+    "hardware-photometer"
+   ],
+   "seat": "hw",
+   "backup": "dry",
+   "kw_en": [
+    "no hand sampling",
+    "reference cancels drift",
+    "2 mm avoids saturation"
+   ],
+   "kw_zh": [
+    "不用手動抽樣",
+    "參考通道抵消漂移",
+    "2 mm 避免飽和"
+   ],
+   "a_en": "A bioreactor on a farm has nobody to sample it, and hand sampling disturbs the culture and risks contamination. So the photometer reads inside the loop. A beam splitter sends 10% of the light to a reference sensor, so LED drift cancels in the ratio. The 2 mm cuvette keeps a dense culture from saturating, and software multiplies by five to report on a 1 cm basis.",
+   "a_zh": "農場上的生物反應器沒有人可以抽樣，而且手動抽樣會擾動培養並有污染風險，所以光度計直接在迴路內讀值。分光器把 10% 的光送到參考感測器，LED 漂移就在比值中抵消。2 mm 比色槽避免濃的菌液讀值飽和，軟體再乘五換算成 1 cm 光徑。",
+   "trap_en": "Saying the reference channel makes the reading 'accurate'. It removes LED drift only; it failed after about 240 h in the long run.",
+   "trap_zh": "說參考通道讓讀值『準確』。它只抵消 LED 漂移；在長時間運轉中約 240 小時後它也失效了。",
+   "basis": "like UPenn 2021: biggest source of noise and how reduced"
+  },
+  {
+   "q_en": "How did you deal with bubbles in the photometer?",
+   "q_zh": "你們怎麼處理光度計裡的氣泡？",
+   "type": "design",
+   "tier": "B",
+   "pages": [
+    "hardware-photometer",
+    "measurement"
+   ],
+   "seat": "hw",
+   "backup": "dry",
+   "kw_en": [
+    "tilt so bubbles rise",
+    "median and MAD",
+    "two acceptance gates"
+   ],
+   "kw_zh": [
+    "傾斜讓氣泡上浮",
+    "中位數與 MAD",
+    "兩道接受閘"
+   ],
+   "a_en": "In three steps. A horizontal path trapped bubbles, so we stood it up, then tilted the column 7.5 degrees so there is no flat surface; most bubbles then leave in about a quarter of a second. Software takes a burst of 16, uses the median and rejects beyond 3 MAD. Last, two gates catch air slugs, cutting the worst bubble error from 2.44 to 0.016 OD.",
+   "a_zh": "分三步。水平光路會卡住氣泡，所以我們把它立起來，再把整個光柱傾斜 7.5 度，讓內部沒有平面；多數氣泡約四分之一秒內離開。軟體每次讀 16 個、取中位數、剔除超過 3 MAD 的值。最後兩道閘門抓空氣塞，把最壞的氣泡誤差從 2.44 降到 0.016 OD。",
+   "trap_en": "Quoting 10 degrees. The Pro base is 7.5 degrees and the Slim wedge 10; Development and Engineering say 10 for the Pro, so know which you mean.",
+   "trap_zh": "說 10 度。Pro 底座是 7.5 度、Slim 楔形是 10 度；Development 與 Engineering 把 Pro 寫成 10 度，要清楚你指哪一個。",
+   "basis": "like UPenn 2021: biggest noise source"
+  },
+  {
+   "q_en": "Why do you use PWM and LED matching in the light plate?",
+   "q_zh": "你們的光盤為什麼同時用 PWM 和 LED 配對？",
+   "type": "design",
+   "tier": "A",
+   "pages": [
+    "hardware-diopal"
+   ],
+   "seat": "hw",
+   "backup": "wet1",
+   "kw_en": [
+    "40 LEDs measured",
+    "groups within 0.4 to 1.8%",
+    "tiers set by PWM"
+   ],
+   "kw_zh": [
+    "量了 40 顆 LED",
+    "組內差異 0.4 至 1.8%",
+    "強度靠 PWM"
+   ],
+   "a_en": "We measured all 40 LEDs one by one. Green varied by 26% and red by 22%. Matching them in fours brought each group within 0.4 to 1.8%, so the four replicates get the same light. But matching did not give three distinct intensity levels, so low, mid and high are set by PWM in code, about 2%, 12% and 100% duty. Matching gives consistency; software gives the dose.",
+   "a_zh": "我們逐顆量了 40 顆 LED。綠光相差 26%、紅光相差 22%。四顆一組配對後，每組差異在 0.4 至 1.8% 內，所以四個重複得到相同的光。但配對沒有做出三個明顯不同的強度，所以低、中、高在程式裡用 PWM 設定，約 2%、12%、100% 工作週期。配對提供一致性，軟體提供劑量。",
+   "trap_en": "Saying matching sets the three intensities. It does not; it only makes columns consistent.",
+   "trap_zh": "說配對決定了三種強度。不是；它只讓各欄一致。",
+   "basis": "like NUS 2021: same dose to every culture"
+  },
+  {
+   "q_en": "Why did you design a floating plate for hydroponics?",
+   "q_zh": "你們為什麼設計漂浮式水耕板？",
+   "type": "design",
+   "tier": "B",
+   "pages": [
+    "hardware-hydroponics"
+   ],
+   "seat": "hw",
+   "backup": "plant",
+   "kw_en": [
+    "level drifts",
+    "floats with the medium",
+    "freeboard unmeasured"
+   ],
+   "kw_zh": [
+    "液面會漂移",
+    "隨培養液浮動",
+    "乾舷未實測"
+   ],
+   "a_en": "A fixed plate needs the medium level set by hand, and the level falls as plants drink and liquid evaporates, so conditions drift between replicates. A plate that floats keeps the roots at one depth. It carries 13 seedlings on 42.27 cm³ of sealed air and prints as 16 pieces. The limit: the predicted freeboard is 4.8 mm, but no printed plate has been weighed or measured.",
+   "a_zh": "固定的板需要手動設定液面，而植物吸水與蒸發會讓液面下降，造成重複之間的條件漂移。會浮的板讓根部維持同一深度。它用 42.27 cm³ 的密封空氣承載 13 株幼苗，由 16 件列印而成。限制是：預測乾舷 4.8 mm，但從來沒有秤過或量過實際列印的板。",
+   "trap_en": "Claiming the 4.8 mm freeboard was verified. It is computed from the STL files only.",
+   "trap_zh": "說 4.8 mm 乾舷已驗證。它只是由 STL 檔計算出來的。",
+   "basis": "like NUS 2021: how did iterations change"
+  },
+  {
+   "q_en": "What safety did you build into the hardware?",
+   "q_zh": "你們在硬體裡設計了哪些安全措施？",
+   "type": "design",
+   "tier": "A",
+   "pages": [
+    "safety-and-security",
+    "hardware-diopal",
+    "hardware-bioreactor"
+   ],
+   "seat": "hw",
+   "backup": "ihp",
+   "kw_en": [
+    "BSL-1 B. subtilis",
+    "5 V and 3.3 V logic",
+    "peroxide with gloves"
+   ],
+   "kw_zh": [
+    "BSL-1 的 B. subtilis",
+    "5 V 與 3.3 V 邏輯",
+    "過氧化氫戴手套"
+   ],
+   "a_en": "Biological safety is mostly physical: BSL-1 work with non-pathogenic B. subtilis, the 0.2 µm membrane, and waste autoclaved at 121 °C for 15 to 30 minutes or bleached. Electrically, the instruments run at 5 V and 3.3 V, with pumps and servos on a separate 12 V rail, and the LPA guide says unplug before rewiring. Hydrogen peroxide is handled with gloves and eye protection. The extra containment layers are still planned.",
+   "a_zh": "生物安全主要靠物理手段：以 BSL-1 處理非致病的 B. subtilis、0.2 µm 薄膜，廢棄物以 121 °C 滅菌 15 至 30 分鐘或用漂白水。電氣方面，儀器用 5 V 與 3.3 V，幫浦與伺服在獨立的 12 V 供電，LPA 指南要求改線前先拔電。過氧化氫要戴手套與護目鏡。額外的圍阻層仍在規劃中。",
+   "trap_en": "Listing leak sensors and pressure alarms as built. The hardware page marks them as planned for the cabinet.",
+   "trap_zh": "把漏液感測器與壓力警報說成已完成。硬體頁把它們標為機櫃的規劃項目。",
+   "basis": "like UPenn 2021: safety near live cultures and electronics"
+  },
+  {
+   "q_en": "How do you know the membrane really keeps the bacteria in?",
+   "q_zh": "你們怎麼知道薄膜真的把細菌留住了？",
+   "type": "validate",
+   "tier": "A",
+   "pages": [
+    "hardware-bioreactor",
+    "development"
+   ],
+   "seat": "hw",
+   "backup": "wet2",
+   "kw_en": [
+    "lumen grew, shell clean",
+    "24 h at 37 °C",
+    "single plating each"
+   ],
+   "kw_zh": [
+    "管腔長菌、殼側沒有",
+    "37 °C 24 小時",
+    "各只有單一塗盤"
+   ],
+   "a_en": "We plated medium from both sides of the running bioreactor and incubated it 24 hours at 37 °C. The lumen plate grew; the shell plate had no colonies. An earlier shell-side plating from June also grew nothing. The limit: each was a single plating, with no replicate count or detection limit recorded, so it shows retention but is not a log reduction. The manual makes plating the shell side a standing check after every membrane change.",
+   "a_zh": "我們從運轉中反應器的兩側取培養液塗盤，37 °C 培養 24 小時。管腔那盤長菌，殼側那盤沒有菌落。六月較早的殼側塗盤也沒有長菌。限制是：每次都只有單一塗盤，沒有記錄重複數與偵測極限，所以它顯示有留住，但還不是對數減少量。使用手冊規定每次換模組後都要對殼側塗盤。",
+   "trap_en": "Saying 'zero bacteria cross'. The claim is no colonies under the tested conditions; the pore also passes vesicles.",
+   "trap_zh": "說『零細菌通過』。結論只是在測試條件下沒有菌落；孔徑也會讓囊泡通過。",
+   "basis": "like Munich 2025: replicates?"
+  },
+  {
+   "q_en": "How do you know your photometer is accurate?",
+   "q_zh": "你們怎麼知道光度計是準的？",
+   "type": "validate",
+   "tier": "A",
+   "pages": [
+    "hardware-photometer",
+    "measurement"
+   ],
+   "seat": "hw",
+   "backup": "dry",
+   "kw_en": [
+    "TiO2 median 3.8%",
+    "silica slope 1.001",
+    "no cells tested"
+   ],
+   "kw_zh": [
+    "TiO2 中位差 3.8%",
+    "矽膠斜率 1.001",
+    "沒用細胞測"
+   ],
+   "a_en": "We checked it against the BioDrop with two standards. On titanium dioxide in August, the raw output was a median 3.8% from the BioDrop, with no transform applied. On silica in October the Pro ran parallel to the BioDrop, slope 1.001, but about 0.12 OD low. The limits: both are particle standards, not bacteria at known densities, and above about OD 2.5 the Pro reads low.",
+   "a_zh": "我們用兩種標準品和 BioDrop 對照。8 月用二氧化鈦，未做任何轉換，原始輸出與 BioDrop 的中位數差距 3.8%。10 月用矽膠珠，Pro 與 BioDrop 平行，斜率 1.001，但整體約低 0.12 OD。限制是：兩者都是顆粒標準品，不是已知密度的細菌，而且 OD 2.5 以上 Pro 讀值偏低。",
+   "trap_en": "Quoting a different slope. The wiki shows 0.942, 1.018 and 0.995 on other pages; know which test each belongs to.",
+   "trap_zh": "引用不同的斜率。wiki 其他頁還有 0.942、1.018、0.995；要知道各屬於哪個實驗。",
+   "basis": "like UPenn 2021: validate against a commercial instrument"
+  },
+  {
+   "q_en": "How do you know your pressure and flow readings can be trusted?",
+   "q_zh": "你們怎麼知道壓力與流量讀值可信？",
+   "type": "validate",
+   "tier": "A",
+   "pages": [
+    "hardware-bioreactor",
+    "measurement"
+   ],
+   "seat": "hw",
+   "backup": "dry",
+   "kw_en": [
+    "hand method varied by person",
+    "instruments only",
+    "R² 0.995"
+   ],
+   "kw_zh": [
+    "手動法因人而異",
+    "全改用儀器",
+    "R² 0.995"
+   ],
+   "a_en": "Our first hand measurements depended on who held the cylinder: at the same pump output, pressure differed more than threefold between series. So on 16 August we used instruments only, a Hall-effect flow meter and three pressure transducers, and ran the loop twice, with and without the module. Both fit the pressure model at R² 0.995. The flow meter also matched hand collection at R² 0.995.",
+   "a_zh": "我們最早的手動量測會因為拿量筒的人不同而改變：同一個幫浦輸出，三組系列的壓力相差超過三倍。所以 8 月 16 日改成只用儀器，用霍爾式流量計和三個壓力傳送器，並把迴路跑兩次，一次有模組一次沒有。兩者壓降模型的擬合 R² 都是 0.995。流量計與手動收集的相符度也是 R² 0.995。",
+   "trap_en": "Claiming TMP was validated in runs. The calibration tables are lumen pressure drop; the Measurement page says no TMP had been computed from that rig.",
+   "trap_zh": "說 TMP 已在運轉中驗證。校正表是管腔壓降；Measurement 頁說該組數據尚未算出任何 TMP。",
+   "basis": "like UPenn 2021: single biggest source of error"
+  },
+  {
+   "q_en": "How do you know the loop is sterile after cleaning without an autoclave?",
+   "q_zh": "沒有高壓滅菌，你們怎麼知道清洗後的管路是無菌的？",
+   "type": "validate",
+   "tier": "A",
+   "pages": [
+    "hardware-bioreactor",
+    "engineering"
+   ],
+   "seat": "hw",
+   "backup": "wet1",
+   "kw_en": [
+    "peroxide circulated",
+    "test paper checks rinse",
+    "no sterility assay"
+   ],
+   "kw_zh": [
+    "過氧化氫循環",
+    "試紙檢查沖洗",
+    "沒有無菌檢測"
+   ],
+   "a_en": "We clean in place: 100 mL of 35% hydrogen peroxide in 900 mL of water circulates for 15 minutes, then about five 1 L washes, each checked with starch-iodide paper until no peroxide remains. That paper tells us the peroxide is gone. It does not prove sterility, and the pages report no sterility test of the result. We also run erythromycin at 5 µg/mL, which guards against contamination.",
+   "a_zh": "我們用原位清洗：900 mL 水加 100 mL 35% 過氧化氫循環 15 分鐘，再用約五次 1 L 水沖洗，每次用澱粉碘化物試紙檢查到沒有過氧化氫為止。試紙只告訴我們過氧化氫沖乾淨了，並不能證明無菌，頁面也沒有報告清洗後的無菌檢測。我們另外使用 5 µg/mL 紅黴素，有助於防止污染。",
+   "trap_en": "Saying the test paper proves the loop is sterile. It only proves the rinse is peroxide-free.",
+   "trap_zh": "說試紙證明管路無菌。它只證明沖洗水沒有過氧化氫。",
+   "basis": "like NUS 2021: how keep low-cost hardware sterile"
+  },
+  {
+   "q_en": "How do you know the protectant actually crosses the membrane?",
+   "q_zh": "你們怎麼知道保護蛋白真的穿過薄膜？",
+   "type": "validate",
+   "tier": "A",
+   "pages": [
+    "hardware-bioreactor",
+    "development"
+   ],
+   "seat": "hw",
+   "backup": "wet2",
+   "kw_en": [
+    "ELISA both sides",
+    "DNPH shows activity",
+    "values approximate"
+   ],
+   "kw_zh": [
+    "兩側都做 ELISA",
+    "DNPH 顯示有活性",
+    "數值屬估計"
+   ],
+   "a_en": "On 8 October we ran two assays on both sides: ELISA for how much, DNPH for whether it is active. ACC deaminase read 10.7 µg/mL in the lumen and 10.5 on the shell side, and DNPH found activity on both. In run 7 the shell permeate held over 2 µg/mL to 72 hours, active from 18 hours. The limits: most ELISA wells read above the top standard, and every point is a single well.",
+   "a_zh": "10 月 8 日我們在兩側各做兩種檢測：ELISA 量多少，DNPH 看有沒有活性。ACC deaminase 在管腔側是 10.7 µg/mL，殼側 10.5，DNPH 兩側都偵測到活性。第 7 次運轉中，殼側滲透液到 72 小時都有超過 2 µg/mL，從 18 小時起有活性。限制是：多數 ELISA 孔超出最高標準品，而且每個點都是單一孔。",
+   "trap_en": "Quoting 10.7 as exact. The same run's time course peaks near 7.5, and Development lists 8.5; say 'about 10, approximate'.",
+   "trap_zh": "把 10.7 當精確值。同一次運轉的時間序列最高約 7.5，Development 寫 8.5；要說『約 10，屬估計』。",
+   "basis": "like Munich 2025: replicates?"
+  },
+  {
+   "q_en": "Why not just buy a commercial spectrophotometer instead of building a photometer?",
+   "q_zh": "為什麼不直接買商用分光光度計，要自己做光度計？",
+   "type": "compare",
+   "tier": "A",
+   "pages": [
+    "hardware-photometer",
+    "contribution"
+   ],
+   "seat": "hw",
+   "backup": "biz",
+   "kw_en": [
+    "cannot sit in the loop",
+    "Slim US$235.29",
+    "Pro US$371.78"
+   ],
+   "kw_zh": [
+    "無法放進迴路",
+    "Slim US$235.29",
+    "Pro US$371.78"
+   ],
+   "a_en": "A benchtop instrument cannot sit in the loop and read without a sample being drawn, and a farm unit has nobody to draw it. That is the real gain, more than cost. Our parts cost US$371.78 for the Pro and US$235.29 for the Slim. The BioDrop we calibrated against costs NT$15,000, about US$470, so the Slim is roughly half and the Pro a little below. We have not tested a commercial in-line sensor.",
+   "a_zh": "桌上型儀器不能放在迴路裡讀值而不抽樣，而農場機器沒有人可以抽樣。這才是真正的好處，比成本更重要。Pro 零件成本 US$371.78，Slim 是 US$235.29。我們用來對照的 BioDrop 要 NT$15,000，約 US$470，所以 Slim 大約是它的一半，Pro 略低一點。我們沒有測試過商用的在線感測器。",
+   "trap_en": "Saying the savings are the main point, or quoting the BioDrop as US$15,000. The Contribution page says US$15,000; the Photometer page says NT$15,000 (about US$470).",
+   "trap_zh": "把省錢說成重點，或把 BioDrop 說成 US$15,000。Contribution 頁寫 US$15,000；Photometer 頁寫 NT$15,000（約 US$470）。",
+   "basis": "like INSA 2022 / UPenn 2021: what could commercial equipment not do"
+  },
+  {
+   "q_en": "Which photometer should someone use, the Pro or the Slim?",
+   "q_zh": "別人該用哪一款光度計，Pro 還是 Slim？",
+   "type": "compare",
+   "tier": "A",
+   "pages": [
+    "hardware-photometer"
+   ],
+   "seat": "hw",
+   "backup": "dry",
+   "kw_en": [
+    "Pro for long runs",
+    "Slim cheaper, R² 0.992",
+    "x5.57 factor"
+   ],
+   "kw_zh": [
+    "Pro 用於長時間運轉",
+    "Slim 較便宜 R² 0.992",
+    "乘 5.57 係數"
+   ],
+   "a_en": "The Pro for long bioreactor runs: it has a lens and a 90:10 splitter, reads nearly 1:1 with the BioDrop, and ran 434 hours. The Slim uses two optical fibers split 1:1, stands 72 mm tall, costs 36.71% less, and is more linear on silica, R² 0.992 against 0.974, but reads about a fifth of the scale, so you multiply by 5.57. It has one silica run behind it and no long-term run.",
+   "a_zh": "長時間的生物反應器運轉用 Pro：有透鏡和 90:10 分光器，讀值與 BioDrop 幾乎 1:1，並且跑過 434 小時。Slim 用兩條光纖 1:1 分光，高 72 mm，便宜 36.71%，在矽膠上線性較好，R² 0.992 對 Pro 的 0.974，但讀值只有約五分之一，要乘 5.57。它只有一次矽膠實驗，沒有長時間運轉。",
+   "trap_en": "Calling the Slim 'better'. It is linear and cheap, but the x5.57 factor rests on one silica run and not on cells.",
+   "trap_zh": "說 Slim『比較好』。它線性好又便宜，但 5.57 係數只來自一次矽膠實驗，不是細胞。",
+   "basis": "like INSA 2022: sensor choice and alternatives"
+  },
+  {
+   "q_en": "Your light plate follows an existing open design. What did you add, and is it better than a commercial plate?",
+   "q_zh": "你們的光盤是依據現有的開放設計。你們加了什麼？比商用光盤好嗎？",
+   "type": "compare",
+   "tier": "B",
+   "pages": [
+    "hardware-diopal",
+    "contribution"
+   ],
+   "seat": "hw",
+   "backup": "wet1",
+   "kw_en": [
+    "Gerhardt 2016 design",
+    "dual-wavelength columns",
+    "US$65.52"
+   ],
+   "kw_zh": [
+    "Gerhardt 2016 的設計",
+    "雙波長欄位",
+    "US$65.52"
+   ],
+   "a_en": "The idea is not new: the Light Plate Apparatus is Gerhardt and colleagues' open design, and ours is named after it. We added a dual-wavelength column layout, LEDs matched by measured output, and an enclosure sized for our tubes. It costs US$65.52 for 24 cultures and six conditions. We did not run it side by side with a commercial plate, and our light is in lux, not photon flux, so we cannot compare doses with their paper.",
+   "a_zh": "這個想法不是新的：Light Plate Apparatus 是 Gerhardt 等人的開放設計，我們的名字就來自它。我們加了雙波長欄位配置、依實測輸出配對的 LED，以及配合我們試管的外殼。24 管、六種條件的成本是 US$65.52。我們沒有和商用光盤並排比較，而且我們的光用勒克斯而非光子通量，所以無法與他們的論文比較劑量。",
+   "trap_en": "Claiming it is better than commercial plates. The wiki only says commercial hardware is costly; there is no head-to-head test.",
+   "trap_zh": "說它比商用光盤好。wiki 只說商用硬體昂貴，沒有正面比較。",
+   "basis": "like UPenn 2021: what could commercial equipment not do"
+  },
+  {
+   "q_en": "Why use a peristaltic pump? Did you try anything else?",
+   "q_zh": "為什麼用蠕動幫浦？你們試過別的嗎？",
+   "type": "compare",
+   "tier": "B",
+   "pages": [
+    "hardware-bioreactor"
+   ],
+   "seat": "hw",
+   "backup": "dry",
+   "kw_en": [
+    "peristaltic wears",
+    "magnetic pump too weak",
+    "BPT tubing"
+   ],
+   "kw_zh": [
+    "蠕動幫浦會磨損",
+    "磁力幫浦太弱",
+    "BPT 管"
+   ],
+   "a_en": "We tried a magnetic pump, because the peristaltic pump wears in long runs. With culture medium it could not build enough pressure, topped out below 200 mL/min against our 263 target, and could not lift liquid from the bottle, so we have no data from it. The peristaltic pump stays. It wears out sooner, and early runs ended on pump-head leaks, so we moved to biocompatible BPT tubing.",
+   "a_zh": "我們試過磁力幫浦，因為蠕動幫浦在長時間運轉會磨損。在培養基中它無法建立足夠壓力，最高低於 200 mL/min（目標 263），也抽不起瓶中的液體，所以沒有數據。蠕動幫浦留下來。它磨損較快，早期運轉曾因幫浦頭漏液而結束，所以我們換成生物相容的 BPT 管。",
+   "trap_en": "Saying the magnetic pump was 'tested and rejected on data'. It never held a working flow; there is no data set.",
+   "trap_zh": "說磁力幫浦『經數據測試後淘汰』。它從沒維持過有效流量，沒有數據。",
+   "basis": "like NUS 2021: what did you give up"
+  },
+  {
+   "q_en": "What happens if a fiber breaks or a tube leaks?",
+   "q_zh": "如果纖維破裂或管子漏液會怎樣？",
+   "type": "boundary",
+   "tier": "A",
+   "pages": [
+    "hardware-bioreactor",
+    "software",
+    "engineering"
+   ],
+   "seat": "hw",
+   "backup": "ihp",
+   "kw_en": [
+    "membrane is only built layer",
+    "0.70 bar trip armed",
+    "pressure cannot see a leak"
+   ],
+   "kw_zh": [
+    "膜是唯一已建的圍阻層",
+    "0.70 bar 跳脫已啟用",
+    "壓力偵測不到漏液"
+   ],
+   "a_en": "Today the membrane is the only containment layer we have shown. The firmware has a 0.70 bar pressure trip, armed in run 7 and never triggered, peak 0.57 bar. A pressure alarm tied to the cabinet and a droplet sensor under the unit are planned. We learned that pressure alone cannot see a leak: when a valve broke, feed pressure rose from about 0.19 to 0.37 bar. After any such event we plate the shell side.",
+   "a_zh": "目前只有薄膜是我們證明過的圍阻層。韌體有 0.70 bar 的壓力跳脫，在第 7 次運轉中啟用但從未觸發，最高 0.57 bar。與機櫃連動的壓力警報和機器底下的滴漏感測器則是規劃中。我們學到單靠壓力看不出漏液：閥斷裂時，進料壓力反而從約 0.19 升到 0.37 bar。發生這類事件後，我們會對殼側塗盤。",
+   "trap_en": "Saying a leak sensor already protects the rig. It is planned; and the Safety page's present-tense wording is stronger than the hardware page.",
+   "trap_zh": "說漏液感測器已經在保護機器。那是規劃中；Safety 頁的現在式措辭比硬體頁強。",
+   "basis": "like UPenn 2021: safety near live cultures"
+  },
+  {
+   "q_en": "Your photometer was calibrated on silica beads. Does that hold for real bacteria at high density?",
+   "q_zh": "你們的光度計是用矽膠珠校正的。對高密度的真細菌也成立嗎？",
+   "type": "boundary",
+   "tier": "A",
+   "pages": [
+    "hardware-photometer",
+    "measurement"
+   ],
+   "seat": "hw",
+   "backup": "dry",
+   "kw_en": [
+    "beads are spheres",
+    "OD 2.5 and x5.57 approximate",
+    "beam lost above 2.7"
+   ],
+   "kw_zh": [
+    "矽膠珠是球形",
+    "OD 2.5 與 5.57 屬估計",
+    "OD 2.7 以上光束喪失"
+   ],
+   "a_en": "Not proven. Silica beads are spheres, while Bacillus cells are rods that scatter differently, so the working limit of about OD 2.5 and the Slim's 5.57 factor are approximate until we repeat the test on cells at known densities. In practice run 6 lost its sample beam above OD 2.7, though run 7 read up to 3.34. Above the limit we would draw samples by hand and dilute.",
+   "a_zh": "還沒有證明。矽膠珠是球形，而 Bacillus 細胞是桿狀，散射方式不同，所以約 OD 2.5 的工作上限和 Slim 的 5.57 係數，在用已知密度的細胞重做實驗之前都只是近似值。實際上第 6 次運轉在 OD 2.7 以上失去樣品光束，不過第 7 次讀到 3.34。超過上限我們會手動取樣並稀釋。",
+   "trap_en": "Saying the photometer is validated up to OD 2.5 on bacteria. The 2.5 comes from silica only.",
+   "trap_zh": "說光度計在細菌上已驗證到 OD 2.5。2.5 只來自矽膠。",
+   "basis": "like Cambridge 2024: how do you know it holds in the real condition"
+  },
+  {
+   "q_en": "Can your leaf sensor tell that a plant in the field is stressed?",
+   "q_zh": "你們的葉片感測器能判斷田裡的植物受逆境嗎？",
+   "type": "boundary",
+   "tier": "B",
+   "pages": [
+    "software",
+    "results",
+    "description"
+   ],
+   "seat": "dry",
+   "backup": "dry",
+   "kw_en": [
+    "bench test only",
+    "reads warm by site",
+    "wetness never wetted"
+   ],
+   "kw_zh": [
+    "只在桌上測",
+    "各地點偏暖程度不同",
+    "濕潤度從未弄濕"
+   ],
+   "a_en": "Not yet. On 10 October we ran the leaf sensor beside an air sensor, with no leaf, at three sites, 540 paired readings. The leaf sensor read warm by +1.7, +1.3 and +0.5 °C depending on the site, so no fixed offset corrects it. The wetness channel read 0.0% on every sample because we never wetted it. Nothing has been put on a plant, so no stress threshold can be set.",
+   "a_zh": "還不行。10 月 10 日我們把葉片感測器和空氣感測器並排放在三個地點測試，沒有葉片，共 540 組讀值。葉片感測器依地點偏暖 +1.7、+1.3、+0.5 °C，所以無法用固定偏差修正。濕潤度通道每筆都讀 0.0%，因為我們從沒弄濕它。沒有放到植物上，所以還不能設定逆境門檻。",
+   "trap_en": "Saying the leaf sensor works 'with a 1.2 to 1.9 °C offset' as if it were a fixed correction. The offset changes with site.",
+   "trap_zh": "說葉片感測器『只要修正 1.2 至 1.9 °C 偏差』，好像是固定偏差。偏差會隨地點改變。",
+   "basis": "like Cambridge 2024: how do you know the real signal"
+  },
+  {
+   "q_en": "Would the bioreactor work at the temperature of a real farm?",
+   "q_zh": "生物反應器在真實農場的溫度下能運作嗎？",
+   "type": "boundary",
+   "tier": "B",
+   "pages": [
+    "hardware-bioreactor",
+    "software",
+    "hardware-photometer"
+   ],
+   "seat": "hw",
+   "backup": "plant",
+   "kw_en": [
+    "integrated runs at 37 °C",
+    "22 °C inconsistent",
+    "temperature probe not responding"
+   ],
+   "kw_zh": [
+    "整合運轉都在 37 °C",
+    "22 °C 結果不一致",
+    "溫度探頭沒反應"
+   ],
+   "a_en": "We have not shown that. Our integrated runs sat in a 37 °C incubator. B. subtilis growth at 22 °C was inconsistent in the first test, and Prof. Chang asked us to repeat it and check plasmid stability. The 434-hour run was at 22 °C but with wild type. The loop temperature probe is fitted but not responding, so runs used a temperature typed in by the operator.",
+   "a_zh": "我們還沒有證明這點。整合運轉都在 37 °C 培養箱裡。B. subtilis 在 22 °C 的生長在第一次測試時不一致，張教授要我們重做並檢查質體穩定性。434 小時的運轉雖在 22 °C，但用的是野生型。迴路溫度探頭已裝上但沒有反應，所以運轉時的溫度是操作員手動輸入的。",
+   "trap_en": "Saying the cabinet 'holds temperature' as a tested feature. The temperature-held vessel is a design, and the probe is not working.",
+   "trap_zh": "把機櫃『可控溫』說成測試過的功能。控溫容器是設計，探頭也沒在運作。",
+   "basis": "like Cambridge 2024: separate effects from heat"
+  },
+  {
+   "q_en": "How did outside experts change your hardware?",
+   "q_zh": "外部專家如何改變了你們的硬體？",
+   "type": "integrate",
+   "tier": "A",
+   "pages": [
+    "hardware-bioreactor"
+   ],
+   "seat": "hw",
+   "backup": "ihp",
+   "kw_en": [
+    "Chang: pinch valve",
+    "Owl Lab: STS3215 and mainboard",
+    "mainboard fixed pressure noise"
+   ],
+   "kw_zh": [
+    "張教授：夾管閥",
+    "Owl Lab：STS3215 與主板",
+    "主板解決壓力不穩"
+   ],
+   "a_en": "Two reviewers changed it most. Prof. Chang found nothing drove product across the membrane, so we added the pinch valve, and he said to watch flow and pressure for fouling, so we added the transducers and flow meter. Teacher He at Owl Lab found the servo driver unreliable and the power supply too weak, so we moved to STS3215 servos and then his single mainboard, which also ended our unstable pressure readings.",
+   "a_zh": "兩位審查者的影響最大。張教授發現沒有東西推動產物過膜，所以我們加了夾管閥；他也說要監看流量與壓力以判斷污垢，所以我們加了壓力傳送器與流量計。Owl Lab 的何老師發現伺服驅動板不可靠、電源太弱，所以我們換成 STS3215 伺服，再採用他設計的單一主板，這也解決了壓力讀值不穩的問題。",
+   "trap_en": "Listing feedback without saying what changed on the rig. Each point should end on the part we built.",
+   "trap_zh": "只列意見卻沒說裝置改了什麼。每一點都應該以我們做出的零件作結。",
+   "basis": "like LCG 2024 / Cambridge 2024: expert changed a requirement"
+  },
+  {
+   "q_en": "How did what you learned in the bioreactor change the photometer?",
+   "q_zh": "你們在生物反應器學到的東西如何改變了光度計？",
+   "type": "integrate",
+   "tier": "B",
+   "pages": [
+    "hardware-photometer",
+    "hardware-bioreactor"
+   ],
+   "seat": "hw",
+   "backup": "dry",
+   "kw_en": [
+    "dilute above OD 1",
+    "plug-in module, six wires",
+    "gates after 434 h run"
+   ],
+   "kw_zh": [
+    "OD 1 以上要稀釋",
+    "插拔模組、六條線",
+    "434 小時後加閘門"
+   ],
+   "a_en": "Three ways. Prof. Chang said samples above OD 1 must be diluted, so from the 10 October silica run we diluted BioDrop samples 2 times, then 4 times. Teacher He's mainboard meant we rebuilt the photometer to plug in as a module with six wires, so the pH probe and pinch valve could be added without rewiring. And bubbles in long runs led to the two acceptance gates.",
+   "a_zh": "有三方面。張教授說 OD 1 以上的樣品必須稀釋，所以從 10 月 10 日的矽膠實驗起，我們把 BioDrop 樣品稀釋 2 倍再 4 倍。何老師的主板讓我們把光度計重做成六條線的插拔模組，這樣加 pH 探頭與夾管閥時不用重新接線。長時間運轉的氣泡問題則促成了兩道接受閘。",
+   "trap_en": "Saying the dilution advice applied to the in-line photometer. It applies to the BioDrop reference, which is read in a cuvette.",
+   "trap_zh": "說稀釋建議適用於在線光度計。它適用於對照用的 BioDrop，那是在比色槽裡讀的。",
+   "basis": "like UPenn 2021: iterations after real samples"
+  },
+  {
+   "q_en": "How did the light plate results feed into your digital twin?",
+   "q_zh": "光盤的結果如何用到數位孿生裡？",
+   "type": "integrate",
+   "tier": "B",
+   "pages": [
+    "hardware-diopal",
+    "software"
+   ],
+   "seat": "dry",
+   "backup": "dry",
+   "kw_en": [
+    "r = 0.299 growth fit",
+    "registered 1 Oct",
+    "run 6 gave 0.286"
+   ],
+   "kw_zh": [
+    "r = 0.299 生長擬合",
+    "10 月 1 日登記",
+    "第 6 次運轉 0.286"
+   ],
+   "a_en": "The LPA's 19 September growth fit, rate 0.299 per hour, became the growth prior in the twin. On 1 October we registered a forecast of 0.2986, with a pass interval of 0.2705 to 0.3300. Run 6 gave 0.286, inside it. Used as a prior, the fit predicted each held-out arm's 24 hour OD within 7%, against 29 to 68% without it. The limit: the rate transferred from plate to reactor, the ceiling did not.",
+   "a_zh": "LPA 在 9 月 19 日的生長擬合，速率 0.299 每小時，成為數位孿生的生長先驗。10 月 1 日我們登記了 0.2986 的預測，通過區間 0.2705 至 0.3300。第 6 次運轉得到 0.286，落在區間內。用作先驗時，這個擬合預測每個留出組別 24 小時 OD 的誤差在 7% 內，沒有先驗則是 29 至 68%。限制是：生長速率能從培養盤轉到反應器，承載量則不能。",
+   "trap_en": "Presenting this as proof the light plate controls growth. The arms grew alike and the run had light leakage; it supports the growth rate only.",
+   "trap_zh": "把它當成光盤能控制生長的證據。各組生長相同且有漏光；它只支持生長速率。",
+   "basis": "like Munich 2025: model and lab link"
+  },
+  {
+   "q_en": "How did farmer and expert feedback shape the design of the commercial unit?",
+   "q_zh": "農民與專家的回饋如何影響商用機器的設計？",
+   "type": "integrate",
+   "tier": "B",
+   "pages": [
+    "hardware-bioreactor"
+   ],
+   "seat": "hw",
+   "backup": "ihp",
+   "kw_en": [
+    "swappable capsule",
+    "7-inch screen and phone page",
+    "cartridges still untested"
+   ],
+   "kw_zh": [
+    "可替換膠囊",
+    "7 吋螢幕與手機頁",
+    "匣尚未測試"
+   ],
+   "a_en": "Prof. Chang pressed us on farmer use: modular, with the bacteria in a replaceable capsule swapped like a battery, and no hands-on control. That became the sealed refill cartridge design, with a keyed dock for medium and spores, and a 7-inch screen plus phone page. It is still design. The printed parts were not watertight, and sterility over changeovers and spore germination are untested.",
+   "a_zh": "張教授強調農民使用：要模組化，把細菌放在像電池一樣可更換的膠囊裡，不需要手動技術操作。這成為密封補充匣的設計，有防錯的對接座放培養基與孢子，還有 7 吋螢幕與手機頁面。這仍然是設計。列印零件不防水，多次更換的無菌性與孢子萌發也未測試。",
+   "trap_en": "Describing the cartridges as built. The page lists the next steps to a prototype: a reliable seal, sterility, spore germination.",
+   "trap_zh": "把匣說成已做出。頁面列的是邁向原型的下一步：可靠的密封、無菌性、孢子萌發。",
+   "basis": "like Peking 2025: trial or real application"
+  },
+  {
+   "q_en": "What was the most serious thing that went wrong with the bioreactor?",
+   "q_zh": "生物反應器最嚴重出了什麼問題？",
+   "type": "gap",
+   "tier": "A",
+   "pages": [
+    "hardware-bioreactor",
+    "engineering"
+   ],
+   "seat": "hw",
+   "backup": "ihp",
+   "kw_en": [
+    "pressure unstable in run 4",
+    "peroxide broke a valve",
+    "KOH corroded valves"
+   ],
+   "kw_zh": [
+    "第 4 次運轉壓力不穩",
+    "過氧化氫弄壞閥",
+    "KOH 腐蝕閥"
+   ],
+   "a_en": "Several things. In the first integrated run the pressure reading was unstable throughout and a computer restart cost about 10 hours. In run 6 a Luer valve broke at 38 hours because our own cleaning step let undiluted peroxide reach it, and medium leaked into the incubator. In run 7, 1 M KOH corroded the dosing valve. The membrane did not fail. We fixed the first two causes; the third needs alkaline-resistant valves.",
+   "a_zh": "有好幾件。第一次整合運轉中，壓力讀值全程不穩，電腦重啟又損失約 10 小時。第 6 次運轉在 38 小時時，Luer 閥因為我們自己的清洗步驟讓未稀釋的過氧化氫直接打到而斷裂，培養液漏進培養箱。第 7 次運轉中，1 M KOH 腐蝕了加液閥。薄膜沒有失效。前兩個原因我們已修正；第三個需要耐鹼的閥。",
+   "trap_en": "Hiding the leaks. The Development page says no leaks in six runs; the Bioreactor page records two valve breaks that leaked medium.",
+   "trap_zh": "隱瞞漏液。Development 頁說六次運轉沒有漏液；Bioreactor 頁記錄了兩次閥斷裂漏出培養液。",
+   "basis": "like LCG 2024: hardest engineering problem"
+  },
+  {
+   "q_en": "What does your light plate not show?",
+   "q_zh": "你們的光盤沒有證明什麼？",
+   "type": "gap",
+   "tier": "A",
+   "pages": [
+    "hardware-diopal",
+    "development"
+   ],
+   "seat": "hw",
+   "backup": "wet1",
+   "kw_en": [
+    "light leaked between wells",
+    "light control unconfirmed",
+    "lux not photon flux"
+   ],
+   "kw_zh": [
+    "孔間漏光",
+    "光控制未確認",
+    "勒克斯不是光子通量"
+   ],
+   "a_en": "It does not yet show that green light controls production. The first run on 19 September grew in all six arms to OD 0.91 to 1.01, but light leaked between wells, so it is not a dose result. Later ELISA read 12.9 against 12.5 µg/mL, green over red, on two samples a side with overlapping ranges, so light control is unconfirmed. We report lux, not photon flux, and the shaker fixes are not yet re-tested.",
+   "a_zh": "它還沒有證明綠光能控制生產。9 月 19 日的第一次實驗六組都長到 OD 0.91 至 1.01，但孔間漏光，所以不是劑量結果。之後的 ELISA 是綠光 12.9 對紅光 12.5 µg/mL，每邊只有兩個樣品且範圍重疊，所以光控制未確認。我們報告的是勒克斯而不是光子通量，振盪實驗的修正也還沒重新測試。",
+   "trap_en": "Saying the LPA 'proved' green induces ACCD. Development itself marks light control as unconfirmed.",
+   "trap_zh": "說 LPA『證明』綠光誘導 ACCD。Development 自己把光控制標為未確認。",
+   "basis": "like Munich 2025: minimum production and change in output"
+  },
+  {
+   "q_en": "Which of your sensors or monitoring channels do not work or were never tested?",
+   "q_zh": "你們哪些感測器或監測通道沒有作用，或從未測試？",
+   "type": "gap",
+   "tier": "A",
+   "pages": [
+    "software",
+    "development",
+    "hardware-bioreactor"
+   ],
+   "seat": "hw",
+   "backup": "dry",
+   "kw_en": [
+    "no dissolved oxygen",
+    "temperature probe silent",
+    "wetness never wetted"
+   ],
+   "kw_zh": [
+    "沒有溶氧",
+    "溫度探頭沒反應",
+    "濕潤度從未弄濕"
+   ],
+   "a_en": "Four. Dissolved oxygen: two probes, calibration did not hold, neither can be autoclaved, so no DO record exists. The loop temperature probe is fitted but not responding. The pH probe has no calibration against reference buffers on record. And the leaf wetness channel read 0.0% because it was never wetted. The photometer also loses its beam at high density, and its reference channel failed after about 240 hours.",
+   "a_zh": "有四項。溶氧：兩支探頭、校正維持不住、都不能高壓滅菌，所以沒有任何溶氧紀錄。迴路溫度探頭已裝但沒反應。pH 探頭沒有用標準緩衝液校正的紀錄。葉面濕潤度通道讀 0.0%，因為從未弄濕。光度計在高密度時也會失去光束，長時間運轉約 240 小時後參考通道失效。",
+   "trap_en": "Claiming 'Monitor: all met'. Development marks dissolved oxygen as not tested.",
+   "trap_zh": "說『監測全部達成』。Development 把溶氧標為未測試。",
+   "basis": "like Munich 2025: what is not shown"
+  },
+  {
+   "q_en": "Your Safety page lists leak detection and pressure alerts. Are they actually built?",
+   "q_zh": "你們的 Safety 頁列了漏液偵測與壓力警報，真的做出來了嗎？",
+   "type": "gap",
+   "tier": "A",
+   "pages": [
+    "safety-and-security",
+    "hardware-bioreactor",
+    "biomanufacturing"
+   ],
+   "seat": "hw",
+   "backup": "ihp",
+   "kw_en": [
+    "firmware 0.70 bar trip",
+    "droplet sensor planned",
+    "shell-side detector not shown"
+   ],
+   "kw_zh": [
+    "韌體 0.70 bar 跳脫",
+    "滴漏感測器規劃中",
+    "殼側偵測器沒有證據"
+   ],
+   "a_en": "Partly. The firmware has a 0.70 bar pressure trip that was armed through run 7 and never needed. The hardware page says pressure numbers were only displayed, and that the full pressure alarm and the droplet sensor are planned for the commercial cabinet. The Safety page describes them in the present tense, which is stronger than what we demonstrated. What we demonstrated is the membrane plating.",
+   "a_zh": "部分完成。韌體有 0.70 bar 的壓力跳脫，第 7 次運轉全程啟用且從未需要動作。硬體頁說壓力數字目前只是顯示，完整的壓力警報和滴漏感測器是規劃給商用機櫃的。Safety 頁用現在式描述，比我們實際證明的更強。我們真正證明的是薄膜塗盤。",
+   "trap_en": "Defending the Safety wording. Better to say the page describes design intent and point to what was demonstrated.",
+   "trap_zh": "替 Safety 頁的措辭辯護。比較好的做法是承認那是設計意圖，並指出實際證明的部分。",
+   "basis": "like Munich 2025: what is not shown"
+  },
+  {
+   "q_en": "You recommend 263 mL/min at 0.30 bar TMP. Did you actually measure that TMP in a run?",
+   "q_zh": "你們建議 263 mL/min、TMP 0.30 bar。在實際運轉中真的量到這個 TMP 嗎？",
+   "type": "gap",
+   "tier": "A",
+   "pages": [
+    "hardware-bioreactor",
+    "measurement",
+    "engineering"
+   ],
+   "seat": "hw",
+   "backup": "dry",
+   "kw_en": [
+    "0.30 bar is a design value",
+    "runs near zero to kPa",
+    "feed flow 350 to 370"
+   ],
+   "kw_zh": [
+    "0.30 bar 是設計值",
+    "運轉時接近零到幾 kPa",
+    "進料流量 350 至 370"
+   ],
+   "a_en": "No. 0.30 bar is the operating point we chose from water tests, to keep non-uniformity at 28% and avoid compaction. In real runs TMP sat near zero, and the manual says a few kPa; the pump alone pulses it between about minus 0.06 and plus 0.12 bar. Feed flow was about 350 to 370 mL/min, not 263. Pages also disagree on the module drop at 263: 0.084 or 0.096 bar.",
+   "a_zh": "沒有。0.30 bar 是我們從水測試選出的操作點，目的是把不均勻度維持在 28% 並避免壓縮。實際運轉中 TMP 接近零，使用手冊寫幾 kPa；單靠幫浦會讓它在約負 0.06 到正 0.12 bar 間脈動。進料流量約 350 至 370 mL/min，不是 263。各頁對 263 時的模組壓降也不一致：0.084 或 0.096 bar。",
+   "trap_en": "Presenting 263 mL/min and 0.30 bar as the measured running conditions. They are the recommendation, not what the runs used.",
+   "trap_zh": "把 263 mL/min 與 0.30 bar 說成實際運轉條件。它們是建議值，不是運轉時用的條件。",
+   "basis": "like Munich 2025: how did you quantify"
+  },
+  {
+   "q_en": "How would you scale this up, and what limits you?",
+   "q_zh": "你們要如何擴大規模？限制是什麼？",
+   "type": "impact",
+   "tier": "A",
+   "pages": [
+    "hardware-bioreactor",
+    "biomanufacturing"
+   ],
+   "seat": "hw",
+   "backup": "biz",
+   "kw_en": [
+    "scale out, copy module",
+    "medium, pumps, energy bind",
+    "design flux 2 vs 36 to 72 LMH"
+   ],
+   "kw_zh": [
+    "複製模組擴增",
+    "培養基、幫浦、能耗是限制",
+    "設計通量 2 對 36 至 72 LMH"
+   ],
+   "a_en": "We would scale out, adding copies of the characterized 200 cm² module. From one module to eight, the membrane never limits. What binds is medium draw, 0.96 to 7.7 liters a day, pumps, one to eight, and energy, 3 to 8 W up to 24 to 64 W. A duty-cycled pump would help; we have not tested settling when it is off. Honest caveat: that table assumes 2 LMH, while our runs used 36 to 72 LMH.",
+   "a_zh": "我們會用橫向擴充，增加已鑑定過的 200 cm² 模組。從一個模組到八個，薄膜都不是限制。限制是培養基用量，每天 0.96 到 7.7 公升、幫浦數量一到八個，以及能耗從 3 至 8 W 增加到 24 至 64 W。讓幫浦間歇運轉會有幫助；關閉時纖維是否沉降我們還沒測試。要誠實說明：那張表假設 2 LMH，而我們的運轉用 36 至 72 LMH。",
+   "trap_en": "Saying the membrane is oversized so scaling is easy. The table's 2 LMH design flux is far below the fluxes in our runs.",
+   "trap_zh": "說薄膜綽綽有餘所以好擴充。表中 2 LMH 的設計通量遠低於我們實驗中用的通量。",
+   "basis": "like Bank 36 and NUS 2021: does it scale"
+  },
+  {
+   "q_en": "Could another team rebuild your hardware from your documentation?",
+   "q_zh": "另一支隊伍能依你們的文件重建硬體嗎？",
+   "type": "impact",
+   "tier": "A",
+   "pages": [
+    "hardware",
+    "hardware-photometer",
+    "hardware-bioreactor",
+    "hardware-diopal"
+   ],
+   "seat": "hw",
+   "backup": "ihp",
+   "kw_en": [
+    "guides, STLs, cost tables",
+    "3 outside builders",
+    "only Slim tested outside"
+   ],
+   "kw_zh": [
+    "指南、STL、成本表",
+    "3 位外部組裝者",
+    "只有 Slim 被外部測過"
+   ],
+   "a_en": "Each instrument has an assembly guide, parts list with costs and STL files: bioreactor 10 pages, Pro 12, Slim 13, LPA 10, plus a 16-page user manual and an 82-page notebook. Three classmates outside the team built the Slim in about two hours, and their trouble changed three lines in the guide. The limits: only the Slim has been outside-tested, the LPA has not, and the lab rack uses hand-soldered boards.",
+   "a_zh": "每個儀器都有組裝指南、附成本的零件清單和 STL 檔：生物反應器 10 頁、Pro 12 頁、Slim 13 頁、LPA 10 頁，另有 16 頁使用手冊和 82 頁筆記本。三位隊外同學依指南約兩小時組出 Slim，他們遇到的困難讓指南修改了三處。限制是：只有 Slim 做過外部測試，LPA 沒有，實驗台的電路板也是手工焊接。",
+   "trap_en": "Saying the whole bioreactor was outside-tested. The three outside builders built only the Slim photometer.",
+   "trap_zh": "說整個生物反應器都經過外部測試。三位外部組裝者只組了 Slim 光度計。",
+   "basis": "like UPenn 2021: could another team rebuild it"
+  }
+ ],
+ "gaps": [
+  {
+   "issue_en": "The recommended operating numbers do not match what the runs measured or used. 263 mL/min at TMP 0.30 bar is a design choice from water tests; run logs show TMP near zero (manual: a few kPa) and feed flow of about 350 to 370 mL/min. The module drop at 263 mL/min is 0.084 bar (Bioreactor) or 0.096 bar (Development, Digital Twin, Biomanufacturing). The scaling table assumes 2 LMH flux while runs used 36 to 72 LMH. The Measurement page says no TMP had been computed from the calibration rig.",
+   "issue_zh": "建議的操作數字與實際量到或使用的數字不符。263 mL/min、TMP 0.30 bar 是由水測試選的設計值；運轉紀錄顯示 TMP 接近零（手冊寫幾 kPa），進料流量約 350 至 370 mL/min。263 mL/min 時模組壓降在 Bioreactor 頁是 0.084 bar，在 Development、Digital Twin、Biomanufacturing 是 0.096 bar。規模表假設通量 2 LMH，實驗卻用 36 至 72 LMH。Measurement 頁說該校正台尚未算出任何 TMP。",
+   "where": "hardware-bioreactor#4.1; development#Contain; software#Module pressure drop; measurement#Flow and pressure monitoring; biomanufacturing#Scaling; engineering#Bioreactor",
+   "say_en": "Say 263 mL/min and 0.30 bar are our recommended operating point from water tests, not what the culture runs used. Real runs ran about 350 to 370 mL/min with TMP near zero, and the pages differ on the module drop, 0.084 or 0.096 bar, which we are reconciling.",
+   "say_zh": "要說 263 mL/min 與 0.30 bar 是我們由水測試提出的建議操作點，不是培養實驗實際使用的條件。實際運轉約 350 至 370 mL/min、TMP 接近零，各頁對模組壓降寫 0.084 或 0.096 bar，我們正在核對。"
+  },
+  {
+   "issue_en": "Safety-related layers are described as working on some pages and as planned on others. Safety and Biomanufacturing use the present tense for TMP alerts, a droplet sensor and shell-side turbulence detection; the Bioreactor page says pressure is only displayed and the pressure alarm and droplet sensor are planned. The firmware has a 0.70 bar trip (armed in run 7, never fired). Development says no leaks in six runs, yet two runs had a broken Luer valve that leaked medium. Engineering found pressure alone could not detect the leak.",
+   "issue_zh": "有些頁面把安全相關層寫成已運作，有些寫成規劃中。Safety 與 Biomanufacturing 用現在式寫 TMP 警報、滴漏感測器與殼側紊流偵測；Bioreactor 頁說壓力只是顯示，壓力警報與滴漏感測器是規劃。韌體有 0.70 bar 跳脫（第 7 次運轉啟用、從未觸發）。Development 說六次運轉沒有漏液，但有兩次運轉 Luer 閥斷裂漏出培養液。Engineering 發現單靠壓力偵測不到漏液。",
+   "where": "safety-and-security#Bioreactor safety; biomanufacturing#Regulation and biosafety; hardware-bioreactor#8, #9.2; development#Contain; engineering#Bioreactor cycle 7",
+   "say_en": "Say the membrane plating is the demonstrated containment, the 0.70 bar trip is in the firmware, and the droplet sensor and full pressure alarm are planned for the cabinet. Admit two valve breaks leaked medium, and that the membrane itself did not fail.",
+   "say_zh": "要說已證明的圍阻是薄膜塗盤，0.70 bar 跳脫在韌體裡，滴漏感測器與完整壓力警報是規劃給機櫃的。要承認有兩次閥斷裂漏出培養液，但薄膜本身沒有失效。"
+  },
+  {
+   "issue_en": "Run counts and run identities differ between pages. Hardware summary: three integrated runs; Bioreactor page: four integrated prototypes (1 Sep, 8, 14, 17 Oct); Development and Contribution: six runs, longest 102.4 h; Digital Twin: seven runs. The photometer page calls the 14 October run both 'integrated run 3' and 'run 6'. The 434 h run is on the twin as run 3 with the module fitted, but Engineering says it used a simplified loop with no hollow-fiber module. 116 h versus 102.4 h is the same run (logged part).",
+   "issue_zh": "各頁對運轉次數與編號不一致。硬體摘要：三次整合運轉；Bioreactor 頁：四個整合原型（9/1、10/8、10/14、10/17）；Development 與 Contribution：六次、最長 102.4 小時；Digital Twin：七次。Photometer 頁把 10 月 14 日那次同時叫『整合運轉 3』與『運轉 6』。434 小時那次在 twin 上是第 3 次且裝有模組，但 Engineering 說它用的是沒有中空纖維模組的簡化迴路。116 小時與 102.4 小時是同一次運轉（記錄到的部分）。",
+   "where": "hardware-bioreactor#Summary, #4.2; development#Bioreactor; software#Every run so far; hardware-photometer#8.1; engineering#Bioreactor cycle 3",
+   "say_en": "Use the Digital Twin table, seven runs, four integrated, and say 116 h was the run and 102.4 h the logged part. For the 434 h run say it was a photometer test on wild type at 22 °C, and that the engineering page notes the loop had no membrane module in it.",
+   "say_zh": "以 Digital Twin 的表為準：七次運轉、四次整合，並說 116 小時是整次運轉、102.4 小時是記錄到的部分。講 434 小時時要說那是野生型 22 °C 的光度計測試，且 Engineering 頁註明該迴路沒有薄膜模組。"
+  },
+  {
+   "issue_en": "Evidence that cells are retained and the shear is tolerable is thinner than the headline. Retention rests on two single platings, no replicate, no detection limit. Cell size is given as 0.25 to 1.0 µm (Safety) and as a 1 to 2 µm rod or 0.8 x 3 µm (Biomanufacturing). Shear of 4000 to 6000 s-1 is called comfortable, yet the Measurement page cites a study where B. subtilis cells shrank and oxidative stress rose at 1482 s-1, and viability after circulation was never read. The 0.2 µm pore also passes vesicles and debris.",
+   "issue_zh": "細胞被留住與剪切可耐受的證據比標題薄弱。留住只靠兩次單一塗盤，沒有重複、沒有偵測極限。細胞大小在 Safety 寫 0.25 至 1.0 µm，在 Biomanufacturing 寫 1 至 2 µm 桿狀或 0.8 x 3 µm。4000 至 6000 s-1 的剪切被說成還算舒適，但 Measurement 頁引用的研究顯示 B. subtilis 在 1482 s-1 時細胞縮小、氧化壓力上升，而且循環後的細胞存活率從未量測。0.2 µm 孔徑也會讓囊泡與碎屑通過。",
+   "where": "hardware-bioreactor#8; safety-and-security#Primary containment; biomanufacturing#Critical flux; measurement#Flow and pressure monitoring; engineering#Bioreactor cycle 1",
+   "say_en": "Say no colonies were seen on two plates under the tested conditions, which is evidence of retention but not a log reduction. Say shear tolerance is an expectation, not a measurement, and viability after circulation is something we still owe.",
+   "say_zh": "要說在測試條件下兩個盤都沒長出菌落，這是留住的證據，但不是對數減少量。要說剪切耐受只是預期而非量測，循環後的細胞存活率是我們還欠的實驗。"
+  },
+  {
+   "issue_en": "Photometer accuracy is quoted differently on different pages, and none is on cells. Median 3.8% from BioDrop on TiO2; slope 0.942 R² 0.9997 (Description, Engineering plot); slope 1.018 to OD 1.2 (Digital Twin); slope 0.995 to OD 2.5 (Development, Engineering); slope 1.001 with a constant 0.12 OD offset, or 0.93 with the blank (Photometer). The Pro is 5.3 times (Measurement) or 5.57 times (Photometer) more sensitive than the Slim. Working limit OD 2.5, but run 6 lost its beam above 2.7 and run 7 read to 3.34. Tilt is 7.5 degrees (Photometer) or 10 degrees (Development, Engineering). BioDrop price is NT$15,000 (about US$470) on Photometer but about US$15,000 on Contribution; Pro parts are US$371.78 or about US$360.",
+   "issue_zh": "不同頁對光度計準確度的寫法不同，且都不是細胞。TiO2 上與 BioDrop 中位差 3.8%；斜率 0.942、R² 0.9997（Description、Engineering 圖）；OD 1.2 內斜率 1.018（Digital Twin）；OD 2.5 內斜率 0.995（Development、Engineering）；斜率 1.001 加固定 0.12 OD 偏移，含空白為 0.93（Photometer）。Pro 比 Slim 靈敏 5.3 倍（Measurement）或 5.57 倍（Photometer）。工作上限 OD 2.5，但第 6 次運轉 2.7 以上失去光束，第 7 次讀到 3.34。傾斜角在 Photometer 是 7.5 度，在 Development、Engineering 是 10 度。BioDrop 價格在 Photometer 是 NT$15,000（約 US$470），在 Contribution 卻是約 US$15,000；Pro 零件成本是 US$371.78 或約 US$360。",
+   "where": "hardware-photometer#5.2, #7.1, #10.1; description; software#Photometer calibration; development#Monitor; measurement#Dual light path; contribution#In-line optical density photometer; engineering#In-line photometer",
+   "say_en": "Quote the test with the number: 3.8% median on titanium dioxide, slope 1.001 and 0.12 OD low on silica. Say all are particle standards, the exact slope depends on range and blank, and the high-density limit and the x5.57 factor still need a repeat on cells.",
+   "say_zh": "引用數字時要帶著實驗：二氧化鈦中位差 3.8%，矽膠斜率 1.001 且低 0.12 OD。要說全是顆粒標準品，確切斜率取決於範圍與空白，高密度上限與 5.57 係數仍需在細胞上重做。"
+  },
+  {
+   "issue_en": "Claims about pH control and monitoring are stronger on some pages than the Bioreactor page supports. Engineering says the loop held pH 7 for 77 hours by itself; the Bioreactor page says the automatic control worked only the first night, KOH then corroded the valve, and pH was adjusted by hand daily. The twin shows pH ranged 6.34 to 7.97 despite 53 doses. No pH probe calibration against buffers is on record, dissolved oxygen was never measured, the loop temperature probe does not respond, and sterility after peroxide cleaning is not assayed. Permeability halved (2520 to 1210 LMH/bar) while no cleaning threshold was called reached.",
+   "issue_zh": "pH 控制與監測的說法在某些頁面比 Bioreactor 頁能支持的更強。Engineering 說迴路自己維持 pH 7 達 77 小時；Bioreactor 頁說自動控制只有第一晚有效，之後 KOH 腐蝕閥，改為每天手動調 pH。twin 顯示雖然加了 53 次，pH 仍在 6.34 至 7.97 間波動。沒有 pH 探頭用緩衝液校正的紀錄，溶氧從未量測，迴路溫度探頭沒有反應，過氧化氫清洗後的無菌性也沒有檢測。滲透率減半（2520 降到 1210 LMH/bar），卻說沒有達到任何清洗門檻。",
+   "where": "engineering#Abstract, #Bioreactor cycle 8; hardware-bioreactor#4.2 prototype 4; software#Every run so far, #Current limits; development#Monitor",
+   "say_en": "Say automatic pH worked for the first night, then the KOH corroded the valve and we dosed by hand, so the 77 hours were not hands-off. Say dissolved oxygen and loop temperature are not measured, and fouling is one module, one run, no replacement interval.",
+   "say_zh": "要說自動 pH 第一晚有效，之後 KOH 腐蝕了閥，我們改成手動加，所以 77 小時並非完全免人工。要說溶氧與迴路溫度沒有量測，污垢只有一個模組、一次運轉，無法訂出更換週期。"
+  },
+  {
+   "issue_en": "The light plate's wavelengths, dose and intensity test are unclear. Home says 520 nm green and 660 nm red; Photometer, Contribution and Geospatial say about 535 and 670 nm; the LPA page states no wavelength, and Development lists verifying the real wavelengths as future work. Readings are in lux, not photon flux. Fixture lux (green about 2.3 to 2.4 klux at 5 V) differs from the plate map (green 220, 510, 3850 lux, red 168 measured, other red values calculated). The LPA page says the intensity test was not run, while Development reports ELISA green 12.9 vs red 12.5 and calls light control unconfirmed. The first run had light leakage and shaker fixes are not re-tested; only 12 of 24 wells were used.",
+   "issue_zh": "光盤的波長、劑量與強度實驗不清楚。Home 寫綠光 520 nm、紅光 660 nm；Photometer、Contribution、Geospatial 寫約 535 與 670 nm；LPA 頁沒有給波長，Development 把確認實際波長列為未來工作。讀值是勒克斯而非光子通量。治具量到的勒克斯（5 V 下綠光約 2.3 至 2.4 klux）與孔位圖（綠光 220、510、3850 lux；紅光只有 168 為實測，其餘為計算值）不同。LPA 頁說還沒做強度實驗，Development 卻報告 ELISA 綠光 12.9 對紅光 12.5 並說光控制未確認。第一次實驗有漏光、振盪修正尚未重測，且 24 孔只用了 12 孔。",
+   "where": "home; hardware-diopal; hardware-photometer#7.2.2; contribution#Light plate apparatus; geospatial-analysis; development#LPA; measurement#Optogenetic control",
+   "say_en": "Say the circuit is designed for green around 535 nm on and red around 670 nm off, but we have not verified the LED wavelengths or measured photon flux. Say the plate's value so far is a worked method for matched LEDs and a growth result, not a dose-response.",
+   "say_zh": "要說電路設計上是約 535 nm 綠光開、約 670 nm 紅光關，但我們還沒驗證 LED 的實際波長，也沒量光子通量。要說光盤目前的價值是配對 LED 的方法和一個生長結果，還不是劑量反應。"
+  },
+  {
+   "issue_en": "The leaf sensor is presented as a working part of the detect chain but has only been on a bench. Tested 10 October in air beside an air sensor, no leaf. Offset by site was +1.71, +1.31 and +0.47 °C (quoted as 1.2 to 1.9, and as minus 0.2 to plus 1.8 on Results), so no fixed correction works. Leaf wetness read 0.0% in all 540 samples because it was never wetted. Development still marks the detect row 'Successful'. The BLASTAM wet threshold is a default and the rule is unchecked against Taiwan disease records.",
+   "issue_zh": "葉片感測器被當作偵測鏈的運作部分，但只在桌上測過。10 月 10 日在空氣中與空氣感測器並排、沒有葉片。各地點偏差為 +1.71、+1.31、+0.47 °C（他處寫 1.2 至 1.9，Results 寫 -0.2 至 +1.8），所以固定修正行不通。540 筆的葉面濕潤度全是 0.0%，因為從未弄濕。Development 仍把偵測列標為『成功』。BLASTAM 的濕潤門檻是預設值，規則也沒有用台灣病害紀錄檢驗。",
+   "where": "software#The leaf and air sensors on the bench; results#Field sensors; development#Detect, Forecast & Activate; description#Hardware",
+   "say_en": "Say only the bench test is done: the leaf sensor reads warm by an amount that changes with site, wetness is untested, and nothing has been on a plant. The next step is the offset correction, then wetting and a leaf, as the pages say.",
+   "say_zh": "要說只完成桌上測試：葉片感測器偏暖，且偏差隨地點改變，濕潤度未測，也沒有放在植物上。下一步依頁面所述是先做偏差修正，再做弄濕與放上葉片。"
+  }
+ ]
+}

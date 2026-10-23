@@ -1,0 +1,1924 @@
+{
+ "domain": "ihp",
+ "facts": [
+  {
+   "id": "ihp-f1",
+   "label_en": "Stakeholders engaged",
+   "label_zh": "接觸的利害關係人",
+   "value": "31",
+   "detail_en": "The abstract and conclusion both say 31 stakeholders across research, industry and agriculture; the page never lists all 31 in one table.",
+   "detail_zh": "摘要與結論都說接觸了 31 位利害關係人（研究、產業、農業），但頁面沒有把 31 位一次列完。",
+   "src": "human-practices#Overview",
+   "confidence": "stated"
+  },
+  {
+   "id": "ihp-f2",
+   "label_en": "Where the project started",
+   "label_zh": "計畫的起點",
+   "value": "1 Feb, USE-GH Ghana",
+   "detail_en": "Gilbert Nkpeniyeng of Ubuntu Social Enterprise Ghana confirmed that climate instability hurts the farmers he knows and that small farmers are disadvantaged; this fed the business plan.",
+   "detail_zh": "迦納 Ubuntu Social Enterprise 的 Gilbert Nkpeniyeng 證實氣候不穩定正在傷害他認識的農民，而且小農更弱勢，這也影響了商業計畫。",
+   "src": "human-practices#Deployment",
+   "confidence": "stated"
+  },
+  {
+   "id": "ihp-f3",
+   "label_en": "Prof. Chen Wen-Liang (NYCU, AgriTalk founder)",
+   "label_zh": "陳文亮教授（陽明交大、AgriTalk 創辦人）",
+   "value": "10 Apr, 20 Jun, 15 Oct",
+   "detail_en": "Apr 10: hardware as printer, B. subtilis as ink, move from soil release to a bioreactor. Jun 20: link model and wet lab, add dissolved oxygen tracking. Oct 15: introduce the digital twin through a farm scenario first.",
+   "detail_zh": "4/10：硬體是印表機、枯草桿菌是墨水，從土壤釋放改為生物反應器。6/20：連結模型與濕實驗，加入溶氧監測。10/15：先用農場情境介紹數位孿生。",
+   "src": "human-practices#Continuous engagement",
+   "confidence": "stated"
+  },
+  {
+   "id": "ihp-f4",
+   "label_en": "Dr. Jennifer Brophy (Stanford)",
+   "label_zh": "Jennifer Brophy 博士（史丹佛）",
+   "value": "18 Apr",
+   "detail_en": "She said genetic kill switches can mutate or fail, so physical containment should be the primary safety layer. Result: a semi-permeable membrane that retains bacteria and lets protectants through.",
+   "detail_zh": "她指出基因自殺開關可能突變或失效，建議以物理圍堵為主要安全機制，因此改設計成留住細菌、讓保護劑通過的半透膜。",
+   "src": "human-practices#Bioreactor and hardware",
+   "confidence": "stated"
+  },
+  {
+   "id": "ihp-f5",
+   "label_en": "Prof. Cheng Mei-Chun (NTU plant biology)",
+   "label_zh": "鄭梅君教授（台大植物生物學）",
+   "value": "27 Mar, 28 Aug",
+   "detail_en": "Mar 27: use Arabidopsis, agar plates first then soil, do not rely on hydroponics alone; she gave seeds; osmotic stress dropped. Aug 28: some earlier results may reflect unintended stress, so plant age and timing were standardised.",
+   "detail_zh": "3/27：用阿拉伯芥，先瓊脂盤再移到土壤，不要只靠水耕；提供種子；放棄滲透壓逆境。8/28：先前部分結果可能來自非預期壓力，因此統一植株年齡與處理時間。",
+   "src": "human-practices#Plant and stress biology",
+   "confidence": "stated"
+  },
+  {
+   "id": "ihp-f6",
+   "label_en": "Dr. Paul Verslues (Academia Sinica)",
+   "label_zh": "Paul Verslues 博士（中研院）",
+   "value": "3 Apr",
+   "detail_en": "Advised working with the plant's natural response instead of simply supplying more proline, and prioritising early stress detection over recovery; suggested stress priming and root growth and biomass as readouts.",
+   "detail_zh": "建議配合植物自身的反應，而不是單純多給脯胺酸，並優先做早期偵測而非事後恢復；建議考慮壓力預處理，並以根長與生物量作為指標。",
+   "src": "human-practices#Plant and stress biology",
+   "confidence": "stated"
+  },
+  {
+   "id": "ihp-f7",
+   "label_en": "Dr. Elizabeth Sattely (Stanford) and Prof. Drew Endy",
+   "label_zh": "Elizabeth Sattely 博士與 Drew Endy 教授（史丹佛）",
+   "value": "27 Jun, 12 Sep",
+   "detail_en": "Jun 27: test the purified protectant on plants first, focus on one stress, try peptides. Sep 12 (with Endy, an iGEM co-founder): separate the bacteria from the protectant, verify ACCD at RNA and protein level, strengthen controls.",
+   "detail_zh": "6/27：先在植物上直接測純化保護劑、只專注一種逆境、嘗試胜肽。9/12（與 iGEM 共同創辦人 Endy）：區分細菌與保護劑，在 RNA 與蛋白質層級驗證 ACCD，強化對照組。",
+   "src": "human-practices#Protectant design",
+   "confidence": "stated"
+  },
+  {
+   "id": "ihp-f8",
+   "label_en": "Prof. Huang Chieh-Chen (NCHU)",
+   "label_zh": "黃介辰教授（中興大學）",
+   "value": "28 Jul, 6 Aug",
+   "detail_en": "Gave the B. subtilis WB800 strain. Advised periodic rather than continuous release, seedling-stage use, and judging quantity, identity, solubility and activity together; later suggested shorter peptides guided by docking. Prof. Huang Tzu-Pi advised on delivery and medium the same day as the second visit.",
+   "detail_zh": "提供枯草桿菌 WB800 菌株。建議週期性而非持續釋放、苗期使用，並同時評估蛋白質量、身分、溶解度與活性；後續建議用對接模擬縮短胜肽。黃姿碧教授在 8/6 同日提供施用方式與培養基建議。",
+   "src": "human-practices#Gene circuit and cloning",
+   "confidence": "stated"
+  },
+  {
+   "id": "ihp-f9",
+   "label_en": "CH Biotech (biostimulant company, Nantou)",
+   "label_zh": "正瀚生技（生物刺激素公司，南投）",
+   "value": "9 Jul",
+   "detail_en": "Advised comparing root irrigation, foliar spray and drone spray, counting cost per area, prioritising heat and drought over salinity, starting with Arabidopsis then tomato or tea, and confirming Taiwan regulation before acting.",
+   "detail_zh": "建議比較灌根、葉面噴灑與無人機噴灑，計算每單位面積成本，優先處理熱與乾旱而非鹽害，先用阿拉伯芥再移到番茄或茶，並先確認台灣法規。",
+   "src": "human-practices#Protectant design",
+   "confidence": "stated"
+  },
+  {
+   "id": "ihp-f10",
+   "label_en": "World Vegetable Center",
+   "label_zh": "世界蔬菜中心",
+   "value": "22 May",
+   "detail_en": "Told the team to show the product is environmentally safe and sustainable, to research GMO regulation, and to stay on heat stress because other stresses are harder to combat.",
+   "detail_zh": "建議團隊證明產品對環境安全且永續、研究基因改造法規，並專注熱逆境，因為其他逆境更難處理。",
+   "src": "human-practices#Deployment",
+   "confidence": "stated"
+  },
+  {
+   "id": "ihp-f11",
+   "label_en": "Yes Health iFarm (indoor hydroponic farm)",
+   "label_zh": "源鮮智慧農場",
+   "value": "11 Aug",
+   "detail_en": "Showed how a controlled hydroponic farm manages circulation, aeration and monitoring; the team could not obtain some exact technical data. Prompted: gentle aeration instead of pure oxygen, fewer plant transfers, reconsider the 8/16 light cycle.",
+   "detail_zh": "展示受控水耕農場如何管理循環、曝氣與監測；團隊未能取得部分精確技術數據。促成：改用溫和曝氣而非純氧、減少移植、重新檢討 8/16 光照週期。",
+   "src": "human-practices#Plant and stress biology",
+   "confidence": "stated"
+  },
+  {
+   "id": "ihp-f12",
+   "label_en": "BIO Asia-Taiwan Exhibition",
+   "label_zh": "台灣國際生技展 BIO Asia-Taiwan",
+   "value": "18 Jul",
+   "detail_en": "Booth feedback: dissolved oxygen and active aeration are needed for B. subtilis survival, so the design prioritised an O2 sensor and feedback loop; move some validation to soil; research GMO rules in Taiwan, the Philippines, Malaysia and the EU.",
+   "detail_zh": "攤位回饋：溶氧與主動曝氣是枯草桿菌存活所需，因此設計優先加入氧氣感測器與回饋迴路；部分驗證改到土壤；研究台灣、菲律賓、馬來西亞與歐盟的基改法規。",
+   "src": "human-practices#Bioreactor and hardware",
+   "confidence": "stated"
+  },
+  {
+   "id": "ihp-f13",
+   "label_en": "Prof. Chang Jo-Shu (bioreactor engineering)",
+   "label_zh": "張嘉修教授（生物反應器工程）",
+   "value": "18 Jun, 4 Sep",
+   "detail_en": "Jun 18: monitor flow rate and transmembrane pressure to catch caking, break foam mechanically. Sep 4: usability, AIoT, and a swappable bacterial capsule (the hardware page lists the capsule as future work).",
+   "detail_zh": "6/18：監測流速與跨膜壓力以發現結垢，以機械方式消泡。9/4：重視易用性、AIoT，以及可更換的菌種膠囊（硬體頁將膠囊列為未來工作）。",
+   "src": "human-practices#Bioreactor and hardware",
+   "confidence": "consistent"
+  },
+  {
+   "id": "ihp-f14",
+   "label_en": "Owl Lab, Teacher He (robotics and electronics)",
+   "label_zh": "Owl Lab 何老師（機器人與電子）",
+   "value": "20 Sep",
+   "detail_en": "Found that the PCA9685 servo driver could miss valve positions and cause pressure spikes and leaks. Changes: STS-3215 servos, separate power handling; the hardware page shows a single mainboard replaced the two-board plan two days later.",
+   "detail_zh": "指出 PCA9685 伺服驅動板可能停不到位，造成壓力突增與漏液。改用 STS-3215 伺服馬達並分離電源處理；硬體頁顯示兩天後以單一主機板取代雙板方案。",
+   "src": "human-practices#Bioreactor and hardware",
+   "confidence": "consistent"
+  },
+  {
+   "id": "ihp-f15",
+   "label_en": "Mr. Riddler Lu (Agriweather founder)",
+   "label_zh": "盧安邦先生（Agriweather 創辦人）",
+   "value": "13 Oct",
+   "detail_en": "Advised adding rain and EC sensors and training the model on local history. Noted that without irrigation connection farmers must collect protectant by hand. Planned response: a mixing chamber that delivers through irrigation.",
+   "detail_zh": "建議加入雨量與電導度感測器，並用當地歷史資料訓練模型。指出未連接灌溉時農民必須自行取用保護劑。規劃回應：以混合腔經灌溉系統輸送。",
+   "src": "human-practices#Bioreactor and hardware",
+   "confidence": "stated"
+  },
+  {
+   "id": "ihp-f16",
+   "label_en": "Director Wu Tzu-Hsien (Miaoli Agricultural Research and Extension Station) and Prof. Chang Hung-Hao",
+   "label_zh": "吳姿嫻場長（苗栗區農業改良場）與張弘浩教授",
+   "value": "12 Oct, 31 Aug",
+   "detail_en": "Wu: pick one or two crops; target changed from rice to cherry tomato and strawberry; add rental and per-fen pricing; plan a biosafety case. Chang: narrow to one stress and crop, show measurable yield-loss reduction.",
+   "detail_zh": "吳：選一兩種作物；目標作物由水稻改為小番茄與草莓；加入租賃與每分地計價；規劃生物安全案。張：縮小到單一逆境與作物，證明可量測的減損改善。",
+   "src": "human-practices#Deployment",
+   "confidence": "stated"
+  },
+  {
+   "id": "ihp-f17",
+   "label_en": "Taipei Expo Farmers Market interviews",
+   "label_zh": "花博農民市集訪談",
+   "value": "16 May, 30+ farmers",
+   "detail_en": "Over 30 organic smallholder farmers; biotic stress (pests, disease) was mentioned more than abiotic. Result: biotic stress added as a target, and the insight that farmers accept technology if affordable, accessible and practical.",
+   "detail_zh": "訪談 30 多位有機小農；提到生物性逆境（病蟲害）多於非生物性。結果：加入生物性逆境為目標，並得知只要負擔得起、容易取得且實用，農民不排斥科技。",
+   "src": "human-practices#Farmer engagement",
+   "confidence": "stated"
+  },
+  {
+   "id": "ihp-f18",
+   "label_en": "Tamsui Happy Farm (Ms. Chen Hui-Wen, natural farmer)",
+   "label_zh": "淡水快樂農場（陳慧文女士，自然農法）",
+   "value": "21 Jul",
+   "detail_en": "Said giving plants too much support can take away their ability to survive on their own. Fed into the M1 stress-index model; she also described seed loss after typhoons and floods, which led to the seed exchange platform. This is the 'Farmer Chen in Tamsui' on the homepage.",
+   "detail_zh": "她說給植物太多支持可能讓它失去自己生存的能力。這影響了 M1 壓力指數模型；她也提到颱風水災後種子流失，促成種子交換平台。她就是首頁的「淡水陳農民」。",
+   "src": "human-practices#Farmer interviews",
+   "confidence": "consistent"
+  },
+  {
+   "id": "ihp-f19",
+   "label_en": "Public forum with Green Media",
+   "label_zh": "與綠媒體共同舉辦的公眾論壇",
+   "value": "5 Sep, 50+ participants",
+   "detail_en": "'Field Dialogue: Agricultural Solutions to Climate Change'. Speakers included Prof. Chen Wen-Liang, Dr. Li Hsu-Ying (natural farming) and a CH Biotech expert. Farmers asked two questions: is organic certification required, and how many bioreactors are needed.",
+   "detail_zh": "「田野對話：氣候變遷的農業解方」。講者包括陳文亮教授、自然農法的李旭英博士與正瀚生技代表。農民提出兩個問題：是否需要有機認證、需要幾台生物反應器。",
+   "src": "human-practices#Public engagement",
+   "confidence": "stated"
+  },
+  {
+   "id": "ihp-f20",
+   "label_en": "Forum KAP survey results",
+   "label_zh": "論壇 KAP 問卷結果",
+   "value": "Speakers 100%; farmers avg 80%; public 90/95/100%",
+   "detail_en": "Knowledge, Attitude, Practice scores after the forum. The number of respondents in each group is not shown.",
+   "detail_zh": "論壇後的知識、態度、行動分數。各組回收份數頁面沒有列出。",
+   "src": "human-practices#Survey analysis",
+   "confidence": "stated"
+  },
+  {
+   "id": "ihp-f21",
+   "label_en": "Booth reach at Water Garden market",
+   "label_zh": "水之園有機農民市集攤位觸及",
+   "value": "160+ visitors, 62 survey respondents",
+   "detail_en": "Six interactive booths. Survey: 51.6% found Yilan as the highest-stress region; 98.4% said they were satisfied; 96.8% willing to share. Data physicalization abstract says 116 visitors for the same booth.",
+   "detail_zh": "六個互動攤位。問卷：51.6% 正確指出宜蘭為壓力最高區；98.4% 表示滿意；96.8% 願意分享。資料實體化頁摘要對同一攤位寫 116 位訪客。",
+   "src": "human-practices#Booth activities",
+   "confidence": "conflict"
+  },
+  {
+   "id": "ihp-f22",
+   "label_en": "Lanyang River Friendly Farming Cooperative (Mr. Chen Ke-Wei)",
+   "label_zh": "蘭陽溪友善耕作產銷合作社（陳可為先生）",
+   "value": "16 Sep",
+   "detail_en": "Warned that animals or disasters could destroy the bioreactor and release B. subtilis. Response: add damage and weather to the threat analysis and consider the bioreactor indoors with the sensor outdoors; target specific crop groups.",
+   "detail_zh": "提醒動物或天災可能毀損生物反應器並釋出枯草桿菌。回應：把毀損與天候納入威脅分析，考慮反應器放室內、感測器放室外；鎖定特定作物族群。",
+   "src": "human-practices#Real Field Application",
+   "confidence": "stated"
+  },
+  {
+   "id": "ihp-f23",
+   "label_en": "French Office in Taipei (Mr. Airy Quillere)",
+   "label_zh": "法國在台辦事處（Airy Quillere 先生）",
+   "value": "20 Oct",
+   "detail_en": "He asked whether farmers could afford IoT technology; students answered with figures and farmer feedback. Recorded outcome: target France first, through this contact.",
+   "detail_zh": "他問農民負擔得起物聯網技術嗎；學生以數據與農民回饋回答。紀錄的結果：透過此聯絡人先以法國為目標。",
+   "src": "human-practices#Deployment",
+   "confidence": "stated"
+  },
+  {
+   "id": "ihp-f24",
+   "label_en": "農友助手 LINE platform",
+   "label_zh": "農友助手 LINE 平台",
+   "value": "6 menu functions",
+   "detail_en": "Latest News, Product Introduction, Crop Stress Alerts, Crop Assistant, Farmer's Diary, Feedback; plus seed exchange, AI auto reply and stickers. A Google Form collects feedback; no usage numbers are shown.",
+   "detail_zh": "最新消息、產品介紹、壓力警報、作物小幫手、農友日記、意見回饋；另有種子交換、AI 自動回覆與貼圖。以 Google 表單收集意見；頁面沒有使用人數。",
+   "src": "human-practices#農友助手 LINE platform",
+   "confidence": "stated"
+  },
+  {
+   "id": "ihp-f25",
+   "label_en": "Education reach",
+   "label_zh": "教育觸及人數",
+   "value": "140 students, 5 schools",
+   "detail_en": "3 elementary schools, 1 junior high, 1 high school. The Contribution page says 144 students.",
+   "detail_zh": "3 所國小、1 所國中、1 所高中。貢獻頁寫的是 144 位學生。",
+   "src": "education#Impact of Our Lessons",
+   "confidence": "conflict"
+  },
+  {
+   "id": "ihp-f26",
+   "label_en": "Elementary lesson trials",
+   "label_zh": "國小課程試行",
+   "value": "4 trials, 99 pre / 88 post",
+   "detail_en": "Preliminary Jun 24 (Yongping, 16/12); Trial 1 Jun 25-26 (Dingxi, 43/42); Trial 2 Jun 29 (Univ. of Taipei affiliated, 28/22); Trial 3 Jul 14 (Dingxi, 12/12).",
+   "detail_zh": "預備 6/24（永平，16/12）；第 1 次 6/25-26（鼎溪，43/42）；第 2 次 6/29（臺北市大附小，28/22）；第 3 次 7/14（鼎溪，12/12）。",
+   "src": "education#Four Trials at a Glance",
+   "confidence": "stated"
+  },
+  {
+   "id": "ihp-f27",
+   "label_en": "Education results",
+   "label_zh": "教育成效",
+   "value": "Elementary all 7 questions >=80% post; junior high DNA base pairing 30%",
+   "detail_en": "Elementary combined post-test at least 80% on every question. Junior high base pairing 0% to 30% (11 post-survey students). High school biotic stress 32% to 96%, synthetic biology 20% to 93% (28 students). 75 of 88 elementary respondents picked the card game; Contribution says 75 of 99.",
+   "detail_zh": "國小合併後測每題至少 80%。國中鹼基配對 0% 到 30%（後測 11 人）。高中生物性逆境 32% 到 96%、合成生物學 20% 到 93%（28 人）。75 位國小受訪者選卡牌遊戲，總數 88；貢獻頁寫 99。",
+   "src": "education#Elementary Analysis",
+   "confidence": "conflict"
+  },
+  {
+   "id": "ihp-f28",
+   "label_en": "Education website",
+   "label_zh": "教育網站",
+   "value": "3 plans, 3 decks, 2 card games, 2 online games, 1 simulator",
+   "detail_en": "Free downloads, mostly English and Traditional Chinese; the junior high lesson plan is Chinese only. Three teachers have signed up through the site.",
+   "detail_zh": "免費下載，多數為中英雙語；國中教案僅中文。透過網站報名的老師有 3 位。",
+   "src": "education#Education Website",
+   "confidence": "stated"
+  },
+  {
+   "id": "ihp-f29",
+   "label_en": "Biosafety set-up",
+   "label_zh": "生物安全設置",
+   "value": "BSL-1; 0.2 µm pores",
+   "detail_en": "Non-pathogenic B. subtilis at BSL-1; exam retaken until full score plus signed consent; two-month bench training; 0.2 µm membrane vs cells of 0.25 to 1.0 µm; shell-side sample at 24 h showed no colonies; waste autoclaved at 121 °C for 15 to 30 min, liquids with 10% bleach.",
+   "detail_zh": "BSL-1，使用非致病性枯草桿菌；考試需重考到滿分並簽同意書；兩個月基礎訓練；0.2 µm 膜對 0.25 至 1.0 µm 細胞；24 小時殼側樣本沒有菌落；廢棄物 121 °C 滅菌 15 至 30 分鐘，液體用 10% 漂白水。",
+   "src": "safety-and-security#Measures",
+   "confidence": "stated"
+  },
+  {
+   "id": "ihp-f30",
+   "label_en": "SDGs claimed",
+   "label_zh": "主張的永續發展目標",
+   "value": "SDG 2, 4, 10, 12, 15",
+   "detail_en": "Chosen from eight related goals (2, 3, 4, 7, 10, 12, 13, 15). The abstract names four (2, 4, 10, 15); the body lists five including SDG 12. SDGs 3, 7 and 13 are not claimed.",
+   "detail_zh": "從八個相關目標（2、3、4、7、10、12、13、15）中挑選。摘要列四個（2、4、10、15），內文列五個，含 SDG 12。不主張 SDG 3、7、13。",
+   "src": "sustainability#Why we chose the SDGs that we did",
+   "confidence": "conflict"
+  },
+  {
+   "id": "ihp-f31",
+   "label_en": "Data physicalization exhibit",
+   "label_zh": "資料實體化展示",
+   "value": "95.2% (59 of 62) agreed it helped",
+   "detail_en": "Styrofoam map: colored paper = rice yield, flashing LED = heat stress by county. 51.6% (32 of 62) named Yilan as highest stress; 96.8% (60 of 62) willing to share; abstract says 116 visitors, the Impact section says 160.",
+   "detail_zh": "保麗龍地圖：彩紙代表稻米產量，LED 閃爍代表各縣市熱逆境。51.6%（62 人中 32 人）答對宜蘭壓力最高；96.8%（60 人）願意分享；摘要寫 116 位訪客，成效段寫 160 位。",
+   "src": "data-physicalization#Impact",
+   "confidence": "conflict"
+  },
+  {
+   "id": "ihp-f32",
+   "label_en": "Plant sound facts",
+   "label_zh": "植物聲音數據",
+   "value": "Healthy <1 click/hr; drought tomato 35/hr",
+   "detail_en": "From Khait et al. 2023 (Cell). Clicks 20 to 150 kHz; plant clicks vs background AUC 0.88, but the four stress conditions only 0.53 to 0.65 against each other. Recordings are pitch-shifted for listening; the team did not record plants itself.",
+   "detail_zh": "出自 Khait 等人 2023（Cell）。點擊聲 20 至 150 kHz；植物聲與背景噪音 AUC 0.88，但四種逆境彼此只有 0.53 至 0.65。錄音經降調供聆聽；團隊並未自行錄音。",
+   "src": "data-physicalization-listening#The honest comparison",
+   "confidence": "stated"
+  },
+  {
+   "id": "ihp-f33",
+   "label_en": "Waste culture medium test",
+   "label_zh": "農業廢棄物培養基測試",
+   "value": "1:1:2 mix OD600 0.720 vs LB 0.573",
+   "detail_en": "B. subtilis WB800, 18 h at 37 °C, 5 mL; hay : okara : sugarcane by volume; two cultures per medium. Hay alone 0.555, okara alone 0.333. Idea came after the CH Biotech expert described turning feathers into peptides.",
+   "detail_zh": "枯草桿菌 WB800，37 °C 18 小時，5 mL；乾草：豆渣：甘蔗渣體積比；每種培養基兩管。單用乾草 0.555、單用豆渣 0.333。點子來自正瀚生技代表談到把羽毛轉成胜肽。",
+   "src": "contribution#Agricultural waste as culture medium",
+   "confidence": "stated"
+  }
+ ],
+ "terms": [
+  {
+   "term": "Integrated Human Practices",
+   "kw_en": [
+    "stakeholder feedback",
+    "design changes",
+    "loop back"
+   ],
+   "kw_zh": [
+    "利害關係人回饋",
+    "設計改變",
+    "回頭驗證"
+   ],
+   "def_en": "Human Practices that changes the project itself. ReLEAF returned to the same experts with prototypes and data, and each round changed bioreactor, plant, circuit or business choices.",
+   "def_zh": "會真正改變專案本身的人類實踐。ReLEAF 帶著原型與數據回頭找同一批專家，每一輪都改變了反應器、植物、電路或商業選擇。",
+   "cat": "hp",
+   "src": "human-practices"
+  },
+  {
+   "term": "Project Evolution Map",
+   "kw_en": [
+    "four phases",
+    "Feb to Oct",
+    "who changed what"
+   ],
+   "kw_zh": [
+    "四個階段",
+    "二到十月",
+    "誰改變了什麼"
+   ],
+   "def_en": "The page's timeline of four phases: Idea Formation, System Design, System Optimization, Real-World Implementation, each listing the stakeholders met and the decisions that followed.",
+   "def_zh": "頁面的四階段時間軸：構想形成、系統設計、系統優化、真實世界實施，列出每階段訪談對象與後續決定。",
+   "cat": "hp",
+   "src": "human-practices#Project evolution map"
+  },
+  {
+   "term": "Five pipelines",
+   "kw_en": [
+    "plant and stress",
+    "protectant design",
+    "deployment"
+   ],
+   "kw_zh": [
+    "植物與逆境",
+    "保護劑設計",
+    "落地部署"
+   ],
+   "def_en": "How expert engagement is organised: plant and stress biology, protectant design, gene circuit and cloning, bioreactor and hardware, deployment. Each pipeline links advice to a named design decision.",
+   "def_zh": "專家訪談的組織方式：植物與逆境生物學、保護劑設計、基因電路與選殖、生物反應器與硬體、部署。每條線把建議連到具體設計決定。",
+   "cat": "hp",
+   "src": "human-practices#Expert engagement"
+  },
+  {
+   "term": "Continuous engagement",
+   "kw_en": [
+    "five core experts",
+    "two or three visits",
+    "what we brought back"
+   ],
+   "kw_zh": [
+    "五位核心專家",
+    "多次拜訪",
+    "帶回什麼成果"
+   ],
+   "def_en": "Repeat consultations with five experts (Cheng, Chen, Chang, Sattely, Huang). Each return visit presented new prototypes or data and recorded advice and what changed.",
+   "def_zh": "與五位專家（鄭、陳、張、Sattely、黃）的重複諮詢。每次回訪都展示新原型或數據，並記錄建議與改變。",
+   "cat": "hp",
+   "src": "human-practices#Continuous engagement"
+  },
+  {
+   "term": "KAP survey",
+   "kw_en": [
+    "Knowledge",
+    "Attitude",
+    "Practice"
+   ],
+   "kw_zh": [
+    "知識",
+    "態度",
+    "行動"
+   ],
+   "def_en": "Knowledge-Attitude-Practice questionnaire. ReLEAF used it after the forum, at the market booth and in every school lesson to measure what people learned, felt and said they would do.",
+   "def_zh": "知識、態度、行動問卷。ReLEAF 在論壇後、市集攤位及每堂學校課程使用，測量人們學到什麼、感受如何、打算做什麼。",
+   "cat": "hp",
+   "src": "human-practices#Survey analysis"
+  },
+  {
+   "term": "DBTL in education",
+   "kw_en": [
+    "design lesson",
+    "trial in school",
+    "learn and refine"
+   ],
+   "kw_zh": [
+    "設計課程",
+    "學校試教",
+    "學習並修正"
+   ],
+   "def_en": "Design, Build/Prep, Test, Learn applied to teaching. The elementary lesson ran in four trials, each changed by the previous survey and teacher comments.",
+   "def_zh": "把設計、建置/準備、測試、學習用在教學上。國小課程跑了四次試行，每次都依前次問卷與老師意見調整。",
+   "cat": "hp",
+   "src": "education#Execution"
+  },
+  {
+   "term": "PGPR",
+   "kw_en": [
+    "plant growth-promoting rhizobacteria",
+    "original idea",
+    "released into soil"
+   ],
+   "kw_zh": [
+    "植物促生根圍細菌",
+    "最初構想",
+    "釋放到土壤"
+   ],
+   "def_en": "The original concept: engineered Bacillus subtilis released into soil to sense stress and release protectants. Prof. Chen and Dr. Brophy pushed the team to a contained bioreactor instead.",
+   "def_zh": "最初構想：把工程枯草桿菌放進土壤，感測逆境並釋放保護劑。陳教授與 Brophy 博士促使團隊改採封閉式生物反應器。",
+   "cat": "biology",
+   "src": "human-practices#Project evolution map"
+  },
+  {
+   "term": "Kill switch",
+   "kw_en": [
+    "genetic off-switch",
+    "can mutate or fail",
+    "not the main layer"
+   ],
+   "kw_zh": [
+    "基因自殺開關",
+    "可能突變或失效",
+    "不是主要防線"
+   ],
+   "def_en": "A built-in genetic mechanism that kills engineered cells outside the lab. Dr. Brophy warned it can fail, so ReLEAF makes physical containment primary and only evaluates an extra switch.",
+   "def_zh": "讓工程細胞在實驗室外死亡的內建基因機制。Brophy 博士提醒它可能失效，所以 ReLEAF 以物理圍堵為主，額外開關僅評估中。",
+   "cat": "biology",
+   "src": "human-practices#Bioreactor and hardware"
+  },
+  {
+   "term": "Physical containment",
+   "kw_en": [
+    "primary safety layer",
+    "membrane not mutation",
+    "cells stay inside"
+   ],
+   "kw_zh": [
+    "主要安全層",
+    "用膜而非基因",
+    "細胞留在裡面"
+   ],
+   "def_en": "Keeping the engineered cells inside with a physical barrier. In ReLEAF this is the 0.2 µm hollow-fiber membrane, chosen after Dr. Brophy's advice, backed by pressure and leak monitoring.",
+   "def_zh": "用物理屏障把工程細胞留在內部。在 ReLEAF 是 0.2 µm 中空纖維膜，依 Brophy 博士建議採用，並搭配壓力與漏液監測。",
+   "cat": "hardware",
+   "src": "safety-and-security#Bioreactor safety"
+  },
+  {
+   "term": "Hollow-fiber membrane",
+   "kw_en": [
+    "0.2 µm pores",
+    "lumen and shell",
+    "cells retained"
+   ],
+   "kw_zh": [
+    "0.2 µm 孔徑",
+    "管腔與殼側",
+    "留住細胞"
+   ],
+   "def_en": "A bundle of porous tubes. Cells stay in the lumen; secreted protectant crosses to the shell side. It is both the production separator and the containment barrier.",
+   "def_zh": "一束多孔細管。細胞留在管腔，分泌的保護劑穿過到殼側。它同時是產物分離器與圍堵屏障。",
+   "cat": "hardware",
+   "src": "safety-and-security#Primary containment"
+  },
+  {
+   "term": "Transmembrane pressure (TMP)",
+   "kw_en": [
+    "pressure across membrane",
+    "caking warning",
+    "leak detection"
+   ],
+   "kw_zh": [
+    "膜兩側壓差",
+    "結垢警訊",
+    "漏液偵測"
+   ],
+   "def_en": "Pressure difference across the membrane. Prof. Chang said to monitor it with flow rate to catch caking; the safety page also uses abnormal TMP as a sign of membrane failure.",
+   "def_zh": "膜兩側的壓力差。張嘉修教授建議與流速一起監測以發現結垢；安全頁也把異常 TMP 當作膜失效的徵兆。",
+   "cat": "hardware",
+   "src": "human-practices#Bioreactor and hardware"
+  },
+  {
+   "term": "Protectant / biostimulant",
+   "kw_en": [
+    "ACCD, LEA14, BoPEP4",
+    "made on demand",
+    "cell-free output"
+   ],
+   "kw_zh": [
+    "三種保護劑",
+    "按需生產",
+    "無細胞產物"
+   ],
+   "def_en": "The plant-protective proteins and peptides ReLEAF's bacteria secrete: ACC deaminase, LEA14 and BoPEP4. CH Biotech described such products as biostimulants, which shaped delivery and regulation questions.",
+   "def_zh": "ReLEAF 細菌分泌的植物保護蛋白與胜肽：ACC deaminase、LEA14、BoPEP4。正瀚生技稱這類產品為生物刺激素，影響了施用與法規的討論。",
+   "cat": "biology",
+   "src": "human-practices#Protectant design"
+  },
+  {
+   "term": "BSL-1",
+   "kw_en": [
+    "non-pathogenic chassis",
+    "Bacillus subtilis",
+    "lowest biosafety level"
+   ],
+   "kw_zh": [
+    "非致病宿主",
+    "枯草桿菌",
+    "最低生物安全等級"
+   ],
+   "def_en": "Biosafety Level 1. All ReLEAF wet-lab work uses non-pathogenic B. subtilis at BSL-1, and waste handling follows BSL-1 standards.",
+   "def_zh": "生物安全第一級。ReLEAF 所有濕實驗都以非致病的枯草桿菌在 BSL-1 進行，廢棄物處理也遵守 BSL-1 標準。",
+   "cat": "biology",
+   "src": "safety-and-security"
+  },
+  {
+   "term": "Biosafety vs biosecurity",
+   "kw_en": [
+    "protect from exposure",
+    "prevent misuse",
+    "release and access"
+   ],
+   "kw_zh": [
+    "防止暴露",
+    "防止濫用",
+    "釋放與取用"
+   ],
+   "def_en": "Biosafety protects people and environment from accidental exposure. Biosecurity prevents misuse, unauthorised access or release. The safety page covers both: training and containment, plus restricted access.",
+   "def_zh": "生物安全是保護人與環境免於意外暴露；生物保全是防止濫用、未授權取用或釋放。安全頁兩者都有：訓練與圍堵，加上限制取用。",
+   "cat": "law",
+   "src": "safety-and-security#Biosafety"
+  },
+  {
+   "term": "DURC",
+   "kw_en": [
+    "dual-use research of concern",
+    "evaluated",
+    "restricted access"
+   ],
+   "kw_zh": [
+    "兩用性研究",
+    "已評估",
+    "限制取用"
+   ],
+   "def_en": "Dual-use research of concern: legitimate work that could be misused. ReLEAF judged its system beneficial and non-pathogenic, restricts access to strains and protocols to authorised staff, and commits not to enable misuse.",
+   "def_zh": "有疑慮的兩用性研究：正當研究但可能被濫用。ReLEAF 評估系統有益且非致病，菌株與流程僅限授權人員取用，並承諾不協助濫用。",
+   "cat": "law",
+   "src": "safety-and-security#Dual use"
+  },
+  {
+   "term": "Biosafety exam",
+   "kw_en": [
+    "full score",
+    "retake",
+    "signed consent"
+   ],
+   "kw_zh": [
+    "滿分才算過",
+    "重考",
+    "簽同意書"
+   ],
+   "def_en": "Every team member must pass a written biosafety exam at a perfect score, retaking until they do, and sign a consent form, before starting a two-month bench training.",
+   "def_zh": "每位成員都要通過書面生物安全考試且需滿分，沒滿分就重考，並簽署同意書，之後進行為期兩個月的基礎實驗訓練。",
+   "cat": "law",
+   "src": "safety-and-security#Training"
+  },
+  {
+   "term": "Data physicalization",
+   "kw_en": [
+    "map and sound",
+    "see, hear, touch",
+    "not a graph"
+   ],
+   "kw_zh": [
+    "地圖與聲音",
+    "看聽摸",
+    "不是圖表"
+   ],
+   "def_en": "Turning data into a physical object. ReLEAF built a styrofoam map (paper color = rice yield, LED flashing = heat stress) and a sound site with drought clicks, shown at the 5 September booth.",
+   "def_zh": "把資料變成實體物件。ReLEAF 做了保麗龍地圖（紙色=稻米產量、LED 閃爍=熱逆境）與乾旱點擊聲網站，在 9/5 攤位展示。",
+   "cat": "hp",
+   "src": "data-physicalization"
+  },
+  {
+   "term": "Cavitation",
+   "kw_en": [
+    "water column snaps",
+    "air bubble",
+    "click sound"
+   ],
+   "kw_zh": [
+    "水柱斷裂",
+    "氣泡",
+    "咔咔聲"
+   ],
+   "def_en": "In drought, water in the plant's stem is under so much tension that the column breaks into an air bubble, making an ultrasonic click. This is the sound in the exhibit.",
+   "def_zh": "乾旱時莖內的水柱張力過大而斷裂形成氣泡，發出超音波點擊聲。這就是展示中的聲音。",
+   "cat": "plant",
+   "src": "data-physicalization-listening#The mechanism"
+  },
+  {
+   "term": "Khait et al. 2023",
+   "kw_en": [
+    "Tel Aviv University",
+    "Cell paper",
+    "tomato and tobacco"
+   ],
+   "kw_zh": [
+    "特拉維夫大學",
+    "Cell 論文",
+    "番茄與菸草"
+   ],
+   "def_en": "The Cell paper that recorded ultrasonic clicks from stressed tomato and tobacco. ReLEAF used its open recordings, pitch-shifted down, and did not record plants itself.",
+   "def_zh": "錄下受逆境番茄與菸草超音波點擊聲的 Cell 論文。ReLEAF 使用其公開錄音並降調，沒有自己錄音。",
+   "cat": "plant",
+   "src": "data-physicalization#References"
+  },
+  {
+   "term": "Natural farming",
+   "kw_en": [
+    "minimal intervention",
+    "own resilience",
+    "painkiller analogy"
+   ],
+   "kw_zh": [
+    "少介入",
+    "自身韌性",
+    "止痛藥比喻"
+   ],
+   "def_en": "A farming approach that avoids extra inputs so plants build their own resilience. Ms. Chen and Dr. Li warned that over-intervention treats symptoms; this shaped ReLEAF's release-only-when-needed design.",
+   "def_zh": "避免額外投入、讓植物自己養成韌性的耕作方式。陳女士與李博士提醒過度介入只治症狀；這影響了 ReLEAF 只在需要時釋放的設計。",
+   "cat": "hp",
+   "src": "human-practices#Farmer engagement"
+  },
+  {
+   "term": "Organic certification",
+   "kw_en": [
+    "excludes engineered inputs",
+    "not our market",
+    "unresolved abroad"
+   ],
+   "kw_zh": [
+    "排除基改投入",
+    "非目標市場",
+    "海外尚未確認"
+   ],
+   "def_en": "Organic standards in Taiwan, the US and elsewhere exclude genetically engineered inputs, so ReLEAF does not target organic farms. Cell-free delivery does not automatically qualify.",
+   "def_zh": "台灣、美國等地的有機標準排除基因工程投入，因此 ReLEAF 不以有機農場為目標。無細胞產物也不會自動符合資格。",
+   "cat": "law",
+   "src": "human-practices#Public engagement"
+  },
+  {
+   "term": "農友助手 (Farmer's Assistant)",
+   "kw_en": [
+    "LINE official account",
+    "stress alert, crop assistant",
+    "open-sourced bot"
+   ],
+   "kw_zh": [
+    "LINE 官方帳號",
+    "壓力警報與作物小幫手",
+    "開源機器人"
+   ],
+   "def_en": "ReLEAF's LINE platform for smallholders: news, product intro, heat-stress alerts, a crop assistant with AI, a farmer diary, feedback. Built after farmers struggled to find information; the auto-reply is offered to other teams.",
+   "def_zh": "ReLEAF 為小農做的 LINE 平台：最新消息、產品介紹、熱逆境警報、含 AI 的作物小幫手、農友日記、意見回饋。因農民難以找到資訊而建，自動回覆開放給其他團隊。",
+   "cat": "software",
+   "src": "human-practices#農友助手 LINE platform"
+  },
+  {
+   "term": "Seed exchange platform",
+   "kw_en": [
+    "Ms. Chen's idea",
+    "post supply and demand",
+    "matching"
+   ],
+   "kw_zh": [
+    "陳女士的啟發",
+    "張貼供需",
+    "配對"
+   ],
+   "def_en": "A feature that lets farmers post seed supply and demand and get matched. It came from Ms. Chen's in-person seed event, which was inefficient, and from seed loss after typhoons.",
+   "def_zh": "讓農民張貼種子供需並配對的功能。起因是陳女士辦的面對面種子交換活動效率不高，以及颱風後種子流失。",
+   "cat": "software",
+   "src": "human-practices#Seed exchange"
+  },
+  {
+   "term": "M1 stress-index model",
+   "kw_en": [
+    "stress index",
+    "right amount, right time",
+    "avoid over-protection"
+   ],
+   "kw_zh": [
+    "壓力指數",
+    "適量適時",
+    "避免過度保護"
+   ],
+   "def_en": "ReLEAF's mathematical model M1: turns field conditions into stress indices so protectant is released at the right moment and amount. The wiki ties its design to natural farmers' over-intervention warnings.",
+   "def_zh": "ReLEAF 的數學模型 M1：把田間條件轉成壓力指數，在適當時機與劑量釋放保護劑。頁面把其設計連到自然農法對過度介入的警告。",
+   "cat": "model",
+   "src": "human-practices#Tamsui Happy Farm"
+  },
+  {
+   "term": "SDG selection",
+   "kw_en": [
+    "2, 4, 10, 12, 15",
+    "eight shortlisted",
+    "3, 7, 13 not claimed"
+   ],
+   "kw_zh": [
+    "2、4、10、12、15",
+    "八個候選",
+    "3、7、13 不主張"
+   ],
+   "def_en": "ReLEAF shortlisted eight SDGs and kept five it can act on: Zero Hunger, Quality Education, Reduced Inequalities, Responsible Consumption, Life on Land. Climate Action is affected but not claimed.",
+   "def_zh": "ReLEAF 先列八個 SDG，保留可行動的五個：消除飢餓、優質教育、減少不平等、責任消費與生產、陸域生態。氣候行動有影響但不主張。",
+   "cat": "hp",
+   "src": "sustainability"
+  },
+  {
+   "term": "Hay infusion medium",
+   "kw_en": [
+    "hay, okara, sugarcane",
+    "on-farm waste",
+    "vs LB"
+   ],
+   "kw_zh": [
+    "乾草豆渣甘蔗渣",
+    "農場廢棄物",
+    "對照 LB"
+   ],
+   "def_en": "A culture medium made from farm residues instead of lab-grade LB, supporting SDG 12. The 1:1:2 hay:okara:sugarcane mix reached OD600 0.720 against LB 0.573, with two cultures each.",
+   "def_zh": "用農業殘餘物取代實驗室級 LB 的培養基，支持 SDG 12。乾草：豆渣：甘蔗渣 1:1:2 的 OD600 為 0.720，LB 為 0.573，每種兩管。",
+   "cat": "biology",
+   "src": "contribution#Agricultural waste as culture medium"
+  },
+  {
+   "term": "Plasmolysis",
+   "kw_en": [
+    "onion cells",
+    "3 M and 6 M salt",
+    "high school lesson"
+   ],
+   "kw_zh": [
+    "洋蔥細胞",
+    "3 M 與 6 M 鹽",
+    "高中課程"
+   ],
+   "def_en": "Cell shrinkage when salt pulls water out. High school students watched onion cell pigment change in 3 M and 6 M salt after 15 minutes; it was the most-correct post-survey question.",
+   "def_zh": "鹽把水抽出導致細胞皺縮。高中生觀察洋蔥細胞色素在 3 M 與 6 M 鹽水 15 分鐘後的變化；這題在後測答對率最高。",
+   "cat": "plant",
+   "src": "education#Experiment: Plasmolysis"
+  },
+  {
+   "term": "Leaf-disk flotation",
+   "kw_en": [
+    "spinach disks",
+    "oxygen bubbles",
+    "warm water slows"
+   ],
+   "kw_zh": [
+    "菠菜葉片圓盤",
+    "氧氣泡",
+    "溫水變慢"
+   ],
+   "def_en": "A classroom photosynthesis test: spinach leaf disks float as they make oxygen. Warmer water slowed or stopped flotation, showing heat can harm enzymes. Used in elementary, junior high and high school lessons.",
+   "def_zh": "課堂光合作用實驗：菠菜葉圓盤產生氧氣而浮起。水溫較高時浮起變慢或停止，顯示熱可能傷害酵素。國小、國中、高中課程都用。",
+   "cat": "plant",
+   "src": "education#Experiment"
+  },
+  {
+   "term": "AIoT",
+   "kw_en": [
+    "leaf sensor",
+    "forecast and history",
+    "app alerts"
+   ],
+   "kw_zh": [
+    "葉片感測器",
+    "預報與歷史",
+    "App 警報"
+   ],
+   "def_en": "Artificial intelligence plus internet of things. ReLEAF's leaf sensor and weather data feed a model that predicts stress and triggers the green-light signal. Prof. Chang and Mr. Lu pushed for usability and extra sensors.",
+   "def_zh": "人工智慧加物聯網。ReLEAF 的葉片感測器與天氣資料輸入模型來預測逆境並啟動綠光訊號。張教授與盧先生要求更好用與更多感測器。",
+   "cat": "software",
+   "src": "description"
+  },
+  {
+   "term": "Digital twin",
+   "kw_en": [
+    "scenario first",
+    "inputs, outputs, loop",
+    "real-time monitor"
+   ],
+   "kw_zh": [
+    "先講情境",
+    "輸入輸出迴路",
+    "即時監測"
+   ],
+   "def_en": "Software mirror of the running reactor. On Oct 15 Prof. Chen advised introducing it through the farm scenario and its feedback loop before any definition.",
+   "def_zh": "運轉中反應器的軟體映像。10/15 陳教授建議先用農場情境與回饋迴路介紹，再講定義。",
+   "cat": "software",
+   "src": "human-practices#Bioreactor and hardware"
+  },
+  {
+   "term": "ISLSDR (2nd International Symposium on Living Systems Design Research)",
+   "kw_en": [
+    "NCHU",
+    "11 Sep",
+    "invited by Prof. Huang"
+   ],
+   "kw_zh": [
+    "中興大學",
+    "9/11",
+    "黃教授邀請"
+   ],
+   "def_en": "Symposium at National Chung Hsing University where professors told the team to understand its experimental data and the ACCD mechanism more deeply and to make the story more problem-driven.",
+   "def_zh": "中興大學舉辦的研討會，教授們建議團隊更深入理解實驗數據與 ACCD 機制，並讓故事更以問題為導向。",
+   "cat": "hp",
+   "src": "human-practices#Deployment"
+  },
+  {
+   "term": "Green Media",
+   "kw_en": [
+    "forum co-host",
+    "published article",
+    "farmers' market event"
+   ],
+   "kw_zh": [
+    "論壇共同主辦",
+    "發表報導",
+    "農民市集活動"
+   ],
+   "def_en": "Media partner that co-hosted the 5 September forum, introduced the team to unexpected farmer concerns in early July, and published an article on the event.",
+   "def_zh": "共同主辦 9/5 論壇的媒體夥伴，7 月初讓團隊知道意料之外的農民關切，並發表活動報導。",
+   "cat": "hp",
+   "src": "human-practices#Public engagement"
+  }
+ ],
+ "questions": [
+  {
+   "q_en": "Give us one example where an expert's advice changed your design, not just your plan.",
+   "q_zh": "請舉一個專家建議改變了你們「設計」而不只是計畫的例子。",
+   "type": "integrate",
+   "tier": "A",
+   "pages": [
+    "human-practices",
+    "hardware-bioreactor",
+    "safety-and-security"
+   ],
+   "seat": "ihp",
+   "backup": "hw",
+   "kw_en": [
+    "Brophy, 18 April",
+    "kill switch to membrane",
+    "one plating only"
+   ],
+   "kw_zh": [
+    "Brophy 4/18",
+    "自殺開關改成膜",
+    "只做一次塗盤"
+   ],
+   "a_en": "Dr. Jennifer Brophy, on April 18. We had planned a kill switch. She said genetic switches can mutate or fail, so physical containment should come first. We changed to a 0.2 micron hollow-fiber membrane that keeps cells in and lets protectant out. Our safety page shows no colonies on the shell side after 24 hours. That is one plating without replicates, so it is preliminary evidence, not proof.",
+   "a_zh": "Jennifer Brophy 博士，4 月 18 日。我們原本計畫用自殺開關，她指出基因開關可能突變或失效，應該先做物理圍堵。所以我們改用 0.2 微米中空纖維膜，把細胞留在裡面、讓保護劑出來。安全頁顯示 24 小時後殼側沒有菌落，但那只是一次塗盤、沒有重複，所以只是初步證據，不是證明。",
+   "trap_en": "Saying 'experts gave us feedback' with no named before and after.",
+   "trap_zh": "只說「專家給了回饋」，沒有講出具體的改變前後。",
+   "basis": "like Lambert 2025: best feedback that changed the project"
+  },
+  {
+   "q_en": "You met Prof. Chen Wen-Liang three times. What did each meeting change?",
+   "q_zh": "你們和陳文亮教授見了三次面，每次分別改變了什麼？",
+   "type": "integrate",
+   "tier": "A",
+   "pages": [
+    "human-practices",
+    "entrepreneurship"
+   ],
+   "seat": "ihp",
+   "backup": "biz",
+   "kw_en": [
+    "printer and ink",
+    "model meets wet lab",
+    "scenario first"
+   ],
+   "kw_zh": [
+    "印表機與墨水",
+    "模型連結濕實驗",
+    "先講情境"
+   ],
+   "a_en": "Each meeting changed something different. April 10: hardware is the printer and Bacillus is the ink, so we stopped releasing bacteria into soil and built a contained bioreactor. June 20: our model and wet lab ran separately, so we linked them and added dissolved oxygen tracking. October 15: open with the farm scenario, so we reordered how we explain the digital twin.",
+   "a_zh": "每次改變的東西都不一樣。4 月 10 日：硬體是印表機、枯草桿菌是墨水，所以我們不再把細菌放進土壤，改做封閉式生物反應器。6 月 20 日：我們的模型和濕實驗各做各的，於是把兩者連起來，並加入溶氧監測。10 月 15 日：先講農場情境，所以我們重排了數位孿生的說明順序。",
+   "trap_en": "Listing meeting dates without saying what changed each time.",
+   "trap_zh": "只報日期，沒說每次改了什麼。",
+   "basis": "like Lambert 2025: feedback that changed direction"
+  },
+  {
+   "q_en": "Why did you move away from hydroponics as your main plant system?",
+   "q_zh": "你們為什麼不再把水耕當作主要的植物系統？",
+   "type": "integrate",
+   "tier": "A",
+   "pages": [
+    "human-practices",
+    "contribution"
+   ],
+   "seat": "ihp",
+   "backup": "plant",
+   "kw_en": [
+    "Cheng, 27 March",
+    "agar then soil",
+    "unintended stress"
+   ],
+   "kw_zh": [
+    "鄭梅君 3/27",
+    "瓊脂再到土壤",
+    "非預期壓力"
+   ],
+   "a_en": "Prof. Cheng Mei-Chun told us on March 27 that hydroponics alone was unstable and that handling can stress plants. She suggested agar plates first, then soil, and gave us Arabidopsis seeds. We also dropped osmotic stress. On August 28 she showed that some earlier results may have come from unintended stress, so we standardised plant age and treatment timing. That is the protocol on our Contribution page.",
+   "a_zh": "鄭梅君教授 3 月 27 日告訴我們，只靠水耕不穩定，操作本身也會讓植物受壓。她建議先用瓊脂盤再移到土壤，並提供阿拉伯芥種子。我們也放棄了滲透壓逆境。8 月 28 日她指出先前有些結果可能來自非預期壓力，所以我們統一了植株年齡與處理時間。這就是貢獻頁上的實驗流程。",
+   "trap_en": "Claiming hydroponics was dropped entirely. It is still used, just not as the only proof.",
+   "trap_zh": "說水耕完全不用了。其實還在用，只是不再當唯一證據。",
+   "basis": "wiki-derived"
+  },
+  {
+   "q_en": "Dr. Sattely told you your proof of concept might not work. What did you do about it?",
+   "q_zh": "Sattely 博士說你們的概念驗證可能不會成功，你們做了什麼？",
+   "type": "integrate",
+   "tier": "A",
+   "pages": [
+    "human-practices",
+    "results"
+   ],
+   "seat": "ihp",
+   "backup": "wet2",
+   "kw_en": [
+    "test protectant alone",
+    "one stress",
+    "RNA and protein"
+   ],
+   "kw_zh": [
+    "先單獨測保護劑",
+    "聚焦一種逆境",
+    "RNA 與蛋白質"
+   ],
+   "a_en": "On June 27 she said we had tried too many stresses and not tested the protectant by itself. So we tested purified protectant directly on plants before trusting the bacterial system. On September 12, with Prof. Endy, they asked us to separate the bacteria from the protectant, and to check ACCD at both RNA and protein level. We added those controls and checks. Results are on our Results page.",
+   "a_zh": "6 月 27 日她指出我們同時試太多逆境，也沒有單獨驗證保護劑。所以我們先把純化的保護劑直接用在植物上，再相信細菌系統。9 月 12 日與 Endy 教授見面時，他們要求我們區分細菌與保護劑的作用，並在 RNA 與蛋白質兩個層級驗證 ACCD。我們因此補上這些對照與驗證，結果在 Results 頁。",
+   "trap_en": "Presenting her critique as praise.",
+   "trap_zh": "把她的批評講成稱讚。",
+   "basis": "wiki-derived"
+  },
+  {
+   "q_en": "How did the farmers you interviewed change who you are building for?",
+   "q_zh": "你們訪談的農民如何改變了你們的目標對象？",
+   "type": "integrate",
+   "tier": "A",
+   "pages": [
+    "human-practices",
+    "entrepreneurship"
+   ],
+   "seat": "ihp",
+   "backup": "biz",
+   "kw_en": [
+    "Expo, 30 farmers",
+    "pests first",
+    "not organic"
+   ],
+   "kw_zh": [
+    "花博 30 位農民",
+    "病蟲害優先",
+    "不是有機"
+   ],
+   "a_en": "At the Taipei Expo Farmers Market on May 16 we interviewed over 30 organic smallholders. They named pests and disease more than heat, so we added biotic stress as a target. Later the forum raised organic certification. Our research showed engineered inputs do not fit organic rules, so we now aim at conventional and sustainable farms. Our first assumption, organic farmers, was wrong.",
+   "a_zh": "5 月 16 日在花博農民市集，我們訪談了 30 多位有機小農。他們提到病蟲害比高溫多，所以我們把生物性逆境加入目標。後來論壇上有人問到有機認證，我們研究後發現基因工程投入不符合有機規範，所以現在鎖定慣行與永續農場。我們一開始以為目標是有機農民，這個假設是錯的。",
+   "trap_en": "Skipping the part where your first target group turned out wrong.",
+   "trap_zh": "跳過第一個目標族群其實錯了這一段。",
+   "basis": "like Lambert 2025: feedback that changed direction"
+  },
+  {
+   "q_en": "Your homepage quotes a farmer in Tamsui. How did she shape ReLEAF?",
+   "q_zh": "首頁引用了淡水的一位農民，她如何影響了 ReLEAF？",
+   "type": "integrate",
+   "tier": "A",
+   "pages": [
+    "human-practices",
+    "home",
+    "sustainability"
+   ],
+   "seat": "ihp",
+   "backup": "dry",
+   "kw_en": [
+    "Ms. Chen, 21 July",
+    "too much help",
+    "release only when needed"
+   ],
+   "kw_zh": [
+    "陳女士 7/21",
+    "幫太多會有害",
+    "需要時才釋放"
+   ],
+   "a_en": "Ms. Chen Hui-Wen of Tamsui Happy Farm farms naturally. On July 21 she told us too much support can take away a plant's ability to survive alone. So our M1 model releases protectant only when a stress index says it is needed, and our thresholds are set high so plants still handle some stress. Her seed-loss story also led to our seed exchange platform. The wiki records her as a critic who set limits, not as a customer.",
+   "a_zh": "淡水快樂農場的陳慧文女士採自然農法。7 月 21 日她告訴我們，給太多支持會讓植物失去自己生存的能力。所以我們的 M1 模型只在壓力指數顯示需要時才釋放保護劑，門檻也設得很高，讓植物仍能自己承受一些壓力。她提到的種子流失也促成了種子交換平台。維基把她記錄為替我們設下限制的批評者，不是客戶。",
+   "trap_en": "Using her as proof that farmers want the product.",
+   "trap_zh": "把她當成農民想要這個產品的證據。",
+   "basis": "wiki-derived"
+  },
+  {
+   "q_en": "What business changes came directly from your interviews?",
+   "q_zh": "哪些商業上的改變是直接來自訪談？",
+   "type": "integrate",
+   "tier": "A",
+   "pages": [
+    "human-practices",
+    "entrepreneurship",
+    "geospatial-analysis"
+   ],
+   "seat": "ihp",
+   "backup": "biz",
+   "kw_en": [
+    "Wu: one or two crops",
+    "rice to cherry tomato",
+    "rental, per-fen"
+   ],
+   "kw_zh": [
+    "吳：一兩種作物",
+    "水稻改小番茄",
+    "租賃、每分地計價"
+   ],
+   "a_en": "Director Wu of the Miaoli research station, October 12, said pick one or two crops. We changed the target from rice to cherry tomato and strawberry because rice is overabundant, and added rental and per-fen seasonal pricing. Prof. Chang Hung-Hao, August 31, told us to narrow to one stress and show measurable yield-loss reduction. Our plant results so far are on Arabidopsis, so that proof is still ahead.",
+   "a_zh": "苗栗區農業改良場的吳場長在 10 月 12 日說要選一兩種作物。因為水稻供過於求，我們把目標作物從水稻改成小番茄和草莓，並加入租賃與每分地的季節計價。8 月 31 日張弘浩教授要求我們縮小到單一逆境，並證明可量測的減損改善。我們目前的植物結果只在阿拉伯芥，所以這個證明還在後面。",
+   "trap_en": "Claiming a yield result on cherry tomato or strawberry.",
+   "trap_zh": "宣稱在小番茄或草莓上有產量結果。",
+   "basis": "wiki-derived"
+  },
+  {
+   "q_en": "What hardware changes came from outside reviewers?",
+   "q_zh": "有哪些硬體改變是外部審查者促成的？",
+   "type": "integrate",
+   "tier": "A",
+   "pages": [
+    "human-practices",
+    "hardware-bioreactor"
+   ],
+   "seat": "ihp",
+   "backup": "hw",
+   "kw_en": [
+    "Chang: TMP, flow",
+    "Owl Lab: servos",
+    "mainboard"
+   ],
+   "kw_zh": [
+    "張：跨膜壓力與流速",
+    "Owl Lab：伺服馬達",
+    "主機板"
+   ],
+   "a_en": "Prof. Chang Jo-Shu, June 18, said monitor flow rate and transmembrane pressure to catch membrane caking, so we added pressure transducers and a pinch valve. Teacher He at Owl Lab, September 20, found our servo driver could miss positions and cause pressure spikes and leaks, so we switched to STS-3215 servos, and later to one mainboard. The hardware page lists each fix and the build that answered it.",
+   "a_zh": "張嘉修教授 6 月 18 日建議監測流速與跨膜壓力來發現膜結垢，所以我們加了壓力傳感器和夾管閥。Owl Lab 的何老師 9 月 20 日發現我們的伺服驅動板可能停不到位，造成壓力突增和漏液，所以改用 STS-3215 伺服馬達，後來又改成單一主機板。硬體頁列出每項修正與對應的版本。",
+   "trap_en": "Quoting the human practices page's two-board plan. The mainboard replaced it two days later.",
+   "trap_zh": "引用人類實踐頁的雙板方案。兩天後已被主機板取代。",
+   "basis": "wiki-derived"
+  },
+  {
+   "q_en": "Where did your hay-based culture medium idea come from?",
+   "q_zh": "你們用乾草做培養基的想法從哪裡來？",
+   "type": "integrate",
+   "tier": "A",
+   "pages": [
+    "human-practices",
+    "contribution",
+    "sustainability"
+   ],
+   "seat": "ihp",
+   "backup": "biz",
+   "kw_en": [
+    "CH Biotech feathers",
+    "hay, okara, sugarcane",
+    "two cultures each"
+   ],
+   "kw_zh": [
+    "正瀚的羽毛例子",
+    "乾草豆渣甘蔗渣",
+    "每種兩管"
+   ],
+   "a_en": "At our September 5 forum, the CH Biotech expert said feathers can become signal peptides, so sustainability also covers how a product is made. We asked whether farmers could grow the bacteria on farm waste. After 18 hours, the 1:1:2 hay, okara and sugarcane mix reached OD600 0.720 against 0.573 for LB. That was two cultures per medium, so it is early evidence.",
+   "a_zh": "9 月 5 日論壇上，正瀚生技的代表提到羽毛可以變成訊號胜肽，讓我們想到永續也包括產品怎麼製造。於是我們問：農民能不能用農場廢棄物來養菌？18 小時後，乾草、豆渣、甘蔗渣 1:1:2 的混合物 OD600 為 0.720，LB 是 0.573。但每種培養基只有兩管，所以只是初步證據。",
+   "trap_en": "Saying it 'works better than LB' as a settled result.",
+   "trap_zh": "把它說成「比 LB 更好」的定論。",
+   "basis": "wiki-derived"
+  },
+  {
+   "q_en": "How did feedback from your school lessons change the next lesson?",
+   "q_zh": "學校課程的回饋如何改變了下一堂課？",
+   "type": "integrate",
+   "tier": "A",
+   "pages": [
+    "education"
+   ],
+   "seat": "ihp",
+   "backup": null,
+   "kw_en": [
+    "1:5 mentor ratio",
+    "vocabulary time",
+    "explain the planter"
+   ],
+   "kw_zh": [
+    "一比五輔導",
+    "多花時間講單字",
+    "先解釋自動澆水盆"
+   ],
+   "a_en": "After each trial we read student and teacher feedback and changed the next one. Trial 1 students wanted help with assembly, so we used one mentor per five students. Trial 2 students said too much English, so we spent longer on vocabulary. A teacher asked how the self-watering planter linked to the topic, so we explained it before the activity. The junior high changes are planned, not yet retested.",
+   "a_zh": "每次試教後，我們都讀學生與老師的回饋再調整下一次。第 1 次有學生說實作時想要更多協助，所以我們改成每五位學生一位輔導。第 2 次有學生說英文太多，所以我們花更多時間講解單字。有老師問自動澆水盆和主題的關係，所以我們在活動前先解釋。國中的調整是計畫，還沒有重新測試。",
+   "trap_en": "Saying it was two-way without naming one concrete change.",
+   "trap_zh": "說是雙向交流，卻舉不出一個具體改變。",
+   "basis": "like Great Bay 2025: two-way dialogue back into the work"
+  },
+  {
+   "q_en": "Could ReLEAF be used on organic farms?",
+   "q_zh": "ReLEAF 可以用在有機農場嗎？",
+   "type": "boundary",
+   "tier": "A",
+   "pages": [
+    "human-practices",
+    "entrepreneurship",
+    "laws-and-regulations"
+   ],
+   "seat": "ihp",
+   "backup": "biz",
+   "kw_en": [
+    "engineered inputs excluded",
+    "cell-free not automatic",
+    "conventional first"
+   ],
+   "kw_zh": [
+    "排除基改投入",
+    "無細胞也不自動符合",
+    "先做慣行農"
+   ],
+   "a_en": "No, we do not target them. Organic standards in Taiwan and the United States exclude inputs made with genetic engineering, and our protectants come from engineered Bacillus subtilis. A cell-free product is not automatically eligible, and our laws page lists organic compatibility in the Philippines as unresolved. A farmer raised this at the September 5 forum. We start with conventional and sustainable farms.",
+   "a_zh": "不行，我們不以有機農場為目標。台灣和美國的有機標準都排除基因工程製造的投入，而我們的保護劑來自工程枯草桿菌。無細胞產物也不會自動符合資格，法規頁把菲律賓的有機相容性列為尚未確認。這個問題是 9 月 5 日論壇上有農民提出的。我們先從慣行與永續農場開始。",
+   "trap_en": "Answering 'yes, because the bacteria stay inside the membrane'.",
+   "trap_zh": "回答「可以，因為細菌留在膜裡面」。",
+   "basis": "wiki-derived"
+  },
+  {
+   "q_en": "What if a typhoon or an animal destroys the bioreactor?",
+   "q_zh": "如果颱風或動物把生物反應器破壞了怎麼辦？",
+   "type": "boundary",
+   "tier": "A",
+   "pages": [
+    "human-practices",
+    "sustainability"
+   ],
+   "seat": "ihp",
+   "backup": "hw",
+   "kw_en": [
+    "Chen Ke-Wei, 16 Sept",
+    "indoors, sensor outside",
+    "no field test"
+   ],
+   "kw_zh": [
+    "陳可為 9/16",
+    "反應器放室內",
+    "沒做田間測試"
+   ],
+   "a_en": "Mr. Chen Ke-Wei of the Lanyang River cooperative raised exactly this on September 16: a damaged unit could release Bacillus subtilis. We added damage and extreme weather to our threat analysis and are considering the bioreactor indoors with the sensor outdoors, in manual spray mode. If we later connect to irrigation outdoors, the risk rises, and our sustainability page says so. We have not field-tested a damage scenario.",
+   "a_zh": "蘭陽溪合作社的陳可為先生 9 月 16 日正好提出這點：設備被破壞可能釋出枯草桿菌。我們把毀損與極端天氣加入威脅分析，並考慮把反應器放室內、感測器放室外，採手動噴灑模式。若之後接上戶外灌溉，風險會升高，永續頁也這樣寫。我們沒有做過毀損情境的田間測試。",
+   "trap_en": "Saying the membrane makes any breakage harmless.",
+   "trap_zh": "說有膜就算壞掉也沒關係。",
+   "basis": "wiki-derived"
+  },
+  {
+   "q_en": "Would this work on crops other than Arabidopsis, for example rice?",
+   "q_zh": "這能用在阿拉伯芥以外的作物嗎，例如水稻？",
+   "type": "boundary",
+   "tier": "A",
+   "pages": [
+    "human-practices",
+    "sustainability",
+    "contribution"
+   ],
+   "seat": "ihp",
+   "backup": "plant",
+   "kw_en": [
+    "Arabidopsis only",
+    "rice dropped",
+    "tomato, strawberry"
+   ],
+   "kw_zh": [
+    "只測阿拉伯芥",
+    "水稻已放棄",
+    "小番茄與草莓"
+   ],
+   "a_en": "We have tested Arabidopsis thaliana only. After Director Wu said rice is overabundant, we changed the target crop to cherry tomato and strawberry. We expect carry-over because Arabidopsis is a relative of mustard plants, but that is an expectation, not a result. Mr. Chen Ke-Wei also warned that some crops, such as strawberries, may need little or no intervention. Small-scale crop trials are the next step.",
+   "a_zh": "我們只在阿拉伯芥上測試過。吳場長說水稻供過於求之後，我們把目標作物改成小番茄和草莓。因為阿拉伯芥和芥菜類是近親，我們預期結果可以延伸，但那是預期，不是結果。陳可為先生也提醒，像草莓這類作物可能很少或不需要介入。小規模作物試驗是下一步。",
+   "trap_en": "Claiming the result already transfers to rice or tomato.",
+   "trap_zh": "宣稱結果已經能轉移到水稻或番茄。",
+   "basis": "wiki-derived"
+  },
+  {
+   "q_en": "Farmers told you pests and diseases were their biggest problem. Does ReLEAF deal with them?",
+   "q_zh": "農民說病蟲害是最大的問題，ReLEAF 能處理嗎？",
+   "type": "boundary",
+   "tier": "A",
+   "pages": [
+    "human-practices",
+    "entrepreneurship",
+    "laws-and-regulations"
+   ],
+   "seat": "ihp",
+   "backup": "biz",
+   "kw_en": [
+    "biotic named first",
+    "claims abiotic only",
+    "white list"
+   ],
+   "kw_zh": [
+    "病蟲害被優先提到",
+    "宣稱只限非生物逆境",
+    "白名單限制"
+   ],
+   "a_en": "Not in our tested claims. Farmers at the May 16 expo named biotic stress more than abiotic, so we added it as a target. But our business page limits our claims to abiotic stress, and the iGEM high school white list meant we could not test gray mold. BoPep4 for gray mold is planned after the Jamboree. For now, our evidence is heat and salinity on Arabidopsis.",
+   "a_zh": "目前測試過的主張不包含。5 月 16 日花博的農民提到生物性逆境多於非生物性，所以我們把它列為目標。但商業計畫頁把主張限制在非生物逆境，而且 iGEM 高中組白名單讓我們不能測試灰黴病。BoPep4 對灰黴病的應用是在大會後規劃。目前我們的證據是阿拉伯芥上的熱與鹽害。",
+   "trap_en": "Saying biotic stress is covered because farmers asked for it.",
+   "trap_zh": "因為農民有提，就說已經涵蓋生物性逆境。",
+   "basis": "wiki-derived"
+  },
+  {
+   "q_en": "What if farmers are not comfortable with technology?",
+   "q_zh": "如果農民不習慣使用科技怎麼辦？",
+   "type": "boundary",
+   "tier": "B",
+   "pages": [
+    "human-practices"
+   ],
+   "seat": "ihp",
+   "backup": "dry",
+   "kw_en": [
+    "affordable, accessible, practical",
+    "LINE platform",
+    "no usage numbers"
+   ],
+   "kw_zh": [
+    "負擔得起、容易、實用",
+    "LINE 平台",
+    "沒有使用數據"
+   ],
+   "a_en": "Farmers at the Expo said they accept technology if it is affordable, accessible and practical. So we built 農友助手 on LINE, which most people in Taiwan already use, with heat-stress alerts, a crop assistant and a farmer diary. Prof. Chang also suggested a swappable bacterial capsule for easy use, which is future work. Our wiki shows no usage numbers for the LINE platform yet.",
+   "a_zh": "花博的農民說，只要負擔得起、容易取得又實用，他們不排斥科技。所以我們在台灣大家都在用的 LINE 上做了農友助手，有熱逆境警報、作物小幫手和農友日記。張教授也建議做可更換的菌種膠囊讓使用更簡單，那是未來工作。維基上目前沒有 LINE 平台的使用人數。",
+   "trap_en": "Claiming the LINE platform has been adopted by farmers.",
+   "trap_zh": "宣稱農民已經在使用 LINE 平台。",
+   "basis": "wiki-derived"
+  },
+  {
+   "q_en": "Which country do you go to first outside Taiwan?",
+   "q_zh": "在台灣之後，你們第一個要去哪個國家？",
+   "type": "boundary",
+   "tier": "A",
+   "pages": [
+    "human-practices",
+    "laws-and-regulations",
+    "entrepreneurship"
+   ],
+   "seat": "ihp",
+   "backup": "biz",
+   "kw_en": [
+    "Philippines studied",
+    "France contact",
+    "Taiwan first"
+   ],
+   "kw_zh": [
+    "研究過菲律賓",
+    "法國窗口",
+    "先台灣"
+   ],
+   "a_en": "Taiwan first. Our laws page names the Philippines as the first international market to explore, and our business page says the Philippines and Indonesia after Taiwan. Our human practices page also says target France first, through a contact at the French Office in Taipei. So the Philippines is the first market we studied for regulation, and France is a relationship we are building. I would say that plainly.",
+   "a_zh": "先台灣。法規頁把菲律賓列為第一個要探索的國際市場，商業頁寫台灣之後是菲律賓和印尼。人類實踐頁也寫要先以法國為目標，透過法國在台辦事處的窗口。所以菲律賓是我們第一個研究法規的市場，法國是我們正在建立的關係。我會直接這樣說明。",
+   "trap_en": "Giving one country as if the wiki agreed with itself.",
+   "trap_zh": "只講一個國家，好像維基沒有互相矛盾。",
+   "basis": "wiki-derived"
+  },
+  {
+   "q_en": "How strong is your evidence that the bacteria cannot escape?",
+   "q_zh": "你們「細菌不會逃出」的證據有多強？",
+   "type": "gap",
+   "tier": "A",
+   "pages": [
+    "safety-and-security",
+    "hardware-bioreactor",
+    "human-practices"
+   ],
+   "seat": "ihp",
+   "backup": "hw",
+   "kw_en": [
+    "24 h plating",
+    "no replicates",
+    "designed to retain"
+   ],
+   "kw_zh": [
+    "24 小時塗盤",
+    "沒有重複",
+    "設計上能留住"
+   ],
+   "a_en": "It is preliminary. We plated shell-side medium after 24 hours and saw no colonies, while the lumen side grew colonies. But each test was a single plating without replicates, the detection limit was not recorded, and we made no quantitative measurement. So we say the membrane is designed to retain cells, and we need replicates. Our human practices page also records leakage through the membrane in September, which Prof. Chang helped us troubleshoot.",
+   "a_zh": "只是初步證據。我們在 24 小時後塗盤殼側培養液，沒有菌落，而管腔側有菌落。但每次測試只有一次塗盤、沒有重複，也沒有記錄偵測極限，沒有定量測量。所以我們只說膜「設計上」能留住細胞，還需要重複實驗。人類實踐頁也記錄了 9 月膜上出現滲漏的狀況，張教授協助我們排除。",
+   "trap_en": "Saying 'zero escape' or 'proved safe'.",
+   "trap_zh": "說「零逃逸」或「已證明安全」。",
+   "basis": "wiki-derived"
+  },
+  {
+   "q_en": "Which expert advice did you not follow, or not manage to follow?",
+   "q_zh": "有哪些專家建議是你們沒有採用或做不到的？",
+   "type": "gap",
+   "tier": "A",
+   "pages": [
+    "human-practices",
+    "hardware-bioreactor",
+    "laws-and-regulations"
+   ],
+   "seat": "ihp",
+   "backup": "hw",
+   "kw_en": [
+    "capsule is future work",
+    "iFarm data not obtained",
+    "no white-list test"
+   ],
+   "kw_zh": [
+    "膠囊是未來工作",
+    "沒拿到 iFarm 數據",
+    "不能測灰黴病"
+   ],
+   "a_en": "Several. Prof. Chang's replaceable bacterial capsule is future work. Yes Health iFarm could not give us some exact technical data. Mr. Lu's irrigation-connected spraying is planned, not built. The 12/12 light cycle from iFarm is recorded as something to investigate. And the high school white list stopped us testing gray mold. We also only evaluate an extra kill switch; none is built.",
+   "a_zh": "有好幾個。張教授建議的可更換菌種膠囊是未來工作。源鮮智慧農場沒能給我們一些精確的技術數據。盧先生建議的接灌溉自動噴灑是規劃，還沒做出來。農場建議的 12/12 光週期只記錄為待研究。高中組白名單也讓我們不能測灰黴病。額外的自殺開關也只是評估，沒有做。",
+   "trap_en": "Saying you followed every suggestion.",
+   "trap_zh": "說每個建議都做到了。",
+   "basis": "wiki-derived"
+  },
+  {
+   "q_en": "Your booth survey says 95% agreed it helped. Why should we trust that?",
+   "q_zh": "你們的攤位問卷說 95% 同意有幫助，為什麼要相信？",
+   "type": "gap",
+   "tier": "A",
+   "pages": [
+    "data-physicalization",
+    "human-practices"
+   ],
+   "seat": "ihp",
+   "backup": "dry",
+   "kw_en": [
+    "62 of 160",
+    "only completed six booths",
+    "self-reported"
+   ],
+   "kw_zh": [
+    "160 人中 62 人",
+    "走完六攤才給問卷",
+    "自我回報"
+   ],
+   "a_en": "Read it as a friendly signal, not a measurement. Sixty-two people answered out of 160 visitors, and the survey went to people who had visited all six booths, so they were already engaged. Answers are self-reported, with no before-and-after test. The cleaner knowledge test: 32 of 62, or 51.6%, found Yilan. Next time we plan a legend and an 80% target. Our abstract says 116 visitors, so our numbers differ across pages.",
+   "a_zh": "請把它當成友善的訊號，而不是測量。160 位訪客中有 62 人回答，而且問卷只發給走完六個攤位的人，他們本來就比較投入。答案是自我回報，沒有前後測。比較乾淨的知識測驗是：62 人中有 32 人，也就是 51.6%，找對宜蘭。下次我們計畫加圖例並設 80% 目標。摘要寫 116 位訪客，所以不同頁面的數字不一致。",
+   "trap_en": "Quoting 95% as proof the exhibit taught people.",
+   "trap_zh": "把 95% 當成展示有教會人們的證據。",
+   "basis": "wiki-derived"
+  },
+  {
+   "q_en": "Only 30% of students got DNA base pairing right. Did the lesson fail?",
+   "q_zh": "只有 30% 學生答對 DNA 鹼基配對，這堂課是失敗的嗎？",
+   "type": "gap",
+   "tier": "B",
+   "pages": [
+    "education"
+   ],
+   "seat": "ihp",
+   "backup": null,
+   "kw_en": [
+    "0% to 30%",
+    "11 students",
+    "puzzle kit planned"
+   ],
+   "kw_zh": [
+    "0% 到 30%",
+    "只有 11 人",
+    "色彩拼圖組是計畫"
+   ],
+   "a_en": "For that concept, partly. In the junior high class, 11 students took the post-survey and 30% answered base pairing correctly, up from 0%. One student matched ATCG to itself. Other topics reached about 80%. We plan to cut the DNA introduction to five minutes and add a colour-coded puzzle kit, but we have not retested. The elementary classes, which played the ATCG card game, reached about 90% on codons, though classes differ.",
+   "a_zh": "就這個概念而言，部分失敗。國中班有 11 位學生做後測，鹼基配對答對率 30%，從 0% 進步。有一位學生把 ATCG 配成自己。其他主題約達 80%。我們計畫把 DNA 介紹縮到五分鐘並加入色彩拼圖組，但還沒重新測試。玩過 ATCG 卡牌的國小班在密碼子約達 90%，不過班級不同。",
+   "trap_en": "Hiding the 30% or blaming the students.",
+   "trap_zh": "隱藏 30% 或怪學生。",
+   "basis": "like Great Bay 2025: two-way dialogue"
+  },
+  {
+   "q_en": "How do you know farmers actually want ReLEAF?",
+   "q_zh": "你們怎麼知道農民真的想要 ReLEAF？",
+   "type": "validate",
+   "tier": "A",
+   "pages": [
+    "human-practices",
+    "entrepreneurship"
+   ],
+   "seat": "ihp",
+   "backup": "biz",
+   "kw_en": [
+    "five farmer events",
+    "affordable, practical",
+    "market bias"
+   ],
+   "kw_zh": [
+    "五場農民活動",
+    "負擔得起且實用",
+    "市集樣本偏誤"
+   ],
+   "a_en": "We held five farmer outreach events between May and September: over 30 organic smallholders at the Expo, a natural farmer in Tamsui, the September 5 forum and market, and a cooperative founder. They said technology is fine if affordable, accessible and practical. But farmers at markets may not represent everyone, and our wiki shows no purchase trial. Willingness to pay is still an open question.",
+   "a_zh": "5 月到 9 月我們辦了五場農民活動：花博 30 多位有機小農、淡水自然農法農民、9 月 5 日論壇與市集，以及一位合作社創辦人。他們說只要負擔得起、容易取得又實用，科技沒問題。但市集上的農民不一定代表所有農民，維基上也沒有購買試驗。付費意願仍是未解問題。",
+   "trap_en": "Treating polite interest as demand.",
+   "trap_zh": "把禮貌性的興趣當成需求。",
+   "basis": "like HPi-Potsdam 2025: stakeholder validation"
+  },
+  {
+   "q_en": "How do you know your lessons actually worked?",
+   "q_zh": "你們怎麼知道課程真的有效？",
+   "type": "validate",
+   "tier": "A",
+   "pages": [
+    "education"
+   ],
+   "seat": "ihp",
+   "backup": null,
+   "kw_en": [
+    "pre and post survey",
+    "80% elementary",
+    "no delayed test"
+   ],
+   "kw_zh": [
+    "前後測",
+    "國小至少 80%",
+    "沒有延遲測驗"
+   ],
+   "a_en": "We gave a pre-survey and a KAP post-survey in every class. Across the elementary trials, all seven knowledge questions reached at least 80% after the lesson. In high school, the biotic stress question rose from 32% to 96%. The limits: Trial 3 scored highest but the classes differed, only 11 junior high students answered, and we have no delayed test. We know they learned in the room, not that it lasted.",
+   "a_zh": "每堂課我們都做前測和 KAP 後測。國小各次合併，七題知識題課後全都至少 80%。高中的生物性逆境題從 32% 升到 96%。限制是：第 3 次得分最高但班級不同，國中只有 11 位學生回答，而且沒有延遲測驗。我們知道學生在課堂上學會了，但不知道能不能持久。",
+   "trap_en": "Quoting 140 students as if every one was tested.",
+   "trap_zh": "把 140 位學生講成每個人都被測驗。",
+   "basis": "like HG Tokyo 2025: outcomes of educational projects"
+  },
+  {
+   "q_en": "How do you know plants really make sounds?",
+   "q_zh": "你們怎麼知道植物真的會發出聲音？",
+   "type": "validate",
+   "tier": "B",
+   "pages": [
+    "data-physicalization-listening",
+    "data-physicalization"
+   ],
+   "seat": "ihp",
+   "backup": "plant",
+   "kw_en": [
+    "not our recording",
+    "Khait, Cell 2023",
+    "tomato about 35 per hour"
+   ],
+   "kw_zh": [
+    "不是我們錄的",
+    "Khait, Cell 2023",
+    "番茄每小時約 35 次"
+   ],
+   "a_en": "We did not record them ourselves. We used the open recordings from Khait and colleagues, Cell 2023, Tel Aviv University. They used ultrasonic microphones from 20 to 250 kHz, first in a soundproof chamber, then in a greenhouse. We pitch-shifted the clicks so people can hear them. Healthy plants make under one click an hour; a thirsty tomato about 35. And one click alone cannot tell stresses apart.",
+   "a_zh": "我們沒有自己錄音。我們用的是特拉維夫大學 Khait 等人 2023 年 Cell 論文的公開錄音。他們用 20 到 250 kHz 的超音波麥克風，先在隔音室，再到溫室驗證。我們把點擊聲降調讓人聽得到。健康植物每小時不到一次，缺水的番茄約 35 次。而且單一聲音無法區分不同逆境。",
+   "trap_en": "Saying ReLEAF measures plant sound. The sensor is a leaf sensor.",
+   "trap_zh": "說 ReLEAF 會量測植物聲音。其實感測器是葉片感測器。",
+   "basis": "wiki-derived"
+  },
+  {
+   "q_en": "Which ideas were yours and which came from your advisors?",
+   "q_zh": "哪些想法是你們自己的，哪些來自指導者？",
+   "type": "validate",
+   "tier": "A",
+   "pages": [
+    "human-practices",
+    "attributions",
+    "team"
+   ],
+   "seat": "ihp",
+   "backup": null,
+   "kw_en": [
+    "advisors set direction",
+    "we built responses",
+    "Attribution form"
+   ],
+   "kw_zh": [
+    "顧問給方向",
+    "我們做出回應",
+    "貢獻表單"
+   ],
+   "a_en": "We credit advisors by name. Prof. Chen gave the printer and ink idea, Dr. Brophy the physical containment advice, Prof. Cheng the Arabidopsis plate-to-soil model, and Prof. Huang the WB800 strain and periodic release. What the team built in response: the M1 stress-index model, the LINE platform, the seed exchange platform and the hay medium. The formal list of who did what is in our iGEM Attribution form.",
+   "a_zh": "我們都明確標示顧問的貢獻。陳教授提出印表機與墨水的概念，Brophy 博士提出物理圍堵的建議，鄭教授提出阿拉伯芥的瓊脂到土壤模型，黃教授提供 WB800 菌株和週期性釋放的建議。團隊自己針對這些做出回應：M1 壓力指數模型、LINE 平台、種子交換平台和乾草培養基。誰做了什麼的正式清單在 iGEM 的貢獻表單。",
+   "trap_en": "Taking credit for an advisor's idea. Say 'they raised the problem, we built the answer'.",
+   "trap_zh": "把顧問的想法說成自己的。要說「他們提出問題，我們做出回答」。",
+   "basis": "like AIS-China 2025: parts yours vs advisors"
+  },
+  {
+   "q_en": "Why not rely on a kill switch, as many iGEM teams do?",
+   "q_zh": "為什麼不像很多 iGEM 隊伍一樣依賴自殺開關？",
+   "type": "compare",
+   "tier": "A",
+   "pages": [
+    "human-practices",
+    "hardware-bioreactor",
+    "laws-and-regulations"
+   ],
+   "seat": "ihp",
+   "backup": "wet1",
+   "kw_en": [
+    "switches can fail",
+    "membrane first",
+    "none built"
+   ],
+   "kw_zh": [
+    "開關可能失效",
+    "先用膜",
+    "沒有做"
+   ],
+   "a_en": "Dr. Brophy told us genetic switches can mutate or fail, so a physical barrier should come first. Our membrane keeps cells in whatever the cells do, and pressure and leak monitoring watch for failure. We are only evaluating an extra kill switch, so none is built and we have no data on one. Our laws page lists biocontainment, below 1 in 10 to the 8 escape, and removing antibiotic markers as future actions.",
+   "a_zh": "Brophy 博士告訴我們，基因開關可能突變或失效，所以應先用物理屏障。無論細胞怎麼變，膜都能把它們留住，再加上壓力和漏液監測來察覺失效。我們只是評估要不要加額外的自殺開關，所以沒有做，也沒有相關數據。法規頁把生物圍堵（逃逸率低於十的八次方分之一）和移除抗生素標記列為未來行動。",
+   "trap_en": "Saying a kill switch is useless. The advice was physical first, switch under evaluation.",
+   "trap_zh": "說自殺開關沒用。建議是物理圍堵為先，開關仍在評估。",
+   "basis": "wiki-derived"
+  },
+  {
+   "q_en": "Automated systems like Agriweather do everything for the farmer. Why would a farmer pick yours?",
+   "q_zh": "像 Agriweather 這種系統會幫農民全部自動化，農民為什麼要選你們的？",
+   "type": "compare",
+   "tier": "B",
+   "pages": [
+    "human-practices",
+    "entrepreneurship"
+   ],
+   "seat": "ihp",
+   "backup": "biz",
+   "kw_en": [
+    "Lu: more convenient",
+    "many products in one",
+    "mixing chamber planned"
+   ],
+   "kw_zh": [
+    "盧：他們更方便",
+    "多合一較便宜",
+    "混合腔是規劃"
+   ],
+   "a_en": "Mr. Lu, Agriweather's founder, told us their irrigation-linked system is more convenient, and that we must justify ours because it does not connect to irrigation. At Smart Agriweek we learned our unit covers several functions at a lower price than buying, for example, BioBar and Agriweather together. After Mr. Lu we planned a mixing chamber that delivers through irrigation. That is a plan, not a built feature.",
+   "a_zh": "Agriweather 創辦人盧先生告訴我們，他們接灌溉的系統更方便，而我們沒有連接灌溉，所以必須說明自己的價值。在智慧農業週我們得知，我們一台涵蓋多項功能，價格比同時購買 BioBar 和 Agriweather 低。和盧先生談過後，我們規劃了經灌溉輸送的混合腔。那是規劃，不是已完成的功能。",
+   "trap_en": "Dismissing the competitor instead of admitting their convenience advantage.",
+   "trap_zh": "貶低對手，而不承認對方方便的優勢。",
+   "basis": "wiki-derived"
+  },
+  {
+   "q_en": "What is your next step after the Jamboree?",
+   "q_zh": "大會之後你們的下一步是什麼？",
+   "type": "impact",
+   "tier": "A",
+   "pages": [
+    "entrepreneurship",
+    "laws-and-regulations",
+    "data-physicalization",
+    "hardware-bioreactor"
+   ],
+   "seat": "ihp",
+   "backup": null,
+   "kw_en": [
+    "crop trials",
+    "replicate containment",
+    "BoPep4 gray mold"
+   ],
+   "kw_zh": [
+    "作物試驗",
+    "重複圍堵測試",
+    "BoPep4 灰黴病"
+   ],
+   "a_en": "Three things the wiki states. First, small-scale crop trials and pilot farms, because our plant results are on Arabidopsis. Second, replicate containment testing, since our retention evidence is a single plating. Third, after the Jamboree, BoPep4 for gray mold and the regulatory route for the cell-free product. For outreach, we will add a legend to the data map and check whether over 80% of visitors read it right.",
+   "a_zh": "維基寫明的三件事。第一，小規模作物試驗與試點農場，因為我們的植物結果在阿拉伯芥上。第二，重複的圍堵測試，因為我們的留菌證據只是一次塗盤。第三，大會後研究 BoPep4 用於灰黴病，以及無細胞產物的法規途徑。在推廣上，我們會為資料地圖加圖例，並檢查是否有超過 80% 的訪客讀對。",
+   "trap_en": "Leading with 'in the future' and naming plans the wiki does not state.",
+   "trap_zh": "開口就說「未來」，講出維基上沒有的計畫。",
+   "basis": "like Peking 2025: ranked next steps"
+  },
+  {
+   "q_en": "How will your education work last beyond this year?",
+   "q_zh": "你們的教育成果如何在今年之後持續？",
+   "type": "impact",
+   "tier": "B",
+   "pages": [
+    "education",
+    "education-website",
+    "contribution"
+   ],
+   "seat": "ihp",
+   "backup": null,
+   "kw_en": [
+    "free website",
+    "CC BY 4.0",
+    "3 teacher sign-ups"
+   ],
+   "kw_zh": [
+    "免費網站",
+    "CC BY 4.0",
+    "3 位老師報名"
+   ],
+   "a_en": "Everything is on a free education website: three lesson plans, three slide decks, two card games, two online games and a plant stress simulator, mostly bilingual. The files are released under CC BY 4.0, and the site stays up. The site also holds materials from earlier years. Honest limit: only three teachers have signed up through it so far, so reach beyond our own sessions is small today.",
+   "a_zh": "全部都放在免費的教育網站：三份教案、三份簡報、兩款卡牌遊戲、兩款線上遊戲和一個植物逆境模擬器，大多是雙語。檔案以 CC BY 4.0 釋出，網站會持續上線，也收錄往年的教材。坦白說，目前只有三位老師透過網站報名，所以我們自己課堂之外的觸及目前還很小。",
+   "trap_en": "Counting downloads. The wiki shows no download numbers.",
+   "trap_zh": "報下載次數。維基上沒有下載數據。",
+   "basis": "like Great Bay 2025: two-way dialogue and reuse"
+  },
+  {
+   "q_en": "Small farmers cannot afford new technology. How does ReLEAF avoid widening that gap?",
+   "q_zh": "小農負擔不起新科技，ReLEAF 如何避免擴大差距？",
+   "type": "impact",
+   "tier": "A",
+   "pages": [
+    "sustainability",
+    "entrepreneurship",
+    "human-practices"
+   ],
+   "seat": "ihp",
+   "backup": "biz",
+   "kw_en": [
+    "SDG 10",
+    "rent or subsidise",
+    "per-fen pricing"
+   ],
+   "kw_zh": [
+    "SDG 10",
+    "租賃或補貼",
+    "每分地計價"
+   ],
+   "a_en": "That is our SDG 10 claim. We plan to use profit from selling to industrial farmers, or selling data to researchers, to subsidise small farmers, and to let unions rent bioreactors. Director Wu suggested per-fen seasonal pricing. At the French Office we were asked if farmers could afford IoT and answered with figures. These are plans in a business model; our own subsidy starts after cash turns positive in Year 4.",
+   "a_zh": "這是我們對 SDG 10 的主張。我們計畫用賣給大型農場或把數據賣給研究者的利潤來補貼小農，也讓合作社或農民組織租用生物反應器。吳場長建議以每分地的季節計價。在法國在台辦事處有人問農民負擔得起物聯網嗎，我們用數字回答。這些是商業模式裡的計畫；我們自己的補貼要等到第 4 年現金轉正之後。",
+   "trap_en": "Promising affordability without naming the mechanism or the timing.",
+   "trap_zh": "承諾負擔得起，卻說不出機制和時間。",
+   "basis": "wiki-derived"
+  },
+  {
+   "q_en": "You work in Taiwan. Why did your project start with Ghana?",
+   "q_zh": "你們在台灣，為什麼專案從迦納開始？",
+   "type": "design",
+   "tier": "A",
+   "pages": [
+    "human-practices",
+    "entrepreneurship"
+   ],
+   "seat": "ihp",
+   "backup": "biz",
+   "kw_en": [
+    "USE-GH, 1 Feb",
+    "one conversation",
+    "small farmers"
+   ],
+   "kw_zh": [
+    "USE-GH 2/1",
+    "一次對話",
+    "小農"
+   ],
+   "a_en": "On February 1 we spoke with Gilbert Nkpeniyeng of Ubuntu Social Enterprise Ghana to test our assumption. He confirmed climate instability was hurting farmers he knows, and that small farmers were disadvantaged. That shaped our focus on small-scale farmers and our business plan. We then worked in Taiwan, where we could visit farms. The wiki records one conversation with a Ghanaian organisation, so I would not claim wider Ghana fieldwork.",
+   "a_zh": "2 月 1 日我們為了驗證假設，和迦納 Ubuntu Social Enterprise 的 Gilbert Nkpeniyeng 談話。他證實氣候不穩定正在傷害他認識的農民，而且小農更弱勢。這影響了我們聚焦小農與商業計畫。之後我們在台灣工作，因為可以實地拜訪農場。維基只記錄了一次與迦納組織的對話，所以我不會宣稱做過更多迦納田野工作。",
+   "trap_en": "Saying you interviewed Ghanaian farmers.",
+   "trap_zh": "說你們訪談過迦納的農民。",
+   "basis": "wiki-derived"
+  },
+  {
+   "q_en": "Why did you choose SDGs 2, 4, 10, 12 and 15, and not 13?",
+   "q_zh": "你們為什麼選 SDG 2、4、10、12、15，而不選 13？",
+   "type": "design",
+   "tier": "B",
+   "pages": [
+    "sustainability"
+   ],
+   "seat": "ihp",
+   "backup": null,
+   "kw_en": [
+    "eight shortlisted",
+    "can we act on it",
+    "negatives listed"
+   ],
+   "kw_zh": [
+    "八個候選",
+    "做得到才主張",
+    "列出負面影響"
+   ],
+   "a_en": "We shortlisted eight related goals, 2, 3, 4, 7, 10, 12, 13 and 15, and kept only those we can act on. Climate Action is affected by the bioreactor but is not the point of the project, so we do not claim 13, 3 or 7. Our claims: protectants for 2, education for 4, subsidised access for 10, farm-waste medium for 12, less chemical use for 15. Our page also lists negatives, such as weeds and less plant resilience.",
+   "a_zh": "我們先列出八個相關目標：2、3、4、7、10、12、13、15，只保留我們做得到的。氣候行動會受生物反應器影響，但那不是專案的重點，所以不主張 13、3、7。我們的主張：保護劑對應 2、教育對應 4、補貼取得對應 10、農場廢棄物培養基對應 12、減少化學投入對應 15。頁面也列出負面影響，例如雜草與植物韌性下降。",
+   "trap_en": "Saying the abstract's four goals. The body lists five.",
+   "trap_zh": "照摘要說四個目標。內文其實列了五個。",
+   "basis": "wiki-derived"
+  },
+  {
+   "q_en": "Why build a map and a sound exhibit instead of a poster?",
+   "q_zh": "為什麼做地圖和聲音展示，而不是海報？",
+   "type": "design",
+   "tier": "B",
+   "pages": [
+    "data-physicalization",
+    "data-physicalization-listening"
+   ],
+   "seat": "ihp",
+   "backup": "dry",
+   "kw_en": [
+    "color = yield",
+    "LED flash = heat",
+    "hear drought clicks"
+   ],
+   "kw_zh": [
+    "顏色=產量",
+    "LED 閃爍=熱逆境",
+    "聽乾旱點擊聲"
+   ],
+   "a_en": "People often notice climate stress only when food prices rise. Our map uses paper color for rice yield and flashing LEDs for heat stress by county, so a visitor reads two variables at once. We chose heat because ReLEAF protects against it, and yield because it shows the cost. The sound exhibit lets visitors hear drought clicks. Of 62 respondents, 95.2% agreed it helped, but only 51.6% found the highest-stress county.",
+   "a_zh": "人們常常等到食物漲價才注意到氣候壓力。我們的地圖用紙色代表稻米產量、用閃爍 LED 代表各縣市的熱逆境，讓訪客同時讀兩個變數。我們選熱，是因為 ReLEAF 保護的就是這個；選產量，是因為它顯示損失。聲音展示讓訪客聽乾旱的點擊聲。62 位受訪者中 95.2% 同意有幫助，但只有 51.6% 找對壓力最高的縣市。",
+   "trap_en": "Saying the map shows plant stress directly. It shows a heat stress index.",
+   "trap_zh": "說地圖直接顯示植物壓力。它顯示的是熱逆境指數。",
+   "basis": "like HG Tokyo 2025: educational design choices"
+  },
+  {
+   "q_en": "What biosafety level do you work at, and how are students trained?",
+   "q_zh": "你們在哪個生物安全等級工作？學生如何受訓？",
+   "type": "fact",
+   "tier": "B",
+   "pages": [
+    "safety-and-security"
+   ],
+   "seat": "ihp",
+   "backup": "wet1",
+   "kw_en": [
+    "BSL-1, B. subtilis",
+    "exam to full score",
+    "autoclave 121 °C"
+   ],
+   "kw_zh": [
+    "BSL-1 枯草桿菌",
+    "考到滿分",
+    "121 °C 滅菌"
+   ],
+   "a_en": "BSL-1, with non-pathogenic Bacillus subtilis. Every member takes biosafety training and a written exam, signs a consent form, and retakes the exam until it is a full score. A two-month bench programme covers miniprep, digestion, Golden Gate, PCR and transformation. Solid waste is autoclaved at 121 degrees for 15 to 30 minutes; liquids get 10% bleach. We also assessed dual-use concern and restrict strain access.",
+   "a_zh": "BSL-1，使用非致病性的枯草桿菌。每位成員都要上生物安全課、參加書面考試、簽同意書，沒考滿分就重考。為期兩個月的基礎訓練包括質體小量萃取、限制酶切、Golden Gate、PCR 和轉形。固體廢棄物以 121 度滅菌 15 到 30 分鐘；液體用 10% 漂白水處理。我們也評估了兩用性疑慮，並限制菌株取用。",
+   "trap_en": "Calling it BSL-2 or saying 'we followed the school rules' with no numbers.",
+   "trap_zh": "說成 BSL-2，或只說「照學校規定」而沒有數字。",
+   "basis": "wiki-derived"
+  },
+  {
+   "q_en": "Who is the 'Farmer Chen' on your homepage?",
+   "q_zh": "首頁上的「陳農民」是誰？",
+   "type": "fact",
+   "tier": "A",
+   "pages": [
+    "home",
+    "human-practices"
+   ],
+   "seat": "ihp",
+   "backup": null,
+   "kw_en": [
+    "Ms. Chen Hui-Wen",
+    "Tamsui Happy Farm",
+    "natural farming"
+   ],
+   "kw_zh": [
+    "陳慧文女士",
+    "淡水快樂農場",
+    "自然農法"
+   ],
+   "a_en": "Ms. Chen Hui-Wen, who runs Tamsui Happy Farm and farms naturally. We visited on July 21 and helped on the farm. She said giving plants too much support can take away their ability to survive on their own. That shaped our stress-index model, which releases protectant only when needed. She also described seed loss after typhoons and floods, which led to our seed exchange platform.",
+   "a_zh": "陳慧文女士，經營淡水快樂農場，採自然農法。7 月 21 日我們去拜訪並幫忙農事。她說給植物太多支持，可能讓它們失去自己生存的能力。這影響了我們的壓力指數模型，只在需要時才釋放保護劑。她也提到颱風水災後種子流失，促成了我們的種子交換平台。",
+   "trap_en": "Reading the homepage quote as her endorsing ReLEAF.",
+   "trap_zh": "把首頁引言當成她支持 ReLEAF。",
+   "basis": "wiki-derived"
+  },
+  {
+   "q_en": "In one minute: what is ReLEAF, and what did Human Practices do for it?",
+   "q_zh": "請用一分鐘說明 ReLEAF 是什麼，人類實踐為它做了什麼？",
+   "type": "fact",
+   "tier": "A",
+   "pages": [
+    "description",
+    "human-practices"
+   ],
+   "seat": "ihp",
+   "backup": null,
+   "kw_en": [
+    "stress-responsive bioreactor",
+    "31 stakeholders",
+    "soil to contained"
+   ],
+   "kw_zh": [
+    "逆境響應反應器",
+    "31 位利害關係人",
+    "從土壤到封閉式"
+   ],
+   "a_en": "ReLEAF is a stress-responsive bioreactor. A leaf sensor and a model predict plant stress, green light switches on engineered Bacillus subtilis, and a hollow-fiber membrane lets protectants out while keeping cells in. We engaged 31 stakeholders from February to October. Their advice moved us from soil release to a contained bioreactor, from hydroponics to plate-to-soil testing, and from rice to cherry tomato and strawberry.",
+   "a_zh": "ReLEAF 是一個逆境響應的生物反應器。葉片感測器和模型預測植物逆境，綠光啟動工程枯草桿菌，中空纖維膜讓保護劑出來、把細胞留住。從 2 月到 10 月我們接觸了 31 位利害關係人，他們的建議讓我們從土壤釋放改為封閉式生物反應器，從水耕改為瓊脂盤到土壤的測試，並把目標作物從水稻改成小番茄和草莓。",
+   "trap_en": "Starting with the biology and never reaching what changed.",
+   "trap_zh": "一直講生物學，沒講到改變了什麼。",
+   "basis": "wiki-derived"
+  },
+  {
+   "q_en": "You list 47 team members but only seven of you are here. Who did what?",
+   "q_zh": "團隊頁列了 47 人，但來這裡的只有七位，誰做了什麼？",
+   "type": "fact",
+   "tier": "A",
+   "pages": [
+    "team",
+    "attributions",
+    "human-practices"
+   ],
+   "seat": "ihp",
+   "backup": null,
+   "kw_en": [
+    "47 on the team",
+    "Attribution form",
+    "your own part"
+   ],
+   "kw_zh": [
+    "團隊 47 人",
+    "貢獻表單",
+    "你自己的部分"
+   ],
+   "a_en": "The team page introduces forty-seven people, and the formal record of who did what is in our iGEM Attribution form, not in the wiki text. I can speak for my own part: [one sentence on your own role]. For ideas, advisors set directions such as the bioreactor and containment, and the team built the models, platforms and experiments in response. Ask me about my area and I will say where my knowledge ends.",
+   "a_zh": "團隊頁介紹了四十七位成員，誰做了什麼的正式紀錄在 iGEM 的貢獻表單，不在維基文字裡。我可以說明我自己的部分：[用一句話說你自己的角色]。至於想法，顧問給了方向，例如生物反應器和圍堵，團隊則針對這些做出模型、平台和實驗。請問我我負責的範圍，我也會說明我的知識界線。",
+   "trap_en": "Claiming other members' work, or having no sentence about your own role.",
+   "trap_zh": "把別人的工作說成自己的，或講不出自己的角色。",
+   "basis": "like AIS-China 2025: parts yours vs advisors"
+  }
+ ],
+ "gaps": [
+  {
+   "issue_en": "Containment evidence is thinner than the safety wording. The safety page abstract reports no shell-side colonies at 24 h; the Results page says 72 h of active ACCD with no colonies; the hardware page says containment rests on two single platings with no replicates, no recorded detection limit and no log-reduction measure. The safety page also describes automated leak alerts and droplet sensors as in place, while the hardware page lists the droplet sensor as planned. The safety page gives cell size as 0.25 to 1.0 µm; the hardware page gives 0.8 to 2.0 µm wide.",
+   "issue_zh": "圍堵證據比安全頁的措辭薄弱。安全頁摘要寫 24 小時殼側無菌落；Results 頁寫 72 小時活性 ACCD 且無菌落；硬體頁則說圍堵證據只有兩次單次塗盤，沒有重複、沒記錄偵測極限、沒有對數減少量。安全頁把自動漏液警報與液滴感測器寫得像已完成，硬體頁卻列為規劃中。安全頁寫細胞大小 0.25 至 1.0 µm，硬體頁寫寬 0.8 至 2.0 µm。",
+   "where": "safety-and-security, results, hardware-bioreactor, laws-and-regulations",
+   "say_en": "Say: 'The membrane is designed to retain cells. Our evidence is a single plating with no colonies on the shell side, so it is preliminary. The droplet sensor is planned, and we need replicates before claiming an efficiency.' Do not say 'proven' or give a single hour count.",
+   "say_zh": "要說：「膜在設計上能留住細胞。我們的證據是一次塗盤、殼側沒有菌落，所以只是初步。液滴感測器是規劃中，要有重複實驗才能主張效率。」不要說「已證明」，也不要只報一個小時數。"
+  },
+  {
+   "issue_en": "Human practices wording and the hardware record do not fully match. HP says Prof. Chang's September advice led to a 'modular, farmer-friendly capsule unit'; the hardware page says the capsule is future work. HP lists leakage of protectant and B. subtilis through the membrane 'even without any driving force' as a problem, while the hardware page (June 18) describes the problem as nothing driving protectant across the membrane. HP lists the Arduino Uno Q plus Mega 2560 as the result of Owl Lab's review; the hardware page says a single mainboard replaced that two days later.",
+   "issue_zh": "人類實踐頁的說法與硬體頁紀錄不完全一致。HP 說張教授 9 月的建議讓硬體轉向「模組化、對農民友善的膠囊單元」，硬體頁卻說膠囊是未來工作。HP 把保護劑與枯草桿菌「即使沒有驅動力也會從膜漏出」當成問題，硬體頁（6/18）描述的問題卻是沒有任何力量把保護劑推過膜。HP 把 Arduino Uno Q 加 Mega 2560 寫成 Owl Lab 審查的結果，硬體頁說兩天後被單一主機板取代。",
+   "where": "human-practices, hardware-bioreactor",
+   "say_en": "Say: 'The capsule is future work. The final electronics use one mainboard. The September leakage note is on the human practices page and Prof. Chang helped us troubleshoot; the hardware page has the detail.' Use the hardware page when the two differ.",
+   "say_zh": "要說：「膠囊是未來工作。最終電子系統是單一主機板。9 月的滲漏紀錄在人類實踐頁，張教授協助我們排除，細節在硬體頁。」兩頁不同時以硬體頁為準。"
+  },
+  {
+   "issue_en": "Reach numbers differ across pages. Booth visitors: 116 (data physicalization abstract) vs 160 (its Impact section and HP) with 62 survey responses; event visitors 400+, participants 200+, 'general public 200+'. Students taught: 140 (education, three places) vs 144 (Contribution). Elementary card-game fans: 75 of 88 (education) vs 75 of 99 (Contribution); 88 is the post-survey count and 99 the pre-survey count. HP abstract says 'seven months' while the body says nine months (February to October). The 31 stakeholders are not listed in one place.",
+   "issue_zh": "各頁觸及人數不一致。攤位訪客：116（資料實體化摘要）對 160（其成效段與 HP），問卷回收 62；活動訪客 400 多、參與者 200 多、「一般大眾 200+」。教學學生數：140（教育頁三處）對 144（貢獻頁）。國小喜歡卡牌的人數：75/88（教育頁）對 75/99（貢獻頁），88 是後測人數、99 是前測人數。HP 摘要寫「七個月」，內文寫九個月（2 月到 10 月）。31 位利害關係人沒有一次列出。",
+   "where": "data-physicalization, human-practices, education, contribution",
+   "say_en": "Say: 'Our pages differ. The numbers I am sure of are 140 students, 62 survey responses and 160 booth visitors.' Use 140 and 75 of 88, and tell the judge the other figures come from a different count.",
+   "say_zh": "要說：「我們各頁數字有差異。我確定的是 140 位學生、62 份問卷、160 位攤位訪客。」用 140 和 75/88，並說明其他數字是不同的計算方式。"
+  },
+  {
+   "issue_en": "SDG claims are inconsistent and thinly evidenced. The sustainability abstract names four SDGs (2, 4, 10, 15) but the body claims five (adds 12). SDG 2 rests on 'first trials on Arabidopsis', and the page says the product does not directly solve world hunger. The claim that the mixed waste medium 'works just as well as LB' rests on two cultures per medium. The weed concern is credited to Mr. Chen Ke-Wei on this page but is not in his HP record. The SDG 15 line says protectants 'already exist in plants'.",
+   "issue_zh": "SDG 主張不一致且證據薄弱。永續頁摘要列四個 SDG（2、4、10、15），內文卻主張五個（多了 12）。SDG 2 只靠「阿拉伯芥的初步試驗」，頁面也承認產品不能直接解決世界飢餓。混合廢棄物培養基「與 LB 一樣好」只有每種兩管。雜草疑慮在本頁歸給陳可為先生，但他在 HP 的紀錄裡沒有。SDG 15 寫保護劑「本來就存在於植物中」。",
+   "where": "sustainability, human-practices, contribution",
+   "say_en": "Say: 'We claim five SDGs: 2, 4, 10, 12 and 15. Our evidence for 2 is early Arabidopsis work, for 12 two cultures per medium, and our page lists negatives.' Do not claim to fight hunger.",
+   "say_zh": "要說：「我們主張五個 SDG：2、4、10、12、15。SDG 2 的證據是早期阿拉伯芥實驗，SDG 12 是每種培養基兩管，頁面也列出負面影響。」不要說我們解決飢餓。"
+  },
+  {
+   "issue_en": "Biotic stress: farmers at the Expo named pests and disease more than heat, and HP says biotic stress was added as a target in May. But the business page limits claims to abiotic stress, the laws page says the iGEM high school white list stops gray mold testing, and the mission statement still mentions combined biotic and abiotic stress. Several experts also told the team to focus on one stress (Sattely, World Vegetable Center), while the continuous engagement section says the focus was narrowed to heat and salinity.",
+   "issue_zh": "生物性逆境：花博的農民提到病蟲害多於高溫，HP 說 5 月把生物性逆境加入目標。但商業頁把主張限制在非生物逆境，法規頁說 iGEM 高中組白名單讓團隊不能測灰黴病，使命宣言卻仍提到生物與非生物逆境並存。多位專家也要求只專注一種逆境（Sattely、世界蔬菜中心），而持續互動段寫焦點縮小到熱與鹽。",
+   "where": "human-practices, entrepreneurship, laws-and-regulations",
+   "say_en": "Say: 'Farmers told us pests matter most. We cannot test them under the high school white list, so our evidence is abiotic: heat and salinity on Arabidopsis. BoPep4 for gray mold is planned after the Jamboree.'",
+   "say_zh": "要說：「農民告訴我們病蟲害最重要。高中組白名單讓我們不能測，所以證據是非生物的：阿拉伯芥的熱與鹽害。BoPep4 用於灰黴病是大會後的規劃。」"
+  },
+  {
+   "issue_en": "First international market is inconsistent. The laws page names the Philippines as the first international market to explore; the business page says the Philippines and Indonesia after Taiwan; HP says 'target France first' through Mr. Quillere, and the BIO Asia entry says the team decided to expand into Southeast Asia. Also, HP says the team now targets conventional farms and cannot serve organic farms, yet the first interviews were with organic farmers, so the Expo sample is not the target market.",
+   "issue_zh": "第一個海外市場說法不一。法規頁把菲律賓列為第一個要探索的國際市場；商業頁寫台灣之後是菲律賓與印尼；HP 寫透過 Quillere 先以法國為目標，BIO Asia 一段又說決定擴展到東南亞。另外 HP 說現在以慣行農場為目標、不能服務有機農場，但最早的訪談對象是有機農民，所以花博的樣本不是目標市場。",
+   "where": "laws-and-regulations, entrepreneurship, human-practices",
+   "say_en": "Say: 'Taiwan first. The Philippines is the first market we studied for regulation. France is a relationship we are building through the French Office.' Admit that our first interviews were with organic farmers, who are not our target.",
+   "say_zh": "要說：「先台灣。菲律賓是我們第一個研究法規的市場。法國是透過法國在台辦事處建立的關係。」並承認最早訪談的有機農民不是我們的目標客群。"
+  },
+  {
+   "issue_en": "Who did what is not on the wiki as text. The Attribution page contains only the iGEM form embedded from teams.igem.org, and the team page builds its cards with JavaScript from a roster file (the page source says it introduces forty-seven people). The Inclusivity page is not part of the frozen text and is only a placeholder in the working files, so inclusivity claims live elsewhere: bilingual education materials, free access (education), SDG 10 and small-farmer pricing (sustainability), and the LINE platform for farmers who are unfamiliar with technology.",
+   "issue_zh": "「誰做了什麼」沒有以文字形式放在維基上。貢獻頁只嵌入 teams.igem.org 的 iGEM 表單，團隊頁用 JavaScript 從名單檔建立卡片（頁面原始碼說介紹四十七人）。包容性頁面不在凍結的文字內，工作檔中也只是預留頁，所以包容性主張分散在其他頁：雙語教材與免費取用（教育）、SDG 10 與小農定價（永續）、給不熟悉科技農民的 LINE 平台。",
+   "where": "attributions, team, education, sustainability, human-practices",
+   "say_en": "Say: 'The full attribution is in our iGEM form. I can tell you my own part and which advisor gave which idea.' For inclusivity, point to bilingual free materials, subsidised access for small farmers and the LINE platform.",
+   "say_zh": "要說：「完整貢獻在我們的 iGEM 表單。我可以說明我自己的部分，以及哪位顧問提出哪個想法。」談包容性時，指向雙語免費教材、小農補貼取得與 LINE 平台。"
+  },
+  {
+   "issue_en": "Outreach evidence is self-reported and has selection limits. The booth survey went to visitors who completed all six booths (62 of 160), families filled one form per group, there was no pre-test, and the forum KAP shows percentages (speaker 100%, farmers 80%) without the number of respondents. The data map's Yilan/Nantou explanation mixes tourism, landslides and salinity, although the map encodes heat stress and rice yield. HP says the sound recordings 'confirmed that using natural plant signals was a great way to explain our biosensors', but ReLEAF uses a leaf sensor, not sound.",
+   "issue_zh": "推廣證據是自我回報且有選擇偏誤。攤位問卷只發給走完六攤的訪客（160 人中 62 人），家庭一組填一份，沒有前測；論壇 KAP 只給百分比（講者 100%、農民 80%），沒有回收份數。資料地圖對宜蘭、南投的解釋混合了觀光、山崩與鹽度，但地圖編碼的是熱逆境與稻米產量。HP 說聲音錄音「證實用自然的植物訊號來解釋我們的生物感測器很好」，但 ReLEAF 用的是葉片感測器，不是聲音。",
+   "where": "data-physicalization, human-practices",
+   "say_en": "Say: 'The surveys show interest and recall, not behaviour change. The sound exhibit is a teaching tool; our system senses leaf temperature and moisture, not sound.' Give 51.6% as the knowledge test result.",
+   "say_zh": "要說：「問卷顯示的是興趣與記憶，不是行為改變。聲音展示是教學工具；我們的系統感測葉片溫度與濕度，不是聲音。」知識測驗結果就講 51.6%。"
+  }
+ ]
+}

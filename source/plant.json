@@ -1,0 +1,1908 @@
+{
+ "domain": "plant",
+ "facts": [
+  {
+   "id": "plant-f1",
+   "label_en": "Model plant",
+   "label_zh": "模式植物",
+   "value": "Arabidopsis thaliana (Col-0)",
+   "detail_en": "Grown in three systems, agar plates, hydroponic boxes and soil pots, all under the same six-step framework.",
+   "detail_zh": "在瓊脂平板、水耕盒與土壤盆栽三種系統中種植，全部沿用同一套六步驟流程。",
+   "src": "plant#Overview and design",
+   "confidence": "stated"
+  },
+  {
+   "id": "plant-f2",
+   "label_en": "Six-step framework",
+   "label_zh": "六步驟流程",
+   "value": "Stratify 4 d at 4 °C, grow at 22 °C, transfer on day 0, treat day -1/0/+1, observe 5-7 d, score",
+   "detail_en": "Stratification synchronises germination; seedlings are pre-grown (4 to 14 days depending on system and stress) before stress starts.",
+   "detail_zh": "春化處理讓發芽同步；幼苗依系統與逆境不同先長 4 至 14 天，再開始施加逆境。",
+   "src": "plant#Overview and design",
+   "confidence": "stated"
+  },
+  {
+   "id": "plant-f3",
+   "label_en": "Salt ladder on agar",
+   "label_zh": "瓊脂上的鹽度梯度",
+   "value": "74.95 / 34.77 / 11.00 / 1.36 mm",
+   "detail_en": "Mean primary root length at 0, 75, 100 and 150 mM NaCl in set 6; it separates moderate stress from arrested growth.",
+   "detail_zh": "set 6 在 0、75、100、150 mM NaCl 下的平均主根長度，用來區分中度逆境與生長停滯。",
+   "src": "plant#Dry lab collaborations",
+   "confidence": "stated"
+  },
+  {
+   "id": "plant-f4",
+   "label_en": "Working salt stress on agar",
+   "label_zh": "瓊脂上的工作鹽濃度",
+   "value": "100 mM NaCl",
+   "detail_en": "Chosen because it gives a strong stress response without killing the seedlings, so a rescue can still be seen.",
+   "detail_zh": "選它是因為會造成明顯逆境反應但不致死，仍看得到拯救效果。",
+   "src": "plant#Stress design",
+   "confidence": "stated"
+  },
+  {
+   "id": "plant-f5",
+   "label_en": "Salt level that was too severe",
+   "label_zh": "太嚴重的鹽濃度",
+   "value": "250 mM NaCl: root < 1 mm",
+   "detail_en": "Severe bleaching within 3 days; 150 mM already caused visible chlorosis. Trehalose gave no clear recovery at 250 mM.",
+   "detail_zh": "3 天內嚴重白化；150 mM 就已出現明顯黃化。250 mM 下 trehalose 沒有明顯的恢復。",
+   "src": "plant#Set 5",
+   "confidence": "stated"
+  },
+  {
+   "id": "plant-f6",
+   "label_en": "Heat stress protocol",
+   "label_zh": "熱逆境流程",
+   "value": "37 °C for 5 days, then 5 days recovery at 22 °C",
+   "detail_en": "Thermo-priming adapted from Auverlot et al., not a heat shock, because heat shock is rarely seen in real fields.",
+   "detail_zh": "改編自 Auverlot 等人的 thermo-priming，不是熱休克，因為田間很少出現熱休克。",
+   "src": "plant#Stress protocols",
+   "confidence": "stated"
+  },
+  {
+   "id": "plant-f7",
+   "label_en": "Treatment timing",
+   "label_zh": "處理時機",
+   "value": "Pre = day -1, co = day 0 with the stress, post = day +1",
+   "detail_en": "The page says every set from set 7 has a control plus the three timing groups, but BoPEP4 (set 10) had no pre group and LEA14 (set 11) had no co group.",
+   "detail_zh": "頁面說 set 7 起每組都有對照加三個時機組，但 BoPEP4（set 10）沒有預先處理組，LEA14（set 11）沒有同時處理組。",
+   "src": "plant#Treatment timing",
+   "confidence": "conflict"
+  },
+  {
+   "id": "plant-f8",
+   "label_en": "Readouts",
+   "label_zh": "量測指標",
+   "value": "Root length, fresh weight, chlorophyll",
+   "detail_en": "Root length traced by hand in ImageJ; leaf area, anthocyanin, chlorosis and bleaching are recorded qualitatively. Leaves overlap, so leaf area is not quantified.",
+   "detail_zh": "主根長度用 ImageJ 手動描繪；葉面積、花青素、黃化與白化只做質性記錄，因為葉片重疊無法量化葉面積。",
+   "src": "plant#Overview and design",
+   "confidence": "stated"
+  },
+  {
+   "id": "plant-f9",
+   "label_en": "Chlorophyll method",
+   "label_zh": "葉綠素測定法",
+   "value": "80% acetone extract, A645 and A663",
+   "detail_en": "Chl a+b = [8.02 (A663) + 20.20 (A645)] x V / 1000 (Arnon); read in a 96-well plate with three technical wells per sample.",
+   "detail_zh": "Chl a+b = [8.02 (A663) + 20.20 (A645)] x V / 1000（Arnon 公式）；在 96 孔盤讀值，每個樣品三個技術重複孔。",
+   "src": "geospatial-analysis#Chlorophyll content as a physiological readout",
+   "confidence": "stated"
+  },
+  {
+   "id": "plant-f10",
+   "label_en": "Sample size per group",
+   "label_zh": "每組樣本數",
+   "value": "n = 9 (vertical plates), 25 (set 7 trial 1), 40 (round plates)",
+   "detail_en": "Stated as seedlings per condition used for each extraction. Sets 8, 10 and 11 used 40; sets 4, 6, 9 and the heat sets used 9.",
+   "detail_zh": "寫的是每個處理用於一次萃取的幼苗數。set 8、10、11 用 40 株；set 4、6、9 與熱逆境組用 9 株。",
+   "src": "plant#Set 9",
+   "confidence": "stated"
+  },
+  {
+   "id": "plant-f11",
+   "label_en": "Statistics shown",
+   "label_zh": "呈現的統計",
+   "value": "Mean ± SEM, asterisks from P < 0.05 to P < 0.0001",
+   "detail_en": "The plant page does not name the statistical test. Graphs were made in Prism with mean ± SEM.",
+   "detail_zh": "植物頁沒有寫出使用哪種統計檢定。圖表用 Prism 繪製，顯示 mean ± SEM。",
+   "src": "plant#Set 4",
+   "confidence": "stated"
+  },
+  {
+   "id": "plant-f12",
+   "label_en": "Trehalose 5 mM at 100 mM NaCl",
+   "label_zh": "5 mM trehalose 於 100 mM NaCl",
+   "value": "About 8.7-fold chlorophyll, +3 cm root, P < 0.0001",
+   "detail_en": "Set 6, versus the untreated salt control. The fold change is read on the per-gram chlorophyll panel, which the page itself warns can inflate values.",
+   "detail_zh": "set 6，與未處理鹽害對照比較。倍率取自每克鮮重的葉綠素圖，而頁面自己提醒這種算法會被放大。",
+   "src": "plant#Set 6",
+   "confidence": "stated"
+  },
+  {
+   "id": "plant-f13",
+   "label_en": "Trehalose 1.0 mM at 100 mM NaCl",
+   "label_zh": "1.0 mM trehalose 於 100 mM NaCl",
+   "value": "46.4 vs about 35.8 mm root (about 30%)",
+   "detail_en": "Set 4. Chlorophyll was retained and root grew longer, but fresh weight was not rescued: the benefit is not in biomass.",
+   "detail_zh": "set 4。葉綠素保留較多、主根較長，但鮮重沒有被救回，效果不在生物量。",
+   "src": "plant#Set 4",
+   "confidence": "stated"
+  },
+  {
+   "id": "plant-f14",
+   "label_en": "Trehalose at other salt levels",
+   "label_zh": "trehalose 在其他鹽濃度",
+   "value": "No benefit at 75 mM; too little at 150 mM",
+   "detail_en": "At 75 mM the treated group even had lower chlorophyll. At 0.5 and 1 mM trehalose also slowed growth in the first screening.",
+   "detail_zh": "75 mM 時處理組葉綠素反而較低；初步篩選中 0.5 與 1 mM trehalose 也抑制了生長。",
+   "src": "plant#Set 6",
+   "confidence": "stated"
+  },
+  {
+   "id": "plant-f15",
+   "label_en": "CH Bio peptide dose",
+   "label_zh": "CH Bio 胜肽劑量",
+   "value": "1/500 dilution, 1 mL per group",
+   "detail_en": "A commercial product from CH Biotech whose active components were not disclosed, so it is a product-level comparison only.",
+   "detail_zh": "正瀚生技的商品，有效成分未揭露，因此只能當作產品層級的比較。",
+   "src": "plant#Set 7; plant#Outreach",
+   "confidence": "stated"
+  },
+  {
+   "id": "plant-f16",
+   "label_en": "CH Bio peptide on agar",
+   "label_zh": "CH Bio 胜肽於瓊脂",
+   "value": "Set 7 trial 1: post-treatment best at 100 mM",
+   "detail_en": "Trial 1 (n = 25): post gave the highest chlorophyll and fresh weight. Trial 2: co-treatment helped most at 75 mM, post gave the strongest recovery at 100 mM.",
+   "detail_zh": "trial 1（n = 25）：事後處理葉綠素與鮮重最高。trial 2：75 mM 時同時處理最有幫助，100 mM 時事後處理恢復最好。",
+   "src": "plant#Set 7",
+   "confidence": "stated"
+  },
+  {
+   "id": "plant-f17",
+   "label_en": "ACC deaminase on agar, salt",
+   "label_zh": "ACC deaminase 於瓊脂（鹽）",
+   "value": "1.74 vs 1.03 mg/g chlorophyll (about 70% more)",
+   "detail_en": "Set 9, pre-treatment at 100 mM NaCl. Contamination was present and the page says the trend still needs further trials.",
+   "detail_zh": "set 9，100 mM NaCl 下的預先處理。實驗有污染，頁面也說此趨勢仍需更多重複驗證。",
+   "src": "plant#Set 9",
+   "confidence": "stated"
+  },
+  {
+   "id": "plant-f18",
+   "label_en": "ACC deaminase co-treatment",
+   "label_zh": "ACC deaminase 同時處理",
+   "value": "Fresh weight 0.220, 0.144, 0.114 g at 0, 75, 100 mM",
+   "detail_en": "Falling with salt, and at 100 mM similar to the untreated control, so no rescue when given together with the stress (set 9).",
+   "detail_zh": "隨鹽濃度下降，100 mM 時與未處理對照相近，表示和逆境同時給予沒有拯救效果（set 9）。",
+   "src": "plant#Set 9",
+   "confidence": "stated"
+  },
+  {
+   "id": "plant-f19",
+   "label_en": "ACC deaminase on agar, heat",
+   "label_zh": "ACC deaminase 於瓊脂（熱）",
+   "value": "Trial 1: pre best; trial 2: post +14% chlorophyll",
+   "detail_en": "Trial 1 pre-treatment kept about 13% of the unstressed chlorophyll. Trial 2 post-treatment was 14% above the heat control, then co, then pre.",
+   "detail_zh": "trial 1 預先處理保留約 13% 的未逆境葉綠素；trial 2 事後處理比熱逆境對照高 14%，其次是同時處理，再來是預先處理。",
+   "src": "plant#Heat stress · ACC deaminase",
+   "confidence": "conflict"
+  },
+  {
+   "id": "plant-f20",
+   "label_en": "ACC deaminase in soil, 300 mM NaCl",
+   "label_zh": "ACC deaminase 於土壤（300 mM NaCl）",
+   "value": "Chlorophyll mg/L: control 1.00, pre 0.67, co 0.30, post 1.13",
+   "detail_en": "Only post-treatment was above control (about 13%) and the page calls it a limited effect needing confirmation.",
+   "detail_zh": "只有事後處理高於對照（約 13%），頁面稱效果有限、需要再確認。",
+   "src": "plant#Soil · September 12",
+   "confidence": "stated"
+  },
+  {
+   "id": "plant-f21",
+   "label_en": "ACC deaminase in soil, heat",
+   "label_zh": "ACC deaminase 於土壤（熱）",
+   "value": "Chlorophyll order pre > co > post in both trials",
+   "detail_en": "Trial 1: 1.05, 0.91, 0.75 mg/L; trial 2: 0.89, 0.63, 0.355. Post-treatment fell below the heat control. Fresh weight was one pot per condition.",
+   "detail_zh": "trial 1：1.05、0.91、0.75 mg/L；trial 2：0.89、0.63、0.355。事後處理低於熱逆境對照。鮮重每個處理只有一盆。",
+   "src": "plant#Soil · September 22",
+   "confidence": "stated"
+  },
+  {
+   "id": "plant-f22",
+   "label_en": "BoPEP4 on agar, salt",
+   "label_zh": "BoPEP4 於瓊脂（鹽）",
+   "value": "Co-treatment harmful; post-treatment rescued at 75 and 100 mM",
+   "detail_en": "Set 10, n = 40, day 17. Co-treated plates were damaged even without salt. No pre-treatment group was run.",
+   "detail_zh": "set 10，n = 40，第 17 天。同時處理的平板即使沒有鹽也生長變差。沒有做預先處理組。",
+   "src": "plant#Set 10",
+   "confidence": "stated"
+  },
+  {
+   "id": "plant-f23",
+   "label_en": "LEA14 on agar, salt",
+   "label_zh": "LEA14 於瓊脂（鹽）",
+   "value": "Best at 75 mM, P < 0.001, pre and post",
+   "detail_en": "Set 11, n = 40. Chlorophyll retention order was 75 mM, then 100 mM, then 0 mM. No co-treatment group and no heat data on this page.",
+   "detail_zh": "set 11，n = 40。葉綠素保留順序為 75 mM、100 mM、0 mM。沒有同時處理組，本頁也沒有熱逆境數據。",
+   "src": "plant#Set 11",
+   "confidence": "stated"
+  },
+  {
+   "id": "plant-f24",
+   "label_en": "Hydroponic doses",
+   "label_zh": "水耕劑量",
+   "value": "ACCD 1/40, 1/60, 1/80 above control under heat; BoPEP4 1/40 best under 100 mM NaCl",
+   "detail_en": "ACCD at 1/100 was no better than control. BoPEP4 below 1/40 showed no rescue. Only these two protectants reached hydroponics.",
+   "detail_zh": "ACCD 1/100 與對照無異；BoPEP4 低於 1/40 沒有拯救效果。只有這兩種保護劑做到水耕。",
+   "src": "plant#Hydroponics · ACC deaminase",
+   "confidence": "stated"
+  },
+  {
+   "id": "plant-f25",
+   "label_en": "Culture medium harms plants",
+   "label_zh": "培養液本身傷害植物",
+   "value": "Dilute B. subtilis culture at least 16-fold",
+   "detail_en": "WB800 culture alone gave yellow, small, anthocyanin-rich plants at 1 and 1/2; 1/40 was set as the highest dose and the negative control.",
+   "detail_zh": "單獨的 WB800 培養液在 1 與 1/2 稀釋下讓植株發黃、變小；1/40 被定為最高劑量與負對照。",
+   "src": "plant#Hydroponics · buffer control",
+   "confidence": "stated"
+  },
+  {
+   "id": "plant-f26",
+   "label_en": "pH of the dosing solution",
+   "label_zh": "給藥溶液 pH",
+   "value": "MS medium pH 5.7; ACCD optimum pH 7.5, about 75% at pH 7",
+   "detail_en": "The team compared plant growth at pH 5.7 and pH 7 because the enzyme and the plant prefer different pH.",
+   "detail_zh": "團隊比較了 pH 5.7 與 pH 7 下植物的生長，因為酵素與植物偏好的 pH 不同。",
+   "src": "plant#Hydroponics · buffer control",
+   "confidence": "stated"
+  },
+  {
+   "id": "plant-f27",
+   "label_en": "Soil salt method",
+   "label_zh": "土壤施鹽方法",
+   "value": "Drench 100, 200, 300 mM; fresh weight 0.15 vs 0.42 g",
+   "detail_en": "30 to 50 mL per pot with no fresh water between. Top-down drench cut fresh weight about 64% versus the sub-irrigation method.",
+   "detail_zh": "每盆 30 至 50 mL，中間不澆清水。由上往下淋洗法使鮮重比底部吸水累積法少約 64%。",
+   "src": "plant#Soil · September 6",
+   "confidence": "stated"
+  },
+  {
+   "id": "plant-f28",
+   "label_en": "Dose scaled to a hectare",
+   "label_zh": "換算成每公頃的劑量",
+   "value": "3 sprays = 1.67 mL on 78.5 cm² = 2126 L/ha",
+   "detail_en": "With a modeled rice canopy correction and secreted activity of 7.25 mU/mL this becomes 37.6 kU per hectare per application. It is a dose that worked, not the smallest dose that works.",
+   "detail_zh": "加上模型估計的水稻冠層校正與分泌活性 7.25 mU/mL，約為每公頃每次 37.6 kU。這是有效的劑量，不是最小有效劑量。",
+   "src": "plant#Dry lab collaborations",
+   "confidence": "stated"
+  },
+  {
+   "id": "plant-f29",
+   "label_en": "Lead time to apply",
+   "label_zh": "需要提前的時間",
+   "value": "Production starts 6.4 days ahead",
+   "detail_en": "A forecast reaches about three days; ten 20 L reactors need 5.4 days to make one hectare's application, plus one day if it must arrive before the stress.",
+   "detail_zh": "天氣預報約能看 3 天；十個 20 L 反應器要 5.4 天才能做出一公頃的量，若要在逆境前一天到位還要再加一天。",
+   "src": "plant#Dry lab collaborations",
+   "confidence": "stated"
+  },
+  {
+   "id": "plant-f30",
+   "label_en": "ACC deaminase mechanism",
+   "label_zh": "ACC deaminase 作用機制",
+   "value": "ACC -> ammonia + alpha-ketobutyrate",
+   "detail_en": "Cuts the ethylene precursor ACC so a stressed plant makes less ethylene. It is a PLP-dependent enzyme, so PLP was added with it.",
+   "detail_zh": "分解乙烯前驅物 ACC，讓受逆境的植物少產生乙烯。它依賴 PLP，因此給藥時一併加入 PLP。",
+   "src": "plant#Soil · September 6; plant#Hydroponics · ACC deaminase",
+   "confidence": "stated"
+  },
+  {
+   "id": "plant-f31",
+   "label_en": "What each protectant targets",
+   "label_zh": "三種保護劑的目標",
+   "value": "ACCD: ethylene; LEA14: protein damage; BoPEP4: plant defences",
+   "detail_en": "LEA14 is aimed at damage drought and salt do to proteins; BoPEP4, a broccoli plant elicitor peptide, at the plant's own defences.",
+   "detail_zh": "LEA14 針對乾旱與鹽害對蛋白質造成的傷害；BoPEP4 是花椰菜的植物誘導肽，針對植物自身的防禦機制。",
+   "src": "description#Our solution",
+   "confidence": "stated"
+  },
+  {
+   "id": "plant-f32",
+   "label_en": "Protectant levels made by WB800",
+   "label_zh": "WB800 產生的保護劑量",
+   "value": "ACCD about 16 µg/mL; LEA14 and BoPep4 about 6 µg/mL",
+   "detail_en": "ELISA of culture supernatant; ACCD is about three times the other two. The WB800 control also gave signal, so these are apparent concentrations.",
+   "detail_zh": "培養上清液的 ELISA；ACCD 約為另外兩者的三倍。WB800 對照也有訊號，所以這是表觀濃度。",
+   "src": "results#ELISA: production of ACCD, LEA and BoPep4",
+   "confidence": "stated"
+  },
+  {
+   "id": "plant-f33",
+   "label_en": "Repeats admitted on the plant page",
+   "label_zh": "植物頁承認的重複次數",
+   "value": "Only ACCD heat on agar and in soil have two trials",
+   "detail_en": "The future-work text says most runs were not repeated, but other sections list trials for sets 5, 7 and 10.",
+   "detail_zh": "未來工作寫大部分實驗沒有重複，但其他段落列出 set 5、7、10 都有多次試驗。",
+   "src": "plant#Future work",
+   "confidence": "conflict"
+  },
+  {
+   "id": "plant-f34",
+   "label_en": "Night warming and rice yield",
+   "label_zh": "夜間升溫與稻米產量",
+   "value": "About 10% yield loss per 1 °C warmer night",
+   "detail_en": "From Peng et al. 2004 in the Philippines, cited for the field problem. ReLEAF's lab stress is a 37 °C incubator, not warm nights.",
+   "detail_zh": "引用 Peng 等人 2004 年在菲律賓的研究說明田間問題。ReLEAF 的實驗室逆境是 37 °C 培養箱，不是夜間升溫。",
+   "src": "geospatial-analysis#Global climate stress",
+   "confidence": "stated"
+  }
+ ],
+ "terms": [
+  {
+   "term": "Arabidopsis thaliana (Col-0)",
+   "kw_en": [
+    "small mustard",
+    "standard lab model",
+    "fast life cycle"
+   ],
+   "kw_zh": [
+    "小型芥菜",
+    "標準實驗模式",
+    "生命週期短"
+   ],
+   "def_en": "A small mustard plant used worldwide as the lab model for plant biology. ReLEAF used the Col-0 line on agar, in hydroponics and in soil to test whether a protectant helps under salt or heat.",
+   "def_zh": "全世界通用的植物模式生物，是一種小型芥菜。ReLEAF 使用 Col-0 品系，在瓊脂、水耕與土壤中測試保護劑在鹽或熱逆境下是否有幫助。",
+   "cat": "plant",
+   "src": "plant"
+  },
+  {
+   "term": "Abiotic stress",
+   "kw_en": [
+    "non-living cause",
+    "salt and heat",
+    "cuts yield"
+   ],
+   "kw_zh": [
+    "非生物性因素",
+    "鹽與高溫",
+    "降低產量"
+   ],
+   "def_en": "Plant damage caused by the environment, not by a pathogen: here salt and heat. ReLEAF tested only these two; drought and pH stress were not tested.",
+   "def_zh": "由環境而非病原造成的植物傷害，這裡指鹽與高溫。ReLEAF 只測了這兩種，沒有測乾旱或 pH 逆境。",
+   "cat": "plant",
+   "src": "plant"
+  },
+  {
+   "term": "Stratification",
+   "kw_en": [
+    "4 days at 4 °C",
+    "synchronises germination",
+    "breaks dormancy"
+   ],
+   "kw_zh": [
+    "4 °C 四天",
+    "讓發芽同步",
+    "解除休眠"
+   ],
+   "def_en": "A cold, dark period for seeds before growth. It lifts dormancy so seeds germinate together, which keeps differences between plants from coming from uneven germination.",
+   "def_zh": "種子生長前的低溫黑暗處理。它解除休眠，讓種子同時發芽，避免組間差異來自發芽不整齊。",
+   "cat": "plant",
+   "src": "plant"
+  },
+  {
+   "term": "Agar plate assay",
+   "kw_en": [
+    "½ MS agar",
+    "controlled",
+    "fast screening"
+   ],
+   "kw_zh": [
+    "½ MS 培養基",
+    "高度控制",
+    "快速篩選"
+   ],
+   "def_en": "Seedlings grown on gel medium with nutrients. It gives uniform nutrients and exact stress, so ReLEAF used it to screen protectants first. Round plates hold about 40 seedlings, vertical square plates 9 to 10.",
+   "def_zh": "幼苗長在含營養的膠體培養基上，養分一致、逆境精準，所以 ReLEAF 先用它篩選保護劑。圓盤約 40 株，方形直立盤 9 至 10 株。",
+   "cat": "plant",
+   "src": "plant"
+  },
+  {
+   "term": "Hydroponics",
+   "kw_en": [
+    "roots in solution",
+    "tube rack",
+    "floating plate"
+   ],
+   "kw_zh": [
+    "根在培養液中",
+    "試管架",
+    "漂浮板"
+   ],
+   "def_en": "Growing plants with roots in nutrient solution. It sits between agar and soil and mimics delivery through circulating water. ReLEAF moved from tip boxes to tube racks because plants grew better there.",
+   "def_zh": "根泡在營養液中的栽培法，介於瓊脂與土壤之間，能模擬透過循環水給藥。ReLEAF 後來從 tip box 改用試管架，因為植物長得比較好。",
+   "cat": "plant",
+   "src": "hardware-hydroponics"
+  },
+  {
+   "term": "Soil pot assay",
+   "kw_en": [
+    "real matrix",
+    "2-week-old plants",
+    "top drench"
+   ],
+   "kw_zh": [
+    "真實介質",
+    "兩週大植株",
+    "由上淋洗"
+   ],
+   "def_en": "Arabidopsis in pots to test protectants where salt moves and binds differently. ReLEAF used 14-day-old plants for salt and 10-day-old for heat, with a 100, 200, 300 mM NaCl drench.",
+   "def_zh": "把阿拉伯芥種在盆中，測試保護劑在鹽的移動與吸附都不同的環境。鹽害用 14 天大植株、熱害用 10 天大，以 100、200、300 mM NaCl 淋洗。",
+   "cat": "plant",
+   "src": "plant"
+  },
+  {
+   "term": "Pre-, co- and post-treatment",
+   "kw_en": [
+    "day -1, 0, +1",
+    "farmer timing",
+    "forecast link"
+   ],
+   "kw_zh": [
+    "前一天、當天、後一天",
+    "農民施用時機",
+    "連結預測"
+   ],
+   "def_en": "Giving the protectant one day before, with, or one day after the stress. It models a farmer acting on a forecast, on arrival of stress, or after damage, and tests whether prediction is needed.",
+   "def_zh": "在逆境前一天、同時、或後一天給保護劑。模擬農民依預報、逆境來臨時、或受害後施用，用來檢驗是否需要預測。",
+   "cat": "plant",
+   "src": "plant"
+  },
+  {
+   "term": "Thermo-priming",
+   "kw_en": [
+    "37 °C for 5 days",
+    "then recovery",
+    "not heat shock"
+   ],
+   "kw_zh": [
+    "37 °C 五天",
+    "再恢復",
+    "不是熱休克"
+   ],
+   "def_en": "A prolonged, moderate heat exposure followed by recovery at normal temperature. ReLEAF copied it from Auverlot et al. because it resembles slow warming in fields better than a sudden heat shock.",
+   "def_zh": "持續而溫和的高溫處理，之後回到正常溫度恢復。ReLEAF 參考 Auverlot 等人，因為它比突然的熱休克更像田間緩慢升溫。",
+   "cat": "plant",
+   "src": "plant"
+  },
+  {
+   "term": "NaCl stress (osmotic and ionic)",
+   "kw_en": [
+    "water uptake blocked",
+    "toxic ions",
+    "root zone"
+   ],
+   "kw_zh": [
+    "吸水受阻",
+    "離子毒害",
+    "根圈"
+   ],
+   "def_en": "Salt stress hurts a plant in two ways: it lowers water uptake and lets toxic sodium build up. ReLEAF applied NaCl in agar, by drench on agar, or by drenching soil.",
+   "def_zh": "鹽逆境用兩種方式傷害植物：降低吸水，並讓有毒的鈉離子累積。ReLEAF 把 NaCl 混入培養基、淋在瓊脂上，或淋在土壤中。",
+   "cat": "plant",
+   "src": "plant"
+  },
+  {
+   "term": "Halotropism",
+   "kw_en": [
+    "roots bend away",
+    "auxin",
+    "salt avoidance"
+   ],
+   "kw_zh": [
+    "根彎離鹽",
+    "生長素",
+    "避鹽反應"
+   ],
+   "def_en": "Roots growing away from salt, driven by auxin redistribution in the root tip. ReLEAF saw it in set 4 and used it as evidence that the salt treatment really reached the seedlings.",
+   "def_zh": "根往遠離鹽的方向生長，由根尖生長素重新分配驅動。ReLEAF 在 set 4 看到它，並用來證明鹽處理確實作用在幼苗上。",
+   "cat": "plant",
+   "src": "plant"
+  },
+  {
+   "term": "Chlorosis",
+   "kw_en": [
+    "yellow or white leaves",
+    "chlorophyll loss",
+    "stress sign"
+   ],
+   "kw_zh": [
+    "葉片黃白化",
+    "葉綠素流失",
+    "逆境徵兆"
+   ],
+   "def_en": "Leaves turning yellow or white because chlorophyll breaks down. It was the main visible sign of salt and heat damage in ReLEAF plates, and the reason chlorophyll became a readout.",
+   "def_zh": "葉綠素分解使葉片變黃或變白。它是 ReLEAF 平板上鹽害與熱害最主要的可見徵兆，也是選用葉綠素當指標的原因。",
+   "cat": "plant",
+   "src": "plant"
+  },
+  {
+   "term": "Anthocyanin",
+   "kw_en": [
+    "purple-red pigment",
+    "stress colour",
+    "visual score"
+   ],
+   "kw_zh": [
+    "紫紅色素",
+    "逆境顏色",
+    "目視記錄"
+   ],
+   "def_en": "A red-purple pigment plants build under stress. ReLEAF recorded it by eye, and it also appeared in unstressed plants given BoPEP4 or too much bacterial culture.",
+   "def_zh": "植物受逆境時累積的紫紅色素。ReLEAF 用肉眼記錄；未受逆境但給了 BoPEP4 或過多菌液的植株也出現了它。",
+   "cat": "plant",
+   "src": "plant"
+  },
+  {
+   "term": "Chlorophyll a+b extraction",
+   "kw_en": [
+    "80% acetone",
+    "A645 and A663",
+    "Arnon equation"
+   ],
+   "kw_zh": [
+    "80% 丙酮",
+    "A645 與 A663",
+    "Arnon 公式"
+   ],
+   "def_en": "Extract pigment from whole seedlings in 80% acetone, read absorbance at 645 and 663 nm, and compute total chlorophyll. It is ReLEAF's main number for stress damage and rescue.",
+   "def_zh": "用 80% 丙酮從整株幼苗萃取色素，讀 645 與 663 nm 吸光值並算出總葉綠素。這是 ReLEAF 衡量逆境傷害與拯救的主要數字。",
+   "cat": "assay",
+   "src": "plant"
+  },
+  {
+   "term": "Fresh-weight normalisation",
+   "kw_en": [
+    "per gram",
+    "inflates values",
+    "use total instead"
+   ],
+   "kw_zh": [
+    "每克鮮重",
+    "會被放大",
+    "改看總量"
+   ],
+   "def_en": "Dividing chlorophyll by fresh weight. When stress kills most biomass, the small denominator makes damaged plants look greener. ReLEAF therefore reads total chlorophyll in the extract in heat and severe-salt sets.",
+   "def_zh": "把葉綠素除以鮮重。逆境讓生物量大減時，分母變小，受損植株反而看起來更綠。因此 ReLEAF 在熱逆境與重度鹽害組改看萃取液中的總量。",
+   "cat": "assay",
+   "src": "plant"
+  },
+  {
+   "term": "Primary root length (ImageJ)",
+   "kw_en": [
+    "hand-traced",
+    "vertical plates",
+    "growth inhibition"
+   ],
+   "kw_zh": [
+    "手動描繪",
+    "直立盤",
+    "生長抑制"
+   ],
+   "def_en": "Length of the main root measured from photographs by tracing it in ImageJ. Vertical plates let roots grow along a surface; the readout tracks how much stress stops growth.",
+   "def_zh": "用 ImageJ 在照片上描繪主根而得的長度。直立盤讓根沿著表面生長；此指標反映逆境抑制生長的程度。",
+   "cat": "assay",
+   "src": "plant"
+  },
+  {
+   "term": "Fresh weight",
+   "kw_en": [
+    "whole seedling",
+    "biomass",
+    "one balance reading"
+   ],
+   "kw_zh": [
+    "整株幼苗",
+    "生物量",
+    "天平讀值"
+   ],
+   "def_en": "The weight of harvested seedlings before drying. It tracks accumulated biomass. Trehalose and several treatments raised chlorophyll without raising fresh weight.",
+   "def_zh": "收成後未乾燥的幼苗重量，反映累積的生物量。trehalose 與數種處理能提高葉綠素，卻沒有提高鮮重。",
+   "cat": "assay",
+   "src": "plant"
+  },
+  {
+   "term": "Untreated, mock and negative controls",
+   "kw_en": [
+    "no protectant",
+    "equal liquid",
+    "TB or WB800"
+   ],
+   "kw_zh": [
+    "不含保護劑",
+    "等量液體",
+    "TB 或 WB800"
+   ],
+   "def_en": "Groups without protectant that get the same liquid volume (sterile water, TB medium, or WB800 culture). They separate the protectant's effect from the effect of the liquid or the culture.",
+   "def_zh": "不給保護劑但給等量液體（無菌水、TB 培養基或 WB800 菌液）的組別，用來把保護劑本身的效果與液體或菌液的影響分開。",
+   "cat": "assay",
+   "src": "plant"
+  },
+  {
+   "term": "Technical vs independent replicate",
+   "kw_en": [
+    "same sample re-read",
+    "new experiment",
+    "n problem"
+   ],
+   "kw_zh": [
+    "同樣本重讀",
+    "重新做實驗",
+    "n 的問題"
+   ],
+   "def_en": "A technical replicate rereads one sample, such as three plate wells. An independent replicate repeats the whole experiment. ReLEAF's plant page says it needs at least three independent replicates per condition.",
+   "def_zh": "技術重複是重複讀同一個樣本（例如三個孔）；獨立重複是整個實驗重做。ReLEAF 植物頁承認每個條件至少需要三次獨立重複。",
+   "cat": "assay",
+   "src": "plant"
+  },
+  {
+   "term": "Mean ± SEM and asterisks",
+   "kw_en": [
+    "error bars",
+    "P-value stars",
+    "test unnamed"
+   ],
+   "kw_zh": [
+    "誤差線",
+    "P 值星號",
+    "未寫檢定"
+   ],
+   "def_en": "SEM is the standard error of the mean, drawn as error bars. Asterisks mark P below 0.05 to 0.0001. The plant page does not say which statistical test produced them.",
+   "def_zh": "SEM 是平均值的標準誤，畫成誤差線。星號代表 P 小於 0.05 至 0.0001。植物頁沒有寫是哪種統計檢定產生的。",
+   "cat": "assay",
+   "src": "plant"
+  },
+  {
+   "term": "Ethylene",
+   "kw_en": [
+    "stress hormone",
+    "slows roots",
+    "made from ACC"
+   ],
+   "kw_zh": [
+    "逆境荷爾蒙",
+    "抑制根伸長",
+    "由 ACC 合成"
+   ],
+   "def_en": "A gas hormone plants make more of under stress. Too much stops root growth and speeds ageing. ReLEAF never measured ethylene; it relies on literature for the link to ACC deaminase.",
+   "def_zh": "植物在逆境下會增產的氣體荷爾蒙，過量會抑制根生長並加速老化。ReLEAF 沒有量測乙烯，兩者關聯依賴文獻。",
+   "cat": "biology",
+   "src": "plant"
+  },
+  {
+   "term": "ACC (precursor)",
+   "kw_en": [
+    "ethylene precursor",
+    "made under stress",
+    "cleaved by ACCD"
+   ],
+   "kw_zh": [
+    "乙烯前驅物",
+    "逆境下累積",
+    "被 ACCD 分解"
+   ],
+   "def_en": "1-aminocyclopropane-1-carboxylic acid, the compound a plant turns into ethylene. Lowering ACC is the way ACC deaminase is meant to reduce stress ethylene.",
+   "def_zh": "1-aminocyclopropane-1-carboxylic acid，植物把它轉成乙烯。降低 ACC 就是 ACC deaminase 想減少逆境乙烯的方式。",
+   "cat": "biology",
+   "src": "plant"
+  },
+  {
+   "term": "ACC deaminase (ACCD)",
+   "kw_en": [
+    "cuts ACC",
+    "PLP-dependent",
+    "made by PGPB"
+   ],
+   "kw_zh": [
+    "分解 ACC",
+    "需要 PLP",
+    "促生菌常有"
+   ],
+   "def_en": "An enzyme from many plant growth-promoting bacteria that breaks ACC into ammonia and alpha-ketobutyrate. It is the protectant ReLEAF carried to the bioreactor and sprayed on shoots in the plant assays.",
+   "def_zh": "許多植物促生菌具有的酵素，把 ACC 分解成氨與 α-酮丁酸。它是 ReLEAF 帶進生物反應器的保護劑，植物實驗中噴在地上部。",
+   "cat": "biology",
+   "src": "description"
+  },
+  {
+   "term": "PLP (pyridoxal phosphate)",
+   "kw_en": [
+    "ACCD coenzyme",
+    "added with enzyme",
+    "boosts activity"
+   ],
+   "kw_zh": [
+    "ACCD 輔酶",
+    "與酵素一起加",
+    "提高活性"
+   ],
+   "def_en": "The vitamin B6 cofactor ACC deaminase needs. In ReLEAF's DNPH assay, samples with PLP showed higher activity, so PLP was applied together with ACCD in hydroponics.",
+   "def_zh": "ACC deaminase 需要的維生素 B6 輔因子。DNPH 實驗中加 PLP 的樣品活性較高，所以水耕實驗把 PLP 與 ACCD 一起給。",
+   "cat": "biology",
+   "src": "results"
+  },
+  {
+   "term": "LEA14",
+   "kw_en": [
+    "late embryogenesis abundant",
+    "protects proteins",
+    "dry and salt damage"
+   ],
+   "kw_zh": [
+    "胚胎晚期豐富蛋白",
+    "保護蛋白質",
+    "乾旱與鹽害"
+   ],
+   "def_en": "A late embryogenesis abundant protein from Arabidopsis aimed at protein damage caused by drought and salt. ReLEAF tested it only on agar under salt, with the best chlorophyll at 75 mM NaCl.",
+   "def_zh": "阿拉伯芥的胚胎晚期豐富蛋白，目標是乾旱與鹽造成的蛋白質傷害。ReLEAF 只在瓊脂鹽害下測試，75 mM NaCl 時葉綠素保留最好。",
+   "cat": "biology",
+   "src": "description"
+  },
+  {
+   "term": "BoPEP4",
+   "kw_en": [
+    "broccoli elicitor peptide",
+    "triggers defences",
+    "harm without stress"
+   ],
+   "kw_zh": [
+    "花椰菜誘導肽",
+    "啟動防禦",
+    "無逆境時有害"
+   ],
+   "def_en": "A plant elicitor peptide from broccoli that is meant to switch on the plant's own defences. In ReLEAF tests post-treatment and 1/40 hydroponic doses helped, while co-treatment and no-stress plants were harmed.",
+   "def_zh": "花椰菜的植物誘導肽，目標是啟動植物自身防禦。ReLEAF 測試中事後處理與水耕 1/40 有幫助，同時處理與無逆境植株則受損。",
+   "cat": "biology",
+   "src": "plant"
+  },
+  {
+   "term": "PGPB (plant growth-promoting bacteria)",
+   "kw_en": [
+    "helpful soil microbes",
+    "ACC deaminase",
+    "inoculants"
+   ],
+   "kw_zh": [
+    "有益土壤菌",
+    "ACC deaminase",
+    "接種劑"
+   ],
+   "def_en": "Bacteria that help plants grow under stress, often by making ACC deaminase. ReLEAF copies one of their tools but delivers the protein, not live cells, to keep engineered bacteria out of the field.",
+   "def_zh": "在逆境下幫助植物生長的細菌，常靠產生 ACC deaminase。ReLEAF 借用其工具，但只送蛋白質、不送活菌，避免工程菌進入田間。",
+   "cat": "biology",
+   "src": "plant"
+  },
+  {
+   "term": "Trehalose and T6P",
+   "kw_en": [
+    "sugar protectant",
+    "growth arrest",
+    "protocol sample"
+   ],
+   "kw_zh": [
+    "糖類保護劑",
+    "生長停滯",
+    "流程樣品"
+   ],
+   "def_en": "A sugar that can protect cells from salt, but at 0.5 to 1 mM it can build trehalose-6-phosphate and stunt growth. ReLEAF used it only to validate the protocol, never in the circuit.",
+   "def_zh": "一種可保護細胞抵抗鹽的糖，但 0.5 至 1 mM 時可能累積 trehalose-6-phosphate 而抑制生長。ReLEAF 只用它驗證流程，從未放進電路。",
+   "cat": "plant",
+   "src": "plant"
+  },
+  {
+   "term": "CH Bio peptide",
+   "kw_en": [
+    "commercial product",
+    "1/500 dilution",
+    "undisclosed contents"
+   ],
+   "kw_zh": [
+    "商業產品",
+    "稀釋 1/500",
+    "成分未公開"
+   ],
+   "def_en": "A commercial plant-protection peptide from CH Biotech (正瀚生技) sold against abiotic stress. ReLEAF used it as a reference protectant to learn timing, not as evidence for a specific compound.",
+   "def_zh": "正瀚生技販售、用來抵抗非生物逆境的商業胜肽。ReLEAF 把它當參考保護劑來摸索施用時機，不能當作特定成分有效的證據。",
+   "cat": "plant",
+   "src": "plant"
+  },
+  {
+   "term": "Bioprotectant",
+   "kw_en": [
+    "protein or peptide",
+    "applied to plants",
+    "made on farm"
+   ],
+   "kw_zh": [
+    "蛋白或胜肽",
+    "施用於植物",
+    "在農場生產"
+   ],
+   "def_en": "A biological product that shields plants from stress. ReLEAF's are proteins secreted by Bacillus subtilis WB800, filtered at 0.22 µm and sprayed or added to the medium.",
+   "def_zh": "保護植物免於逆境的生物製品。ReLEAF 的保護劑是枯草桿菌 WB800 分泌的蛋白質，經 0.22 µm 過濾後噴灑或加入培養液。",
+   "cat": "plant",
+   "src": "plant"
+  },
+  {
+   "term": "Dilution factor (1/40)",
+   "kw_en": [
+    "culture dilution",
+    "not a true dose",
+    "volume confound"
+   ],
+   "kw_zh": [
+    "菌液稀釋倍數",
+    "不是真正劑量",
+    "體積混淆"
+   ],
+   "def_en": "How much the secreted-protein culture is diluted before dosing. In hydroponics culture volume was not equal across groups, so a dilution series cannot yet be read as a protein dose.",
+   "def_zh": "分泌蛋白的菌液給藥前的稀釋倍數。水耕實驗各組菌液體積不一致，所以稀釋系列還不能當成蛋白質劑量來讀。",
+   "cat": "plant",
+   "src": "plant"
+  },
+  {
+   "term": "WB800 culture control",
+   "kw_en": [
+    "no protectant",
+    "medium effect",
+    "dilute 16x"
+   ],
+   "kw_zh": [
+    "不含保護劑",
+    "培養液效應",
+    "稀釋 16 倍"
+   ],
+   "def_en": "Bacillus subtilis WB800 culture without the protectant gene, used to isolate the medium's effect. It stunted plants at strong dilutions, so cultures were diluted at least 16-fold.",
+   "def_zh": "不含保護劑基因的枯草桿菌 WB800 菌液，用來分離培養液本身的效果。濃度高時會抑制植物，所以菌液至少稀釋 16 倍。",
+   "cat": "plant",
+   "src": "plant"
+  },
+  {
+   "term": "Stress index (plant)",
+   "kw_en": [
+    "root, weight, chlorophyll",
+    "matched control",
+    "near 1 is healthy"
+   ],
+   "kw_zh": [
+    "根、重量、葉綠素",
+    "對照組比值",
+    "接近 1 為健康"
+   ],
+   "def_en": "A score comparing each measurement with the unstressed control from the same experiment: near 1 is like the control, near 0 is severe impairment. Original numbers are kept beside it.",
+   "def_zh": "把每項量測與同一實驗的未逆境對照相比的分數：接近 1 像對照，接近 0 表示嚴重受損。原始數據仍並列保留。",
+   "cat": "model",
+   "src": "plant"
+  },
+  {
+   "term": "Bolting and growth stage",
+   "kw_en": [
+    "rosette to flowering",
+    "senescence",
+    "variability"
+   ],
+   "kw_zh": [
+    "蓮座到開花",
+    "老化",
+    "變異"
+   ],
+   "def_en": "Bolting is the flower stem shooting up, which marks the move to flowering and ageing. One-month-old plants were near this stage, adding noise, so the soil window moved to 2-week-old plants.",
+   "def_zh": "抽苔是花莖竄出，代表進入開花與老化。一個月大的植株接近此階段而增加雜訊，因此土壤實驗改用兩週大的植株。",
+   "cat": "plant",
+   "src": "plant"
+  },
+  {
+   "term": "Transfer to field crop",
+   "kw_en": [
+    "lab model",
+    "rice canopy factor",
+    "not yet tested"
+   ],
+   "kw_zh": [
+    "實驗室模式",
+    "水稻冠層係數",
+    "尚未測試"
+   ],
+   "def_en": "Moving results from Arabidopsis to a farm crop. ReLEAF has no crop trial; its dose model uses a modeled rice canopy factor of 2.44 (range 1.68 to 3.52).",
+   "def_zh": "把阿拉伯芥的結果推到農作物。ReLEAF 沒有作物實驗；劑量模型使用模型估計的水稻冠層係數 2.44（範圍 1.68 至 3.52）。",
+   "cat": "plant",
+   "src": "plant"
+  },
+  {
+   "term": "Reactive oxygen species (ROS)",
+   "kw_en": [
+    "heat by-product",
+    "cell damage",
+    "recovery step"
+   ],
+   "kw_zh": [
+    "高溫副產物",
+    "細胞損傷",
+    "恢復階段"
+   ],
+   "def_en": "Reactive molecules that build up in cells under heat. The heat assay's recovery period lets the team watch how plants clear them, which is why post-treatment was given after heat ended.",
+   "def_zh": "高溫下在細胞中累積的活性分子。熱逆境實驗的恢復期讓團隊觀察植物如何清除它們，這也是事後處理安排在高溫結束後的原因。",
+   "cat": "biology",
+   "src": "plant"
+  }
+ ],
+ "questions": [
+  {
+   "q_en": "Why did you use Arabidopsis as your model plant?",
+   "q_zh": "你們為什麼選阿拉伯芥當模式植物？",
+   "type": "design",
+   "tier": "A",
+   "pages": [
+    "plant",
+    "description"
+   ],
+   "seat": "plant",
+   "backup": "ihp",
+   "kw_en": [
+    "standard lab model",
+    "three systems",
+    "not a crop"
+   ],
+   "kw_zh": [
+    "標準模式植物",
+    "三種系統",
+    "不是作物"
+   ],
+   "a_en": "Arabidopsis thaliana is the standard laboratory model plant, small and quick to grow, and we used the Col-0 line. NTU's Prof. Cheng gave us seeds and showed us how her group grows it. We ran it on agar, in hydroponics and in soil with the same six steps. The honest limit is that it is not a crop. We have not tested rice or tomato, so we call this a lab proof of concept.",
+   "a_zh": "阿拉伯芥是標準的實驗室模式植物，體型小、長得快，我們用的是 Col-0 品系。台大鄭教授給了我們種子，也教我們她實驗室怎麼種。我們在瓊脂、水耕和土壤三種系統用同一套六步驟。誠實的限制是它不是作物，我們沒有測過水稻或番茄，所以這只能算實驗室的概念驗證。",
+   "trap_en": "Claiming Arabidopsis proves the protectant works on rice or tomato.",
+   "trap_zh": "說阿拉伯芥的結果證明保護劑在水稻或番茄上也有效。",
+   "basis": "like IISER-Kolkata 2025: why use __ as your model organism?"
+  },
+  {
+   "q_en": "Which stresses did you test, and how did you apply them?",
+   "q_zh": "你們測了哪些逆境？怎麼施加？",
+   "type": "fact",
+   "tier": "A",
+   "pages": [
+    "plant"
+   ],
+   "seat": "plant",
+   "backup": "ihp",
+   "kw_en": [
+    "salt and heat",
+    "NaCl on day 0",
+    "37 °C five days"
+   ],
+   "kw_zh": [
+    "鹽與熱",
+    "第 0 天施鹽",
+    "37 °C 五天"
+   ],
+   "a_en": "Two stresses: salt and heat. For salt, NaCl went into the agar or was drenched on at a set concentration on day 0, and in soil we drenched 100, then 200, then 300 mM. For heat, seedlings sat at 37 °C for five days and then recovered for five days at 22 °C. We did not test drought or pH stress.",
+   "a_zh": "兩種逆境：鹽與高溫。鹽害是在第 0 天把 NaCl 混入培養基或用淋的方式給予固定濃度，土壤則依序淋 100、200、300 mM。熱害是把幼苗放在 37 °C 五天，再回到 22 °C 恢復五天。我們沒有測乾旱或 pH 逆境。",
+   "trap_en": "Saying drought was tested because CH Bio peptide is a drought product.",
+   "trap_zh": "因為 CH Bio 是抗旱產品就說有測乾旱。",
+   "basis": "recorded pattern: what exactly did you measure / how did you apply it"
+  },
+  {
+   "q_en": "What did you measure on the plants?",
+   "q_zh": "你們在植物上量測什麼？",
+   "type": "fact",
+   "tier": "A",
+   "pages": [
+    "plant",
+    "geospatial-analysis"
+   ],
+   "seat": "plant",
+   "backup": "wet2",
+   "kw_en": [
+    "chlorophyll",
+    "fresh weight",
+    "root length"
+   ],
+   "kw_zh": [
+    "葉綠素",
+    "鮮重",
+    "主根長度"
+   ],
+   "a_en": "Three numbers. Chlorophyll from an 80% acetone extract read at 645 and 663 nm, fresh weight of the harvested seedlings, and primary root length traced by hand in ImageJ. Leaf colour, anthocyanin and bleaching were recorded by eye. We did not score germination rate or a wilting scale. Leaf area stays qualitative because leaves overlap.",
+   "a_zh": "三個數字。葉綠素用 80% 丙酮萃取後讀 645 與 663 nm，收成後幼苗的鮮重，以及用 ImageJ 手動描繪的主根長度。葉色、花青素與白化用肉眼記錄。我們沒有計算發芽率或萎凋分級。葉面積因為葉片重疊，只能做質性描述。",
+   "trap_en": "Listing germination or a wilting score, which the wiki does not report.",
+   "trap_zh": "把發芽率或萎凋評分說成有做，但維基上沒有。",
+   "basis": "recorded pattern: which readouts and why"
+  },
+  {
+   "q_en": "What is each of your three protectants meant to do in the plant?",
+   "q_zh": "你們三種保護劑各自想在植物裡做什麼？",
+   "type": "fact",
+   "tier": "A",
+   "pages": [
+    "description",
+    "plant"
+   ],
+   "seat": "plant",
+   "backup": "dry",
+   "kw_en": [
+    "ACCD cuts ethylene",
+    "LEA14 protects proteins",
+    "BoPEP4 defences"
+   ],
+   "kw_zh": [
+    "ACCD 降乙烯",
+    "LEA14 護蛋白",
+    "BoPEP4 防禦"
+   ],
+   "a_en": "ACC deaminase breaks down ACC, the precursor of ethylene, so a stressed plant makes less of the stress hormone. LEA14 is aimed at the damage drought and salt do to proteins. BoPEP4 is a broccoli elicitor peptide meant to switch on the plant's own defences. ACC deaminase is the one carried to the reactor. We never measured ethylene in the plants.",
+   "a_zh": "ACC deaminase 分解乙烯的前驅物 ACC，讓受逆境的植物少產生這個壓力荷爾蒙。LEA14 針對乾旱與鹽害對蛋白質的傷害。BoPEP4 是花椰菜的誘導肽，想啟動植物自己的防禦。ACC deaminase 是我們帶進反應器的那一個。我們沒有在植物上量過乙烯。",
+   "trap_en": "Saying ethylene was measured, or that all three were integrated into the circuit.",
+   "trap_zh": "說有量乙烯，或說三個都已整合進電路。",
+   "basis": "recorded pattern: mechanism of your protein"
+  },
+  {
+   "q_en": "Why 100 mM NaCl as your working stress?",
+   "q_zh": "為什麼把 100 mM NaCl 當作主要逆境？",
+   "type": "design",
+   "tier": "A",
+   "pages": [
+    "plant"
+   ],
+   "seat": "plant",
+   "backup": "dry",
+   "kw_en": [
+    "strong but not lethal",
+    "root 74.95 to 1.36",
+    "250 too harsh"
+   ],
+   "kw_zh": [
+    "強但不致死",
+    "根長 74.95 到 1.36",
+    "250 太強"
+   ],
+   "a_en": "In pretests 100 mM NaCl gave a strong stress response but did not kill the seedlings, so a rescue could still show. Our salt ladder in set 6 had root length falling from 74.95 mm at 0 to 11.00 at 100 and 1.36 mm at 150. At 250 mM leaves bleached within three days. In soil the drench needed 300 mM before stress appeared.",
+   "a_zh": "前測發現 100 mM NaCl 會造成明顯逆境但不會致死，所以仍看得到拯救效果。set 6 的鹽度梯度中，主根長從 0 mM 的 74.95 mm 降到 100 mM 的 11.00 mm 和 150 mM 的 1.36 mm。250 mM 時葉片三天內白化。土壤淋洗則要到 300 mM 才出現逆境。",
+   "trap_en": "Giving one salt number for every system; soil needed 300 mM.",
+   "trap_zh": "所有系統都只講一個鹽濃度；土壤要 300 mM。",
+   "basis": "recorded pattern: why this concentration"
+  },
+  {
+   "q_en": "Why test the protectant before, with and after the stress?",
+   "q_zh": "為什麼要測壓力前、同時、之後三種給藥時機？",
+   "type": "design",
+   "tier": "A",
+   "pages": [
+    "plant",
+    "measurement"
+   ],
+   "seat": "plant",
+   "backup": "dry",
+   "kw_en": [
+    "farmer timing",
+    "day -1, 0, +1",
+    "forecast needed?"
+   ],
+   "kw_zh": [
+    "農民施用時機",
+    "前一天、當天、後一天",
+    "需要預測嗎"
+   ],
+   "a_en": "It copies what a farmer might do: act on a forecast, act when stress arrives, or rescue after damage. We gave the protectant one day before, together with, or one day after the stress. The answer decides whether prediction and our reactor are needed at all, because a pre-treatment only helps if you know stress is coming.",
+   "a_zh": "這模擬農民可能的做法：依預報提前施用、逆境來時施用，或受害後搶救。我們在逆境前一天、同時、後一天給保護劑。結果決定我們是否真的需要預測和反應器，因為預先處理只有在知道逆境要來時才有用。",
+   "trap_en": "Presenting timing as already solved; our runs disagree.",
+   "trap_zh": "把時機說成已經解決，但我們的結果彼此不一致。",
+   "basis": "like Munich 2025: why did you choose this design"
+  },
+  {
+   "q_en": "Why did you use agar, hydroponics and soil instead of one system?",
+   "q_zh": "為什麼用瓊脂、水耕和土壤，而不是只用一種？",
+   "type": "design",
+   "tier": "A",
+   "pages": [
+    "plant"
+   ],
+   "seat": "plant",
+   "backup": "hw",
+   "kw_en": [
+    "control vs realism",
+    "screen then confirm",
+    "delivery route"
+   ],
+   "kw_zh": [
+    "控制與真實",
+    "先篩再驗證",
+    "給藥途徑"
+   ],
+   "a_en": "Each trades control for realism. Agar gives uniform nutrients and exact stress, so we screened there first. Hydroponics sits between and matches delivery through circulating water. Soil is closest to a farm. The limit is that the systems did not get the same tests: only ACC deaminase and BoPEP4 reached hydroponics, and soil only saw ACC deaminase.",
+   "a_zh": "每一種在控制與真實之間取捨。瓊脂養分一致、逆境精準，所以先在那裡篩選。水耕介於中間，也貼近透過循環水給藥。土壤最接近農田。限制是三個系統做的測試不一樣：水耕只有 ACC deaminase 和 BoPEP4，土壤只測了 ACC deaminase。",
+   "trap_en": "Saying the same assay was repeated across all three systems.",
+   "trap_zh": "說同一個實驗在三個系統都重複過。",
+   "basis": "recorded pattern: why this platform"
+  },
+  {
+   "q_en": "Why did you move soil tests from one-month-old to two-week-old plants?",
+   "q_zh": "為什麼把土壤實驗從一個月大改成兩週大的植株？",
+   "type": "design",
+   "tier": "B",
+   "pages": [
+    "plant"
+   ],
+   "seat": "plant",
+   "backup": "ihp",
+   "kw_en": [
+    "near bolting",
+    "baseline noise",
+    "Prof. Cheng advice"
+   ],
+   "kw_zh": [
+    "接近抽苔",
+    "基線雜訊",
+    "鄭教授建議"
+   ],
+   "a_en": "One-month-old plants are near flowering and the lower leaves start to age, which adds noise to a stress assay and can hide a real difference. On Prof. Cheng's advice we moved to two-week-old plants, which are still in active leaf growth and give more uniform tissue. We still used the same readouts.",
+   "a_zh": "一個月大的植株接近開花，下層葉片開始老化，會替逆境實驗增加雜訊，可能蓋掉真正的差異。依鄭教授建議，我們改用兩週大的植株，它們還在活躍長葉階段，組織比較一致。量測指標維持不變。",
+   "trap_en": "Saying the age change was our own idea; it came from Prof. Cheng.",
+   "trap_zh": "說年齡調整是自己想到的；其實是鄭教授建議。",
+   "basis": "like HPi-Potsdam 2025: expert judgement behind your choice"
+  },
+  {
+   "q_en": "Why did you spray ACC deaminase on the shoots instead of the roots?",
+   "q_zh": "為什麼把 ACC deaminase 噴在地上部而不是根部？",
+   "type": "design",
+   "tier": "B",
+   "pages": [
+    "plant"
+   ],
+   "seat": "plant",
+   "backup": "hw",
+   "kw_en": [
+    "large enzyme",
+    "poor root uptake",
+    "three sprays"
+   ],
+   "kw_zh": [
+    "大分子酵素",
+    "根吸收差",
+    "三次噴灑"
+   ],
+   "a_en": "Protectants are usually given through the roots, but ACC deaminase is a large enzyme and we expected poor root uptake, so we sprayed it, three sprays per plate. One trial grew mold and we suspected the spray nozzle, so we cleaned it with sterile water, 75% ethanol and sterile water again. We did not test root uptake.",
+   "a_zh": "保護劑通常由根部給，但 ACC deaminase 是大分子酵素，我們預期根吸收不好，所以改用噴的，每盤三次。有一次實驗長黴菌，我們懷疑是噴頭，就用無菌水、75% 酒精、再用無菌水清洗。我們沒有測根部吸收。",
+   "trap_en": "Claiming the enzyme was shown to be taken up by shoots.",
+   "trap_zh": "說已證明酵素被地上部吸收。",
+   "basis": "recorded pattern: why this application method"
+  },
+  {
+   "q_en": "How many plants per group, and how many replicates did you run?",
+   "q_zh": "每組有幾株植物？重複了幾次？",
+   "type": "validate",
+   "tier": "A",
+   "pages": [
+    "plant",
+    "results"
+   ],
+   "seat": "plant",
+   "backup": "dry",
+   "kw_en": [
+    "n = 9, 25, 40",
+    "pooled extraction",
+    "few repeats"
+   ],
+   "kw_zh": [
+    "n = 9、25、40",
+    "合併萃取",
+    "重複少"
+   ],
+   "a_en": "Per condition we used 9 seedlings on vertical plates, 25 in set 7 trial 1, and 40 on round plates, counted per extraction. Chlorophyll wells were read in triplicate. Most sets ran once. Set 7 had three trials, but the plant page itself says we need at least three independent replicates, so our results are preliminary.",
+   "a_zh": "每個處理在直立盤用 9 株，set 7 trial 1 用 25 株，圓盤用 40 株，以每次萃取計算。葉綠素讀值每樣品三個孔。大部分實驗只做一次。set 7 有三次試驗，但植物頁自己說每個條件至少需要三次獨立重複，所以我們的結果是初步的。",
+   "trap_en": "Treating three plate wells as three replicates.",
+   "trap_zh": "把盤上三個孔當成三次重複。",
+   "basis": "like Munich 2025: do you do any replicates?"
+  },
+  {
+   "q_en": "What controls did you run?",
+   "q_zh": "你們有哪些對照組？",
+   "type": "validate",
+   "tier": "A",
+   "pages": [
+    "plant"
+   ],
+   "seat": "plant",
+   "backup": "wet2",
+   "kw_en": [
+    "four-arm design",
+    "equal liquid",
+    "culture control"
+   ],
+   "kw_zh": [
+    "四組設計",
+    "等量液體",
+    "菌液對照"
+   ],
+   "a_en": "Each set had an untreated control, stress only, protectant only, and stress plus protectant. On agar every group got the same liquid volume, using sterile water or TB medium, and in hydroponics we added a WB800 culture without the protectant. The limit: on agar the control was TB medium, not culture from the empty strain, and hydroponics showed that culture alone can harm plants.",
+   "a_zh": "每組實驗都有未處理對照、只有逆境、只有保護劑、逆境加保護劑。瓊脂上每組給等量液體，用無菌水或 TB 培養基，水耕則加入不含保護劑的 WB800 菌液。限制是：瓊脂實驗的對照是 TB 培養基，不是空菌株的培養液，而水耕顯示菌液本身可能傷害植物。",
+   "trap_en": "Saying every control matched the protectant preparation exactly.",
+   "trap_zh": "說所有對照都與保護劑製備完全對應。",
+   "basis": "recorded pattern: what were your controls"
+  },
+  {
+   "q_en": "What statistics did you use?",
+   "q_zh": "你們用了什麼統計方法？",
+   "type": "validate",
+   "tier": "A",
+   "pages": [
+    "plant",
+    "measurement"
+   ],
+   "seat": "plant",
+   "backup": "dry",
+   "kw_en": [
+    "mean ± SEM",
+    "P-value stars",
+    "test unnamed"
+   ],
+   "kw_zh": [
+    "平均值與 SEM",
+    "P 值星號",
+    "未寫檢定"
+   ],
+   "a_en": "Graphs show mean with SEM and asterisks from P below 0.05 up to 0.0001, made in Prism. Our plant page does not name the test, and the measurement page says some charts, such as the trehalose and heat pretest ones, had no significance testing. I would not claim more than the stars show, and I can describe the test only if I check the raw files.",
+   "a_zh": "圖表顯示平均值與 SEM，星號代表 P 小於 0.05 到 0.0001，用 Prism 繪製。植物頁沒有寫是哪種檢定，量測頁也說部分圖表（例如 trehalose 與熱逆境前測）沒有做顯著性檢定。我不會宣稱超過星號所顯示的，要說明檢定方法得先查原始檔。",
+   "trap_en": "Naming a test such as ANOVA when the wiki does not say.",
+   "trap_zh": "在維基沒寫的情況下說是 ANOVA 之類的檢定。",
+   "basis": "recorded pattern: statistics and significance"
+  },
+  {
+   "q_en": "How do you know ACC deaminase really rescued plants under salt?",
+   "q_zh": "你們怎麼知道 ACC deaminase 真的在鹽害下拯救了植物？",
+   "type": "validate",
+   "tier": "A",
+   "pages": [
+    "plant",
+    "results"
+   ],
+   "seat": "plant",
+   "backup": "wet2",
+   "kw_en": [
+    "70% more chlorophyll",
+    "one contaminated trial",
+    "needs repeats"
+   ],
+   "kw_zh": [
+    "多 70% 葉綠素",
+    "一次有污染的實驗",
+    "需要重複"
+   ],
+   "a_en": "In set 9, pre-treated plants at 100 mM NaCl held 1.74 against 1.03 mg per gram of chlorophyll, about 70% more, and had bigger rosettes. But that is one trial with nine seedlings per group and some contamination, and the page says the trend needs further trials. In soil at 300 mM, pre-treatment did not beat the control.",
+   "a_zh": "set 9 中，100 mM NaCl 下預先處理的植株葉綠素為每克 1.74 mg，對照為 1.03，約多 70%，蓮座也較大。但這只是一次實驗、每組九株、還有污染，頁面也說趨勢需要更多試驗。在土壤 300 mM 下，預先處理並沒有勝過對照。",
+   "trap_en": "Quoting 70% as a proven effect without the single-trial caveat.",
+   "trap_zh": "引用 70% 卻不提只有單次試驗。",
+   "basis": "like Munich 2025: replicates? plus how do you know"
+  },
+  {
+   "q_en": "How do you know your stress treatment actually reached the plants?",
+   "q_zh": "你們怎麼知道逆境處理真的作用在植物上？",
+   "type": "validate",
+   "tier": "A",
+   "pages": [
+    "plant"
+   ],
+   "seat": "plant",
+   "backup": "dry",
+   "kw_en": [
+    "untreated gradient",
+    "halotropism",
+    "drench vs accumulate"
+   ],
+   "kw_zh": [
+    "未處理梯度",
+    "向鹽性反應",
+    "淋洗對比累積"
+   ],
+   "a_en": "The untreated groups show it. Root length fell from 74.95 mm to 1.36 mm across 0 to 150 mM NaCl, leaves yellowed, and in set 4 roots bent away from the salt, called halotropism. In soil we compared two methods: top-down drench cut fresh weight about 64% compared with sub-irrigation, which barely stressed the plants. We did not measure salt around the roots.",
+   "a_zh": "未處理組本身就顯示了。主根長度在 0 到 150 mM NaCl 間從 74.95 mm 降到 1.36 mm，葉片變黃，set 4 還看到根彎離鹽，叫做向鹽性反應。土壤上我們比較了兩種方法：由上淋洗使鮮重比底部吸水法少約 64%，底部吸水幾乎沒有造成逆境。我們沒有量根周圍的鹽量。",
+   "trap_en": "Claiming soil salt dose is known; it was not measured.",
+   "trap_zh": "說知道土壤實際鹽量；其實沒有量。",
+   "basis": "recorded pattern: how do you know the stress worked"
+  },
+  {
+   "q_en": "Your trehalose result says 8.7-fold chlorophyll. Why should we trust that number?",
+   "q_zh": "你們 trehalose 的結果寫葉綠素增加 8.7 倍，為什麼要相信這個數字？",
+   "type": "validate",
+   "tier": "A",
+   "pages": [
+    "plant",
+    "measurement"
+   ],
+   "seat": "plant",
+   "backup": "dry",
+   "kw_en": [
+    "per-gram inflates",
+    "read total instead",
+    "also +3 cm root"
+   ],
+   "kw_zh": [
+    "每克會被放大",
+    "改看總量",
+    "根也多 3 cm"
+   ],
+   "a_en": "Be careful with it. That fold change is on the per-gram panel, and our own page warns that dividing by fresh weight inflates values when stress shrinks the plants. In heat, stressed seedlings lost about 95% of fresh weight yet looked greener per gram. The same set also shows about 3 cm more root, which does not depend on that division, but it is one set.",
+   "a_zh": "要小心看待。這個倍率來自每克鮮重的圖，而我們自己的頁面就警告，逆境讓植株變小時，除以鮮重會把數值放大。熱逆境中，受害幼苗鮮重掉了約 95%，每克葉綠素卻看起來更高。同一組也顯示根多約 3 cm，這不依賴除以鮮重，但仍只是一組實驗。",
+   "trap_en": "Repeating 8.7-fold as headline without the normalisation warning.",
+   "trap_zh": "把 8.7 倍當標題，不提鮮重標準化的警告。",
+   "basis": "recorded pattern: how do you know the result is real"
+  },
+  {
+   "q_en": "Is your hydroponic dilution series a real dose-response?",
+   "q_zh": "你們的水耕稀釋系列是真正的劑量反應嗎？",
+   "type": "validate",
+   "tier": "B",
+   "pages": [
+    "plant"
+   ],
+   "seat": "plant",
+   "backup": "wet2",
+   "kw_en": [
+    "volume not equal",
+    "culture harms plants",
+    "1/40 chosen"
+   ],
+   "kw_zh": [
+    "體積不一致",
+    "菌液會傷害植物",
+    "選定 1/40"
+   ],
+   "a_en": "Not yet. Dr. Peng pointed out we did not standardise the volume of bacterial culture added, so stronger doses also meant more culture, and we could not separate the enzyme from the culture. Culture alone harmed plants, so we diluted at least 16-fold and set 1/40 as the top dose. We list a fixed culture volume as the next step.",
+   "a_zh": "還不是。彭博士指出我們沒有統一加入的菌液體積，所以越濃的劑量也代表越多菌液，我們無法把酵素和菌液的影響分開。菌液本身會傷害植物，所以至少稀釋 16 倍，並把 1/40 訂為最高劑量。統一菌液體積是我們列出的下一步。",
+   "trap_en": "Calling 1/40, 1/60, 1/80 a dose-response curve.",
+   "trap_zh": "把 1/40、1/60、1/80 說成劑量反應曲線。",
+   "basis": "recorded pattern: dose and concentration choice"
+  },
+  {
+   "q_en": "How does your protectant compare with the commercial CH Bio peptide?",
+   "q_zh": "你們的保護劑和商業產品 CH Bio 胜肽比起來如何？",
+   "type": "compare",
+   "tier": "A",
+   "pages": [
+    "plant",
+    "hardware-hydroponics"
+   ],
+   "seat": "plant",
+   "backup": "biz",
+   "kw_en": [
+    "no head-to-head",
+    "timing differs",
+    "contents unknown"
+   ],
+   "kw_zh": [
+    "沒有直接比較",
+    "時機結果不同",
+    "成分不明"
+   ],
+   "a_en": "We did not run a direct head-to-head. CH Bio peptide, a commercial product from CH Biotech, was our reference to learn timing. On agar post-treatment worked best, but in the hydroponic pre-test co-treatment grew best. CH Biotech did not disclose its components, so we treat it as a product-level comparison, not evidence for a specific compound.",
+   "a_zh": "我們沒有做直接對比。CH Bio 胜肽是正瀚生技的商品，我們拿它當參考來摸索施用時機。瓊脂上事後處理最好，但水耕前測是同時處理長得最好。正瀚沒有公開成分，所以我們只當作產品層級的比較，不是特定化合物有效的證據。",
+   "trap_en": "Saying our protein beats the commercial product.",
+   "trap_zh": "說我們的蛋白質比商業產品好。",
+   "basis": "recorded pattern: why not use the existing product"
+  },
+  {
+   "q_en": "Why not just put the beneficial bacteria into the soil?",
+   "q_zh": "為什麼不直接把有益菌放進土壤？",
+   "type": "compare",
+   "tier": "B",
+   "pages": [
+    "description"
+   ],
+   "seat": "plant",
+   "backup": "ihp",
+   "kw_en": [
+    "first design",
+    "containment",
+    "protein not cells"
+   ],
+   "kw_zh": [
+    "最初設計",
+    "無法圍堵",
+    "送蛋白不送菌"
+   ],
+   "a_en": "That was our first design: engineered bacteria in the soil sensing stress with a DesK-DesR system. Professors and bioprocess experts told us two things were wrong: the bacteria could not be contained, and biological sensing was neither precise nor controllable. So we moved sensing to sensors and an AIoT model, and keep cells in a bioreactor so only the protein reaches the field.",
+   "a_zh": "那是我們最初的設計：把工程菌放進土壤，用 DesK-DesR 系統感測壓力。教授和生物製程專家指出兩個問題：細菌無法圍堵，而且生物感測不夠精準、也不好控制。所以我們把感測移到感測器和 AIoT 模型，細胞留在生物反應器裡，只有蛋白質到田間。",
+   "trap_en": "Pretending the soil-bacteria idea was never considered.",
+   "trap_zh": "假裝沒考慮過把菌放進土壤。",
+   "basis": "like Technion 2022: why not the simpler route"
+  },
+  {
+   "q_en": "Why not use trehalose, which worked at 5 mM, as your protectant?",
+   "q_zh": "trehalose 在 5 mM 有效，為什麼不用它當保護劑？",
+   "type": "compare",
+   "tier": "B",
+   "pages": [
+    "plant"
+   ],
+   "seat": "plant",
+   "backup": "dry",
+   "kw_en": [
+    "protocol sample only",
+    "narrow window",
+    "no biomass rescue"
+   ],
+   "kw_zh": [
+    "只是流程樣品",
+    "有效範圍窄",
+    "沒救回生物量"
+   ],
+   "a_en": "Trehalose was a commercial sample to validate our protocol, never part of the circuit. It only helped at 100 mM NaCl: no benefit at 75, too little at 150, and at 0.5 to 1 mM it slowed growth. In set 4 it did not restore fresh weight. Two trials of one set also gave opposite trends, so we left it out of the model.",
+   "a_zh": "trehalose 只是用來驗證流程的商業樣品，從來不是電路的一部分。它只在 100 mM NaCl 有幫助：75 mM 沒有效果，150 mM 不夠，0.5 到 1 mM 還會抑制生長。set 4 中它沒有救回鮮重。另外同一組的兩次試驗趨勢相反，所以我們沒有把它放進模型。",
+   "trap_en": "Presenting trehalose as one of our candidate products.",
+   "trap_zh": "把 trehalose 說成我們的候選產品。",
+   "basis": "recorded pattern: why not the alternative"
+  },
+  {
+   "q_en": "Would this work on rice or tomato?",
+   "q_zh": "這在水稻或番茄上有用嗎？",
+   "type": "boundary",
+   "tier": "A",
+   "pages": [
+    "plant",
+    "geospatial-analysis",
+    "description"
+   ],
+   "seat": "plant",
+   "backup": "dry",
+   "kw_en": [
+    "Arabidopsis only",
+    "rice factor modeled",
+    "soil is closest"
+   ],
+   "kw_zh": [
+    "只測阿拉伯芥",
+    "水稻係數是模型",
+    "土壤最接近"
+   ],
+   "a_en": "We do not know, because we only tested Arabidopsis. The nearest we got to a farm was soil pots. Rice appears in our dose model as a modeled canopy factor of 2.44 with a range of 1.68 to 3.52, and tomato is a target we chose from geospatial data. Measuring efficacy across crops and growth stages is the work in front of us.",
+   "a_zh": "我們不知道，因為只測過阿拉伯芥。最接近農田的是土壤盆栽。水稻在劑量模型裡只是一個模型估計的冠層係數 2.44，範圍 1.68 到 3.52，番茄則是我們從地理資料選的目標。跨作物與生長階段測量效果是接下來要做的。",
+   "trap_en": "Saying rice or tomato was tested.",
+   "trap_zh": "說水稻或番茄有測過。",
+   "basis": "like NUS 2021: what would you need to validate before a farmer could use this"
+  },
+  {
+   "q_en": "What about drought, or other stresses?",
+   "q_zh": "那乾旱或其他逆境呢？",
+   "type": "boundary",
+   "tier": "A",
+   "pages": [
+    "plant",
+    "description"
+   ],
+   "seat": "plant",
+   "backup": "ihp",
+   "kw_en": [
+    "salt and heat only",
+    "LEA14 aimed at drought",
+    "not tested"
+   ],
+   "kw_zh": [
+    "只測鹽與熱",
+    "LEA14 針對乾旱",
+    "沒測"
+   ],
+   "a_en": "We have not tested drought or pH stress. Our plant testing has focused on heat and salinity. LEA14 is meant for damage that drought and salt do to proteins, but we only ran it on agar under salt. CH Bio peptide is sold against drought, yet we used it under salt and heat. Drought would be a new assay.",
+   "a_zh": "我們沒有測乾旱或 pH 逆境，植物測試集中在高溫與鹽害。LEA14 的目標是乾旱與鹽對蛋白質的傷害，但我們只在瓊脂鹽害下測它。CH Bio 胜肽是賣來抗旱的，我們卻用在鹽與高溫。乾旱會是一個新的實驗。",
+   "trap_en": "Claiming LEA14 was shown to help under drought.",
+   "trap_zh": "說 LEA14 已證明對乾旱有效。",
+   "basis": "recorded pattern: have you considered other stresses"
+  },
+  {
+   "q_en": "If a farmer only treats after the damage shows, does it still help?",
+   "q_zh": "如果農民等到看到損害才處理，還有用嗎？",
+   "type": "boundary",
+   "tier": "B",
+   "pages": [
+    "plant",
+    "results"
+   ],
+   "seat": "plant",
+   "backup": "dry",
+   "kw_en": [
+    "mixed evidence",
+    "post helped on agar",
+    "post worst in soil heat"
+   ],
+   "kw_zh": [
+    "證據不一致",
+    "瓊脂事後有效",
+    "土壤熱害最差"
+   ],
+   "a_en": "Evidence is mixed. On agar, post-treatment gave the best chlorophyll for CH Bio peptide and rescued with BoPEP4, and helped ACC deaminase under heat in trial 2. In soil heat, post-treatment was the worst of the three, below the heat control, and in soil salt it gave only a limited gain. We cannot yet tell a farmer to wait.",
+   "a_zh": "證據不一致。在瓊脂上，事後處理使 CH Bio 胜肽的葉綠素最好，BoPEP4 也有拯救，ACC deaminase 在熱逆境 trial 2 也有幫助。在土壤熱害中，事後處理是三者中最差，低於熱逆境對照；土壤鹽害也只有有限的進步。我們還不能叫農民等。",
+   "trap_en": "Using the agar result alone to say post-treatment is enough.",
+   "trap_zh": "只用瓊脂結果就說事後處理就夠了。",
+   "basis": "recorded pattern: what if conditions differ"
+  },
+  {
+   "q_en": "Can the protectants hurt a plant that is not stressed?",
+   "q_zh": "保護劑會不會傷害沒有受逆境的植物？",
+   "type": "boundary",
+   "tier": "A",
+   "pages": [
+    "plant"
+   ],
+   "seat": "plant",
+   "backup": "wet2",
+   "kw_en": [
+    "BoPEP4 inhibits",
+    "culture harms",
+    "timing matters"
+   ],
+   "kw_zh": [
+    "BoPEP4 抑制",
+    "菌液傷害",
+    "時機有影響"
+   ],
+   "a_en": "Yes, some did. BoPEP4 co-treated plants grew worse than the mock control even without salt, and unstressed hydroponic plants showed anthocyanin at 1/40 to 1/100. The WB800 culture alone stunted plants, and ACC deaminase pre or co-treatment cut fresh weight in unstressed plants. Trehalose at 5 mM did not hurt unstressed plants.",
+   "a_zh": "有，部分會。BoPEP4 同時處理的植株即使沒有鹽也比模擬對照長得差，水耕未受逆境的植株在 1/40 到 1/100 出現花青素。單獨的 WB800 菌液就會抑制植物，ACC deaminase 預先或同時處理也讓未受逆境植株鮮重下降。5 mM trehalose 則沒有傷害未受逆境的植株。",
+   "trap_en": "Saying the protectants are harmless when no stress is present.",
+   "trap_zh": "說沒有逆境時保護劑是無害的。",
+   "basis": "like NUS 2021: what are the risks"
+  },
+  {
+   "q_en": "How did the plant data change your math model?",
+   "q_zh": "植物數據怎麼改變了你們的數學模型？",
+   "type": "integrate",
+   "tier": "A",
+   "pages": [
+    "plant",
+    "description"
+   ],
+   "seat": "plant",
+   "backup": "dry",
+   "kw_en": [
+    "salt calibration",
+    "applied dose",
+    "timing lead"
+   ],
+   "kw_zh": [
+    "鹽度校準",
+    "施用劑量",
+    "提前時間"
+   ],
+   "a_en": "Plant data enter the model at three points. The salt ladder sets the stress range, the sprayed dose, 1.67 mL on a 78.5 cm² plate, is scaled to a hectare, and the timing runs set how far ahead to produce. Trehalose was left out because its replicates were not independent. The limit: efficacy is unbounded, so money figures are drawn against efficacy, not at a measured value.",
+   "a_zh": "植物數據在三個地方進入模型。鹽度梯度設定逆境範圍，噴灑的劑量（78.5 cm² 平板上 1.67 mL）被換算成每公頃，時機實驗決定要提前多久生產。trehalose 因為重複不是獨立的，所以被排除。限制是：效果沒有上限約束，所以金額數字是對照不同效果來畫，不是用實測值。",
+   "trap_en": "Implying the model is fitted to our plant data; only some inputs come from it.",
+   "trap_zh": "暗示模型是用植物數據擬合的；其實只有部分輸入來自它。",
+   "basis": "like Great Bay 2025: model and real testing correlation"
+  },
+  {
+   "q_en": "How did outside experts change your plant protocol?",
+   "q_zh": "外部專家如何改變了你們的植物實驗流程？",
+   "type": "integrate",
+   "tier": "A",
+   "pages": [
+    "plant",
+    "hardware-hydroponics"
+   ],
+   "seat": "plant",
+   "backup": "ihp",
+   "kw_en": [
+    "Prof. Cheng",
+    "Verslues vertical plates",
+    "iFarm fewer transplants"
+   ],
+   "kw_zh": [
+    "鄭教授",
+    "Verslues 直立盤",
+    "iFarm 少移植"
+   ],
+   "a_en": "Prof. Cheng told us to start on agar, then led the two-week soil window and the three fixed timings. Dr. Verslues' vertical plates inspired our plate rack, though his gradual salt ramp was too mild. Yes Health iFarm taught us to minimise transplants, and we revised the float plate to thirteen seedlings. Dr. Peng caught the unequal culture volume.",
+   "a_zh": "鄭教授要我們先從瓊脂開始，並帶出兩週大的土壤實驗時窗與三個固定時機。Verslues 博士的直立盤啟發了我們的平板架，不過他建議的漸進加鹽太溫和。源鮮智慧農場教我們盡量減少移植，我們也把漂浮板改成十三株。彭博士抓到菌液體積不一致的問題。",
+   "trap_en": "Crediting only our own ideas.",
+   "trap_zh": "只說是自己的點子。",
+   "basis": "like HPi-Potsdam 2025: expert input that changed the work"
+  },
+  {
+   "q_en": "How did your hydroponic hardware change what the plant team could test?",
+   "q_zh": "你們的水耕硬體如何改變植物組能做的實驗？",
+   "type": "integrate",
+   "tier": "B",
+   "pages": [
+    "plant",
+    "hardware-hydroponics"
+   ],
+   "seat": "plant",
+   "backup": "hw",
+   "kw_en": [
+    "five prototypes",
+    "tip box and printed plate",
+    "moved to tube racks"
+   ],
+   "kw_zh": [
+    "五代原型",
+    "tip box 與印製板",
+    "改用試管架"
+   ],
+   "a_en": "Five prototypes fixed leaks, depth and fragile foam boards, ending with a pipette-tip box, a printed floating plate for thirteen seedlings, and a black outer box. The CH Bio peptide pre-tests ran in those boxes. Later runs moved to tube racks because contamination and poor growth persisted, so the final plate carried only the pre-tests.",
+   "a_zh": "五代原型解決了漏水、深度與易壞泡棉板的問題，最後是 tip box、可載十三株的印製漂浮板和黑色外盒。CH Bio 胜肽前測就是在這些盒子裡做的。後來因為污染與生長不良持續出現，改用試管架，所以最終的板只承載了前測實驗。",
+   "trap_en": "Saying the final plate carried all the hydroponic results.",
+   "trap_zh": "說最終的板產出了所有水耕結果。",
+   "basis": "recorded pattern: how did hardware serve the experiment"
+  },
+  {
+   "q_en": "Does your timing result support the forecast and sensor part of ReLEAF?",
+   "q_zh": "你們的時機結果支持 ReLEAF 的預測和感測器嗎？",
+   "type": "integrate",
+   "tier": "A",
+   "pages": [
+    "plant",
+    "results"
+   ],
+   "seat": "plant",
+   "backup": "dry",
+   "kw_en": [
+    "co-treatment failed",
+    "pre needs forecast",
+    "5.4 days to make"
+   ],
+   "kw_zh": [
+    "同時處理無效",
+    "預先處理需預測",
+    "5.4 天製造"
+   ],
+   "a_en": "Partly. In salt on agar, ACC deaminase and BoPEP4 did not rescue when given with the stress, so applying on arrival is not enough, and a pre-treatment needs a forecast. A forecast reaches three days but ten reactors need 5.4 days per hectare, so we must produce through the season. However post-treatment also worked sometimes, and soil heat favoured pre.",
+   "a_zh": "部分支持。在瓊脂鹽害中，ACC deaminase 和 BoPEP4 與逆境同時給並沒有拯救，所以等逆境來了才施用不夠，預先處理需要預測。預報約三天，但十個反應器做一公頃要 5.4 天，所以整季都要持續生產。不過事後處理有時也有效，土壤熱害則偏向預先處理。",
+   "trap_en": "Saying our data prove the forecast is necessary.",
+   "trap_zh": "說我們的數據證明預測是必要的。",
+   "basis": "recorded pattern: integration of lab result with system design"
+  },
+  {
+   "q_en": "What went wrong in your plant experiments?",
+   "q_zh": "你們的植物實驗哪裡出了問題？",
+   "type": "gap",
+   "tier": "A",
+   "pages": [
+    "plant"
+   ],
+   "seat": "plant",
+   "backup": "ihp",
+   "kw_en": [
+    "contamination",
+    "fragile seedlings",
+    "unequal culture volume"
+   ],
+   "kw_zh": [
+    "污染",
+    "幼苗太脆弱",
+    "菌液體積不一"
+   ],
+   "a_en": "Several things. Mold and contamination hit agar plates, spray nozzles and hydroponic boxes, and some plates were excluded. Four-day-old seedlings were too fragile for salt. Moving agar seedlings into soil damaged roots. Two trials of trehalose set 3 gave opposite trends. And in hydroponics culture volume was unequal. Each one pushed us to a firmer protocol.",
+   "a_zh": "好幾件事。黴菌與污染影響了瓊脂平板、噴頭和水耕盒，部分平板被排除。四天大的幼苗對鹽太脆弱。把瓊脂幼苗移到土壤會傷根。trehalose set 3 的兩次試驗趨勢相反。水耕的菌液體積也不一致。每一項都促使我們把流程改得更穩。",
+   "trap_en": "Hiding the contamination or saying it did not affect the data.",
+   "trap_zh": "隱藏污染，或說污染不影響數據。",
+   "basis": "recorded pattern: what failed"
+  },
+  {
+   "q_en": "Your headline says pre and post rescue but co-treatment does not. Do all your runs agree?",
+   "q_zh": "你們的標題說預先和事後有效、同時處理無效，所有實驗都一致嗎？",
+   "type": "gap",
+   "tier": "A",
+   "pages": [
+    "results",
+    "plant"
+   ],
+   "seat": "plant",
+   "backup": "dry",
+   "kw_en": [
+    "salt agar only",
+    "soil heat reversed",
+    "not consistent"
+   ],
+   "kw_zh": [
+    "只限瓊脂鹽害",
+    "土壤熱害相反",
+    "不一致"
+   ],
+   "a_en": "No. That headline comes from ACC deaminase on agar under salt, plus BoPEP4. In heat, agar trial 1 favoured pre, trial 2 favoured post, and in soil pre was best and post worst. In the CH Bio hydroponic pre-test co-treatment grew best. Our plant page says the best timing was not consistent, and more replicates are needed.",
+   "a_zh": "不是。那個標題來自瓊脂鹽害下的 ACC deaminase，加上 BoPEP4。熱逆境中，瓊脂 trial 1 偏向預先處理，trial 2 偏向事後處理，土壤則是預先處理最好、事後處理最差。CH Bio 水耕前測是同時處理長得最好。植物頁自己說最佳時機並不一致，需要更多重複。",
+   "trap_en": "Defending the headline as a general rule.",
+   "trap_zh": "把標題當成通則來辯護。",
+   "basis": "recorded pattern: do your results hold up"
+  },
+  {
+   "q_en": "Did you show that ACC deaminase lowers ethylene in your plants?",
+   "q_zh": "你們有證明 ACC deaminase 在植物裡降低乙烯嗎？",
+   "type": "gap",
+   "tier": "A",
+   "pages": [
+    "plant",
+    "results"
+   ],
+   "seat": "plant",
+   "backup": "wet2",
+   "kw_en": [
+    "ethylene not measured",
+    "DNPH on culture",
+    "growth readouts only"
+   ],
+   "kw_zh": [
+    "沒量乙烯",
+    "DNPH 量菌液",
+    "只有生長指標"
+   ],
+   "a_en": "No. We did not measure ethylene or ACC in the plants. We measured chlorophyll, fresh weight and root growth, and tested the enzyme's activity in culture with the DNPH assay. The ethylene link comes from published work. So our plant data say the treatment may help growth, not that the mechanism is the one we expected.",
+   "a_zh": "沒有。我們沒有在植物裡量乙烯或 ACC。我們量的是葉綠素、鮮重和根生長，並用 DNPH 實驗在菌液中測酵素活性。乙烯的關聯來自已發表的研究。所以我們的植物數據只說明處理可能幫助生長，不能說機制就是我們預期的那個。",
+   "trap_en": "Saying the data confirm the ethylene mechanism.",
+   "trap_zh": "說數據證實了乙烯機制。",
+   "basis": "recorded pattern: how do you know the mechanism"
+  },
+  {
+   "q_en": "Did the protectants work in soil, which is closest to a farm?",
+   "q_zh": "在最接近農田的土壤裡有效嗎？",
+   "type": "gap",
+   "tier": "A",
+   "pages": [
+    "plant",
+    "geospatial-analysis"
+   ],
+   "seat": "plant",
+   "backup": "dry",
+   "kw_en": [
+    "preliminary",
+    "one pot per condition",
+    "salt and heat differ"
+   ],
+   "kw_zh": [
+    "初步",
+    "每處理一盆",
+    "鹽與熱不同"
+   ],
+   "a_en": "Only weakly, and it is preliminary. Under 300 mM NaCl only post-treatment beat control, by about 13%, while pre and co-treatment were lower. Under heat, pre-treatment held the most chlorophyll, but fresh weight was one pot per condition. Our geospatial page says soil-validated efficacy is still being developed, so downstream coverage numbers are projections.",
+   "a_zh": "只有微弱效果，而且是初步的。300 mM NaCl 下只有事後處理高於對照約 13%，預先與同時處理反而較低。熱逆境下預先處理葉綠素最多，但鮮重每個處理只有一盆。地理分析頁也說土壤驗證的效果仍在開發中，所以後面的覆蓋數字只是推估。",
+   "trap_en": "Quoting soil as a success because agar worked.",
+   "trap_zh": "因為瓊脂有效就說土壤也成功。",
+   "basis": "recorded pattern: honesty probe on limits"
+  },
+  {
+   "q_en": "Which protectant worked best?",
+   "q_zh": "哪一種保護劑效果最好？",
+   "type": "gap",
+   "tier": "B",
+   "pages": [
+    "plant",
+    "results"
+   ],
+   "seat": "plant",
+   "backup": "dry",
+   "kw_en": [
+    "no single winner",
+    "ACCD pre 70%",
+    "BoPEP4 1/40"
+   ],
+   "kw_zh": [
+    "沒有單一贏家",
+    "ACCD 預先 70%",
+    "BoPEP4 1/40"
+   ],
+   "a_en": "No single winner yet. ACC deaminase pre-treatment gave the biggest agar number, about 70% more chlorophyll under 100 mM NaCl. BoPEP4 post-treatment rescued on agar and 1/40 helped in hydroponic salt. LEA14 did best at 75 mM. CH Bio peptide's clearest rescue was at 100 mM. Each is from one or two trials, so we would rank none yet.",
+   "a_zh": "目前沒有單一贏家。ACC deaminase 預先處理在瓊脂上數字最大，100 mM NaCl 下葉綠素多約 70%。BoPEP4 事後處理在瓊脂有拯救，水耕鹽害 1/40 也有幫助。LEA14 在 75 mM 最好。CH Bio 胜肽最明顯的拯救在 100 mM。每項都只來自一兩次試驗，所以我們還不排名。",
+   "trap_en": "Naming a winner from one trial.",
+   "trap_zh": "根據一次試驗就選出贏家。",
+   "basis": "recorded pattern: which result is strongest"
+  },
+  {
+   "q_en": "How much protectant would a farmer need to apply?",
+   "q_zh": "農民要施用多少保護劑？",
+   "type": "impact",
+   "tier": "A",
+   "pages": [
+    "plant",
+    "model"
+   ],
+   "seat": "plant",
+   "backup": "dry",
+   "kw_en": [
+    "1.67 mL per plate",
+    "2126 L per hectare",
+    "dose that worked"
+   ],
+   "kw_zh": [
+    "每盤 1.67 mL",
+    "每公頃 2126 L",
+    "有效而非最小"
+   ],
+   "a_en": "Our model scales the dose we sprayed. Three sprays gave 1.67 mL on a 78.5 cm² plate, equal to 2126 liters per hectare, and with a modeled canopy factor and measured activity this becomes 37.6 kU per hectare per application. That is a dose that worked, not the smallest dose that works, because we never ran a dilution series in soil, and the activity figure rests on one assay below the quantification limit.",
+   "a_zh": "我們的模型把噴灑過的劑量換算出來。三次噴灑在 78.5 cm² 平板上是 1.67 mL，相當於每公頃 2126 公升，加上模型的冠層係數與實測活性，約為每公頃每次 37.6 kU。這是有效的劑量，不是最小有效劑量，因為我們從沒在土壤做過稀釋系列，而且活性數字來自一次低於定量下限的實驗。",
+   "trap_en": "Presenting 37.6 kU per hectare as a measured field dose.",
+   "trap_zh": "把每公頃 37.6 kU 說成實測的田間劑量。",
+   "basis": "recorded pattern: scale and dose"
+  },
+  {
+   "q_en": "What is your next plant experiment?",
+   "q_zh": "你們下一個植物實驗是什麼？",
+   "type": "impact",
+   "tier": "A",
+   "pages": [
+    "plant"
+   ],
+   "seat": "plant",
+   "backup": "dry",
+   "kw_en": [
+    "three independent replicates",
+    "soil dilution series",
+    "fixed culture volume"
+   ],
+   "kw_zh": [
+    "三次獨立重複",
+    "土壤稀釋系列",
+    "固定菌液體積"
+   ],
+   "a_en": "First, at least three independent replicates per condition, so a gain can be shown to be reproducible. Second, dilution series in soil to find the minimum effective dose. Third, a fixed culture volume in hydroponics and a standardised salt schedule so the three timings are compared on equal terms. Then an ACC deaminase dose-response for the model.",
+   "a_zh": "第一，每個條件至少三次獨立重複，才能證明進步是可重現的。第二，在土壤做稀釋系列，找出最小有效劑量。第三，水耕固定菌液體積、統一施鹽流程，讓三個時機在相同條件下比較。接著為模型做 ACC deaminase 的劑量反應。",
+   "trap_en": "Promising crop or field trials the wiki does not plan.",
+   "trap_zh": "承諾維基沒有規劃的作物或田間試驗。",
+   "basis": "recorded pattern: what is your next step"
+  }
+ ],
+ "gaps": [
+  {
+   "issue_en": "The headline 'pre- and post-treatment rescue, co-treatment does not' (Results key result) is not what every run shows. Salt on agar fits (ACC deaminase set 9, BoPEP4), but agar heat trial 1 favoured pre and trial 2 post > co > pre, soil heat was pre > co > post, soil salt at 300 mM had post only +13%, and the CH Bio hydroponic pre-test grew best with co-treatment. The Results text also ranks heat as post, co, pre, while the Plants text for trial 1 says pre. The Geospatial page says every ACCD-treated group beat its control regardless of timing, which the Plants page contradicts (co-treatment, soil pre and co were not better).",
+   "issue_zh": "Results 的重點結論「預先與事後處理有效、同時處理無效」並非每次實驗都如此。瓊脂鹽害符合（ACC deaminase set 9、BoPEP4），但瓊脂熱害 trial 1 偏向預先處理、trial 2 是事後 > 同時 > 預先，土壤熱害是預先 > 同時 > 事後，土壤 300 mM 鹽害只有事後處理多 13%，CH Bio 水耕前測則是同時處理長得最好。Results 把熱害排序寫成事後、同時、預先，而 Plants 頁 trial 1 寫預先最好。地理分析頁說每個 ACCD 處理組不論時機都比對照好，Plants 頁並不支持這點（同時處理、土壤預先與同時處理並沒有更好）。",
+   "where": "results; plant; geospatial-analysis; hardware-hydroponics",
+   "say_en": "Say the headline holds for ACC deaminase and BoPEP4 on salt agar only, that the best timing was not consistent across systems, and that more independent replicates are what would settle it.",
+   "say_zh": "說明這個結論只適用於瓊脂鹽害下的 ACC deaminase 和 BoPEP4，各系統的最佳時機並不一致，需要更多獨立重複才能確定。"
+  },
+  {
+   "issue_en": "Replication is described three ways. The Plants future-work text says the only runs with a repeat were ACC deaminase heat on agar and in soil, two trials each. Yet the same page lists set 5 (trials 1 and 2), set 7 (3 trials), BoPEP4 (2 trials) and ACC deaminase salt (2 trials). The plotted n is seedlings pooled per extraction (9, 25 or 40), with three technical wells, so the unit for the error bars is unclear. Soil fresh weight is one pot per condition, and the model section says each trehalose condition was a single plate.",
+   "issue_zh": "重複次數有三種說法。Plants 頁未來工作寫只有瓊脂與土壤的 ACC deaminase 熱害有重複、各兩次試驗；但同一頁列出 set 5（trial 1、2）、set 7（3 次）、BoPEP4（2 次）、ACC deaminase 鹽害（2 次）。圖上的 n 是每次萃取合併的幼苗數（9、25 或 40），再加三個技術重複孔，誤差線的單位不清楚。土壤鮮重每個處理只有一盆，模型段落也說每個 trehalose 條件只有一個平板。",
+   "where": "plant#Future work; plant#Stress protocols; plant#Set 7; plant#Dry lab collaborations; measurement",
+   "say_en": "Say plainly that most conditions were not independently replicated, that n counts seedlings per extraction, and that three independent replicates per condition is our stated next step.",
+   "say_zh": "直接說明多數條件沒有獨立重複，n 指的是每次萃取的幼苗數，每個條件做三次獨立重複是我們寫明的下一步。"
+  },
+  {
+   "issue_en": "The statistical test is never named. The plant figures carry asterisks up to P < 0.0001, but the Measurement page says the trehalose and heat pretest charts had no significance testing and show three technical replicates. The Measurement text also says 0.5 mM trehalose still rescued best, while the Plants page says 1.0 mM was the best dose.",
+   "issue_zh": "統計檢定方法從未寫明。植物圖有高達 P < 0.0001 的星號，但 Measurement 頁說 trehalose 與熱逆境前測圖沒有做顯著性檢定，只顯示三個技術重複。Measurement 還寫 0.5 mM trehalose 效果最好，Plants 頁卻說 1.0 mM 是最佳劑量。",
+   "where": "plant#Set 4; measurement#Chlorophyll; results",
+   "say_en": "Say we show mean with SEM and P-value stars, that we cannot name the test from the wiki, and that we will check the raw files rather than guess.",
+   "say_zh": "說明我們呈現平均值加 SEM 與 P 值星號，維基上看不出是哪種檢定，我們會查原始檔而不是猜。"
+  },
+  {
+   "issue_en": "Controls and source of the protectant. On agar the control for ACC deaminase, BoPEP4 and LEA14 was TB medium, not culture from a strain without the gene, yet the hydroponic work showed WB800 culture alone stunts plants and bleaches leaves. BoPEP4 co-treatment harm may partly be a culture effect. Results calls the sprayed material 'purified enzyme', but the Plants page says it was 0.22 µm-filtered culture, and the Experiments page says the purification sheet gave no result. The Plants page calls phase 3 'bioreactor-produced' without saying which batches came from the reactor.",
+   "issue_zh": "對照與保護劑來源。瓊脂上 ACC deaminase、BoPEP4、LEA14 的對照是 TB 培養基，不是不含該基因菌株的培養液，但水耕實驗顯示單獨的 WB800 菌液就會抑制植物、使葉片白化。BoPEP4 同時處理的傷害可能有一部分是菌液效應。Results 把噴灑的材料稱為「純化酵素」，但 Plants 頁說是 0.22 µm 過濾的培養液，Experiments 頁也說純化流程沒有產出結果。Plants 頁稱第三階段為「生物反應器產出」，卻沒說哪些批次真的來自反應器。",
+   "where": "plant#Set 9; plant#Hydroponics · buffer control; results#Agar-based salinity stress; experiments",
+   "say_en": "Say the agar controls were medium only, that hydroponics showed the culture itself can harm plants, and that the sprayed material was filtered culture supernatant, not purified enzyme.",
+   "say_zh": "說明瓊脂對照只有培養基，水耕顯示菌液本身可能傷害植物，噴灑的材料是過濾的培養上清液，不是純化酵素。"
+  },
+  {
+   "issue_en": "Some headline numbers sit on the readout the page warns about. The 8.7-fold trehalose chlorophyll gain (set 6) is on the per-gram panel, while the page says per-gram values inflate when stress shrinks biomass. The '+3 cm root' in the same set sits oddly against the 100 mM control root of 11.00 mm (the 75 mM control is 34.77 mm), and set 4 gave about 35.8 mm for a 100 mM control. The first screening says 0.5 and 1 mM trehalose suppressed growth, yet set 4 reports a rescue at 1.0 mM.",
+   "issue_zh": "部分標題數字建立在頁面自己警告的指標上。trehalose 葉綠素 8.7 倍（set 6）是每克鮮重的圖，而頁面說逆境讓生物量縮小時每克數值會被放大。同一組「根多 3 cm」與 100 mM 對照根長 11.00 mm 對不太上（75 mM 對照為 34.77 mm），set 4 的 100 mM 對照則約 35.8 mm。初步篩選說 0.5 與 1 mM trehalose 抑制生長，set 4 卻在 1.0 mM 報告有拯救。",
+   "where": "plant#Set 6; plant#Set 4; plant#Initial screening; plant#Dry lab collaborations",
+   "say_en": "Say we trust total chlorophyll and root length more than the per-gram fold change, that sets differ in age and day of reading, and that trehalose was only a protocol sample.",
+   "say_zh": "說明我們比較相信總葉綠素與根長，而不是每克的倍率，各 set 的苗齡與讀值日不同，而且 trehalose 只是流程樣品。"
+  },
+  {
+   "issue_en": "The mechanism was not measured in plants. No ethylene or ACC was measured, so the ACC deaminase story rests on literature plus growth readouts. LEA14 is aimed at drought and salt damage to proteins but was never tested under drought, nor under heat on the Plants page, although the heat protocol list shows LEA14 and BoPEP4 sets. The Description calls LEA14 and BoPEP4 'parts for future integration', while the plant pages test them as secreted protectants. BoPEP4 inhibited unstressed plants.",
+   "issue_zh": "機制沒有在植物上量測。沒有量乙烯或 ACC，ACC deaminase 的說法靠文獻加生長指標。LEA14 針對乾旱與鹽對蛋白質的傷害，卻從未在乾旱下測試，Plants 頁也沒有它的熱逆境數據，雖然熱逆境的清單列出了 LEA14 與 BoPEP4 的實驗。Description 說 LEA14 和 BoPEP4 是「供未來整合的零件」，但植物頁已把它們當分泌的保護劑測試。BoPEP4 也抑制了未受逆境的植株。",
+   "where": "plant#Stress protocols; description#Our solution; results",
+   "say_en": "Say we measured growth and chlorophyll, not ethylene, that LEA14 was only tested under salt, and that the circuit currently carries ACC deaminase while the other two were built as parts.",
+   "say_zh": "說明我們量的是生長與葉綠素，不是乙烯；LEA14 只在鹽害下測過；目前電路帶的是 ACC deaminase，另外兩個是先建好的零件。"
+  },
+  {
+   "issue_en": "Protocol numbers disagree between pages. Hydroponic BoPEP4 plants are 15 days old with 4 days of heat on the Plants page, but 11 days old and 5 days of heat (and '4 days' again in the same text) on Results. The LEA14 set is read on day 17 on Plants and day 8 on Results. Heat priming is 5 days in most places but 3 days in the CH Bio heat text. Stratification is 2 days in the first pretests and 4 days later. Seedlings per plate are 10 or 12. One spray set is 1.67 mL and another 0.536 mL. Set 7 has 'trial 2' in the text and 'trial 3' in the table. Results says horizontal agar was the platform while root length needs vertical plates.",
+   "issue_zh": "各頁的實驗參數不一致。水耕 BoPEP4 植株在 Plants 頁是 15 天大、熱害 4 天，Results 頁卻是 11 天大、熱害 5 天（同段又寫 4 天）。LEA14 實驗在 Plants 頁第 17 天讀值，Results 頁寫第 8 天。熱 priming 多數寫 5 天，CH Bio 熱害段落寫 3 天。春化處理最初前測是 2 天，後來是 4 天。每盤幼苗數是 10 或 12。一組噴灑是 1.67 mL，另一組是 0.536 mL。set 7 文字寫 trial 2，表格寫 trial 3。Results 說平台是水平瓊脂，但根長需要直立盤。",
+   "where": "plant; results; hardware-hydroponics",
+   "say_en": "Say the protocol was refined across sets, that different sets used different ages and spray volumes, and that the raw notebook is the reference for any single run.",
+   "say_zh": "說明流程在各 set 之間逐步修正，不同 set 的苗齡與噴灑量不同，要查單次實驗應以原始筆記為準。"
+  },
+  {
+   "issue_en": "Transfer from the lab plant to a field crop is untested. Only Arabidopsis was grown; the dose model uses a modeled rice canopy factor of 2.44 (range 1.68 to 3.52), the business target is tomato, and the field motivation is rice night warming (about 10% yield per 1 °C), which a 37 °C incubator does not reproduce. The model's own stress index finds heat adds nothing for rice, yet the wet lab runs a heat program. The release rule is counted from waterlogging while payback is priced on salinity. Protectant was applied by hand, not through the bioreactor, and soil data are preliminary.",
+   "issue_zh": "從實驗室植物推到田間作物沒有被測試。只種了阿拉伯芥；劑量模型使用模型估計的水稻冠層係數 2.44（範圍 1.68 至 3.52），商業目標是番茄，田間動機是水稻夜間升溫（每升高 1 °C 約減產 10%），而 37 °C 培養箱無法重現。模型自己的壓力指數發現熱對水稻沒有額外貢獻，但濕實驗卻做了熱逆境。釋放規則以淹水計算，回本卻以鹽害定價。保護劑是手動施用，不是經過生物反應器，土壤數據也只是初步。",
+   "where": "plant#Dry lab collaborations; geospatial-analysis; model; description#Our solution",
+   "say_en": "Say this is a proof of concept on a lab plant, that no crop was grown, that the field numbers are modeled projections, and that testing across crops and stages is the stated next step.",
+   "say_zh": "說明這是實驗室植物的概念驗證，沒有種過任何作物，田間數字是模型推估，跨作物與生長階段測試是明確寫出的下一步。"
+  }
+ ]
+}

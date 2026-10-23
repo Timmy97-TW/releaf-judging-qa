@@ -1,0 +1,1997 @@
+{
+ "domain": "measurement",
+ "facts": [
+  {
+   "id": "measurement-f1",
+   "label_en": "Photometer optics",
+   "label_zh": "光度計光學設計",
+   "value": "600 nm, 2 mm path",
+   "detail_en": "An amber LED near 600 nm shines through a 2 mm flow cuvette in the loop, and a 90:10 beam splitter sends 10% of the light to a reference sensor.",
+   "detail_zh": "琥珀色 LED 約 600 nm，光穿過迴路中 2 mm 的流動比色管，90:10 分光鏡把 10% 的光送到參考感測器。",
+   "src": "measurement#Dual light path inline photometer",
+   "confidence": "stated"
+  },
+  {
+   "id": "measurement-f2",
+   "label_en": "OD600 formula and blank rule",
+   "label_zh": "OD600 計算式與空白規則",
+   "value": "OD = log10[(S0/R0)/(S/R)] x 5",
+   "detail_en": "The factor of 5 converts the 2 mm path to the 1 cm basis; the blank is refused if a sensor is saturated, too few readings survive, or a channel reads zero, and then the software returns no OD.",
+   "detail_zh": "乘以 5 是把 2 mm 光程換成 1 cm 標準；如果感測器飽和、留下的讀值太少或某通道為零，空白會被拒絕，軟體就不給 OD。",
+   "src": "measurement#From lux to optical density",
+   "confidence": "stated"
+  },
+  {
+   "id": "measurement-f3",
+   "label_en": "Burst and MAD filter",
+   "label_zh": "burst 取樣與 MAD 濾波",
+   "value": "4 dark + 16 lit, median +/- 3 MAD",
+   "detail_en": "Each point uses four dark readings and sixteen lit readings with the first two lit readings dropped, then keeps values within median +/- 3 MAD; more than 50% rejected means retake and flag bubbling; one point is logged every 10 minutes.",
+   "detail_zh": "每個點用 4 次暗讀值和 16 次亮讀值，前 2 次亮讀值捨棄，再保留中位數 +/- 3 MAD 內的值；超過 50% 被剔除就重測並標記氣泡；約每 10 分鐘記錄一點。",
+   "src": "measurement#Acquisition and filtering",
+   "confidence": "stated"
+  },
+  {
+   "id": "measurement-f4",
+   "label_en": "Bubbles do not always darken the reading",
+   "label_zh": "氣泡不一定讓讀值變暗",
+   "value": "up to 2.8x more light on V1",
+   "detail_en": "On the Pro at OD 3.2 a bubble replaces scattering liquid with air and up to 2.8 times more light arrives, while on the Slim the same bubble darkens the reading, so no one-sided estimator is safe.",
+   "detail_zh": "Pro 在 OD 3.2 時，氣泡取代散射液體，最多多 2.8 倍光抵達感測器；Slim 同樣的氣泡卻讓讀值變暗，所以單邊估計法都不安全。",
+   "src": "measurement#With bubbles the premise fails",
+   "confidence": "stated"
+  },
+  {
+   "id": "measurement-f5",
+   "label_en": "Build cost",
+   "label_zh": "製作成本",
+   "value": "Pro US$371.78, Slim US$235.29",
+   "detail_en": "The Slim is 36.71% cheaper because it drops the US$100 lens and US$40 beam splitter; the BioDrop it was compared with costs NT$15 000, about US$470.",
+   "detail_zh": "Slim 便宜 36.71%，因為省掉 100 美元透鏡和 40 美元分光鏡；對照用的 BioDrop 約 NT$15 000，約 470 美元。",
+   "src": "hardware-photometer#11.1 Materials List",
+   "confidence": "stated"
+  },
+  {
+   "id": "measurement-f6",
+   "label_en": "TiO2 validation, 23 August (Pro)",
+   "label_zh": "二氧化鈦驗證（8 月 23 日，Pro）",
+   "value": "median 3.8% apart; R2 0.9999",
+   "detail_en": "Raw Pro output agreed with the BioDrop to a median paired difference of 3.8% and tracked the TiO2 mass at R2 0.9999 against 0.9998 for the BioDrop; two BioDrop points were excluded on predefined criteria. The Results page quotes different TiO2 numbers (R2 0.987, slope 1.018, 400 mL).",
+   "detail_zh": "Pro 原始輸出與 BioDrop 的配對差中位數為 3.8%，對 TiO2 質量的 R2 為 0.9999（BioDrop 0.9998）；兩個 BioDrop 點依事先標準剔除。Results 頁引用不同的 TiO2 數字（R2 0.987、斜率 1.018、400 mL）。",
+   "src": "measurement#Two standards, two validation runs",
+   "confidence": "conflict"
+  },
+  {
+   "id": "measurement-f7",
+   "label_en": "SiO2 fits, 10 October (0 to 20 mg)",
+   "label_zh": "二氧化矽擬合（10 月 10 日，0 至 20 mg）",
+   "value": "R2: BioDrop 0.9956, Pro 0.9874, Slim 0.9947",
+   "detail_en": "Nine points each (blank plus 2.5 to 20 mg); slopes per mg are BioDrop 0.0489, Pro 0.0458 and Slim 0.0086, so the Pro is about 5.3x more sensitive than the Slim.",
+   "detail_zh": "各 9 個點（空白加 2.5 至 20 mg）；每 mg 斜率 BioDrop 0.0489、Pro 0.0458、Slim 0.0086，所以 Pro 比 Slim 靈敏約 5.3 倍。",
+   "src": "measurement#Two standards, two validation runs",
+   "confidence": "stated"
+  },
+  {
+   "id": "measurement-f8",
+   "label_en": "Pro versus BioDrop on silica",
+   "label_zh": "Pro 與 BioDrop 在二氧化矽上的比較",
+   "value": "slope 1.001, offset about -0.12 OD",
+   "detail_en": "On eight silica points the Pro runs parallel to the BioDrop but a constant 0.12 OD lower (intercept -0.123, p = 0.005); including the blank the slope is 0.93. No offset correction was applied.",
+   "detail_zh": "八個二氧化矽點上，Pro 與 BioDrop 平行但固定低約 0.12 OD（截距 -0.123，p = 0.005）；把空白算進去斜率是 0.93。沒有做偏移校正。",
+   "src": "hardware-photometer#5.2.3 SiO₂ Calibration of the Pro and Slim Photometers",
+   "confidence": "conflict"
+  },
+  {
+   "id": "measurement-f9",
+   "label_en": "Slim scale factor",
+   "label_zh": "Slim 換算係數",
+   "value": "Pro = 5.57 x Slim - 0.07",
+   "detail_en": "The Slim reads about one fifth of the Pro (R2 0.993 against the Pro); the 5.57 factor rests on one silica standard and one run, and the slope ratio from the fits is 5.3.",
+   "detail_zh": "Slim 讀值約為 Pro 的五分之一（對 Pro 的 R2 為 0.993）；5.57 這個係數只來自一種二氧化矽標準、一次實驗，而擬合斜率比是 5.3。",
+   "src": "hardware-photometer#5.2.3 SiO₂ Calibration of the Pro and Slim Photometers",
+   "confidence": "conflict"
+  },
+  {
+   "id": "measurement-f10",
+   "label_en": "Linear range on silica",
+   "label_zh": "二氧化矽上的線性範圍",
+   "value": "Pro to about OD 2.5; Slim R2 0.992 vs Pro 0.974",
+   "detail_en": "Over 2.5 to 100 mg the Slim has R2 0.992 and the Pro 0.974; against the dilution-corrected BioDrop the Pro slope is 0.995 up to OD 2.5 and 0.594 above, and at the top of the ladder the Pro departs 11.5% from its low-range line, the Slim 2.9%.",
+   "detail_zh": "2.5 至 100 mg 範圍，Slim 的 R2 為 0.992、Pro 為 0.974；對稀釋校正後的 BioDrop，Pro 在 OD 2.5 以下斜率 0.995，以上 0.594；梯度頂端 Pro 偏離低濃度直線 11.5%，Slim 為 2.9%。",
+   "src": "hardware-photometer#5.2.3 SiO₂ Calibration of the Pro and Slim Photometers",
+   "confidence": "stated"
+  },
+  {
+   "id": "measurement-f11",
+   "label_en": "BioDrop above OD 1",
+   "label_zh": "BioDrop 在 OD 1 以上",
+   "value": "dilute 2x (OD 1-2), 4x (OD 2+)",
+   "detail_en": "On Prof. Chang's advice, from 10 October BioDrop samples above OD 1 were diluted and multiplied back; the August TiO2 runs were read undiluted, so that comparison is trusted only up to about OD 1.",
+   "detail_zh": "依張教授建議，10 月 10 日起 BioDrop 在 OD 1 以上的樣品先稀釋再乘回；8 月的 TiO2 實驗沒有稀釋，所以那次比較只信到約 OD 1。",
+   "src": "hardware-photometer#5.2.4 Blank Protocol",
+   "confidence": "stated"
+  },
+  {
+   "id": "measurement-f12",
+   "label_en": "Blank protocol",
+   "label_zh": "空白（blank）程序",
+   "value": "blank on the run's own medium",
+   "detail_en": "Early 20% disagreement with the BioDrop was mostly a blanking mismatch, not optics; a blank taken through a dirty cuvette once read four times high. The manual blanks both instruments on the same medium, while the photometer page says water for the angled-stand test.",
+   "detail_zh": "早期與 BioDrop 約 20% 的差異主要是空白不一致，不是光學問題；用髒比色管量空白曾讀高約四倍。使用手冊要求兩台儀器用同一種培養基做空白，但光度計頁面說角度支架測試用水。",
+   "src": "engineering#We blamed the optics; the blank was the problem",
+   "confidence": "conflict"
+  },
+  {
+   "id": "measurement-f13",
+   "label_en": "434 hour in-line run",
+   "label_zh": "434 小時連續在線實驗",
+   "value": "2671 valid of 2720 rows; clean to about 240 h",
+   "detail_en": "Wild type B. subtilis 168 at 22 C, 21 July to 8 August, no sample withdrawn; the channel became unusable at 243.0 h; noise was tight below about OD 0.4 and ragged above about 0.8.",
+   "detail_zh": "野生型枯草桿菌 168，22 度 C，7 月 21 日至 8 月 8 日，不抽樣；通道在 243.0 小時失效；OD 0.4 以下雜訊小，0.8 以上變大。",
+   "src": "results#Culture monitoring",
+   "confidence": "stated"
+  },
+  {
+   "id": "measurement-f14",
+   "label_en": "Quantisation found in firmware",
+   "label_zh": "韌體中發現的量化問題",
+   "value": "91.5% of reference readings on an integer",
+   "detail_en": "The reference sat near 32 counts, one count shifts OD by 0.067, and 26 of 29 count changes coincided with an OD jump above 0.04, so the steps came from the signal chain, not the culture.",
+   "detail_zh": "參考通道約在 32 個計數，差 1 個計數就讓 OD 差 0.067；29 次計數變化中有 26 次伴隨大於 0.04 的 OD 跳動，所以階梯來自訊號處理，不是菌液。",
+   "src": "measurement#What the instrument had already recorded",
+   "confidence": "stated"
+  },
+  {
+   "id": "measurement-f15",
+   "label_en": "Eleven algorithms on one raw dataset",
+   "label_zh": "同一份原始資料跑十一種演算法",
+   "value": "clean-flow spread 0.0039 OD",
+   "detail_en": "Seven controls plus four firmware estimators were replayed on the same raw bursts; with the loop clean the largest gap was 0.0039 OD on the Pro, less than a fifth of the 0.024 OD calibration scatter. Eight predictions were pre-registered and five were not supported.",
+   "detail_zh": "七個對照加四個韌體估計法，在同一份原始 burst 上重播；流動乾淨時最大差距 Pro 為 0.0039 OD，不到 0.024 OD 校正雜訊的五分之一。八項預測事先登記，五項沒有被資料支持。",
+   "src": "measurement#One data set, eleven algorithms",
+   "confidence": "stated"
+  },
+  {
+   "id": "measurement-f16",
+   "label_en": "Acceptance gates",
+   "label_zh": "接受閘門（acceptance gates）",
+   "value": "worst bubble error 2.44 to 0.016 OD",
+   "detail_en": "A spread gate (MAD vs 90th percentile apart by more than 0.03 OD) and a jump gate (more than max(0.05 OD, 5%) from the last accepted value, new level needs three agreeing readings) cut the worst bubble error from 2.44 to 0.016 OD on the Pro and 0.28 to 0.003 on the Slim.",
+   "detail_zh": "離散閘門（MAD 與第 90 百分位差超過 0.03 OD）和跳動閘門（距上次接受值超過 max(0.05 OD, 5%)，新水準要連續三筆一致），把 Pro 最糟氣泡誤差從 2.44 降到 0.016 OD，Slim 從 0.28 降到 0.003。",
+   "src": "measurement#The lever is the gate after the estimator",
+   "confidence": "stated"
+  },
+  {
+   "id": "measurement-f17",
+   "label_en": "Air slug failure",
+   "label_zh": "空氣塞（air slug）失效",
+   "value": "true 3.18, read 0.74 to 0.91",
+   "detail_en": "When the cell fills with air all samples in a burst agree and are all wrong; the firmware bubble flag fires on 94% of disturbed bursts on the Pro but caught none of the full-air case.",
+   "detail_zh": "流動池整個充滿空氣時，burst 內所有讀值彼此一致卻全錯；韌體氣泡旗標在 Pro 上能抓到 94% 的擾動 burst，但完全抓不到全空氣的情況。",
+   "src": "measurement#With bubbles the premise fails",
+   "confidence": "stated"
+  },
+  {
+   "id": "measurement-f18",
+   "label_en": "Run 5 versus run 6",
+   "label_zh": "第 5 次與第 6 次反應器實驗",
+   "value": "run 6: 41.8 h, 31 of 1083 held back",
+   "detail_en": "Run 6 had the gate on: reference held within 17% (run 5: factor 4.8), no windows over 20% bubbles (run 5: about one in six), growth rate 0.286 per hour, doubling 145 min; but the permeate draw was also halved from 24 to 12 mL/min at the same time.",
+   "detail_zh": "第 6 次開了閘門：參考通道變動在 17% 內（第 5 次為 4.8 倍），沒有氣泡超過 20% 的視窗（第 5 次約六分之一），生長率 0.286 每小時、倍增時間 145 分鐘；但滲出液抽取量同時從 24 減半到 12 mL/min。",
+   "src": "measurement#The next run was the test, and it has now run",
+   "confidence": "stated"
+  },
+  {
+   "id": "measurement-f19",
+   "label_en": "How run 6 ended",
+   "label_zh": "第 6 次實驗如何結束",
+   "value": "sample beam fell to 1/10 of reference at 37 h",
+   "detail_en": "The reported value stepped to about 9.9 and stayed; the gate marked it low signal and the twin does not use it. Measurement calls this a dead optical path, while Results calls it the instrument's upper limit near OD 2.7.",
+   "detail_zh": "報告值跳到約 9.9 並維持；閘門標為低訊號，數位孿生不採用。Measurement 頁稱它是光路失效，Results 頁則稱是儀器上限，約 OD 2.7。",
+   "src": "measurement#The next run was the test, and it has now run",
+   "confidence": "conflict"
+  },
+  {
+   "id": "measurement-f20",
+   "label_en": "Silica standard and its limit",
+   "label_zh": "二氧化矽標準與其限制",
+   "value": "1 um beads, 41 concentrations",
+   "detail_en": "Concentration is set by pipetted volume with a withdraw-one add-one scheme, not by any instrument; but a bead has refractive index 1.46 and a B. subtilis cell about 1.33 to 1.41, so the ladder gives particle equivalents, not cell mass. Loop volume is 50 mL on Measurement and 500 mL on the photometer page.",
+   "detail_zh": "濃度由移液體積決定（取出一份、補入一份），不靠任何儀器；但微球折射率 1.46，枯草桿菌約 1.33 至 1.41，所以梯度給的是等效顆粒數，不是細胞質量。迴路體積 Measurement 頁寫 50 mL，光度計頁寫 500 mL。",
+   "src": "measurement#What this calibration does not establish",
+   "confidence": "conflict"
+  },
+  {
+   "id": "measurement-f21",
+   "label_en": "Competitive His-tag ELISA design",
+   "label_zh": "競爭型 His-tag ELISA 設計",
+   "value": "6-point curve, 3 to 0.093 ug/mL",
+   "detail_en": "Commercial Cayman kit 10012445; each plate has two blank, two non-specific binding and two maximum-binding wells, standards in duplicate (CV under 6%), samples at two dilutions in duplicate; corrected B0 was 1.109 inside the kit's 0.3 to 1.5 window.",
+   "detail_zh": "使用 Cayman 商品化套組 10012445；每盤有 2 個空白、2 個非專一結合、2 個最大結合孔，標準品雙重複（CV 小於 6%），樣品兩種稀釋各雙重複；校正後 B0 為 1.109，在套組要求的 0.3 至 1.5 內。",
+   "src": "measurement#Competitive His-tag ELISA",
+   "confidence": "stated"
+  },
+  {
+   "id": "measurement-f22",
+   "label_en": "ELISA curve and valid range",
+   "label_zh": "ELISA 標準曲線與有效範圍",
+   "value": "R2 0.98; 31.6 to 95.1 %B/B0",
+   "detail_en": "A constrained four-parameter logistic fit gives R2 0.98 over 31.6 to 95.1 %B/B0 (a log fit elsewhere gives 0.9967); the kit rule is to re-assay anything outside 20 to 80 %B/B0, and values outside the curve are extrapolations.",
+   "detail_zh": "受限四參數 logistic 擬合 R2 為 0.98，涵蓋 31.6 至 95.1 %B/B0（另一處用對數擬合得 0.9967）；套組規則是 %B/B0 在 20 至 80 以外要重測，曲線以外的值是外插。",
+   "src": "measurement#Standard curve and valid measurement range",
+   "confidence": "stated"
+  },
+  {
+   "id": "measurement-f23",
+   "label_en": "ELISA yields",
+   "label_zh": "ELISA 濃度結果",
+   "value": "LEA14 about 5 ug/mL; ACCD all extrapolated",
+   "detail_en": "LEA14 was the most consistent (paired dilutions within 10%); all four ACCD wells fell outside the standard curve; BoPep4 dilution disparities ran 17% to 43%, hinting at matrix interference.",
+   "detail_zh": "LEA14 最一致（兩種稀釋差在 10% 內）；ACCD 四個孔全在標準曲線之外；BoPep4 兩種稀釋的差異 17% 至 43%，可能有基質干擾。",
+   "src": "measurement#Results",
+   "confidence": "stated"
+  },
+  {
+   "id": "measurement-f24",
+   "label_en": "Negative control reads like the samples",
+   "label_zh": "陰性對照讀值跟樣品一樣高",
+   "value": "WB800 control 5.452 and 4.562 ug/mL",
+   "detail_en": "The untransformed WB800 host returned the same range as four of six constructs, so no ranking between constructs can be attributed to expression. Results still quotes ACCD about 16 ug/mL, about three times LEA and BoPep4.",
+   "detail_zh": "未轉殖的 WB800 宿主讀到的濃度與六個構築中的四個同範圍，所以構築間的排名不能歸因於表達量。Results 頁仍寫 ACCD 約 16 ug/mL，約為 LEA 和 BoPep4 的三倍。",
+   "src": "measurement#Three further sets, and why none of them settles anything",
+   "confidence": "conflict"
+  },
+  {
+   "id": "measurement-f25",
+   "label_en": "DNPH assay method",
+   "label_zh": "DNPH 活性分析方法",
+   "value": "hydrazone at 540 nm; scaled down 20-fold",
+   "detail_en": "ACC deaminase makes alpha-ketobutyrate, DNPH turns it into a hydrazone read at 540 nm; the Penrose and Glick protocol was scaled down twenty-fold to a 96-well plate, with overnight reaction at 30 C.",
+   "detail_zh": "ACC 脫胺酶產生 α-ketobutyrate，DNPH 把它變成在 540 nm 讀值的 hydrazone；Penrose 與 Glick 的方法縮小二十倍到 96 孔盤，30 度 C 反應過夜。",
+   "src": "measurement#ACC deaminase activity by DNPH assay",
+   "confidence": "stated"
+  },
+  {
+   "id": "measurement-f26",
+   "label_en": "DNPH linear range",
+   "label_zh": "DNPH 線性範圍",
+   "value": "linear 0 to 2.049 mM, R2 0.9995",
+   "detail_en": "Above 2.049 mM the curve flattens; fitting all eight levels gives R2 0.950, which the team says not to quote; the supernatant shifts the curve by a constant offset, so blanks are corrected without changing slope.",
+   "detail_zh": "超過 2.049 mM 曲線變平；八個濃度全擬合 R2 只有 0.950，團隊註明不要引用；上清液只造成固定偏移，所以只校正空白、不改斜率。",
+   "src": "measurement#Defining the quantitative range",
+   "confidence": "stated"
+  },
+  {
+   "id": "measurement-f27",
+   "label_en": "PLP requirement and construct comparison",
+   "label_zh": "PLP 需求與構築比較",
+   "value": "SamyQ+PLP 2.19x Csn+PLP",
+   "detail_en": "Without PLP the Csn construct matched the host (57.9 vs 59.7 nmol); Csn+PLP was +13.7 nmol and SamyQ+PLP +30.0 nmol above host, all single wells on one plate.",
+   "detail_zh": "沒有 PLP 時 Csn 構築與宿主相同（57.9 對 59.7 nmol）；Csn+PLP 比宿主多 13.7 nmol，SamyQ+PLP 多 30.0 nmol，全是同一盤的單一孔。",
+   "src": "measurement#Testing the cofactor requirement",
+   "confidence": "stated"
+  },
+  {
+   "id": "measurement-f28",
+   "label_en": "Protein peaks before activity in the reactor",
+   "label_zh": "反應器中蛋白質先到高峰、活性後到",
+   "value": "ELISA 12 h, DNPH 18 h",
+   "detail_en": "Shell-side ACCD peaked near 6.5 ug/mL at 12 h and activity at 30.9 nmol per mL per hour at 18 h; specific activity reached 6.3 U/mg at 18 h. Hardware-bioreactor prints the 18 h activity as 0.037 mU/mL, which is U/mL by the page's own arithmetic.",
+   "detail_zh": "殼側 ACCD 在 12 小時約 6.5 ug/mL 達高峰，活性在 18 小時達 30.9 nmol/mL/h；18 小時比活性 6.3 U/mg。hardware-bioreactor 頁把 18 小時活性寫成 0.037 mU/mL，依該頁自己的算式其實是 U/mL。",
+   "src": "results#Product in the permeate",
+   "confidence": "conflict"
+  },
+  {
+   "id": "measurement-f29",
+   "label_en": "Western blot band size",
+   "label_zh": "Western blot 條帶大小",
+   "value": "about 37 kDa (Measurement)",
+   "detail_en": "Measurement reports a single anti-His band near 37 kDa; other pages give about 41, 42, 35 to 48, and 75 to 100 kDa for ACCD on different blots.",
+   "detail_zh": "Measurement 頁報告 anti-His 單一條帶約 37 kDa；其他頁面對不同膠片的 ACCD 寫約 41、42、35 至 48、75 至 100 kDa。",
+   "src": "measurement#Western blot",
+   "confidence": "conflict"
+  },
+  {
+   "id": "measurement-f30",
+   "label_en": "Light plate matching and result",
+   "label_zh": "光盤 LED 配對與結果",
+   "value": "groups within 1 to 2%; OD600 about 1.0 at 24 h",
+   "detail_en": "Sorted LEDs agree within 1 to 2% inside a group, but green low to high differs only about 4% and red about 10%, so tiers come from PWM; plate map green 220, 510, 3850 lux; growth was the same under red and green, and expression rose with time but not with intensity.",
+   "detail_zh": "分組後同組 LED 差 1 至 2%，但綠光低到高只差約 4%、紅光約 10%，所以強度分級靠 PWM；綠光 220、510、3850 lux；紅綠光下生長相同，表達隨時間上升但不依強度排序。",
+   "src": "measurement#Matching the LEDs before trusting the plate",
+   "confidence": "stated"
+  },
+  {
+   "id": "measurement-f31",
+   "label_en": "Flow meter validation",
+   "label_zh": "流量計驗證",
+   "value": "R2 0.995 vs manual collection",
+   "detail_en": "A ZJ-TM02 Hall-effect meter (2580 pulses per liter) was checked against flow caught by hand; flow rises about 22 mL/min per pump dial up to dial 50; the 4000 to 6000 per second shear band equals 260 to 390 mL/min.",
+   "detail_zh": "ZJ-TM02 霍爾效應流量計（每公升 2580 脈衝）與手動收集的水量對照；幫浦轉盤到 50 之前每格約增加 22 mL/min；4000 至 6000 每秒的剪切率對應 260 至 390 mL/min。",
+   "src": "measurement#How the flow was measured",
+   "confidence": "stated"
+  },
+  {
+   "id": "measurement-f32",
+   "label_en": "Pressure channels and TMP",
+   "label_zh": "壓力通道與 TMP",
+   "value": "TMP = (feed + retentate)/2 - permeate",
+   "detail_en": "Three 0 to 10 bar transmitters are read 100 times a second and reported as a 30 s median; the August 14 series did not repeat and lacked the permeate channel, so it shows lumen drop, not TMP. The transmitter's stated accuracy is 1.0% of full scale, 0.1 bar, while mean TMP in operation was about 0.03 bar.",
+   "detail_zh": "三個 0 至 10 bar 壓力變送器每秒讀 100 次，回報 30 秒中位數；8 月 14 日那組無法重現且沒記錄滲出側，所以顯示的是管腔壓降，不是 TMP。變送器標示精度為滿量程 1.0%（0.1 bar），而運轉時平均 TMP 約 0.03 bar。",
+   "src": "measurement#How pressure was measured",
+   "confidence": "stated"
+  },
+  {
+   "id": "measurement-f33",
+   "label_en": "Chlorophyll and root measurement",
+   "label_zh": "葉綠素與根長測量",
+   "value": "A663, A645; ImageJ with 150 mm ruler",
+   "detail_en": "Chlorophyll a+b = (8.02 x A663 + 20.20 x A645) x V / (1000 x fresh weight), blanked on 80% acetone, three technical wells per pooled group tube, mean with SEM in Prism; root length is traced in ImageJ against a ruler in the frame; balance accuracy is +/- 0.001 g.",
+   "detail_zh": "葉綠素 a+b = (8.02 x A663 + 20.20 x A645) x V / (1000 x 鮮重)，以 80% 丙酮歸零，每組合併一管、讀三個技術重複孔，Prism 畫 mean with SEM；根長用 ImageJ 對畫面中的尺校正；天平準確度 +/- 0.001 g。",
+   "src": "measurement#Chlorophyll extraction",
+   "confidence": "stated"
+  },
+  {
+   "id": "measurement-f34",
+   "label_en": "Per-gram chlorophyll artefact",
+   "label_zh": "每克葉綠素的假象",
+   "value": "0.366 vs 0.121 mg/g while total fell 91%",
+   "detail_en": "Heat-stressed seedlings lost 92 to 97% of fresh weight, so per gram they looked about three times richer in chlorophyll even though total chlorophyll in the extract fell about 91%; the team reports both.",
+   "detail_zh": "熱逆境幼苗鮮重掉 92 至 97%，所以以每克計算看起來葉綠素多約三倍，但萃取液中的葉綠素總量其實少了約 91%；團隊兩種都報告。",
+   "src": "measurement#Comparison of fresh weight-normalized and non-normalized chlorophyll content",
+   "confidence": "stated"
+  },
+  {
+   "id": "measurement-f35",
+   "label_en": "Fault detection on instrument channels",
+   "label_zh": "儀器通道的故障偵測",
+   "value": "flagged 216.3 h, failed 243.0 h",
+   "detail_en": "An autoencoder trained on the healthy first 120 h of run 3 scores a sensor axis (reference beam) and a process axis (growth rate) separately; lead time 26.7 h, false-alarm rate 6.1% on unseen quiet windows; one failure in one run.",
+   "detail_zh": "用第 3 次實驗健康的前 120 小時訓練自編碼器，分別對感測器軸（參考光束）與製程軸（生長率）評分；領先 26.7 小時，在未見過的平靜視窗誤報率 6.1%；只有一次實驗的一次故障。",
+   "src": "results#Fault detection",
+   "confidence": "stated"
+  },
+  {
+   "id": "measurement-f36",
+   "label_en": "Where the plant results stand",
+   "label_zh": "植物實驗結果的位置",
+   "value": "75 to 100 mM NaCl working window",
+   "detail_en": "The agar window is 75 to 100 mM NaCl and hydroponic heat is 37 C; Results charts carry significance stars while Measurement says the trehalose and heat pretest charts had no significance testing, and the stress windows rest on one plate per group.",
+   "detail_zh": "瓊脂板有效逆境範圍是 75 至 100 mM NaCl，水耕熱逆境是 37 度 C；Results 的圖有顯著性星號，Measurement 則說 trehalose 與熱預試圖沒有做顯著性檢定，且逆境範圍每組只有一個培養皿。",
+   "src": "measurement#Agar plate stress test, horizontal and vertical",
+   "confidence": "conflict"
+  }
+ ],
+ "terms": [
+  {
+   "term": "OD600",
+   "kw_en": [
+    "cloudiness at 600 nm",
+    "cell density proxy",
+    "1 cm basis"
+   ],
+   "kw_zh": [
+    "600 nm 混濁度",
+    "細胞密度指標",
+    "1 cm 標準"
+   ],
+   "def_en": "Optical density at 600 nm, a measure of how much a culture scatters light. ReLEAF reads it in the loop and scales the 2 mm path by 5 to the usual 1 cm basis. It is turbidity, not an exact cell count.",
+   "def_zh": "600 nm 的光學密度，代表菌液散射光的程度。ReLEAF 在迴路中直接讀取，並把 2 mm 光程乘 5 換成一般的 1 cm 標準。它是混濁度，不是精確的細胞數。",
+   "cat": "hardware",
+   "src": "measurement"
+  },
+  {
+   "term": "In-line flow-cell photometer",
+   "kw_en": [
+    "reads the loop",
+    "no sample drawn",
+    "2 mm cuvette"
+   ],
+   "kw_zh": [
+    "直接讀迴路",
+    "不用抽樣",
+    "2 mm 比色管"
+   ],
+   "def_en": "An OD600 sensor with a flow cuvette plumbed into the bioreactor loop. ReLEAF built it so long runs need no sampling, which cuts contamination risk and works outside a lab. Nobody sells this instrument, so the team built two versions.",
+   "def_zh": "把流動比色管接進生物反應器迴路的 OD600 感測器。ReLEAF 自己做，讓長時間培養不用抽樣，減少污染風險，也能在實驗室外使用。市面上沒有這種儀器，所以團隊做了兩個版本。",
+   "cat": "hardware",
+   "src": "hardware-photometer"
+  },
+  {
+   "term": "Pro photometer",
+   "kw_en": [
+    "beam splitter",
+    "sensitive build",
+    "US$371.78"
+   ],
+   "kw_zh": [
+    "分光鏡",
+    "較靈敏版本",
+    "371.78 美元"
+   ],
+   "def_en": "The first design: amber LED, collimating lens, 90:10 beam splitter and two lux sensors in a tilted body. About 5.3 times more sensitive than the Slim and the unit that ran the 434 hour test.",
+   "def_zh": "第一版設計：琥珀 LED、準直透鏡、90:10 分光鏡和兩個照度感測器，裝在傾斜的本體。比 Slim 靈敏約 5.3 倍，跑 434 小時實驗的就是它。",
+   "cat": "hardware",
+   "src": "hardware-photometer"
+  },
+  {
+   "term": "Slim photometer",
+   "kw_en": [
+    "optical fibres",
+    "more linear",
+    "US$235.29"
+   ],
+   "kw_zh": [
+    "光纖",
+    "線性較好",
+    "235.29 美元"
+   ],
+   "def_en": "The simplified design: two optical fibres replace the lens and beam splitter, feeding the same 2 mm cuvette. Cheaper and smaller, linear on silica (R2 0.992), but it reads about one fifth of the Pro and has not run long on culture.",
+   "def_zh": "簡化版設計：兩條光纖取代透鏡和分光鏡，接到同樣 2 mm 比色管。較便宜較小，對二氧化矽線性好（R2 0.992），但讀值約為 Pro 的五分之一，也還沒長時間跑過菌液。",
+   "cat": "hardware",
+   "src": "hardware-photometer"
+  },
+  {
+   "term": "BioDrop",
+   "kw_en": [
+    "benchtop reader",
+    "reference instrument",
+    "NT$15 000"
+   ],
+   "kw_zh": [
+    "桌上型儀器",
+    "對照儀器",
+    "約 NT$15 000"
+   ],
+   "def_en": "The benchtop spectrophotometer the team compared against, about US$470. It needs a sample drawn out and loses accuracy above OD 1, so from 10 October its high-density samples were diluted and multiplied back.",
+   "def_zh": "團隊拿來對照的桌上型分光光度計，約 470 美元。它需要抽樣，OD 1 以上準確度下降，所以 10 月 10 日起高濃度樣品先稀釋再乘回。",
+   "cat": "hardware",
+   "src": "hardware-photometer"
+  },
+  {
+   "term": "MAD (median absolute deviation)",
+   "kw_en": [
+    "median of deviations",
+    "not fooled by outliers",
+    "median +/- 3 MAD"
+   ],
+   "kw_zh": [
+    "偏差的中位數",
+    "不怕離群值",
+    "中位數 +/- 3 MAD"
+   ],
+   "def_en": "The median of how far readings sit from their median. ReLEAF keeps burst readings within three MAD of the median, since bubbles drag a mean but barely move a median. Clean flow made all estimators agree.",
+   "def_zh": "讀值離中位數距離的中位數。ReLEAF 只保留中位數 +/- 3 MAD 內的 burst 讀值，因為氣泡會拉動平均值，卻幾乎不動中位數。流動乾淨時所有估計法結果一致。",
+   "cat": "software",
+   "src": "measurement"
+  },
+  {
+   "term": "Burst sampling",
+   "kw_en": [
+    "16 lit readings",
+    "4 dark readings",
+    "drop first 2"
+   ],
+   "kw_zh": [
+    "16 次亮讀值",
+    "4 次暗讀值",
+    "捨棄前 2 次"
+   ],
+   "def_en": "One logged OD point is built from a short burst: four dark readings with the LED off, then sixteen lit readings with the first two dropped while the LED settles. Raw readings are stored, so any value can be recomputed.",
+   "def_zh": "每個記錄的 OD 點由一段短 burst 組成：LED 關閉時 4 次暗讀值，再 16 次亮讀值，前 2 次在 LED 穩定期間捨棄。原始讀值都保存，任何數值都能重算。",
+   "cat": "hardware",
+   "src": "measurement"
+  },
+  {
+   "term": "Reference channel (dual beam)",
+   "kw_en": [
+    "second sensor",
+    "never sees culture",
+    "cancels LED drift"
+   ],
+   "kw_zh": [
+    "第二個感測器",
+    "不經過菌液",
+    "抵消 LED 飄移"
+   ],
+   "def_en": "A second lux sensor that sees only the LED, not the culture. Taking the sample to reference ratio means a dimming LED is not read as growth. A drift flag fires if R/R0 leaves 0.85 to 1.15.",
+   "def_zh": "第二個只看 LED、不經過菌液的照度感測器。取樣品與參考的比值，LED 變暗就不會被誤讀成生長。R/R0 超出 0.85 至 1.15 就會亮飄移旗標。",
+   "cat": "hardware",
+   "src": "measurement"
+  },
+  {
+   "term": "Blank",
+   "kw_en": [
+    "zero reference",
+    "clean medium",
+    "refused if bad"
+   ],
+   "kw_zh": [
+    "歸零參考",
+    "乾淨培養基",
+    "異常就拒絕"
+   ],
+   "def_en": "A reading of the cuvette with medium and no cells, used as zero for every later point. ReLEAF refuses a blank if a sensor saturates, too few readings survive or a channel reads zero. Mismatched blanks caused early 20 percent errors.",
+   "def_zh": "只放培養基、沒有細胞時比色管的讀值，當作之後每個點的零點。感測器飽和、留下讀值太少或通道為零時，ReLEAF 會拒絕這個空白。空白不一致曾造成早期約 20% 的誤差。",
+   "cat": "hardware",
+   "src": "hardware-photometer"
+  },
+  {
+   "term": "Path-length factor (x5)",
+   "kw_en": [
+    "2 mm to 10 mm",
+    "standard cuvette basis",
+    "multiply by 5"
+   ],
+   "kw_zh": [
+    "2 mm 換 10 mm",
+    "標準比色管",
+    "乘以 5"
+   ],
+   "def_en": "OD scales with path length. The flow cuvette is 2 mm, standard OD600 is quoted for 10 mm, so the log ratio is multiplied by 5. It is why the Pro can be compared with the BioDrop at all.",
+   "def_zh": "OD 與光程成正比。流動比色管是 2 mm，標準 OD600 以 10 mm 表示，所以對數比值乘以 5。這讓 Pro 能和 BioDrop 比較。",
+   "cat": "hardware",
+   "src": "measurement"
+  },
+  {
+   "term": "TiO2 standard",
+   "kw_en": [
+    "titanium dioxide",
+    "added by mass",
+    "23 August"
+   ],
+   "kw_zh": [
+    "二氧化鈦",
+    "依質量添加",
+    "8 月 23 日"
+   ],
+   "def_en": "A cheap non-growing scattering powder added by weight to the loop. Used first because it was already in the lab. The Pro agreed with the BioDrop to a median 3.8 percent, with R2 0.9999.",
+   "def_zh": "便宜、不會生長的散射粉末，依重量加進迴路。因為實驗室本來就有，先用它。Pro 與 BioDrop 的差距中位數 3.8%，R2 為 0.9999。",
+   "cat": "hardware",
+   "src": "measurement"
+  },
+  {
+   "term": "SiO2 microsphere standard",
+   "kw_en": [
+    "1 um beads",
+    "iGEM standard",
+    "10 October"
+   ],
+   "kw_zh": [
+    "1 微米微球",
+    "iGEM 標準",
+    "10 月 10 日"
+   ],
+   "def_en": "Monodisperse 1 micron silica beads, close to a Bacillus cell in size, added by pipetted volume. Used to calibrate both builds and to test the software. It calibrates the instrument, not the organism.",
+   "def_zh": "單一粒徑 1 微米的二氧化矽微球，大小接近枯草桿菌，依移液體積加入。用來校正兩個版本並測試軟體。它校正的是儀器，不是生物。",
+   "cat": "hardware",
+   "src": "measurement"
+  },
+  {
+   "term": "Withdraw-one add-one ladder",
+   "kw_en": [
+    "pipetted volumes",
+    "50 mL loop",
+    "C stock x (1 - ((V-1)/V)^n)"
+   ],
+   "kw_zh": [
+    "移液體積",
+    "迴路體積",
+    "濃度公式"
+   ],
+   "def_en": "A way to build many concentrations: remove one volume of suspension, add one volume of stock, repeat. Concentration comes from the formula and pipetting, so no instrument under test sets the scale.",
+   "def_zh": "做出多個濃度的方法：取出一份懸浮液，補入一份原液，重複。濃度由公式和移液決定，所以被測儀器不會決定刻度。",
+   "cat": "hardware",
+   "src": "measurement"
+  },
+  {
+   "term": "R2 (coefficient of determination)",
+   "kw_en": [
+    "fit to a line",
+    "1 is perfect",
+    "not accuracy"
+   ],
+   "kw_zh": [
+    "直線擬合程度",
+    "1 為完美",
+    "不等於準確"
+   ],
+   "def_en": "How well points follow a fitted line. ReLEAF reports R2 for each instrument against known mass. A high R2 means linear, not correct: the Pro had R2 0.9874 on silica yet sat 0.12 OD below the BioDrop.",
+   "def_zh": "資料點貼近擬合直線的程度。ReLEAF 對已知質量報告各儀器的 R2。R2 高代表線性，不代表正確：Pro 在二氧化矽上 R2 為 0.9874，卻比 BioDrop 低 0.12 OD。",
+   "cat": "model",
+   "src": "measurement"
+  },
+  {
+   "term": "Residual SD / RMSE",
+   "kw_en": [
+    "scatter around the line",
+    "0.011 OD",
+    "0.016 OD"
+   ],
+   "kw_zh": [
+    "離直線的散布",
+    "0.011 OD",
+    "0.016 OD"
+   ],
+   "def_en": "Typical distance of readings from a fitted line, in OD units. The Pro had RMSE 0.011 OD on TiO2 test 2 and a residual SD of 0.016 OD on silica, against 0.024 OD for the August calibration.",
+   "def_zh": "讀值離擬合直線的一般距離，單位是 OD。Pro 在 TiO2 第二次的 RMSE 為 0.011 OD，二氧化矽殘差 SD 為 0.016 OD，8 月校正則是 0.024 OD。",
+   "cat": "model",
+   "src": "results"
+  },
+  {
+   "term": "Linear range / dynamic range",
+   "kw_en": [
+    "where response is straight",
+    "Pro to about OD 2.5",
+    "tested on silica only"
+   ],
+   "kw_zh": [
+    "反應呈直線的範圍",
+    "Pro 約到 OD 2.5",
+    "只在二氧化矽測過"
+   ],
+   "def_en": "The span where reading is proportional to concentration. The Pro reads directly up to about OD 2.5 on silica; above it the slope drops from 0.995 to 0.594. The limit is not yet tested on culture.",
+   "def_zh": "讀值與濃度成正比的範圍。Pro 在二氧化矽上約到 OD 2.5 都可直接讀；超過後斜率從 0.995 掉到 0.594。這個上限還沒用菌液驗證。",
+   "cat": "hardware",
+   "src": "hardware-photometer"
+  },
+  {
+   "term": "Saturation",
+   "kw_en": [
+    "signal stops responding",
+    "sample beam 1/10 of reference",
+    "low-signal warning"
+   ],
+   "kw_zh": [
+    "訊號不再變化",
+    "樣品光為參考的十分之一",
+    "低訊號警告"
+   ],
+   "def_en": "When a sensor or optical path can no longer respond to more density. In run 6 the sample beam fell to a tenth of the reference near OD 2.7 and the gate raised a low-signal warning. The BioDrop also loses accuracy above OD 1.",
+   "def_zh": "感測器或光路無法再隨密度變化的狀態。第 6 次實驗在約 OD 2.7 時樣品光降到參考的十分之一，閘門發出低訊號警告。BioDrop 在 OD 1 以上也會失準。",
+   "cat": "hardware",
+   "src": "results"
+  },
+  {
+   "term": "Acceptance gate",
+   "kw_en": [
+    "spread gate",
+    "jump gate",
+    "3 agreeing readings"
+   ],
+   "kw_zh": [
+    "離散閘門",
+    "跳動閘門",
+    "連續三筆一致"
+   ],
+   "def_en": "A check after the estimator that withholds untrustworthy readings. Spread: MAD and 90th percentile differ by over 0.03 OD. Jump: more than 0.05 OD or 5 percent from the last accepted value, so a new level needs three agreeing readings.",
+   "def_zh": "在估計法之後把不可信讀值擋下的檢查。離散：MAD 與第 90 百分位差超過 0.03 OD。跳動：距上次接受值超過 0.05 OD 或 5%，新水準需連續三筆一致。",
+   "cat": "software",
+   "src": "measurement"
+  },
+  {
+   "term": "Quantisation",
+   "kw_en": [
+    "whole-count sensor",
+    "lost sub-count detail",
+    "91.5 percent on integers"
+   ],
+   "kw_zh": [
+    "整數計數感測器",
+    "小數資訊消失",
+    "91.5% 落在整數"
+   ],
+   "def_en": "A sensor that reports only whole counts. The reference sat near 32 counts, so one count moved OD by 0.067, and the MAD gate collapsed to the most common value. It made fake steps in the 434 hour trace.",
+   "def_zh": "感測器只輸出整數計數。參考通道約 32 個計數，差 1 個計數 OD 就差 0.067，MAD 閘門退化成取最常見的值，在 434 小時資料中造成假階梯。",
+   "cat": "hardware",
+   "src": "measurement"
+  },
+  {
+   "term": "Pre-registration",
+   "kw_en": [
+    "written before measuring",
+    "8 predictions",
+    "5 not supported"
+   ],
+   "kw_zh": [
+    "測量前先寫下",
+    "8 項預測",
+    "5 項不成立"
+   ],
+   "def_en": "Committing the algorithm list, metrics, pass thresholds and exclusion rules to the repository before the first calibration reading. ReLEAF also registered a growth rate on 1 October, 0.2986 per hour, which run 6 met at 0.286.",
+   "def_zh": "在第一筆校正讀值之前，把演算法清單、指標、通過門檻和排除規則提交到儲存庫。ReLEAF 也在 10 月 1 日登記生長率 0.2986 每小時，第 6 次實驗得到 0.286，落在區間內。",
+   "cat": "software",
+   "src": "measurement"
+  },
+  {
+   "term": "Algorithm replay",
+   "kw_en": [
+    "same raw bursts",
+    "11 algorithms",
+    "no burst-to-burst noise"
+   ],
+   "kw_zh": [
+    "同一份原始 burst",
+    "11 種演算法",
+    "排除 burst 間差異"
+   ],
+   "def_en": "Logging every individual sensor sample so many estimators can be run offline on exactly the same input. Replay reproduced all eight logged OD outputs within 0.005 OD, so the offline analysis matches the firmware.",
+   "def_zh": "記錄每一個感測器原始讀值，讓多種估計法在完全相同的輸入上離線運算。重播結果與八個記錄的 OD 輸出差在 0.005 OD 內，所以離線分析和韌體一致。",
+   "cat": "software",
+   "src": "measurement"
+  },
+  {
+   "term": "Competitive His-tag ELISA",
+   "kw_en": [
+    "same tag, one kit",
+    "signal falls as protein rises",
+    "Cayman 10012445"
+   ],
+   "kw_zh": [
+    "同一個標籤一個套組",
+    "蛋白質越多訊號越低",
+    "Cayman 10012445"
+   ],
+   "def_en": "An immunoassay where His-tagged protein in the sample competes with a labelled tracer for antibody, so signal drops as protein rises. All three protectants carry a His tag, so one plate quantifies them in ug/mL.",
+   "def_zh": "樣品中的 His 標籤蛋白與標記追蹤劑競爭抗體，蛋白質越多訊號越低。三種保護蛋白都有 His 標籤，所以一種盤就能定量成 ug/mL。",
+   "cat": "assay",
+   "src": "measurement"
+  },
+  {
+   "term": "%B/B0",
+   "kw_en": [
+    "binding relative to maximum",
+    "valid 20 to 80",
+    "curve 31.6 to 95.1"
+   ],
+   "kw_zh": [
+    "相對最大結合",
+    "有效範圍 20 至 80",
+    "曲線 31.6 至 95.1"
+   ],
+   "def_en": "Sample signal as a percentage of maximum-binding signal after blank and non-specific correction. It falls as protein rises. ReLEAF re-assays samples outside 20 to 80, and its standard curve only covers 31.6 to 95.1.",
+   "def_zh": "扣除空白與非專一結合後，樣品訊號占最大結合訊號的百分比，蛋白質越多越低。ReLEAF 對 20 至 80 以外的樣品要重測，而標準曲線只涵蓋 31.6 至 95.1。",
+   "cat": "assay",
+   "src": "measurement"
+  },
+  {
+   "term": "Standard curve and extrapolation",
+   "kw_en": [
+    "six known points",
+    "3 to 0.093 ug/mL",
+    "outside curve is a guess"
+   ],
+   "kw_zh": [
+    "六個已知濃度",
+    "3 至 0.093 ug/mL",
+    "曲線外只是估計"
+   ],
+   "def_en": "Known concentrations used to convert signal into concentration. A sample reading beyond the lowest or highest standard is extrapolated. All four ACCD wells fell outside, so ReLEAF calls them extrapolations, not quantities.",
+   "def_zh": "用已知濃度把訊號換算成濃度。樣品讀值超出最低或最高標準品就是外插。四個 ACCD 孔全在曲線外，所以 ReLEAF 稱它們為外插，不是定量值。",
+   "cat": "assay",
+   "src": "measurement"
+  },
+  {
+   "term": "NSB and B0 wells",
+   "kw_en": [
+    "non-specific binding",
+    "maximum binding",
+    "blank-subtracted"
+   ],
+   "kw_zh": [
+    "非專一結合",
+    "最大結合",
+    "已扣空白"
+   ],
+   "def_en": "Plate controls for ELISA. NSB wells have no antibody and read 0.005 after blank, showing almost nothing sticks. B0 wells have maximum binding, 1.109 corrected, the value every sample is divided by. Two B0 wells differed by 11 percent.",
+   "def_zh": "ELISA 的盤上對照。NSB 孔沒有抗體，扣空白後只有 0.005，代表幾乎沒有非專一吸附。B0 孔是最大結合，校正後 1.109，是所有樣品要除的值。兩個 B0 孔差了 11%。",
+   "cat": "assay",
+   "src": "measurement"
+  },
+  {
+   "term": "Negative control (WB800 host)",
+   "kw_en": [
+    "untransformed host",
+    "should read near zero",
+    "read 5 ug/mL"
+   ],
+   "kw_zh": [
+    "未轉殖宿主",
+    "應接近零",
+    "讀到 5 ug/mL"
+   ],
+   "def_en": "The same strain without the construct, run through the same assay. In the ELISA it read 5.452 and 4.562 ug/mL, similar to four of six constructs, so differences between constructs cannot be credited to expression.",
+   "def_zh": "同一株菌但沒有構築，走相同分析。ELISA 中它讀到 5.452 和 4.562 ug/mL，和六個構築中的四個差不多，所以構築間的差異不能算成表達量。",
+   "cat": "assay",
+   "src": "measurement"
+  },
+  {
+   "term": "DNPH assay",
+   "kw_en": [
+    "ACCD activity",
+    "alpha-ketobutyrate",
+    "colour at 540 nm"
+   ],
+   "kw_zh": [
+    "ACCD 活性",
+    "α-ketobutyrate",
+    "540 nm 顯色"
+   ],
+   "def_en": "A colourimetric activity test. ACC deaminase turns ACC into alpha-ketobutyrate; DNPH makes a hydrazone read at 540 nm. ReLEAF scaled it down twenty-fold to a 96-well plate to ask whether secreted enzyme still works.",
+   "def_zh": "比色式活性測試。ACC 脫胺酶把 ACC 變成 α-ketobutyrate，DNPH 形成在 540 nm 讀值的 hydrazone。ReLEAF 縮小二十倍到 96 孔盤，檢查分泌出來的酵素是否還有作用。",
+   "cat": "assay",
+   "src": "measurement"
+  },
+  {
+   "term": "PLP (pyridoxal 5'-phosphate)",
+   "kw_en": [
+    "ACCD cofactor",
+    "keep fixed",
+    "Csn matched host without it"
+   ],
+   "kw_zh": [
+    "ACCD 輔因子",
+    "必須固定",
+    "沒有它 Csn 等於宿主"
+   ],
+   "def_en": "The cofactor ACC deaminase needs. Without PLP the Csn construct read the same as the host; with PLP it rose. So any comparison across constructs keeps PLP fixed, and every ACCD plant treatment carries PLP.",
+   "def_zh": "ACC 脫胺酶需要的輔因子。沒有 PLP 時 Csn 構築和宿主讀值一樣，加了就上升。所以跨構築比較都要固定 PLP，每個 ACCD 植物處理也都加 PLP。",
+   "cat": "biology",
+   "src": "measurement"
+  },
+  {
+   "term": "Enzyme unit (U) and specific activity",
+   "kw_en": [
+    "1 umol per hour",
+    "activity per protein",
+    "U/mg"
+   ],
+   "kw_zh": [
+    "每小時 1 微莫耳",
+    "每單位蛋白的活性",
+    "U/mg"
+   ],
+   "def_en": "One unit releases 1 umol of alpha-ketobutyrate per hour under the assay conditions. Specific activity divides DNPH activity by ELISA concentration. In the reactor it reached 6.3 U/mg at 18 h, built on single samples.",
+   "def_zh": "一個單位在分析條件下每小時釋放 1 微莫耳 α-ketobutyrate。比活性是 DNPH 活性除以 ELISA 濃度。在反應器中 18 小時達 6.3 U/mg，但來自單一樣品。",
+   "cat": "assay",
+   "src": "results"
+  },
+  {
+   "term": "Western blot (anti-His)",
+   "kw_en": [
+    "presence and size",
+    "PVDF membrane",
+    "37 kDa band"
+   ],
+   "kw_zh": [
+    "有沒有、多大",
+    "PVDF 膜",
+    "37 kDa 條帶"
+   ],
+   "def_en": "Proteins are separated by size on a gel, transferred to a membrane and detected through the His tag. It shows whether a band of the expected size exists, not how much. It was the cheap first screen before ELISA.",
+   "def_zh": "蛋白質在膠上依大小分離，轉印到膜上，再經 His 標籤偵測。它能顯示預期大小的條帶是否存在，不能告訴你有多少。它是 ELISA 之前便宜的初步篩選。",
+   "cat": "assay",
+   "src": "measurement"
+  },
+  {
+   "term": "SDS-PAGE",
+   "kw_en": [
+    "separate by size",
+    "120 V gel run",
+    "ladder in first and last lane"
+   ],
+   "kw_zh": [
+    "依大小分離",
+    "120 V 跑膠",
+    "首尾泳道放標準"
+   ],
+   "def_en": "Gel electrophoresis that separates denatured proteins by molecular weight. ReLEAF used it as the first half of the Western blot: samples heated at 95 C in Laemmli buffer, then run at 120 V with a ladder for size.",
+   "def_zh": "把變性蛋白質依分子量分離的電泳。ReLEAF 把它當 Western blot 的前半：樣品在 Laemmli buffer 中 95 度 C 加熱，再以 120 V 跑膠，並放 ladder 對照大小。",
+   "cat": "assay",
+   "src": "measurement"
+  },
+  {
+   "term": "Technical vs biological replicate",
+   "kw_en": [
+    "same sample repeated",
+    "independent cultures",
+    "pooled tube"
+   ],
+   "kw_zh": [
+    "同一樣品重複",
+    "獨立培養",
+    "合併一管"
+   ],
+   "def_en": "A technical replicate re-measures the same sample; a biological replicate is an independent culture or plant. ReLEAF chlorophyll uses three wells from one pooled tube, so error bars show assay spread, not plant-to-plant variation.",
+   "def_zh": "技術重複是重測同一個樣品；生物重複是獨立的培養或植株。ReLEAF 的葉綠素用同一合併管的三個孔，所以誤差線反映的是分析的離散，不是植株間的差異。",
+   "cat": "assay",
+   "src": "measurement"
+  },
+  {
+   "term": "Chlorophyll a+b equation",
+   "kw_en": [
+    "A663 and A645",
+    "80% acetone",
+    "per gram fresh weight"
+   ],
+   "kw_zh": [
+    "A663 與 A645",
+    "80% 丙酮",
+    "每克鮮重"
+   ],
+   "def_en": "Total chlorophyll = (8.02 x A663 + 20.20 x A645) x V / (1000 x fresh weight), after extracting seedlings in 80 percent acetone. ReLEAF reports it per gram and also as total in the extract.",
+   "def_zh": "總葉綠素 = (8.02 x A663 + 20.20 x A645) x V / (1000 x 鮮重)，幼苗用 80% 丙酮萃取。ReLEAF 同時報告每克數值和萃取液總量。",
+   "cat": "plant",
+   "src": "measurement"
+  },
+  {
+   "term": "Fresh-weight normalisation",
+   "kw_en": [
+    "divide by biomass",
+    "can invert the trend",
+    "report total too"
+   ],
+   "kw_zh": [
+    "除以生物量",
+    "可能讓趨勢顛倒",
+    "也要報總量"
+   ],
+   "def_en": "Dividing a measurement by plant fresh weight. When stress destroys biomass the denominator collapses and chlorophyll looks higher. ReLEAF saw 0.366 versus 0.121 mg/g while total fell 91 percent, so both are shown.",
+   "def_zh": "把測量值除以植物鮮重。逆境破壞生物量時分母變很小，葉綠素看起來反而更高。ReLEAF 看到 0.366 對 0.121 mg/g，但總量掉了 91%，所以兩者都呈現。",
+   "cat": "plant",
+   "src": "measurement"
+  },
+  {
+   "term": "ImageJ with in-frame ruler",
+   "kw_en": [
+    "scale from an object",
+    "150 mm ruler",
+    "trace primary root"
+   ],
+   "kw_zh": [
+    "用畫面內物體校正",
+    "150 mm 尺",
+    "描繪主根"
+   ],
+   "def_en": "Root length is traced from photographs in ImageJ, with a 150 mm ruler in every frame to set the scale. This avoids assuming camera distance and exposes tilted plates. Plate racks were printed to stop tilt.",
+   "def_zh": "根長用 ImageJ 在照片上描繪，每張照片都放一把 150 mm 的尺來設定比例。這樣不用假設相機距離，也能發現培養皿傾斜。團隊還印了架子防止傾斜。",
+   "cat": "plant",
+   "src": "measurement"
+  },
+  {
+   "term": "Hall-effect flow meter",
+   "kw_en": [
+    "pulses per liter",
+    "2580 pulses/L",
+    "matches manual R2 0.995"
+   ],
+   "kw_zh": [
+    "每公升脈衝數",
+    "2580 脈衝/L",
+    "與手動 R2 0.995"
+   ],
+   "def_en": "A ZJ-TM02 meter where a magnet in a spinning rotor triggers a fixed sensor once per turn; pulse frequency tracks flow. Validated against flow caught by hand at R2 0.995, after hand readings proved operator-dependent.",
+   "def_zh": "ZJ-TM02 流量計：旋轉轉子裡的磁鐵每轉一圈觸發固定感測器一次，脈衝頻率對應流量。與手動收集的水量比對 R2 為 0.995；手動讀值被證明會因人而異。",
+   "cat": "hardware",
+   "src": "measurement"
+  },
+  {
+   "term": "Transmembrane pressure (TMP)",
+   "kw_en": [
+    "(feed + retentate)/2 - permeate",
+    "three transmitters",
+    "read as a trend"
+   ],
+   "kw_zh": [
+    "(進料+回流)/2-滲出",
+    "三個變送器",
+    "看趨勢"
+   ],
+   "def_en": "The pressure pushing across the membrane, from three transmitters. August series lacked the permeate channel so showed lumen drop only. In operation mean TMP was about 0.03 bar, small against the transmitter's stated 1 percent of full scale.",
+   "def_zh": "推動液體穿過膜的壓力，由三個變送器算出。8 月的資料沒有滲出側通道，只呈現管腔壓降。運轉時平均 TMP 約 0.03 bar，比變送器標示的滿量程 1% 還小。",
+   "cat": "hardware",
+   "src": "measurement"
+  },
+  {
+   "term": "Autoencoder fault detector",
+   "kw_en": [
+    "trained on healthy hours",
+    "sensor axis vs process axis",
+    "26.7 h lead"
+   ],
+   "kw_zh": [
+    "用健康時段訓練",
+    "感測器軸與製程軸",
+    "領先 26.7 小時"
+   ],
+   "def_en": "A model trained on the first 120 healthy hours of run 3 that scores the reference beam and the growth rate separately. It flagged the instrument at 216.3 h, 26.7 h before failure, with a 6.1 percent false-alarm rate.",
+   "def_zh": "用第 3 次實驗前 120 小時健康資料訓練的模型，分別對參考光束和生長率評分。它在 216.3 小時標記儀器，比失效早 26.7 小時，誤報率 6.1%。",
+   "cat": "software",
+   "src": "results"
+  },
+  {
+   "term": "Matched LEDs and PWM tiers",
+   "kw_en": [
+    "measure each LED",
+    "groups of four",
+    "intensity set in code"
+   ],
+   "kw_zh": [
+    "逐顆量測",
+    "四顆一組",
+    "強度用程式設定"
+   ],
+   "def_en": "Cheap LEDs sold as identical varied by about 26 percent, so each was measured and sorted into groups of four within 1 to 2 percent. The low-to-high gap after sorting was small, so intensity tiers come from PWM duty cycle.",
+   "def_zh": "標示相同的便宜 LED 實際相差約 26%，所以逐顆量測並分成四顆一組，組內差 1 至 2%。分組後低到高的差距很小，所以強度分級靠 PWM 工作週期。",
+   "cat": "hardware",
+   "src": "measurement"
+  }
+ ],
+ "questions": [
+  {
+   "q_en": "How does your photometer turn light into an OD600 number?",
+   "q_zh": "你們的光度計是怎麼把光變成 OD600 數字的？",
+   "type": "fact",
+   "tier": "A",
+   "pages": [
+    "measurement",
+    "hardware-photometer"
+   ],
+   "seat": "hw",
+   "backup": "dry",
+   "kw_en": [
+    "sample over reference",
+    "blank ratio",
+    "times five"
+   ],
+   "kw_zh": [
+    "樣品除以參考",
+    "空白比值",
+    "乘以五"
+   ],
+   "a_en": "Two sensors do the work, one after the culture and one on a reference beam. The software takes their ratio, compares it with a blank taken on clean medium, and applies a log. Then it multiplies by five, because our flow cell is 2 millimetres and OD600 is quoted for 1 centimetre. Raw readings are stored, so any value can be recomputed. The limit: we never fitted a curve to the BioDrop.",
+   "a_zh": "兩個感測器負責，一個在菌液後面，一個在參考光束上。軟體取兩者的比值，跟乾淨培養基量的空白比較，再取對數。然後乘以五，因為我們的流動池是 2 毫米，而 OD600 是以 1 公分為準。原始讀值都有保存，所以任何數值都能重算。限制是：我們沒有拿 BioDrop 去擬合一條校正曲線。",
+   "trap_en": "Forgetting the reference sensor or the factor of 5 and describing it as a simple light meter.",
+   "trap_zh": "忘了參考感測器或乘 5 的係數，把它講成單純的照度計。",
+   "basis": "like KU Leuven-style 'how does it work' openers; Hardware 2021 UPenn: validate against commercial instrument"
+  },
+  {
+   "q_en": "How do you keep bubbles from ruining a reading?",
+   "q_zh": "你們怎麼避免氣泡毀掉一筆讀值？",
+   "type": "fact",
+   "tier": "A",
+   "pages": [
+    "measurement",
+    "hardware-photometer"
+   ],
+   "seat": "hw",
+   "backup": "dry",
+   "kw_en": [
+    "burst of sixteen",
+    "median plus 3 MAD",
+    "retake above 50%"
+   ],
+   "kw_zh": [
+    "16 次 burst",
+    "中位數加減 3 MAD",
+    "超過 50% 重測"
+   ],
+   "a_en": "Each reading is a burst: four dark readings, then sixteen lit ones, with the first two lit readings dropped. We keep values within the median plus or minus three MAD, and if over half the burst is rejected we retake it and flag bubbling. The tube is also tilted so bubbles climb out. Honest limit: a cell full of air gives sixteen agreeing wrong readings, which MAD alone cannot catch.",
+   "a_zh": "每筆讀值是一段 burst：先 4 次暗讀值，再 16 次亮讀值，前兩次亮讀值捨棄。我們只留中位數加減 3 個 MAD 內的值，如果超過一半被剔除就重測並標記氣泡。管子也是傾斜的，讓氣泡自己爬出去。誠實的限制是：流動池整個充滿空氣時，會得到一致但全錯的讀值，單靠 MAD 抓不到。",
+   "trap_en": "Claiming MAD solves bubbles completely; the air slug case fooled it.",
+   "trap_zh": "說 MAD 完全解決氣泡；空氣塞的情況它就被騙過。",
+   "basis": "Hardware 2021 UPenn: biggest source of noise and how reduced"
+  },
+  {
+   "q_en": "What does the DNPH assay measure, and how?",
+   "q_zh": "DNPH 分析測的是什麼？怎麼測？",
+   "type": "fact",
+   "tier": "A",
+   "pages": [
+    "measurement",
+    "experiments"
+   ],
+   "seat": "wet2",
+   "backup": "wet1",
+   "kw_en": [
+    "ACCD activity",
+    "alpha-ketobutyrate",
+    "540 nm on a plate"
+   ],
+   "kw_zh": [
+    "ACCD 活性",
+    "α-ketobutyrate",
+    "96 孔盤 540 nm"
+   ],
+   "a_en": "It measures whether ACC deaminase is still working. The enzyme cleaves ACC into alpha-ketobutyrate and ammonia, and DNPH turns the alpha-ketobutyrate into a coloured hydrazone read at 540 nanometres. We scaled the classic Penrose and Glick method down twenty-fold onto a 96-well plate. Limit: it is a product readout from single wells, so it says active or not, not a precise rate.",
+   "a_zh": "它測的是 ACC 脫胺酶是否還有作用。酵素把 ACC 切成 α-ketobutyrate 和氨，DNPH 把 α-ketobutyrate 變成有顏色的 hydrazone，在 540 nm 讀值。我們把 Penrose 和 Glick 的經典方法縮小二十倍，放到 96 孔盤。限制是：它是用產物當讀值，而且是單一孔，所以只能說有沒有活性，不是精確速率。",
+   "trap_en": "Mixing it up with ELISA: DNPH says working, ELISA says present.",
+   "trap_zh": "跟 ELISA 搞混：DNPH 看有沒有作用，ELISA 看有沒有蛋白質。",
+   "basis": "Munich 2025 style: what exactly is measured"
+  },
+  {
+   "q_en": "What is your ELISA standard curve, and over what range can you trust a number?",
+   "q_zh": "你們的 ELISA 標準曲線是什麼？數字在哪個範圍內可以相信？",
+   "type": "fact",
+   "tier": "A",
+   "pages": [
+    "measurement"
+   ],
+   "seat": "wet2",
+   "backup": "dry",
+   "kw_en": [
+    "six points duplicate",
+    "31.6 to 95.1 percent",
+    "outside is extrapolated"
+   ],
+   "kw_zh": [
+    "六點雙重複",
+    "31.6 至 95.1%",
+    "範圍外是外插"
+   ],
+   "a_en": "Six His-protein standards from 3 down to 0.093 micrograms per millilitre, each in duplicate with CV under 6 percent. A four-parameter logistic fit gives R squared 0.98 across 31.6 to 95.1 percent of maximum binding. The kit says re-assay anything outside 20 to 80 percent. Anything beyond the curve is an extrapolation, and we label it that way, which includes all four ACCD wells.",
+   "a_zh": "六個 His 蛋白標準品，從 3 到 0.093 微克每毫升，每點雙重複，CV 小於 6%。四參數 logistic 擬合在最大結合的 31.6 至 95.1% 之間 R 平方是 0.98。套組規定 20 至 80% 以外要重測。超出曲線的就是外插，我們也這樣標示，包括 ACCD 的四個孔。",
+   "trap_en": "Quoting a concentration without saying whether it sits inside the curve.",
+   "trap_zh": "報濃度卻沒說它是不是在曲線範圍內。",
+   "basis": "Munich 2025: LOD and LOQ, assay range"
+  },
+  {
+   "q_en": "Why median and MAD instead of an ordinary mean?",
+   "q_zh": "為什麼用中位數和 MAD，而不是一般的平均值？",
+   "type": "design",
+   "tier": "A",
+   "pages": [
+    "measurement",
+    "hardware-photometer"
+   ],
+   "seat": "hw",
+   "backup": "dry",
+   "kw_en": [
+    "bubbles drag means",
+    "eleven algorithms replayed",
+    "kept symmetric MAD"
+   ],
+   "kw_zh": [
+    "氣泡拉動平均",
+    "重播十一種演算法",
+    "保留對稱 MAD"
+   ],
+   "a_en": "We expected bubbles to cause short one-sided drops, and a mean gets pulled toward those while a median barely moves. On 10 October we replayed eleven algorithms on the same raw bursts. In clean flow all agreed within 0.004 OD, so the choice hardly mattered. With bubbles our one-sided estimator failed, because a bubble brightens one build and darkens the other. So we kept symmetric MAD and added gates after it.",
+   "a_zh": "我們原本預期氣泡造成短暫的單邊下降，平均值會被拉過去，中位數卻幾乎不動。10 月 10 日我們把十一種演算法放在同一份原始 burst 上重播。流動乾淨時結果都在 0.004 OD 內，選哪個幾乎沒差。有氣泡時，我們的單邊估計法失敗了，因為氣泡在一個版本讓讀值變亮，在另一個版本卻變暗。所以我們保留對稱的 MAD，並在後面加上閘門。",
+   "trap_en": "Saying bubbles only block light, which our own data refuted.",
+   "trap_zh": "說氣泡只會擋光，這點被我們自己的資料推翻了。",
+   "basis": "Hardware 2021 UPenn: biggest source of error; Munich 2025: honest gap"
+  },
+  {
+   "q_en": "Why 600 nanometres and an amber LED?",
+   "q_zh": "為什麼選 600 奈米的琥珀色 LED？",
+   "type": "design",
+   "tier": "A",
+   "pages": [
+    "hardware-photometer",
+    "measurement"
+   ],
+   "seat": "hw",
+   "backup": "wet1",
+   "kw_en": [
+    "standard for OD600",
+    "scattering by cells",
+    "between CcaSR peaks"
+   ],
+   "kw_zh": [
+    "OD600 標準",
+    "細胞散射",
+    "夾在 CcaSR 兩峰之間"
+   ],
+   "a_en": "Three reasons. OD600 is the standard way to report bacterial density, so we can compare with the BioDrop and published curves. At 600 nanometres cells dim the beam mainly by scattering, not by the medium absorbing. And amber sits between the green and red peaks that drive CcaSR, so watching the culture does not switch production on or off. The limit is that this reads turbidity, not cell number.",
+   "a_zh": "三個理由。OD600 是回報細菌密度的標準方式，所以能跟 BioDrop 和文獻曲線比較。在 600 奈米，菌液變暗主要是細胞散射，不是培養基吸收。而且琥珀色夾在驅動 CcaSR 的綠光和紅光兩個峰之間，所以監測菌液不會開關我們的生產。限制是：它讀的是混濁度，不是細胞數。",
+   "trap_en": "Forgetting the CcaSR reason, which is the one that ties the photometer to the circuit.",
+   "trap_zh": "忘了 CcaSR 這個理由，它才是把光度計和電路連起來的關鍵。",
+   "basis": "like INSA Lyon 2022: why that sensor over alternatives"
+  },
+  {
+   "q_en": "Why did you build two photometers, and which one runs the reactor?",
+   "q_zh": "為什麼做兩個光度計？反應器用哪一個？",
+   "type": "design",
+   "tier": "A",
+   "pages": [
+    "measurement",
+    "hardware-photometer"
+   ],
+   "seat": "hw",
+   "backup": "ihp",
+   "kw_en": [
+    "Pro sensitive",
+    "Slim linear and cheaper",
+    "Pro runs the loop"
+   ],
+   "kw_zh": [
+    "Pro 較靈敏",
+    "Slim 線性好又便宜",
+    "迴路用 Pro"
+   ],
+   "a_en": "The Pro costs US$371.78 and is about 5.3 times more sensitive, and it is the one that ran the reactor loop for 434 hours. The Slim swaps the lens and beam splitter for optical fibres, costs US$235.29, and was more linear on the full silica range, R squared 0.992 against 0.974. The limit: the Slim reads about one fifth of the Pro and has not run a long culture yet.",
+   "a_zh": "Pro 要 371.78 美元，靈敏度高約 5.3 倍，跑 434 小時迴路實驗的就是它。Slim 把透鏡和分光鏡換成光纖，要 235.29 美元，在完整二氧化矽範圍的線性較好，R 平方 0.992 對 0.974。限制是：Slim 讀值約為 Pro 的五分之一，也還沒長時間跑過菌液。",
+   "trap_en": "Calling the Slim simply better; it trades sensitivity and has no long run.",
+   "trap_zh": "把 Slim 說成單純比較好；它是用靈敏度換的，而且沒有長時間實驗。",
+   "basis": "Hardware 2021 NUS: why build, what was given up"
+  },
+  {
+   "q_en": "What does the second reference sensor buy you?",
+   "q_zh": "多一個參考感測器到底換到什麼？",
+   "type": "design",
+   "tier": "A",
+   "pages": [
+    "measurement",
+    "hardware-photometer"
+   ],
+   "seat": "hw",
+   "backup": "dry",
+   "kw_en": [
+    "90:10 split",
+    "LED drift cancels",
+    "Slim fixed a 40% dip"
+   ],
+   "kw_zh": [
+    "90:10 分光",
+    "LED 飄移抵消",
+    "Slim 修正 40% 下降"
+   ],
+   "a_en": "A 90:10 beam splitter sends ten percent of the light to a sensor that never sees the culture. If the LED dims, both sensors dim together, the ratio holds, and drift is not read as growth over hundreds of hours. On 10 October a disturbance cut both Slim channels to about 60 percent, and with the reference the drift was only minus 0.0005 OD per minute. The Pro's reference did not respond the same way.",
+   "a_zh": "90:10 分光鏡把百分之十的光送到一個不經過菌液的感測器。LED 變暗時兩個感測器一起變暗，比值不變，所以幾百小時的飄移不會被誤讀成生長。10 月 10 日一次干擾讓 Slim 兩個通道降到約 60%，有了參考通道，漂移只有每分鐘負 0.0005 OD。Pro 的參考通道則沒有出現同樣的反應。",
+   "trap_en": "Saying the reference fixes everything; on the Pro the two paths did not respond equally.",
+   "trap_zh": "說參考通道什麼都能修；在 Pro 上兩條光路的反應並不一致。",
+   "basis": "Hardware 2021 UPenn: sensor drift"
+  },
+  {
+   "q_en": "How do you know your photometer is accurate?",
+   "q_zh": "你們怎麼知道光度計是準的？",
+   "type": "validate",
+   "tier": "A",
+   "pages": [
+    "measurement",
+    "hardware-photometer"
+   ],
+   "seat": "hw",
+   "backup": "dry",
+   "kw_en": [
+    "weighed mass standards",
+    "3.8% from BioDrop",
+    "constant 0.12 OD offset"
+   ],
+   "kw_zh": [
+    "稱重質量標準",
+    "與 BioDrop 差 3.8%",
+    "固定低 0.12 OD"
+   ],
+   "a_en": "We judged it against mass, not only against another instrument. On 23 August we added titanium dioxide by weight, and raw Pro output agreed with the BioDrop to a median 3.8 percent, R squared 0.9999. On 10 October we repeated with 1 micron silica. The honest limit: on silica the Pro ran a constant 0.12 OD below the BioDrop, and neither standard is a living cell.",
+   "a_zh": "我們用質量來評斷，不只是跟另一台儀器比。8 月 23 日我們依重量加入二氧化鈦，Pro 原始輸出與 BioDrop 的差距中位數是 3.8%，R 平方 0.9999。10 月 10 日我們用 1 微米二氧化矽重做。誠實的限制是：在二氧化矽上 Pro 固定比 BioDrop 低約 0.12 OD，而且兩種標準品都不是活細胞。",
+   "trap_en": "Saying 'within 3.8% of the BioDrop' with no mention of the 0.12 OD offset or that the BioDrop is the weaker reference above OD 1.",
+   "trap_zh": "只說『跟 BioDrop 差 3.8%』，卻沒提 0.12 OD 的偏移，也沒提 BioDrop 在 OD 1 以上是比較弱的參考。",
+   "basis": "Hardware 2021 UPenn: how did you validate against a commercial instrument and how close"
+  },
+  {
+   "q_en": "Your reference, the BioDrop, loses accuracy above OD 1. How did you handle that?",
+   "q_zh": "你們的對照儀器 BioDrop 在 OD 1 以上會失準，你們怎麼處理？",
+   "type": "validate",
+   "tier": "A",
+   "pages": [
+    "hardware-photometer",
+    "measurement"
+   ],
+   "seat": "hw",
+   "backup": "dry",
+   "kw_en": [
+    "Prof. Chang advice",
+    "dilute 2x then 4x",
+    "August runs undiluted"
+   ],
+   "kw_zh": [
+    "張教授建議",
+    "先稀釋 2 倍再 4 倍",
+    "8 月沒稀釋"
+   ],
+   "a_en": "Professor Chang told us that above OD 1 a cuvette sample must be diluted. From the 10 October silica run we diluted BioDrop samples two-fold between OD 1 and 2, four-fold above 2, then multiplied back. The August titanium runs were read undiluted, so we trust that comparison only up to about OD 1. Multiplying back also multiplies error, which is why the BioDrop looks irregular past OD 2.",
+   "a_zh": "張教授告訴我們，OD 1 以上比色管樣品必須稀釋。從 10 月 10 日的二氧化矽實驗開始，BioDrop 樣品在 OD 1 到 2 之間稀釋 2 倍、2 以上稀釋 4 倍，再乘回去。8 月的二氧化鈦是沒稀釋直接讀的，所以那次比較我們只信到約 OD 1。乘回去也會把誤差一起乘大，所以 BioDrop 在 OD 2 以上看起來不規則。",
+   "trap_en": "Claiming the 3.8 percent covers the whole range, when the undiluted BioDrop is only trustworthy to about OD 1.",
+   "trap_zh": "說 3.8% 涵蓋整個範圍，但沒稀釋的 BioDrop 只在約 OD 1 以內可信。",
+   "basis": "like Munich 2025: what is the reference"
+  },
+  {
+   "q_en": "How did you avoid tuning the analysis after seeing the data?",
+   "q_zh": "你們怎麼避免看了資料之後再去調整分析方法？",
+   "type": "validate",
+   "tier": "A",
+   "pages": [
+    "measurement"
+   ],
+   "seat": "dry",
+   "backup": "hw",
+   "kw_en": [
+    "pre-registered",
+    "8 predictions, 5 failed",
+    "raw data published"
+   ],
+   "kw_zh": [
+    "事先登記",
+    "8 項預測失敗 5 項",
+    "原始資料公開"
+   ],
+   "a_en": "Before the 10 October run we committed the algorithm list, five metrics, selection rule, eight predictions and exclusion criteria to our repository. Only documented hardware failures or operator errors could be excluded. We then reported all eight predictions, and five were not supported, including that bubbles only darken a reading. The raw CSVs, replay scripts and pre-registration are public. The limit: this covers one run on one standard.",
+   "a_zh": "10 月 10 日實驗之前，我們把演算法清單、五個指標、選擇規則、八項預測和排除條件提交到儲存庫。只有有記錄的硬體故障或操作失誤才能排除。之後我們報告全部八項預測，其中五項沒有被支持，包括氣泡只會讓讀值變暗這一項。原始 CSV、重播程式和事先登記都公開。限制是：這只涵蓋一種標準品的一次實驗。",
+   "trap_en": "Saying all predictions came true; five did not, and that is the strength.",
+   "trap_zh": "說預測全部成真；其實五項失敗，而這正是這個做法的價值。",
+   "basis": "Munich 2025: honest gap; TAU-Israel 2025: pre-registered"
+  },
+  {
+   "q_en": "Do you do any replicates in your protein assays?",
+   "q_zh": "你們的蛋白質分析有做重複嗎？",
+   "type": "validate",
+   "tier": "A",
+   "pages": [
+    "measurement",
+    "results"
+   ],
+   "seat": "wet2",
+   "backup": "dry",
+   "kw_en": [
+    "duplicate wells on plate",
+    "two ELISA trials",
+    "time courses single wells"
+   ],
+   "kw_zh": [
+    "盤上雙重複",
+    "兩次 ELISA",
+    "時間序列是單孔"
+   ],
+   "a_en": "Within a plate, yes. Standards run in duplicate, each sample at two dilutions in duplicate, plus blank, non-specific and maximum-binding controls, and we ran two trials. But the reactor and light time courses are single wells, so we call them trends, not kinetics. We have not repeated those with independent biological cultures, and we say so on the wiki.",
+   "a_zh": "同一個盤內有。標準品雙重複，每個樣品兩種稀釋各雙重複，另外有空白、非專一結合和最大結合對照，而且我們做了兩次試驗。但反應器和光照的時間序列都是單孔，所以我們稱它們為趨勢，不是動力學。這些我們沒有用獨立的生物培養重複過，wiki 上也寫明了。",
+   "trap_en": "Saying n equals three; most time courses are n equals one.",
+   "trap_zh": "說 n 等於 3；其實大部分時間序列是 n 等於 1。",
+   "basis": "Munich 2025: Do you do any replicates? (n equals one)"
+  },
+  {
+   "q_en": "How do you know the DNPH signal is really ACC deaminase activity?",
+   "q_zh": "你們怎麼知道 DNPH 訊號真的是 ACC 脫胺酶的活性？",
+   "type": "validate",
+   "tier": "A",
+   "pages": [
+    "measurement"
+   ],
+   "seat": "wet2",
+   "backup": "wet1",
+   "kw_en": [
+    "curve on every plate",
+    "subtract WB800 host",
+    "PLP fixed"
+   ],
+   "kw_zh": [
+    "每盤都有標準曲線",
+    "扣掉 WB800 宿主",
+    "固定 PLP"
+   ],
+   "a_en": "Three checks. Every value is read from a standard curve on the same plate, linear from 0 to 2.049 millimolar with R squared 0.9995, and we quote nothing above it. We subtract the untransformed WB800 host: without PLP the Csn construct matched the host, 57.9 against 59.7 nanomoles, while SamyQ with PLP gave 30 nanomoles more. The limit: those are single wells on one plate.",
+   "a_zh": "三個檢查。每個數值都從同一盤上的標準曲線讀取，0 到 2.049 mM 呈線性，R 平方 0.9995，超過的我們不引用。我們扣掉未轉殖的 WB800 宿主：沒有 PLP 時 Csn 構築與宿主相同，57.9 對 59.7 nmol，而加 PLP 的 SamyQ 多出 30 nmol。限制是：這些是同一盤上的單一孔。",
+   "trap_en": "Quoting R squared 0.950 for all eight levels, or comparing constructs without fixing PLP.",
+   "trap_zh": "引用八個濃度全擬合的 R 平方 0.950，或沒固定 PLP 就比較構築。",
+   "basis": "Munich 2025: controls and range"
+  },
+  {
+   "q_en": "How many replicates and what statistics sit behind your plant data?",
+   "q_zh": "你們的植物資料背後有幾個重複？用了什麼統計？",
+   "type": "validate",
+   "tier": "A",
+   "pages": [
+    "measurement",
+    "results"
+   ],
+   "seat": "plant",
+   "backup": "wet2",
+   "kw_en": [
+    "pooled tube per group",
+    "three technical wells",
+    "some charts untested"
+   ],
+   "kw_zh": [
+    "每組合併一管",
+    "三個技術重複孔",
+    "部分圖沒做檢定"
+   ],
+   "a_en": "For chlorophyll, each group's seedlings, 9 to 40, go into one tube and are read in three technical wells, shown as mean with SEM. Fresh weight is per group and root length comes from ImageJ traces. Some Results charts carry significance stars, but the trehalose and heat pretest charts were not tested. The limit: technical wells are not independent plants, so we read these as trends.",
+   "a_zh": "葉綠素是把每組 9 到 40 株幼苗放進一管，讀三個技術重複孔，用 mean with SEM 呈現。鮮重是每組一個數字，根長是用 ImageJ 描繪。Results 有些圖有顯著性星號，但 trehalose 和熱預試的圖沒有做檢定。限制是：技術重複孔不是獨立的植株，所以我們把這些當趨勢來讀。",
+   "trap_en": "Saying p-values prove rescue; the replicate unit is a pooled tube.",
+   "trap_zh": "說 p 值證明了拯救效果；其實重複單位是合併的一管。",
+   "basis": "Munich 2025: replicates; TAU-Israel 2025: stated weaknesses"
+  },
+  {
+   "q_en": "What controls do your plant assays use?",
+   "q_zh": "你們的植物實驗有哪些對照？",
+   "type": "validate",
+   "tier": "A",
+   "pages": [
+    "measurement"
+   ],
+   "seat": "plant",
+   "backup": "wet2",
+   "kw_en": [
+    "seven control groups",
+    "protectant without salt",
+    "empty-vector medium"
+   ],
+   "kw_zh": [
+    "七種對照",
+    "不加鹽只加保護劑",
+    "空載體培養基"
+   ],
+   "a_en": "Seven kinds. No salt and no protectant is the healthy baseline. Salt alone is what the protectant must beat. Protectant without salt tests whether it harms healthy plants. Equal volumes of water or TB medium remove volume as a hidden variable. CH peptide and trehalose are reference protectants, filtered medium from empty-vector Bacillus separates medium from protein, and a Western blot checks each sprayed batch. Most groups are one plate.",
+   "a_zh": "七種。不加鹽也不加保護劑是健康基準。只加鹽是保護劑必須打敗的對象。只加保護劑不加鹽，檢查它會不會傷害健康植物。加入等體積的水或 TB 培養基，排除體積這個隱藏變因。CH peptide 與 trehalose 是參考保護劑，空載體枯草桿菌的過濾培養基用來分辨是培養基還是蛋白質在起作用，每一批噴灑液還用 Western blot 確認。大多數組別只有一個培養皿。",
+   "trap_en": "Listing only 'control and treated' and missing the protectant-only and medium controls.",
+   "trap_zh": "只說『對照組和處理組』，漏掉只加保護劑與培養基的對照。",
+   "basis": "like Munich 2025: controls"
+  },
+  {
+   "q_en": "Why build your own photometer instead of using a commercial spectrophotometer?",
+   "q_zh": "為什麼自己做光度計，不用市售的分光光度計？",
+   "type": "compare",
+   "tier": "A",
+   "pages": [
+    "hardware-photometer",
+    "engineering"
+   ],
+   "seat": "hw",
+   "backup": "biz",
+   "kw_en": [
+    "no sampling",
+    "sits in the loop",
+    "Slim half BioDrop price"
+   ],
+   "kw_zh": [
+    "不用抽樣",
+    "裝在迴路裡",
+    "Slim 約為 BioDrop 一半"
+   ],
+   "a_en": "A benchtop reader needs a sample drawn out, which interrupts long runs and risks contamination, and ReLEAF is meant to work outside a lab. Our notes say nobody sells an instrument that sits in the loop. The BioDrop we compared against costs about US$470, and the Slim is US$235.29 in parts. The limit: our output is raw and not traceable to a reference instrument, and we only compared with one reader.",
+   "a_zh": "桌上型讀數儀需要把樣品抽出來，這會打斷長時間培養還有污染風險，而 ReLEAF 的設計是要在實驗室外運作。我們的紀錄寫明沒有人賣能裝在迴路裡的儀器。我們拿來比對的 BioDrop 約 470 美元，Slim 的零件是 235.29 美元。限制是：我們的輸出是原始值，無法追溯到某個參考儀器，而且只跟一台讀數儀比過。",
+   "trap_en": "Arguing it is better than a BioDrop; the case is in-line operation and cost, not precision.",
+   "trap_zh": "主張它比 BioDrop 更好；真正的理由是在線運作和成本，不是精準度。",
+   "basis": "Hardware 2021 UPenn: what could commercial equipment not do"
+  },
+  {
+   "q_en": "Why a competitive His-tag ELISA and not Bradford or a sandwich ELISA?",
+   "q_zh": "為什麼用競爭型 His-tag ELISA，不用 Bradford 或夾心 ELISA？",
+   "type": "compare",
+   "tier": "A",
+   "pages": [
+    "measurement"
+   ],
+   "seat": "wet2",
+   "backup": "wet1",
+   "kw_en": [
+    "Bradford reads total protein",
+    "sandwich needs antibody pair",
+    "one tag, one kit"
+   ],
+   "kw_zh": [
+    "Bradford 讀總蛋白",
+    "夾心要抗體對",
+    "一個標籤一個套組"
+   ],
+   "a_en": "Bradford measures total protein, so it cannot tell our protectants from Bacillus's own. A sandwich ELISA needs a matched antibody pair for every target. All three of our proteins carry the same His tag, so one antibody and one plate format cover ACC deaminase, LEA14 and BoPep4. The catch: it counts tagged protein whether or not it works, so we pair it with DNPH.",
+   "a_zh": "Bradford 測的是總蛋白，分不出我們的保護蛋白和枯草桿菌自己的蛋白。夾心 ELISA 每個目標都需要一對配對抗體。我們三個蛋白都有同一個 His 標籤，所以一種抗體、一種盤式就涵蓋 ACC 脫胺酶、LEA14 和 BoPep4。缺點是：不管蛋白有沒有作用它都會計入，所以我們搭配 DNPH 一起用。",
+   "trap_en": "Forgetting that ELISA says nothing about whether the enzyme works.",
+   "trap_zh": "忘了 ELISA 不能告訴你酵素有沒有作用。",
+   "basis": "Munich 2025: why this assay"
+  },
+  {
+   "q_en": "Why measure the product with DNPH and not detect the ammonia?",
+   "q_zh": "為什麼用 DNPH 測產物，而不是偵測氨？",
+   "type": "compare",
+   "tier": "B",
+   "pages": [
+    "measurement"
+   ],
+   "seat": "wet2",
+   "backup": "wet1",
+   "kw_en": [
+    "carbonyl hydrazone",
+    "low medium background",
+    "sensitive enough"
+   ],
+   "kw_zh": [
+    "羰基 hydrazone",
+    "培養基背景低",
+    "靈敏度夠"
+   ],
+   "a_en": "DNPH reacts with the carbonyl of alpha-ketobutyrate, and we chose it because the ACC substrate does not interfere strongly, culture-medium background is lower than for ammonium detection, and it is sensitive enough to compare constructs. It also fits a 96-well plate. The costs: DNPH is hazardous to handle, the reaction runs overnight at 30 degrees, and our samples sit near the low end of the curve.",
+   "a_zh": "DNPH 會跟 α-ketobutyrate 的羰基反應。我們選它是因為 ACC 受質的干擾不大、培養基背景比偵測銨離子低，而且靈敏度夠用來比較不同構築。它也適合 96 孔盤。代價是：DNPH 處理有危險性，反應要在 30 度過夜，而且我們的樣品落在曲線的低端。",
+   "trap_en": "Calling DNPH a direct measure of enzyme amount; it reads product made.",
+   "trap_zh": "把 DNPH 說成直接測酵素量；它讀的是產生的產物。",
+   "basis": "Hardware 2021 NUS: choice of sensor/assay"
+  },
+  {
+   "q_en": "What happens above OD 2.5? Could the photometer follow a much denser culture?",
+   "q_zh": "OD 超過 2.5 會怎樣？光度計能跟得上更濃的菌液嗎？",
+   "type": "boundary",
+   "tier": "A",
+   "pages": [
+    "hardware-photometer",
+    "results",
+    "measurement"
+   ],
+   "seat": "hw",
+   "backup": "dry",
+   "kw_en": [
+    "Pro limit about OD 2.5",
+    "slope 0.995 then 0.594",
+    "Slim untested higher"
+   ],
+   "kw_zh": [
+    "Pro 上限約 OD 2.5",
+    "斜率 0.995 掉到 0.594",
+    "Slim 更高沒測"
+   ],
+   "a_en": "On silica the Pro tracks the BioDrop with slope 0.995 up to about OD 2.5, then 0.594 above, so we treat 2.5 as the working limit. In run 6 the sample beam fell to a tenth of the reference near OD 2.7 and the gate marked low signal. The Slim should read denser cultures, maybe five times the BioDrop range, but we have not tested past the top of our series.",
+   "a_zh": "在二氧化矽上，Pro 到約 OD 2.5 以前與 BioDrop 的斜率是 0.995，之後掉到 0.594，所以我們把 2.5 當作工作上限。第 6 次實驗在約 OD 2.7 時樣品光降到參考的十分之一，閘門標記為低訊號。Slim 應該可以讀更濃的菌液，可能是 BioDrop 範圍的五倍，但我們沒有測過超出實驗範圍的部分。",
+   "trap_en": "Claiming the instrument reads to OD 3.7 because the log shows it; the gate flagged those values.",
+   "trap_zh": "因為紀錄上有 3.7 就說儀器能讀到 3.7；那些值是被閘門標記過的。",
+   "basis": "like INSA Lyon 2022: dynamic range"
+  },
+  {
+   "q_en": "Does your silica calibration tell you the number of bacteria?",
+   "q_zh": "你們的二氧化矽校正能告訴你細菌數量嗎？",
+   "type": "boundary",
+   "tier": "B",
+   "pages": [
+    "measurement",
+    "results"
+   ],
+   "seat": "hw",
+   "backup": "dry",
+   "kw_en": [
+    "calibrates instrument not organism",
+    "bead vs rod",
+    "plate counts owed"
+   ],
+   "kw_zh": [
+    "校正儀器不是生物",
+    "圓球對桿狀",
+    "還欠菌落計數"
+   ],
+   "a_en": "Not yet. Silica calibrates the instrument, not the organism: a 1 micron bead is a sphere with refractive index 1.46, while a Bacillus cell is a rod nearer 1.33 to 1.41. So the ladder gives equivalent particle counts, not cell mass. A dilution series of washed cells and plate counts are still owed. The closest we did is run live culture through the same photometer for 434 hours.",
+   "a_zh": "還不能。二氧化矽校正的是儀器，不是生物：1 微米的珠子是圓球，折射率 1.46，枯草桿菌是桿狀，接近 1.33 到 1.41。所以梯度給的是等效顆粒數，不是細胞質量。洗過的細胞稀釋系列和菌落計數都還欠著。我們最接近的是讓活的菌液通過同一台光度計跑了 434 小時。",
+   "trap_en": "Reporting OD as cells per millilitre.",
+   "trap_zh": "把 OD 直接說成每毫升細胞數。",
+   "basis": "Munich 2025: what the number actually means"
+  },
+  {
+   "q_en": "Could another team use your His-tag ELISA for their own protein?",
+   "q_zh": "別的團隊能把你們的 His-tag ELISA 用在他們的蛋白質嗎？",
+   "type": "boundary",
+   "tier": "B",
+   "pages": [
+    "measurement"
+   ],
+   "seat": "wet2",
+   "backup": "wet1",
+   "kw_en": [
+    "needs a His tag",
+    "transferable workflow",
+    "check the host control"
+   ],
+   "kw_zh": [
+    "需要 His 標籤",
+    "流程可轉移",
+    "先看宿主對照"
+   ],
+   "a_en": "If their protein carries a His tag, yes. We use a commercial Cayman kit, a six-point standard from 3 to 0.093 micrograms per millilitre, and blank, non-specific and maximum-binding wells, and the wiki says the workflow transfers to other microbial systems with His-tagged proteins. One caution from our own plates: the untransformed host read like our samples, so a team should check its host control first.",
+   "a_zh": "如果他們的蛋白質有 His 標籤，可以。我們用 Cayman 商品化套組，六點標準品從 3 到 0.093 微克每毫升，另有空白、非專一結合和最大結合孔，wiki 也說這個流程可轉移到其他表現 His 標籤蛋白的微生物系統。我們自己盤上的一個提醒是：未轉殖宿主的讀值跟樣品差不多，所以別的團隊應該先檢查宿主對照。",
+   "trap_en": "Saying it works for any protein without the tag requirement or the control warning.",
+   "trap_zh": "說任何蛋白質都能用，沒提標籤需求與對照的警告。",
+   "basis": "like Munich 2025: reuse by other teams"
+  },
+  {
+   "q_en": "How does the photometer data feed into your digital twin and models?",
+   "q_zh": "光度計的資料怎麼進到數位孿生和模型？",
+   "type": "integrate",
+   "tier": "A",
+   "pages": [
+    "results",
+    "measurement"
+   ],
+   "seat": "dry",
+   "backup": "hw",
+   "kw_en": [
+    "twin skips gated stretches",
+    "fault flag 26.7 h early",
+    "growth rate registered 1 Oct"
+   ],
+   "kw_zh": [
+    "孿生不用被標記的段落",
+    "提早 26.7 小時預警",
+    "10 月 1 日登記生長率"
+   ],
+   "a_en": "The twin uses the inline OD600 but skips stretches the gate marks as low signal. A fault detector trained on the healthy first 120 hours of run 3 flagged the reference channel 26.7 hours before it failed. A forecast beat persistence by 41 percent at two hours on run 4. And a growth rate registered on 1 October, 0.2986 per hour, was met by run 6 at 0.286. No forecast has yet driven a light.",
+   "a_zh": "孿生使用在線 OD600，但跳過被閘門標為低訊號的段落。用第 3 次實驗健康的前 120 小時訓練的故障偵測器，在參考通道失效前 26.7 小時就標記了。預測在第 4 次實驗中，2 小時的預測比 persistence 好 41%。而 10 月 1 日登記的生長率 0.2986 每小時，第 6 次實驗得到 0.286，落在區間內。目前還沒有任何預測真的去驅動燈光。",
+   "trap_en": "Implying the whole loop from forecast to light is closed; it is not.",
+   "trap_zh": "暗示從預測到燈光的整個迴路已經接起來；其實沒有。",
+   "basis": "TAU-Israel 2025: pre-registered, stated weaknesses; Peking HSC 2025: model validation"
+  },
+  {
+   "q_en": "Did anything in your lab test change how the photometer works?",
+   "q_zh": "實驗室裡的測試有沒有改變光度計的運作方式？",
+   "type": "integrate",
+   "tier": "A",
+   "pages": [
+    "measurement",
+    "hardware-photometer"
+   ],
+   "seat": "hw",
+   "backup": "dry",
+   "kw_en": [
+    "bubble premise failed",
+    "two gates added",
+    "2.44 down to 0.016 OD"
+   ],
+   "kw_zh": [
+    "氣泡假設失敗",
+    "加了兩道閘門",
+    "2.44 降到 0.016 OD"
+   ],
+   "a_en": "Yes. The 10 October silica run overturned our assumption that bubbles only darken a reading, so we kept symmetric MAD and added two gates: a spread gate at 0.03 OD, and a jump gate at 0.05 OD or 5 percent that needs three agreeing readings. The worst bubble error on the Pro fell from 2.44 to 0.016 OD. We also log every raw burst now. An air slug longer than 90 seconds can still pass.",
+   "a_zh": "有。10 月 10 日的二氧化矽實驗推翻了我們認為氣泡只會讓讀值變暗的假設，所以我們保留對稱 MAD，並加上兩道閘門：離散閘門 0.03 OD，以及跳動閘門 0.05 OD 或 5%，並要連續三筆一致。Pro 最糟的氣泡誤差從 2.44 降到 0.016 OD。我們現在也記錄每一個原始 burst。超過 90 秒的空氣塞仍然可能通過。",
+   "trap_en": "Presenting the gate as a cure; its own limit is a long air slug.",
+   "trap_zh": "把閘門講成根治；它自己的限制是長時間的空氣塞。",
+   "basis": "like Hardware 2021 UPenn: iterations after real samples"
+  },
+  {
+   "q_en": "How did outside feedback change your measurements?",
+   "q_zh": "外部回饋怎麼改變你們的測量？",
+   "type": "integrate",
+   "tier": "B",
+   "pages": [
+    "hardware-photometer",
+    "hardware-bioreactor"
+   ],
+   "seat": "ihp",
+   "backup": "hw",
+   "kw_en": [
+    "Chang: dilute above OD 1",
+    "Owl Lab: plug-in module",
+    "builders fixed the guide"
+   ],
+   "kw_zh": [
+    "張教授：OD 1 以上要稀釋",
+    "Owl Lab：插拔模組",
+    "組裝者改了指南"
+   ],
+   "a_en": "Three changes. Professor Chang said samples above OD 1 must be diluted, so from 10 October our BioDrop reference was diluted and multiplied back. Teacher He at Owl Lab told us to use one mainboard, so the photometer was rebuilt to plug in as a module. And three classmates built the Slim from our guide on 15 and 16 October, which led to three guide changes. It was a small test, and Slim only.",
+   "a_zh": "三個改變。張教授說 OD 1 以上的樣品必須稀釋，所以從 10 月 10 日起我們的 BioDrop 對照都先稀釋再乘回。Owl Lab 的 He 老師建議用一塊主板，所以光度計重新設計成可插拔的模組。還有三位同學在 10 月 15、16 日照我們的指南組裝 Slim，結果指南改了三處。這是個小規模測試，而且只做了 Slim。",
+   "trap_en": "Claiming the guide is proven for the Pro; only the Slim was built by outsiders.",
+   "trap_zh": "宣稱 Pro 的指南也驗證過；外人只組裝了 Slim。",
+   "basis": "like Hardware 2021 UPenn: could a team with no engineering background rebuild it"
+  },
+  {
+   "q_en": "How do your assays fit together, from Western blot to plant test?",
+   "q_zh": "你們的分析方法怎麼串在一起，從 Western blot 到植物測試？",
+   "type": "integrate",
+   "tier": "A",
+   "pages": [
+    "measurement",
+    "results"
+   ],
+   "seat": "wet2",
+   "backup": "plant",
+   "kw_en": [
+    "blot is present",
+    "ELISA how much",
+    "DNPH works, plant helps"
+   ],
+   "kw_zh": [
+    "blot 看有沒有",
+    "ELISA 看多少",
+    "DNPH 看有用、植物看有益"
+   ],
+   "a_en": "Each answers a different question, cheapest first. The Western blot asks whether a band of the right size is there. ELISA asks how much His-tagged protein, in micrograms per millilitre. DNPH asks whether ACC deaminase works. Plant assays ask whether it helps. The link showed in the reactor: ELISA peaked at 12 hours but activity at 18, so protein and function do not peak together. Those are single samples.",
+   "a_zh": "每個回答不同的問題，從最便宜的開始。Western blot 問正確大小的條帶有沒有出現。ELISA 問有多少 His 標籤蛋白，單位是微克每毫升。DNPH 問 ACC 脫胺酶有沒有作用。植物實驗問它有沒有幫助。在反應器裡就看得出這個關聯：ELISA 在 12 小時達高峰，活性卻在 18 小時，所以蛋白質和功能不會同時到頂。這些都是單一樣品。",
+   "trap_en": "Treating ELISA and DNPH as interchangeable; the wiki says never substitute them.",
+   "trap_zh": "把 ELISA 和 DNPH 當成可互換；wiki 明說不能互相取代。",
+   "basis": "Munich 2025 style: assay logic"
+  },
+  {
+   "q_en": "Your negative control reads about 5 micrograms per millilitre in the ELISA. What does that mean?",
+   "q_zh": "你們的陰性對照在 ELISA 讀到約 5 微克每毫升，這代表什麼？",
+   "type": "gap",
+   "tier": "A",
+   "pages": [
+    "measurement",
+    "results"
+   ],
+   "seat": "wet2",
+   "backup": "dry",
+   "kw_en": [
+    "WB800 host 5.45 and 4.56",
+    "same range as samples",
+    "no ranking possible"
+   ],
+   "kw_zh": [
+    "WB800 宿主 5.45 與 4.56",
+    "跟樣品同範圍",
+    "無法排名"
+   ],
+   "a_en": "It means the assay is reading something besides recombinant protein in those preparations. The untransformed WB800 host gave 5.452 and 4.562, the same range as four of six constructs, so we cannot say which construct expresses more. We published that table because the control failing is the result. What we did is separate evidence: Western blots through the His tag, and DNPH activity net of the host.",
+   "a_zh": "代表這些樣品裡，分析讀到的不只是重組蛋白。未轉殖的 WB800 宿主讀到 5.452 和 4.562，與六個構築中的四個同範圍，所以我們無法說哪個構築表達得比較多。我們還是公開那張表，因為對照失敗本身就是結果。我們實際有做的是另外的證據：透過 His 標籤的 Western blot，以及扣掉宿主的 DNPH 活性。",
+   "trap_en": "Explaining the control away or hiding the row.",
+   "trap_zh": "把對照的結果解釋掉，或把那一列藏起來。",
+   "basis": "Munich 2025: honest gap, never varied dose"
+  },
+  {
+   "q_en": "Are your ACC deaminase concentrations real quantities?",
+   "q_zh": "你們的 ACC 脫胺酶濃度是真正的定量值嗎？",
+   "type": "gap",
+   "tier": "A",
+   "pages": [
+    "measurement",
+    "hardware-bioreactor"
+   ],
+   "seat": "wet2",
+   "backup": "dry",
+   "kw_en": [
+    "all four ACCD wells off-curve",
+    "reactor samples above top standard",
+    "call them estimates"
+   ],
+   "kw_zh": [
+    "ACCD 四孔都在曲線外",
+    "反應器樣品高於最高標準",
+    "稱為估計值"
+   ],
+   "a_en": "Not strictly. In the two trials all four ACCD wells fell outside the standard curve, and in the reactor run most samples read above the top standard of 3 micrograms per millilitre, so those values are extrapolations. LEA14 was the steadiest, about 5 micrograms per millilitre, with paired dilutions within 10 percent, though its 1:1 wells also sit below the curve. We call ACCD figures estimates and rely on the DNPH assay for function.",
+   "a_zh": "嚴格來說不是。在兩次試驗中，ACCD 的四個孔都落在標準曲線之外，反應器那次大部分樣品高於 3 微克每毫升的最高標準品，所以那些數值是外插。LEA14 最穩定，約 5 微克每毫升，兩種稀釋差在 10% 內，不過它 1:1 的孔也在曲線之下。我們把 ACCD 的數字稱為估計值，功能則靠 DNPH 分析。",
+   "trap_en": "Quoting ACCD about 16 micrograms per millilitre or three times the others as a measured yield.",
+   "trap_zh": "把 ACCD 約 16 微克每毫升或三倍當成量測到的產量來引用。",
+   "basis": "Munich 2025: LOD and LOQ"
+  },
+  {
+   "q_en": "Does green light really give you a dial for protectant production?",
+   "q_zh": "綠光真的能當成控制保護蛋白產量的旋鈕嗎？",
+   "type": "gap",
+   "tier": "A",
+   "pages": [
+    "measurement",
+    "results"
+   ],
+   "seat": "wet1",
+   "backup": "wet2",
+   "kw_en": [
+    "blots rise with time not intensity",
+    "red at full power not silent",
+    "switch not demonstrated"
+   ],
+   "kw_zh": [
+    "blot 隨時間上升不隨強度",
+    "全強度紅光不是零",
+    "開關尚未證實"
+   ],
+   "a_en": "Not yet. On the light plate, growth was the same under red and green, but expression rose with time and did not order itself by intensity, and red at full power was not silent. DNPH activity under light was real but moved with culture age: green beat red by fourteen times at 13 hours, then red led at 16. Our red LED peaks at 640 nanometres, while CcaS turns off at 672. The next experiment is one culture, one time, both colours, repeated.",
+   "a_zh": "還沒有。在光盤上，紅光和綠光下的生長一樣，但表達隨時間上升，並沒有依強度排序，全強度的紅光也不是零。光照下的 DNPH 活性是真的，但會隨培養時間改變：13 小時時綠光比紅光高十四倍，16 小時紅光反而領先。我們的紅光 LED 峰值在 640 奈米，而 CcaS 在 672 奈米才會關。下一個實驗是同一個培養、同一個時間點、兩種顏色，並且重複。",
+   "trap_en": "Repeating 'green light switches ACCD on' from the Results headline as proven.",
+   "trap_zh": "把 Results 摘要的『綠光開啟 ACCD』當成已證實的結論。",
+   "basis": "Peking HSC 2025 / Munich 2025: honest gap"
+  },
+  {
+   "q_en": "What went wrong in your 434 hour photometer run?",
+   "q_zh": "你們 434 小時光度計實驗哪裡出了問題？",
+   "type": "gap",
+   "tier": "A",
+   "pages": [
+    "hardware-photometer",
+    "measurement",
+    "results"
+   ],
+   "seat": "hw",
+   "backup": "dry",
+   "kw_en": [
+    "clean to about 240 h",
+    "reference failed",
+    "quantisation steps"
+   ],
+   "kw_zh": [
+    "約 240 小時前乾淨",
+    "參考通道失效",
+    "量化造成階梯"
+   ],
+   "a_en": "The first 240 hours read as a growth curve, then the reference channel failed around 243 hours, around when the pump was replaced and knocked the optical axis. We also found 91.5 percent of reference readings sat on whole counts, which made false OD steps, and noise was ragged above OD 0.8. The run is useful because a fault detector flagged it at 216 hours. We read only about 240 hours as growth.",
+   "a_zh": "前 240 小時可以當成生長曲線讀，然後參考通道大約在 243 小時失效，那時換了幫浦，碰歪了光軸。我們也發現 91.5% 的參考讀值落在整數計數，造成假的 OD 階梯，OD 0.8 以上雜訊也變大。這次實驗仍有價值，因為故障偵測器在 216 小時就標記了。我們只把約前 240 小時當成生長來讀。",
+   "trap_en": "Saying the photometer detected the pump dying; nobody was watching the trace daily.",
+   "trap_zh": "說光度計偵測到幫浦壞掉；其實當時沒人每天看那條曲線。",
+   "basis": "Hardware 2021 UPenn: biggest source of noise"
+  },
+  {
+   "q_en": "Run 6 looks clean. Is that the acceptance gate, or did something else change?",
+   "q_zh": "第 6 次實驗看起來很乾淨。是接受閘門的功勞，還是還有別的改變？",
+   "type": "gap",
+   "tier": "B",
+   "pages": [
+    "measurement",
+    "results"
+   ],
+   "seat": "hw",
+   "backup": "dry",
+   "kw_en": [
+    "permeate halved too",
+    "31 of 1083 held back",
+    "caught the dead path"
+   ],
+   "kw_zh": [
+    "滲出液也減半",
+    "1083 筆擋下 31 筆",
+    "抓到光路失效"
+   ],
+   "a_en": "Two things changed at once: the gate went on, and the permeate draw was halved from 24 to 12 millilitres per minute, which pulls in fewer bubbles. So the clean bubble record cannot be credited to the gate alone. What the gate did by itself was hold back 31 of 1083 readings, under 3 percent, and at 37 hours it caught the sample beam dropping to a tenth of the reference, so about 9.9 never entered the record.",
+   "a_zh": "有兩件事同時改變：閘門啟用了，滲出液抽取量也從 24 減半到 12 mL/min，抽得慢就吸進較少氣泡。所以乾淨的氣泡紀錄不能全算在閘門頭上。閘門自己做到的是擋下 1083 筆中的 31 筆，不到 3%，而且在 37 小時抓到樣品光降到參考的十分之一，所以約 9.9 的數值沒有進入紀錄。",
+   "trap_en": "Crediting the gate for the whole improvement.",
+   "trap_zh": "把整個改善都算在閘門頭上。",
+   "basis": "TAU-Israel 2025: stated weaknesses"
+  },
+  {
+   "q_en": "Your blot shows ACC deaminase at 37 kDa, but other blots show other sizes. Why?",
+   "q_zh": "你們的 blot 顯示 ACC 脫胺酶是 37 kDa，但其他 blot 的大小不一樣，為什麼？",
+   "type": "gap",
+   "tier": "B",
+   "pages": [
+    "measurement",
+    "results",
+    "engineering"
+   ],
+   "seat": "wet2",
+   "backup": "wet1",
+   "kw_en": [
+    "37 vs 41 and 42 kDa",
+    "bands at 63 to 100 kDa",
+    "identity not settled by size"
+   ],
+   "kw_zh": [
+    "37 對 41、42 kDa",
+    "63 至 100 kDa 的條帶",
+    "不能只靠大小確認"
+   ],
+   "a_en": "We do see that spread, and we do not hide it. The constitutive blot shows one band near 37 kDa, other pages quote about 41 or 42, and the light-plate blots run between 63 and 100 kDa. The Csn and SamyQ constructs also ran at different sizes, and we guess oligomers, which is untested. So size alone does not settle identity; the DNPH activity and the His tag support it.",
+   "a_zh": "這個差異我們確實有看到，也沒有隱藏。恆定表達的 blot 在 37 kDa 附近有一條帶，其他頁面寫約 41 或 42，而光盤的 blot 落在 63 到 100 kDa。Csn 和 SamyQ 構築跑出來的大小也不同，我們猜是寡聚體，但還沒驗證。所以光靠大小不能確認身分，要靠 DNPH 活性和 His 標籤來支持。",
+   "trap_en": "Picking one band size and not acknowledging the others.",
+   "trap_zh": "挑一個條帶大小，卻不承認其他的。",
+   "basis": "Munich 2025: honest gap"
+  },
+  {
+   "q_en": "Could another team reproduce your measurements?",
+   "q_zh": "別的團隊能重現你們的測量嗎？",
+   "type": "impact",
+   "tier": "A",
+   "pages": [
+    "measurement",
+    "hardware-photometer"
+   ],
+   "seat": "hw",
+   "backup": "ihp",
+   "kw_en": [
+    "raw CSVs and scripts public",
+    "four working days",
+    "three outside builders"
+   ],
+   "kw_zh": [
+    "原始 CSV 與程式公開",
+    "四個工作天",
+    "三位外部組裝者"
+   ],
+   "a_en": "That is the design goal. The raw CSVs from both photometers, the eleven-algorithm replay script, the firmware ports and the pre-registration are on our iGEM GitLab, and the protocol runs in four working days on any photometer that can log raw samples. Three classmates built the Slim from the guide, one in about two hours, and soldering was the hard step. Only the Slim was tested by outside builders.",
+   "a_zh": "這正是我們的設計目標。兩台光度計的原始 CSV、十一種演算法的重播程式、韌體移植和事先登記都在我們的 iGEM GitLab，任何能記錄原始樣本的光度計，這個流程四個工作天就能跑完。三位同學照指南組裝 Slim，其中一位約兩小時完成，焊接是最難的一步。外部人員只測試過 Slim。",
+   "trap_en": "Saying the Pro guide was outsider-tested.",
+   "trap_zh": "說 Pro 的指南也有外人測試過。",
+   "basis": "Hardware 2021 UPenn: could a team rebuild from documentation"
+  },
+  {
+   "q_en": "What measurement would you do next to make your claims stronger?",
+   "q_zh": "你們接下來會做什麼測量來讓結論更站得住腳？",
+   "type": "impact",
+   "tier": "B",
+   "pages": [
+    "measurement",
+    "results"
+   ],
+   "seat": "dry",
+   "backup": "hw",
+   "kw_en": [
+    "washed-cell dilution series",
+    "biological replicates",
+    "loading control and WB800 lane"
+   ],
+   "kw_zh": [
+    "洗過細胞的稀釋系列",
+    "生物重複",
+    "loading control 與 WB800 泳道"
+   ],
+   "a_en": "Three things the wiki names. For the photometer, a dilution series of washed Bacillus cells, because silica is not a cell. For the light switch, quantify blots against a loading control, add a WB800 lane without the plasmid, and repeat ELISA and DNPH with biological replicates. And the experiment that would settle the switch: one culture, one maturation time, both colours, repeated.",
+   "a_zh": "wiki 上寫明的三件事。光度計方面，做洗過的枯草桿菌細胞稀釋系列，因為二氧化矽不是細胞。光控開關方面，用 loading control 把 blot 定量，加一條沒有質體的 WB800 泳道，並用生物重複再做 ELISA 和 DNPH。還有能解決開關問題的實驗：同一個培養、同一個成熟時間、兩種顏色、重複做。",
+   "trap_en": "Listing new features instead of closing the gaps the wiki already names.",
+   "trap_zh": "列一堆新功能，而不是補上 wiki 已經指出的缺口。",
+   "basis": "DTU 2025: which experiment first; Munich 2025: one plate fixes it"
+  },
+  {
+   "q_en": "What can your fault detection give a farmer in practice?",
+   "q_zh": "你們的故障偵測對農民實際有什麼幫助？",
+   "type": "impact",
+   "tier": "B",
+   "pages": [
+    "results",
+    "measurement"
+   ],
+   "seat": "dry",
+   "backup": "hw",
+   "kw_en": [
+    "flagged 26.7 h early",
+    "proposed leak and blockage alarms",
+    "none fired on real fault"
+   ],
+   "kw_zh": [
+    "提早 26.7 小時",
+    "提議的洩漏與阻塞警報",
+    "沒有真正觸發過"
+   ],
+   "a_en": "The idea is an early warning when a sensor channel is going bad, so a long run is not trusted blindly. The autoencoder flagged the reference beam 26.7 hours before failure, with a 6.1 percent false-alarm rate. For flow and pressure we propose a leak alarm at a sudden drop and a blockage alarm above about 1.3 times the baseline. All of it is tested on one failure, and none of the alarms has fired on a real fault.",
+   "a_zh": "概念是當某個感測器通道快壞掉時提早預警，讓長時間培養不會被盲目相信。自編碼器在失效前 26.7 小時標記了參考光束，誤報率 6.1%。對流量和壓力，我們提議在突然下降時發出洩漏警報，在高於基準約 1.3 倍時發出阻塞警報。這些都只用一次故障測試過，警報也還沒有在真正的故障中觸發過。",
+   "trap_en": "Presenting thresholds as validated; they are proposed from calibration runs.",
+   "trap_zh": "把門檻說成已驗證；它們只是根據校正實驗提議的。",
+   "basis": "like Peking HSC 2025: validation of simulations; real world next step"
+  }
+ ],
+ "gaps": [
+  {
+   "issue_en": "The headline 'Pro within 3.8% of the BioDrop, no transform' is quoted with different numbers on different pages. Measurement and photometer give R2 0.9999 and a 0.12 OD offset on silica (slope 1.001, or 0.93 with the blank); Engineering plots a slope of 0.942 for TiO2; Results gives TiO2 slope 1.018, R2 0.987 and 400 mL where the others say 500 mL. Engineering also says the optical density is raw output and not traceable to any reference instrument.",
+   "issue_zh": "『Pro 與 BioDrop 差 3.8%、不需轉換』這個主打數字，在不同頁面引用的數值不同。Measurement 與光度計頁寫 R2 0.9999，二氧化矽上有 0.12 OD 偏移（斜率 1.001，含空白則 0.93）；Engineering 圖上 TiO2 斜率是 0.942；Results 寫 TiO2 斜率 1.018、R2 0.987、400 mL，其他頁寫 500 mL。Engineering 也說這個 OD 是原始輸出，無法追溯到任何參考儀器。",
+   "where": "measurement, hardware-photometer, engineering, results",
+   "say_en": "Say the claim is about scale agreement on a mass standard: the slope is near one and the Pro sits a constant 0.12 OD low on silica, and we apply no correction. Point to the raw CSVs on GitLab, and do not quote a single R2 for the Pro without naming the standard and the range.",
+   "say_zh": "要說這個主張是指在質量標準品上刻度一致：斜率接近 1，二氧化矽上 Pro 固定低約 0.12 OD，而且我們沒有做任何校正。指向 GitLab 上的原始 CSV，不要在沒說明標準品和範圍的情況下只報一個 Pro 的 R2。"
+  },
+  {
+   "issue_en": "Several ELISA numbers are not true quantities. All four ACCD wells fall outside the standard curve, most reactor samples read above the 3 ug/mL top standard, and LEA14's 1:1 wells sit below the curve's lowest %B/B0 (31.6). The untransformed WB800 negative control reads 5.452 and 4.562 ug/mL, the same range as four of six constructs. Yet Results says ACCD is about 16 ug/mL and about three times LEA14 and BoPep4.",
+   "issue_zh": "ELISA 的幾個數字並不是真正的定量值。ACCD 四個孔全在標準曲線之外，反應器大部分樣品高於 3 ug/mL 的最高標準品，LEA14 的 1:1 孔也低於曲線最低的 %B/B0（31.6）。未轉殖 WB800 陰性對照讀到 5.452 與 4.562 ug/mL，跟六個構築中的四個同範圍。但 Results 寫 ACCD 約 16 ug/mL、約為 LEA14 和 BoPep4 的三倍。",
+   "where": "measurement, results, hardware-bioreactor",
+   "say_en": "Say the ELISA figures are estimates, the host control reads like the samples, and no ranking of constructs can be credited to expression. Then pivot to what does hold: His-tag Western blots and DNPH activity net of the host.",
+   "say_zh": "要說 ELISA 數字是估計值，宿主對照讀值跟樣品一樣，構築間的排名不能歸因於表達量。然後轉到站得住腳的部分：His 標籤的 Western blot，以及扣掉宿主的 DNPH 活性。"
+  },
+  {
+   "issue_en": "Activity units do not line up. Hardware-bioreactor prints the 18 h reactor activity as 0.037 mU/mL, but the measurement and results pages give 30.9 nmol per mL per hour, which is 30.9 mU/mL; the 6.3 U/mg specific activity only works if 0.037 is U/mL. The DNPH procedure also gives a 122 uL reaction while the results table uses 160.6 uL, and Results says '12 h incubation' where the method says overnight.",
+   "issue_zh": "活性單位對不起來。hardware-bioreactor 頁把 18 小時反應器活性寫成 0.037 mU/mL，但 measurement 與 results 頁是 30.9 nmol/mL/h，也就是 30.9 mU/mL；6.3 U/mg 的比活性只有在 0.037 其實是 U/mL 時才成立。DNPH 步驟寫反應體積 122 uL，結果表卻用 160.6 uL，Results 寫『12 小時培養』，方法則寫過夜。",
+   "where": "hardware-bioreactor, measurement, results",
+   "say_en": "Say the relative result is solid in shape: protein peaks at 12 h and activity at 18 h. The unit label on one page is a typo we found, and the specific activity of about 6 U/mg is calculated from single samples.",
+   "say_zh": "要說相對的結果形狀是可靠的：蛋白質在 12 小時到頂，活性在 18 小時。其中一頁的單位標示是我們發現的筆誤，約 6 U/mg 的比活性是用單一樣品算出來的。"
+  },
+  {
+   "issue_en": "The light switch is described two ways. The Results key result says green light switches ACCD on and blots rise with green intensity, while Measurement says expression rises with time but does not order itself by intensity, red at full power is not silent, ELISA is flat across conditions, and the DNPH green advantage at 13 h inverts at 16 h. Red LEDs peak at 640 nm while CcaS turns off at 672 nm.",
+   "issue_zh": "光控開關有兩種說法。Results 的重點結果寫綠光開啟 ACCD、blot 隨綠光強度上升，但 Measurement 說表達隨時間上升、沒有依強度排序，全強度紅光也不是零，ELISA 各條件持平，13 小時 DNPH 綠光的優勢到 16 小時反轉。紅光 LED 峰值 640 nm，而 CcaS 要 672 nm 才關。",
+   "where": "results, measurement",
+   "say_en": "Say the plate delivers light without slowing growth and the switch moves activity above a dark baseline, but a clean graded response is not yet shown. Name the experiment that would settle it: one culture, one maturation time, both colours, repeated.",
+   "say_zh": "要說光盤能提供光照而不影響生長，開關也能讓活性高於黑暗基準，但乾淨的分級反應還沒證明。講出能解決的實驗：同一個培養、同一個成熟時間、兩種顏色、重複做。"
+  },
+  {
+   "issue_en": "Band size for ACC deaminase is inconsistent: about 37 kDa (Measurement), about 41 kDa theoretical and 35 to 48 kDa (Results), about 42 kDa (Engineering and Hardware-bioreactor), 63 to 75 kDa on the light-plate blots, and 75 to 100 kDa for AcdS 2.1. Measurement says the lysate band is strongest and lumen and shell bands are faint to absent, while Results says the product reaches the shell in all three fractions.",
+   "issue_zh": "ACC 脫胺酶的條帶大小不一致：約 37 kDa（Measurement）、理論約 41 kDa 與 35 至 48 kDa（Results）、約 42 kDa（Engineering 與 Hardware-bioreactor）、光盤 blot 為 63 至 75 kDa、AcdS 2.1 為 75 至 100 kDa。Measurement 說細胞裂解液條帶最強、管腔和殼側的條帶很淡或沒有，Results 卻說三個部分都有產物到達殼側。",
+   "where": "measurement, results, engineering, hardware-bioreactor",
+   "say_en": "Say size alone does not settle identity and the Csn and SamyQ constructs run at different sizes, possibly oligomers, which we have not tested. What supports the claim that the enzyme crosses the membrane is the DNPH activity and ELISA on the shell side, with the shell band faint on the blot.",
+   "say_zh": "要說光靠大小不能確認身分，Csn 與 SamyQ 構築跑出的大小不同，可能是寡聚體，但我們沒測過。支持酵素穿過膜的證據是殼側的 DNPH 活性和 ELISA，blot 上殼側的條帶其實很淡。"
+  },
+  {
+   "issue_en": "The same photometer events get different explanations. The 434 h run: Measurement blames integer-count quantisation and a reference near 32 counts, the photometer page and Engineering blame the pump swap knocking the optical axis around 1 August, and Results gives a fault flag at 216.3 h. Run 5: Measurement says bubbles and a reference moving 4.8x, Engineering says incorrect calibration. Run 6 end: Measurement says a dead optical path at 9.9, Results says the instrument's upper limit near 2.7. The manual's rejection rule (5% below the upper envelope) is the one-sided rule that the 10 October data refuted, and the downloadable app defaults to 'upper'.",
+   "issue_zh": "同樣的光度計事件有不同解釋。434 小時實驗：Measurement 歸因於整數計數量化和參考通道約 32 個計數；光度計頁與 Engineering 歸因於 8 月 1 日前後換幫浦碰歪光軸；Results 則給 216.3 小時的故障旗標。第 5 次：Measurement 說是氣泡和參考通道變動 4.8 倍，Engineering 說是校正不正確。第 6 次結尾：Measurement 說光路失效讀到 9.9，Results 說是儀器上限約 2.7。手冊的剔除規則（低於上包絡線 5%）正是 10 月 10 日資料推翻的單邊規則，可下載的 app 預設也是 upper。",
+   "where": "measurement, hardware-photometer, engineering, results",
+   "say_en": "Say more than one thing was wrong in that run and we found them in layers: a signal-chain artefact, then a real optical fault. Be clear that the symmetric MAD plus gates is the current method, and that the app must be set to mad to match the wiki.",
+   "say_zh": "要說那次實驗不只一個問題，我們是一層一層找到的：先是訊號處理的假象，之後才是真的光路故障。要說清楚目前的方法是對稱 MAD 加閘門，而且 app 必須設成 mad 才會跟 wiki 一致。"
+  },
+  {
+   "issue_en": "Plant statistics. Measurement says chlorophyll uses three technical wells from one pooled tube per group, shown as mean with SEM, and that the trehalose and heat pretest charts had no significance testing; Results shows asterisks up to p < 0.0001 without naming the test, and the plant stress windows rest on one plate per group. Measurement also notes the temperature is 37 C in the protocol and 33 C on one timeline figure.",
+   "issue_zh": "植物統計。Measurement 說葉綠素是每組合併一管、讀三個技術重複孔，用 mean with SEM 呈現，且 trehalose 與熱預試的圖沒有做顯著性檢定；Results 的圖有高到 p < 0.0001 的星號，卻沒說用了什麼檢定，而且植物逆境範圍每組只有一個培養皿。Measurement 還提到溫度在步驟中是 37 度 C，一張時間線圖上卻是 33 度 C。",
+   "where": "measurement, results",
+   "say_en": "Say the replicate unit is a pooled tube read in three wells, so the stars describe our measurements, not independent plants. We treat the plant results as consistent trends, and the dose windows as starting points that others should confirm.",
+   "say_zh": "要說重複單位是合併的一管讀三個孔，所以星號描述的是我們的測量，不是獨立植株。我們把植物結果當成一致的趨勢，劑量範圍當成起點，讓別人再去確認。"
+  }
+ ]
+}
