@@ -25,6 +25,7 @@
       <li data-en="Learn the month, not the date. “Early September” is a confident answer; a wrong exact date is not." data-zh="記月份，不要記日期。「九月初」是有把握的回答；講錯確切日期則不是。"></li>
       <li data-en="Know which three came last. Judges often ask what is most recent, and the answer sits at the bottom of this page." data-zh="知道最後三件事是什麼。評審常問最近的進展，答案就在這一頁的最下面。"></li>
       <li data-en="For each picture, be able to say what it is evidence of, not what it shows." data-zh="每一張圖，你要能說出它證明了什麼，而不是它看起來是什麼。"></li>
+      <li data-en="A date with a tilde and an amber dot was worked out from context, because the wiki does not date that figure. The note under it says how. Never give one of those to a judge as an exact date." data-zh="日期前面有波浪號、圓點是琥珀色的，表示那個日期是從前後文推估的，因為 wiki 沒有標日期。下面的小字說明推估依據。絕對不要把那種日期當成確切日期講給評審聽。"></li>
     </ul>
   </div>
 </section>
@@ -137,10 +138,11 @@
       ? items.length + ' 個里程碑' : items.length + ' milestones';
   }
 
-  function dayLabel(iso) {
-    var d = iso.slice(8), mi = parseInt(iso.slice(5, 7), 10) - 1;
-    return S.lang === 'zh' ? (mi + 1) + '/' + parseInt(d, 10)
+  function dayLabel(it) {
+    var iso = it.date, d = iso.slice(8), mi = parseInt(iso.slice(5, 7), 10) - 1;
+    var s = S.lang === 'zh' ? (mi + 1) + '/' + parseInt(d, 10)
       : MON.en[mi].slice(0, 3) + ' ' + parseInt(d, 10);
+    return it.approx ? '~' + s : s;
   }
 
   function row(it) {
@@ -156,13 +158,16 @@
     }
     var tags = '<span class="pill">' + S.esc(trackName(it.track)) + '</span>';
     if (it.key) tags += '<span class="pill pill-a">' + (S.lang === 'zh' ? '常被問' : 'often asked') + '</span>';
+    if (it.approx) tags += '<span class="pill pill-w">' + (S.lang === 'zh' ? '日期為推估' : 'date approximate') + '</span>';
     if (it.page && !it.img) tags += S.srcLink(it.page);
-    return '<article class="ms' + (it.key ? ' key' : '') + '">' +
+    var basis = it.approx && S.t(it, 'when')
+      ? '<p class="basis">' + S.esc(S.t(it, 'when')) + '</p>' : '';
+    return '<article class="ms' + (it.key ? ' key' : '') + (it.approx ? ' approx' : '') + '">' +
       '<span class="dot"></span>' +
-      '<p class="date">' + S.esc(dayLabel(it.date)) + '</p>' +
+      '<p class="date">' + S.esc(dayLabel(it)) + '</p>' +
       '<div class="body"><h4>' + S.esc(S.t(it, 't')) + '</h4>' +
       '<p class="proves">' + S.esc(S.t(it, 'p')) + '</p>' +
-      '<div class="tags">' + tags + '</div>' + fig + '</div></article>';
+      '<div class="tags">' + tags + '</div>' + basis + fig + '</div></article>';
   }
 
   document.getElementById('tracks').addEventListener('click', function (e) {

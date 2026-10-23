@@ -329,3 +329,19 @@ mark { background: #fff2a8; color: inherit; border-radius: 3px; padding: 0 1px; 
 .track-d { --tk: var(--violet); }
 .track-p { --tk: var(--amber); }
 .pill-tk { background: var(--paper-2); color: var(--tk, var(--muted)); }
+
+/* ── Home: last year's photographs ── */
+.shots figure { margin: 0; }
+.shots img {
+  display: block; width: 100%; height: auto; border-radius: var(--r-lg);
+  background: var(--paper-2); aspect-ratio: 4 / 3; object-fit: cover;
+}
+.shots figcaption { font-size: .875rem; color: var(--muted); line-height: 1.5; margin-top: .7rem; }
+
+/* a milestone whose date is inferred rather than stated */
+.ms.approx .dot { border-style: dashed; background: #fff; border-color: var(--amber); }
+.ms.approx .date { color: var(--amber); }
+.ms .basis {
+  font-size: .8125rem; color: var(--muted); line-height: 1.5; margin: .7rem 0 0;
+  padding-left: .75rem; border-left: 2px solid var(--amber-wash);
+}

@@ -20,7 +20,7 @@ Static HTML and vanilla JavaScript: no build step to view it, no server, works o
 | **318 questions** | Written for this project, in eight question types, with a model answer and the likely mistake |
 | **77 gaps** | Places where the team's own pages disagree, or claim more than the data shows, each with an honest sentence to say |
 | **181 recorded questions** | What judges actually asked other teams in 2025 and earlier, from the team's own notes |
-| **48 milestones** | The year as a vertical timeline, with 37 of the team's own result figures |
+| **58 milestones** | The year as a vertical timeline, with 47 of the team's own result figures |
 
 All of it is drawn from the frozen wiki at [2026.igem.wiki/gems-taiwan](https://2026.igem.wiki/gems-taiwan/).
 Nothing is invented. Where the wiki is silent, the answer says so.
@@ -38,6 +38,8 @@ Nothing is invented. Where the wiki is silent, the answer says so.
 8. **Day Sheet** — two weeks out to the door of J03, what goes in the bag, and a printable one-sheet.
 9. **Timeline** — the year in evidence: every dated result in the order it happened, with the gel, plate,
    plot or dashboard it produced, filterable by track. Figures are copied into the repo so it works offline.
+   Nine entries carry a date worked out from context rather than stated on the wiki; they are marked with a
+   tilde, an amber dot and a note saying what the date was inferred from.
 
 ## The seven seats
 
