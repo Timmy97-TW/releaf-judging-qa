@@ -14,6 +14,13 @@
     { id: 'shaky',en: 'My shaky list',zh: '我的不熟清單' }
   ];
 
+  var LENS = [
+    { id: 7,  en: '7 questions', zh: '7 題' },
+    { id: 14, en: '14 · a real session', zh: '14 題 · 等於一場' },
+    { id: 25, en: '25 questions', zh: '25 題' },
+    { id: 0,  en: 'Everything', zh: '整個題庫' }
+  ];
+
   var L = {
     start:  { en: 'Take the first question', zh: '接下第一題' },
     nextq:  { en: 'Next question', zh: '下一題' },
@@ -60,7 +67,11 @@
     boardnote:{ en: 'The board lives in this browser. Codes are how it travels.',
                 zh: '排行榜存在這台瀏覽器裡。代碼是它旅行的方式。' },
     noboard:{ en: 'No runs yet. Finish a deck and put your name up.', zh: '還沒有紀錄。練完一組就把名字放上去。' },
-    wipe:   { en: 'Wipe the board', zh: '清空排行榜' }
+    wipe:   { en: 'Wipe the board', zh: '清空排行榜' },
+    playing:{ en: 'Playing as', zh: '玩家名稱' },
+    yourname:{ en: 'your name', zh: '你的名字' },
+    endrun: { en: 'End the run and save', zh: '結束並記分' },
+    scrollb:{ en: 'Your run is on the board below.', zh: '你的成績已經在下面的排行榜上。' }
   };
 
   var SEATS = {
@@ -96,6 +107,7 @@
 
   var state = {
     mode: urlMode || S.load('mode', 'a'),
+    len: S.load('len', 14),
     dom: urlDom,
     type: urlType,
     deck: [],
@@ -180,6 +192,7 @@
       }
       pool = S.shuffle(picked).slice(0, 14);
     }
+    if (state.len && pool.length > state.len) pool = pool.slice(0, state.len);
     state.deck = pool;
     state.i = -1;
     el('deckn').textContent = pool.length + ' ' + S.p(L.deck);
@@ -396,6 +409,8 @@
 
   function endQuestion() {
     state.phase = 'answer';
+    el('endrun').hidden = false;
+    el('endrun').textContent = S.p(L.endrun);
     el('nextq').hidden = false;
     el('nextq').textContent = state.i + 1 >= state.deck.length ? S.p(L.done) : S.p(L.nextq);
     paintScore();
@@ -411,7 +426,8 @@
 
   function finish() {
     stopTimer();
-    var n = state.deck.length || 1;
+    /* a run you stopped early is scored on what you actually took */
+    var n = Math.max(1, Math.min(state.deck.length, state.i + 1));
     var max = n * 31;                        /* 10 seat + 10 answer + 5 speed + 6 follow-up */
     var pct = Math.min(1, state.score / max);
     var g = grade(pct);
@@ -440,10 +456,11 @@
       '<span><b>' + conf + '%</b> ' + S.esc(S.p(L.conf)) + '</span>' +
       '<span><b>' + state.best + '</b> ' + S.esc(S.p(L.streak)) + '</span>' +
       '<span><b>' + avg + '</b> ' + S.esc(S.p(L.secs)) + '</span>';
+    el('endrun').hidden = true;
     el('nameln').textContent = S.p(L.saveas);
     el('savebtn').textContent = S.p(L.save);
     el('againbtn').textContent = S.p(L.again);
-    el('pname').value = S.load('pname', '');
+    el('pname').value = el('playas').value || S.load('pname', '');
     el('savebtn').disabled = false;
   }
 
@@ -453,9 +470,9 @@
   }
 
   function runRecord() {
-    var n = state.deck.length || 1;
+    var n = Math.max(1, Math.min(state.deck.length, state.i + 1));
     return {
-      n: (el('pname').value || '—').slice(0, 18),
+      n: (el('pname').value || el('playas').value || '—').slice(0, 18),
       s: state.score,
       q: n,
       a: state.seatTried ? Math.round(100 * state.seatRight / state.seatTried) : 0,
@@ -521,6 +538,7 @@
 
   function drawChips() {
     chips('modes', MODES, state.mode, 'data-m');
+    chips('lens', LENS, state.len, 'data-l');
     var dc = {}, i;
     for (i = 0; i < QUESTIONS.length; i++) dc[QUESTIONS[i].dom] = (dc[QUESTIONS[i].dom] || 0) + 1;
     var ds = [{ id: 'all', en: 'All domains', zh: '全部領域' }];
@@ -597,6 +615,14 @@
     next();
   });
   el('nextq').addEventListener('click', next);
+  el('endrun').addEventListener('click', function () { finish(); });
+  el('playas').addEventListener('input', function () { S.save('pname', this.value.slice(0, 18)); });
+  el('lens').addEventListener('click', function (e) {
+    var b = e.target.closest('.chip'); if (!b) return;
+    state.len = parseInt(b.getAttribute('data-l'), 10) || 0;
+    S.save('len', state.len);
+    drawChips(); buildDeck();
+  });
   el('show').addEventListener('click', reveal);
   el('seatchips').addEventListener('click', function (e) {
     var b = e.target.closest('.seatchip'); if (!b) return;
@@ -628,6 +654,7 @@
     this.textContent = S.p(L.saved);
     el('mycode').value = encode(rec);
     el('codebox').hidden = false;
+    toast(S.p(L.scrollb));
   });
   el('againbtn').addEventListener('click', function () {
     el('summary').hidden = true;
@@ -684,6 +711,9 @@
   loadPanel(false);
   S.onLang(function () {
     el('start').textContent = S.p(L.start);
+    el('l-playing').textContent = S.p(L.playing);
+    el('playas').placeholder = S.p(L.yourname);
+    el('playas').value = S.load('pname', '');
     el('whoq').textContent = S.p(L.whoq);
     el('whohint').textContent = S.p(L.whohint);
     el('reroll').textContent = S.p(L.reroll);

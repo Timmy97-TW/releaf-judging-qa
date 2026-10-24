@@ -504,3 +504,15 @@ table.board .pt { font-family: var(--font-display); font-weight: 600; font-size:
 table.board .dt { color: var(--muted); font-size: .8125rem; text-align: right; }
 .boardtools { margin-top: 1rem; }
 @media (max-width: 560px) { table.board .dt { display: none; } }
+
+/* who is playing */
+.playas { display: inline-flex; align-items: center; gap: .4rem; }
+.playas span { font-size: .75rem; color: var(--faint); text-transform: uppercase; letter-spacing: .05em; }
+.playas input {
+  width: 9rem; font: inherit; font-size: .9375rem; font-weight: 600;
+  border: 0; border-bottom: 1.5px dashed var(--rule); background: none;
+  padding: .1rem .2rem; color: var(--ink);
+}
+.playas input:focus { outline: none; border-bottom-color: var(--accent); }
+.playas input::placeholder { font-weight: 400; color: var(--faint); }
+@media (max-width: 560px) { .playas { width: 100%; } .playas input { flex: 1; } }

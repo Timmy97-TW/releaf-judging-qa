@@ -28,10 +28,11 @@
   </div>
 
   <div class="scorebar">
+    <label class="playas"><span id="l-playing"></span>
+      <input id="playas" type="text" maxlength="18" autocomplete="off"></label>
     <span class="sc"><i id="l-score"></i><b id="sc-score">0</b></span>
     <span class="sc"><i id="l-streak"></i><b id="sc-streak">0</b></span>
     <span class="sc"><i id="l-n"></i><b id="sc-n">0/0</b></span>
-    <span class="count-l" id="deckn"></span>
   </div>
 
   <div class="bubble">
@@ -43,6 +44,7 @@
       <button class="btn btn-accent" id="start" type="button"></button>
       <button class="btn btn-ghost" id="show" type="button" hidden></button>
       <button class="btn btn-line" id="nextq" type="button" hidden></button>
+      <button class="btn btn-ghost btn-sm" id="endrun" type="button" hidden></button>
       <span class="ring" id="ringwrap" hidden>
         <span class="timer" id="timer">1:30</span>
         <button class="btn btn-ghost btn-sm" id="pause" type="button"></button>
@@ -105,6 +107,11 @@
     <div class="bar-row">
       <span class="pill pill-line" data-en="Deck" data-zh="題庫"></span>
       <div class="chips" id="modes"></div>
+    </div>
+    <div class="bar-row">
+      <span class="pill pill-line" data-en="Run" data-zh="一局"></span>
+      <div class="chips" id="lens"></div>
+      <span class="count-l" id="deckn"></span>
     </div>
     <div class="bar-row">
       <div class="chips" id="doms"></div>
