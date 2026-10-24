@@ -4,28 +4,39 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Mock Judging Room · ReLEAF Judging Trainer</title>
-<link rel="stylesheet" href="assets/css/base.css?v=202610240220">
-<link rel="stylesheet" href="assets/css/pages.css?v=202610240220">
+<link rel="stylesheet" href="assets/css/base.css?v=202610250241">
+<link rel="stylesheet" href="assets/css/pages.css?v=202610250241">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M4 20c0-8 5.5-14.5 16-15.5C19.5 14 14 20 4 20Z' fill='%231a7f45'/%3E%3C/svg%3E">
 </head>
 <body>
 
-<header class="hero wrap">
+<header class="hero wrap narrow">
   <p class="eyebrow" data-en="03 · Mock Judging Room" data-zh="03 · 模擬會場"></p>
-  <h1 data-en="Room J03, four judges" data-zh="J03 會談室，四位評審"></h1>
-  <p class="lede" style="max-width:62ch"
-     data-en="Answer out loud, standing up, before you open the card. Reading the answer silently teaches you nothing; the room is a speaking test. Keep each answer under ninety seconds."
-     data-zh="先站起來、出聲回答，再翻開答案卡。默讀答案學不到東西；那個房間考的是口說。每個回答控制在九十秒內。"></p>
+  <h1 data-en="Room J03. Four strangers." data-zh="J03 會談室。四個陌生人。"></h1>
+  <p class="lede"
+     data-en="The panel is generated fresh: four judges, four backgrounds, and no way to tell from a face who will ask about membranes. That is the point. Answer out loud, standing up, then call the seat — and the room tells you whether the microphone went to the right person."
+     data-zh="這組評審是現場生成的：四個人、四種背景，而你沒辦法從一張臉看出誰會問薄膜。這正是重點。站起來出聲回答，然後指定位置——這間房間會告訴你麥克風有沒有交到對的人手上。"></p>
 </header>
 
 <section class="wrap" style="padding-top:0">
   <div class="panel">
-    <svg class="bench" id="bench" viewBox="0 0 900 220" role="img" aria-label="Four judges at the bench"></svg>
+    <div class="panel-top">
+      <div class="meta" id="panelline"></div>
+      <button class="btn btn-ghost btn-sm" id="reroll" type="button"></button>
+    </div>
+    <svg class="bench" id="bench" viewBox="0 0 920 210" role="img" aria-label="Four judges at the bench"></svg>
+  </div>
+
+  <div class="scorebar">
+    <span class="sc"><i id="l-score"></i><b id="sc-score">0</b></span>
+    <span class="sc"><i id="l-streak"></i><b id="sc-streak">0</b></span>
+    <span class="sc"><i id="l-n"></i><b id="sc-n">0/0</b></span>
+    <span class="count-l" id="deckn"></span>
   </div>
 
   <div class="bubble">
     <p class="who" id="who"></p>
-    <p class="qq" id="qq" data-en="Press Start to take the first question." data-zh="按「開始」接下第一題。"></p>
+    <p class="qq" id="qq" data-en="Ready when you are." data-zh="準備好就開始。"></p>
     <div class="meta" id="meta"></div>
 
     <div class="btn-row" style="margin-top:1.1rem">
@@ -38,19 +49,55 @@
       </span>
     </div>
 
+    <div class="guessbox" id="guessbox" hidden>
+      <h4 id="whoq"></h4>
+      <p class="hint" id="whohint"></p>
+      <div class="chips" id="seatchips"></div>
+    </div>
+
+    <div class="guessres" id="guessres" hidden></div>
+
+    <div class="btn-row" id="marks" hidden style="margin-top:.9rem">
+      <button class="btn btn-ghost btn-sm" id="mgood" type="button"></button>
+      <button class="btn btn-ghost btn-sm" id="mbad" type="button"></button>
+    </div>
+
+    <div class="fubox" id="fubox" hidden>
+      <p class="fuw"><b id="fuwho"></b> <span data-en="leans in" data-zh="身體往前傾"></span></p>
+      <p class="fut" id="futext"></p>
+      <div class="btn-row">
+        <button class="btn btn-accent btn-sm" id="fudid" type="button"></button>
+        <button class="btn btn-ghost btn-sm" id="fumiss" type="button"></button>
+      </div>
+    </div>
+
     <div class="answer" id="ans" hidden>
       <h4 data-en="How to answer it" data-zh="怎麼回答"></h4>
       <div class="kw" id="akw"></div>
       <p class="a-text" id="atext"></p>
       <div class="trap" id="atrap" hidden><b data-en="Likely mistake" data-zh="容易犯的錯"></b><span id="atrapt"></span></div>
       <div class="meta" id="asrc" style="margin-top:.9rem"></div>
-      <div class="btn-row" style="margin-top:1rem">
-        <button class="btn btn-ghost btn-sm" id="mgood" type="button"></button>
-        <button class="btn btn-ghost btn-sm" id="mbad" type="button"></button>
+    </div>
+
+    <div class="summary" id="summary" hidden>
+      <p class="sg" id="sumgrade"></p>
+      <p class="ss"><b id="sumscore">0</b> <span data-en="points" data-zh="分"></span></p>
+      <div class="sbits" id="sumbits"></div>
+      <div class="saverow">
+        <label for="pname" id="nameln"></label>
+        <input class="search" id="pname" type="text" maxlength="18" autocomplete="off">
+        <button class="btn btn-accent btn-sm" id="savebtn" type="button"></button>
+        <button class="btn btn-ghost btn-sm" id="againbtn" type="button"></button>
+      </div>
+      <div class="codebox" id="codebox" hidden>
+        <input class="search" id="mycode" type="text" readonly>
+        <button class="btn btn-line btn-sm" id="copycode" type="button"></button>
       </div>
     </div>
+
     <div class="prog" id="prog"></div>
   </div>
+  <div class="toast" id="toast"></div>
 </section>
 
 <div class="bar">
@@ -58,7 +105,6 @@
     <div class="bar-row">
       <span class="pill pill-line" data-en="Deck" data-zh="題庫"></span>
       <div class="chips" id="modes"></div>
-      <span class="count-l" id="deckn"></span>
     </div>
     <div class="bar-row">
       <div class="chips" id="doms"></div>
@@ -68,6 +114,21 @@
     </div>
   </div>
 </div>
+
+<section class="wrap narrow">
+  <div class="sec-head">
+    <h2 data-en="The board" data-zh="排行榜"></h2>
+    <p data-en="Finish a deck, put your name up. To get on somebody else's board, send them your code and have them paste it in."
+       data-zh="練完一組就把名字放上去。想上別人的排行榜，把你的代碼傳給他們，請他們貼上去。"></p>
+  </div>
+  <div id="board"></div>
+  <div class="boardtools">
+    <input class="search" id="theircode" type="text" autocomplete="off">
+    <button class="btn btn-line btn-sm" id="addcode" type="button"></button>
+    <button class="btn btn-ghost btn-sm" id="wipe" type="button"></button>
+  </div>
+  <p class="src" id="boardnote" style="margin-top:.6rem"></p>
+</section>
 
 <section class="wrap">
   <div class="sec-head">
@@ -90,10 +151,11 @@
   <div id="rec"></div>
 </section>
 
-<script src="assets/js/site.js?v=202610240220"></script>
-<script src="data/meta.js?v=202610240220"></script>
-<script src="data/bank.js?v=202610240220"></script>
-<script src="data/recorded.js?v=202610240220"></script>
-<script src="assets/js/mock.js?v=202610240220"></script>
+<script src="assets/js/site.js?v=202610250241"></script>
+<script src="data/meta.js?v=202610250241"></script>
+<script src="data/bank.js?v=202610250241"></script>
+<script src="data/recorded.js?v=202610250241"></script>
+<script src="assets/js/panel.js?v=202610250241"></script>
+<script src="assets/js/mock.js?v=202610250241"></script>
 </body>
 </html>
