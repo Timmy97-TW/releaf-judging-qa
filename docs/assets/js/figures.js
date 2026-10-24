@@ -1,0 +1,656 @@
+/* Figure Room: the same four judges, but they point at a picture.
+ * Every figure here is published on our own wiki. Two ways to be asked:
+ * say what it is out loud, or pick one of four. Ten to a run. */
+(function () {
+  'use strict';
+  var S = window.Site;
+  var BANK = (window.FIGURES && window.FIGURES.items) || [];
+  var FMETA = (window.FIGURES && window.FIGURES.meta) || { doms: [] };
+  var IMG = 'assets/img/fq/';
+  var FD = '-apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif';
+
+  var MODES = [
+    { id: 'open',   en: 'Say it out loud',  zh: '自己說出來' },
+    { id: 'choice', en: 'Pick one of four', zh: '四選一' }
+  ];
+
+  var LENS = [
+    { id: 5,  en: 'Quick · 5',  zh: '快打 · 5 題' },
+    { id: 10, en: 'Real · 10',  zh: '正式 · 10 題' },
+    { id: 20, en: 'Long · 20',  zh: '長局 · 20 題' },
+    { id: 0,  en: 'Every figure', zh: '整面牆' }
+  ];
+
+  var TIERS = [
+    { id: 't1',    en: 'First wave',   zh: '第一梯次' },
+    { id: 't2',    en: 'Second wave',  zh: '第二梯次' },
+    { id: 'all',   en: 'Everything',   zh: '全部' },
+    { id: 'shaky', en: 'My shaky list', zh: '我的不熟清單' }
+  ];
+
+  var L = {
+    start:  { en: 'Show me the first figure', zh: '給我第一張圖' },
+    nextq:  { en: 'Next figure', zh: '下一張' },
+    show:   { en: 'Show the answer', zh: '顯示答案' },
+    pause:  { en: 'Pause', zh: '暫停' },
+    resume: { en: 'Resume', zh: '繼續' },
+    good:   { en: 'I knew it', zh: '我講得出來' },
+    bad:    { en: 'Mark shaky', zh: '標為不熟' },
+    empty:  { en: 'Nothing here yet. Run a few figures first.', zh: '這裡還沒有東西。先練幾張圖。' },
+    none:   { en: 'No figures match that. Widen the filters.', zh: '沒有符合的圖。把條件放寬一點。' },
+    score:  { en: 'Points', zh: '分數' },
+    streak: { en: 'Streak', zh: '連對' },
+    run:    { en: 'Figure', zh: '第' },
+    done:   { en: 'Run finished', zh: '這局練完了' },
+    again:  { en: 'Go again', zh: '再來一次' },
+    reroll: { en: 'New panel', zh: '換一組評審' },
+    rerolled: { en: 'Four new judges. Nobody owns a subject.', zh: '四位新評審。沒有人固定負責哪個主題。' },
+    playing:{ en: 'Playing as', zh: '玩家名稱' },
+    yourname:{ en: 'your name', zh: '你的名字' },
+    endrun: { en: 'End the run and save', zh: '結束並記分' },
+    nameln: { en: 'Name on the card', zh: '卡片上的名字' },
+    lmode:  { en: 'How you answer', zh: '作答方式' },
+    lrun:   { en: 'Run', zh: '一局' },
+    ldeck:  { en: 'Which figures', zh: '出哪些圖' },
+    lnarrow:{ en: 'Narrow it down', zh: '再縮小範圍' },
+    ldom:   { en: 'Domain', zh: '領域' },
+    copyimg:{ en: 'Copy the card', zh: '複製成績卡' },
+    dlimg:  { en: 'Download', zh: '下載圖片' },
+    imgdone:{ en: 'Card copied. Paste it straight into Discord.', zh: '成績卡已複製。直接貼到 Discord。' },
+    imgfail:{ en: 'Copy is blocked here — the download works.', zh: '這裡不能複製圖片——改用下載。' },
+    imghint:{ en: 'If copying is blocked, download it — or right-click the card and copy the image.',
+              zh: '如果不能複製，就用下載——或是在卡片上按右鍵複製圖片。' },
+    right:  { en: 'Right', zh: '答對' },
+    wrong:  { en: 'Not that one', zh: '不是這個' },
+    onwiki: { en: 'This figure is published on', zh: '這張圖發表在' },
+    points: { en: 'pts', zh: '分' },
+    outof:  { en: 'of a perfect run', zh: '滿分的比例' },
+    speak:  { en: 'Say what it is, out loud, before you open the answer.', zh: '先出聲說出它是什麼，再打開答案。' },
+    picked: { en: 'Keys 1 to 4 work too.', zh: '鍵盤 1 到 4 也可以選。' },
+    bankn:  { en: 'figures in the bank', zh: '張圖在題庫裡' }
+  };
+
+  var DOMS = FMETA.doms || [];
+  function domInfo(id) {
+    for (var i = 0; i < DOMS.length; i++) if (DOMS[i].id === id) return DOMS[i];
+    return { id: id, en: id, zh: id, tier: 1 };
+  }
+
+  var state = {
+    mode: S.load('fq-mode', 'choice'),
+    len: S.load('fq-len', 10),
+    tier: S.load('fq-tier', 't1'),
+    dom: 'all',
+    deck: [],
+    i: -1,
+    phase: 'idle',        /* idle | asked | answered */
+    shaky: S.load('fq-shaky', []),
+    seconds: 45,
+    left: 45,
+    tick: null,
+    running: false,
+    paused: false,
+    score: 0,
+    streak: 0,
+    best: 0,
+    hits: 0,
+    panel: null,
+    seed: Math.floor(Math.random() * 1e9),
+    active: 0,
+    order: [],
+    name: S.load('fq-name', ''),
+    last: null
+  };
+
+  function el(id) { return document.getElementById(id); }
+  function txt(id, v) { var n = el(id); if (n) n.textContent = v; }
+
+  function toast(t, good) {
+    var n = el('toast');
+    n.textContent = t;
+    n.className = 'toast show' + (good === false ? ' bad' : '');
+    setTimeout(function () { n.className = 'toast'; }, 1600);
+  }
+
+  /* ── the pool ── */
+  function pool() {
+    var out = [];
+    for (var i = 0; i < BANK.length; i++) {
+      var f = BANK[i];
+      if (state.tier === 't1' && f.tier !== 1) continue;
+      if (state.tier === 't2' && f.tier !== 2) continue;
+      if (state.tier === 'shaky' && state.shaky.indexOf(f.id) < 0) continue;
+      if (state.dom !== 'all' && f.dom !== state.dom) continue;
+      out.push(f);
+    }
+    return out;
+  }
+
+  function buildDeck() {
+    var p = S.shuffle(pool());
+    state.deck = state.len > 0 ? p.slice(0, state.len) : p;
+    state.i = -1;
+    state.score = 0; state.streak = 0; state.best = 0; state.hits = 0;
+    state.order = [];
+  }
+
+  /* ── rail ── */
+  function chip(c, on) {
+    return '<button class="chip' + (on ? ' on' : '') + '" type="button" data-v="' +
+           S.esc(c.id) + '">' + S.esc(S.p(c)) + '</button>';
+  }
+  function drawRail() {
+    el('modes').innerHTML = MODES.map(function (m) { return chip(m, m.id === state.mode); }).join('');
+    el('lens').innerHTML = LENS.map(function (m) { return chip(m, m.id === state.len); }).join('');
+    el('tiers').innerHTML = TIERS.map(function (m) { return chip(m, m.id === state.tier); }).join('');
+    var ds = [{ id: 'all', en: 'All', zh: '全部' }];
+    for (var i = 0; i < DOMS.length; i++) {
+      var d = DOMS[i];
+      if (state.tier === 't1' && d.tier !== 1) continue;
+      if (state.tier === 't2' && d.tier !== 2) continue;
+      ds.push(d);
+    }
+    if (state.dom !== 'all') {
+      var still = false;
+      for (var k = 0; k < ds.length; k++) if (ds[k].id === state.dom) still = true;
+      if (!still) state.dom = 'all';
+    }
+    el('doms').innerHTML = ds.map(function (m) { return chip(m, m.id === state.dom); }).join('');
+    var n = pool().length;
+    var take = state.len > 0 ? Math.min(state.len, n) : n;
+    txt('deckn', S.lang === 'zh'
+      ? (n + ' 張可選，這局抽 ' + take + ' 張')
+      : (n + ' available, ' + take + ' in this run'));
+  }
+
+  function railClick(box, key, cast) {
+    el(box).addEventListener('click', function (e) {
+      var b = e.target.closest('button[data-v]');
+      if (!b) return;
+      var v = b.getAttribute('data-v');
+      state[key] = cast ? cast(v) : v;
+      S.save('fq-' + key, state[key]);
+      drawRail();
+      if (state.phase === 'idle') resetBubble();
+    });
+  }
+
+  /* ── panel ── */
+  function drawPanel() {
+    if (!state.panel) state.panel = window.Panel.make(state.seed);
+    el('bench').innerHTML = window.Panel.bench(state.panel,
+      state.phase === 'idle' ? null : state.active, S.lang);
+    var p = state.panel;
+    el('panelline').innerHTML = p.map(function (j) {
+      return '<span class="pill pill-line">' + S.esc(S.p(j.role)) + '</span>';
+    }).join('');
+  }
+
+  function judgeName(j) {
+    return (j.title[S.lang] ? j.title[S.lang] + ' ' : '') + j.given + ' ' + j.family;
+  }
+
+  /* ── timer ── */
+  function stopTick() { if (state.tick) { clearInterval(state.tick); state.tick = null; } }
+  function startTick() {
+    stopTick();
+    state.left = state.seconds;
+    state.paused = false;
+    el('ringwrap').hidden = false;
+    el('pause').textContent = S.p(L.pause);
+    paintTimer();
+    state.tick = setInterval(function () {
+      if (state.paused) return;
+      state.left--;
+      if (state.left <= 0) { state.left = 0; stopTick(); }
+      paintTimer();
+    }, 1000);
+  }
+  function paintTimer() {
+    var m = Math.floor(state.left / 60), s = state.left % 60;
+    var n = el('timer');
+    n.textContent = m + ':' + (s < 10 ? '0' : '') + s;
+    n.className = 'timer' + (state.left <= 10 ? ' warn' : '');
+  }
+
+  /* ── one figure ── */
+  function resetBubble() {
+    el('figwrap').hidden = true;
+    el('opts').hidden = true;
+    el('opts').innerHTML = '';
+    el('ans').hidden = true;
+    el('marks').hidden = true;
+    el('show').hidden = true;
+    el('nextq').hidden = true;
+    el('endrun').hidden = true;
+    el('ringwrap').hidden = true;
+    el('start').hidden = false;
+    el('who').textContent = '';
+    el('meta').innerHTML = '';
+    el('qq').textContent = S.lang === 'zh' ? '準備好就開始。' : 'Ready when you are.';
+    el('prog').innerHTML = '';
+    state.phase = 'idle';
+    stopTick();
+    drawPanel();
+    paintScore();
+  }
+
+  function paintScore() {
+    txt('sc-score', String(state.score));
+    txt('sc-streak', String(state.streak));
+    txt('sc-n', (state.i + 1) + '/' + state.deck.length);
+  }
+
+  function cur() { return state.deck[state.i]; }
+
+  function ask() {
+    var f = cur();
+    if (!f) return finish();
+    state.phase = 'asked';
+    state.active = Math.floor(Math.random() * 4);
+    drawPanel();
+
+    var j = state.panel[state.active];
+    el('who').innerHTML = '<b>' + S.esc(judgeName(j)) + '</b>' +
+      '<span class="pill pill-line">' + S.esc(S.p(j.manner)) + '</span>';
+
+    var img = el('figimg');
+    img.src = IMG + f.img;
+    img.alt = S.t(f, 'ask');
+    el('figwrap').hidden = false;
+
+    el('qq').textContent = state.mode === 'choice' ? S.t(f, 'q') : S.t(f, 'ask');
+
+    var d = domInfo(f.dom);
+    el('meta').innerHTML =
+      '<span class="pill pill-' + (f.tier === 1 ? 'a' : 'b') + '">' + S.esc(S.p(d)) + '</span>' +
+      '<span class="pill pill-line">' + (S.lang === 'zh' ? '第 ' + f.tier + ' 梯次' : 'wave ' + f.tier) + '</span>';
+
+    el('start').hidden = true;
+    el('ans').hidden = true;
+    el('marks').hidden = true;
+    el('nextq').hidden = true;
+    el('endrun').hidden = false;
+
+    if (state.mode === 'choice') {
+      var order = S.shuffle([0, 1, 2, 3]);
+      var opts = S.lang === 'zh' ? f.opt_zh : f.opt_en;
+      el('opts').innerHTML = order.map(function (oi, n) {
+        return '<button class="fq-opt" type="button" data-i="' + oi + '">' +
+          '<i>' + 'ABCD'.charAt(n) + '</i><span>' + S.esc(opts[oi]) + '</span></button>';
+      }).join('');
+      el('opts').hidden = false;
+      el('show').hidden = true;
+      el('prog').textContent = S.p(L.picked);
+    } else {
+      el('opts').hidden = true;
+      el('show').hidden = false;
+      el('show').textContent = S.p(L.show);
+      el('prog').textContent = S.p(L.speak);
+    }
+    paintScore();
+    startTick();
+  }
+
+  function reveal(f) {
+    el('akw').innerHTML = ((S.lang === 'zh' ? f.kw_zh : f.kw_en) || [])
+      .map(function (k) { return '<span class="pill pill-w">' + S.esc(k) + '</span>'; }).join('');
+    el('atext').textContent = S.t(f, 'a');
+    var tr = S.t(f, 'trap');
+    el('atrap').hidden = !tr;
+    el('atrapt').textContent = tr ? ' ' + tr : '';
+    el('asrc').innerHTML = '<span class="src">' + S.esc(S.p(L.onwiki)) + '</span> ' + S.srcLink(f.page);
+    el('ans').hidden = false;
+  }
+
+  function markShaky(id, on) {
+    var at = state.shaky.indexOf(id);
+    if (on && at < 0) state.shaky.push(id);
+    if (!on && at >= 0) state.shaky.splice(at, 1);
+    S.save('fq-shaky', state.shaky);
+    drawShaky();
+  }
+
+  function settle(good, f) {
+    stopTick();
+    state.phase = 'answered';
+    if (good) {
+      state.hits++;
+      state.streak++;
+      if (state.streak > state.best) state.best = state.streak;
+      var bonus = Math.min(state.streak - 1, 5);
+      state.score += 10 + bonus;
+      markShaky(f.id, false);
+    } else {
+      state.streak = 0;
+      markShaky(f.id, true);
+    }
+    state.order.push({ id: f.id, ok: !!good });
+    paintScore();
+    reveal(f);
+    el('marks').hidden = true;
+    el('nextq').hidden = false;
+    el('nextq').textContent = state.i + 1 >= state.deck.length ? S.p(L.done) : S.p(L.nextq);
+  }
+
+  function pick(oi) {
+    if (state.phase !== 'asked' || state.mode !== 'choice') return;
+    var f = cur(), ok = oi === f.ans;
+    var bs = el('opts').querySelectorAll('.fq-opt');
+    for (var i = 0; i < bs.length; i++) {
+      var v = +bs[i].getAttribute('data-i');
+      bs[i].disabled = true;
+      if (v === f.ans) bs[i].classList.add('ok');
+      else if (v === oi) bs[i].classList.add('no');
+    }
+    toast(ok ? S.p(L.right) + ' +' + (10 + Math.min(state.streak, 5)) : S.p(L.wrong), ok);
+    settle(ok, f);
+  }
+
+  function next() {
+    if (state.i + 1 >= state.deck.length) return finish();
+    state.i++;
+    ask();
+  }
+
+  function finish() {
+    stopTick();
+    state.phase = 'idle';
+    state.last = {
+      score: state.score, hits: state.hits, n: state.deck.length,
+      best: state.best, mode: state.mode,
+      pct: state.deck.length ? state.hits / state.deck.length : 0
+    };
+    openCard();
+    resetBubble();
+  }
+
+  /* ── the card ── */
+  function grade(pct) {
+    if (pct >= 0.9) return S.lang === 'zh' ? '這面牆你認得' : 'You know the wall';
+    if (pct >= 0.7) return S.lang === 'zh' ? '大部分認得出來' : 'Most of it lands';
+    if (pct >= 0.5) return S.lang === 'zh' ? '一半，再跑一局' : 'Half. Run it again';
+    return S.lang === 'zh' ? '先回去看圖' : 'Back to the wiki first';
+  }
+
+  function drawCard() {
+    var cv = el('cardcv'), c = cv.getContext('2d'), W = cv.width, H = cv.height;
+    var r = state.last || { score: 0, hits: 0, n: 0, best: 0, pct: 0 };
+    var name = (el('pname').value || state.name || '').trim();
+
+    c.clearRect(0, 0, W, H);
+    c.fillStyle = '#fff'; c.fillRect(0, 0, W, H);
+    var g = c.createLinearGradient(0, 0, W, 0);
+    g.addColorStop(0, '#45b06c'); g.addColorStop(0.26, '#009c78'); g.addColorStop(0.52, '#0167ef');
+    g.addColorStop(0.74, '#61abfe'); g.addColorStop(1, '#e35a1b');
+    c.fillStyle = g; c.fillRect(0, 0, W, 12);
+
+    var rg = c.createRadialGradient(W - 200, 160, 20, W - 200, 160, 560);
+    rg.addColorStop(0, 'rgba(69,176,108,.15)'); rg.addColorStop(1, 'rgba(255,255,255,0)');
+    c.fillStyle = rg; c.fillRect(0, 12, W, H);
+
+    c.fillStyle = '#6e6e73'; c.font = '600 26px ' + FD;
+    c.fillText(S.lang === 'zh' ? 'ReLEAF 評審訓練 · 看圖會場' : 'ReLEAF Judging Trainer · Figure Room', 72, 96);
+
+    c.fillStyle = '#1d1d1f'; c.font = '700 88px ' + FD;
+    c.fillText(name || (S.lang === 'zh' ? '匿名' : 'Anonymous'), 72, 208);
+
+    c.font = '700 184px ' + FD; c.fillStyle = '#1a7f45';
+    c.fillText(String(r.score), 72, 396);
+    var w = c.measureText(String(r.score)).width;
+    c.fillStyle = '#86868b'; c.font = '600 34px ' + FD;
+    c.fillText(S.p(L.points), 72 + w + 20, 396);
+
+    c.fillStyle = '#1d1d1f'; c.font = '600 46px ' + FD;
+    c.fillText(grade(r.pct), 72, 456);
+
+    var stats = [
+      [r.hits + '/' + r.n, S.lang === 'zh' ? '認出來的圖' : 'figures named'],
+      [String(r.best), S.lang === 'zh' ? '最長連對' : 'best streak'],
+      [S.p(r.mode === 'choice' ? MODES[1] : MODES[0]), S.lang === 'zh' ? '作答方式' : 'mode']
+    ];
+    var x = 72, y = 540, i;
+    for (i = 0; i < stats.length; i++) {
+      c.fillStyle = '#1d1d1f'; c.font = '700 42px ' + FD;
+      c.fillText(stats[i][0], x, y);
+      c.fillStyle = '#86868b'; c.font = '400 23px ' + FD;
+      c.fillText(stats[i][1], x, y + 32);
+      x += 268;
+    }
+
+    c.fillStyle = '#a1a1a6'; c.font = '400 21px ' + FD;
+    c.fillText(S.lang === 'zh'
+      ? '題庫共 ' + BANK.length + ' 張圖，全部出自 2026.igem.wiki/gems-taiwan'
+      : BANK.length + ' figures, all published at 2026.igem.wiki/gems-taiwan', 72, H - 28);
+
+    var cx = W - 230, cy = 396, rad = 104;
+    c.lineWidth = 22; c.lineCap = 'round';
+    c.strokeStyle = '#ececed';
+    c.beginPath(); c.arc(cx, cy, rad, 0, Math.PI * 2); c.stroke();
+    if (r.pct > 0) {
+      var gg = c.createLinearGradient(cx - rad, cy - rad, cx + rad, cy + rad);
+      gg.addColorStop(0, '#45b06c'); gg.addColorStop(1, '#1a7f45');
+      c.strokeStyle = gg;
+      c.beginPath(); c.arc(cx, cy, rad, -Math.PI / 2, -Math.PI / 2 + Math.PI * 2 * r.pct); c.stroke();
+    }
+    c.textAlign = 'center';
+    c.fillStyle = '#1d1d1f'; c.font = '700 58px ' + FD;
+    c.fillText(Math.round(r.pct * 100) + '%', cx, cy + 10);
+    c.fillStyle = '#86868b'; c.font = '400 21px ' + FD;
+    c.fillText(S.p(L.outof), cx, cy + 46);
+    c.textAlign = 'start';
+
+    if (state.panel && window.Panel) {
+      var svg = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 210" width="920" height="210">' +
+        window.Panel.bench(state.panel, null, S.lang) + '</svg>';
+      var im = new Image();
+      im.onload = function () { c.drawImage(im, W - 500, 112, 420, 96); };
+      im.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svg);
+    }
+  }
+
+  function openCard() { el('pname').value = state.name || ''; drawCard(); el('modal').hidden = false; }
+  function closeCard() { el('modal').hidden = true; }
+
+  /* ── shaky list and the wall ── */
+  function figCard(f) {
+    var d = domInfo(f.dom);
+    return '<a class="fq-card" href="#" data-id="' + S.esc(f.id) + '">' +
+      '<img src="' + IMG + f.img + '" alt="" loading="lazy" decoding="async">' +
+      '<span class="fq-card-t">' + S.esc(S.t(f, 'ask')) + '</span>' +
+      '<span class="fq-card-m"><span class="pill pill-' + (f.tier === 1 ? 'a' : 'b') + '">' +
+        S.esc(S.p(d)) + '</span>' + S.srcLink(f.page) + '</span></a>';
+  }
+
+  function drawShaky() {
+    var list = BANK.filter(function (f) { return state.shaky.indexOf(f.id) >= 0; });
+    el('shaky').innerHTML = list.length
+      ? '<div class="fq-grid">' + list.map(figCard).join('') + '</div>'
+      : '<p class="src">' + S.esc(S.p(L.empty)) + '</p>';
+  }
+
+  function drawWall() {
+    var q = (el('wallq').value || '').trim().toLowerCase();
+    var list = BANK.filter(function (f) {
+      if (!q) return true;
+      var hay = [f.ask_en, f.ask_zh, f.a_en, f.a_zh, f.q_en, f.q_zh, f.page, f.dom].join(' ').toLowerCase();
+      return hay.indexOf(q) >= 0;
+    });
+    el('wall').innerHTML = '<p class="src">' + list.length + ' ' + S.esc(S.p(L.bankn)) + '</p>' +
+      '<div class="fq-grid">' + list.map(figCard).join('') + '</div>';
+  }
+
+  /* ── static labels ── */
+  function labels() {
+    txt('l-playing', S.p(L.playing));
+    el('playas').setAttribute('placeholder', S.p(L.yourname));
+    txt('l-mode', S.p(L.lmode));
+    txt('l-run', S.p(L.lrun));
+    txt('l-deck', S.p(L.ldeck));
+    txt('l-narrow', S.p(L.lnarrow));
+    txt('l-dom', S.p(L.ldom));
+    txt('l-score', S.p(L.score));
+    txt('l-streak', S.p(L.streak));
+    txt('l-n', S.p(L.run));
+    el('start').textContent = S.p(L.start);
+    el('reroll').textContent = S.p(L.reroll);
+    el('endrun').textContent = S.p(L.endrun);
+    el('mgood').textContent = S.p(L.good);
+    el('mbad').textContent = S.p(L.bad);
+    el('pause').textContent = state.paused ? S.p(L.resume) : S.p(L.pause);
+    txt('nameln', S.p(L.nameln));
+    el('copyimg').textContent = S.p(L.copyimg);
+    el('dlimg').textContent = S.p(L.dlimg);
+    el('againbtn').textContent = S.p(L.again);
+    txt('imghint', S.p(L.imghint));
+  }
+
+  /* ── wiring ── */
+  document.addEventListener('DOMContentLoaded', function () {
+    if (!BANK.length) return;
+
+    el('playas').value = state.name;
+    el('playas').addEventListener('input', function () {
+      state.name = this.value.trim();
+      S.save('fq-name', state.name);
+    });
+
+    railClick('modes', 'mode');
+    railClick('lens', 'len', Number);
+    railClick('tiers', 'tier');
+    railClick('doms', 'dom');
+
+    el('start').addEventListener('click', function () {
+      if (!pool().length) { toast(S.p(L.none), false); return; }
+      buildDeck();
+      next();
+    });
+
+    el('opts').addEventListener('click', function (e) {
+      var b = e.target.closest('.fq-opt');
+      if (b && !b.disabled) pick(+b.getAttribute('data-i'));
+    });
+
+    el('show').addEventListener('click', function () {
+      if (state.phase !== 'asked') return;
+      stopTick();
+      reveal(cur());
+      el('show').hidden = true;
+      el('marks').hidden = false;
+      el('prog').textContent = '';
+    });
+
+    el('mgood').addEventListener('click', function () { settle(true, cur()); });
+    el('mbad').addEventListener('click', function () { settle(false, cur()); });
+    el('nextq').addEventListener('click', next);
+    el('endrun').addEventListener('click', finish);
+
+    el('pause').addEventListener('click', function () {
+      state.paused = !state.paused;
+      this.textContent = state.paused ? S.p(L.resume) : S.p(L.pause);
+    });
+
+    el('reroll').addEventListener('click', function () {
+      state.seed = Math.floor(Math.random() * 1e9);
+      state.panel = null;
+      drawPanel();
+      toast(S.p(L.rerolled));
+    });
+
+    el('figzoom').addEventListener('click', function () {
+      el('lightimg').src = el('figimg').src;
+      el('lightbox').hidden = false;
+    });
+    el('lightx').addEventListener('click', function () { el('lightbox').hidden = true; });
+    el('lightbox').addEventListener('click', function (e) { if (e.target === this) this.hidden = true; });
+
+    el('modalx').addEventListener('click', closeCard);
+    el('modal').addEventListener('click', function (e) { if (e.target === this) closeCard(); });
+    el('againbtn').addEventListener('click', function () { closeCard(); el('start').click(); });
+    el('pname').addEventListener('input', function () {
+      state.name = this.value.trim();
+      S.save('fq-name', state.name);
+      el('playas').value = state.name;
+      drawCard();
+    });
+
+    el('copyimg').addEventListener('click', function () {
+      try {
+        if (!window.ClipboardItem) { toast(S.p(L.imgfail), false); return; }
+        navigator.clipboard.write([new ClipboardItem({
+          'image/png': new Promise(function (res) { el('cardcv').toBlob(res, 'image/png'); })
+        })]).then(function () { toast(S.p(L.imgdone)); },
+                  function () { toast(S.p(L.imgfail), false); });
+      } catch (e) { toast(S.p(L.imgfail), false); }
+    });
+
+    el('dlimg').addEventListener('click', function () {
+      el('cardcv').toBlob(function (b) {
+        var u = URL.createObjectURL(b), a = document.createElement('a');
+        a.href = u; a.download = 'releaf-figure-room.png'; a.click();
+        setTimeout(function () { URL.revokeObjectURL(u); }, 2000);
+      }, 'image/png');
+    });
+
+    el('wallq').addEventListener('input', drawWall);
+    document.getElementById('wall').addEventListener('click', function (e) {
+      var a = e.target.closest('.fq-card');
+      if (!a) return;
+      e.preventDefault();
+      var id = a.getAttribute('data-id');
+      for (var i = 0; i < BANK.length; i++) if (BANK[i].id === id) {
+        el('lightimg').src = IMG + BANK[i].img;
+        el('lightbox').hidden = false;
+      }
+    });
+    document.getElementById('shaky').addEventListener('click', function (e) {
+      var a = e.target.closest('.fq-card');
+      if (!a) return;
+      e.preventDefault();
+      var id = a.getAttribute('data-id');
+      for (var i = 0; i < BANK.length; i++) if (BANK[i].id === id) {
+        el('lightimg').src = IMG + BANK[i].img;
+        el('lightbox').hidden = false;
+      }
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (/^(INPUT|TEXTAREA)$/.test((e.target.tagName || ''))) return;
+      if (e.key === 'Escape') {
+        if (!el('lightbox').hidden) el('lightbox').hidden = true;
+        else if (!el('modal').hidden) closeCard();
+        return;
+      }
+      if (state.phase === 'asked' && state.mode === 'choice' && /^[1-4]$/.test(e.key)) {
+        var bs = el('opts').querySelectorAll('.fq-opt');
+        var b = bs[+e.key - 1];
+        if (b && !b.disabled) { e.preventDefault(); pick(+b.getAttribute('data-i')); }
+        return;
+      }
+      if (e.key === ' ' && state.phase === 'asked' && state.mode === 'open') {
+        e.preventDefault(); el('show').click(); return;
+      }
+      if (e.key === 'Enter' && state.phase === 'answered') { e.preventDefault(); next(); }
+    });
+
+    S.onLang(function () {
+      labels();
+      drawRail();
+      drawPanel();
+      drawShaky();
+      drawWall();
+      if (state.phase === 'asked' || state.phase === 'answered') {
+        var f = cur();
+        el('qq').textContent = state.mode === 'choice' ? S.t(f, 'q') : S.t(f, 'ask');
+        if (state.phase === 'answered') reveal(f);
+      }
+      if (!el('modal').hidden) drawCard();
+    });
+
+    labels();
+    drawRail();
+    drawShaky();
+    drawWall();
+    resetBubble();
+  });
+})();

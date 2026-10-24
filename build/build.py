@@ -50,6 +50,28 @@ CATS = [
 ]
 
 
+# the figure bank: one entry per published wiki figure, two modes on the same picture
+FIGDOMS = [
+    ('hardware',         'Hardware',          '硬體',        1),
+    ('measurement',      'Measurement',       '量測',        1),
+    ('cloning',          'Cloning',           '選殖',        1),
+    ('plant',            'Plants',            '植物',        1),
+    ('ihp',              'Human Practices',   '人文實踐',     1),
+    ('business',         'Business',          '商業',        2),
+    ('law',              'Law',               '法規',        2),
+    ('model',            'Math Model',        '數學模型',     2),
+    ('protein',          'Protein Design',    '蛋白設計',     2),
+    ('software',         'Software & Twin',   '軟體與孿生',   2),
+    ('biomanufacturing', 'Biomanufacturing',  '生物製造',     2),
+    ('safety',           'Safety',            '安全',        2),
+    ('geo',              'Geospatial',        '地理空間',     2),
+    ('education',        'Education',         '教育',        2),
+    ('dataphys',         'Data Physical.',    '資料實體化',   2),
+    ('sustainability',   'Sustainability',    '永續',        2),
+    ('overview',         'Overview',          '總覽',        2),
+]
+
+
 def read_domain(dom):
     """One domain may be split across <dom>.json and <dom>_*.json chunks."""
     merged = {'facts': [], 'terms': [], 'questions': [], 'gaps': []}
@@ -69,6 +91,43 @@ def read_domain(dom):
             if isinstance(v, list):
                 merged[k].extend(v)
     return merged if found else None
+
+
+
+def read_figures():
+    """source/figures/*.json -> one list. A file's "domain" is the default dom;
+    a figure may override it with its own "dom" (the tier-2 files are mixed)."""
+    d = os.path.join(SRC, 'figures')
+    if not os.path.isdir(d):
+        print('  - figures           missing')
+        return []
+    known = set(f[0] for f in FIGDOMS)
+    out, seen = [], set()
+    for n in sorted(os.listdir(d)):
+        if not n.endswith('.json'):
+            continue
+        with open(os.path.join(d, n), encoding='utf-8') as fh:
+            doc = json.load(fh)
+        default = doc.get('domain') or ''
+        for f in doc.get('figures') or []:
+            dom = f.get('dom') or default
+            if dom not in known:
+                sys.exit('  ! %s: figure %s has unknown domain %r' % (n, f.get('id'), dom))
+            f['dom'] = dom
+            f['tier'] = int(f.get('tier') or 1)
+            if f['id'] in seen:
+                sys.exit('  ! duplicate figure id %s' % f['id'])
+            seen.add(f['id'])
+            img = os.path.join(ROOT, 'docs', 'assets', 'img', 'fq', f['img'])
+            if not os.path.exists(img):
+                sys.exit('  ! %s: image not found for %s: %s' % (n, f['id'], f['img']))
+            for k in ('opt_en', 'opt_zh'):
+                if len(f.get(k) or []) != 4:
+                    sys.exit('  ! %s: %s needs exactly four %s' % (n, f['id'], k))
+            out.append(f)
+    by = collections.Counter(f['dom'] for f in out)
+    print('  + figures           %3d  (%s)' % (len(out), ', '.join('%s %d' % kv for kv in sorted(by.items()))))
+    return out
 
 
 def norm_q(q, dom):
@@ -190,11 +249,19 @@ def main():
     dump('recorded.js', 'RECORDED', recorded)
     dump('meta.js', 'META', meta)
 
+    figures = read_figures()
+    figmeta = dict(doms=[dict(id=f[0], en=f[1], zh=f[2], tier=f[3]) for f in FIGDOMS],
+                   n=len(figures),
+                   t1=sum(1 for f in figures if f['tier'] == 1),
+                   t2=sum(1 for f in figures if f['tier'] == 2))
+    dump('figures.js', 'FIGURES', dict(meta=figmeta, items=figures))
+
     counts = dict(facts=len(facts), terms=len(terms), questions=len(questions), gaps=len(gaps),
                   deep=sum(1 for q in questions if q.get('deep')),
                   reason=sum(1 for q in questions if q.get('type') == 'reason'),
                   history=sum(1 for q in questions if q.get('type') == 'history'),
-                  authored=sum(1 for q in questions if q.get('author')))
+                  authored=sum(1 for q in questions if q.get('author')),
+                  figures=len(figures))
     with open(os.path.join(OUT, 'index.js'), 'w', encoding='utf-8') as fh:
         fh.write('var INDEX_COUNTS = %s;\n' % json.dumps(counts))
     print('\n  total: %(facts)d facts, %(terms)d terms, %(questions)d questions, %(gaps)d gaps' % counts)

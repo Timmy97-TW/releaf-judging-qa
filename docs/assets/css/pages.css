@@ -609,3 +609,68 @@ table.board .dt { color: var(--muted); font-size: .8125rem; text-align: right; }
 .pickrole { font-size: .625rem; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); text-align: center; }
 .guestrow { display: flex; gap: .5rem; margin-top: 1.25rem; padding-top: 1rem; border-top: 1px solid var(--rule-soft); }
 .guestrow .search { flex: 1; margin: 0; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Figure Room. The picture is the question, so it gets the width, a hairline
+   and a plain white mat: a gel photographed on a transilluminator and an SVG
+   chart have to sit in the same frame without one of them looking framed.
+   ───────────────────────────────────────────────────────────────────────── */
+
+.fq-fig { margin: .9rem 0 1.1rem; }
+.fq-zoom {
+  display: block; width: 100%; padding: 0; border: 1px solid var(--rule-soft);
+  border-radius: var(--r-md); background: #fff; cursor: zoom-in; overflow: hidden;
+}
+.fq-zoom:hover { border-color: var(--rule); }
+.fq-zoom img { display: block; width: 100%; height: auto; max-height: 46vh; object-fit: contain; background: #fff; }
+
+.fq-opts { display: grid; gap: .5rem; margin-top: 1.1rem; }
+.fq-opt {
+  display: flex; gap: .75rem; align-items: flex-start; width: 100%; text-align: left;
+  padding: .7rem .85rem; border: 1px solid var(--rule-soft); border-radius: var(--r-md);
+  background: var(--paper); color: var(--ink); font: inherit; font-size: .9375rem;
+  line-height: 1.45; cursor: pointer; transition: border-color .12s, background .12s;
+}
+.fq-opt:hover:not(:disabled) { border-color: var(--accent); background: var(--accent-wash); }
+.fq-opt:disabled { cursor: default; }
+.fq-opt i {
+  flex: 0 0 auto; font-style: normal; font-weight: 700; font-size: .8125rem;
+  width: 1.4rem; height: 1.4rem; border-radius: 50%; display: grid; place-items: center;
+  background: var(--paper-2); color: var(--muted);
+}
+.fq-opt.ok { border-color: var(--accent); background: var(--accent-wash); }
+.fq-opt.ok i { background: var(--accent); color: #fff; }
+.fq-opt.no { border-color: var(--red); background: var(--red-wash); }
+.fq-opt.no i { background: var(--red); color: #fff; }
+
+.fq-light { max-width: min(96vw, 1400px); padding: 1.2rem; }
+.fq-light img { display: block; width: 100%; height: auto; max-height: 84vh; object-fit: contain; }
+
+.fq-fold { border-top: 1px solid var(--rule-soft); padding: 1.2rem 0; }
+.fq-fold > summary {
+  cursor: pointer; font-family: var(--font-display); font-weight: 600;
+  font-size: 1.0625rem; letter-spacing: -.01em; list-style: none;
+}
+.fq-fold > summary::-webkit-details-marker { display: none; }
+.fq-fold > summary::before { content: '+ '; color: var(--faint); }
+.fq-fold[open] > summary::before { content: '– '; }
+
+.fq-grid {
+  display: grid; gap: 1rem; margin-top: 1.1rem;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+}
+.fq-card {
+  display: flex; flex-direction: column; gap: .45rem; text-decoration: none; color: inherit;
+}
+.fq-card img {
+  width: 100%; aspect-ratio: 4 / 3; object-fit: contain; background: var(--paper-3);
+  border: 1px solid var(--rule-soft); border-radius: var(--r-sm);
+}
+.fq-card:hover img { border-color: var(--accent); }
+.fq-card-t { font-size: .875rem; line-height: 1.4; color: var(--ink-2); }
+.fq-card-m { display: flex; gap: .4rem; flex-wrap: wrap; align-items: center; }
+
+@media (max-width: 640px) {
+  .fq-zoom img { max-height: 38vh; }
+  .fq-grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); }
+}

@@ -7,6 +7,7 @@
     { href: 'facts.html',    en: 'Facts',        zh: '事實庫' },
     { href: 'terms.html',    en: 'Terms',        zh: '術語' },
     { href: 'mock.html',     en: 'Mock Room',    zh: '模擬會場', hot: true },
+    { href: 'figures.html',  en: 'Figure Room',  zh: '看圖會場', hot: true },
     { href: 'seats.html',    en: 'Mic Map',      zh: '麥克風地圖' },
     { href: 'delivery.html', en: 'Delivery',     zh: '答題技巧' },
     { href: 'opening.html',  en: 'Opening Five', zh: '五分鐘開場' },

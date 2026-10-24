@@ -135,6 +135,7 @@
     guess: null,
     marked: false,
     last: null,
+    verdict: null,
     fu: null
   };
 
@@ -187,26 +188,21 @@
   }
 
   function drawPicker(filter) {
-    var f = (filter || '').toLowerCase().trim(), h = '', sec = '', i;
-    var secs = window.ROSTER_SECTIONS || {};
-    for (i = 0; i < PEOPLE.length; i++) {
-      var p = PEOPLE[i];
+    var f = (filter || '').toLowerCase().trim(), h = '', i;
+    var list = PEOPLE.slice().sort(function (a, b) { return a.n < b.n ? -1 : a.n > b.n ? 1 : 0; });
+    h += '<div class="pickgrid">';
+    for (i = 0; i < list.length; i++) {
+      var p = list[i];
       if (f && (p.n + ' ' + p.r + ' ' + p.t + ' ' + p.sc).toLowerCase().indexOf(f) < 0) continue;
-      if (p.sec !== sec) {
-        if (sec) h += '</div>';
-        sec = p.sec;
-        h += '<h4 class="pick-sec">' + S.esc(S.p(secs[sec] || { en: sec, zh: sec })) + '</h4><div class="pickgrid">';
-      }
       var src = faceSrc(p, 'w');
       h += '<button class="pickp" data-slug="' + p.s + '">' +
         (src ? '<span class="pickface" style="background-image:url(' + src + ')"></span>'
              : '<span class="pickface empty">' + S.esc(initials(p.n)) + '</span>') +
         '<span class="pickname">' + S.esc(p.n) + '</span>' +
-        (p.r ? '<span class="pickrole">' + S.esc(p.r) + '</span>' : '') +
         '</button>';
     }
-    if (sec) h += '</div>';
-    el('wholist').innerHTML = h || '<p class="lede-sm">—</p>';
+    h += '</div>';
+    el('wholist').innerHTML = h;
   }
 
   function openPicker() {
@@ -508,12 +504,91 @@
     paintScore();
   }
 
-  /* ── end of a run ── */
-  function grade(pct) {
-    if (pct >= 0.85) return { en: 'Ready for the room', zh: '可以進那個房間了' };
-    if (pct >= 0.7) return { en: 'Nearly there', zh: '快到了' };
-    if (pct >= 0.5) return { en: 'Keep going', zh: '繼續練' };
-    return { en: 'This is why you practise', zh: '這就是要練習的原因' };
+  /* ── end of a run ──
+     The line under the score is the part students screenshot, so it is written
+     to be read out loud by somebody else. Low scores get told the truth; a
+     personal best gets told properly. Never the same line twice running. */
+  var VERDICTS = {
+    awful: [
+      { en: 'The judges have questions. All of them.', zh: '評審有問題。全部都有問題。' },
+      { en: 'That was a rehearsal for a rehearsal.', zh: '那是為了彩排而做的彩排。' },
+      { en: 'Four strangers, nearly no answers.', zh: '四個陌生人，幾乎沒有答案。' },
+      { en: 'Paris does not grade on effort.', zh: '巴黎不會因為你很努力就給分。' },
+      { en: 'Good news: the only way from here is up.', zh: '好消息：從這裡開始只能往上。' },
+      { en: 'The wiki is right there. Go and read it.', zh: 'wiki 就在那裡。去讀。' },
+      { en: 'Nobody is ready on their first run. Run again.', zh: '沒有人第一次就準備好。再來一次。' }
+    ],
+    rough: [
+      { en: 'Survivable. Not yet convincing.', zh: '勉強活下來，但還不夠有說服力。' },
+      { en: 'You knew some of it. They will find the rest.', zh: '你會一部分。剩下的他們會找出來。' },
+      { en: 'Half an answer is a whole problem.', zh: '答一半，等於整題有問題。' },
+      { en: 'The panel is still writing. That is not good.', zh: '評審還在寫字。那不是好事。' },
+      { en: 'Closer. Still twenty minutes of exposure.', zh: '接近了。但還有二十分鐘會被看穿。' },
+      { en: 'Learn two more facts and come back.', zh: '再背熟兩個事實再回來。' }
+    ],
+    fair: [
+      { en: 'Solid middle. Middles do not get nominated.', zh: '中規中矩。中規中矩不會被提名。' },
+      { en: 'You would hold the room. Briefly.', zh: '你撐得住場面。一下下。' },
+      { en: 'Good enough to be asked a harder one.', zh: '好到會被追問更難的。' },
+      { en: 'The easy half is yours. Take the other half.', zh: '簡單的那一半是你的了。把另一半拿下。' },
+      { en: 'Respectable. Now make it boring to you.', zh: '可以。現在練到你自己覺得無聊為止。' }
+    ],
+    good: [
+      { en: 'That is a room you can walk into.', zh: '這種程度可以直接走進那個房間。' },
+      { en: 'The panel would nod. Judges rarely nod.', zh: '評審會點頭。評審很少點頭。' },
+      { en: 'Sharp. Keep the honesty in.', zh: '很銳利。誠實的部分要留著。' },
+      { en: 'You are the one who should take the hard ones.', zh: '難的題目應該交給你。' },
+      { en: 'Nearly nothing shaky left.', zh: '幾乎沒有不熟的地方了。' }
+    ],
+    great: [
+      { en: 'Medal-room answers. Say them exactly like that.', zh: '這是會拿獎的回答。就照這樣講。' },
+      { en: 'You could run the whole twenty minutes alone.', zh: '那二十分鐘你一個人撐得起來。' },
+      { en: 'The panel learns something from you.', zh: '評審會從你這裡學到東西。' },
+      { en: 'Frightening. In the right direction.', zh: '有點可怕。但是好的那種。' },
+      { en: 'Go and teach the other six seats.', zh: '去把另外六個位置教會。' }
+    ]
+  };
+
+  var FLAWLESS = [
+    { en: 'Every microphone went to the right person.', zh: '每一支麥克風都交到對的人手上。' },
+    { en: 'Perfect routing. The Mic Map is in your head.', zh: '完美分工。麥克風地圖已經在你腦子裡了。' }
+  ];
+  var NOSEAT = [
+    { en: 'Not one question went to the right seat.', zh: '沒有一題交到對的位置。' },
+    { en: 'You answered everything. None of it was yours.', zh: '你全部都答了。但沒有一題是你的。' }
+  ];
+  var BEST = [
+    { en: 'Your best yet, by {d}. Do that again on 13 November.', zh: '你的最佳紀錄，多了 {d} 分。11 月 13 日再做一次。' },
+    { en: 'Personal best, {d} up. Somebody has been drilling.', zh: '個人新高，進步 {d} 分。有人在練。' },
+    { en: 'Beat your own record by {d}. Keep the receipt.', zh: '破了自己的紀錄 {d} 分。把這張卡留著。' }
+  ];
+
+  function band(pct) {
+    return pct >= 0.85 ? 'great' : pct >= 0.7 ? 'good' : pct >= 0.52 ? 'fair' : pct >= 0.34 ? 'rough' : 'awful';
+  }
+
+  /* never repeat the line a student just saw */
+  function pickLine(pool, key) {
+    if (pool.length < 2) return pool[0];
+    var last = S.load('said-' + key, -1), i = 0;
+    for (var tries = 0; tries < 12; tries++) {
+      i = Math.floor(Math.random() * pool.length);
+      if (i !== last) break;
+    }
+    S.save('said-' + key, i);
+    return pool[i];
+  }
+
+  function verdict(r) {
+    /* a personal best outranks everything, then the two perfect-routing cases */
+    if (r.gain > 0) {
+      var line = pickLine(BEST, 'best');
+      return { en: line.en.replace('{d}', r.gain), zh: line.zh.replace('{d}', r.gain) };
+    }
+    if (r.n >= 4 && r.acc === 100) return pickLine(FLAWLESS, 'flawless');
+    if (r.n >= 4 && r.acc === 0) return pickLine(NOSEAT, 'noseat');
+    var b = band(r.pct);
+    return pickLine(VERDICTS[b], b);
   }
 
   function finish() {
@@ -521,13 +596,19 @@
     /* a run you stopped early is scored on what you actually took */
     var n = Math.max(1, Math.min(state.deck.length, state.i + 1));
     var max = n * 31;                        /* 10 seat + 10 answer + 5 speed + 6 follow-up */
+    var p0 = who(), key = 'pb-' + (p0 ? (p0.s || p0.n) : 'anon') + '-' + (state.len || 0);
+    var prev = S.load(key, 0);
     state.last = {
       n: n,
       pct: Math.min(1, state.score / max),
       acc: state.seatTried ? Math.round(100 * state.seatRight / state.seatTried) : 0,
       conf: Math.round(100 * state.confident / n),
-      avg: Math.round(state.timeLeftSum / n)
+      avg: Math.round(state.timeLeftSum / n),
+      prev: prev,
+      gain: prev && state.score > prev ? state.score - prev : 0
     };
+    if (state.score > prev) S.save(key, state.score);
+    state.verdict = verdict(state.last);
     state.phase = 'idle';
     el('guessbox').hidden = true;
     el('guessres').hidden = true;
@@ -597,7 +678,7 @@
     return {
       p: p,
       score: state.score,
-      grade: S.p(grade(r.pct)),
+      grade: S.p(state.verdict || { en: '', zh: '' }),
       pct: r.pct,
       stats: [
         [r.acc + '%', S.p(L.seatacc)],
@@ -658,7 +739,7 @@
     c.fillText((S.lang === 'zh' ? '模擬會場 · 評審訓練' : 'MOCK ROOM · JUDGING TRAINER'), 348, 106);
 
     /* who */
-    var y = 202;
+    var y = 212;
     if (p.r) {
       var w = pill(c, 64, y - 26, p.r.toUpperCase(), '#23684a', '#ffffff');
       if (p.t) pill(c, 64 + w + 10, y - 26, p.t.toUpperCase(), '#eceae5', '#55534c', '#dedbd3');
@@ -667,36 +748,23 @@
     }
 
     c.fillStyle = '#14402b';
-    c.font = '700 64px ' + FD;
-    c.fillText(p.n, 64, y + 66);
-
-    if (p.g || p.sc) {
-      c.fillStyle = '#6b6b6b';
-      c.font = '600 21px ' + FD;
-      c.fillText([p.g, p.sc].filter(Boolean).join(' · ').toUpperCase(), 66, y + 98);
-    }
-
-    /* the tasks they own, filled; the ones they worked on, washed */
-    var x = 64, ty = y + 122, own = p.own || [], mem = p.mem || [];
-    for (i = 0; i < own.length && x < 560; i++) {
-      x += pill(c, x, ty, own[i], TASKS[own[i]] || '#23684a', '#ffffff') + 8;
-    }
-    for (i = 0; i < mem.length && x < 560; i++) {
-      x += pill(c, x, ty, mem[i], wash(TASKS[mem[i]] || '#78909c'), '#55534c') + 8;
-    }
+    c.font = '700 70px ' + FD;
+    c.fillText(p.n, 64, y + 72);
 
     /* the score */
     c.fillStyle = '#1a7f45';
-    c.font = '700 128px ' + FD;
-    c.fillText(String(d.score), 64, 476);
+    c.font = '700 150px ' + FD;
+    c.fillText(String(d.score), 64, 462);
     var sw = c.measureText(String(d.score)).width;
     c.fillStyle = '#86868b';
     c.font = '600 30px ' + FD;
-    c.fillText(S.lang === 'zh' ? '分' : 'points', 64 + sw + 16, 476);
+    c.fillText(S.lang === 'zh' ? '分' : 'points', 64 + sw + 18, 462);
 
     c.fillStyle = '#1d1d1f';
-    c.font = '600 38px ' + FD;
-    c.fillText(d.grade, 64, 528);
+    var vs = 40;
+    do { c.font = '600 ' + vs + 'px ' + FD; vs -= 2; }
+    while (vs > 22 && c.measureText(d.grade).width > 700);
+    c.fillText(d.grade, 64, 534);
 
     var sx = 64;
     for (i = 0; i < d.stats.length; i++) {
@@ -715,7 +783,7 @@
     c.fillText(d.foot, W - 64, 608);
     c.textAlign = 'start';
 
-    /* the two photographs: the one at work, and the goofy one */
+    /* the photograph at work */
     var W1 = 300, X1 = W - 64 - W1, Y1 = 150;
     c.save();
     rr(c, X1, Y1, W1, W1, 26);
@@ -736,30 +804,6 @@
     c.lineWidth = 2;
     rr(c, X1, Y1, W1, W1, 26);
     c.stroke();
-
-    var goof = faceSrc(p, 'g');
-    if (goof && goof !== work && FACES[goof]) {
-      var R = 72, CX = X1 - 16, CY = Y1 + W1 - 52;
-      c.save();
-      c.beginPath();
-      c.arc(CX, CY, R, 0, Math.PI * 2);
-      c.closePath();
-      c.fillStyle = '#fff';
-      c.fill();
-      c.clip();
-      c.drawImage(FACES[goof], CX - R, CY - R, R * 2, R * 2);
-      c.restore();
-      c.beginPath();
-      c.arc(CX, CY, R, 0, Math.PI * 2);
-      c.strokeStyle = '#ffffff';
-      c.lineWidth = 8;
-      c.stroke();
-      c.beginPath();
-      c.arc(CX, CY, R + 4, 0, Math.PI * 2);
-      c.strokeStyle = pal[0];
-      c.lineWidth = 3;
-      c.stroke();
-    }
 
     /* how close to a perfect run */
     var cx = X1 + W1 / 2;
@@ -787,7 +831,6 @@
     var p = who(), need = ['assets/img/releaf-word.webp'], i, left;
     if (p) {
       if (faceSrc(p, 'w')) need.push(faceSrc(p, 'w'));
-      if (faceSrc(p, 'g')) need.push(faceSrc(p, 'g'));
     }
     left = need.length;
     for (i = 0; i < need.length; i++) {
