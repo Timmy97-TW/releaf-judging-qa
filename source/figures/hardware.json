@@ -26,7 +26,7 @@
  "trap_zh": "把比較小的那台說成市售儀器。這兩台都是我們做的；市售的對照是 BioDrop，不在這張圖裡。"
 },
 {
- "id": "h02", "img": "h02.webp", "tier": 1, "page": "hardware#bioreactor",
+ "id": "h02", "img": "h02.webp", "tier": 1, "page": "hardware-bioreactor",
  "ask_en": "What are the two coloured paths in this diagram, and why do they never meet?",
  "ask_zh": "這張圖上的兩條顏色路徑各是什麼？它們為什麼不會交會？",
  "a_en": "This is bioreactor version 4, the final loop. Pink is the culture loop: the stirred B. subtilis bottle with its pH probe, the pump, the flow meter, the in-line photometer, the pressure transducers, up through the hollow fiber lumens, past the pinch valve and back. Blue is the protectant path, which leaves the shell side of the membrane through the shell Luer valve to its own output bottle. The only way out of the culture is through the 0.2 micrometre fiber wall, so the cells stay in and only the secreted protein leaves.",
@@ -74,7 +74,7 @@
  "trap_zh": "把話說得太滿。要講清楚它是什麼：一次實驗、24 小時後、一次塗盤。這是整個專題唯一的圍堵證據。"
 },
 {
- "id": "h04", "img": "h04.webp", "tier": 1, "page": "hardware#bioreactor",
+ "id": "h04", "img": "h04.webp", "tier": 1, "page": "hardware-bioreactor",
  "ask_en": "What is on this screen, and which value on it is computed rather than measured?",
  "ask_zh": "這個畫面上是什麼？上面哪一個數值是算出來的、不是量出來的？",
  "a_en": "The operator dashboard, 4 September 2026, 53 hours into a recording. It carries OD600 with its sample and reference channels, the flow rate, and the feed, retentate and permeate pressures. Transmembrane pressure is the computed one: it comes from the three measured pressures, not from a sensor of its own.",
@@ -170,7 +170,7 @@
  "trap_zh": "把 LPA 跟光度計搞混。LPA 是把光打進菌液，光度計是讓光穿過菌液去讀值。"
 },
 {
- "id": "h08", "img": "h08.webp", "tier": 1, "page": "hardware#hydroponics",
+ "id": "h08", "img": "h08.webp", "tier": 1, "page": "hardware-hydroponics",
  "ask_en": "What is this part, and what problem does it solve?",
  "ask_zh": "這個零件是什麼？它解決了什麼問題？",
  "a_en": "The printed floating plate for the hydroponic boxes: thirteen bores in rows of four, five and four, a handle clipped at each end, and the seed holders that drop into the bores. A fixed plate makes the root depth drift as the medium level falls through a run; a floating plate falls with the level, so the roots stay at one depth. It floats on a closed hollow frame and sits in a pipette tip box.",
@@ -218,7 +218,7 @@
  "trap_zh": "把還沒驗證的部分藏起來。這個修正是尚未重測的設計變更；在評審問出來之前自己先講。"
 },
 {
- "id": "h10", "img": "h10.webp", "tier": 1, "page": "hardware#photometer",
+ "id": "h10", "img": "h10.webp", "tier": 1, "page": "hardware-photometer",
  "ask_en": "What is being compared, and what is the headline number?",
  "ask_zh": "這張圖在比較什麼？關鍵數字是什麼？",
  "a_en": "The Pro and the Slim photometers rendered at the same scale, both lit, each with a short tube of culture out of its flow cell. The Slim stands about a quarter of the Pro's height. The size is the point: the Slim is the build a farm or another team could actually put in a loop, and on the silica ladder it is about five times less sensitive than the Pro but just as straight.",

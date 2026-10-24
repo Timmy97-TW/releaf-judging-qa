@@ -136,8 +136,8 @@
 
   /* ── rail ── */
   function chip(c, on) {
-    return '<button class="chip' + (on ? ' on' : '') + '" type="button" data-v="' +
-           S.esc(c.id) + '">' + S.esc(S.p(c)) + '</button>';
+    return '<button class="chip" type="button" aria-pressed="' + (on ? 'true' : 'false') +
+           '" data-v="' + S.esc(c.id) + '">' + S.esc(S.p(c)) + '</button>';
   }
   function drawRail() {
     el('modes').innerHTML = MODES.map(function (m) { return chip(m, m.id === state.mode); }).join('');

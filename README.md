@@ -25,22 +25,26 @@ Static HTML and vanilla JavaScript: no build step to view it, no server, works o
 | **77 gaps** | Places where the team's own pages disagree, or claim more than the data shows, each with an honest sentence to say |
 | **181 recorded questions** | What judges actually asked other teams in 2025 and earlier, from the team's own notes |
 | **58 milestones** | The year as a vertical timeline, with 47 of the team's own result figures |
+| **86 figures** | Key figures lifted off the wiki, each one a question in two modes: name it out loud, or pick it out of four |
 
 All of it is drawn from the frozen wiki at [2026.igem.wiki/gems-taiwan](https://2026.igem.wiki/gems-taiwan/).
 Nothing is invented. Where the wiki is silent, the answer says so.
 
-## The nine pages
+## The ten pages
 
 1. **Start** — the session facts, the countdown, and five rules that decide the twenty minutes.
 2. **Facts** — searchable fact base, plus the ten numbers to know by heart, plus the honest list.
 3. **Terms** — big search, and a quiz box that keeps rotating. Space reveals, right arrow moves on.
 4. **Mock Room** — four judges, a ninety-second timer, filters by domain and question type, and a
    full-session deck of fourteen questions weighted like the real thing. Shaky questions are kept.
-5. **Mic Map** — seven seats, what each one owns, ten double-dip rules, and an assignment drill.
-6. **Delivery** — the shape of a good answer, sentences worth memorising, and eleven habits that cost points.
-7. **Opening Five** — four slides, a skeleton script and a rehearsal clock with per-slide budgets.
-8. **Day Sheet** — two weeks out to the door of J03, what goes in the bag, and a printable one-sheet.
-9. **Timeline** — the year in evidence: every dated result in the order it happened, with the gel, plate,
+5. **Figure Room** — the same four judges, but they point at a picture. Eighty-six figures off the
+   wiki, ten to a run, filterable by wave and by domain. Two modes: say what it is out loud and mark
+   yourself, or pick one of four. Wrong answers go on a shaky list, and the run ends in a card.
+6. **Mic Map** — seven seats, what each one owns, ten double-dip rules, and an assignment drill.
+7. **Delivery** — the shape of a good answer, sentences worth memorising, and eleven habits that cost points.
+8. **Opening Five** — four slides, a skeleton script and a rehearsal clock with per-slide budgets.
+9. **Day Sheet** — two weeks out to the door of J03, what goes in the bag, and a printable one-sheet.
+10. **Timeline** — the year in evidence: every dated result in the order it happened, with the gel, plate,
    plot or dashboard it produced, filterable by track. Figures are copied into the repo so it works offline.
    Nine entries carry a date worked out from context rather than stated on the wiki; they are marked with a
    tilde, an amber dot and a note saying what the date was inferred from.
@@ -88,6 +92,21 @@ on the way in.
 
 `docs/data/ten.js` is the hand-picked list of ten headline numbers, and `docs/data/content.js`
 holds the written coaching material. Both are edited by hand, not generated.
+
+The figure bank lives in `source/figures/*.json` and builds into `docs/data/figures.js`. Each entry
+names one image in `docs/assets/img/fq/`, an open-mode prompt with a model answer and three keywords,
+a four-option multiple choice with the correct option written first (the page shuffles them), the
+likely mistake, and the wiki slug the figure is published on. The build refuses to run if an image is
+missing, if a domain is unknown, if an id repeats, or if an option list is not exactly four long.
+
+**First wave**, fifty figures across the four nominated and most-asked areas — Hardware, Measurement,
+Cloning, Plants and Integrated Human Practices, ten each. **Second wave**, thirty-six figures, three
+each across Business, Law, Math Model, Protein Design, Software and the Digital Twin,
+Biomanufacturing, Safety, Geospatial, Education, Data Physicalization, Sustainability and the project
+overview.
+
+The images themselves are copied out of `static.igem.wiki` into the repo so the page works offline on
+the day. `.jpg` assets on that CDN answer 403 to a plain fetch; pick the `.webp` of the same figure.
 
 ## Local preview
 
