@@ -58,7 +58,11 @@
     playing:{ en: 'Playing as', zh: '玩家名稱' },
     yourname:{ en: 'your name', zh: '你的名字' },
     endrun: { en: 'End the run and save', zh: '結束並記分' },
-    nameln: { en: 'Name on the card', zh: '卡片上的名字' },
+    whotitle:{ en: 'Who is at the microphone?', zh: '誰站在麥克風前？' },
+    whosearch:{ en: 'Find your name', zh: '搜尋你的名字' },
+    guest:  { en: 'Not on the roster? Type a name', zh: '不在名單上？自己輸入名字' },
+    guestgo:{ en: 'Use this', zh: '就用這個' },
+    pickme: { en: 'Pick your name', zh: '選擇你的名字' },
     lrun:   { en: 'Run', zh: '一局' },
     ldeck:  { en: 'Deck', zh: '題庫' },
     lnarrow:{ en: 'Narrow it down', zh: '再縮小範圍' },
@@ -133,6 +137,95 @@
     last: null,
     fu: null
   };
+
+  /* ── the roster, and who is at the microphone ── */
+  var TASKS = window.TASK_COLORS || {};
+  var PEOPLE = window.ROSTER || [];
+
+  function person(slug) {
+    for (var i = 0; i < PEOPLE.length; i++) if (PEOPLE[i].s === slug) return PEOPLE[i];
+    return null;
+  }
+  function who() {
+    var p = person(S.load('who', ''));
+    if (p) return p;
+    var guest = S.load('guest', '');
+    return guest ? { n: guest, guest: true, own: [], mem: [] } : null;
+  }
+  function tasksOf(p) { return (p.own || []).concat(p.mem || []); }
+  function paletteOf(p) {
+    var t = tasksOf(p || {}), out = [], i;
+    for (i = 0; i < t.length; i++) if (TASKS[t[i]]) out.push(TASKS[t[i]]);
+    return out.length ? out : ['#45b06c', '#009c78', '#0167ef', '#61abfe', '#e35a1b'];
+  }
+  function faceSrc(p, kind) {
+    if (!p || p.guest) return '';
+    if (kind === 'g' && !p.gf) kind = 'w';
+    if (kind === 'w' && !p.w) kind = 'g';
+    return 'assets/img/team/' + p.s + '-' + kind + '.webp';
+  }
+  function initials(name) {
+    var bits = String(name || '?').trim().split(/\s+/);
+    return ((bits[0] || '?')[0] + (bits.length > 1 ? bits[bits.length - 1][0] : '')).toUpperCase();
+  }
+
+  function paintWho() {
+    var p = who();
+    var face = el('whoface'), nm = el('whoname');
+    if (!p) {
+      face.className = 'whoface empty';
+      face.style.backgroundImage = '';
+      face.textContent = '?';
+      nm.textContent = S.p(L.pickme);
+      return;
+    }
+    var src = faceSrc(p, 'w');
+    face.className = 'whoface';
+    if (src) { face.style.backgroundImage = 'url(' + src + ')'; face.textContent = ''; }
+    else { face.style.backgroundImage = ''; face.textContent = initials(p.n); }
+    nm.textContent = p.n;
+  }
+
+  function drawPicker(filter) {
+    var f = (filter || '').toLowerCase().trim(), h = '', sec = '', i;
+    var secs = window.ROSTER_SECTIONS || {};
+    for (i = 0; i < PEOPLE.length; i++) {
+      var p = PEOPLE[i];
+      if (f && (p.n + ' ' + p.r + ' ' + p.t + ' ' + p.sc).toLowerCase().indexOf(f) < 0) continue;
+      if (p.sec !== sec) {
+        if (sec) h += '</div>';
+        sec = p.sec;
+        h += '<h4 class="pick-sec">' + S.esc(S.p(secs[sec] || { en: sec, zh: sec })) + '</h4><div class="pickgrid">';
+      }
+      var src = faceSrc(p, 'w');
+      h += '<button class="pickp" data-slug="' + p.s + '">' +
+        (src ? '<span class="pickface" style="background-image:url(' + src + ')"></span>'
+             : '<span class="pickface empty">' + S.esc(initials(p.n)) + '</span>') +
+        '<span class="pickname">' + S.esc(p.n) + '</span>' +
+        (p.r ? '<span class="pickrole">' + S.esc(p.r) + '</span>' : '') +
+        '</button>';
+    }
+    if (sec) h += '</div>';
+    el('wholist').innerHTML = h || '<p class="lede-sm">—</p>';
+  }
+
+  function openPicker() {
+    drawPicker(el('whosearch').value);
+    el('whomodal').hidden = false;
+    document.body.style.overflow = 'hidden';
+    setTimeout(function () { el('whosearch').focus(); }, 30);
+  }
+  function closePicker() {
+    el('whomodal').hidden = true;
+    if (el('modal').hidden) document.body.style.overflow = '';
+  }
+  function choose(slug, guestName) {
+    if (slug) { S.save('who', slug); S.save('guest', ''); }
+    else { S.save('who', ''); S.save('guest', (guestName || '').slice(0, 18)); }
+    paintWho();
+    closePicker();
+    if (!el('modal').hidden) drawCard();
+  }
 
   function seatName(id) { var s = SEATS[id]; return s ? S.p({ en: s.en, zh: s.zh }) : id; }
   function seatNum(id) { var s = SEATS[id]; return s ? s.n : 0; }
@@ -454,126 +547,264 @@
     openCard();
   }
 
-  /* ── the card you post ── */
+  /* ── the card you post: the team page's member card, with a score on it ── */
   var FD = '-apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang TC", "Noto Sans TC", sans-serif';
+  var LOGO = null, FACES = {};
+
+  function img(src, done) {
+    if (!src) { done(null); return; }
+    if (FACES[src] !== undefined) { done(FACES[src]); return; }
+    var im = new Image();
+    im.onload = function () { FACES[src] = im; done(im); };
+    im.onerror = function () { FACES[src] = null; done(null); };
+    im.src = src;
+  }
+
+  function rr(c, x, y, w, h, r) {
+    c.beginPath();
+    c.moveTo(x + r, y);
+    c.arcTo(x + w, y, x + w, y + h, r);
+    c.arcTo(x + w, y + h, x, y + h, r);
+    c.arcTo(x, y + h, x, y, r);
+    c.arcTo(x, y, x + w, y, r);
+    c.closePath();
+  }
+
+  function pill(c, x, y, text, fill, ink, border) {
+    c.font = '700 19px ' + FD;
+    var w = c.measureText(text).width + 34, h = 36;
+    rr(c, x, y, w, h, 18);
+    if (fill) { c.fillStyle = fill; c.fill(); }
+    if (border) { c.strokeStyle = border; c.lineWidth = 1.5; c.stroke(); }
+    c.fillStyle = ink;
+    c.textBaseline = 'middle';
+    c.fillText(text, x + 17, y + h / 2 + 1);
+    c.textBaseline = 'alphabetic';
+    return w;
+  }
+
+  function wash(hex) {
+    var n = parseInt(hex.slice(1), 16);
+    var r = (n >> 16) & 255, g = (n >> 8) & 255, b = n & 255;
+    return 'rgba(' + r + ',' + g + ',' + b + ',.14)';
+  }
 
   function cardData() {
     var r = state.last || { n: 1, pct: 0, acc: 0, conf: 0, avg: 0 }, k;
-    var mode = '', len = '';
+    var mode = '';
     for (k = 0; k < MODES.length; k++) if (MODES[k].id === state.mode) mode = S.p(MODES[k]);
-    for (k = 0; k < LENS.length; k++) if (LENS[k].id === state.len) len = S.p(LENS[k]);
+    var p = who() || { n: S.lang === 'zh' ? '匿名' : 'Anonymous', own: [], mem: [], guest: true };
     return {
-      name: (el('playas').value || '').slice(0, 18),
+      p: p,
       score: state.score,
       grade: S.p(grade(r.pct)),
+      pct: r.pct,
       stats: [
         [r.acc + '%', S.p(L.seatacc)],
         [r.conf + '%', S.p(L.conf)],
         [String(state.best), S.p(L.streak)]
       ],
-      foot: [mode, r.n + (S.lang === 'zh' ? ' 題' : ' questions'),
-             localDay(), 'GEMS Taiwan · iGEM 2026'].join('  ·  ')
+      foot: [mode, r.n + (S.lang === 'zh' ? ' 題' : ' questions'), localDay(),
+             'GEMS Taiwan · iGEM 2026'].join('  ·  ')
     };
   }
 
   function drawCard() {
     var cv = el('cardcv'), c = cv.getContext('2d'), W = cv.width, H = cv.height;
-    var d = cardData(), i;
+    var d = cardData(), p = d.p, pal = paletteOf(p), i;
 
     c.clearRect(0, 0, W, H);
     c.fillStyle = '#ffffff';
     c.fillRect(0, 0, W, H);
 
-    /* the Jamboree stripe across the top */
-    var g = c.createLinearGradient(0, 0, W, 0);
-    g.addColorStop(0, '#45b06c'); g.addColorStop(0.26, '#009c78'); g.addColorStop(0.52, '#0167ef');
-    g.addColorStop(0.74, '#61abfe'); g.addColorStop(1, '#e35a1b');
-    c.fillStyle = g;
-    c.fillRect(0, 0, W, 12);
+    /* the frame is the person's own task colours, exactly as on the team page */
+    var fg = c.createLinearGradient(0, 0, W, H);
+    for (i = 0; i < pal.length; i++) fg.addColorStop(i / Math.max(1, pal.length - 1), pal[i]);
+    c.fillStyle = fg;
+    c.fillRect(0, 0, W, 14);
+    c.fillRect(0, H - 14, W, 14);
+    c.fillRect(0, 0, 14, H);
+    c.fillRect(W - 14, 0, 14, H);
 
-    var rg = c.createRadialGradient(W - 200, 160, 20, W - 200, 160, 560);
-    rg.addColorStop(0, 'rgba(69,176,108,.15)');
-    rg.addColorStop(1, 'rgba(255,255,255,0)');
-    c.fillStyle = rg;
-    c.fillRect(0, 12, W, H);
+    /* the sprig: one leaf per task, washed back behind the score */
+    c.save();
+    c.globalAlpha = 0.1;
+    c.translate(430, 300);
+    c.scale(2.3, 2.3);
+    c.strokeStyle = '#14402b';
+    c.lineWidth = 3;
+    c.beginPath();
+    c.moveTo(6, 158); c.bezierCurveTo(26, 122, 36, 74, 33, 6);
+    c.stroke();
+    var pos = [[31, 20, -42], [27, 46, 40], [23, 70, -34], [18, 93, 36], [14, 114, -28], [11, 132, 34]];
+    for (i = 0; i < Math.min(Math.max(pal.length, 3), pos.length); i++) {
+      c.save();
+      c.translate(pos[i][0], pos[i][1]);
+      c.rotate(pos[i][2] * Math.PI / 180);
+      c.fillStyle = pal[i % pal.length];
+      c.beginPath();
+      c.moveTo(0, 0); c.bezierCurveTo(9, -11, 25, -11, 33, 0);
+      c.bezierCurveTo(25, 11, 9, 11, 0, 0);
+      c.fill();
+      c.restore();
+    }
+    c.restore();
 
-    c.fillStyle = '#6e6e73';
-    c.font = '600 26px ' + FD;
-    c.fillText(S.lang === 'zh' ? 'ReLEAF 評審訓練 · 模擬會場' : 'ReLEAF Judging Trainer · Mock Room', 72, 96);
+    /* the ReLEAF wordmark, the one from the loading screen */
+    if (LOGO) c.drawImage(LOGO, 64, 44, 268, 104);
 
-    c.fillStyle = '#1d1d1f';
-    c.font = '700 88px ' + FD;
-    c.fillText(d.name || (S.lang === 'zh' ? '匿名' : 'Anonymous'), 72, 208);
+    c.fillStyle = '#6b6b6b';
+    c.font = '700 20px ' + FD;
+    c.fillText((S.lang === 'zh' ? '模擬會場 · 評審訓練' : 'MOCK ROOM · JUDGING TRAINER'), 348, 106);
 
-    c.font = '700 184px ' + FD;
+    /* who */
+    var y = 202;
+    if (p.r) {
+      var w = pill(c, 64, y - 26, p.r.toUpperCase(), '#23684a', '#ffffff');
+      if (p.t) pill(c, 64 + w + 10, y - 26, p.t.toUpperCase(), '#eceae5', '#55534c', '#dedbd3');
+    } else if (p.t) {
+      pill(c, 64, y - 26, p.t.toUpperCase(), '#eceae5', '#55534c', '#dedbd3');
+    }
+
+    c.fillStyle = '#14402b';
+    c.font = '700 64px ' + FD;
+    c.fillText(p.n, 64, y + 66);
+
+    if (p.g || p.sc) {
+      c.fillStyle = '#6b6b6b';
+      c.font = '600 21px ' + FD;
+      c.fillText([p.g, p.sc].filter(Boolean).join(' · ').toUpperCase(), 66, y + 98);
+    }
+
+    /* the tasks they own, filled; the ones they worked on, washed */
+    var x = 64, ty = y + 122, own = p.own || [], mem = p.mem || [];
+    for (i = 0; i < own.length && x < 560; i++) {
+      x += pill(c, x, ty, own[i], TASKS[own[i]] || '#23684a', '#ffffff') + 8;
+    }
+    for (i = 0; i < mem.length && x < 560; i++) {
+      x += pill(c, x, ty, mem[i], wash(TASKS[mem[i]] || '#78909c'), '#55534c') + 8;
+    }
+
+    /* the score */
     c.fillStyle = '#1a7f45';
-    c.fillText(String(d.score), 72, 396);
-    var w = c.measureText(String(d.score)).width;
+    c.font = '700 128px ' + FD;
+    c.fillText(String(d.score), 64, 476);
+    var sw = c.measureText(String(d.score)).width;
     c.fillStyle = '#86868b';
-    c.font = '600 34px ' + FD;
-    c.fillText(S.lang === 'zh' ? '分' : 'points', 72 + w + 20, 396);
+    c.font = '600 30px ' + FD;
+    c.fillText(S.lang === 'zh' ? '分' : 'points', 64 + sw + 16, 476);
 
     c.fillStyle = '#1d1d1f';
-    c.font = '600 46px ' + FD;
-    c.fillText(d.grade, 72, 456);
+    c.font = '600 38px ' + FD;
+    c.fillText(d.grade, 64, 528);
 
-    var x = 72, y = 540;
+    var sx = 64;
     for (i = 0; i < d.stats.length; i++) {
       c.fillStyle = '#1d1d1f';
-      c.font = '700 42px ' + FD;
-      c.fillText(d.stats[i][0], x, y);
+      c.font = '700 32px ' + FD;
+      c.fillText(d.stats[i][0], sx, 584);
       c.fillStyle = '#86868b';
-      c.font = '400 23px ' + FD;
-      c.fillText(d.stats[i][1], x, y + 32);
-      x += 268;
+      c.font = '400 20px ' + FD;
+      c.fillText(d.stats[i][1], sx, 608);
+      sx += 190;
     }
 
     c.fillStyle = '#a1a1a6';
-    c.font = '400 21px ' + FD;
-    c.fillText(d.foot, 72, H - 28);
-
-    /* how close to a perfect run, as a dial, so the picture reads at a glance */
-    var r = state.last || { pct: 0 };
-    var cx = W - 230, cy = 396, rad = 104;
-    c.lineWidth = 22;
-    c.lineCap = 'round';
-    c.strokeStyle = '#ececed';
-    c.beginPath();
-    c.arc(cx, cy, rad, 0, Math.PI * 2);
-    c.stroke();
-    if (r.pct > 0) {
-      var gg = c.createLinearGradient(cx - rad, cy - rad, cx + rad, cy + rad);
-      gg.addColorStop(0, '#45b06c');
-      gg.addColorStop(1, '#1a7f45');
-      c.strokeStyle = gg;
-      c.beginPath();
-      c.arc(cx, cy, rad, -Math.PI / 2, -Math.PI / 2 + Math.PI * 2 * r.pct);
-      c.stroke();
-    }
-    c.textAlign = 'center';
-    c.fillStyle = '#1d1d1f';
-    c.font = '700 58px ' + FD;
-    c.fillText(Math.round(r.pct * 100) + '%', cx, cy + 10);
-    c.fillStyle = '#86868b';
-    c.font = '400 21px ' + FD;
-    c.fillText(S.lang === 'zh' ? '滿分的比例' : 'of a perfect run', cx, cy + 46);
+    c.font = '400 19px ' + FD;
+    c.textAlign = 'right';
+    c.fillText(d.foot, W - 64, 608);
     c.textAlign = 'start';
 
-    /* the panel that put them through it, small, top right */
-    if (state.panel && window.Panel) {
-      var svg = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 210" width="920" height="210">' +
-        window.Panel.bench(state.panel, null, S.lang) + '</svg>';
-      var img = new Image();
-      img.onload = function () { c.drawImage(img, W - 500, 112, 420, 96); };
-      img.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svg);
+    /* the two photographs: the one at work, and the goofy one */
+    var W1 = 300, X1 = W - 64 - W1, Y1 = 150;
+    c.save();
+    rr(c, X1, Y1, W1, W1, 26);
+    c.clip();
+    var work = faceSrc(p, 'w');
+    if (work && FACES[work]) c.drawImage(FACES[work], X1, Y1, W1, W1);
+    else {
+      c.fillStyle = '#eceae5';
+      c.fillRect(X1, Y1, W1, W1);
+      c.fillStyle = '#9b9a94';
+      c.font = '700 96px ' + FD;
+      c.textAlign = 'center';
+      c.fillText(initials(p.n), X1 + W1 / 2, Y1 + W1 / 2 + 34);
+      c.textAlign = 'start';
+    }
+    c.restore();
+    c.strokeStyle = 'rgba(20,64,43,.12)';
+    c.lineWidth = 2;
+    rr(c, X1, Y1, W1, W1, 26);
+    c.stroke();
+
+    var goof = faceSrc(p, 'g');
+    if (goof && goof !== work && FACES[goof]) {
+      var R = 72, CX = X1 - 16, CY = Y1 + W1 - 52;
+      c.save();
+      c.beginPath();
+      c.arc(CX, CY, R, 0, Math.PI * 2);
+      c.closePath();
+      c.fillStyle = '#fff';
+      c.fill();
+      c.clip();
+      c.drawImage(FACES[goof], CX - R, CY - R, R * 2, R * 2);
+      c.restore();
+      c.beginPath();
+      c.arc(CX, CY, R, 0, Math.PI * 2);
+      c.strokeStyle = '#ffffff';
+      c.lineWidth = 8;
+      c.stroke();
+      c.beginPath();
+      c.arc(CX, CY, R + 4, 0, Math.PI * 2);
+      c.strokeStyle = pal[0];
+      c.lineWidth = 3;
+      c.stroke();
+    }
+
+    /* how close to a perfect run */
+    var cx = X1 + W1 / 2;
+    c.font = '700 30px ' + FD;
+    c.textAlign = 'center';
+    c.fillStyle = '#1d1d1f';
+    c.fillText(Math.round(d.pct * 100) + '%', cx, 508);
+    c.fillStyle = '#86868b';
+    c.font = '400 19px ' + FD;
+    c.fillText(S.lang === 'zh' ? '滿分的比例' : 'of a perfect run', cx, 532);
+    c.textAlign = 'start';
+    var bw = W1, bx = X1, by = 548;
+    rr(c, bx, by, bw, 10, 5);
+    c.fillStyle = '#ececed';
+    c.fill();
+    if (d.pct > 0) {
+      rr(c, bx, by, Math.max(10, bw * d.pct), 10, 5);
+      c.fillStyle = '#1a7f45';
+      c.fill();
+    }
+  }
+
+  /* the card needs its pictures before it can be drawn */
+  function loadCardArt(then) {
+    var p = who(), need = ['assets/img/releaf-word.webp'], i, left;
+    if (p) {
+      if (faceSrc(p, 'w')) need.push(faceSrc(p, 'w'));
+      if (faceSrc(p, 'g')) need.push(faceSrc(p, 'g'));
+    }
+    left = need.length;
+    for (i = 0; i < need.length; i++) {
+      (function (src) {
+        img(src, function (im) {
+          if (src.indexOf('releaf-word') > -1) LOGO = im;
+          if (--left <= 0) then();
+        });
+      })(need[i]);
     }
   }
 
   function openCard() {
-    el('pname').value = el('playas').value || S.load('pname', '');
-    drawCard();
     el('modal').hidden = false;
     document.body.style.overflow = 'hidden';
+    drawCard();
+    loadCardArt(drawCard);          /* again once the photographs are in */
   }
   function closeCard() {
     el('modal').hidden = true;
@@ -699,11 +930,18 @@
   });
   el('nextq').addEventListener('click', next);
   el('endrun').addEventListener('click', function () { finish(); });
-  el('playas').addEventListener('input', function () { S.save('pname', this.value.slice(0, 18)); });
-  el('pname').addEventListener('input', function () {
-    el('playas').value = this.value.slice(0, 18);
-    S.save('pname', el('playas').value);
-    drawCard();
+  el('whobtn').addEventListener('click', openPicker);
+  el('whox').addEventListener('click', closePicker);
+  el('whomodal').addEventListener('click', function (e) { if (e.target === this) closePicker(); });
+  el('whosearch').addEventListener('input', function () { drawPicker(this.value); });
+  el('wholist').addEventListener('click', function (e) {
+    var b = e.target.closest('.pickp'); if (!b) return;
+    choose(b.getAttribute('data-slug'), '');
+    loadCardArt(function () { if (!el('modal').hidden) drawCard(); });
+  });
+  el('guestgo').addEventListener('click', function () {
+    var v = el('guestname').value.trim();
+    if (v) choose('', v);
   });
   el('lens').addEventListener('click', function (e) {
     var b = e.target.closest('.chip'); if (!b) return;
@@ -742,6 +980,7 @@
   el('copyimg').addEventListener('click', copyCard);
   el('dlimg').addEventListener('click', downloadCard);
   document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && !el('whomodal').hidden) { closePicker(); return; }
     if (e.key === 'Escape' && !el('modal').hidden) closeCard();
   });
   el('modes').addEventListener('click', function (e) {
@@ -777,8 +1016,11 @@
   S.onLang(function () {
     el('start').textContent = S.p(L.start);
     el('l-playing').textContent = S.p(L.playing);
-    el('playas').placeholder = S.p(L.yourname);
-    el('playas').value = S.load('pname', '');
+    el('whotitle').textContent = S.p(L.whotitle);
+    el('whosearch').placeholder = S.p(L.whosearch);
+    el('guestname').placeholder = S.p(L.guest);
+    el('guestgo').textContent = S.p(L.guestgo);
+    paintWho();
     el('l-run').textContent = S.p(L.lrun);
     el('l-deck').textContent = S.p(L.ldeck);
     el('l-narrow').textContent = S.p(L.lnarrow);
@@ -788,8 +1030,7 @@
     el('copyimg').textContent = S.p(L.copyimg);
     el('dlimg').textContent = S.p(L.dlimg);
     el('imghint').textContent = S.p(L.imghint);
-    el('pname').placeholder = S.p(L.yourname);
-    el('nameln').textContent = S.p(L.nameln);
+
     el('whoq').textContent = S.p(L.whoq);
     el('whohint').textContent = S.p(L.whohint);
     el('reroll').textContent = S.p(L.reroll);

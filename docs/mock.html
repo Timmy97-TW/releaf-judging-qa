@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Mock Judging Room · ReLEAF Judging Trainer</title>
-<link rel="stylesheet" href="assets/css/base.css?v=202610250329">
-<link rel="stylesheet" href="assets/css/pages.css?v=202610250329">
+<link rel="stylesheet" href="assets/css/base.css?v=202610250343">
+<link rel="stylesheet" href="assets/css/pages.css?v=202610250343">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M4 20c0-8 5.5-14.5 16-15.5C19.5 14 14 20 4 20Z' fill='%231a7f45'/%3E%3C/svg%3E">
 </head>
 <body>
@@ -22,8 +22,11 @@
 
   <aside class="rail">
     <div class="rail-card">
-      <label class="playas"><span id="l-playing"></span>
-        <input id="playas" type="text" maxlength="18" autocomplete="off"></label>
+      <span class="rail-lab" id="l-playing"></span>
+      <button class="whobtn" id="whobtn" type="button">
+        <span class="whoface" id="whoface"></span>
+        <span class="whoname" id="whoname"></span>
+      </button>
     </div>
 
     <div class="rail-group">
@@ -119,15 +122,24 @@
 
 <div class="toast" id="toast"></div>
 
+<div class="modal" id="whomodal" hidden>
+  <div class="modal-in modal-pick" role="dialog" aria-modal="true">
+    <button class="modal-x" id="whox" type="button" aria-label="Close">&times;</button>
+    <h3 id="whotitle"></h3>
+    <input class="search" id="whosearch" type="search" autocomplete="off">
+    <div id="wholist"></div>
+    <div class="guestrow">
+      <input class="search" id="guestname" type="text" maxlength="18" autocomplete="off">
+      <button class="btn btn-ghost btn-sm" id="guestgo" type="button"></button>
+    </div>
+  </div>
+</div>
+
 <div class="modal" id="modal" hidden>
   <div class="modal-in" role="dialog" aria-modal="true">
     <button class="modal-x" id="modalx" type="button" aria-label="Close">&times;</button>
     <div class="cardwrap"><canvas id="cardcv" width="1200" height="630"></canvas></div>
     <div class="modal-foot">
-      <div class="saverow">
-        <label for="pname" id="nameln"></label>
-        <input class="search" id="pname" type="text" maxlength="18" autocomplete="off">
-      </div>
       <div class="btn-row">
         <button class="btn btn-accent btn-sm" id="copyimg" type="button"></button>
         <button class="btn btn-line btn-sm" id="dlimg" type="button"></button>
@@ -152,11 +164,12 @@
   </details>
 </section>
 
-<script src="assets/js/site.js?v=202610250329"></script>
-<script src="data/meta.js?v=202610250329"></script>
-<script src="data/bank.js?v=202610250329"></script>
-<script src="data/recorded.js?v=202610250329"></script>
-<script src="assets/js/panel.js?v=202610250329"></script>
-<script src="assets/js/mock.js?v=202610250329"></script>
+<script src="assets/js/site.js?v=202610250343"></script>
+<script src="data/meta.js?v=202610250343"></script>
+<script src="data/roster.js?v=202610250343"></script>
+<script src="data/bank.js?v=202610250343"></script>
+<script src="data/recorded.js?v=202610250343"></script>
+<script src="assets/js/panel.js?v=202610250343"></script>
+<script src="assets/js/mock.js?v=202610250343"></script>
 </body>
 </html>

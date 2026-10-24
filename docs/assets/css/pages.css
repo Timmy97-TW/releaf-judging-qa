@@ -570,3 +570,42 @@ table.board .dt { color: var(--muted); font-size: .8125rem; text-align: right; }
 .rail .playas { display: block; }
 .rail .playas span { display: block; margin-bottom: .3rem; }
 .rail .playas input { width: 100%; font-size: 1.0625rem; }
+
+/* ════ Who is playing ═══════════════════════════════════════════════════ */
+
+.rail-lab { font-size: .6875rem; text-transform: uppercase; letter-spacing: .07em; color: var(--faint); font-weight: 600; display: block; margin-bottom: .5rem; }
+.whobtn {
+  display: flex; align-items: center; gap: .6rem; width: 100%;
+  background: var(--paper-2); border: 1px solid var(--rule-soft); border-radius: 999px;
+  padding: .3rem .9rem .3rem .3rem; cursor: pointer; font: inherit; text-align: left;
+  transition: border-color .15s ease, background .15s ease;
+}
+.whobtn:hover { border-color: var(--accent); background: #fff; }
+.whoface {
+  width: 38px; height: 38px; border-radius: 50%; flex: none;
+  background-size: cover; background-position: center top; background-color: #eceae5;
+  display: grid; place-items: center; font-size: .8125rem; font-weight: 700; color: #8b8981;
+  box-shadow: 0 0 0 2px #fff inset;
+}
+.whoface.empty { color: var(--faint); }
+.whoname { font-size: .9375rem; font-weight: 600; letter-spacing: -.01em; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+.modal-pick { max-width: 720px; padding: 1.5rem; }
+.modal-pick h3 { font-size: 1.1875rem; margin-bottom: .9rem; }
+.modal-pick .search { margin-bottom: 1rem; }
+.pick-sec { font-size: .6875rem; text-transform: uppercase; letter-spacing: .07em; color: var(--faint); margin: 1.1rem 0 .55rem; }
+.pickgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(104px, 1fr)); gap: .6rem; }
+.pickp {
+  display: grid; justify-items: center; gap: .3rem; padding: .6rem .35rem .7rem;
+  border: 1px solid var(--rule-soft); border-radius: var(--r); background: var(--paper);
+  cursor: pointer; font: inherit; transition: transform .14s ease, box-shadow .14s ease, border-color .14s ease;
+}
+.pickp:hover { transform: translateY(-2px); border-color: var(--accent); box-shadow: var(--shadow-1); }
+.pickface {
+  width: 56px; height: 56px; border-radius: 50%; background-size: cover; background-position: center top;
+  background-color: #eceae5; display: grid; place-items: center; font-weight: 700; color: #8b8981;
+}
+.pickname { font-size: .8125rem; font-weight: 600; line-height: 1.2; text-align: center; }
+.pickrole { font-size: .625rem; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); text-align: center; }
+.guestrow { display: flex; gap: .5rem; margin-top: 1.25rem; padding-top: 1rem; border-top: 1px solid var(--rule-soft); }
+.guestrow .search { flex: 1; margin: 0; }
