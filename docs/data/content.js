@@ -21,12 +21,6 @@ tiles: [
   { href: 'delivery.html', title_en: 'Delivery Lab', title_zh: '答題技巧',
     blurb_en: 'How to open, how to hand over, what to say when you do not know, and the eleven habits that cost teams points.',
     blurb_zh: '如何開口、如何交棒、不知道時怎麼說，以及十一個讓隊伍失分的習慣。' },
-  { href: 'opening.html', title_en: 'The Opening Five', title_zh: '五分鐘開場',
-    blurb_en: 'Four slides and a script for the five minutes before the questions start. Rehearse it against the clock here.',
-    blurb_zh: '問答開始前那五分鐘的四張投影片與逐字稿。在這裡對著計時器練。' },
-  { href: 'dayof.html', title_en: 'Day Sheet', title_zh: '當天流程',
-    blurb_en: 'Taipei to Paris, the 11:30 arrival, the laptop and the cable, and who stands where in room J03.',
-    blurb_zh: '從台北到巴黎、11:30 到場、筆電與網路線，以及 J03 會談室裡誰站哪裡。' },
   { href: 'timeline.html', title_en: 'The Year in Evidence', title_zh: '一年的證據',
     blurb_en: 'The dated results in the order they happened, with the figure each one produced. Learn the month, not the date.',
     blurb_zh: '有日期的結果，依發生順序排列，並附上當時產出的圖。記月份，不要記日期。' },
@@ -221,93 +215,9 @@ traps: [
 ],
 
 /* The five-minute opening */
-openingSlides: [
-  { t_en: 'Slide 1 · Where we are, in one line',
-    t_zh: '投影片 1 · 我們到了哪裡，一句話',
-    s_en: 'Not the problem. One sentence that says what the system is and that it ran: an optogenetic bioreactor that produces plant protectants on the farm, built, run and measured this year.',
-    s_zh: '不要講問題。一句話說明這個系統是什麼、而且它真的運作過：一台在農場上生產植物保護蛋白的光控生物反應器，今年完成製作、運轉與量測。',
-    sec_en: '30 seconds', sec_zh: '30 秒' },
-  { t_en: 'Slide 2 · The two results we are proudest of',
-    t_zh: '投影片 2 · 我們最自豪的兩個結果',
-    s_en: 'One wet-lab, one instrument. Show the figure, say the number, say what it rules out. Do not show four results; show two and know them cold.',
-    s_zh: '一個濕式、一個儀器。把圖放出來、講數字、講它排除了什麼。不要放四個結果；放兩個，並且熟到背得出來。',
-    sec_en: '2 minutes', sec_zh: '2 分鐘' },
-  { t_en: 'Slide 3 · What changed since the freeze',
-    t_zh: '投影片 3 · 凍結之後的進展',
-    s_en: 'This is the only slide the judges have not already seen, so it is the most valuable one in the deck. Even a single new run, a new plating, a new interview belongs here.',
-    s_zh: '這是評審唯一沒看過的一張，所以是整份投影片裡最有價值的一張。就算只是多一次運轉、一次塗盤、一次訪談，都該放在這裡。',
-    sec_en: '1 minute 30', sec_zh: '1 分 30 秒' },
-  { t_en: 'Slide 4 · The limit we know about',
-    t_zh: '投影片 4 · 我們知道的限制',
-    s_en: 'Name your largest honest limit before they ask. It costs you thirty seconds and it buys the room. Then one line on what would settle it.',
-    s_zh: '在他們問之前先講出最大的誠實限制。花你三十秒，換到整個房間的信任。接著一句話說明什麼能解決它。',
-    sec_en: '45 seconds', sec_zh: '45 秒' },
-  { t_en: 'Backup slides · never shown unless asked',
-    t_zh: '備用投影片 · 除非被問到，否則不展示',
-    s_en: 'Keep six: the calibration curve, the construct map, the membrane and pressure schematic, the plant timing figure, the cost table, the stakeholder-to-change table. Know their slide numbers by heart.',
-    s_zh: '準備六張：校正曲線、構築圖、薄膜與壓力示意圖、植物時序圖、成本表、利害關係人對應設計改變的表。把它們的頁碼背起來。',
-    sec_en: '—', sec_zh: '—' }
-],
 
-openingRules: [
-  { en: 'One speaker for the whole five minutes. Switching presenters costs twenty seconds and looks unrehearsed.',
-    zh: '五分鐘由一個人講完。換人要花二十秒，而且看起來沒排練過。' },
-  { en: 'Five minutes is a hard ceiling, and the panel will cut you off. Rehearse to four minutes thirty.',
-    zh: '五分鐘是硬上限，評審會打斷你。練到四分三十秒。' },
-  { en: 'Have the deck open and shared before the clock starts. Share screen is set up during the five minutes before, not at 12:00.',
-    zh: '計時開始前就把投影片打開並分享好。螢幕分享在開始前五分鐘設定，不是 12:00 才做。' },
-  { en: 'End on a sentence, not on "that is all". Try: "those are the two results we would most like your questions on."',
-    zh: '用一句話收尾，不要用「以上」。可以說：「以上兩個結果是我們最希望聽到您提問的部分。」' }
-],
 
 /* Day sheet */
-timeline: [
-  { t_en: '2 weeks before', t_zh: '兩週前',
-    b_en: 'Mock session with your PI and one outsider who has not read the wiki. Record it. The outsider finds the sentences only you understand.',
-    b_zh: '和指導老師以及一位沒讀過 wiki 的外部人士做一次模擬。錄影。外部人士會找出那些只有你們自己聽得懂的句子。' },
-  { t_en: '1 week before', t_zh: '一週前',
-    b_en: 'Mic Map drill until no question causes a pause. Two rounds of thirty questions, no answers longer than ninety seconds.',
-    b_zh: '練麥克風地圖，直到沒有任何一題會造成停頓。兩輪三十題，每題不超過九十秒。' },
-  { t_en: 'On the plane', t_zh: '飛機上',
-    b_en: 'Term Trainer quiz, offline. Ten terms each, out loud to the person next to you.',
-    b_zh: '離線練術語測驗。每人十個術語，對旁邊的人唸出來。' },
-  { t_en: 'Night before', t_zh: '前一晚',
-    b_en: 'Laptop charged to 100 percent. Deck exported to PDF as a second copy. Zoom signed in and tested. Sleep; the session is at noon, not the evening.',
-    b_zh: '筆電充到 100%。投影片另存一份 PDF 備份。Zoom 登入並測試過。睡覺；會談在中午，不是晚上。' },
-  { t_en: '13 Nov · 10:30', t_zh: '11/13 · 10:30',
-    b_en: 'Team together, breakfast done. Read the Opening Five once, out loud, as a group. Do not rehearse new answers today.',
-    b_zh: '全隊集合、吃完早餐。全隊出聲把五分鐘開場讀一次。今天不要練新答案。' },
-  { t_en: '11:30 – 11:50', t_zh: '11:30 – 11:50',
-    b_en: 'Arrive at the Judging Zone with the laptop. Open teams.igem.org/zoom and sign in so the link is ready. Latest allowed arrival is 11:50.',
-    b_zh: '帶著筆電到 Judging Zone。打開 teams.igem.org/zoom 並登入，讓連結準備好。最晚 11:50 必須到。' },
-  { t_en: '11:55', t_zh: '11:55',
-    b_en: 'Guided into room J03. Plug in power. Connect by ethernet or USB-C; there is no WiFi for streaming. Join Zoom, then mute the laptop mic and speakers and use the room audio.',
-    b_zh: '被帶進 J03 會談室。接上電源。用網路線或 USB-C 連網；串流不能用 WiFi。加入 Zoom，然後把筆電的麥克風與喇叭靜音，使用會場音訊。' },
-  { t_en: '12:00', t_zh: '12:00',
-    b_en: 'Opening Five, shared screen. Then twenty minutes of questions. Sessions start and end on time and cannot run over.',
-    b_zh: '分享螢幕，講五分鐘開場。接著二十分鐘問答。會談準時開始、準時結束，不能延長。' },
-  { t_en: '12:25', t_zh: '12:25',
-    b_en: 'Leave the room and the Zoom meeting at once so the next team can set up. Take the laptop and the cable.',
-    b_zh: '立刻離開會談室與 Zoom，讓下一組進場。帶走筆電和網路線。' }
-],
 
-kit: [
-  { en: 'Laptop, charged, with the deck and the PDF backup on the local disk', zh: '筆電，充飽，投影片與 PDF 備份都存在本機' },
-  { en: 'Ethernet cable and a USB-C ethernet adapter that you have tested on this laptop', zh: '網路線，以及在這台筆電上測試過的 USB-C 網路轉接器' },
-  { en: 'Power adapter and a European plug adapter', zh: '電源供應器與歐規插頭轉接' },
-  { en: 'One printed copy of the Mic Map, with the seat order on it', zh: '一份印出來的麥克風地圖，上面有位置順序' },
-  { en: 'One printed sheet of your ten key numbers, for the student at the end of the row', zh: '一份印出來的十個關鍵數字，給站在最邊邊的同學' },
-  { en: 'Water. Twenty minutes of talking in a dry room is longer than it sounds', zh: '水。在乾燥的房間講二十分鐘比想像中久' }
-],
 
-roomRules: [
-  { en: 'Seven students at the microphone. PIs, instructors and advisors may be in the room but may not answer; do not look at them when a question is hard.',
-    zh: '七位學生站在麥克風前。指導老師、教練與顧問可以在場但不能回答；題目難的時候不要看他們。' },
-  { en: 'Stand in Mic Map order, not by friendship. Seat 4 and Seat 5 next to each other; they relay most often.',
-    zh: '按麥克風地圖的順序站，不要按交情站。第 4 位和第 5 位站在一起，他們最常互相接棒。' },
-  { en: 'One person on the laptop for the whole session, and it is not one of the first three answerers.',
-    zh: '整場由一個人負責筆電，而且不是前三位主要回答者之一。' },
-  { en: 'The session is recorded and published afterwards. Say nothing you would not want a future judge to hear.',
-    zh: '會談會錄影並於事後公開。不要說任何你不希望未來的評審聽到的話。' }
-]
 };

@@ -30,21 +30,19 @@ Static HTML and vanilla JavaScript: no build step to view it, no server, works o
 All of it is drawn from the frozen wiki at [2026.igem.wiki/gems-taiwan](https://2026.igem.wiki/gems-taiwan/).
 Nothing is invented. Where the wiki is silent, the answer says so.
 
-## The ten pages
+## The eight pages
 
 1. **Start** — the session facts, the countdown, and five rules that decide the twenty minutes.
 2. **Facts** — searchable fact base, plus the ten numbers to know by heart, plus the honest list.
 3. **Terms** — big search, and a quiz box that keeps rotating. Space reveals, right arrow moves on.
-4. **Mock Room** — four judges, a ninety-second timer, filters by domain and question type, and a
-   full-session deck of fourteen questions weighted like the real thing. Shaky questions are kept.
+4. **Mock Room** — a panel generated for the session, a question whose domain stays hidden until you
+   call a seat, points, streaks, twenty-second follow-ups, and a card to post when the run ends.
 5. **Figure Room** — the same four judges, but they point at a picture. Eighty-six figures off the
    wiki, ten to a run, filterable by wave and by domain. Two modes: say what it is out loud and mark
    yourself, or pick one of four. Wrong answers go on a shaky list, and the run ends in a card.
 6. **Mic Map** — seven seats, what each one owns, ten double-dip rules, and an assignment drill.
 7. **Delivery** — the shape of a good answer, sentences worth memorising, and eleven habits that cost points.
-8. **Opening Five** — four slides, a skeleton script and a rehearsal clock with per-slide budgets.
-9. **Day Sheet** — two weeks out to the door of J03, what goes in the bag, and a printable one-sheet.
-10. **Timeline** — the year in evidence: every dated result in the order it happened, with the gel, plate,
+8. **Timeline** — the year in evidence: every dated result in the order it happened, with the gel, plate,
    plot or dashboard it produced, filterable by track. Figures are copied into the repo so it works offline.
    Nine entries carry a date worked out from context rather than stated on the wiki; they are marked with a
    tilde, an amber dot and a note saying what the date was inferred from.
