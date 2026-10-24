@@ -1,5 +1,5 @@
 /* Mock judging room: a generated panel, a question from someone you did not expect,
- * a guess at who should take it, a timer, points, and a board to put your name on. */
+ * a guess at who should take it, a timer, points, and a card worth posting. */
 (function () {
   'use strict';
   var S = window.Site;
@@ -15,9 +15,9 @@
   ];
 
   var LENS = [
-    { id: 7,  en: '7 questions', zh: '7 題' },
-    { id: 14, en: '14 · a real session', zh: '14 題 · 等於一場' },
-    { id: 25, en: '25 questions', zh: '25 題' },
+    { id: 5,  en: 'Quick · 5', zh: '快打 · 5 題' },
+    { id: 10, en: 'Real · 10', zh: '正式 · 10 題' },
+    { id: 25, en: 'Long · 25', zh: '長局 · 25 題' },
     { id: 0,  en: 'Everything', zh: '整個題庫' }
   ];
 
@@ -50,28 +50,27 @@
     fmiss:  { en: 'Fumbled', zh: '沒接住' },
     done:   { en: 'Deck finished', zh: '這組練完了' },
     again:  { en: 'Go again', zh: '再來一次' },
-    saveas: { en: 'Your name for the board', zh: '登記到排行榜的名字' },
-    save:   { en: 'Put it on the board', zh: '登上排行榜' },
-    saved:  { en: 'On the board.', zh: '已登上排行榜。' },
     reroll: { en: 'New panel', zh: '換一組評審' },
     rerolled:{ en: 'Four new judges. Nobody owns a subject.', zh: '四位新評審。沒有人固定負責哪個主題。' },
     seatacc:{ en: 'right seat', zh: '位置答對' },
     conf:   { en: 'answered', zh: '答得出來' },
     secs:   { en: 's left on average', zh: '秒（平均剩餘）' },
-    copy:   { en: 'Copy my code', zh: '複製我的代碼' },
-    copied: { en: 'Copied. Paste it in the team chat.', zh: '已複製。貼到隊上的群組裡。' },
-    paste:  { en: "Paste a teammate's code", zh: '貼上隊友的代碼' },
-    add:    { en: 'Add', zh: '加入' },
-    badcode:{ en: 'That code did not read.', zh: '這個代碼讀不出來。' },
-    added:  { en: 'Added to the board.', zh: '已加入排行榜。' },
-    boardnote:{ en: 'The board lives in this browser. Codes are how it travels.',
-                zh: '排行榜存在這台瀏覽器裡。代碼是它旅行的方式。' },
-    noboard:{ en: 'No runs yet. Finish a deck and put your name up.', zh: '還沒有紀錄。練完一組就把名字放上去。' },
-    wipe:   { en: 'Wipe the board', zh: '清空排行榜' },
     playing:{ en: 'Playing as', zh: '玩家名稱' },
     yourname:{ en: 'your name', zh: '你的名字' },
     endrun: { en: 'End the run and save', zh: '結束並記分' },
-    scrollb:{ en: 'Your run is on the board below.', zh: '你的成績已經在下面的排行榜上。' }
+    nameln: { en: 'Name on the card', zh: '卡片上的名字' },
+    lrun:   { en: 'Run', zh: '一局' },
+    ldeck:  { en: 'Deck', zh: '題庫' },
+    lnarrow:{ en: 'Narrow it down', zh: '再縮小範圍' },
+    ldom:   { en: 'Domain', zh: '領域' },
+    ltype:  { en: 'Question type', zh: '題型' },
+    copyimg:{ en: 'Copy the card', zh: '複製成績卡' },
+    dlimg:  { en: 'Download', zh: '下載圖片' },
+    imgdone:{ en: 'Card copied. Paste it straight into Discord.', zh: '成績卡已複製。直接貼到 Discord。' },
+    imgfail:{ en: 'Copy is blocked here — the download works.', zh: '這裡不能複製圖片——改用下載。' },
+    close:  { en: 'Close', zh: '關閉' },
+    imghint:{ en: 'If copying is blocked, download it — or right-click the card and copy the image.',
+              zh: '如果不能複製，就用下載——或是在卡片上按右鍵複製圖片。' }
   };
 
   var SEATS = {
@@ -107,7 +106,7 @@
 
   var state = {
     mode: urlMode || S.load('mode', 'a'),
-    len: S.load('len', 14),
+    len: S.load('len', 10),
     dom: urlDom,
     type: urlType,
     deck: [],
@@ -131,6 +130,7 @@
     timeLeftSum: 0,
     guess: null,
     marked: false,
+    last: null,
     fu: null
   };
 
@@ -281,7 +281,6 @@
     el('marks').hidden = true;
     el('ringwrap').hidden = false;
     el('start').hidden = true;
-    el('summary').hidden = true;
     paintSeatChips();
     paintScore();
     drawProg();
@@ -429,10 +428,14 @@
     /* a run you stopped early is scored on what you actually took */
     var n = Math.max(1, Math.min(state.deck.length, state.i + 1));
     var max = n * 31;                        /* 10 seat + 10 answer + 5 speed + 6 follow-up */
-    var pct = Math.min(1, state.score / max);
-    var g = grade(pct);
+    state.last = {
+      n: n,
+      pct: Math.min(1, state.score / max),
+      acc: state.seatTried ? Math.round(100 * state.seatRight / state.seatTried) : 0,
+      conf: Math.round(100 * state.confident / n),
+      avg: Math.round(state.timeLeftSum / n)
+    };
     state.phase = 'idle';
-    el('summary').hidden = false;
     el('guessbox').hidden = true;
     el('guessres').hidden = true;
     el('ans').hidden = true;
@@ -441,88 +444,168 @@
     el('marks').hidden = true;
     el('fubox').hidden = true;
     el('ringwrap').hidden = true;
+    el('endrun').hidden = true;
+    el('start').hidden = false;
+    el('start').textContent = S.p(L.again);
     el('qq').textContent = S.p(L.done);
     el('who').innerHTML = '';
     el('meta').innerHTML = '';
     drawBench(null);
+    openCard();
+  }
 
-    var acc = state.seatTried ? Math.round(100 * state.seatRight / state.seatTried) : 0;
-    var conf = Math.round(100 * state.confident / n);
-    var avg = Math.round(state.timeLeftSum / n);
-    el('sumgrade').textContent = S.p(g);
-    el('sumscore').textContent = state.score;
-    el('sumbits').innerHTML =
-      '<span><b>' + acc + '%</b> ' + S.esc(S.p(L.seatacc)) + '</span>' +
-      '<span><b>' + conf + '%</b> ' + S.esc(S.p(L.conf)) + '</span>' +
-      '<span><b>' + state.best + '</b> ' + S.esc(S.p(L.streak)) + '</span>' +
-      '<span><b>' + avg + '</b> ' + S.esc(S.p(L.secs)) + '</span>';
-    el('endrun').hidden = true;
-    el('nameln').textContent = S.p(L.saveas);
-    el('savebtn').textContent = S.p(L.save);
-    el('againbtn').textContent = S.p(L.again);
+  /* ── the card you post ── */
+  var FD = '-apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang TC", "Noto Sans TC", sans-serif';
+
+  function cardData() {
+    var r = state.last || { n: 1, pct: 0, acc: 0, conf: 0, avg: 0 }, k;
+    var mode = '', len = '';
+    for (k = 0; k < MODES.length; k++) if (MODES[k].id === state.mode) mode = S.p(MODES[k]);
+    for (k = 0; k < LENS.length; k++) if (LENS[k].id === state.len) len = S.p(LENS[k]);
+    return {
+      name: (el('playas').value || '').slice(0, 18),
+      score: state.score,
+      grade: S.p(grade(r.pct)),
+      stats: [
+        [r.acc + '%', S.p(L.seatacc)],
+        [r.conf + '%', S.p(L.conf)],
+        [String(state.best), S.p(L.streak)]
+      ],
+      foot: [mode, r.n + (S.lang === 'zh' ? ' 題' : ' questions'),
+             localDay(), 'GEMS Taiwan · iGEM 2026'].join('  ·  ')
+    };
+  }
+
+  function drawCard() {
+    var cv = el('cardcv'), c = cv.getContext('2d'), W = cv.width, H = cv.height;
+    var d = cardData(), i;
+
+    c.clearRect(0, 0, W, H);
+    c.fillStyle = '#ffffff';
+    c.fillRect(0, 0, W, H);
+
+    /* the Jamboree stripe across the top */
+    var g = c.createLinearGradient(0, 0, W, 0);
+    g.addColorStop(0, '#45b06c'); g.addColorStop(0.26, '#009c78'); g.addColorStop(0.52, '#0167ef');
+    g.addColorStop(0.74, '#61abfe'); g.addColorStop(1, '#e35a1b');
+    c.fillStyle = g;
+    c.fillRect(0, 0, W, 12);
+
+    var rg = c.createRadialGradient(W - 200, 160, 20, W - 200, 160, 560);
+    rg.addColorStop(0, 'rgba(69,176,108,.15)');
+    rg.addColorStop(1, 'rgba(255,255,255,0)');
+    c.fillStyle = rg;
+    c.fillRect(0, 12, W, H);
+
+    c.fillStyle = '#6e6e73';
+    c.font = '600 26px ' + FD;
+    c.fillText(S.lang === 'zh' ? 'ReLEAF 評審訓練 · 模擬會場' : 'ReLEAF Judging Trainer · Mock Room', 72, 96);
+
+    c.fillStyle = '#1d1d1f';
+    c.font = '700 88px ' + FD;
+    c.fillText(d.name || (S.lang === 'zh' ? '匿名' : 'Anonymous'), 72, 208);
+
+    c.font = '700 184px ' + FD;
+    c.fillStyle = '#1a7f45';
+    c.fillText(String(d.score), 72, 396);
+    var w = c.measureText(String(d.score)).width;
+    c.fillStyle = '#86868b';
+    c.font = '600 34px ' + FD;
+    c.fillText(S.lang === 'zh' ? '分' : 'points', 72 + w + 20, 396);
+
+    c.fillStyle = '#1d1d1f';
+    c.font = '600 46px ' + FD;
+    c.fillText(d.grade, 72, 456);
+
+    var x = 72, y = 540;
+    for (i = 0; i < d.stats.length; i++) {
+      c.fillStyle = '#1d1d1f';
+      c.font = '700 42px ' + FD;
+      c.fillText(d.stats[i][0], x, y);
+      c.fillStyle = '#86868b';
+      c.font = '400 23px ' + FD;
+      c.fillText(d.stats[i][1], x, y + 32);
+      x += 268;
+    }
+
+    c.fillStyle = '#a1a1a6';
+    c.font = '400 21px ' + FD;
+    c.fillText(d.foot, 72, H - 28);
+
+    /* how close to a perfect run, as a dial, so the picture reads at a glance */
+    var r = state.last || { pct: 0 };
+    var cx = W - 230, cy = 396, rad = 104;
+    c.lineWidth = 22;
+    c.lineCap = 'round';
+    c.strokeStyle = '#ececed';
+    c.beginPath();
+    c.arc(cx, cy, rad, 0, Math.PI * 2);
+    c.stroke();
+    if (r.pct > 0) {
+      var gg = c.createLinearGradient(cx - rad, cy - rad, cx + rad, cy + rad);
+      gg.addColorStop(0, '#45b06c');
+      gg.addColorStop(1, '#1a7f45');
+      c.strokeStyle = gg;
+      c.beginPath();
+      c.arc(cx, cy, rad, -Math.PI / 2, -Math.PI / 2 + Math.PI * 2 * r.pct);
+      c.stroke();
+    }
+    c.textAlign = 'center';
+    c.fillStyle = '#1d1d1f';
+    c.font = '700 58px ' + FD;
+    c.fillText(Math.round(r.pct * 100) + '%', cx, cy + 10);
+    c.fillStyle = '#86868b';
+    c.font = '400 21px ' + FD;
+    c.fillText(S.lang === 'zh' ? '滿分的比例' : 'of a perfect run', cx, cy + 46);
+    c.textAlign = 'start';
+
+    /* the panel that put them through it, small, top right */
+    if (state.panel && window.Panel) {
+      var svg = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 210" width="920" height="210">' +
+        window.Panel.bench(state.panel, null, S.lang) + '</svg>';
+      var img = new Image();
+      img.onload = function () { c.drawImage(img, W - 500, 112, 420, 96); };
+      img.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svg);
+    }
+  }
+
+  function openCard() {
     el('pname').value = el('playas').value || S.load('pname', '');
-    el('savebtn').disabled = false;
+    drawCard();
+    el('modal').hidden = false;
+    document.body.style.overflow = 'hidden';
+  }
+  function closeCard() {
+    el('modal').hidden = true;
+    document.body.style.overflow = '';
+  }
+
+  function copyCard() {
+    if (!window.ClipboardItem || !navigator.clipboard || !navigator.clipboard.write) {
+      toast(S.p(L.imgfail), false);
+      return;
+    }
+    try {
+      navigator.clipboard.write([new window.ClipboardItem({
+        'image/png': new Promise(function (res) { el('cardcv').toBlob(res, 'image/png'); })
+      })]).then(function () { toast(S.p(L.imgdone)); },
+                function () { toast(S.p(L.imgfail), false); });
+    } catch (e) { toast(S.p(L.imgfail), false); }
+  }
+
+  function downloadCard() {
+    el('cardcv').toBlob(function (b) {
+      var a = document.createElement('a');
+      a.href = URL.createObjectURL(b);
+      a.download = 'releaf-mock-room-' + localDay() + '.png';
+      a.click();
+      setTimeout(function () { URL.revokeObjectURL(a.href); }, 4000);
+    }, 'image/png');
   }
 
   function localDay() {
     var t = new Date(), m = t.getMonth() + 1, d = t.getDate();
     return t.getFullYear() + '-' + (m < 10 ? '0' : '') + m + '-' + (d < 10 ? '0' : '') + d;
-  }
-
-  function runRecord() {
-    var n = Math.max(1, Math.min(state.deck.length, state.i + 1));
-    return {
-      n: (el('pname').value || el('playas').value || '—').slice(0, 18),
-      s: state.score,
-      q: n,
-      a: state.seatTried ? Math.round(100 * state.seatRight / state.seatTried) : 0,
-      b: state.best,
-      m: state.mode,
-      d: localDay()
-    };
-  }
-
-  /* ── the board ── */
-  function board() { return S.load('board', []); }
-  function saveBoard(b) { S.save('board', b.slice(0, 60)); }
-  function addRun(rec) {
-    var b = board(), i;
-    for (i = 0; i < b.length; i++) {
-      if (b[i].n === rec.n && b[i].s === rec.s && b[i].d === rec.d && b[i].q === rec.q) return false;
-    }
-    b.push(rec);
-    b.sort(function (x, y) { return y.s - x.s; });
-    saveBoard(b);
-    return true;
-  }
-  function drawBoard() {
-    var b = board(), h = '', i;
-    if (!b.length) { el('board').innerHTML = '<p class="lede-sm">' + S.p(L.noboard) + '</p>'; return; }
-    h += '<table class="board"><tbody>';
-    for (i = 0; i < Math.min(b.length, 12); i++) {
-      var r = b[i], medal = i === 0 ? '🥇' : i === 1 ? '🥈' : i === 2 ? '🥉' : (i + 1);
-      var mode = '';
-      for (var k = 0; k < MODES.length; k++) if (MODES[k].id === r.m) mode = S.p(MODES[k]);
-      h += '<tr' + (i < 3 ? ' class="top"' : '') + '><td class="rk">' + medal + '</td>' +
-        '<td class="nm">' + S.esc(r.n) + '</td>' +
-        '<td class="pt">' + r.s + '</td>' +
-        '<td class="dt">' + r.a + '% · ' + r.q + 'q · ' + S.esc(mode) + ' · ' + r.d + '</td></tr>';
-    }
-    h += '</tbody></table>';
-    el('board').innerHTML = h;
-  }
-
-  function encode(rec) {
-    try { return btoa(unescape(encodeURIComponent(JSON.stringify(rec)))).replace(/=+$/, ''); }
-    catch (e) { return ''; }
-  }
-  function decode(code) {
-    try {
-      var o = JSON.parse(decodeURIComponent(escape(atob(code.trim()))));
-      if (!o || typeof o.s !== 'number' || typeof o.n !== 'string') return null;
-      return { n: String(o.n).slice(0, 18), s: o.s | 0, q: o.q | 0, a: o.a | 0, b: o.b | 0,
-               m: String(o.m || 'all').slice(0, 8), d: String(o.d || '').slice(0, 10) };
-    } catch (e) { return null; }
   }
 
   /* ── side lists ── */
@@ -617,6 +700,11 @@
   el('nextq').addEventListener('click', next);
   el('endrun').addEventListener('click', function () { finish(); });
   el('playas').addEventListener('input', function () { S.save('pname', this.value.slice(0, 18)); });
+  el('pname').addEventListener('input', function () {
+    el('playas').value = this.value.slice(0, 18);
+    S.save('pname', el('playas').value);
+    drawCard();
+  });
   el('lens').addEventListener('click', function (e) {
     var b = e.target.closest('.chip'); if (!b) return;
     state.len = parseInt(b.getAttribute('data-l'), 10) || 0;
@@ -645,39 +733,16 @@
     drawBench(state.phase === 'idle' ? null : state.asker);
     toast(S.p(L.rerolled));
   });
-  el('savebtn').addEventListener('click', function () {
-    var rec = runRecord();
-    S.save('pname', rec.n);
-    addRun(rec);
-    drawBoard();
-    this.disabled = true;
-    this.textContent = S.p(L.saved);
-    el('mycode').value = encode(rec);
-    el('codebox').hidden = false;
-    toast(S.p(L.scrollb));
-  });
   el('againbtn').addEventListener('click', function () {
-    el('summary').hidden = true;
-    el('start').hidden = false;
-    el('start').textContent = S.p(L.start);
-    el('qq').textContent = S.p({ en: 'Ready when you are.', zh: '準備好就開始。' });
+    closeCard();
+    el('start').click();
   });
-  el('copycode').addEventListener('click', function () {
-    var f = el('mycode');
-    f.select();
-    try { document.execCommand('copy'); toast(S.p(L.copied)); } catch (e) {}
-  });
-  el('addcode').addEventListener('click', function () {
-    var rec = decode(el('theircode').value || '');
-    if (!rec) { toast(S.p(L.badcode), false); return; }
-    addRun(rec);
-    el('theircode').value = '';
-    drawBoard();
-    toast(S.p(L.added));
-  });
-  el('wipe').addEventListener('click', function () {
-    saveBoard([]);
-    drawBoard();
+  el('modalx').addEventListener('click', closeCard);
+  el('modal').addEventListener('click', function (e) { if (e.target === this) closeCard(); });
+  el('copyimg').addEventListener('click', copyCard);
+  el('dlimg').addEventListener('click', downloadCard);
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && !el('modal').hidden) closeCard();
   });
   el('modes').addEventListener('click', function (e) {
     var b = e.target.closest('.chip'); if (!b) return;
@@ -714,23 +779,29 @@
     el('l-playing').textContent = S.p(L.playing);
     el('playas').placeholder = S.p(L.yourname);
     el('playas').value = S.load('pname', '');
+    el('l-run').textContent = S.p(L.lrun);
+    el('l-deck').textContent = S.p(L.ldeck);
+    el('l-narrow').textContent = S.p(L.lnarrow);
+    el('l-dom').textContent = S.p(L.ldom);
+    el('l-type').textContent = S.p(L.ltype);
+    el('againbtn').textContent = S.p(L.again);
+    el('copyimg').textContent = S.p(L.copyimg);
+    el('dlimg').textContent = S.p(L.dlimg);
+    el('imghint').textContent = S.p(L.imghint);
+    el('pname').placeholder = S.p(L.yourname);
+    el('nameln').textContent = S.p(L.nameln);
     el('whoq').textContent = S.p(L.whoq);
     el('whohint').textContent = S.p(L.whohint);
     el('reroll').textContent = S.p(L.reroll);
     el('l-score').textContent = S.p(L.score);
     el('l-streak').textContent = S.p(L.streak);
     el('l-n').textContent = S.p(L.run);
-    el('copycode').textContent = S.p(L.copy);
-    el('addcode').textContent = S.p(L.add);
-    el('wipe').textContent = S.p(L.wipe);
-    el('boardnote').textContent = S.p(L.boardnote);
-    el('theircode').placeholder = S.p(L.paste);
     drawChips();
     drawShaky();
-    drawBoard();
     drawRecorded(el('rq').value);
     paintScore();
     if (state.i >= 0 && state.phase !== 'idle') paint();
     else { drawBench(null); buildDeck(); }
+    if (!el('modal').hidden) drawCard();      /* the card follows the language too */
   });
 })();

@@ -6,7 +6,7 @@
     { href: 'index.html',    en: 'Start',        zh: '開始' },
     { href: 'facts.html',    en: 'Facts',        zh: '事實庫' },
     { href: 'terms.html',    en: 'Terms',        zh: '術語' },
-    { href: 'mock.html',     en: 'Mock Room',    zh: '模擬會場' },
+    { href: 'mock.html',     en: 'Mock Room',    zh: '模擬會場', hot: true },
     { href: 'seats.html',    en: 'Mic Map',      zh: '麥克風地圖' },
     { href: 'delivery.html', en: 'Delivery',     zh: '答題技巧' },
     { href: 'opening.html',  en: 'Opening Five', zh: '五分鐘開場' },
@@ -114,6 +114,7 @@
     for (var i = 0; i < PAGES.length; i++) {
       var p = PAGES[i];
       links += '<a href="' + p.href + '"' + (p.href === here ? ' aria-current="page"' : '') +
+               (p.hot ? ' class="hot"' : '') +
                ' data-en="' + p.en + '" data-zh="' + p.zh + '">' + p.en + '</a>';
     }
     var nav = document.createElement('div');

@@ -108,6 +108,26 @@ hr { border: 0; border-top: 1px solid var(--rule-soft); margin: 2.5rem 0; }
 }
 .nav-links a:hover { background: var(--paper-2); text-decoration: none; }
 .nav-links a[aria-current="page"] { color: var(--ink); font-weight: 600; background: var(--paper-2); }
+
+/* the room is where the practice actually happens, so the tab says so */
+.nav-links a.hot {
+  color: var(--accent-deep); font-weight: 600;
+  background: linear-gradient(180deg, #f0faf3, #e3f4ea);
+  box-shadow: 0 0 0 1px rgba(26,127,69,.16), 0 2px 10px rgba(26,127,69,.16);
+  animation: navpulse 3.2s ease-in-out infinite;
+}
+.nav-links a.hot::before {
+  content: ''; display: inline-block; width: 5px; height: 5px; border-radius: 50%;
+  background: var(--accent); margin-right: .35rem; vertical-align: 1px;
+  box-shadow: 0 0 0 3px rgba(26,127,69,.18);
+}
+.nav-links a.hot:hover { background: linear-gradient(180deg, #e8f7ee, #d9efe3); }
+.nav-links a.hot[aria-current="page"] { animation: none; }
+@keyframes navpulse {
+  0%, 100% { box-shadow: 0 0 0 1px rgba(26,127,69,.16), 0 2px 10px rgba(26,127,69,.14); }
+  50%      { box-shadow: 0 0 0 1px rgba(26,127,69,.30), 0 2px 18px rgba(26,127,69,.34); }
+}
+@media (prefers-reduced-motion: reduce) { .nav-links a.hot { animation: none; } }
 .lang {
   flex: none; display: flex; background: var(--paper-2); border-radius: 999px; padding: 2px;
   border: 1px solid var(--rule-soft);
