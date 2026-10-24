@@ -455,11 +455,14 @@
   /* ── shaky list and the wall ── */
   function figCard(f) {
     var d = domInfo(f.dom);
-    return '<a class="fq-card" href="#" data-id="' + S.esc(f.id) + '">' +
-      '<img src="' + IMG + f.img + '" alt="" loading="lazy" decoding="async">' +
+    /* a div, not an anchor: the source link below is an anchor of its own, and a
+       browser will not nest one inside another — it hoists it out and the grid breaks */
+    return '<div class="fq-card" data-id="' + S.esc(f.id) + '">' +
+      '<button class="fq-card-btn" type="button" aria-label="' + S.esc(S.t(f, 'ask')) + '">' +
+        '<img src="' + IMG + f.img + '" alt="" loading="lazy" decoding="async"></button>' +
       '<span class="fq-card-t">' + S.esc(S.t(f, 'ask')) + '</span>' +
       '<span class="fq-card-m"><span class="pill pill-' + (f.tier === 1 ? 'a' : 'b') + '">' +
-        S.esc(S.p(d)) + '</span>' + S.srcLink(f.page) + '</span></a>';
+        S.esc(S.p(d)) + '</span>' + S.srcLink(f.page) + '</span></div>';
   }
 
   function drawShaky() {
@@ -593,26 +596,18 @@
     });
 
     el('wallq').addEventListener('input', drawWall);
-    document.getElementById('wall').addEventListener('click', function (e) {
-      var a = e.target.closest('.fq-card');
-      if (!a) return;
-      e.preventDefault();
-      var id = a.getAttribute('data-id');
+    function gridClick(e) {
+      if (e.target.closest('a')) return;          /* the wiki link keeps its own job */
+      var card = e.target.closest('.fq-card');
+      if (!card) return;
+      var id = card.getAttribute('data-id');
       for (var i = 0; i < BANK.length; i++) if (BANK[i].id === id) {
         el('lightimg').src = IMG + BANK[i].img;
         el('lightbox').hidden = false;
       }
-    });
-    document.getElementById('shaky').addEventListener('click', function (e) {
-      var a = e.target.closest('.fq-card');
-      if (!a) return;
-      e.preventDefault();
-      var id = a.getAttribute('data-id');
-      for (var i = 0; i < BANK.length; i++) if (BANK[i].id === id) {
-        el('lightimg').src = IMG + BANK[i].img;
-        el('lightbox').hidden = false;
-      }
-    });
+    }
+    el('wall').addEventListener('click', gridClick);
+    el('shaky').addEventListener('click', gridClick);
 
     document.addEventListener('keydown', function (e) {
       if (/^(INPUT|TEXTAREA)$/.test((e.target.tagName || ''))) return;

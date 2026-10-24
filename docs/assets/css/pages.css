@@ -662,11 +662,14 @@ table.board .dt { color: var(--muted); font-size: .8125rem; text-align: right; }
 .fq-card {
   display: flex; flex-direction: column; gap: .45rem; text-decoration: none; color: inherit;
 }
-.fq-card img {
-  width: 100%; aspect-ratio: 4 / 3; object-fit: contain; background: var(--paper-3);
-  border: 1px solid var(--rule-soft); border-radius: var(--r-sm);
+.fq-card-btn {
+  display: block; width: 100%; padding: 0; border: 0; background: none; cursor: zoom-in;
 }
-.fq-card:hover img { border-color: var(--accent); }
+.fq-card img {
+  display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: contain;
+  background: var(--paper-3); border: 1px solid var(--rule-soft); border-radius: var(--r-sm);
+}
+.fq-card-btn:hover img { border-color: var(--accent); }
 .fq-card-t { font-size: .875rem; line-height: 1.4; color: var(--ink-2); }
 .fq-card-m { display: flex; gap: .4rem; flex-wrap: wrap; align-items: center; }
 
