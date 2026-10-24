@@ -14,7 +14,7 @@ for f in glob.glob('*.html'):
             return m.group(0)
         url = re.sub(r'\?v=\d+', '', url)
         return '%s="%s?v=%s"' % (attr, url, V)
-    t2 = re.sub(r'(src|href)="((?:assets|data)/[^"]+\.(?:js|css))"', fix, t)
+    t2 = re.sub(r'(src|href)="((?:assets|data)/[^"?]+\.(?:js|css))(?:\?v=\d+)?"', fix, t)
     if t2 != t:
         open(f, 'w').write(t2)
 print('stamped', V)
