@@ -1,0 +1,463 @@
+{
+  "domain": "wetlab",
+  "questions": [
+    {
+      "q_en": "Your Level 0 entry uses BbsI, Level 1 uses BsaI, and the Level 2 fusion into pSTK-EXP2 uses BsmBI. Walk me through why the hierarchy needs a different enzyme at each level, and what the recognition sites are doing to themselves as you go up.",
+      "q_zh": "你們 Level 0 用 BbsI，Level 1 用 BsaI，接到 pSTK-EXP2 的 Level 2 融合又用 BsmBI。請說明為什麼每一層都需要換一種酶，以及每往上一層，辨識位點本身發生了什麼事。",
+      "type": "design",
+      "tier": "B",
+      "deep": 1,
+      "pages": [
+        "engineering#cloning",
+        "experiments#golden-gate-assembly",
+        "parts#collection"
+      ],
+      "seat": "wet1",
+      "backup": "wet2",
+      "kw_en": [
+        "nested sites, BbsI outside",
+        "cutting removes the site",
+        "reaction runs one way"
+      ],
+      "kw_zh": [
+        "位點套疊，BbsI 在外",
+        "切完位點就消失",
+        "反應只能往前走"
+      ],
+      "a_en": "Because each level has to cut the level below without cutting itself. Our primers read outward as a spacer, a BbsI site setting the Level 0 overhang, a BsaI site setting the Level 1 position, then the gene-specific annealing region, so the sites are nested with BbsI outside. At Level 0 BbsI cuts outward and the fragment entering pSTK-0 keeps the BsaI site but loses the BbsI one. At Level 1 BsaI cuts and that site leaves with the trimmed ends. BsmBI then joins the cassette to the sensor and chromophore modules in pSTK-EXP2. Each step destroys the site it used, so the product cannot be re-cut.",
+      "a_zh": "因為每一層都要能切下一層，但不能切到自己。我們的 primer 從外到內是 spacer、一個設定 Level 0 突出端的 BbsI 位點、一個設定 Level 1 位置的 BsaI 位點，再接基因專一的 annealing 區，所以位點是套疊的，BbsI 在外面。Level 0 用 BbsI 往外切，進到 pSTK-0 的片段留下 BsaI 位點、失去 BbsI 位點。Level 1 換 BsaI 切，那個位點也隨著切掉的兩端離開。接著 BsmBI 在 pSTK-EXP2 裡把卡匣跟感光與發色團模組接起來。每一步都毀掉自己用過的位點，所以產物不會被再切。",
+      "trap_en": "Saying BbsI and BpiI are two different enzymes. Our Engineering text lists both at Level 0, but GAAGAC is one recognition site under two suppliers' names; the three that actually differ are BbsI, BsaI and BsmBI.",
+      "trap_zh": "把 BbsI 和 BpiI 當成兩種不同的酶。我們 Engineering 的文字 Level 0 兩個都列，但 GAAGAC 是同一個辨識序列、兩家廠商的名字；真正不同的三個是 BbsI、BsaI 和 BsmBI。",
+      "basis": "nested type IIS logic is the first thing a cloning examiner tests"
+    },
+    {
+      "q_en": "Your primer tails set four-base fusion sites: CTGA and GAGG at Level 0, and TATG, TGTC, ACAT, AGAG, ATGT at Level 1. What does a set like that have to satisfy, and what does it have to avoid?",
+      "q_zh": "你們的 primer 尾巴設定了四個鹼基的接合端：Level 0 是 CTGA 和 GAGG，Level 1 是 TATG、TGTC、ACAT、AGAG、ATGT。這樣一組序列必須滿足什麼條件，又必須避開什麼？",
+      "type": "reason",
+      "tier": "B",
+      "deep": 1,
+      "pages": [
+        "engineering#cloning",
+        "experiments#golden-gate-assembly"
+      ],
+      "seat": "wet1",
+      "backup": "wet2",
+      "kw_en": [
+        "unique and non-palindromic",
+        "none complementary to another",
+        "position decides the scar"
+      ],
+      "kw_zh": [
+        "唯一且非迴文",
+        "彼此不能互補",
+        "位置決定接痕"
+      ],
+      "a_en": "Every member has to be unique, non-palindromic, and not complementary to any other member. A palindromic overhang anneals to itself and closes the fragment into a circle; two junctions sharing an overhang let a part land in the wrong slot; and near-matches still ligate, because T4 ligase seals a mismatched four-base pair at a low rate, which is where wrong clones come from. We also stay off all-A or all-T, too weak to ligate reliably. The position is not free either: TATG carries the ATG itself, so the junction at the front of a coding sequence is the start codon and no extra residue is added to the protein.",
+      "a_zh": "每一個都要是唯一的、非迴文的，而且彼此不能互補。迴文的突出端會自己接自己，把片段環化；兩個不同接點共用同一個突出端，零件就會插錯位置；而且差一個鹼基還是會接起來，T4 ligase 對四鹼基的錯配有一定機率會封口，錯誤的 clone 就是從那裡來的。另外也要避開全 A 或全 T，太弱、接不穩。位置也不是隨便的：TATG 本身就含 ATG，所以 CDS 前端的接點就是起始密碼子，蛋白質不會多出胺基酸。",
+      "trap_en": "Reading ACAT and ATGT as a clash in the set. They are the two halves of one junction written from opposite strands, the forward primer on the top and the reverse on the bottom. The real failure mode is two different junctions sharing one overhang.",
+      "trap_zh": "把 ACAT 和 ATGT 當成這組裡的衝突。它們是同一個接點、從互補的兩條股寫出來的，forward primer 寫上股、reverse 寫下股。真正的失敗模式是兩個不同的接點共用同一個突出端。",
+      "basis": "fusion-site fidelity is where a four-base standard actually fails"
+    },
+    {
+      "q_en": "Your codon pipeline threw out any synonymous variant that introduced a BsaI, EcoRI, XbaI, SpeI, PstI, NotI or HindIII site, but you state it did not screen for BpiI or BsmBI. Those are the enzymes you assemble with at Level 0 and Level 2. What follows from that?",
+      "q_zh": "你們的密碼子流程會把任何帶入 BsaI、EcoRI、XbaI、SpeI、PstI、NotI 或 HindIII 位點的同義變體剔除，但你們自己寫說沒有篩 BpiI 和 BsmBI。那正好是你們 Level 0 和 Level 2 組裝用的酶。這會有什麼後果？",
+      "type": "design",
+      "tier": "A",
+      "deep": 1,
+      "pages": [
+        "engineering#cloning",
+        "protein-design/methodology#codon-optimisation"
+      ],
+      "seat": "wet1",
+      "backup": "wet2",
+      "kw_en": [
+        "internal site cuts insert",
+        "BpiI and BsmBI missed",
+        "window only, not insert"
+      ],
+      "kw_zh": [
+        "內部位點會切掉插入片段",
+        "漏掉兩個組裝用酶",
+        "只掃重編區，不是全長"
+      ],
+      "a_en": "A recoded cassette could have picked up a site for the very enzyme that assembles it. If a BpiI site sits inside the coding sequence, the Level 0 reaction cuts my own insert in two, with overhangs nobody designed, and what grows is empty vector or a shortened insert that can still look near the right size. We drew about fifty thousand synonymous variants per construct and kept thirty-three to forty-one thousand legal ones, so the screen was cheap and two enzymes were simply left off the list. The second limit we also state: the scan covered the recoded window plus eight flanking bases, not the whole insert. The fix is to rescan the eight ordered cassettes for all three.",
+      "a_zh": "重新編碼的卡匣有可能剛好帶進組裝它自己那支酶的位點。如果 CDS 裡面有一個 BpiI 位點，Level 0 的反應就會把我自己的插入片段切成兩段、帶著沒人設計過的突出端，長出來的是空載體或縮短的片段，而且尺寸看起來還可能差不多。我們每個構築抽了約五萬個同義變體、留下三萬三到四萬一千個合法的，所以這個篩選很便宜，只是名單上漏了兩支酶。第二個限制我們也寫了：掃描只涵蓋重編區加兩側各八個鹼基，不是整段插入片段。解法是把訂的八個卡匣對三支酶重新掃一次。",
+      "trap_en": "Saying domestication does not matter because the protein sequence is unchanged. An internal site destroys the part inside the assembly reaction, long before expression is relevant.",
+      "trap_zh": "說 domestication 不重要，因為蛋白質序列沒變。內部位點是在組裝反應裡就把零件毀掉了，根本還沒到表現那一步。",
+      "basis": "the team's own stated limit on its restriction-site scan"
+    },
+    {
+      "q_en": "On a Level 1 plate, how do you tell a correct assembly from an empty vector or a partial ligation, before you sequence anything?",
+      "q_zh": "在 Level 1 的盤子上，在還沒定序之前，你們怎麼分辨正確的組裝、空載體，和只接了一半的產物？",
+      "type": "design",
+      "tier": "A",
+      "deep": 1,
+      "pages": [
+        "engineering#cloning",
+        "experiments#colony-pcr"
+      ],
+      "seat": "wet1",
+      "backup": "wet2",
+      "kw_en": [
+        "sfGFP dropout",
+        "chloramphenicol then ampicillin",
+        "three negative band patterns"
+      ],
+      "kw_zh": [
+        "sfGFP dropout",
+        "先氯黴素再安比西林",
+        "三種算陰性的條帶"
+      ],
+      "a_en": "Three things, in that order. First the dropout: our vectors arrive as pSTK-0-sfGFP and pSTK-1A to 1D-sfGFP, and the insert replaces that sfGFP cassette, so a vector that was never cut still carries a reporter instead of our part. Second the marker, chloramphenicol at Level 0 against ampicillin at Level 1, so a carried-over entry plasmid cannot grow on the Level 1 plate. That is the one that broke on us, because pGEM-T Easy was ampicillin too, and the third cycle moved entry onto pSTK-0C to separate them. All sixteen Csn:LEA14 colonies then gave 811 bp. Third colony PCR, scoring three patterns negative: no band, empty-vector size, or any other size.",
+      "a_zh": "三件事，照這個順序。第一是 dropout：我們的載體拿到的時候是 pSTK-0-sfGFP 和 pSTK-1A 到 1D-sfGFP，插入片段會取代那段 sfGFP，所以沒被切開的載體身上還是報告基因，不是我們的零件。第二是抗性標記，Level 0 氯黴素對 Level 1 安比西林，帶過來的 entry plasmid 在 Level 1 的盤上長不起來。這一點我們真的踩到過，因為 pGEM-T Easy 也是安比西林，所以第三輪把進入步驟改到 pSTK-0C 把兩者分開，之後十六個 Csn:LEA14 菌落全都給出 811 bp。第三是菌落 PCR，三種算陰性：沒有條帶、空載體大小、或任何其他大小。",
+      "trap_en": "Claiming you screened colonies green against white by eye. The dropout is in the vector names, but every screen we report is a colony PCR on a gel; we have no record of scoring Level 1 colonies by colour.",
+      "trap_zh": "說你們是用肉眼看綠白菌落篩的。dropout 只是在載體名字裡，我們報告的每一次篩選都是菌落 PCR 跑膠；我們沒有用顏色篩 Level 1 菌落的記錄。",
+      "basis": "selection and dropout logic is what makes Golden Gate screenable"
+    },
+    {
+      "q_en": "Three consecutive Level 2 Golden Gate rounds returned nothing with no design change between them. Then you swept the insert-to-vector ratio to 1:5 and 1:7 and both worked. Why would a molar excess of insert rescue a reaction where every end is already defined?",
+      "q_zh": "你們連續三輪 Level 2 的 Golden Gate 都什麼都沒長，中間沒有改設計。後來把插入片段對載體的比例掃到 1:5 和 1:7，兩個都成功了。既然每一個末端都已經定好了，為什麼插入片段過量會救回這個反應？",
+      "type": "reason",
+      "tier": "A",
+      "deep": 1,
+      "pages": [
+        "engineering#cloning",
+        "experiments#golden-gate-assembly"
+      ],
+      "seat": "wet1",
+      "backup": "wet2",
+      "kw_en": [
+        "five pieces must meet",
+        "excess beats self-closure",
+        "cut-and-ligate cycling"
+      ],
+      "kw_zh": [
+        "四個片段要同時到位",
+        "過量贏過載體自封",
+        "切與接的溫度循環"
+      ],
+      "a_en": "Because defined ends fix which products are possible, not how often they form. A four-module Level 2 needs five pieces to meet in one complex, and that probability falls steeply with each extra partner, while the cut vector can always just close on itself. Raising insert concentration makes a productive collision more likely than self-closure, which is why 1:7 was carried forward and reused for the BsmBI assembly. The cycling does the rest: alternating a digest temperature with a cooler ligation step means a wrong join still carries its recognition site and gets re-cut, while a correct join has lost the site and is trapped, so the pool drifts into the one product the reaction cannot undo.",
+      "a_zh": "因為末端定好了只決定哪些產物可能發生，不決定它們發生的頻率。四模組的 Level 2 要五個片段在同一個複合體裡相遇，每多一個夥伴，這個機率就陡降，而切開的載體隨時可以自己封回去。把插入片段濃度拉高，就讓有效的碰撞比自封更有機會，這就是為什麼 1:7 被沿用，後來 BsmBI 的組裝也用它。剩下的靠溫度循環：在切的溫度和較低的接合溫度之間交替，接錯的產物身上還留著辨識位點、會被再切開，接對的已經失去位點、被鎖住，所以整池會漂向那個無法回頭的產物。",
+      "trap_en": "Saying more insert simply means more product. It changes the competition between a five-way productive assembly and vector self-closure; past some excess the extra insert only adds wrong-order products.",
+      "trap_zh": "說插入片段越多產物就越多。它改變的是五方正確組裝和載體自封之間的競爭；超過某個過量之後，多的插入片段只會增加順序錯誤的產物。",
+      "basis": "the one stoichiometry change that unblocked Level 2"
+    },
+    {
+      "q_en": "You have a colony PCR band at the expected size. Be precise with me: what has that excluded, and what has it not?",
+      "q_zh": "你拿到一條在預期大小的菌落 PCR 條帶。請精準一點：那條帶排除了什麼，又沒有排除什麼？",
+      "type": "validate",
+      "tier": "A",
+      "deep": 1,
+      "pages": [
+        "engineering#cloning",
+        "results#complete-systems",
+        "experiments#colony-pcr"
+      ],
+      "seat": "wet1",
+      "backup": "wet2",
+      "kw_en": [
+        "excludes empty and truncated",
+        "blind to point mutations",
+        "one module, not four"
+      ],
+      "kw_zh": [
+        "排除空載體和截短",
+        "看不到點突變",
+        "一個模組不代表四個"
+      ],
+      "a_en": "It excludes an empty vector, a grossly truncated insert and a mis-primed product, because all three run at a different length. Beyond that, very little. A gel at that resolution cannot see a point mutation, a small insertion or deletion, or a few bases lost at a junction, and our own learn step says colony PCR confirms only that an insert of about the right size is present. It also cannot tell me the colony is pure. And as we wrote after Level 2, one module being positive does not determine the state of the rest. That is why almost every construct in our table carries a named sequenced clone, and the two that do not are flagged as such.",
+      "a_zh": "它排除了空載體、嚴重截短的插入片段，和 mis-prime 的產物，因為這三種長度都不一樣。除此之外排除得很少。那個解析度的膠看不到點突變、小的插入或缺失，也看不到接點掉了幾個鹼基，我們自己的 learn 就寫著菌落 PCR 只能確認「大約正確大小」的片段存在。它也不能告訴我這個菌落是純的。而且像我們在 Level 2 之後寫的，一個模組是陽性並不決定其他模組的狀態。所以我們表上幾乎每一個構築都有具名、送過定序的 clone，而沒有的那兩個也標示出來了。",
+      "trap_en": "Saying a correct band plus a restriction digest is as good as sequencing. A digest answers the same length question another way; neither one reads a base.",
+      "trap_zh": "說條帶正確再加一個酶切就等於定序。酶切只是用另一種方式回答同一個長度問題，兩個都沒有讀到任何一個鹼基。",
+      "basis": "gels carry most of the project's cloning evidence"
+    },
+    {
+      "q_en": "For the Level 2 you have three junction PCRs on three clones and a double digest that gave 10,293 base pairs with EcoRI and 7,543 with EcoRI plus BtsI. What would end-to-end sequencing add that those two checks cannot give you?",
+      "q_zh": "你們的 Level 2 有三個 clone 的三個接點 PCR，加上雙酶切：EcoRI 給 10,293 bp、EcoRI 加 BtsI 給 7,543 bp。那麼全長定序能補上這兩種檢查給不了的什麼？",
+      "type": "validate",
+      "tier": "A",
+      "deep": 1,
+      "pages": [
+        "engineering#cloning",
+        "results#complete-systems",
+        "parts#collection"
+      ],
+      "seat": "wet1",
+      "backup": "wet2",
+      "kw_en": [
+        "order and length, not identity",
+        "nothing reads the 10 kb",
+        "sequencing cell still empty"
+      ],
+      "kw_zh": [
+        "只有順序和長度",
+        "沒有人讀那 10 kb",
+        "定序欄還是空的"
+      ],
+      "a_en": "Order and length, which is what those two give, are not identity. The junctions say the four modules are joined in the right order in three separate clones, and the digest says the plasmid is the right total size and cuts where a correct assembly predicts. Neither reads the ten kilobases between the junctions, and our page says exactly that. Sequencing would cover the coding sequences and the regulatory parts in their final context, catch a point mutation or small indel from any earlier step, and read the backbone. Our own build record's Level 2 sequencing cell is empty for both devices, so sending them is the fix.",
+      "a_zh": "順序和長度這兩件事不等於身分。接點說四個模組在三個獨立 clone 裡接的順序是對的，酶切說質體的總長度正確、而且切在正確組裝該切的地方。但兩者都沒有讀接點之間那十個千鹼基，我們頁面上就是這樣寫的。定序會把 CDS 和調控零件在最終位置上讀一遍，抓到前面任何一步產生的點突變或小插入缺失，也會讀到骨架。我們自己建構紀錄裡 Level 2 的定序欄，兩個裝置都是空的，所以解法就是把它們送去定序。",
+      "trap_en": "Treating the double digest as equivalent to sequencing because both numbers came out right. Two correct fragment sizes are two measurements of length; a compensating pair of errors inside a module would leave both unchanged.",
+      "trap_zh": "因為兩個數字都對，就把雙酶切當成等同定序。兩個正確的片段大小只是兩次長度量測；模組內部一對互相補償的錯誤，會讓這兩個數字都不變。",
+      "basis": "the project's strongest cloning evidence is also its most over-read"
+    },
+    {
+      "q_en": "Your Results construct table ticks a Sequenced column for both Level 2 devices, clone 2 and clone 1. Your Engineering page says no Level 2 construct has been sequenced end to end and the sequencing cell is empty for both. Which is it?",
+      "q_zh": "你們 Results 的構築表在兩個 Level 2 裝置的「已定序」欄都打了勾，clone 2 和 clone 1。但 Engineering 又說沒有任何 Level 2 構築做過全長定序，而且兩個裝置的定序欄都是空的。到底是哪一個？",
+      "type": "gap",
+      "tier": "A",
+      "deep": 1,
+      "pages": [
+        "results#complete-systems",
+        "engineering#cloning",
+        "parts#collection"
+      ],
+      "seat": "wet1",
+      "backup": "wet2",
+      "kw_en": [
+        "a read is not coverage",
+        "Engineering is strict",
+        "name the span read"
+      ],
+      "kw_zh": [
+        "有讀過不等於全長",
+        "Engineering 那句才嚴格",
+        "說清楚讀了哪一段"
+      ],
+      "a_en": "The strict statement is the right one, and the table is the one to fix. What the tick records is that a clone was named and sent; what Engineering states is that nothing reads the ten kilobases between the junctions, so no Level 2 device has end-to-end coverage. A partial read and a verified plasmid are not the same claim, and our Engineering build text makes it worse by saying assembly was followed by sequencing confirmation. Until we can name a span and a date, the honest line is junction-checked and digest-checked, not sequenced. I would rather you held us to that than to the tick.",
+      "a_zh": "嚴格的那句才是對的，要改的是那張表。打勾記錄的是有一個 clone 被命名、被送出去；Engineering 說的是沒有人讀接點之間那十個千鹼基，所以沒有任何 Level 2 裝置有全長覆蓋。部分讀序和「質體已驗證」不是同一個主張，而我們 Engineering 的 build 文字寫「組裝之後經定序確認」，讓情況更糟。在我們能講出讀了哪一段、哪一天之前，誠實的說法是接點檢查過、酶切檢查過，不是定序過。我寧願你用這句來要求我們，而不是那個勾。",
+      "trap_en": "Defending the tick because a clone number is attached, or guessing which region was read. Beware the count drift too: Biomanufacturing still says nine Level 1 modules, while the Results summary says fourteen constructs and the table it summarises carries fifteen rows.",
+      "trap_zh": "因為有附 clone 編號就替那個勾辯護，或是猜讀了哪一段。也要小心數字漂移：Biomanufacturing 還寫九個 Level 1 模組，Results 的總結說十四個構築，而它總結的那張表其實有十五列。",
+      "basis": "two pages on main disagree about Level 2 sequencing"
+    },
+    {
+      "q_en": "A Sanger trace comes back clean for two hundred bases and then every position shows two peaks. What do you conclude, and what do you do next?",
+      "q_zh": "一段 Sanger 的圖譜前兩百個鹼基很乾淨，之後每一個位置都出現雙峰。你的判斷是什麼，下一步會做什麼？",
+      "type": "boundary",
+      "tier": "B",
+      "deep": 1,
+      "pages": [
+        "engineering#cloning",
+        "experiments#colony-pcr"
+      ],
+      "seat": "wet1",
+      "backup": "wet2",
+      "kw_en": [
+        "two templates, not one mutation",
+        "indel slips reads apart",
+        "re-streak, read both strands"
+      ],
+      "kw_zh": [
+        "兩個模板，不是一個突變",
+        "插入缺失讓兩段錯開",
+        "重畫單菌落、讀兩股"
+      ],
+      "a_en": "Double peaks from one point onward means two templates, not one mutation. Either the colony was never pure, or the miniprep carries two plasmids, or one copy has an insertion or deletion so the two reads slip out of register from that base on. A single changed base shows as two peaks at one position only. I would re-streak to single colonies, miniprep from one and re-sequence, and read the reverse strand so each junction is covered twice. We have no mixed trace on record, but we do have the case that makes the point: the AmilCP gels gave fragments close to the expected size and sequencing showed they did not carry the construct at all.",
+      "a_zh": "從某一點開始連續雙峰，意思是有兩個模板，不是一個突變。可能是菌落本來就不純、可能 miniprep 裡有兩種質體，也可能其中一份有插入或缺失，所以兩段讀序從那個鹼基開始錯開。單一個鹼基改變只會在一個位置出現雙峰。我會重新畫單菌落、從其中一個做 miniprep 再送定序，而且讀反向股，讓每個接點被讀到兩次。我們沒有混合圖譜的記錄，但有一個同樣說明問題的案例：AmilCP 的膠給出接近預期大小的片段，定序卻顯示它們根本沒有帶那個構築。",
+      "trap_en": "Calling it a heterozygous point mutation. Bacteria carrying a multicopy plasmid give a mixed trace from mixed template, and a run of double peaks rather than a single one points at an indel or two plasmids.",
+      "trap_zh": "說那是異型合子的點突變。帶多拷貝質體的細菌出現混合圖譜是因為模板混了，而且連續雙峰而不是單一個雙峰，指向的是插入缺失或兩種質體。",
+      "basis": "reading a trace honestly is a skill a judge can test in one minute"
+    },
+    {
+      "q_en": "Your double digest would catch a Level 2 that lost a whole module. What kind of rearrangement would it still miss, and how would you go after that?",
+      "q_zh": "你們的雙酶切可以抓到整個模組掉掉的 Level 2。那還有哪一種重排它抓不到，你又要怎麼去找？",
+      "type": "reason",
+      "tier": "B",
+      "deep": 1,
+      "pages": [
+        "engineering#cloning",
+        "results#complete-systems"
+      ],
+      "seat": "wet1",
+      "backup": "wet2",
+      "kw_en": [
+        "junctions survive a duplication",
+        "digest reads length only",
+        "long-range PCR or long reads"
+      ],
+      "kw_zh": [
+        "重複之後接點還在",
+        "酶切只讀長度",
+        "長距離 PCR 或長讀長"
+      ],
+      "a_en": "It would miss anything that keeps the total length and the cut positions. A duplicated small part, a terminator or a ribosome binding site, moves the plasmid by a few hundred bases on ten kilobases, which a gel against a ten kilobase ladder will not resolve. A junction PCR misses a duplication outright, because a doubled module still has its junction and still gives the band. And a deletion inside a module between the two EcoRI sites changes neither fragment. What I would do is a long-range PCR spanning more than one module, the way we ran the CcaR-forward to Csn-reverse span at 1,424 base pairs, and then long-read sequencing of the whole plasmid.",
+      "a_zh": "它抓不到那些不改變總長度和切位的情況。一個小零件重複，比如終止子或 RBS，在十個千鹼基上只移動幾百個鹼基，用十千鹼基的 ladder 在膠上看不出來。接點 PCR 則完全抓不到重複，因為重複的模組接點還在、條帶照樣出現。而兩個 EcoRI 位點之間、模組內部的缺失，兩段片段都不會變。我會做的是跨一個模組以上的長距離 PCR，像我們跑的 CcaR forward 到 Csn reverse 那段 1,424 bp，然後對整個質體做長讀長定序。",
+      "trap_en": "Offering more junction PCRs. More junctions of the same kind add confidence about order and nothing about copy number; the readout has to span a length you can predict, or read the bases.",
+      "trap_zh": "回答說再多做幾個接點 PCR。同一種接點做再多，只增加對順序的信心，對拷貝數毫無幫助；判讀必須跨過一段你算得出長度的區域，或者直接讀鹼基。",
+      "basis": "repeated regulatory parts were the team's own stated recombination worry"
+    },
+    {
+      "q_en": "In your 116-hour run the culture plateaued near forty hours and grew again from about forty-seven. You explain that as the erythromycin degrading and cells losing the plasmid. How would you turn that explanation into a measurement?",
+      "q_zh": "你們那次 116 小時的運轉，培養在四十小時左右進入平台期，約四十七小時又開始長。你們的解釋是紅黴素降解、細胞開始失去質體。你要怎麼把這個解釋變成一個量測？",
+      "type": "boundary",
+      "tier": "A",
+      "deep": 1,
+      "pages": [
+        "engineering#bioreactor",
+        "engineering#cloning",
+        "results#growth-in-the-reactor"
+      ],
+      "seat": "wet1",
+      "backup": "wet2",
+      "kw_en": [
+        "plate with and without drug",
+        "digest plasmid from the end",
+        "replicon never recorded"
+      ],
+      "kw_zh": [
+        "加藥與不加藥各塗一盤",
+        "把末段的質體拿去酶切",
+        "複製起點從未記錄"
+      ],
+      "a_en": "By plating the same sample twice, with and without erythromycin, and taking the ratio at each timepoint. If the fraction of drug-resistant colonies falls as the second growth phase begins, that is segregational loss, and the explanation stands. If the fraction holds, something else is driving it. I would also recover plasmid from the last timepoint and digest it, because losing part of the plasmid is structural instability and reads differently. Our honest position is that this is a theory from one run, not a measurement, and Professor Chang raised plasmid stability independently in September. We also never recorded the replicon type or measured copy number, which is what decides which failure comes first.",
+      "a_zh": "把同一個樣本塗兩盤，一盤加紅黴素一盤不加，每個時間點取比值。如果抗藥菌落的比例在第二個生長期開始時下降，那就是分離型流失，這個解釋成立。如果比例不變，推動它的是別的東西。我也會把最後一個時間點的質體回收下來做酶切，因為質體掉了一段是結構型不穩定，讀起來不一樣。我們誠實的立場是：這是單一次運轉得到的理論，不是量測，而且 Chang 教授九月也獨立提出過質體穩定性的問題。我們也從來沒有記錄複製起點的類型、沒有量過拷貝數，而那正是決定哪一種失敗會先發生的東西。",
+      "trap_en": "Guessing a replicon type or a copy number out loud. Neither is on our wiki, and a number invented at the podium is worse than the gap; name the two instability modes and the test for each.",
+      "trap_zh": "當場猜複製起點的類型或拷貝數。兩個都不在我們的 wiki 上，在台上編一個數字比承認空缺更糟；講清楚兩種不穩定的模式和各自的檢查。",
+      "basis": "the project's one observed hint of plasmid loss is unmeasured"
+    },
+    {
+      "q_en": "WB800 has eight extracellular proteases deleted. What does that buy you for a secreted product, what does it cost, and how far do your own data take the comparison with 168?",
+      "q_zh": "WB800 剔除了八個胞外蛋白酶。這對一個分泌型產物買到了什麼、代價是什麼，而你們自己的數據把跟 168 的比較推進到哪裡？",
+      "type": "compare",
+      "tier": "A",
+      "deep": 1,
+      "pages": [
+        "engineering#cloning",
+        "results#electroporation",
+        "results#overview"
+      ],
+      "seat": "wet1",
+      "backup": "wet2",
+      "kw_en": [
+        "secreted protein lives outside",
+        "168 degraded its own product",
+        "no identical-conditions pair"
+      ],
+      "kw_zh": [
+        "分泌蛋白一直在細胞外",
+        "168 分解自己的產物",
+        "沒有同條件的對照"
+      ],
+      "a_en": "They buy survival in the supernatant. A secreted, His-tagged enzyme spends its working life outside the cell wall, exactly where wild-type Bacillus pours proteases, and strain 168 made barely detectable ACC deaminase, probably by degrading its own product. WB800, from Professor Huang, has NprE, AprE, Epr, Bpr, Mpr, NprB, Vpr and WprA deleted, which also makes the protein easier to see on a blot. In practice it is the better host for us: our sheet records countable colonies for WB800 across 2.1 to 2.5 kilovolts and only a handful for 168. The cost is a weaker, more fastidious host, and the comparison is not clean, because the two were never run under identical conditions.",
+      "a_zh": "它買到的是在上清液裡活下來。一個分泌型、帶 His 標籤的酵素整個工作期間都在細胞壁外面，正好是野生型 Bacillus 倒蛋白酶的地方，而 168 分泌的 ACC deaminase 幾乎測不到，很可能就是自己把產物分解掉了。WB800 是 Huang 教授給的，剔除了 NprE、AprE、Epr、Bpr、Mpr、NprB、Vpr 和 WprA，也讓蛋白在墨點上更容易看到。實務上它對我們是更好的宿主：我們的流程表記錄 WB800 在 2.1 到 2.5 千伏都有可數的菌落，168 只有零星幾個。代價是宿主比較弱、比較挑，而這個比較並不乾淨，因為兩株從來沒有在相同條件下跑過。",
+      "trap_en": "Comparing the raw colony counts across strains. The high WB800 plates were spread at a 1:2,000,000 dilution and the 168 plates undiluted, and our own figure note says counts are comparable within a group and not across the fill. Our summary also says WB800 and 168 remain untested under identical conditions.",
+      "trap_zh": "把兩株的菌落數直接拿來比。WB800 高密度的盤是 1:2,000,000 稀釋塗的，168 的盤沒有稀釋，而我們自己的圖註就寫著菌落數只能在同一組內比較、不能跨稀釋比較。我們的總結也寫著 WB800 和 168 在相同條件下仍未測試。",
+      "basis": "the production strain arrived late and was never benchmarked"
+    },
+    {
+      "q_en": "Your own learn step says electroporating a Level 2 over ten kilobases was extremely difficult and that you should look at natural transformation instead. Take that seriously for me: what would that route actually require, and would you also move the circuit into the chromosome?",
+      "q_zh": "你們自己的 learn 寫著，把超過十個千鹼基的 Level 2 電穿孔進去非常困難，未來應該考慮自然轉形。請認真談一下：那條路實際上需要什麼，你們會不會也把電路放進染色體？",
+      "type": "reason",
+      "tier": "A",
+      "deep": 1,
+      "pages": [
+        "engineering#cloning",
+        "results#electroporation",
+        "biomanufacturing"
+      ],
+      "seat": "wet1",
+      "backup": "wet2",
+      "kw_en": [
+        "competence needs its own window",
+        "one copy cannot be lost",
+        "lower dose, slower edits"
+      ],
+      "kw_zh": [
+        "competence 有自己的時間窗",
+        "單一拷貝不會掉",
+        "劑量低、改得慢"
+      ],
+      "a_en": "It would require a competence medium and hitting a narrow window late in growth, which is a different protocol from the one we optimised, and we never ran it, so I am reasoning rather than reporting. The attraction is real: a pulse strong enough to push a ten kilobase plasmid through the wall is also what killed our cells, which is why our best voltages dropped to 1.1 kilovolts for the small BoPep4 construct. Integration goes further. A single chromosomal copy cannot be lost by segregation and needs no erythromycin, which is what a week unattended in a field needs. What I lose is gene dose and speed, and our circuit was still being rebuilt in September.",
+      "a_zh": "那需要 competence 培養液，還要抓到生長後期很窄的時間窗，是跟我們優化過的方法完全不同的流程，而我們從來沒跑過，所以我是在推理，不是在報告。但吸引力是真的：強到能把十千鹼基質體推過細胞壁的電擊，也正是把我們細胞打死的東西，所以小的 BoPep4 構築最佳電壓掉到 1.1 千伏。整合進染色體更進一步。單一染色體拷貝不會因分離而掉，也不需要紅黴素，而那正是在田裡無人照顧一個禮拜需要的。我失去的是基因劑量和速度，而我們的電路到九月還在重建。",
+      "trap_en": "Saying natural transformation is simply easier. It needs its own medium and timing, it is not obviously better for a replicating ten kilobase plasmid, and nothing on our wiki tests it.",
+      "trap_zh": "說自然轉形就是比較簡單。它需要自己的培養液和時機，對一個十千鹼基的複製型質體也不見得更好，而且我們 wiki 上沒有任何測試。",
+      "basis": "the team names the alternative but never tries it"
+    },
+    {
+      "q_en": "You check every construct with SignalP before ordering it. What are the two things that check is actually for, and what does cleavage leave you with at the mature N-terminus?",
+      "q_zh": "你們每個構築在下訂之前都會用 SignalP 檢查。那個檢查實際上是為了兩件什麼事，而切割之後成熟蛋白的 N 端剩下什麼？",
+      "type": "design",
+      "tier": "A",
+      "deep": 1,
+      "pages": [
+        "protein-design/methodology#codon-optimisation",
+        "results#protectant-release",
+        "engineering#cloning"
+      ],
+      "seat": "wet2",
+      "backup": "wet1",
+      "kw_en": [
+        "cleaved where intended",
+        "no cryptic site inside cargo",
+        "mature end starts at +1"
+      ],
+      "kw_zh": [
+        "切在該切的地方",
+        "貨物裡沒有隱藏切位",
+        "成熟端從 +1 開始"
+      ],
+      "a_en": "Two things. First, that each signal peptide and mature junction is cleaved where we intended, so the released protein has the N-terminus we designed rather than a truncated or extended one. That matters because the mature N-terminal residues carry charge rules affecting secretion efficiency, and one of our substitutions sits in that region. Second, that no cleavage site is cryptically predicted inside the mature sequence, which would cut the protectant itself; a construct that passes structural triage and fails this check is not orderable. After cleavage the ninety-three base SamyQ signal is gone and the protein begins at the plus-one residue. When we made SamyQ codons two to thirty-one editable, we verified the cleavage site unchanged.",
+      "a_zh": "兩件事。第一，每一個訊號肽和成熟序列的接點都切在我們預期的位置，讓釋放出來的蛋白有我們設計的 N 端，而不是被截短或延長的。這很重要，因為成熟端前幾個殘基帶有影響分泌效率的電荷規則，而我們其中一個取代就在那個區域。第二，成熟序列裡面沒有被預測出隱藏的切位，否則會把保護蛋白本身切斷；一個通過結構篩選卻沒過這個檢查的構築，是不能下訂的。切完之後九十三個鹼基的 SamyQ 訊號就不在了，蛋白從 +1 殘基開始。我們把 SamyQ 第 2 到 31 個密碼子開放可改時，有驗證切位沒有變。",
+      "trap_en": "Claiming Csn and SamyQ were compared head to head. Both are in the collection, but the only fractionation evidence is the two August blot on a Csn ACC deaminase construct, bands in the supernatant and nothing in either pellet, and no CSN construct was ever assayed beside the optimised one.",
+      "trap_zh": "說 Csn 和 SamyQ 有正面比較過。兩個都在零件集裡，但唯一的分部證據是 8 月 2 日 Csn-ACC deaminase 構築的墨點，上清有條帶、兩個沉澱都沒有，而且從來沒有把 CSN 構築和優化版放在一起檢測。",
+      "basis": "the secretion tag is the one part the whole reactor design assumes works"
+    },
+    {
+      "q_en": "Asn23's free carboxylate is BoPep4's anchor, and you moved the His tag to the N-terminus for constructs ordered after sixteen August. Yet your variant panel is written as carrying a C-terminal tag. Where does that leave the molecule you actually built?",
+      "q_zh": "Asn23 的游離羧基是 BoPep4 的錨點，而你們 8 月 16 日之後下訂的構築都把 His 標籤移到 N 端。可是你們的變體組又寫成帶 C 端標籤。那你們實際做出來的分子算什麼？",
+      "type": "gap",
+      "tier": "A",
+      "deep": 1,
+      "pages": [
+        "protein-design/methodology",
+        "engineering#cloning",
+        "parts#collection"
+      ],
+      "seat": "wet2",
+      "backup": "wet1",
+      "kw_en": [
+        "five-contact clamp on Asn23",
+        "tag occupies the carboxylate",
+        "our records disagree"
+      ],
+      "kw_zh": [
+        "Asn23 上的五點夾持",
+        "標籤佔住羧基",
+        "我們的紀錄不一致"
+      ],
+      "a_en": "Two things. First, that each signal peptide and mature junction is cleaved where we intended, so the released protein has the N-terminus we designed rather than a truncated or extended one. That matters because the mature N-terminal residues carry charge rules affecting secretion efficiency, and one of our substitutions sits in that region. Second, that no cleavage site is cryptically predicted inside the mature sequence, which would cut the protectant itself; a construct that passes structural triage and fails this check is not orderable. After cleavage the ninety-three base SamyQ signal is gone and the protein begins at plus one. When we opened SamyQ codons two to thirty-one, we verified the cleavage site unchanged.",
+      "a_zh": "答案是還沒定案，而我們自己也這樣寫。Asn23 是被五個接觸夾住的，不是一個鹽橋，而整個界面最短的接觸是它的末端氧對 Arg487 的 2.40 埃。在那裡接上六個組胺酸，那個氧就不再是游離羧基，錨點就沒了，這就是 8 月 16 日之後標籤移到 N 端的原因。但我們自己的紀錄在設計文字裡寫 C 端、在構築表裡寫 N 端，primer 組兩種方向都有。拉力很明顯：anti-His 墨點和 ELISA 是我們唯一的定量判讀，所以讓胜肽看得見的那個標籤，正好是讓它失效的那個。",
+      "trap_en": "Naming Arg491 as a second anchor. Our own PDBePISA run found it makes no hydrogen bond and no salt bridge at all, buries twelve square angstroms and nothing more, so we stopped scoring models against it.",
+      "trap_zh": "把 Arg491 說成第二個錨點。我們自己跑的 PDBePISA 顯示它完全沒有氫鍵也沒有鹽橋，只埋了十二平方埃，所以我們不再用它來評分模型。",
+      "basis": "the tag that makes the peptide measurable is the tag that kills it"
+    },
+    {
+      "q_en": "Set the biology aside. Your assembly sits on the SubtiToolKit and on eleven earlier Registry parts. What in your cloning work is genuinely new, and what did you simply inherit?",
+      "q_zh": "先把生物學放一邊。你們的組裝建立在 SubtiToolKit 和十一個前人的 Registry 零件上。在你們的選殖工作裡，哪些是真正新的，哪些只是繼承來的？",
+      "type": "history",
+      "tier": "A",
+      "deep": 1,
+      "pages": [
+        "parts#built-on",
+        "parts#collection",
+        "engineering#cloning"
+      ],
+      "seat": "wet1",
+      "backup": "wet2",
+      "kw_en": [
+        "kit and syntax inherited",
+        "thirty-one registered, three draft",
+        "fusions and devices are ours"
+      ],
+      "kw_zh": [
+        "套件和語法是繼承的",
+        "三十一個註冊、三個草稿",
+        "融合與裝置是我們的"
+      ],
+      "a_en": "The standard is inherited and the cargo is ours. The SubtiToolKit, its four Level 1 destination vectors, the shuttle vectors and the four-base syntax all came from outside, and a professor connected to the original paper handed us the kit, which we record as luck rather than planning. The switch is Castillo-Hair's CcaS-CcaR, and we name eleven Registry parts we build on, including Pveg, PliaG, ccaSm3*, CcaR, ho1-pcyA and the ninety-three base SamyQ. What is new is the thirty-one entries we registered this year with three more in draft: the PcpcG2-veg hybrid promoter, the eight secretion fusions, the recoded cassettes, and the two Level 2 devices.",
+      "a_zh": "標準是繼承的，貨物是我們的。SubtiToolKit、它的四個 Level 1 目標載體、穿梭載體，還有四鹼基的語法，全部來自外面，而且是一位跟原始論文有關係的教授把套件給我們的，我們把那件事記成運氣而不是規劃。開關是 Castillo-Hair 的 CcaS-CcaR，而我們列出十一個建立在上面的 Registry 零件，包含 Pveg、PliaG、ccaSm3*、CcaR、ho1-pcyA 和九十三個鹼基的 SamyQ。新的是我們今年註冊的三十一個條目加三個草稿：PcpcG2-veg 這個混合啟動子、八個分泌融合、重新編碼的卡匣，以及兩個 Level 2 裝置。",
+      "trap_en": "Claiming the Golden Gate hierarchy as a contribution. The levels, the enzymes and the overhang standard are the kit's; the contribution is the parts put into it, and the failure record of getting them there.",
+      "trap_zh": "把 Golden Gate 的層級架構說成是自己的貢獻。層級、酶和突出端標準都是套件的；貢獻是放進去的零件，以及把它們放進去那段失敗的記錄。",
+      "basis": "a judge will ask what is yours and what came in the box"
+    }
+  ]
+}

@@ -243,13 +243,14 @@
   },
   {
    "id": "wetlab-f25",
-   "label_en": "ELISA: three protectants",
-   "label_zh": "ELISA：三種保護蛋白",
-   "value": "ACCD about 16 µg/mL, LEA14 and BoPep4 about 6",
-   "detail_en": "Key-results headline: ACCD about three times the other two. The wild-type Csn constructs in Table 2 give 12.1 to 13.4 vs 6.1 to 6.3 µg/mL (about twofold); the reactor gave 10.7 vs 5.8 vs 6.2.",
-   "detail_zh": "重點結果的說法：ACCD 約為另外兩者的三倍。Table 2 中野生型 Csn 構築為 12.1 至 13.4 對 6.1 至 6.3 µg/mL（約兩倍）；反應器為 10.7、5.8、6.2。",
-   "src": "results#Protein expression, ELISA: production of ACCD, LEA and BoPep4; results#Protectant function",
-   "confidence": "conflict"
+   "label_en": "His-tag ELISA, the three protectants",
+   "label_zh": "His-tag ELISA：三種保護蛋白",
+   "value": "LEA14 about 5 µg/mL inside the curve; every ACCD well extrapolated",
+   "detail_en": "Measurement states it plainly: the four ACCD wells all read below 20% B/B0, off the bottom of the standards, so 13.5 to 19.1 µg/mL is an extrapolation and should be said as \"higher than LEA14 and BoPep4\", not as a figure. Do not quote a single ACCD number from this assay.",
+   "detail_zh": "Measurement 頁講得很清楚：四個 ACCD 樣品孔都低於 20% B/B0，掉到標準曲線下緣之外，所以 13.5 至 19.1 µg/mL 是外插值，只能說「比 LEA14 和 BoPep4 高」，不能當成一個數字。不要從這個檢測引用單一的 ACCD 濃度。",
+   "src": "measurement#his-tag-elisa",
+   "confidence": "stated",
+   "regrounded": "2026-10-25"
   },
   {
    "id": "wetlab-f26",
@@ -283,23 +284,25 @@
   },
   {
    "id": "wetlab-f29",
-   "label_en": "Yield in the reactor shell",
-   "label_zh": "反應器殼側產量",
-   "value": "2.5 to 6.5 µg/mL, peak at 12 h",
-   "detail_en": "Nine shell-side samples to 72 h (WB800, AcdS 2.1): 4.80, 3.75, 6.52, 5.99, 3.35, 5.75, 2.50, 3.01, 2.61 µg/mL. Plasmid-free WB800 reads 1.3. The team calls overall yield low, not at optimal physiological levels.",
-   "detail_zh": "九個殼側樣本到 72 小時（WB800、AcdS 2.1）：4.80、3.75、6.52、5.99、3.35、5.75、2.50、3.01、2.61 µg/mL。不含質體的 WB800 為 1.3。團隊自評整體產量偏低，未達理想生理濃度。",
-   "src": "engineering#Bioreactor cycle 8; results#Product in the permeate",
-   "confidence": "stated"
+   "label_en": "What the reactor holds",
+   "label_zh": "反應器裡有多少",
+   "value": "3.4 to 6.5 µg/mL, from the first hour, with no rise over time",
+   "detail_en": "Anti-His ELISA against a fitted standard curve, both October runs, to 30 and 41 hours. The run whose pH was corrected automatically and the one corrected by hand came out indistinguishable, averaging 5.0 and 5.1 µg/mL. Output does not climb over a run, and raising it is named as the next job.",
+   "detail_zh": "以擬合標準曲線讀的 anti-His ELISA，涵蓋十月兩次運轉，分別到 30 與 41 小時。pH 自動校正的那一次和手動校正的那一次結果無法區分，平均為 5.0 與 5.1 µg/mL。產量在一次運轉中不會往上爬，團隊把提高產量列為下一步。",
+   "src": "results#secreted-yield; development#quantify-what-the-reactor-makes",
+   "confidence": "stated",
+   "regrounded": "2026-10-25"
   },
   {
    "id": "wetlab-f30",
-   "label_en": "Protein vs activity timing",
-   "label_zh": "蛋白量與活性的時間差",
-   "value": "ELISA peak 12 h; DNPH peak 18 h",
-   "detail_en": "Activity reaches about 30 nmol α-KB mL-1 h-1 at 18 h; specific activity 6.3 U/mg at 18 h and 5 to 8.4 U/mg after. Working explanation: ACCD needs time to form a multimer and bind PLP outside the cell; not measured.",
-   "detail_zh": "活性在 18 小時達約 30 nmol α-KB mL-1 h-1；比活性 18 小時為 6.3 U/mg，之後在 5 至 8.4 U/mg。目前的解釋：ACCD 需要時間在細胞外組成多聚體並結合 PLP；尚未量測。",
-   "src": "results#Product in the permeate; engineering#Bioreactor cycle 8 details",
-   "confidence": "stated"
+   "label_en": "Activity: two numbers, fourteenfold apart",
+   "label_zh": "活性：兩個數字差十四倍",
+   "value": "0.52 mU/mL over 12 h vs 7.25 mU/mL over 30 min",
+   "detail_en": "The DNPH series run over twelve-hour reactions works out at 0.52 mU/mL at its peak; the 7 and 8 October permeate assay read 7.25 mU/mL over thirty minutes. Measurement gives the likely reason — substrate depletes and the enzyme loses activity, so a long reaction averages down — and says that until the same sample is read both ways, neither number is a rate the project can quote. There is no U/mg figure on the wiki.",
+   "detail_zh": "以十二小時反應跑的 DNPH 系列，高峰換算是 0.52 mU/mL；10 月 7、8 日的透過液檢測以三十分鐘反應讀到 7.25 mU/mL。Measurement 給了可能的原因——受質耗盡、酵素失活，長反應會被平均掉——並說在同一個樣本用兩種方式讀過之前，這兩個數字都不能當成速率引用。wiki 上沒有任何 U/mg 的數字。",
+   "src": "measurement#dnph-activity; development#the-enzyme-turns-its-substrate-over",
+   "confidence": "conflict",
+   "regrounded": "2026-10-25"
   },
   {
    "id": "wetlab-f31",
@@ -1857,62 +1860,6 @@
    "basis": "like standard 'how did one subsystem feed back to another'"
   },
   {
-   "q_en": "Your Parts page says seven Level 1 parts are sequence-confirmed; another page says nine. Which is right?",
-   "q_zh": "Parts 頁面說七個 Level 1 零件已定序確認，另一頁說九個。哪個才對？",
-   "type": "gap",
-   "tier": "A",
-   "pages": [
-    "parts",
-    "biomanufacturing",
-    "development",
-    "engineering"
-   ],
-   "seat": "wet1",
-   "backup": "wet2",
-   "kw_en": [
-    "pages disagree",
-    "Level 2 not sequenced",
-    "show the gels"
-   ],
-   "kw_zh": [
-    "頁面互相不一致",
-    "Level 2 沒有定序",
-    "拿出膠圖"
-   ],
-   "a_en": "I would not defend one number. Engineering is the most detailed: Level 0 and Level 1 clones were checked by colony PCR and sequencing, and no Level 2 construct is sequenced end to end. Parts says seven, Biomanufacturing says nine, and Development says Level 2 sequencing had not yet returned. Those pages were written at different times. I can show the gels and say exactly what is and is not sequenced.",
-   "a_zh": "我不會硬護某一個數字。Engineering 最詳細：Level 0 和 Level 1 選殖株經菌落 PCR 與定序檢查，沒有任何 Level 2 構築經過全長定序。Parts 說七個，Biomanufacturing 說九個，Development 說 Level 2 定序尚未回來。這些頁面是在不同時間寫的。我可以拿出膠圖，並明確說哪些有定序、哪些沒有。",
-   "trap_en": "Picking a number to look consistent, or saying everything was sequenced.",
-   "trap_zh": "為了看起來一致而挑一個數字，或說全部都定序過。",
-   "basis": "wiki cross-page conflict"
-  },
-  {
-   "q_en": "Your Results page says green light switches ACC deaminase on. Do your data show that?",
-   "q_zh": "Results 說綠光能打開 ACC 去胺酶。你們的數據真的顯示這點嗎？",
-   "type": "gap",
-   "tier": "A",
-   "pages": [
-    "results",
-    "development"
-   ],
-   "seat": "wet2",
-   "backup": "wet1",
-   "kw_en": [
-    "green sometimes higher",
-    "ELISA flat",
-    "unconfirmed"
-   ],
-   "kw_zh": [
-    "綠光有時較高",
-    "ELISA 持平",
-    "尚未確認"
-   ],
-   "a_en": "Only partly. At 13 hours DNPH activity was about 10 under green against 0.7 under red, but at 16 hours it flipped, 1 against 3.7. ELISA protein was flat, 12 to 13 micrograms in all four conditions. Our Development page says light-dependent regulation is unconfirmed. Possible causes are light spilling between wells and red LEDs at 640 nanometres instead of about 672, but we have not tested either. We need biological replicates and loading controls.",
-   "a_zh": "只有部分。13 小時 DNPH 活性綠光約 10、紅光 0.7，但 16 小時反過來，1 對 3.7。ELISA 蛋白持平，四個條件都是 12 至 13 微克。Development 頁面也寫光控調節尚未確認。可能原因是孔與孔之間漏光，以及紅光 LED 是 640 nm 而不是約 672 nm，但這兩點都沒有測試。我們需要生物重複與上樣量對照。",
-   "trap_en": "Repeating the headline 'green switches it on' without the 16-hour reversal.",
-   "trap_zh": "只重複標題「綠光打開它」，不提 16 小時的反轉。",
-   "basis": "wiki conflict: Results headline vs Development"
-  },
-  {
    "q_en": "Is your switch leaky? What does it do in the dark or under red light?",
    "q_zh": "你們的開關會漏嗎？在黑暗或紅光下會怎樣？",
    "type": "gap",
@@ -1967,63 +1914,8 @@
    "basis": "like Munich 2025: 'is the difference significant'"
   },
   {
-   "q_en": "Your Results page says the enzyme stays active in the shell for 72 hours. What do the activity data cover?",
-   "q_zh": "Results 說酵素在殼側 72 小時都有活性。活性數據涵蓋到哪裡？",
-   "type": "gap",
-   "tier": "A",
-   "pages": [
-    "results",
-    "development",
-    "engineering"
-   ],
-   "seat": "wet2",
-   "backup": "hw",
-   "kw_en": [
-    "ELISA to 72 h",
-    "DNPH page says 36 h",
-    "chart vs numbers"
-   ],
-   "kw_zh": [
-    "ELISA 到 72 小時",
-    "DNPH 頁面寫 36 小時",
-    "圖與數字不一致"
-   ],
-   "a_en": "The protein part is solid: ELISA read the shell side at nine points to 72 hours, always above the 1.3 control, peaking at 12 hours. For activity, our pages differ. Results says activity holds to 72 hours; Development says DNPH stopped at 36; Engineering says the 48 and 72 hour points are on our chart but not in the rate numbers. Every point is a single well. I would say activity is shown to 36 hours with confidence.",
-   "a_zh": "蛋白部分很穩：ELISA 在殼側取九個時間點到 72 小時，都高於 1.3 的對照，高峰在 12 小時。活性部分我們各頁說法不同。Results 說活性維持到 72 小時；Development 說 DNPH 只做到 36 小時；Engineering 說 48 和 72 小時的點在圖上，但不在速率數字裡。每個點都是單一孔。我會說有把握的是活性到 36 小時。",
-   "trap_en": "Repeating '72 hours active' as one clean fact.",
-   "trap_zh": "把「72 小時有活性」當成一個乾淨的事實重複。",
-   "basis": "wiki cross-page conflict"
-  },
-  {
-   "q_en": "You tried two reporter proteins. What happened and what did you learn?",
-   "q_zh": "你們試了兩個報告蛋白。結果如何？學到了什麼？",
-   "type": "gap",
-   "tier": "B",
-   "pages": [
-    "engineering",
-    "results"
-   ],
-   "seat": "wet1",
-   "backup": "wet2",
-   "kw_en": [
-    "AmilCP colourless",
-    "GanA never obtained",
-    "test protectants directly"
-   ],
-   "kw_zh": [
-    "AmilCP 無顏色",
-    "GanA 始終做不出",
-    "直接測保護蛋白"
-   ],
-   "a_en": "Both failed. AmilCP constructs were sequence-verified but cells stayed colourless, with absorbance at 588 nanometres 0.082 against 0.081. We think it folds too fast for the Sec pathway, but did not test that. GanA never gave a sequence-verified clone: 24 colonies, no band at the right size. A seven-part reaction cost more time than it saved, so we tested the protectants directly by Western blot and ELISA.",
-   "a_zh": "兩個都失敗了。AmilCP 構築經定序正確但菌體沒有顏色，588 nm 吸光度 0.082 對 0.081。我們認為它折疊太快，Sec 路徑運不出去，但沒有驗證。GanA 始終沒有得到定序正確的選殖株：24 個菌落，沒有大小正確的條帶。七個零件的反應花的時間比省下的多，所以我們改用西方墨點與 ELISA 直接測保護蛋白。",
-   "trap_en": "Hiding the failures or blaming 'bad luck'.",
-   "trap_zh": "隱藏失敗，或歸咎於運氣不好。",
-   "basis": "like standard 'what failed and what did you learn'"
-  },
-  {
-   "q_en": "Your ACC deaminase should be about 41 kDa. Why do some of your blots show bands near 100?",
-   "q_zh": "你們的 ACC 去胺酶應該約 41 kDa。為什麼有些墨點的條帶接近 100？",
+   "q_en": "Your construct predicts an ACC deaminase of about 35 kDa. Why do some of your light-plate blots show a band just under 100?",
+   "q_zh": "你們的構築預測 ACC 去胺酶約 35 kDa。為什麼有些光照板的 Western blot 出現接近 100 kDa 的帶？",
    "type": "gap",
    "tier": "B",
    "pages": [
@@ -2046,7 +1938,8 @@
    "a_zh": "好問題。反應器墨點的條帶接近 42 kDa，符合預期大小。光盤墨點的條帶在 100 kDa 下方，或 75 至 100 之間。我們也看到 Csn 構築跑得比 SamyQ 構築低。我們懷疑是寡聚體或聚集體，因為這個酵素會形成它們，但我們無法量化聚集，所以沒有驗證。較大的 SamyQ 形式在 DNPH 中仍有活性。",
    "trap_en": "Saying the band is 'the right protein' without addressing the size mismatch.",
    "trap_zh": "不處理大小不符，就說那條帶「是正確的蛋白」。",
-   "basis": "like Munich 2025: 'why is the band at the wrong size'"
+   "basis": "like Munich 2025: 'why is the band at the wrong size'",
+   "regrounded": "2026-10-25"
   },
   {
    "q_en": "What is the next step for protein yield?",

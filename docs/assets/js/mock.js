@@ -15,6 +15,8 @@
     { id: 'a',    en: 'A-tier only',  zh: '只練 A 級', note_en: 'the six domains the panel will push on', note_zh: '評審會追問的六個領域' },
     { id: 'sess', en: 'Full session', zh: '完整一場',  note_en: '14 questions, 20 minutes, mixed like the real thing', note_zh: '14 題、20 分鐘，比例接近真實' },
     { id: 'hard', en: 'Weak points',  zh: '弱點題',    note_en: 'only honesty and evidence probes', note_zh: '只出誠實與證據類' },
+    { id: 'deep', en: 'Deep end',     zh: '深水區',    note_en: 'graduate-level only, no warm-ups', note_zh: '只出研究生等級，沒有暖身題' },
+    { id: 'kyle', en: "Adviser's set", zh: '顧問出題',  note_en: 'the questions Kyle Peng wrote for you', note_zh: 'Kyle Peng 親自出的題' },
     { id: 'shaky',en: 'My shaky list',zh: '我的不熟清單', note_en: 'what you marked shaky', note_zh: '你標成不熟的題' }
   ];
 
@@ -34,10 +36,17 @@
     backup: { en: 'backup', zh: '備援' }
   };
 
+  var urlMode = (location.search.match(/[?&]mode=([a-z]+)/) || [])[1];
+  if (urlMode && !/^(all|a|sess|hard|deep|kyle|shaky)$/.test(urlMode)) urlMode = null;
+  var urlType = (location.search.match(/[?&]type=([a-z]+)/) || [])[1] || 'all';
+  if (!/^(all|fact|design|validate|compare|boundary|integrate|gap|impact|reason|history)$/.test(urlType)) urlType = 'all';
+  var urlDom = (location.search.match(/[?&]dom=([a-z]+)/) || [])[1] || 'all';
+  if (!/^(all|measurement|hardware|ihp|biomanufacturing|entrepreneurship|plant|wetlab|drylab)$/.test(urlDom)) urlDom = 'all';
+
   var state = {
-    mode: S.load('mode', 'a'),
-    dom: 'all',
-    type: 'all',
+    mode: urlMode || S.load('mode', 'a'),
+    dom: urlDom,
+    type: urlType,
     deck: [],
     i: -1,
     shown: false,
@@ -109,6 +118,8 @@
       if (state.type !== 'all' && q.type !== state.type) continue;
       if (state.mode === 'a' && q.tier !== 'A') continue;
       if (state.mode === 'hard' && q.type !== 'gap' && q.type !== 'validate') continue;
+      if (state.mode === 'deep' && !q.deep) continue;
+      if (state.mode === 'kyle' && !q.author) continue;
       if (state.mode === 'shaky' && state.shaky.indexOf(q.id) < 0) continue;
       pool.push(q);
     }
@@ -187,7 +198,10 @@
     document.getElementById('who').innerHTML =
       '<span>' + S.esc(S.p({ en: JUDGES[ji].en, zh: JUDGES[ji].zh }).replace(/&amp;/g, '&')) + '</span>' +
       '<span class="pill ' + (q.tier === 'A' ? 'pill-a' : 'pill-b') + '">' + q.tier + '</span>' +
-      '<span class="pill">' + S.esc(typeName(q.type)) + '</span>';
+      '<span class="pill">' + S.esc(typeName(q.type)) + '</span>' +
+      (q.deep ? '<span class="pill pill-deep">' + (S.lang === 'zh' ? '深水區' : 'Deep end') + '</span>' : '') +
+      (q.author ? '<span class="pill pill-author">' + S.esc(S.lang === 'zh' && q.author_zh ? q.author_zh : q.author) +
+        (S.lang === 'zh' ? '' : ' asks') + '</span>' : '');
     document.getElementById('qq').textContent = S.t(q, 'q');
 
     var m = '<span class="seat-badge"><span class="n">' + seatNum(q.seat) + '</span>' +

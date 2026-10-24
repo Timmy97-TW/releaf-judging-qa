@@ -73,13 +73,14 @@
   },
   {
    "id": "biomanufacturing-f8",
-   "label_en": "Product in the permeate",
-   "label_zh": "透過液中的產物",
-   "value": "ACCD above 2 µg/mL for 72 h",
-   "detail_en": "In cycle 4 shell ELISA peaked near 6.5 µg/mL at 12 h and settled at 2.5 to 3 µg/mL from 36 h; activity (DNPH) was near zero to 12 h and rose from 18 h.",
-   "detail_zh": "第 4 輪殼側 ELISA 在 12 小時達高峰約 6.5 µg/mL，36 小時後穩定在 2.5 至 3 µg/mL；DNPH 活性到 12 小時都接近零，18 小時起上升。",
-   "src": "results#Product in the permeate",
-   "confidence": "stated"
+   "label_en": "What comes out of the reactor",
+   "label_zh": "反應器產出的東西",
+   "value": "3.4 to 6.5 µg/mL ACC deaminase, through both October runs",
+   "detail_en": "Anti-His ELISA on reactor samples from both October runs: present from the first hour, holding 3.4 to 6.5 µg/mL for the length of each run, to 30 and 41 hours, with no rise over time. Results also records that the port each October sample was drawn from was not written down, so lumen and shell cannot be separated for these samples.",
+   "detail_zh": "十月兩次運轉的反應器樣本做 anti-His ELISA：從第一個小時就測得到，整段運轉維持在 3.4 至 6.5 µg/mL，分別到 30 與 41 小時，隨時間沒有上升。Results 也記下十月樣本是從哪個取樣口抽的並沒有寫下來，所以這批樣本無法分辨管內側與殼側。",
+   "src": "results#secreted-yield; results#product-in-the-permeate",
+   "confidence": "stated",
+   "regrounded": "2026-10-25"
   },
   {
    "id": "biomanufacturing-f9",

@@ -273,13 +273,14 @@
   },
   {
    "id": "measurement-f28",
-   "label_en": "Protein peaks before activity in the reactor",
-   "label_zh": "反應器中蛋白質先到高峰、活性後到",
-   "value": "ELISA 12 h, DNPH 18 h",
-   "detail_en": "Shell-side ACCD peaked near 6.5 ug/mL at 12 h and activity at 30.9 nmol per mL per hour at 18 h; specific activity reached 6.3 U/mg at 18 h. Hardware-bioreactor prints the 18 h activity as 0.037 mU/mL, which is U/mL by the page's own arithmetic.",
-   "detail_zh": "殼側 ACCD 在 12 小時約 6.5 ug/mL 達高峰，活性在 18 小時達 30.9 nmol/mL/h；18 小時比活性 6.3 U/mg。hardware-bioreactor 頁把 18 小時活性寫成 0.037 mU/mL，依該頁自己的算式其實是 U/mL。",
-   "src": "results#Product in the permeate",
-   "confidence": "conflict"
+   "label_en": "Activity: two numbers, fourteenfold apart",
+   "label_zh": "活性：兩個數字差十四倍",
+   "value": "0.52 mU/mL over 12 h vs 7.25 mU/mL over 30 min",
+   "detail_en": "Measurement states the gap itself and attributes it to reaction length: twelve-hour reactions average down against a thirty-minute one. Its verdict is that until the same sample is read both ways, neither is a quotable rate. Every DNPH point is a single well.",
+   "detail_zh": "Measurement 自己寫出這個落差，並歸因於反應時間：十二小時的反應相對三十分鐘的會被平均下去。它的結論是，在同一個樣本用兩種方式讀過之前，兩個都不是能引用的速率。每個 DNPH 數據點都只有一個孔。",
+   "src": "measurement#dnph-activity",
+   "confidence": "conflict",
+   "regrounded": "2026-10-25"
   },
   {
    "id": "measurement-f29",

@@ -15,9 +15,13 @@ Static HTML and vanilla JavaScript: no build step to view it, no server, works o
 
 | | |
 |---|---|
-| **281 facts** | Every checkable number in the project, each linked to the wiki page it came from |
+| **280 facts** | Every checkable number in the project, each linked to the wiki page it came from |
 | **306 terms** | From DNPH to hollow fiber to contained use, three keywords then one compact definition |
-| **318 questions** | Written for this project, in eight question types, with a model answer and the likely mistake |
+| **460 questions** | Written for this project, in ten question types, with a model answer and the likely mistake |
+| **140 deep** | Graduate-level: mechanism, trade-offs, and numbers with their uncertainty. The Deep end deck drills these alone |
+| **34 reasoning** | No answer anywhere on the wiki. The student is given a premise and has to get to the end of it |
+| **12 positioning** | Hollow fibre and DIY OD meters are old news — what did this team actually add? |
+| **14 from the adviser** | Kyle Peng's research highlights and open questions, 24 October, marked with his name |
 | **77 gaps** | Places where the team's own pages disagree, or claim more than the data shows, each with an honest sentence to say |
 | **181 recorded questions** | What judges actually asked other teams in 2025 and earlier, from the team's own notes |
 | **58 milestones** | The year as a vertical timeline, with 47 of the team's own result figures |
@@ -56,6 +60,20 @@ Nothing is invented. Where the wiki is silent, the answer says so.
 Nominations this year are **Best Measurement**, **Best Hardware** and **Best Integrated Human
 Practices**, in the **Biomanufacturing** village, so questions in those four areas are marked tier A
 and the mock room can drill them alone.
+
+## Which wiki to mine
+
+**Always mine the published wiki, not the local working tree.** The clone at
+`Releaf_Wiki/releaf-wiki` has been parked on branch `finalize/1013` since 14 October 2026
+with uncommitted edits, and it is about fifty files behind `origin/main`. The parked copy is
+missing the whole October results write-up, so it reads as if half the project failed. The
+version the judges read is `origin/main`, which is what `2026.igem.wiki/gems-taiwan` serves.
+
+```bash
+mkdir -p /tmp/wiki-main && git -C ../Releaf_Wiki/releaf-wiki archive origin/main | tar -x -C /tmp/wiki-main
+```
+
+Mine that export, or the GitLab mirror in `Releaf_Wiki/wt/igem-gitlab/wiki/pages/`.
 
 ## Rebuilding the data
 

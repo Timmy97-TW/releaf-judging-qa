@@ -11,7 +11,15 @@
 </head>
 <body>
 
-<header class="hero wrap">
+<header class="hero wrap hero-jam">
+  <span class="blob b1" aria-hidden="true"></span>
+  <span class="blob b2" aria-hidden="true"></span>
+  <span class="blob b3" aria-hidden="true"></span>
+  <p class="ticket">
+    <span class="dot" aria-hidden="true"></span>
+    <span data-en="Grand Jamboree · Paris · 13–16 Nov 2026" data-zh="Grand Jamboree · 巴黎 · 2026 年 11 月 13–16 日"></span>
+    <span class="stub">J03</span>
+  </p>
   <p class="eyebrow" data-en="GEMS Taiwan · iGEM 2026 · Biomanufacturing Village" data-zh="GEMS Taiwan · iGEM 2026 · 生物製造村"></p>
   <h1 data-en="Twenty minutes of questions." data-zh="二十分鐘的提問。"></h1>
   <h1 class="h1-muted" data-en="Seven of you at the microphone." data-zh="七個人站在麥克風前。"></h1>
@@ -21,7 +29,13 @@
   <div class="btn-row" style="margin-top:1.75rem">
     <a class="btn btn-accent" href="mock.html" data-en="Enter the mock room" data-zh="進入模擬會場"></a>
     <a class="btn btn-ghost" href="seats.html" data-en="Find your seat" data-zh="找到你的位置"></a>
+    <a class="btn btn-line" href="mock.html?mode=deep" data-en="Go straight to the deep end" data-zh="直接跳進深水區"></a>
   </div>
+  <div class="villages" aria-hidden="true">
+    <span class="on">Biomanufacturing</span><span>Environment</span><span>Food &amp; Agriculture</span>
+    <span>Health &amp; Medicine</span><span>Foundational Advance</span><span>Software</span>
+  </div>
+  <div class="jam-rule" aria-hidden="true"></div>
 </header>
 
 <section class="wrap" id="session">
@@ -46,6 +60,23 @@
   <p class="note note-w" style="margin-top:1.25rem"
      data-en="No online judges this year, and you are the first team of the day. Nobody will be warmed up, including the panel. Your first answer sets the tone for the whole twenty minutes, so rehearse the first two minutes until they are boring."
      data-zh="今年沒有線上評審，而你們是當天第一組。包括評審在內，沒有人是熱機完成的狀態。第一個回答會決定接下來二十分鐘的氣氛，所以把開場兩分鐘練到無聊為止。"></p>
+</section>
+
+<section class="wrap narrow" id="round2">
+  <div class="round">
+    <div class="round-head">
+      <h3 data-en="Round two: the bank got harder" data-zh="第二輪：題庫變難了"></h3>
+      <span class="when" data-en="25 Oct training" data-zh="10/25 訓練"></span>
+    </div>
+    <p data-en="You ran the first version and said the cloning questions were too easy. They are gone. What replaced them is pitched the way a professor questions a graduate student: mechanism, trade-offs, and numbers with their uncertainty. Some of the new questions have no answer anywhere on your wiki — that is deliberate. You work those out standing up, in the room."
+       data-zh="你們練完第一版，說選殖的題目太簡單。那些題目已經換掉了。新題目的高度是教授問研究生的高度：機制、取捨，以及帶著誤差的數字。其中有些題目在 wiki 上完全找不到答案——這是故意的。那些題目要你們站在現場自己推出來。"></p>
+    <div class="new-grid" id="newgrid"></div>
+    <div class="adviser">
+      <b data-en="New: the adviser's own questions" data-zh="新增：顧問親自出的題"></b>
+      <p data-en="Kyle Peng, who advised the plant team all year, typed up a set of research highlights and open scientific questions for you on 24 October. Every question he raised is in the bank, marked with his name, answered against what your wiki can actually support — and where it cannot, the honest answer says so."
+         data-zh="整年指導植物組的 Kyle Peng，在 10 月 24 日為你們整理了一份研究亮點與科學問題。他提出的每一個問題都進了題庫，標上他的名字，並且只用 wiki 真的撐得起來的內容作答——撐不起來的地方，答案就直接承認。"></p>
+    </div>
+  </div>
 </section>
 
 <section class="wrap">
@@ -126,6 +157,42 @@
     document.getElementById('rules').innerHTML = h;
   }
 
+  function newGrid() {
+    var c = window.INDEX_COUNTS || {};
+    var rows = [
+      { n: c.deep || 0, href: 'mock.html?mode=deep', col: 'var(--jam-green)',
+        en: 'Deep end', zh: '深水區',
+        pen: 'Graduate-level questions across cloning, plants, reactor, photometer, model.',
+        pzh: '研究生等級的題目，涵蓋選殖、植物、反應器、光度計、模型。',
+        gen: 'Drill them →', gzh: '開始練 →' },
+      { n: c.reason || 0, href: 'mock.html?type=reason', col: 'var(--jam-blue)',
+        en: 'Reasoning, not recall', zh: '推理題，不是背題',
+        pen: 'No answer on the wiki. You are given a premise and have to get to the end of it.',
+        pzh: 'Wiki 上沒有答案。給你一個前提，你要自己推到結論。',
+        gen: 'Think one through →', gzh: '推一題看看 →' },
+      { n: c.history || 0, href: 'mock.html?type=history', col: 'var(--jam-teal)',
+        en: 'Where we stand', zh: '我們站在哪裡',
+        pen: 'Hollow fibre and DIY OD meters are old news. What did we actually add?',
+        pzh: '中空纖維和自製 OD 計都不是新東西。那我們到底加了什麼？',
+        gen: 'Place the work →', gzh: '說清楚定位 →' },
+      { n: c.authored || 0, href: 'mock.html?mode=kyle', col: 'var(--jam-orange)',
+        en: "Kyle Peng's set", zh: 'Kyle Peng 出的題',
+        pen: 'The adviser\'s five scientific inquiries, turned into questions with model answers.',
+        pzh: '顧問提出的五個科學問題，轉成題目與示範答案。',
+        gen: 'Take his questions →', gzh: '接下他的題 →' }
+    ];
+    var h = '';
+    for (var i = 0; i < rows.length; i++) {
+      var r = rows[i], zh = S.lang === 'zh';
+      h += '<a class="new-card" style="--c:' + r.col + '" href="' + r.href + '">' +
+        '<span class="n">' + r.n + '</span>' +
+        '<h4>' + S.esc(zh ? r.zh : r.en) + '</h4>' +
+        '<p>' + S.esc(zh ? r.pzh : r.pen) + '</p>' +
+        '<span class="go">' + S.esc(zh ? r.gzh : r.gen) + '</span></a>';
+    }
+    document.getElementById('newgrid').innerHTML = h;
+  }
+
   function counts() {
     var c = window.INDEX_COUNTS || {};
     var rows = [
@@ -153,7 +220,7 @@
       : d + ' days, ' + h + ' hours, ' + m + ' minutes to go';
   }
 
-  function draw() { tiles(); rules(); counts(); countdown(); }
+  function draw() { tiles(); rules(); newGrid(); counts(); countdown(); }
   S.onLang(draw);
   setInterval(countdown, 30000);
 })();

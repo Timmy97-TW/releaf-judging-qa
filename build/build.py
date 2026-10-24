@@ -33,6 +33,8 @@ TYPES = [
     ('integrate','Integration',   '整合串連'),
     ('gap',      'Honesty',       '誠實面對'),
     ('impact',   'Scale & impact','規模與影響'),
+    ('reason',   'Reasoning',     '推理'),
+    ('history',  'Positioning',   '歷史定位'),
 ]
 
 CATS = [
@@ -78,6 +80,7 @@ def norm_q(q, dom):
     if not q.get('backup'):
         q['backup'] = ''
     q['pages'] = [p for p in (q.get('pages') or []) if p]
+    q['deep'] = 1 if q.get('deep') else 0
     for f in ('kw_en', 'kw_zh'):
         v = q.get(f) or []
         q[f] = [str(x) for x in v][:3]
@@ -187,7 +190,11 @@ def main():
     dump('recorded.js', 'RECORDED', recorded)
     dump('meta.js', 'META', meta)
 
-    counts = dict(facts=len(facts), terms=len(terms), questions=len(questions), gaps=len(gaps))
+    counts = dict(facts=len(facts), terms=len(terms), questions=len(questions), gaps=len(gaps),
+                  deep=sum(1 for q in questions if q.get('deep')),
+                  reason=sum(1 for q in questions if q.get('type') == 'reason'),
+                  history=sum(1 for q in questions if q.get('type') == 'history'),
+                  authored=sum(1 for q in questions if q.get('author')))
     with open(os.path.join(OUT, 'index.js'), 'w', encoding='utf-8') as fh:
         fh.write('var INDEX_COUNTS = %s;\n' % json.dumps(counts))
     print('\n  total: %(facts)d facts, %(terms)d terms, %(questions)d questions, %(gaps)d gaps' % counts)

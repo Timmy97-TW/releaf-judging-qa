@@ -1,0 +1,400 @@
+{
+  "domain": "drylab",
+  "questions": [
+    {
+      "q_en": "Write down the state vector of your Kalman filter for me, and tell me what the process noise term and the measurement noise term mean physically in your bioreactor.",
+      "q_zh": "請你把 Kalman filter 的 state vector 寫出來，然後告訴我 process noise 和 measurement noise 這兩項，在你們的生物反應器裡實際上代表什麼物理意義。",
+      "type": "design",
+      "tier": "A",
+      "deep": 1,
+      "pages": [
+        "software",
+        "biomanufacturing"
+      ],
+      "seat": "dry",
+      "backup": "hw",
+      "kw_en": [
+        "level and trend",
+        "sensor lying",
+        "biology moved"
+      ],
+      "kw_zh": [
+        "level 與 trend",
+        "感測器在騙人",
+        "生物真的變了"
+      ],
+      "a_en": "Two states: the level of the OD600 reading and its trend. So the state is where the culture is and how fast it is moving, nothing more. Measurement noise is everything between the culture and the number, lamp drift, bubbles, the scatter of the photometer itself; windows carrying more than twenty percent bubbles are thrown out before the filter ever sees them. Process noise is the real change we cannot predict, a lag ending, a plateau, the fall we saw between 120 and 160 hours. One term says the sensor is lying, the other says the biology moved. The settings we ran are recorded with the figure data, not in the page text, which is a fair criticism.",
+      "a_zh": "兩個 state：OD600 讀值的 level，還有它的 trend。所以 state 就是培養液現在在哪、走多快，沒有別的。Measurement noise 是培養液到那個數字之間的所有東西，燈源漂移、氣泡、photometer 本身的散佈；氣泡超過兩成的視窗在進 filter 之前就被丟掉了。Process noise 是我們預測不到的真實變化，lag 結束、進入 plateau、還有 120 到 160 小時那次下降。一項在說感測器在騙人，另一項在說生物真的變了。我們實際用的參數是記在圖的資料檔裡，不在頁面文字上，這點被批評是合理的。",
+      "trap_en": "Reciting that the filter 'tracks biomass and growth rate' when the state is the optical reading, and quoting covariance values as if the page printed them.",
+      "trap_zh": "把 state 說成「生物量和生長速率」，其實是光學讀值；或把 covariance 數值講得好像頁面上有寫。",
+      "basis": "a filter is only as defensible as its state and noise model"
+    },
+    {
+      "q_en": "Bacterial growth is exponential and then saturates, which is not linear, and your noise is not obviously Gaussian. Why is a linear filter defensible here at all, and what happens when your covariance settings are wrong for a run?",
+      "q_zh": "細菌生長是指數成長然後飽和，這不是線性的，而且你們的雜訊也不見得是 Gaussian。那用線性 filter 到底為什麼站得住腳？如果 covariance 設定對某一次實驗來說是錯的，會發生什麼事？",
+      "type": "design",
+      "tier": "A",
+      "deep": 1,
+      "pages": [
+        "software"
+      ],
+      "seat": "dry",
+      "backup": "hw",
+      "kw_en": [
+        "tracking not modelling",
+        "trend pays further out",
+        "run 7 flipped it"
+      ],
+      "kw_zh": [
+        "追蹤不是建模",
+        "trend 要長時距才划算",
+        "run 7 整個翻轉"
+      ],
+      "a_en": "Because we are tracking growth, not modelling it. Over two to twelve hours exponential growth is nearly a straight line, so level and trend is a local approximation refreshed at every reading, and the models that assume a shape lose: exponential assumes growth keeps accelerating, global linear weighs old data as heavily as new. The best evidence of what wrong settings cost is our own repeat. We left the filter exactly as it was and scored run 7, and the advantage turned over: 41 percent better than persistence at two hours in September became nothing at two hours, and a quarter at eight and twelve. Run 7 climbs in steps, so the trend term only pays further out.",
+      "a_zh": "因為我們是在追蹤生長，不是在建模。在兩到十二小時的尺度上，指數成長幾乎就是一條直線，所以 level 加 trend 是一個局部近似，每筆讀值都重新更新；假設形狀的模型就輸了，exponential 假設生長一直加速，global linear 把舊資料看得跟新資料一樣重。參數不對會付什麼代價，最好的證據是我們自己的重複實驗：filter 設定完全不動，拿 run 7 再評一次，優勢整個翻轉——九月在兩小時好 41%，run 7 在兩小時變成完全沒有優勢，八小時和十二小時各好四分之一。run 7 的讀值是一階一階往上爬，所以 trend 這一項要比較長的時距才划算。",
+      "trap_en": "Quoting the 41 percent as if it held on both runs; on run 7 the two-hour gain is zero with the same settings.",
+      "trap_zh": "把 41% 講成兩次實驗都成立；同樣設定下 run 7 的兩小時優勢是零。",
+      "basis": "model misspecification is the first thing a modeller is examined on"
+    },
+    {
+      "q_en": "Given the sensors you actually have working on the bioreactor, which states are genuinely inferable and which are not? And when a reading fails its own checks mid-run, what does the filter actually receive?",
+      "q_zh": "就生物反應器上真正能用的感測器來說，哪些 state 是真的推得出來的，哪些推不出來？還有跑到一半某筆讀值沒通過自己的檢查時，filter 實際上收到的是什麼？",
+      "type": "boundary",
+      "tier": "A",
+      "deep": 1,
+      "pages": [
+        "software",
+        "biomanufacturing"
+      ],
+      "seat": "dry",
+      "backup": "hw",
+      "kw_en": [
+        "photometer not biomass",
+        "gate holds last value",
+        "blind above the beam"
+      ],
+      "kw_zh": [
+        "預測讀值不是生物量",
+        "gate 沿用上一筆",
+        "光束之上就瞎了"
+      ],
+      "a_en": "Only the level and the trend of the optical reading are observable, not biomass. On the September run the twelve-hour median went from 1.06 to 3.75 against a linear limit of OD 1.2, so what we forecast is the photometer reading. Four things are not inferable at all: loop temperature, because the probe never answered; dissolved oxygen, which we could not calibrate; the induction light inside a dense culture; and the photometer's own top end, which run 7 showed we have not found. On a failed window the acceptance gate holds the last good value, 31 of 1,083 windows in run 6. So the filter gets a repeat, not a gap, and a repeat looks like no change.",
+      "a_zh": "真正可觀測的只有兩件事：光學讀值的 level 和 trend，不是生物量。九月那次實驗十二小時中位數從 1.06 升到 3.75，而線性上限是 OD 1.2，所以我們預測的是 photometer 的讀值。有四件事完全推不出來：迴路溫度，因為探針從來沒回應，是操作者手動輸入的；溶氧，我們校不起來；高濃度培養液裡的誘導光；還有 photometer 自己的上限，run 7 顯示我們還沒找到。某個視窗沒通過檢查時，acceptance gate 會沿用上一筆好的值，run 6 是 1,083 個視窗裡有 31 個。所以 filter 拿到的是重複值、不是缺值，而重複值看起來像「沒有變化」，不會讓不確定帶變寬。",
+      "trap_en": "Saying the twin knows biomass, or that a failed reading is left as a gap; the gate holds the last good value, which hides the loss of information.",
+      "trap_zh": "說 twin 知道生物量，或說壞掉的讀值會留空；gate 是沿用上一筆好值，反而把資訊損失藏起來。",
+      "basis": "observability decides what the twin may legitimately claim"
+    },
+    {
+      "q_en": "Your forecast beats persistence, which is a very low bar. What was it tested on that it had not seen, how is the error measured, and did you ever compare it against a fitted growth curve?",
+      "q_zh": "你們的預測贏過 persistence，但那個門檻很低。它到底是在什麼沒看過的資料上被測的？誤差怎麼量？還有你們有沒有跟一條擬合好的生長曲線比過？",
+      "type": "validate",
+      "tier": "A",
+      "deep": 1,
+      "pages": [
+        "software"
+      ],
+      "seat": "dry",
+      "backup": "plant",
+      "kw_en": [
+        "walk-forward, two runs",
+        "RMSE in OD",
+        "no logistic on a batch"
+      ],
+      "kw_zh": [
+        "逐步前推、兩次實驗",
+        "RMSE 用 OD",
+        "沒拿 logistic 比過"
+      ],
+      "a_en": "Every scored forecast is out of sample in time. We made one every hour from hour twelve using only data up to that point, and the metric is RMSE in OD units. In September it was 0.040 against persistence's 0.067 at two hours, 41 percent better, and 17 percent at twelve. Run 7 scored it again on the strain we actually use: nothing at two hours, 24 percent at eight and twelve. Two runs, and we say so. On the light plate we held data out properly, one arm at a time, and the prior predicted 24 hour OD within 7 percent against 29 to 68 without it. We never scored a logistic fitted on a bioreactor run.",
+      "a_zh": "每一筆被計分的預測在時間上都是樣本外的。我們從第 12 小時開始每小時做一次，只用當下之前的資料，指標是 OD 單位的 RMSE。九月在兩小時是 0.040、persistence 0.067，好 41%，十二小時好 17%。run 7 用我們真正要用的菌株把同一個比較再做一次：兩小時沒有優勢，八小時和十二小時各好 24%。就兩次實驗，我們頁面上也這樣寫。光照盤那邊我們有好好留出資料，一次留一個 arm，有 prior 時預測 24 小時 OD 誤差在 7% 以內，沒有 prior 是 29 到 68%，NRMSE 1.9%，而生物製程模型的標準是 15%。我們從來沒有把擬合在反應器實驗上的 logistic 拿來跟 filter 比。",
+      "trap_en": "Quoting 41 percent as the headline without the run 7 column, and treating persistence as a sufficient baseline.",
+      "trap_zh": "只講 41% 這個標題數字、不講 run 7 那一欄；還把 persistence 當成足夠的對照基準。",
+      "basis": "a baseline that is too weak makes a real result look bigger than it is"
+    },
+    {
+      "q_en": "You registered a growth forecast before the run instead of fitting it afterwards. What did that commit you to, and what exactly passed?",
+      "q_zh": "你們是在實驗之前先登記生長預測，而不是事後擬合。這樣做綁住了你們什麼？還有到底是什麼通過了？",
+      "type": "validate",
+      "tier": "A",
+      "deep": 1,
+      "pages": [
+        "software"
+      ],
+      "seat": "dry",
+      "backup": "plant",
+      "kw_en": [
+        "three endpoints, one scored",
+        "0.286 inside interval",
+        "ceiling did not cross"
+      ],
+      "kw_zh": [
+        "三個終點只計一個",
+        "0.286 落在區間內",
+        "上限沒有轉移過去"
+      ],
+      "a_en": "It commits you to a number and a pass rule you cannot move afterwards. On 1 October, before any WB800 run with constitutive ACC deaminase secretion, we registered three endpoints from the light plate prior and said only the growth rate would be scored: 0.2986 per hour, 90 percent interval 0.2705 to 0.3300. Run 5 broke down after ten hours, so it was scored on run 6, which gave 0.286 plus or minus 0.010. Inside the interval, thirteen days later. What did not pass matters as much: the shape and the time to OD 0.5 stay unscored, because the plate-reader scale was never cross-calibrated, and the bioreactor passed the prior's ceiling before hour seven.",
+      "a_zh": "它綁住你一個數字和一條事後不能改的通過規則。10 月 1 日，在任何帶 constitutive ACC deaminase 分泌的 WB800 實驗之前，我們用光照盤的 prior 登記了三個終點，並說明只有生長速率會計分：0.2986 每小時，90% 區間 0.2705 到 0.3300。run 5 跑十小時就壞了，所以是用 run 6、也就是 10 月 14 到 16 日那次來計分，結果是 0.286 ± 0.010，落在區間內，而且是登記後十三天。沒通過的部分一樣重要：曲線形狀和到 OD 0.5 的時間都沒有計分，因為上限和起始濃度是在 plate reader 的尺度上、兩個尺度之間還沒有交叉校正，而反應器在第七小時之前就衝過了盤子的上限 1.005。",
+      "trap_en": "Claiming the whole registration passed. Only the rate was scored, and the rate is fitted over five hours where a line fits the readings as well as an exponential.",
+      "trap_zh": "說整份登記都通過了。只有速率有計分，而那個速率是擬合在五個小時上，那段期間直線跟指數一樣貼合讀值。",
+      "basis": "pre-registration is only worth something if you report the unscored endpoints too"
+    },
+    {
+      "q_en": "Your autoencoder learns what a healthy run looks like and flags departures. So what does it do on a fault it has never seen, what is your false positive rate, and how much of that 26.7 hours did the network actually buy you?",
+      "q_zh": "你們的 autoencoder 是學「健康的實驗長什麼樣」然後標出偏離。那遇到從沒見過的故障會怎樣？誤報率多少？還有那 26.7 小時裡，有多少其實是這個網路賺來的？",
+      "type": "validate",
+      "tier": "A",
+      "deep": 1,
+      "pages": [
+        "software",
+        "contribution"
+      ],
+      "seat": "dry",
+      "backup": "hw",
+      "kw_en": [
+        "first 120 hours",
+        "6.1 percent false alarms",
+        "PCA within half an hour"
+      ],
+      "kw_zh": [
+        "前 120 小時",
+        "誤報 6.1%",
+        "PCA 只差半小時"
+      ],
+      "a_en": "It is trained on the healthy first 120 hours of one 434 hour run, and the alarm limit is the 99.5th percentile of that training score, fixed before anything was scored. It flagged the photometer at 216.3 hours against a channel that failed at 243, so 26.7 hours of warning, at a 6.1 percent false alarm rate on quiet windows it had not seen. On a fault it has never seen we cannot tell you: two events in one run means no detection rate is reportable. And a plain PCA version alarmed within half an hour of ours, so the network is not what bought the lead time. The reference channel that never sees the culture is.",
+      "a_zh": "它是用一次 434 小時實驗中健康的前 120 小時訓練的，警報門檻是那段訓練分數的 99.5 百分位，而且在開始計分之前就定好。它在 216.3 小時標出 photometer，而那個通道在 243 小時才真正失效，所以提前 26.7 小時，在沒看過的平靜時段誤報率是 6.1%。遇到沒見過的故障，老實說我們答不出來：一次實驗兩個事件，就報不出偵測率。而且同樣想法用單純的 PCA 做，報警時間跟我們只差半小時，所以提前量不是這個網路賺來的，是那條從不穿過培養液的參考通道賺來的。",
+      "trap_en": "Crediting the autoencoder for the 26.7 hours. A linear baseline matches it; the design idea is the reference channel, not the network.",
+      "trap_zh": "把 26.7 小時歸功於 autoencoder。線性方法也做得到；真正的設計巧思是參考通道，不是網路。",
+      "basis": "anomaly detection on one healthy stretch cannot report a detection rate"
+    },
+    {
+      "q_en": "Take me from a milliunit per millilitre on a plate assay to litres per hectare in a field, step by step, and tell me which step carries the most uncertainty.",
+      "q_zh": "請你一步一步，從盤上實驗的 mU per mL 一路走到田裡的每公頃公升數，然後告訴我哪一步的不確定性最大。",
+      "type": "integrate",
+      "tier": "A",
+      "deep": 1,
+      "pages": [
+        "model",
+        "plant",
+        "measurement"
+      ],
+      "seat": "dry",
+      "backup": "plant",
+      "kw_en": [
+        "canopy 2.44",
+        "1.68 to 3.52",
+        "different preparations"
+      ],
+      "kw_zh": [
+        "canopy 2.44",
+        "1.68 到 3.52",
+        "兩個不同製備"
+      ],
+      "a_en": "The protocol uses 10 centimetre round plates, so the area is 78.5 square centimetres, and one treatment was three nozzle actuations delivering 1.67 millilitres. A recorded volume over a known area is a rate, and that rate scales to 2,126 litres per hectare with no modelling in between. Then the one modelled step, a canopy correction of 2.44 from a leaf area index of 4.5 against 0.115 on a plate, giving the 5,188 litre scenario and 37.6 kilounits per hectare. That correction is the widest uncertainty: it spans 1.68 to 3.52. There is a second weakness. The titre and the volume come from different preparations, and the activity of what was sprayed was never measured.",
+      "a_zh": "protocol 用的是 10 公分圓盤，所以面積是 78.5 平方公分，而一次處理是三下噴頭、總共 1.67 毫升。記錄下來的體積除以已知面積就是一個施用率，那個率可以直接換成每公頃 2,126 公升，中間沒有任何模型。接下來才是唯一一個模型步驟：canopy correction 2.44，來自葉面積指數 4.5 對盤上的 0.115，算出 5,188 公升這個情境、每公頃 37.6 kU。那個校正是最大的不確定性，它自己就橫跨 1.68 到 3.52。還有第二個弱點：活性和體積來自兩個不同的製備，而真正噴到植物上那一批的活性從來沒有量過。",
+      "trap_en": "Calling 5,188 litres a validated dose, or forgetting that 2,126 is a dose that worked rather than the smallest that works.",
+      "trap_zh": "把 5,188 公升說成驗證過的劑量；或忘了 2,126 是「有效的劑量」，不是「最小有效劑量」。",
+      "basis": "the headline litres per hectare is the number a judge will pull apart"
+    },
+    {
+      "q_en": "You give me a payback period as a single number. Why is a point estimate the wrong way to report that, and if you ran a sensitivity analysis, what would it put first?",
+      "q_zh": "你們給的回收期是一個單一數字。為什麼用點估計報告這件事是錯的？如果做敏感度分析，排在最前面的會是什麼？",
+      "type": "validate",
+      "tier": "A",
+      "deep": 1,
+      "pages": [
+        "model",
+        "geospatial-analysis",
+        "entrepreneurship"
+      ],
+      "seat": "dry",
+      "backup": "plant",
+      "kw_en": [
+        "efficacy is an axis",
+        "68 years to 2.0",
+        "17 of 25 quiet"
+      ],
+      "kw_zh": [
+        "效能是一個軸",
+        "68 年變 2.0 年",
+        "25 季有 17 季不啟動"
+      ],
+      "a_en": "We try not to. Efficacy is plotted across its whole axis rather than fixed, because no run of ours bounds it, and no point on that axis returns the capital on a useful horizon. On our own loss figure, at the physical ceiling of efficacy one, payback is 68 years, and five years would need an efficacy of 14, which exceeds the whole loss. Share one fleet across the 2.5 hectares it serves and the same arithmetic gives 27 years; use the Geospatial benefit instead and it is 2.0. A point estimate also hides the weather: 17 of 25 seasons never cross the threshold. Sensitivity would put the benefit figure first, then ownership, then efficacy.",
+      "a_zh": "我們盡量不這樣報。效能是整個軸畫出來的，不是固定一個值，因為我們沒有任何實驗能給它上下界；而那個軸上沒有一點能在有意義的年限內回收資本。用我們自己的損失數字，就算效能到物理上限 1，回收期也是 68 年，要五年回收需要效能 14，超過損失本身。換成共享所有權，同樣的算法在一組機隊服務的 2.5 公頃上攤開是 27 年；改用 Geospatial 的效益數字則是 2.0 年。點估計還會把天氣藏起來：25 季裡有 17 季根本不會跨過門檻，機隊只在 4.3% 的日子運轉。敏感度排最前面的是用哪個效益數字，然後是所有權，再然後是效能。",
+      "trap_en": "Defending a single payback number, or quoting 2.0 years without saying it rests on the Geospatial benefit the Math Model does not stand behind.",
+      "trap_zh": "替某一個回收期數字辯護；或引用 2.0 年卻不說它建立在 Math Model 並不採信的 Geospatial 效益上。",
+      "basis": "a decision number without its spread is not a model output"
+    },
+    {
+      "q_en": "What is the spatial resolution of your input layers against the size of a real Taiwanese farm, and how does an index built from that relate to what one plant in one field actually experiences?",
+      "q_zh": "你們圖層的空間解析度，跟台灣一塊真實農地的大小比起來是什麼量級？用那種資料建出來的指數，跟田裡某一株植物真正經歷到的東西，關係是什麼？",
+      "type": "boundary",
+      "tier": "B",
+      "deep": 1,
+      "pages": [
+        "geospatial-analysis",
+        "model",
+        "software"
+      ],
+      "seat": "dry",
+      "backup": "plant",
+      "kw_en": [
+        "346 nodes, 743,500 ha",
+        "county per season",
+        "leaf sensor on a bench"
+      ],
+      "kw_zh": [
+        "346 節點、74 萬公頃",
+        "一縣一季一個數",
+        "葉片感測器還在桌上"
+      ],
+      "a_en": "Nothing in the geospatial work resolves a single farm, and we should say that plainly. The routing model starts from 2,792,536 real parcels but aggregates them into 346 township nodes over about 743,500 hectares, so one node is roughly two thousand hectares against an average farm of 0.9 to 1.1, with 99.2 percent of farms under two. The stress index is one number per county per season. So the maps say where small farms and unstable weather overlap, not what a plant feels. The leaf sensor should close that gap and it is still on a bench reading 1.2 to 1.9 degrees warm. Our own guide says state the coordinate system; the page never records which projection measured area.",
+      "a_zh": "地理空間這部分沒有任何一層解析得到單一一塊農地，這點應該講清楚。路網模型是從 2,792,536 筆真實地塊出發，但把它們合併成 346 個鄉鎮需求節點、約 74 萬 3 千公頃，所以一個節點大概兩千公頃，而平均農場只有 0.9 到 1.1 公頃，99.2% 的農場不到兩公頃。壓力指數是一縣一季一個數字。所以地圖說的是小農和不穩定天氣在哪裡重疊，不是植物感受到什麼。本來要補上這個落差的是葉片感測器，而它還在桌上，讀值偏高 1.2 到 1.9 度。我們自己的 QGIS 教學就要求合併圖層前先宣告座標系統，但頁面從沒記下地塊面積是用哪個投影量的。",
+      "trap_en": "Talking as if the maps were parcel-resolved because the parcel count is large; 2.79 million parcels still collapse into 346 nodes.",
+      "trap_zh": "因為地塊數字很大就講得好像地圖是地塊級解析；279 萬筆地塊最後還是縮成 346 個節點。",
+      "basis": "township and county layers cannot support farm-level claims"
+    },
+    {
+      "q_en": "Neighbouring counties share the same typhoon and the same light deficit. How many independent observations does your stress index really have, and would your deployment picture survive a different weighting?",
+      "q_zh": "鄰近縣市會遇到同一個颱風、同一段日照不足。你們的壓力指數真正獨立的觀測有幾個？還有如果換一組權重，部署的圖像還站得住嗎？",
+      "type": "validate",
+      "tier": "B",
+      "deep": 1,
+      "pages": [
+        "model",
+        "geospatial-analysis"
+      ],
+      "seat": "dry",
+      "backup": "plant",
+      "kw_en": [
+        "years held out, not counties",
+        "four of sixteen",
+        "weights fitted, soil guessed"
+      ],
+      "kw_zh": [
+        "留的是年份不是縣市",
+        "十六分之四",
+        "權重是擬合、土壤是猜的"
+      ],
+      "a_en": "Fewer than the county-season count suggests. We fitted on 25 years of county harvests and scored every candidate on years the fit had not seen, but not on counties it had not seen, and west coast counties meet the same typhoon and light deficit, so the independent unit is closer to the season. The blind test is four of sixteen counties, 7.9 percent error against the trend's 8.8, and four is too few: we underpredicted Hualien and Pingtung, overpredicted Taitung, and only Taichung landed close. On weighting, the index weights are fitted, not chosen. The soft layer is the soil map, where sandy loam is both the most volatile class and the one our heuristic assigns most broadly.",
+      "a_zh": "比縣市季的數量少。我們用 25 年的縣市收成擬合，每個候選都在沒看過的年份上評分，但不是在沒看過的縣市上評分；而西部各縣市遇到的是同一個颱風、同一段日照不足，所以獨立單位比較接近「年」而不是「縣市季」。盲測是十六個縣市裡的四個，誤差 7.9% 對趨勢的 8.8%，而我們自己說四個太少：這四個裡面花蓮和屏東被低估、台東被高估，只有台中接近預測。權重方面，指數的權重是從 32,767 種組合裡擬合出來的，不是人選的。真正軟的那一層是土壤圖，砂質壤土既是波動最大的類別，也是我們海岸判斷規則指派得最廣的類別。",
+      "trap_en": "Defending the volatility index weights, which the page names terms for but never publishes, or calling the four-county blind test a validation.",
+      "trap_zh": "替波動指數的權重辯護，頁面只列了項目、沒公布權重；或把四個縣市的盲測當成已驗證。",
+      "basis": "spatial and temporal correlation inflate apparent confidence"
+    },
+    {
+      "q_en": "Your Math Model and your Geospatial Analysis put a completely different price on a stressed hectare. How far apart are they, and which number do you stand behind?",
+      "q_zh": "你們的 Math Model 和 Geospatial Analysis 對一公頃受逆境農地的定價完全不同。差多少？還有你們站在哪一個數字後面？",
+      "type": "gap",
+      "tier": "A",
+      "deep": 1,
+      "pages": [
+        "model",
+        "geospatial-analysis"
+      ],
+      "seat": "dry",
+      "backup": "plant",
+      "kw_en": [
+        "a factor of fourteen",
+        "not the same hectare",
+        "we quote our own"
+      ],
+      "kw_zh": [
+        "差十四倍",
+        "不是同一公頃",
+        "我們用自己的數字"
+      ],
+      "a_en": "A factor of fourteen, and we print that on the page. Our stress index attributes US$138 per hectare per crop to the weather this protectant acts on, which is 68 years of payback at efficacy one. Geospatial Analysis reaches US$1,931 from its own chlorophyll work, which pays back in 4.9 years. So either our index misses most of what stress costs a field, or their chlorophyll-to-yield step is too generous. We stand behind our own figure and mark where theirs falls, because ours is fitted to 25 years of harvests. Three things would settle it: a yield endpoint instead of chlorophyll, one stress definition across both pages, and whether a hectare returns once or twice a year.",
+      "a_zh": "差十四倍，而且我們是把它寫在頁面上，不是藏起來。我們的壓力指數認為這個保護劑能處理的天氣，每公頃每期值 US$138，效能為 1 時回收期 68 年。Geospatial Analysis 用他們自己的葉綠素工作算出每公頃每期 US$1,931，回收期 4.9 年。所以要嘛是我們的指數漏掉了逆境對一塊田造成的大部分損失，要嘛是他們從葉綠素換算到產量那一步太寬鬆。我們採用自己的數字，並在圖上標出他們的落點，因為我們的是擬合在 25 年收成上的。三件事可以解決它：用產量終點取代葉綠素終點、兩頁統一一個壓力定義、以及對一公頃一年受保護一次還是兩次達成共識。",
+      "trap_en": "Defending both numbers or averaging them. They are not two estimates of the same hectare, and the US$1,931 figure is not shown on the Geospatial page itself.",
+      "trap_zh": "同時替兩個數字辯護或取平均。它們不是對同一公頃的兩個估計，而 US$1,931 這個數字在 Geospatial 頁上根本沒有出現。",
+      "basis": "two pages of the same wiki giving incompatible economics"
+    },
+    {
+      "q_en": "Somebody on your team has quoted holding 86.3 percent and 25.3 percent of unstressed performance at two salt levels. Show me the measurement those came from.",
+      "q_zh": "你們團隊有人引用過在兩個鹽度下「保住 86.3% 和 25.3% 的未逆境表現」。請把這兩個數字背後的量測拿出來給我看。",
+      "type": "gap",
+      "tier": "A",
+      "deep": 1,
+      "pages": [
+        "geospatial-analysis",
+        "measurement",
+        "plant"
+      ],
+      "seat": "dry",
+      "backup": "plant",
+      "kw_en": [
+        "not on any page",
+        "direction, not percentage",
+        "efficacy is an axis"
+      ],
+      "kw_zh": [
+        "任何頁面都沒有",
+        "只能講方向不講百分比",
+        "效能是一個軸"
+      ],
+      "a_en": "I cannot, and we do not quote them. Neither number appears anywhere on our wiki, in prose or in a table, so I am not going to defend them from memory. What our chlorophyll work supports is a direction: every ACC deaminase treated group retained more chlorophyll than its matched control at the same salinity, on agar, and the page warns the untreated controls were low enough that absolute values need care. Soil-validated efficacy is still being developed, which is why the coverage radius downstream is a modelling assumption. The one efficacy number we carry is 0.58 from Arabidopsis fresh weight, and the model carries even that as an axis, not a coefficient.",
+      "a_zh": "我拿不出來，而且我們不引用它們。這兩個數字在我們整個 wiki 上都找不到，無論是段落還是表格，所以我不會憑記憶替它們辯護。我們的葉綠素工作真正支持的是一個方向：在相同鹽度下，每一組 ACC deaminase 處理的葉綠素都比對應的對照高，這是在洋菜上做的；頁面也寫了未處理對照偏低，所以跨實驗比絕對值要小心。土壤驗證的效能資料還在做，這正是為什麼下游的覆蓋半徑只是一個模型假設。我們真正帶著走的效能數字是來自阿拉伯芥鮮重的 0.58，而連這個，模型都是當成一個軸、不是一個係數，因為我們沒有任何實驗能給它界限。",
+      "trap_en": "Trying to reconstruct the numbers from a literature curve, or offering them as 'roughly right'; neither is traceable to a measurement of ours.",
+      "trap_zh": "試著用文獻曲線把這兩個數字湊出來，或說「大致上對」；兩者都追不到我們自己的任何量測。",
+      "basis": "an untraceable headline percentage is the fastest way to lose a judge's trust"
+    },
+    {
+      "q_en": "Digital twins, Kalman filters and reconstruction-error fault detection are routine in industrial bioprocess. What in your implementation is actually new, and what is honestly just a re-implementation?",
+      "q_zh": "digital twin、Kalman filter、用重建誤差做故障偵測，在工業生物製程裡都是常規做法。你們這套真正新的是什麼？老實說哪些只是重做一遍？",
+      "type": "history",
+      "tier": "B",
+      "deep": 1,
+      "pages": [
+        "software",
+        "biomanufacturing",
+        "contribution"
+      ],
+      "seat": "dry",
+      "backup": "hw",
+      "kw_en": [
+        "mostly re-implementation",
+        "companion that cannot see",
+        "registered before the run"
+      ],
+      "kw_zh": [
+        "大部分是重做",
+        "給感測器看不到的同伴",
+        "實驗前先登記"
+      ],
+      "a_en": "Most of it is a re-implementation, and we cite the papers it comes from. The filter, the autoencoder, the logistic prior and even the model, shadow and twin distinction are standard bioprocess practice. Three things are ours. Giving a sensor a companion that cannot see what it measures: the reference beam never passes through the culture and is scored as its own axis, which is what separated an instrument fault from a real drop in optical density. Calibrating against a known dose of titanium dioxide and silica rather than against another instrument. And registering a forecast before the run with the prior file fixed. Honestly, the models ran on recorded data, so the loop is not closed.",
+      "a_zh": "大部分是重做一遍，而且我們都有引出處的論文。filter、autoencoder、logistic prior，甚至 model、shadow、twin 的區分，都是標準的生物製程做法。有三件事我會說真的是我們的。第一，給感測器一個看不到它所量東西的同伴：參考光束從不穿過培養液，而且是單獨一個軸評分，這才把儀器故障和光密度真的下降分開。第二，用已知劑量的二氧化鈦和二氧化矽校正，而不是拿另一台儀器來校。第三，在實驗之前就登記預測、prior 檔案鎖定，這在文獻裡也不常見。也要老實說：模型是在每次實驗結束後跑記錄下來的資料，所以迴路還沒閉合。",
+      "trap_en": "Claiming the twin itself is novel, or claiming the loop is closed; the page says a person still makes every decision.",
+      "trap_zh": "說 twin 本身是創新，或說迴路已經閉合；頁面寫的是每個決定還是由人做。",
+      "basis": "positioning a student build honestly against standard industrial practice"
+    },
+    {
+      "q_en": "Suppose next year's second crop is hit by a record heat wave rather than by wind or badly timed water. What does your chain predict happens, and why?",
+      "q_zh": "假設明年第二期稻作遇到的是破紀錄的熱浪，而不是風或水分時機不對。你們整條鏈會預測發生什麼事？為什麼？",
+      "type": "reason",
+      "tier": "A",
+      "deep": 1,
+      "pages": [
+        "model",
+        "plant",
+        "geospatial-analysis"
+      ],
+      "seat": "dry",
+      "backup": "plant",
+      "kw_en": [
+        "heat earned nothing",
+        "lamp stays off",
+        "wet lab runs heat"
+      ],
+      "kw_zh": [
+        "高溫沒有貢獻",
+        "燈不會亮",
+        "濕實驗卻在做熱"
+      ],
+      "a_en": "It predicts that very little happens, and that is uncomfortable for us. When we scored all 32,767 combinations, the second crop paid for wind, light and badly timed water, and heat added nothing once those three were in. So a heat season barely moves the index, the release trigger stays below threshold, the lamp stays off and no protectant is made while the field is damaged. Our own wet lab runs a heat programme this index does not support. And I cannot tell you from the fit whether the harvest record cannot see heat at county and season resolution, or whether the terms we kept already carry it. Settling that needs a heat endpoint on rice.",
+      "a_zh": "它會預測幾乎什麼都不會發生，而這對我們來說是不舒服的。當我們把 32,767 種組合全部評分時，第二期稻作有貢獻的是風、光，以及水分時機不對；一旦這三個進來，高溫就沒有額外貢獻。所以熱浪那一季指數幾乎不動，釋放門檻不會被跨過，燈不會亮，也不會做出保護劑，而田其實正在受損。我們自己的濕實驗卻在做熱逆境的程序，而這個指數不支持它，這就是矛盾的地方。而且光看擬合，我沒辦法告訴你是收成紀錄在縣市與季的解析度下根本看不到高溫，還是我們留下來的那些項目已經把高溫的損害吸收進去了。要解決這個，需要在水稻上做一個熱的終點，不是再多擬合天氣。",
+      "trap_en": "Inventing a heat response for the index, or assuming the salinity efficacy of 0.58 transfers to heat.",
+      "trap_zh": "替指數編一個對高溫的反應；或假設鹽害的 0.58 效能可以套用到高溫。",
+      "basis": "a scenario the index was selected against exposes whether the chain is understood"
+    }
+  ]
+}

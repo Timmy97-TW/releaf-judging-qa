@@ -31,6 +31,17 @@
   --violet: #6b47c4;
   --violet-wash: #f1ecfc;
 
+  /* iGEM / Grand Jamboree 2026 palette.
+     --jam-green is the hex inside the official iGEM logo SVG; --jam-blue and --jam-sky
+     are the link and accent blues on jamboree.igem.org; --jam-teal, --jam-ink and
+     --jam-orange are sampled from the 2026 header graphic, lifted for white paper. */
+  --jam-green: #45b06c;
+  --jam-blue: #0167ef;
+  --jam-sky: #61abfe;
+  --jam-teal: #009c78;
+  --jam-orange: #e35a1b;
+  --jam-ink: #0b1a3a;
+
   --r-sm: 10px;
   --r: 14px;
   --r-lg: 20px;
@@ -160,6 +171,8 @@ section + section { border-top: 1px solid var(--rule-soft); }
 .pill-r { background: var(--red-wash); color: var(--red); }
 .pill-v { background: var(--violet-wash); color: var(--violet); }
 .pill-line { background: none; border: 1px solid var(--rule); color: var(--muted); }
+.pill-deep { background: #eef4ff; color: #0a4fb0; }
+.pill-author { background: #fdf0e8; color: #a8420f; }
 
 .kw { display: flex; flex-wrap: wrap; gap: .4rem; margin: .6rem 0; }
 .kw span {

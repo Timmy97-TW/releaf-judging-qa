@@ -173,6 +173,12 @@ phrases: [
     { en: 'Honestly, that is a gap. The nearest thing we have is …', zh: '老實說那是一個缺口。我們最接近的是……' },
     { en: 'That one belongs to a teammate who is not at the mic; may I come back to it?', zh: '那題屬於沒在麥克風前的隊友，我可以稍後回來回答嗎？' }
   ]},
+  { cat_en: 'Reasoning it out in the room', cat_zh: '在現場推理', items: [
+    { en: 'We have not run that experiment. Let me reason it from what we did measure.', zh: '那個實驗我們沒有做過。讓我從我們真的量到的東西推一下。' },
+    { en: 'If that were true, we would expect to see X. We see Y, so the more likely explanation is …', zh: '如果那是真的，我們應該會看到 X。我們看到的是 Y，所以比較可能的解釋是……' },
+    { en: 'Two things could cause that, and the experiment that separates them is …', zh: '有兩個原因都可能造成那個結果，能分辨它們的實驗是……' },
+    { en: 'I am reasoning here, not quoting a result. I want to be clear which is which.', zh: '我現在是在推理，不是引用結果。我想先把這兩件事分清楚。' }
+  ]},
   { cat_en: 'Owning a weak claim', cat_zh: '承認薄弱的論點', items: [
     { en: 'That claim is stronger on the page than in the data, and here is what the data does support …', zh: '那個說法在頁面上比在數據裡更強，數據真正支持的是……' },
     { en: 'Two of our pages disagree on that number. The one I trust is X, because …', zh: '我們有兩頁對那個數字說法不同。我相信的是 X，因為……' },
@@ -197,6 +203,8 @@ traps: [
     zh: '講數字不講單位，或講錯單位。單位是最快失去量測評審信任的方式。' },
   { en: 'Answering a boundary probe ("could this work on rice?") as if it were a fact question. Say what would have to be true.',
     zh: '把邊界試探（「這能用在稻米上嗎？」）當成事實題回答。要說「需要什麼條件成立」。' },
+  { en: 'Answering a reasoning question with a guess dressed up as a fact. Say that you are reasoning, then show the steps.',
+    zh: '把猜測包裝成事實來回答推理題。要先說這是推理，再把步驟講出來。' },
   { en: 'Letting one person answer five questions in a row while six stand silent.',
     zh: '讓一個人連答五題，另外六個人全程沉默。' },
   { en: 'Filling silence. If you have answered, stop. The judge will ask the next one.',

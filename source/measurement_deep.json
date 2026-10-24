@@ -1,0 +1,469 @@
+{
+  "domain": "measurement",
+  "questions": [
+    {
+      "q_en": "Your own page says the OD600 reading is purely turbidity and not absorbed light. Beer's law is a law about absorption, so on what grounds do you take a logarithm at all, and where does that stop working?",
+      "q_zh": "你們自己的頁面寫 OD600 讀到的其實純粹是濁度，不是吸收。Beer's law 講的是吸收，那你們憑什麼還取 log？這個做法什麼時候會失效？",
+      "type": "design",
+      "tier": "A",
+      "deep": 1,
+      "pages": [
+        "hardware-photometer#2.1",
+        "measurement#Dual light path inline photometer",
+        "software"
+      ],
+      "seat": "hw",
+      "backup": "dry",
+      "kw_en": [
+        "nothing absorbs at 600 nm",
+        "single scattering only",
+        "slope 0.995 falls to 0.59"
+      ],
+      "kw_zh": [
+        "600 nm 幾乎沒有吸收",
+        "只在單次散射成立",
+        "斜率 0.995 掉到 0.59"
+      ],
+      "a_en": "Because at 600 nanometres almost nothing in the culture absorbs. The cells scatter light out of the beam, so the detector loses photons to deflection, not to absorption. In a thin, dilute sample each cell removes light independently, so transmission falls exponentially with concentration and a logarithm straightens that out. It is an empirical fit, not Beer's law, and it fails when light scattered by one cell is scattered again by another, because some of it reaches the detector anyway. Our own data shows exactly that: above OD 2.5 the slope against the reference drops from 0.995 to 0.59. That is where our stated working limit of about OD 2.5 comes from.",
+      "a_zh": "因為在 600 nm 幾乎沒有東西在吸收。細菌是把光散射出光束之外，感測器少掉的光是被偏折掉的，不是被吸收掉的。在很薄又很稀的樣品裡，每個細胞各自擋光，所以穿透率隨濃度指數下降，取 log 就把它拉直。這是經驗式的擬合，不是 Beer's law。它會失效，是因為被一顆細胞散射的光又被另一顆散射，有一部分還是會回到感測器。我們自己的數據就是這樣：OD 2.5 以上，對參考儀器的斜率從 0.995 掉到 0.59。我們大約 OD 2.5 的工作上限就是從這裡來的。",
+      "trap_en": "Calling it absorbance and quoting Beer's law as if an extinction coefficient of the cells existed.",
+      "trap_zh": "把它講成吸光度，還引 Beer's law，好像細胞有一個莫耳吸收係數一樣。",
+      "basis": "Measurement nomination: judges test whether the physics behind OD600 is understood"
+    },
+    {
+      "q_en": "Before the silica run you predicted your in-line builds would read below the benchtop instrument. Explain the geometry behind that prediction, and then tell me where each instrument's usable range actually ends.",
+      "q_zh": "做 silica 那次之前，你們就預測自己的線上光度計會讀得比桌上型低。請解釋背後的幾何原因，再說兩台儀器實際可用的範圍各到哪裡。",
+      "type": "design",
+      "tier": "A",
+      "deep": 1,
+      "pages": [
+        "measurement#One data set, eleven algorithms",
+        "hardware-photometer#5.2",
+        "results"
+      ],
+      "seat": "hw",
+      "backup": "dry",
+      "kw_en": [
+        "forward scatter still lands",
+        "H3, slope 0.6 to 1.0",
+        "reference unreliable above 1"
+      ],
+      "kw_zh": [
+        "前向散射還是打到感測器",
+        "H3，斜率 0.6 到 1.0",
+        "參考儀器 OD 1 以上不可靠"
+      ],
+      "a_en": "What we measure is light that missed the detector, so geometry sets the number. Our path is 2 millimetres and the sensor sits right behind the cuvette, so light deflected by a small angle still lands on it and the sample looks less turbid than it is. We pre-registered that as prediction H3, expected slope 0.6 to 1.0. The Slim, whose fibre tip is a millimetre from the cell, reads a fifth of the Pro's scale for the same reason. The ranges end in different places: Professor Chang told us the BioDrop loses accuracy above OD 1, so from October we read it through two-fold and four-fold dilutions, which is why its silica trace turns irregular past OD 2. Ours works to about OD 2.5.",
+      "a_zh": "我們量到的是「沒打到感測器的光」，所以幾何決定讀值。我們的光程只有 2 mm，感測器就貼在比色管後面，偏折角度小的光還是會落在上面，樣品看起來就比實際不濁。我們事先把這件事登記成預測 H3，預期斜率落在 0.6 到 1.0。Slim 的光纖尖端離比色管只有 1 mm，道理一樣，所以它的刻度大約只有 Pro 的五分之一。兩台可用範圍的終點不一樣：張老師告訴我們 BioDrop 在 OD 1 以上就不準，所以從 10 月 10 日起我們把它的樣品稀釋兩倍、四倍再乘回去，這也是它的 silica 曲線過了 OD 2 之後變得不規則的原因。我們自己的工作上限大約是 OD 2.5。",
+      "trap_en": "Saying the reference saturates at OD 2.5; our pages say it loses accuracy above OD 1 and was read through dilutions.",
+      "trap_zh": "說參考儀器在 OD 2.5 飽和；我們頁面寫的是它 OD 1 以上就不準，所以改用稀釋來讀。",
+      "basis": "Hardware judges ask why a short-path in-line sensor compresses at high density"
+    },
+    {
+      "q_en": "Walk me through what the reference channel removes from a reading and what it cannot. Where do LED temperature drift, LED spectral width and detector dark current each land in that answer?",
+      "q_zh": "請說清楚參考通道到底消掉了什麼、又消不掉什麼。LED 溫度漂移、LED 光譜寬度、感測器暗電流，這三項各自落在哪一邊？",
+      "type": "boundary",
+      "tier": "A",
+      "deep": 1,
+      "pages": [
+        "measurement#From lux to optical density",
+        "hardware-photometer#2.2",
+        "engineering"
+      ],
+      "seat": "hw",
+      "backup": "dry",
+      "kw_en": [
+        "split before the cuvette",
+        "four dark readings per burst",
+        "spectrum never measured"
+      ],
+      "kw_zh": [
+        "在比色管之前分光",
+        "每次 4 筆暗讀值",
+        "光譜從沒量過"
+      ],
+      "a_en": "The reference beam is split off before the cuvette, so it sees the source and never the culture. In our algebra sample over reference equals a fixed optical constant times transmittance, and dividing by the blank removes that constant, so anything changing the LED's output cancels: ageing, supply current, warming. We flag the ratio if it leaves 0.85 to 1.15. Dark current and room light are handled separately, by four readings taken with the LED off and subtracted from every burst. Spectral width is the one we never measured; if the peak shifts with temperature the ratio cannot see it, because both sensors shift together. Nor can it see a fouled window or a bubble, which sit after the split.",
+      "a_zh": "參考光是在比色管之前就分出去的，它只看光源，看不到菌液。我們的式子是：sample 除以 reference 等於一個固定的光學常數乘上穿透率，再除掉空白就把那個常數消掉，所以凡是改變 LED 輸出的因素都會抵消：老化、電流、變熱。這個比值跑出 0.85 到 1.15 我們就會發旗標。暗電流和室光是另外處理的：每一組都先關掉 LED 讀 4 筆，再扣掉。光譜寬度是我們從來沒量過的那一項；如果峰值隨溫度偏移，比值看不出來，因為兩個感測器一起偏。它也看不到比色管結垢或氣泡，那些都在分光之後。",
+      "trap_en": "Saying the reference fixes everything; on 19 July it moved 6.4 percent when nothing in the cuvette had changed.",
+      "trap_zh": "說有參考通道就萬無一失；7 月 19 日比色管裡什麼都沒變，參考通道卻動了 6.4%。",
+      "basis": "A reference channel is the design's main claim, so its limits get probed"
+    },
+    {
+      "q_en": "Explain why median and MAD beat mean and standard deviation inside a burst, then tell me what a bubble does to one sample as against to a whole window, and what your filtering could hide.",
+      "q_zh": "請解釋為什麼在一組 burst 裡用中位數和 MAD 比用平均和標準差好，再說一顆氣泡對單一讀值和對整個時間窗各做了什麼，以及你們的濾波可能把什麼藏起來。",
+      "type": "design",
+      "tier": "A",
+      "deep": 1,
+      "pages": [
+        "measurement#With bubbles the premise fails",
+        "measurement#The lever is the gate after the estimator",
+        "hardware-photometer#8.1"
+      ],
+      "seat": "hw",
+      "backup": "dry",
+      "kw_en": [
+        "outlier widens its own fence",
+        "air slug: all agree, wrong",
+        "jump gate delays real steps"
+      ],
+      "kw_zh": [
+        "離群值會自己把界線撐寬",
+        "整段進空氣：全一致全錯",
+        "jump gate 會延後真實跳階"
+      ],
+      "a_en": "Inside a burst the mean is dragged by one outlier and the standard deviation is inflated by the same outlier, so the fence widens enough to admit it; the median and the MAD both ignore it, so the fence stays tight. One bubble costs one or two of fourteen samples. A whole window of air is a different failure: every sample agrees and every sample is wrong. The Pro read 0.74 to 0.91 against a true 3.18 and the bubble flag caught none of it. What the gates can hide is a genuine jump, because a reading more than 0.05 OD from the last accepted value is withheld until three readings agree.",
+      "a_zh": "在一組 burst 裡，平均會被一個離群值拉走，標準差也被同一個離群值撐大，於是界線寬到剛好把它收進來；中位數和 MAD 都不理它，界線就維持很緊。一顆氣泡大概只毀掉 14 筆裡的 1 到 2 筆。整段流道灌進空氣是完全不同的失效：每一筆都彼此一致，而且全部都錯。Pro 讀到 0.74 到 0.91，真值是 3.18，氣泡旗標一筆都沒抓到。我們的 gate 可能藏起來的是真正的跳階：和上一個被接受的值差超過 0.05 OD 就先壓住，要三筆一致才接受新水準。我們接受這個代價，因為菌不會長那麼快，而且 gate 是發警報，不是偷偷修掉。",
+      "trap_en": "Calling the rejection percentage a bubble rate; on quantised data it was counting quantisation flicker.",
+      "trap_zh": "把剔除百分比當成氣泡率；在量化的數據上它數的是量化抖動。",
+      "basis": "Robust statistics are the software claim; judges ask what they cost"
+    },
+    {
+      "q_en": "How does your pipeline tell a slow drift from a step change, and what are your limit of detection and limit of quantification?",
+      "q_zh": "你們的流程怎麼分辨緩慢漂移和突然跳階？你們的偵測極限和定量極限各是多少？",
+      "type": "validate",
+      "tier": "A",
+      "deep": 1,
+      "pages": [
+        "measurement#The lever is the gate after the estimator",
+        "software",
+        "results#Fault detection"
+      ],
+      "seat": "hw",
+      "backup": "dry",
+      "kw_en": [
+        "jump gate for steps",
+        "reference axis for drift",
+        "no LOD number published"
+      ],
+      "kw_zh": [
+        "跳階靠 jump gate",
+        "漂移靠參考通道軸",
+        "LOD 數值沒有公布"
+      ],
+      "a_en": "Two different detectors. A step is caught at the reading level by the jump gate: more than 0.05 OD or five percent from the last accepted value, and a new level only accepted after three agreeing readings. A slow drift is caught by a fault model that scores the reference beam, which never sees the culture, separately from the growth rate. On the 434 hour run it flagged the sensor 26.7 hours before the OD channel failed, at a 6.1 percent false alarm rate. We pre-registered both limits, as three and ten times the blank standard deviation, but no number for either is published. The pages give the finest step instead: 0.21 milligrams of silica for the Pro, 0.49 for the Slim.",
+      "a_zh": "是兩套不同的偵測。跳階在單筆讀值這一層用 jump gate 抓：和上一個被接受的值差超過 0.05 OD 或 5%，而且要三筆一致才接受新水準。緩慢漂移在更長的時間軸上抓：故障模型把從不穿過菌液的參考光和生長速率分成兩軸分別評分。在 434 小時那次，它在 216.3 小時就標記了感測器，比 OD 通道失效早 26.7 小時，在未見過的安靜時段誤報率 6.1%。兩個極限我們確實事先登記過，定義是空白標準差的三倍和十倍，但兩個數值都沒有公布。頁面上給的是各機型在 silica 上能分辨的最小變化：Pro 0.21 mg，Slim 0.49 mg。",
+      "trap_en": "Quoting the 0.0039 OD estimator spread as an accuracy figure; it only says the estimators agree in clean flow.",
+      "trap_zh": "把 0.0039 OD 的估計量差距當成準確度；那只說明流道乾淨時各估計量彼此一致。",
+      "basis": "Metrology question: a monitoring instrument needs stated detection limits"
+    },
+    {
+      "q_en": "Your calibration ladder is one micron silica beads. A Bacillus subtilis cell is not that. Name the ways they differ optically, and tell me which direction those differences push your reading.",
+      "q_zh": "你們的校正梯度用的是 1 微米的 silica 微球，但 Bacillus subtilis 不是那樣的東西。請說出它們光學上有哪些不同，以及這些差異會把你們的讀值往哪個方向推。",
+      "type": "boundary",
+      "tier": "A",
+      "deep": 1,
+      "pages": [
+        "measurement#What this calibration does not establish",
+        "hardware-photometer#7.4",
+        "results"
+      ],
+      "seat": "hw",
+      "backup": "dry",
+      "kw_en": [
+        "1.46 against 1.33 to 1.41",
+        "rods in chains, not spheres",
+        "particle equivalents only"
+      ],
+      "kw_zh": [
+        "1.46 對 1.33 到 1.41",
+        "是成串的桿狀，不是球",
+        "只能算等效顆粒數"
+      ],
+      "a_en": "A bead is a 1 micron sphere, refractive index 1.46, density 2.3; a vegetative cell is a rod, often in chains, nearer 1.33 to 1.41 and about 1.1. So the differences are index contrast against water, shape, and a size distribution that shifts as the culture grows and sporulates. Lower index contrast means a cell scatters less per particle, and chains scatter differently again from singles. What we cannot do is sign the total error from our own data, because our concentration axis is milligrams of silica, not cells. The ladder gives equivalent particle counts, not cell mass, and a dilution series of washed cells is still owed.",
+      "a_zh": "微球是 1 微米的球，折射率 1.46，密度 2.3；營養期的菌是桿狀，常常成串，折射率大約 1.33 到 1.41，密度約 1.1。所以差異有三個：對水的折射率對比、形狀，還有隨著生長和產孢一直在變的大小分布。折射率對比較低代表每顆細胞散射得比較少，而成串又和單顆散射不一樣。我們做不到的是從自己的數據判斷總誤差的正負號，因為我們的濃度軸是「加了幾毫克 silica」，不是細胞數。這個梯度給的是等效顆粒數，不是細胞質量，洗過的菌體稀釋序列我們還欠著。",
+      "trap_en": "Saying the silica run calibrates the instrument for culture; it calibrates the instrument, not the organism.",
+      "trap_zh": "說 silica 那次校正把儀器對菌液也校好了；它校的是儀器，不是生物。",
+      "basis": "The calibration standard is not the analyte, and the wiki admits it"
+    },
+    {
+      "q_en": "Suppose a judge wants your number in cells per millilitre rather than in OD. What would you have to measure, and what does the iGEM measurement work on absolute units ask for that you have not done?",
+      "q_zh": "假設評審要的是每毫升幾顆細胞，不是 OD。你們還得量什麼？iGEM 關於絕對單位的那套做法，有哪一步你們沒有做？",
+      "type": "validate",
+      "tier": "A",
+      "deep": 1,
+      "pages": [
+        "results#Turbidity calibration",
+        "measurement#What this calibration does not establish",
+        "hardware-photometer#5.2"
+      ],
+      "seat": "hw",
+      "backup": "dry",
+      "kw_en": [
+        "plate counts plus dry weight",
+        "Beal 2020, particles per mL",
+        "mass ladder, no bead counts"
+      ],
+      "kw_zh": [
+        "菌落計數加乾重",
+        "Beal 2020，顆粒數濃度",
+        "我們用質量，沒數微球"
+      ],
+      "a_en": "We would need one paired series on one culture: a dilution ladder of washed cells read on our photometer, the same samples plated for colony counts, and a dry weight arm, repeated often enough that the conversion has a confidence interval and not just a slope. The absolute units argument, which we cite as Beal and colleagues in 2020, is that OD is instrument specific and a silica bead ladder lets you report particles per millilitre instead. We used silica, but as a weighed mass ladder. We never counted beads, and we never put cells beside them. So our OD600 is comparable with the BioDrop below 2.5 and with nothing else.",
+      "a_zh": "要在同一批菌上做一組配對實驗：洗過的菌體做稀釋梯度，用我們的光度計讀，同一批樣品塗盤算菌落，再加一組乾重，而且要重複到那個換算有信賴區間，不只是一條斜率。絕對單位的論點，就是我們引的 Beal 等人 2020：OD 是儀器專屬的量，用 silica 微球梯度才能改報每毫升顆粒數。我們有用 silica，但是當成秤重的質量梯度。我們沒有去數微球，也沒有把細胞和微球放在一起比。所以我們的 OD600 在 2.5 以下可以跟 BioDrop 比，除此之外不能跟任何東西比。",
+      "trap_en": "Saying OD 1 equals a textbook cell number; our own pages refuse that step.",
+      "trap_zh": "說 OD 1 就等於教科書上的某個細胞數；我們自己的頁面就否決了這一步。",
+      "basis": "Measurement committee position on calibrated absolute units"
+    },
+    {
+      "q_en": "Your His-tag ELISA is a competitive format. Explain what that does to the shape of the curve, where the usable window sits, and what your untransformed host control reading of about five micrograms per millilitre means quantitatively.",
+      "q_zh": "你們的 His-tag ELISA 是競爭型的。請解釋這會讓曲線變成什麼形狀、可用的範圍在哪裡，以及未轉殖宿主對照讀到大約 5 µg/mL，在定量上代表什麼。",
+      "type": "validate",
+      "tier": "A",
+      "deep": 1,
+      "pages": [
+        "measurement#Competitive His-tag ELISA",
+        "measurement#Standard curve and valid measurement range",
+        "results"
+      ],
+      "seat": "wet2",
+      "backup": "dry",
+      "kw_en": [
+        "signal falls as target rises",
+        "re-assay outside 20 to 80",
+        "host control is our floor"
+      ],
+      "kw_zh": [
+        "目標越多訊號越低",
+        "20 到 80% 以外要重做",
+        "宿主對照就是我們的底線"
+      ],
+      "a_en": "In a competitive assay the sample and a labelled tracer compete for one antibody, so more target gives less signal. Our percent B over B zero falls from 95.1 at 0.093 micrograms per millilitre to 31.6 at three. The kit says re-assay anything outside 20 to 80 percent, and our six standards only span 31.6 to 95.1. All four ACC deaminase wells read below 20 percent, off the bottom of the standards, so 13.5 to 19.1 micrograms per millilitre is an extrapolation. The control matters most: untransformed WB800 read 5.452 and 4.562, the same range as four of our six constructs. That is our floor, so no ranking on that plate can be attributed to expression.",
+      "a_zh": "競爭型的做法是樣品和帶標記的 tracer 搶同一個抗體，所以目標蛋白越多，訊號越低。我們的 %B/B0 從 0.093 µg/mL 的 95.1 降到 3 µg/mL 的 31.6。試劑盒要求 20 到 80% 以外的要重做，而我們六個標準點只涵蓋 31.6 到 95.1。ACC deaminase 四個孔都讀在 20% 以下，掉到標準品的下緣之外，所以 13.5 到 19.1 µg/mL 是外插值。最關鍵的是對照：未轉殖的 WB800 讀到 5.452 和 4.562，跟六個構築中的四個同一個範圍。那就是我們的底線，所以那塊盤上的排名不能歸因於表達量。",
+      "trap_en": "Reading 13.5 to 19.1 micrograms per millilitre as a quantity; our own page says it only means higher than LEA14 and BoPep4.",
+      "trap_zh": "把 13.5 到 19.1 µg/mL 當成定量值；我們自己的頁面寫它只代表「比 LEA14 和 BoPep4 高」。",
+      "basis": "Competitive-format ELISA is easy to over-read, and the control failed"
+    },
+    {
+      "q_en": "Both your ELISA and your Western blot read the same polyhistidine tag. A band at about 37 kilodaltons is a size, not an identity. What else could an anti-His antibody be binding, and what would make the identification stick?",
+      "q_zh": "你們的 ELISA 和 Western blot 讀的是同一個 polyhistidine tag。大約 37 kDa 的一條帶只是分子量，不是身分。anti-His 抗體還可能抓到什麼？要怎樣才算真的確認身分？",
+      "type": "validate",
+      "tier": "A",
+      "deep": 1,
+      "pages": [
+        "measurement#Western blot",
+        "results",
+        "engineering"
+      ],
+      "seat": "wet2",
+      "backup": "dry",
+      "kw_en": [
+        "histidine-rich host proteins",
+        "35, 37 and 42 predicted",
+        "host lane, elution, mass spec"
+      ],
+      "kw_zh": [
+        "富含組胺酸的宿主蛋白",
+        "預測值 35、37、42",
+        "宿主對照、洗出、質譜"
+      ],
+      "a_en": "Any host protein with a run of surface histidines can give an anti-His signal, and so can carry over from a rich medium; that is the most likely reading of a negative control that comes back in the sample range. Size does not settle it either. Our own pages predict the monomer at about 35, 37 and 42 kilodaltons in different places, and some light-plate blots run between 63 and 100, which we call a possible dimer and say we have not validated. What would make it stick is an untransformed host lane on the same gel, which our 2 August blot lacks along with any loading control, the elution fractions tracking with purification, and mass spectrometry, which we never ran.",
+      "a_zh": "任何表面帶一串組胺酸的宿主蛋白都可能給出 anti-His 訊號，豐富培養基帶過來的東西也可能；陰性對照讀到和樣品同範圍，最合理的解釋就是這個。分子量也定不了身分。我們自己的頁面在不同地方把單體寫成大約 35、37 和 42 kDa，而燈板的某些 blot 跑在 63 到 100 之間，我們說那可能是雙體，而且明講還沒驗證。要真的確認身分，需要同一塊膠上有未轉殖宿主的 lane，我們 8 月 2 日那塊 blot 沒有，而且也沒有 loading control；還需要 imidazole 洗出的各管跟著純化走；最後需要質譜，而我們從來沒做。",
+      "trap_en": "Saying the band is at the size the construct predicts and stopping there; our own pages predict that size three different ways.",
+      "trap_zh": "說那條帶就在構築預測的分子量上就不講了；我們自己的頁面對那個預測值有三種說法。",
+      "basis": "Antibody specificity is the weak joint in both protein assays"
+    },
+    {
+      "q_en": "What does DNPH actually derivatise in your assay, why is an overnight endpoint reading not a rate, and why do your two activity figures differ fourteenfold?",
+      "q_zh": "你們的 DNPH 到底衍生化了什麼？為什麼過夜的終點讀值不算速率？還有，你們兩個活性數字為什麼差了十四倍？",
+      "type": "validate",
+      "tier": "A",
+      "deep": 1,
+      "pages": [
+        "measurement#ACC deaminase activity by DNPH assay",
+        "measurement#Defining the quantitative range",
+        "results"
+      ],
+      "seat": "wet2",
+      "backup": "dry",
+      "kw_en": [
+        "carbonyl to hydrazone at 540",
+        "endpoint, so total product",
+        "0.52 against 7.25 mU/mL"
+      ],
+      "kw_zh": [
+        "羰基變 hydrazone，540 nm",
+        "終點法，是累積產物",
+        "0.52 對 7.25 mU/mL"
+      ],
+      "a_en": "DNPH condenses with the carbonyl of alpha-ketobutyrate, the product of ACC cleavage, giving a hydrazone we read at 540 nanometres. Because we incubate overnight at thirty degrees and read once, the number is total product accumulated, not an initial velocity, and 41 millimolar substrate does not guarantee the reaction stayed linear. That is why the two figures disagree. The 30.9 nanomoles per millilitre per hour from the twelve-hour reactions is 0.52 milliunits per millilitre, against 7.25 from a thirty-minute reaction on the permeate; a long reaction averages down as substrate depletes and the enzyme loses activity. Our page says it plainly: until the same sample is read both ways, neither is a rate we can quote.",
+      "a_zh": "DNPH 和 alpha-ketobutyrate 的羰基縮合，那是 ACC 被切開後的產物，生成 hydrazone，我們在 540 nm 讀。因為是 30 度過夜、只讀一次，這個數字是累積的總產物，不是初速，而且 41 mM 的基質也不保證反應一直在線性區。這就是兩個數字對不起來的原因：12 小時反應算出來的 30.9 nmol/mL/h 等於 0.52 mU/mL，而透過膜的 permeate 用 30 分鐘反應讀到 7.25 mU/mL；反應時間拉長，基質耗掉、酵素也失活，平均下來就變低。我們頁面上講得很直接：在同一個樣品用兩種方式都讀過之前，兩個數字都不能當成速率來引用。",
+      "trap_en": "Quoting a specific activity in units per milligram; no such figure is on the published wiki, because neither activity number is yet a rate.",
+      "trap_zh": "報一個 U/mg 的比活性；已發表的 wiki 上沒有這個數字，因為兩個活性數值都還不算速率。",
+      "basis": "Endpoint colorimetry over-read as kinetics, on the page's own unreconciled numbers"
+    },
+    {
+      "q_en": "In-line turbidity probes are sold for bioreactors and open-source OD meters are almost a genre in iGEM. What in your photometer is therefore not new, and how much of that prior work did you actually survey?",
+      "q_zh": "線上濁度探頭本來就有商品，開源 OD 計在 iGEM 幾乎是一種類型了。那你們的光度計裡哪些其實不新？你們到底查了多少前人的工作？",
+      "type": "history",
+      "tier": "A",
+      "deep": 1,
+      "pages": [
+        "hardware-photometer",
+        "contribution",
+        "measurement"
+      ],
+      "seat": "hw",
+      "backup": "dry",
+      "kw_en": [
+        "probes and reference beams exist",
+        "LPA is a published design",
+        "no prior-art survey published"
+      ],
+      "kw_zh": [
+        "探頭和參考光早就有",
+        "LPA 是已發表的設計",
+        "我們頁面沒有前人技術回顧"
+      ],
+      "a_en": "Almost none of the pieces is new, and we should say so. In-line optical cell density probes are a commercial product. Six hundred nanometres is the field convention. A split reference beam is textbook ratiometric photometry. Robust statistics are much older than us. Silica as a scattering standard comes straight from the iGEM measurement work we cite. Open hardware is already in the project: our light plate is the published LPA design, and we credit it. The honest part is that our photometer pages carry no prior art survey of other teams' OD meters. We compared ourselves against one benchtop instrument, not against the open designs, so we make no priority claim.",
+      "a_zh": "幾乎沒有一個零件是新的，這點我們應該直說。線上光學細胞密度探頭本來就有商品；600 nm 是這個領域的慣例；分出一道參考光是教科書裡的比值式光度法；穩健統計比我們老得多；用 silica 當散射標準品是我們引用的 iGEM 測量工作直接來的。開源硬體在這個專案裡本來就有：我們的燈板就是已發表的 LPA 設計，我們有標明出處。誠實的部分是：我們光度計的頁面沒有針對其他隊伍 OD 計的前人技術回顧。我們只跟一台桌上型儀器比過，沒有跟那些開源設計比，所以我們不主張這是首創。",
+      "trap_en": "Claiming the first in-line OD600 in iGEM; nothing on our wiki supports a priority claim.",
+      "trap_zh": "說這是 iGEM 第一個線上 OD600；我們的 wiki 沒有任何東西能支持首創的說法。",
+      "basis": "DIY photometers are a worn iGEM genre; judges test positioning honesty"
+    },
+    {
+      "q_en": "Grant that the parts are all old. What did your team actually add that someone reading your pages could not have got from the designs that already existed?",
+      "q_zh": "就當所有零件都是舊的。那你們這組到底加了什麼，是讀你們頁面的人從既有設計裡拿不到的？",
+      "type": "history",
+      "tier": "A",
+      "deep": 1,
+      "pages": [
+        "measurement#One data set, eleven algorithms",
+        "results#Culture monitoring",
+        "hardware-photometer#5.2"
+      ],
+      "seat": "hw",
+      "backup": "dry",
+      "kw_en": [
+        "434 hours, honest at 243",
+        "calibrate to mass, not machines",
+        "pre-registered, five failed"
+      ],
+      "kw_zh": [
+        "434 小時，243 小時就說實話",
+        "對質量校正，不是對機器",
+        "事先登記，五項沒過"
+      ],
+      "a_en": "Four things, and they are documentation rather than invention. One: the instrument ran in the loop of a working perfusion reactor for 434 hours with nothing withdrawn, and we publish where it stopped being usable, at 243 hours. Two: we calibrated against weighed mass, titanium dioxide and then one micron silica, instead of against another machine, so the concentration axis is independent of both instruments. Three: we pre-registered eleven algorithms and eight predictions, replayed them all on one raw data set, and report the five predictions the data did not support. Four: the raw bursts, the replay scripts and the pre-registration are published, so the whole analysis can be repeated on somebody else's photometer in about four days.",
+      "a_zh": "四件事，而且都是文件工作，不是發明。第一，這台儀器裝在一個真的在跑的灌流反應器迴路裡連續跑了 434 小時，中間沒有抽樣，而且我們公開寫出它從 243 小時起就不能用了。第二，我們是對秤出來的質量校正，先二氧化鈦再 1 微米 silica，不是對另一台機器校正，所以濃度軸獨立於兩台儀器。第三，我們事先登記了十一種演算法和八個預測，全部在同一份原始資料上重跑，而且把數據不支持的那五個預測照實報出來。第四，原始 burst、重播腳本和事先登記都公開，別人用自己的光度計大概四個工作日就能重做整套分析。",
+      "trap_en": "Leading with the cost saving; the contribution is the documented calibration and the published raw data.",
+      "trap_zh": "一開口就講省錢；真正的貢獻是有文件的校正和公開的原始資料。",
+      "basis": "Nomination needs a crisp statement of what is genuinely new"
+    },
+    {
+      "q_en": "A benchtop spectrophotometer is a better instrument than yours in every optical respect. Why build this at all, and please be careful with the cost comparison.",
+      "q_zh": "桌上型分光光度計在光學上每一項都比你們的好。那為什麼還要做這台？順便，成本的比較請小心一點。",
+      "type": "history",
+      "tier": "A",
+      "deep": 1,
+      "pages": [
+        "hardware-photometer#10.1",
+        "contribution",
+        "hardware-photometer#5.2"
+      ],
+      "seat": "hw",
+      "backup": "dry",
+      "kw_en": [
+        "cannot sit in the loop",
+        "repeatability over accuracy",
+        "US$372 against about US$470"
+      ],
+      "kw_zh": [
+        "它沒辦法裝在迴路上",
+        "重複性比準確度重要",
+        "372 美元對約 470 美元"
+      ],
+      "a_en": "Because a benchtop instrument cannot sit in the loop. Every reading it gives costs a sampling event, which for a sealed reactor meant to run outside a lab is a contamination risk and a person standing there. Ours reads every ten minutes for weeks with nothing withdrawn, and for following one vessel repeatability matters more than absolute accuracy: we return the median of a burst on a flowing loop, the BioDrop one hand-pipetted cuvette. On cost, be careful. The photometer and measurement pages say US$371.78 for the Pro against NT$15,000, about US$470, for the BioDrop. Our Contribution page still says about US$360 against roughly US$15,000, and that is a currency slip we should fix.",
+      "a_zh": "因為桌上型儀器沒辦法裝在迴路上。它每給一個讀值就要抽一次樣，而對一個密閉、設計上要在實驗室外運轉的反應器來說，那就是污染風險，還需要有人站在那裡。我們的每十分鐘讀一次、連續幾週，中間什麼都不抽；而要追一個反應器，重複性比絕對準確度重要：我們回報的是流動迴路上一組 burst 的中位數，BioDrop 是一管手動吸的比色管。成本要講清楚：光度計頁和 Measurement 頁寫 Pro 是 US$371.78，BioDrop 是 NT$15,000，大約 470 美元。我們的 Contribution 頁還寫著大約 360 美元對大約一萬五千美元，那是幣別弄錯了，應該修掉。",
+      "trap_en": "Repeating the Contribution page's US$15,000; the bill of materials prices the reference at NT$15,000, about US$470.",
+      "trap_zh": "照抄 Contribution 頁的一萬五千美元；零件表寫參考儀器是 NT$15,000，大約 470 美元。",
+      "basis": "The obvious sceptical question, and our own cost claim is wrong on some pages"
+    },
+    {
+      "q_en": "Your silica concentration axis is set by pipetted volume. The measurement page gives the loop volume as 50 millilitres and the photometer page as 500. Does your calibration survive that?",
+      "q_zh": "你們 silica 的濃度軸是用吸量的體積定的。Measurement 頁寫迴路體積 50 mL，光度計頁寫 500 mL。這樣你們的校正還站得住嗎？",
+      "type": "gap",
+      "tier": "A",
+      "deep": 1,
+      "pages": [
+        "measurement#What this calibration does not establish",
+        "hardware-photometer#5.2",
+        "results#Silica calibration"
+      ],
+      "seat": "hw",
+      "backup": "dry",
+      "kw_en": [
+        "slopes need mass, not volume",
+        "H1 needs mg/mL",
+        "report milligrams added"
+      ],
+      "kw_zh": [
+        "斜率只要質量，不要體積",
+        "H1 需要 mg/mL",
+        "改報加進去的毫克數"
+      ],
+      "a_en": "The fitted slopes and the agreement with the reference survive, because those are instrument against instrument and instrument against milligrams added, and none of that needs the volume. What does not survive is any concentration in milligrams per millilitre, and that is exactly the unit one of our own pre-registered predictions is written in: H1 asks whether the benchtop reference agrees with single-scattering theory, with a threshold of 1.8 to 2.8 OD per milligram per millilitre. You cannot score that without the volume. Measurement says a measured hold-up of 50 millilitres; the photometer and Results pages put the silica into 500. So I would report the ladder in milligrams added and remeasure the loop before quoting any concentration.",
+      "a_zh": "擬合出來的斜率和跟參考儀器的一致性都還站得住，因為那些是儀器對儀器、儀器對加進去的毫克數，完全不需要體積。站不住的是任何以 mg/mL 表示的濃度，而那剛好就是我們自己事先登記的預測所用的單位：H1 問的是桌上型參考儀器是否符合單次散射理論，門檻訂在每 mg/mL 1.8 到 2.8 OD。沒有體積就沒辦法判定這一條。Measurement 頁寫量到的迴路持液量是 50 mL，光度計頁和 Results 頁卻寫 silica 是加進 500 mL。所以我會改報「加了幾毫克」，並在引用任何濃度之前把迴路重新量一次。",
+      "trap_en": "Picking one volume on the spot; the arithmetic that follows is wrong either way until the loop is remeasured.",
+      "trap_zh": "當場挑一個體積講；在迴路重新量過之前，後面的算術兩種都是錯的。",
+      "basis": "A concentration axis the pages give two ways is the weakest link in the calibration"
+    },
+    {
+      "q_en": "Your summary line says: within 3.8 percent of the benchtop BioDrop with no transform fitted, slope 1.001 against it. Take that apart for me, and then state the result the way a metrologist would.",
+      "q_zh": "你們的摘要寫：未擬合任何轉換就與桌上型 BioDrop 相差 3.8% 以內，對它的斜率是 1.001。請把這句話拆開講，再用計量的方式把結果重新陳述一次。",
+      "type": "gap",
+      "tier": "A",
+      "deep": 1,
+      "pages": [
+        "measurement#Two standards, two validation runs",
+        "hardware-photometer#5.2",
+        "engineering"
+      ],
+      "seat": "hw",
+      "backup": "dry",
+      "kw_en": [
+        "two different runs",
+        "slope CI 0.892 to 1.110",
+        "offset 0.123, p 0.005"
+      ],
+      "kw_zh": [
+        "兩個不同的實驗",
+        "斜率區間 0.892 到 1.110",
+        "偏移 0.123，p 0.005"
+      ],
+      "a_en": "The two halves come from different runs. The 3.8 percent is a median paired difference on titanium dioxide in August, read undiluted, so that comparison is trustworthy only to about OD 1. The slope of 1.001 comes from eight silica points in October, and the headline leaves out what sits beside it: a constant offset of minus 0.123 OD, significant at p equals 0.005. Stated properly, the slope's 95 percent interval runs 0.892 to 1.110, so eight points pin it only to within about eleven percent of one, and the paired difference is minus 0.123 OD, interval minus 0.150 to minus 0.095. A scale error would have moved the slope; this moved the intercept.",
+      "a_zh": "這句話的兩半來自兩個不同的實驗。3.8% 是 8 月用二氧化鈦做的配對差中位數，而且是未稀釋讀的，所以那個比較只能信到大約 OD 1。斜率 1.001 來自 10 月 silica 的八個點，而摘要漏掉了旁邊那一項：固定偏移 −0.123 OD，p = 0.005 達顯著。正確的陳述是：斜率的 95% 區間是 0.892 到 1.110，所以八個點只能把它定在 1 的約 11% 之內；配對差是 −0.123 OD，區間 −0.150 到 −0.095。如果是刻度錯誤，動的會是斜率；這裡動的是截距，所以問題指向空白值，而不是光學。",
+      "trap_en": "Quoting slope 1.001 as if it were exact; the interval says eight points fix it only to about eleven percent.",
+      "trap_zh": "把斜率 1.001 當成精確值；區間顯示八個點只能把它定到約 11% 之內。",
+      "basis": "The headline claim is assembled from two runs and drops its offset"
+    },
+    {
+      "q_en": "You have never run a dilution series of washed Bacillus subtilis at known densities against this photometer. Predict what you would see, and say what result would surprise you.",
+      "q_zh": "你們從來沒拿洗過、已知密度的 Bacillus subtilis 做稀釋序列去對這台光度計。請預測你們會看到什麼，以及什麼結果會讓你們意外。",
+      "type": "reason",
+      "tier": "A",
+      "deep": 1,
+      "pages": [
+        "measurement#What this calibration does not establish",
+        "hardware-photometer#7.4",
+        "results"
+      ],
+      "seat": "hw",
+      "backup": "dry",
+      "kw_en": [
+        "lower slope than beads",
+        "bends earlier than OD 2.5",
+        "age changes the scattering"
+      ],
+      "kw_zh": [
+        "斜率比微球低",
+        "比 OD 2.5 更早彎掉",
+        "菌齡會改變散射"
+      ],
+      "a_en": "I would expect the response to stay straight at low density, with the slope per milligram of dry cells coming out below silica's, because a cell's refractive index is nearer 1.33 to 1.41 against the bead's 1.46, so each particle scatters less. I would expect the departure from linearity to begin below OD 2.5, because rods and chains throw more light forward than spheres do and our short path collects that light. And I would expect replicate scatter to grow with culture age, as cells lengthen, chain and sporulate. What would surprise me is a slope above silica's, or a straight line all the way to OD 4.",
+      "a_zh": "我預期在低密度時反應還是直的，而每毫克乾菌重的斜率會比 silica 低，因為細胞的折射率大約 1.33 到 1.41，微球是 1.46，所以每顆散射得比較少。我預期開始偏離線性的點會低於 OD 2.5，因為桿狀和成串比球體往前散射更多，而我們的短光程剛好把那些光收進來。我也預期重複樣品之間的離散會隨菌齡變大，因為細胞會變長、成串、產孢。會讓我意外的是：斜率比 silica 高，或者一路直到 OD 4 都還是直線。",
+      "trap_en": "Predicting that the silica numbers transfer unchanged; the 5.57 factor and the OD 2.5 limit describe the instruments.",
+      "trap_zh": "預測 silica 的數字可以原封不動搬過來；5.57 這個係數和 OD 2.5 的上限描述的是儀器本身。",
+      "basis": "The experiment the wiki says is still owed, so the answer must be derived"
+    }
+  ]
+}

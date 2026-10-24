@@ -486,11 +486,12 @@ var GAPS = [
 "id":"g054"
 },
 {
-"issue_en":"The statistical test is never named. The plant figures carry asterisks up to P < 0.0001, but the Measurement page says the trehalose and heat pretest charts had no significance testing and show three technical replicates. The Measurement text also says 0.5 mM trehalose still rescued best, while the Plants page says 1.0 mM was the best dose.",
-"issue_zh":"統計檢定方法從未寫明。植物圖有高達 P < 0.0001 的星號，但 Measurement 頁說 trehalose 與熱逆境前測圖沒有做顯著性檢定，只顯示三個技術重複。Measurement 還寫 0.5 mM trehalose 效果最好，Plants 頁卻說 1.0 mM 是最佳劑量。",
+"issue_en":"What the asterisks compare. The plant figures name the test — one-way ANOVA with Dunnett's — but the Measurement page says the trehalose and heat pretest charts had no significance testing and show three technical replicates. The Measurement text also says 0.5 mM trehalose still rescued best, while the Plants page says 1.0 mM was the best dose.",
+"issue_zh":"星號在比什麼。植物圖有寫檢定方法——one-way ANOVA 搭配 Dunnett's——但 Measurement 頁說 trehalose 與熱逆境前測圖沒有做顯著性檢定，只顯示三個技術重複。Measurement 還寫 0.5 mM trehalose 效果最好，Plants 頁卻說 1.0 mM 是最佳劑量。",
 "where":"plant#Set 4; measurement#Chlorophyll; results",
-"say_en":"Say we show mean with SEM and P-value stars, that we cannot name the test from the wiki, and that we will check the raw files rather than guess.",
+"say_en":"Say we show mean with SEM and P-value stars, that we will check the raw files rather than guess.",
 "say_zh":"說明我們呈現平均值加 SEM 與 P 值星號，維基上看不出是哪種檢定，我們會查原始檔而不是猜。",
+"regrounded":"2026-10-25",
 "dom":"plant",
 "id":"g055"
 },
