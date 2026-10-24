@@ -1,13 +1,14 @@
-/* Figure Room: the same four judges, but they point at a picture.
- * Every figure here is published on our own wiki. Two ways to be asked:
- * say what it is out loud, or pick one of four. Ten to a run. */
+/* Figure Room: the same four judges as the mock room, but they point at a picture.
+ * Every figure here is published on our own wiki. Two ways to be asked: say what it
+ * is out loud, or pick one of four. Ten to a run, and it ends in the same member card.
+ * The roster, the picker, the timer, the scoring and the card are the mock room's;
+ * what differs is that the question is an image. */
 (function () {
   'use strict';
   var S = window.Site;
   var BANK = (window.FIGURES && window.FIGURES.items) || [];
   var FMETA = (window.FIGURES && window.FIGURES.meta) || { doms: [] };
   var IMG = 'assets/img/fq/';
-  var FD = '-apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif';
 
   var MODES = [
     { id: 'open',   en: 'Say it out loud',  zh: '自己說出來' },
@@ -39,16 +40,19 @@
     empty:  { en: 'Nothing here yet. Run a few figures first.', zh: '這裡還沒有東西。先練幾張圖。' },
     none:   { en: 'No figures match that. Widen the filters.', zh: '沒有符合的圖。把條件放寬一點。' },
     score:  { en: 'Points', zh: '分數' },
-    streak: { en: 'Streak', zh: '連對' },
+    streak: { en: 'Streak', zh: '連勝' },
     run:    { en: 'Figure', zh: '第' },
     done:   { en: 'Run finished', zh: '這局練完了' },
     again:  { en: 'Go again', zh: '再來一次' },
     reroll: { en: 'New panel', zh: '換一組評審' },
     rerolled: { en: 'Four new judges. Nobody owns a subject.', zh: '四位新評審。沒有人固定負責哪個主題。' },
     playing:{ en: 'Playing as', zh: '玩家名稱' },
-    yourname:{ en: 'your name', zh: '你的名字' },
+    whotitle:{ en: 'Who is at the microphone?', zh: '誰站在麥克風前？' },
+    whosearch:{ en: 'Find your name', zh: '搜尋你的名字' },
+    guest:  { en: 'Not on the roster? Type a name', zh: '不在名單上？自己輸入名字' },
+    guestgo:{ en: 'Use this', zh: '就用這個' },
+    pickme: { en: 'Pick your name', zh: '選擇你的名字' },
     endrun: { en: 'End the run and save', zh: '結束並記分' },
-    nameln: { en: 'Name on the card', zh: '卡片上的名字' },
     lmode:  { en: 'How you answer', zh: '作答方式' },
     lrun:   { en: 'Run', zh: '一局' },
     ldeck:  { en: 'Which figures', zh: '出哪些圖' },
@@ -62,12 +66,19 @@
               zh: '如果不能複製，就用下載——或是在卡片上按右鍵複製圖片。' },
     right:  { en: 'Right', zh: '答對' },
     wrong:  { en: 'Not that one', zh: '不是這個' },
+    named:  { en: 'named it', zh: '認得出來' },
+    honest: { en: 'honest', zh: '誠實' },
     onwiki: { en: 'This figure is published on', zh: '這張圖發表在' },
-    points: { en: 'pts', zh: '分' },
-    outof:  { en: 'of a perfect run', zh: '滿分的比例' },
     speak:  { en: 'Say what it is, out loud, before you open the answer.', zh: '先出聲說出它是什麼，再打開答案。' },
     picked: { en: 'Keys 1 to 4 work too.', zh: '鍵盤 1 到 4 也可以選。' },
-    bankn:  { en: 'figures in the bank', zh: '張圖在題庫裡' }
+    bankn:  { en: 'figures in the bank', zh: '張圖在題庫裡' },
+    cnamed: { en: 'figures named', zh: '認出來的圖' },
+    cbest:  { en: 'best streak', zh: '最長連勝' },
+    cshaky: { en: 'now shaky', zh: '新增不熟' },
+    cperf:  { en: 'of a perfect run', zh: '滿分的比例' },
+    cpoints:{ en: 'points', zh: '分' },
+    cfigs:  { en: 'figures', zh: '張圖' },
+    croom:  { en: 'FIGURE ROOM · JUDGING TRAINER', zh: '看圖會場 · 評審訓練' }
   };
 
   var DOMS = FMETA.doms || [];
@@ -85,21 +96,21 @@
     i: -1,
     phase: 'idle',        /* idle | asked | answered */
     shaky: S.load('fq-shaky', []),
-    seconds: 45,
-    left: 45,
+    seconds: 90,
+    left: 90,
     tick: null,
-    running: false,
     paused: false,
     score: 0,
     streak: 0,
     best: 0,
     hits: 0,
+    newShaky: 0,
+    timeLeftSum: 0,
     panel: null,
     seed: Math.floor(Math.random() * 1e9),
     active: 0,
-    order: [],
-    name: S.load('fq-name', ''),
-    last: null
+    last: null,
+    verdict: null
   };
 
   function el(id) { return document.getElementById(id); }
@@ -110,6 +121,90 @@
     n.textContent = t;
     n.className = 'toast show' + (good === false ? ' bad' : '');
     setTimeout(function () { n.className = 'toast'; }, 1600);
+  }
+
+  /* ── the roster, shared with the mock room ──
+     Same localStorage keys, so a student picks their face once and both rooms
+     know who is at the microphone. */
+  var TASKS = window.TASK_COLORS || {};
+  var PEOPLE = window.ROSTER || [];
+
+  function person(slug) {
+    for (var i = 0; i < PEOPLE.length; i++) if (PEOPLE[i].s === slug) return PEOPLE[i];
+    return null;
+  }
+  function who() {
+    var p = person(S.load('who', ''));
+    if (p) return p;
+    var guest = S.load('guest', '');
+    return guest ? { n: guest, guest: true, own: [], mem: [] } : null;
+  }
+  function tasksOf(p) { return (p.own || []).concat(p.mem || []); }
+  function paletteOf(p) {
+    var t = tasksOf(p || {}), out = [], i;
+    for (i = 0; i < t.length; i++) if (TASKS[t[i]]) out.push(TASKS[t[i]]);
+    return out.length ? out : ['#45b06c', '#009c78', '#0167ef', '#61abfe', '#e35a1b'];
+  }
+  function faceSrc(p, kind) {
+    if (!p || p.guest) return '';
+    if (kind === 'g' && !p.gf) kind = 'w';
+    if (kind === 'w' && !p.w) kind = 'g';
+    return 'assets/img/team/' + p.s + '-' + kind + '.webp';
+  }
+  function initials(name) {
+    var bits = String(name || '?').trim().split(/\s+/);
+    return ((bits[0] || '?')[0] + (bits.length > 1 ? bits[bits.length - 1][0] : '')).toUpperCase();
+  }
+
+  function paintWho() {
+    var p = who(), face = el('whoface'), nm = el('whoname');
+    if (!p) {
+      face.className = 'whoface empty';
+      face.style.backgroundImage = '';
+      face.textContent = '?';
+      nm.textContent = S.p(L.pickme);
+      return;
+    }
+    var src = faceSrc(p, 'w');
+    face.className = 'whoface';
+    if (src) { face.style.backgroundImage = 'url(' + src + ')'; face.textContent = ''; }
+    else { face.style.backgroundImage = ''; face.textContent = initials(p.n); }
+    nm.textContent = p.n;
+  }
+
+  function drawPicker(filter) {
+    var f = (filter || '').toLowerCase().trim(), h = '', i;
+    var list = PEOPLE.slice().sort(function (a, b) { return a.n < b.n ? -1 : a.n > b.n ? 1 : 0; });
+    h += '<div class="pickgrid">';
+    for (i = 0; i < list.length; i++) {
+      var p = list[i];
+      if (f && (p.n + ' ' + p.r + ' ' + p.t + ' ' + p.sc).toLowerCase().indexOf(f) < 0) continue;
+      var src = faceSrc(p, 'w');
+      h += '<button class="pickp" data-slug="' + p.s + '">' +
+        (src ? '<span class="pickface" style="background-image:url(' + src + ')"></span>'
+             : '<span class="pickface empty">' + S.esc(initials(p.n)) + '</span>') +
+        '<span class="pickname">' + S.esc(p.n) + '</span></button>';
+    }
+    h += '</div>';
+    el('wholist').innerHTML = h;
+  }
+
+  function openPicker() {
+    drawPicker(el('whosearch').value);
+    el('whomodal').hidden = false;
+    document.body.style.overflow = 'hidden';
+    setTimeout(function () { el('whosearch').focus(); }, 30);
+  }
+  function closePicker() {
+    el('whomodal').hidden = true;
+    if (el('modal').hidden) document.body.style.overflow = '';
+  }
+  function choose(slug, guestName) {
+    if (slug) { S.save('who', slug); S.save('guest', ''); }
+    else { S.save('who', ''); S.save('guest', (guestName || '').slice(0, 18)); }
+    paintWho();
+    closePicker();
+    loadCardArt(function () { if (!el('modal').hidden) drawCard(); });
   }
 
   /* ── the pool ── */
@@ -130,8 +225,8 @@
     var p = S.shuffle(pool());
     state.deck = state.len > 0 ? p.slice(0, state.len) : p;
     state.i = -1;
-    state.score = 0; state.streak = 0; state.best = 0; state.hits = 0;
-    state.order = [];
+    state.score = 0; state.streak = 0; state.best = 0;
+    state.hits = 0; state.newShaky = 0; state.timeLeftSum = 0;
   }
 
   /* ── rail ── */
@@ -167,8 +262,7 @@
     el(box).addEventListener('click', function (e) {
       var b = e.target.closest('button[data-v]');
       if (!b) return;
-      var v = b.getAttribute('data-v');
-      state[key] = cast ? cast(v) : v;
+      state[key] = cast ? cast(b.getAttribute('data-v')) : b.getAttribute('data-v');
       S.save('fq-' + key, state[key]);
       drawRail();
       if (state.phase === 'idle') resetBubble();
@@ -180,17 +274,15 @@
     if (!state.panel) state.panel = window.Panel.make(state.seed);
     el('bench').innerHTML = window.Panel.bench(state.panel,
       state.phase === 'idle' ? null : state.active, S.lang);
-    var p = state.panel;
-    el('panelline').innerHTML = p.map(function (j) {
+    el('panelline').innerHTML = state.panel.map(function (j) {
       return '<span class="pill pill-line">' + S.esc(S.p(j.role)) + '</span>';
     }).join('');
   }
-
   function judgeName(j) {
     return (j.title[S.lang] ? j.title[S.lang] + ' ' : '') + j.given + ' ' + j.family;
   }
 
-  /* ── timer ── */
+  /* ── timer: ninety seconds, as in the real room, and the clock is worth points ── */
   function stopTick() { if (state.tick) { clearInterval(state.tick); state.tick = null; } }
   function startTick() {
     stopTick();
@@ -210,7 +302,7 @@
     var m = Math.floor(state.left / 60), s = state.left % 60;
     var n = el('timer');
     n.textContent = m + ':' + (s < 10 ? '0' : '') + s;
-    n.className = 'timer' + (state.left <= 10 ? ' warn' : '');
+    n.className = 'timer' + (state.left <= 10 ? ' over' : state.left <= 30 ? ' warn' : '');
   }
 
   /* ── one figure ── */
@@ -225,6 +317,7 @@
     el('endrun').hidden = true;
     el('ringwrap').hidden = true;
     el('start').hidden = false;
+    el('start').textContent = S.p(L.start);
     el('who').textContent = '';
     el('meta').innerHTML = '';
     el('qq').textContent = S.lang === 'zh' ? '準備好就開始。' : 'Ready when you are.';
@@ -237,8 +330,13 @@
 
   function paintScore() {
     txt('sc-score', String(state.score));
-    txt('sc-streak', String(state.streak));
+    txt('sc-streak', state.streak + (state.streak >= 3 ? ' 🔥' : ''));
     txt('sc-n', (state.i + 1) + '/' + state.deck.length);
+  }
+  function addPoints(n, why) {
+    state.score += n;
+    paintScore();
+    if (n) toast((n > 0 ? '+' : '') + n + (why ? ' · ' + why : ''), n > 0);
   }
 
   function cur() { return state.deck[state.i]; }
@@ -305,27 +403,30 @@
 
   function markShaky(id, on) {
     var at = state.shaky.indexOf(id);
-    if (on && at < 0) state.shaky.push(id);
+    if (on && at < 0) { state.shaky.push(id); state.newShaky++; }
     if (!on && at >= 0) state.shaky.splice(at, 1);
     S.save('fq-shaky', state.shaky);
     drawShaky();
   }
 
-  function settle(good, f) {
+  /* 10 for naming it, 2 for an honest "I did not", up to 5 for the clock:
+     the mock room's arithmetic, minus the seat call and the follow-up. */
+  function settle(good, f, honest) {
     stopTick();
     state.phase = 'answered';
+    var speed = state.left >= 45 ? 5 : state.left >= 15 ? 3 : state.left >= 0 ? 1 : 0;
+    state.timeLeftSum += Math.max(0, state.left);
     if (good) {
       state.hits++;
       state.streak++;
       if (state.streak > state.best) state.best = state.streak;
-      var bonus = Math.min(state.streak - 1, 5);
-      state.score += 10 + bonus;
       markShaky(f.id, false);
+      addPoints(10 + speed, S.p(L.named));
     } else {
       state.streak = 0;
       markShaky(f.id, true);
+      addPoints(honest ? 2 : 0, honest ? S.p(L.honest) : S.p(L.wrong));
     }
-    state.order.push({ id: f.id, ok: !!good });
     paintScore();
     reveal(f);
     el('marks').hidden = true;
@@ -343,8 +444,7 @@
       if (v === f.ans) bs[i].classList.add('ok');
       else if (v === oi) bs[i].classList.add('no');
     }
-    toast(ok ? S.p(L.right) + ' +' + (10 + Math.min(state.streak, 5)) : S.p(L.wrong), ok);
-    settle(ok, f);
+    settle(ok, f, false);
   }
 
   function next() {
@@ -353,104 +453,329 @@
     ask();
   }
 
-  function finish() {
-    stopTick();
-    state.phase = 'idle';
-    state.last = {
-      score: state.score, hits: state.hits, n: state.deck.length,
-      best: state.best, mode: state.mode,
-      pct: state.deck.length ? state.hits / state.deck.length : 0
-    };
-    openCard();
-    resetBubble();
+  /* ── end of a run ──
+     The line under the score is the part students screenshot, so it is written
+     to be read out loud by somebody else. A personal best outranks everything. */
+  var VERDICTS = {
+    awful: [
+      { en: 'You could not name your own figures.', zh: '你叫不出自己做的圖。' },
+      { en: 'Those pictures are on your wiki. Go and look.', zh: '那些圖就在你們的 wiki 上。去看。' },
+      { en: 'A judge will turn the screen round. Be ready.', zh: '評審會把螢幕轉過來。準備好。' },
+      { en: 'Paris does not grade on effort.', zh: '巴黎不會因為你很努力就給分。' },
+      { en: 'Good news: the only way from here is up.', zh: '好消息：從這裡開始只能往上。' },
+      { en: 'Nobody is ready on their first run. Run again.', zh: '沒有人第一次就準備好。再來一次。' }
+    ],
+    rough: [
+      { en: 'You know the pretty ones. They will pick the others.', zh: '漂亮的那幾張你認得。他們會挑別的。' },
+      { en: 'Half a figure is a whole problem.', zh: '認一半，等於整張圖有問題。' },
+      { en: 'Survivable. Not yet convincing.', zh: '勉強活下來，但還不夠有說服力。' },
+      { en: 'The panel is still writing. That is not good.', zh: '評審還在寫字。那不是好事。' },
+      { en: 'Learn two more figures and come back.', zh: '再記熟兩張圖再回來。' }
+    ],
+    fair: [
+      { en: 'Solid middle. Middles do not get nominated.', zh: '中規中矩。中規中矩不會被提名。' },
+      { en: 'You would hold the room. Briefly.', zh: '你撐得住場面。一下下。' },
+      { en: 'Good enough to be shown a harder one.', zh: '好到會被拿出更難的圖。' },
+      { en: 'The easy half is yours. Take the other half.', zh: '簡單的那一半是你的了。把另一半拿下。' },
+      { en: 'Respectable. Now make it boring to you.', zh: '可以。現在練到你自己覺得無聊為止。' }
+    ],
+    good: [
+      { en: 'Point at anything. You can read it.', zh: '隨便指一張，你都讀得出來。' },
+      { en: 'The panel would nod. Judges rarely nod.', zh: '評審會點頭。評審很少點頭。' },
+      { en: 'Sharp. Keep the honest limits in.', zh: '很銳利。誠實講限制的部分要留著。' },
+      { en: 'You are the one who should take the figures.', zh: '看圖的題目應該交給你。' },
+      { en: 'Nearly nothing shaky left.', zh: '幾乎沒有不熟的地方了。' }
+    ],
+    great: [
+      { en: 'Medal-room answers. Say them exactly like that.', zh: '這是會拿獎的回答。就照這樣講。' },
+      { en: 'You could narrate the whole wiki from the pictures.', zh: '你可以光看圖把整個 wiki 講一遍。' },
+      { en: 'The panel learns something from you.', zh: '評審會從你這裡學到東西。' },
+      { en: 'Frightening. In the right direction.', zh: '有點可怕。但是好的那種。' },
+      { en: 'Go and teach the other six seats.', zh: '去把另外六個位置教會。' }
+    ]
+  };
+
+  var FLAWLESS = [
+    { en: 'Every figure, named. Nothing on that wall is a stranger.', zh: '每一張圖都叫得出來。那面牆上沒有陌生人。' },
+    { en: 'Clean sweep. Point at any one of them.', zh: '全對。隨便他們指哪一張。' }
+  ];
+  var NONAMED = [
+    { en: 'Not one figure named. Start with the wall below.', zh: '一張都沒認出來。先從下面那面牆開始。' },
+    { en: 'You have seen none of these. That is fixable tonight.', zh: '這些你一張都沒看過。今晚就可以補起來。' }
+  ];
+  var BEST = [
+    { en: 'Your best yet, by {d}. Do that again on 13 November.', zh: '你的最佳紀錄，多了 {d} 分。11 月 13 日再做一次。' },
+    { en: 'Personal best, {d} up. Somebody has been drilling.', zh: '個人新高，進步 {d} 分。有人在練。' },
+    { en: 'Beat your own record by {d}. Keep the receipt.', zh: '破了自己的紀錄 {d} 分。把這張卡留著。' }
+  ];
+
+  function band(pct) {
+    return pct >= 0.85 ? 'great' : pct >= 0.7 ? 'good' : pct >= 0.52 ? 'fair' : pct >= 0.34 ? 'rough' : 'awful';
+  }
+  function pickLine(poolArr, key) {
+    if (poolArr.length < 2) return poolArr[0];
+    var last = S.load('fq-said-' + key, -1), i = 0;
+    for (var tries = 0; tries < 12; tries++) {
+      i = Math.floor(Math.random() * poolArr.length);
+      if (i !== last) break;
+    }
+    S.save('fq-said-' + key, i);
+    return poolArr[i];
+  }
+  function verdict(r) {
+    if (r.gain > 0) {
+      var line = pickLine(BEST, 'best');
+      return { en: line.en.replace('{d}', r.gain), zh: line.zh.replace('{d}', r.gain) };
+    }
+    if (r.n >= 4 && r.hits === r.n) return pickLine(FLAWLESS, 'flawless');
+    if (r.n >= 4 && r.hits === 0) return pickLine(NONAMED, 'nonamed');
+    var b = band(r.pct);
+    return pickLine(VERDICTS[b], b);
   }
 
-  /* ── the card ── */
-  function grade(pct) {
-    if (pct >= 0.9) return S.lang === 'zh' ? '這面牆你認得' : 'You know the wall';
-    if (pct >= 0.7) return S.lang === 'zh' ? '大部分認得出來' : 'Most of it lands';
-    if (pct >= 0.5) return S.lang === 'zh' ? '一半，再跑一局' : 'Half. Run it again';
-    return S.lang === 'zh' ? '先回去看圖' : 'Back to the wiki first';
+  function finish() {
+    stopTick();
+    /* a run you stopped early is scored on what you actually took */
+    var n = Math.max(1, Math.min(state.deck.length, state.i + 1));
+    var max = n * 15;                            /* 10 named + 5 speed */
+    var p0 = who(), key = 'fqpb-' + (p0 ? (p0.s || p0.n) : 'anon') + '-' + state.mode + '-' + (state.len || 0);
+    var prev = S.load(key, 0);
+    state.last = {
+      n: n,
+      hits: state.hits,
+      pct: Math.min(1, state.score / max),
+      avg: Math.round(state.timeLeftSum / n),
+      shaky: state.newShaky,
+      prev: prev,
+      gain: prev && state.score > prev ? state.score - prev : 0
+    };
+    if (state.score > prev) S.save(key, state.score);
+    state.verdict = verdict(state.last);
+    state.phase = 'idle';
+    resetBubble();
+    el('start').textContent = S.p(L.again);
+    el('qq').textContent = S.p(L.done);
+    openCard();
+  }
+
+  /* ── the card you post: the team page's member card, with a score on it ── */
+  var FD = '-apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang TC", "Noto Sans TC", sans-serif';
+  var LOGO = null, FACES = {};
+
+  function imgLoad(src, done) {
+    if (!src) { done(null); return; }
+    if (FACES[src] !== undefined) { done(FACES[src]); return; }
+    var im = new Image();
+    im.onload = function () { FACES[src] = im; done(im); };
+    im.onerror = function () { FACES[src] = null; done(null); };
+    im.src = src;
+  }
+  function rr(c, x, y, w, h, r) {
+    c.beginPath();
+    c.moveTo(x + r, y);
+    c.arcTo(x + w, y, x + w, y + h, r);
+    c.arcTo(x + w, y + h, x, y + h, r);
+    c.arcTo(x, y + h, x, y, r);
+    c.arcTo(x, y, x + w, y, r);
+    c.closePath();
+  }
+  function pill(c, x, y, text, fill, ink, border) {
+    c.font = '700 19px ' + FD;
+    var w = c.measureText(text).width + 34, h = 36;
+    rr(c, x, y, w, h, 18);
+    if (fill) { c.fillStyle = fill; c.fill(); }
+    if (border) { c.strokeStyle = border; c.lineWidth = 1.5; c.stroke(); }
+    c.fillStyle = ink;
+    c.textBaseline = 'middle';
+    c.fillText(text, x + 17, y + h / 2 + 1);
+    c.textBaseline = 'alphabetic';
+    return w;
+  }
+  function localDay() {
+    var t = new Date(), m = t.getMonth() + 1, d = t.getDate();
+    return t.getFullYear() + '-' + (m < 10 ? '0' : '') + m + '-' + (d < 10 ? '0' : '') + d;
+  }
+
+  function cardData() {
+    var r = state.last || { n: 1, hits: 0, pct: 0, shaky: 0 }, k;
+    var mode = '';
+    for (k = 0; k < MODES.length; k++) if (MODES[k].id === state.mode) mode = S.p(MODES[k]);
+    var p = who() || { n: S.lang === 'zh' ? '匿名' : 'Anonymous', own: [], mem: [], guest: true };
+    return {
+      p: p,
+      score: state.score,
+      grade: S.p(state.verdict || { en: '', zh: '' }),
+      pct: r.pct,
+      stats: [
+        [r.hits + '/' + r.n, S.p(L.cnamed)],
+        [String(state.best), S.p(L.cbest)],
+        [String(r.shaky), S.p(L.cshaky)]
+      ],
+      foot: [mode, r.n + ' ' + S.p(L.cfigs), localDay(), 'GEMS Taiwan · iGEM 2026'].join('  ·  ')
+    };
   }
 
   function drawCard() {
     var cv = el('cardcv'), c = cv.getContext('2d'), W = cv.width, H = cv.height;
-    var r = state.last || { score: 0, hits: 0, n: 0, best: 0, pct: 0 };
-    var name = (el('pname').value || state.name || '').trim();
+    var d = cardData(), p = d.p, pal = paletteOf(p), i;
 
     c.clearRect(0, 0, W, H);
-    c.fillStyle = '#fff'; c.fillRect(0, 0, W, H);
-    var g = c.createLinearGradient(0, 0, W, 0);
-    g.addColorStop(0, '#45b06c'); g.addColorStop(0.26, '#009c78'); g.addColorStop(0.52, '#0167ef');
-    g.addColorStop(0.74, '#61abfe'); g.addColorStop(1, '#e35a1b');
-    c.fillStyle = g; c.fillRect(0, 0, W, 12);
+    c.fillStyle = '#ffffff';
+    c.fillRect(0, 0, W, H);
 
-    var rg = c.createRadialGradient(W - 200, 160, 20, W - 200, 160, 560);
-    rg.addColorStop(0, 'rgba(69,176,108,.15)'); rg.addColorStop(1, 'rgba(255,255,255,0)');
-    c.fillStyle = rg; c.fillRect(0, 12, W, H);
+    /* the frame is the person's own task colours, exactly as on the team page */
+    var fg = c.createLinearGradient(0, 0, W, H);
+    for (i = 0; i < pal.length; i++) fg.addColorStop(i / Math.max(1, pal.length - 1), pal[i]);
+    c.fillStyle = fg;
+    c.fillRect(0, 0, W, 14);
+    c.fillRect(0, H - 14, W, 14);
+    c.fillRect(0, 0, 14, H);
+    c.fillRect(W - 14, 0, 14, H);
 
-    c.fillStyle = '#6e6e73'; c.font = '600 26px ' + FD;
-    c.fillText(S.lang === 'zh' ? 'ReLEAF 評審訓練 · 看圖會場' : 'ReLEAF Judging Trainer · Figure Room', 72, 96);
+    /* the sprig: one leaf per task, washed back behind the score */
+    c.save();
+    c.globalAlpha = 0.1;
+    c.translate(430, 300);
+    c.scale(2.3, 2.3);
+    c.strokeStyle = '#14402b';
+    c.lineWidth = 3;
+    c.beginPath();
+    c.moveTo(6, 158); c.bezierCurveTo(26, 122, 36, 74, 33, 6);
+    c.stroke();
+    var pos = [[31, 20, -42], [27, 46, 40], [23, 70, -34], [18, 93, 36], [14, 114, -28], [11, 132, 34]];
+    for (i = 0; i < Math.min(Math.max(pal.length, 3), pos.length); i++) {
+      c.save();
+      c.translate(pos[i][0], pos[i][1]);
+      c.rotate(pos[i][2] * Math.PI / 180);
+      c.fillStyle = pal[i % pal.length];
+      c.beginPath();
+      c.moveTo(0, 0); c.bezierCurveTo(9, -11, 25, -11, 33, 0);
+      c.bezierCurveTo(25, 11, 9, 11, 0, 0);
+      c.fill();
+      c.restore();
+    }
+    c.restore();
 
-    c.fillStyle = '#1d1d1f'; c.font = '700 88px ' + FD;
-    c.fillText(name || (S.lang === 'zh' ? '匿名' : 'Anonymous'), 72, 208);
+    /* the ReLEAF wordmark, the one from the loading screen */
+    if (LOGO) c.drawImage(LOGO, 64, 44, 268, 104);
 
-    c.font = '700 184px ' + FD; c.fillStyle = '#1a7f45';
-    c.fillText(String(r.score), 72, 396);
-    var w = c.measureText(String(r.score)).width;
-    c.fillStyle = '#86868b'; c.font = '600 34px ' + FD;
-    c.fillText(S.p(L.points), 72 + w + 20, 396);
+    c.fillStyle = '#6b6b6b';
+    c.font = '700 20px ' + FD;
+    c.fillText(S.p(L.croom), 348, 106);
 
-    c.fillStyle = '#1d1d1f'; c.font = '600 46px ' + FD;
-    c.fillText(grade(r.pct), 72, 456);
-
-    var stats = [
-      [r.hits + '/' + r.n, S.lang === 'zh' ? '認出來的圖' : 'figures named'],
-      [String(r.best), S.lang === 'zh' ? '最長連對' : 'best streak'],
-      [S.p(r.mode === 'choice' ? MODES[1] : MODES[0]), S.lang === 'zh' ? '作答方式' : 'mode']
-    ];
-    var x = 72, y = 540, i;
-    for (i = 0; i < stats.length; i++) {
-      c.fillStyle = '#1d1d1f'; c.font = '700 42px ' + FD;
-      c.fillText(stats[i][0], x, y);
-      c.fillStyle = '#86868b'; c.font = '400 23px ' + FD;
-      c.fillText(stats[i][1], x, y + 32);
-      x += 268;
+    /* who */
+    var y = 212;
+    if (p.r) {
+      var w = pill(c, 64, y - 26, p.r.toUpperCase(), '#23684a', '#ffffff');
+      if (p.t) pill(c, 64 + w + 10, y - 26, p.t.toUpperCase(), '#eceae5', '#55534c', '#dedbd3');
+    } else if (p.t) {
+      pill(c, 64, y - 26, p.t.toUpperCase(), '#eceae5', '#55534c', '#dedbd3');
     }
 
-    c.fillStyle = '#a1a1a6'; c.font = '400 21px ' + FD;
-    c.fillText(S.lang === 'zh'
-      ? '題庫共 ' + BANK.length + ' 張圖，全部出自 2026.igem.wiki/gems-taiwan'
-      : BANK.length + ' figures, all published at 2026.igem.wiki/gems-taiwan', 72, H - 28);
+    c.fillStyle = '#14402b';
+    c.font = '700 70px ' + FD;
+    c.fillText(p.n, 64, y + 72);
 
-    var cx = W - 230, cy = 396, rad = 104;
-    c.lineWidth = 22; c.lineCap = 'round';
-    c.strokeStyle = '#ececed';
-    c.beginPath(); c.arc(cx, cy, rad, 0, Math.PI * 2); c.stroke();
-    if (r.pct > 0) {
-      var gg = c.createLinearGradient(cx - rad, cy - rad, cx + rad, cy + rad);
-      gg.addColorStop(0, '#45b06c'); gg.addColorStop(1, '#1a7f45');
-      c.strokeStyle = gg;
-      c.beginPath(); c.arc(cx, cy, rad, -Math.PI / 2, -Math.PI / 2 + Math.PI * 2 * r.pct); c.stroke();
+    /* the score */
+    c.fillStyle = '#1a7f45';
+    c.font = '700 150px ' + FD;
+    c.fillText(String(d.score), 64, 462);
+    var sw = c.measureText(String(d.score)).width;
+    c.fillStyle = '#86868b';
+    c.font = '600 30px ' + FD;
+    c.fillText(S.p(L.cpoints), 64 + sw + 18, 462);
+
+    c.fillStyle = '#1d1d1f';
+    var vs = 40;
+    do { c.font = '600 ' + vs + 'px ' + FD; vs -= 2; }
+    while (vs > 22 && c.measureText(d.grade).width > 700);
+    c.fillText(d.grade, 64, 534);
+
+    var sx = 64;
+    for (i = 0; i < d.stats.length; i++) {
+      c.fillStyle = '#1d1d1f';
+      c.font = '700 32px ' + FD;
+      c.fillText(d.stats[i][0], sx, 584);
+      c.fillStyle = '#86868b';
+      c.font = '400 20px ' + FD;
+      c.fillText(d.stats[i][1], sx, 608);
+      sx += 190;
     }
-    c.textAlign = 'center';
-    c.fillStyle = '#1d1d1f'; c.font = '700 58px ' + FD;
-    c.fillText(Math.round(r.pct * 100) + '%', cx, cy + 10);
-    c.fillStyle = '#86868b'; c.font = '400 21px ' + FD;
-    c.fillText(S.p(L.outof), cx, cy + 46);
+
+    c.fillStyle = '#a1a1a6';
+    c.font = '400 19px ' + FD;
+    c.textAlign = 'right';
+    c.fillText(d.foot, W - 64, 608);
     c.textAlign = 'start';
 
-    if (state.panel && window.Panel) {
-      var svg = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 210" width="920" height="210">' +
-        window.Panel.bench(state.panel, null, S.lang) + '</svg>';
-      var im = new Image();
-      im.onload = function () { c.drawImage(im, W - 500, 112, 420, 96); };
-      im.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svg);
+    /* the photograph at work */
+    var W1 = 300, X1 = W - 64 - W1, Y1 = 150;
+    c.save();
+    rr(c, X1, Y1, W1, W1, 26);
+    c.clip();
+    var work = faceSrc(p, 'w');
+    if (work && FACES[work]) c.drawImage(FACES[work], X1, Y1, W1, W1);
+    else {
+      c.fillStyle = '#eceae5';
+      c.fillRect(X1, Y1, W1, W1);
+      c.fillStyle = '#9b9a94';
+      c.font = '700 96px ' + FD;
+      c.textAlign = 'center';
+      c.fillText(initials(p.n), X1 + W1 / 2, Y1 + W1 / 2 + 34);
+      c.textAlign = 'start';
+    }
+    c.restore();
+    c.strokeStyle = 'rgba(20,64,43,.12)';
+    c.lineWidth = 2;
+    rr(c, X1, Y1, W1, W1, 26);
+    c.stroke();
+
+    /* how close to a perfect run */
+    var cx = X1 + W1 / 2;
+    c.font = '700 30px ' + FD;
+    c.textAlign = 'center';
+    c.fillStyle = '#1d1d1f';
+    c.fillText(Math.round(d.pct * 100) + '%', cx, 508);
+    c.fillStyle = '#86868b';
+    c.font = '400 19px ' + FD;
+    c.fillText(S.p(L.cperf), cx, 532);
+    c.textAlign = 'start';
+    var bw = W1, bx = X1, by = 548;
+    rr(c, bx, by, bw, 10, 5);
+    c.fillStyle = '#ececed';
+    c.fill();
+    if (d.pct > 0) {
+      rr(c, bx, by, Math.max(10, bw * d.pct), 10, 5);
+      c.fillStyle = '#1a7f45';
+      c.fill();
     }
   }
 
-  function openCard() { el('pname').value = state.name || ''; drawCard(); el('modal').hidden = false; }
-  function closeCard() { el('modal').hidden = true; }
+  /* the card needs its pictures before it can be drawn */
+  function loadCardArt(then) {
+    var p = who(), need = ['assets/img/releaf-word.webp'], i, left;
+    if (p && faceSrc(p, 'w')) need.push(faceSrc(p, 'w'));
+    left = need.length;
+    for (i = 0; i < need.length; i++) {
+      (function (src) {
+        imgLoad(src, function (im) {
+          if (src.indexOf('releaf-word') > -1) LOGO = im;
+          if (--left <= 0) then();
+        });
+      })(need[i]);
+    }
+  }
+
+  function openCard() {
+    el('modal').hidden = false;
+    document.body.style.overflow = 'hidden';
+    drawCard();
+    loadCardArt(drawCard);          /* again once the photographs are in */
+  }
+  function closeCard() {
+    el('modal').hidden = true;
+    if (el('whomodal').hidden) document.body.style.overflow = '';
+  }
 
   /* ── shaky list and the wall ── */
   function figCard(f) {
@@ -486,7 +811,6 @@
   /* ── static labels ── */
   function labels() {
     txt('l-playing', S.p(L.playing));
-    el('playas').setAttribute('placeholder', S.p(L.yourname));
     txt('l-mode', S.p(L.lmode));
     txt('l-run', S.p(L.lrun));
     txt('l-deck', S.p(L.ldeck));
@@ -495,33 +819,43 @@
     txt('l-score', S.p(L.score));
     txt('l-streak', S.p(L.streak));
     txt('l-n', S.p(L.run));
-    el('start').textContent = S.p(L.start);
     el('reroll').textContent = S.p(L.reroll);
     el('endrun').textContent = S.p(L.endrun);
     el('mgood').textContent = S.p(L.good);
     el('mbad').textContent = S.p(L.bad);
     el('pause').textContent = state.paused ? S.p(L.resume) : S.p(L.pause);
-    txt('nameln', S.p(L.nameln));
+    el('whotitle').textContent = S.p(L.whotitle);
+    el('whosearch').placeholder = S.p(L.whosearch);
+    el('guestname').placeholder = S.p(L.guest);
+    el('guestgo').textContent = S.p(L.guestgo);
     el('copyimg').textContent = S.p(L.copyimg);
     el('dlimg').textContent = S.p(L.dlimg);
     el('againbtn').textContent = S.p(L.again);
     txt('imghint', S.p(L.imghint));
+    if (state.phase === 'idle') el('start').textContent = S.p(L.start);
   }
 
   /* ── wiring ── */
   document.addEventListener('DOMContentLoaded', function () {
     if (!BANK.length) return;
 
-    el('playas').value = state.name;
-    el('playas').addEventListener('input', function () {
-      state.name = this.value.trim();
-      S.save('fq-name', state.name);
-    });
-
     railClick('modes', 'mode');
     railClick('lens', 'len', Number);
     railClick('tiers', 'tier');
     railClick('doms', 'dom');
+
+    el('whobtn').addEventListener('click', openPicker);
+    el('whox').addEventListener('click', closePicker);
+    el('whomodal').addEventListener('click', function (e) { if (e.target === this) closePicker(); });
+    el('whosearch').addEventListener('input', function () { drawPicker(this.value); });
+    el('wholist').addEventListener('click', function (e) {
+      var b = e.target.closest('.pickp');
+      if (b) choose(b.getAttribute('data-slug'), '');
+    });
+    el('guestgo').addEventListener('click', function () {
+      var v = el('guestname').value.trim();
+      if (v) choose('', v);
+    });
 
     el('start').addEventListener('click', function () {
       if (!pool().length) { toast(S.p(L.none), false); return; }
@@ -543,8 +877,8 @@
       el('prog').textContent = '';
     });
 
-    el('mgood').addEventListener('click', function () { settle(true, cur()); });
-    el('mbad').addEventListener('click', function () { settle(false, cur()); });
+    el('mgood').addEventListener('click', function () { settle(true, cur(), false); });
+    el('mbad').addEventListener('click', function () { settle(false, cur(), true); });
     el('nextq').addEventListener('click', next);
     el('endrun').addEventListener('click', finish);
 
@@ -570,17 +904,14 @@
     el('modalx').addEventListener('click', closeCard);
     el('modal').addEventListener('click', function (e) { if (e.target === this) closeCard(); });
     el('againbtn').addEventListener('click', function () { closeCard(); el('start').click(); });
-    el('pname').addEventListener('input', function () {
-      state.name = this.value.trim();
-      S.save('fq-name', state.name);
-      el('playas').value = state.name;
-      drawCard();
-    });
 
     el('copyimg').addEventListener('click', function () {
+      if (!window.ClipboardItem || !navigator.clipboard || !navigator.clipboard.write) {
+        toast(S.p(L.imgfail), false);
+        return;
+      }
       try {
-        if (!window.ClipboardItem) { toast(S.p(L.imgfail), false); return; }
-        navigator.clipboard.write([new ClipboardItem({
+        navigator.clipboard.write([new window.ClipboardItem({
           'image/png': new Promise(function (res) { el('cardcv').toBlob(res, 'image/png'); })
         })]).then(function () { toast(S.p(L.imgdone)); },
                   function () { toast(S.p(L.imgfail), false); });
@@ -590,7 +921,7 @@
     el('dlimg').addEventListener('click', function () {
       el('cardcv').toBlob(function (b) {
         var u = URL.createObjectURL(b), a = document.createElement('a');
-        a.href = u; a.download = 'releaf-figure-room.png'; a.click();
+        a.href = u; a.download = 'releaf-figure-room-' + localDay() + '.png'; a.click();
         setTimeout(function () { URL.revokeObjectURL(u); }, 2000);
       }, 'image/png');
     });
@@ -613,6 +944,7 @@
       if (/^(INPUT|TEXTAREA)$/.test((e.target.tagName || ''))) return;
       if (e.key === 'Escape') {
         if (!el('lightbox').hidden) el('lightbox').hidden = true;
+        else if (!el('whomodal').hidden) closePicker();
         else if (!el('modal').hidden) closeCard();
         return;
       }
@@ -630,6 +962,7 @@
 
     S.onLang(function () {
       labels();
+      paintWho();
       drawRail();
       drawPanel();
       drawShaky();
@@ -639,10 +972,12 @@
         el('qq').textContent = state.mode === 'choice' ? S.t(f, 'q') : S.t(f, 'ask');
         if (state.phase === 'answered') reveal(f);
       }
+      if (!el('whomodal').hidden) drawPicker(el('whosearch').value);
       if (!el('modal').hidden) drawCard();
     });
 
     labels();
+    paintWho();
     drawRail();
     drawShaky();
     drawWall();
