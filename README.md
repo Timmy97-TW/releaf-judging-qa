@@ -25,7 +25,7 @@ Static HTML and vanilla JavaScript: no build step to view it, no server, works o
 | **77 gaps** | Places where the team's own pages disagree, or claim more than the data shows, each with an honest sentence to say |
 | **181 recorded questions** | What judges actually asked other teams in 2025 and earlier, from the team's own notes |
 | **58 milestones** | The year as a vertical timeline, with 47 of the team's own result figures |
-| **86 figures** | Key figures lifted off the wiki, each one a question in two modes: name it out loud, or pick it out of four |
+| **162 figures** | Key figures off the wiki and every figure on the Registry part pages, each one a question in two modes: name it out loud, or pick it out of four |
 | **41 parts** | The whole Registry collection, pulled live from the API: four assembly levels, 101 figures copied into the repo, and seventeen places a judge who digs will land |
 | **50 registry** | A question bank for the part pages alone — the band a judge points at, the twin deposits, the missing control lane |
 
@@ -44,8 +44,9 @@ Nothing is invented. Where the wiki is silent, the answer says so.
    little work they take to find, and a drill in the genre. Built from a live API pull, not from the wiki.
 5. **Mock Room** — a panel generated for the session, a question whose domain stays hidden until you
    call a seat, points, streaks, twenty-second follow-ups, and a card to post when the run ends.
-6. **Figure Room** — the same four judges, but they point at a picture. Eighty-six figures off the
-   wiki, ten to a run, filterable by wave and by domain. Two modes: say what it is out loud and mark
+6. **Figure Room** — the same four judges, but they point at a picture. 162 figures, ten to a run,
+   filterable by wave and by domain: two waves off the wiki and a third, 76 strong, off our own
+   Registry part pages. Two modes: say what it is out loud and mark
    yourself, or pick one of four. Wrong answers go on a shaky list, and the run ends in a card.
 7. **Mic Map** — seven seats, what each one owns, ten double-dip rules, and an assignment drill.
 8. **Delivery** — the shape of a good answer, sentences worth memorising, and eleven habits that cost points.

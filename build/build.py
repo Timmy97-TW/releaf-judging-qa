@@ -70,6 +70,7 @@ FIGDOMS = [
     ('dataphys',         'Data Physical.',    '資料實體化',   2),
     ('sustainability',   'Sustainability',    '永續',        2),
     ('overview',         'Overview',          '總覽',        2),
+    ('registry',         'Registry',          'Registry',   3),
 ]
 
 
@@ -119,7 +120,7 @@ def read_figures():
             if f['id'] in seen:
                 sys.exit('  ! duplicate figure id %s' % f['id'])
             seen.add(f['id'])
-            img = os.path.join(ROOT, 'docs', 'assets', 'img', 'fq', f['img'])
+            img = os.path.join(ROOT, 'docs', 'assets', 'img', f.get('dir') or 'fq', f['img'])
             if not os.path.exists(img):
                 sys.exit('  ! %s: image not found for %s: %s' % (n, f['id'], f['img']))
             for k in ('opt_en', 'opt_zh'):
@@ -254,7 +255,8 @@ def main():
     figmeta = dict(doms=[dict(id=f[0], en=f[1], zh=f[2], tier=f[3]) for f in FIGDOMS],
                    n=len(figures),
                    t1=sum(1 for f in figures if f['tier'] == 1),
-                   t2=sum(1 for f in figures if f['tier'] == 2))
+                   t2=sum(1 for f in figures if f['tier'] == 2),
+                   t3=sum(1 for f in figures if f['tier'] == 3))
     dump('figures.js', 'FIGURES', dict(meta=figmeta, items=figures))
 
     counts = dict(facts=len(facts), terms=len(terms), questions=len(questions), gaps=len(gaps),

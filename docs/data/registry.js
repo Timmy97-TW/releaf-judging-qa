@@ -3629,14 +3629,27 @@ var REGISTRY = {
 "ease":1,
 "head_en":"One page states two different expected band sizes for the same gel",
 "head_zh":"同一頁、同一張膠，寫了兩個不同的期望帶大小",
-"body_en":"On BBa_26CXI09X the Verification paragraph says the expected band is [1145 bp] and the caption eight lines below says [7767 bp]. Neither is right: from the deposited sequence and the stated primers the product is 1195 bp. The 1145 figure is a band size from a different part's wiki gel caption, and 7767 is plasmid scale. The sibling SamyQ cassette states 1984 bp for what it calls the same screen.",
-"body_zh":"在 BBa_26CXI09X 上，Verification 段落寫期望帶是 [1145 bp]，八行之後的圖說寫 [7767 bp]。兩個都不對：用上傳的序列和頁面寫的引子算，產物是 1195 bp。1145 是另一個 part 的 wiki 膠說明裡的數字，7767 則是質體等級。姊妹的 SamyQ 卡匣對它所稱的同一種篩選寫的是 1984 bp。",
+"body_en":"On BBa_26CXI09X the Verification paragraph says the expected band is [1145 bp] and the caption eight lines below says [7767 bp]. Neither is right: from the deposited sequence and the stated primers the product is 1195 bp. The 1145 figure is a band size from a different part's wiki gel caption, and 7767 is plasmid scale. The sibling SamyQ cassette states 1984 bp for what it calls the same screen. Looking at the image settles it differently again: the band sits between the 8 and 10 kb rungs of a high-range ladder, so this lane was not made by the primer pair the page names.",
+"body_zh":"在 BBa_26CXI09X 上，Verification 段落寫期望帶是 [1145 bp]，八行之後的圖說寫 [7767 bp]。兩個都不對：用上傳的序列和頁面寫的引子算，產物是 1195 bp。1145 是另一個 part 的 wiki 膠說明裡的數字，7767 則是質體等級。姊妹的 SamyQ 卡匣對它所稱的同一種篩選寫的是 1984 bp。　看圖之後答案又不一樣了：那條帶落在高範圍標準品的 8 到 10 kb 之間，所以這一道並不是頁面寫的那對引子做出來的。",
 "parts":[
 "BBa_26CXI09X",
 "BBa_26XVQ3FS"
 ],
-"say_en":"That is a mistake on a live page and it is ours. The number the sequence supports is 1195 bp. The gel itself is fine — one colony, one band, sequence-verified afterwards — but the caption is wrong and I would rather say so than defend it.",
-"say_zh":"那是線上頁面的錯，是我們的錯。序列支持的數字是 1195 bp。膠本身沒有問題——一個菌落、一條帶、之後有定序確認——但圖說是錯的，我寧可直接說出來，也不要替它辯護。"
+"say_en":"That is a mistake on a live page and it is ours. Three numbers are printed or implied and the picture agrees with none of them, so the only honest answer is that this gel needs re-running before anyone quotes a size off it.",
+"say_zh":"那是線上頁面的錯，是我們的錯。印出來或推算出來的有三個數字，而圖片和其中任何一個都不符，所以唯一誠實的答案是：在有人從這張膠上引用任何大小之前，它需要重跑。"
+},
+{
+"ease":1,
+"head_en":"The before and after photographs of one rack have the two arms swapped",
+"head_zh":"同一個水耕架的「之前」與「之後」兩張照片，兩組對調了",
+"body_en":"On BBa_26XVQ3FS, Figure 3 is the rack before the heat stress and Figure 4 is the same rack after four days at 37 °C, and Figure 4's caption says layout and labels are unchanged. They are not. In the before photograph the top block is labelled 1/40 to 1/100 ACCD and the third block BoPep4; in the after photograph the top block is BoPep4 and the third is ACCD. The tray also looks a different colour, which could be lighting, but the printed labels are not a lighting effect. Anyone comparing the two by position reads the wrong arm.",
+"body_zh":"在 BBa_26XVQ3FS 上，Figure 3 是熱逆境之前的架子，Figure 4 是同一個架子在 37 °C 四天之後，而 Figure 4 的圖說寫著配置與標籤不變。並沒有。在「之前」那張照片裡，最上面那一區標的是 1/40 到 1/100 ACCD，第三區是 BoPep4；在「之後」那張裡，最上面是 BoPep4，第三區才是 ACCD。托盤的顏色看起來也不一樣，那可能是打光，但印上去的標籤不是打光造成的。任何人照位置去比對這兩張，讀到的都會是另一組。",
+"parts":[
+"BBa_26XVQ3FS",
+"BBa_269A97I7"
+],
+"say_en":"The two photographs are the same experiment but the blocks are not in the same order, and the caption saying the layout is unchanged is wrong. Read the labels rather than the positions. The rows are bracketed and labelled in both, so the comparison is still recoverable, but I would not ask you to do it by eye across the pair.",
+"say_zh":"兩張照片是同一個實驗，但區塊的順序不一樣，而圖說寫「配置不變」是錯的。要看標籤，不要看位置。兩張都有用括號圈出來並標上名稱，所以這個比較還救得回來，但我不會請你用肉眼跨著兩張去比。"
 },
 {
 "ease":1,
@@ -3655,6 +3668,21 @@ var REGISTRY = {
 ],
 "say_en":"It is one fault repeated across seven pages: the promoter length we carried into the insert arithmetic was about 290 bp and Pveg is 97. The gels are not affected — those band sizes match our wiki captions — but the stated expected sizes are wrong and we recomputed all of them from the deposited sequences.",
 "say_zh":"這是同一個錯誤在七頁上重複：我們帶進插入長度計算裡的啟動子長度大約是 290 bp，而 Pveg 是 97。膠沒有受影響——那些帶大小和我們 wiki 上的圖說是一致的——但寫下來的期望大小是錯的，我們已經用上傳的序列把它們全部重算過。"
+},
+{
+"ease":1,
+"head_en":"The colony counts in our captions are lane counts, and on one gel they disagree with the picture",
+"head_zh":"我們圖說裡的菌落數其實是道數，而其中一張膠上，它和圖片對不起來",
+"body_en":"BBa_26XVQ3FS says 1 of 1 colonies. Its gel carries eight colony lanes, four of which show a band just below the 2 kb rung, and only one of those is bracketed as the expected size. BBa_261XH2RS says 1 of 3, and all three lanes carry a bright band — the call there is a migration-height judgement on an overloaded gel, not presence against absence. Elsewhere the lane numbering gives the screen away: one gel's lanes run 9 to 19 under a caption that says 1 of 10, and another numbers its two lanes 2 and 11 under 2 of 2.",
+"body_zh":"BBa_26XVQ3FS 寫「1 個菌落中的 1 個」。它的膠上有八道菌落，其中四道在 2 kb 刻度下方有帶，而只有一道被標成期望大小。BBa_261XH2RS 寫「3 個中的 1 個」，但三道都有明亮的帶——那裡的判斷是在一張上樣過量的膠上比較跑的高度，不是有帶對沒帶。其他地方的道次編號也洩漏了實際篩選規模：有一張膠的道次是 9 到 19，而圖說寫「10 個中的 1 個」；另一張把兩道編成 2 和 11，圖說寫「2 個中的 2 個」。",
+"parts":[
+"BBa_26XVQ3FS",
+"BBa_261XH2RS",
+"BBa_269A97I7",
+"BBa_26TOGLX3"
+],
+"say_en":"The counts in our captions describe the lanes we photographed, not the colonies we picked, and on one page that reads as a flat contradiction. On BBa_26XVQ3FS four lanes carry a band and the caption says one of one; what we meant is that one of them was taken forward. The wording should say how many were screened and how many were shown, and it does not.",
+"say_zh":"我們圖說裡的數字描述的是我們拍進去的道數，不是我們挑的菌落數，而在其中一頁上，這讀起來就是直接的矛盾。在 BBa_26XVQ3FS 上有四道有帶，圖說卻寫「1 個中的 1 個」；我們的意思是其中一個被拿去往下做。文字應該寫清楚篩了幾個、顯示了幾個，而它沒有。"
 },
 {
 "ease":1,
@@ -3684,6 +3712,19 @@ var REGISTRY = {
 ],
 "say_en":"Both are ours and they disagree, so we take the conservative reading: on those blots green and red are not distinguishable. The ELISA on the same samples reads 12.9 against 11.8 µg/mL. We have time-resolved green induction for the Csn system and we do not claim it for the SamyQ system.",
 "say_zh":"兩段都是我們寫的，而且互相矛盾，所以我們採保守的讀法：在那些墨點圖上，綠光和紅光分不出來。同樣樣品的 ELISA 是 12.9 對 11.8 µg/mL。我們對 Csn 系統有隨時間變化的綠光誘導，對 SamyQ 系統我們不作這個主張。"
+},
+{
+"ease":1,
+"head_en":"One figure does not show what its own caption describes",
+"head_zh":"有一張圖，和它自己的圖說描述的不是同一件事",
+"body_en":"On BBa_26RF0X2E, Figure 3's caption describes four lanes — green and red at 13 and 16 hours, with a single band between the 75 and 100 kDa markers. The image sitting under it is the three-lane green-only 3, 6 and 8 hour blot, carrying the same bar chart as Figure 2 on the same page. The four-lane blot the caption describes does exist, on BBa_26U8UTMH. So a judge who points at Figure 3 and asks to be shown the red lanes cannot be answered from that figure.",
+"body_zh":"在 BBa_26RF0X2E 上，Figure 3 的圖說描述四道——13 和 16 小時的綠光與紅光，在 75 到 100 kDa 標記之間有一條帶。但放在它下面的影像，是三道、只有綠光的 3、6、8 小時墨點圖，而且帶著和同一頁 Figure 2 一樣的長條圖。圖說描述的那張四道墨點圖確實存在，在 BBa_26U8UTMH 上。所以評審如果指著 Figure 3 要你指出紅光那幾道，光看那張圖是答不出來的。",
+"parts":[
+"BBa_26RF0X2E",
+"BBa_26U8UTMH"
+],
+"say_en":"That is the wrong image under that caption, and it is ours to fix. The blot the caption describes is on BBa_26U8UTMH, and the one actually shown here is the green-only time course that is already Figure 2 on this page. I would rather you knew that than watch me point at lanes that are not there.",
+"say_zh":"那張圖配錯了圖說，這是我們要修的。圖說描述的那張墨點圖在 BBa_26U8UTMH 上，而這裡實際顯示的是只有綠光的時間序列，也就是這一頁的 Figure 2。我寧可讓你知道這件事，也不要站在這裡指著根本不存在的道。"
 },
 {
 "ease":2,
@@ -3790,8 +3831,8 @@ var REGISTRY = {
 "ease":2,
 "head_en":"Open the sequence view and two composites are missing a module",
 "head_zh":"打開序列檢視，兩個複合元件少了一個模組",
-"body_en":"BBa_26RF0X2E lists BBa_263IW021 twice, at 1 to 1734 and again at 4392 to 6125, and does not list the PCB module at all — on a page whose own Design says the circuit needs all four modules on one plasmid because B. subtilis does not make PCB. BBa_2610Z8EW lists three modules and leaves 1721 bp unaccounted for, exactly the length of the light-sensing unit it omits. BBa_26XZYM10 lists two different terminator parts at the same coordinates, one forward and one reverse.",
-"body_zh":"BBa_26RF0X2E 把 BBa_263IW021 列了兩次，一次在 1 到 1734、一次在 4392 到 6125，而且完全沒有列 PCB 模組——而這一頁自己的 Design 寫著：因為枯草桿菌不會自己做 PCB，整個線路需要四個模組在同一個質體上。BBa_2610Z8EW 只列了三個模組，留下 1721 bp 沒有交代，而那正好是它漏掉的光感應單元的長度。BBa_26XZYM10 在同樣的座標上列了兩個不同的終止子 part，一個正向、一個反向。",
+"body_en":"BBa_26RF0X2E lists BBa_263IW021 twice, at 1 to 1734 and again at 4392 to 6125, and does not list the PCB module at all — on a page whose own Design says the circuit needs all four modules on one plasmid because B. subtilis does not make PCB. BBa_2610Z8EW lists three modules and leaves 1721 bp unaccounted for, exactly the length of the light-sensing unit it omits. BBa_26XZYM10 lists two different terminator parts at the same coordinates, one forward and one reverse. The arithmetic confirms it: BBa_26RF0X2E's listed total of 6125 bp is what you get from a second copy of the output unit, where the four real modules come to 6046 bp — and the plasmid map published on that very page plainly draws Ho1::pcyA as module one. The picture is right and the component list is wrong.",
+"body_zh":"BBa_26RF0X2E 把 BBa_263IW021 列了兩次，一次在 1 到 1734、一次在 4392 到 6125，而且完全沒有列 PCB 模組——而這一頁自己的 Design 寫著：因為枯草桿菌不會自己做 PCB，整個線路需要四個模組在同一個質體上。BBa_2610Z8EW 只列了三個模組，留下 1721 bp 沒有交代，而那正好是它漏掉的光感應單元的長度。BBa_26XZYM10 在同樣的座標上列了兩個不同的終止子 part，一個正向、一個反向。數字也對得上：BBa_26RF0X2E 列出的 6125 bp 正是把輸出單元算兩次的結果，而真正的四個模組加起來是 6046 bp——而且那一頁上公開的質體圖，第一個模組畫的就是 Ho1::pcyA。圖是對的，元件列表是錯的。",
 "parts":[
 "BBa_26RF0X2E",
 "BBa_2610Z8EW",
@@ -3958,14 +3999,19 @@ var REGISTRY = {
 "is_zh":"四個 imidazole 分液，圖說沒寫道次順序"
 },
 {
-"b":"10, 150, 250 mM",
-"is_en":"where bands appear, per the wiki; strongest at 250",
-"is_zh":"依 wiki，有帶的位置；250 最強"
+"b":"S2 10 mM",
+"is_en":"what the figure itself labels the second lane",
+"is_zh":"圖上第二道自己標的濃度"
 },
 {
 "b":"no kDa",
 "is_en":"the caption gives no molecular weight for this panel",
 "is_zh":"這一格圖說沒有給分子量"
+},
+{
+"b":"caption: 100 mM",
+"is_en":"what the page prints for that same lane — the figure and the caption disagree",
+"is_zh":"頁面上同一道印的濃度——圖和圖說互相矛盾"
 },
 {
 "b":"[ ]",
@@ -3975,8 +4021,8 @@ var REGISTRY = {
 ],
 "say_en":"This is the only purification we have anywhere. Everything else on our Registry is crude supernatant or lysate. The panel shows which imidazole buffers recovered protein and nothing more: the fractions were loaded 25, 10, 150, 250 and the caption on the live page still has the concentration list in brackets, which is an error we own.",
 "say_zh":"這是我們唯一的一次純化，Registry 上其他全部是粗萃上清或裂解液。這一格只顯示哪些 imidazole 緩衝液有回收到蛋白，沒有更多：分液的上樣順序是 25、10、150、250，而線上頁面的圖說裡那串濃度還夾在方括號裡，這是我們自己的錯。",
-"miss_en":"If asked for a purified yield: we do not have one. The purification and dialysis sheet produced no result on our wiki, so no purified concentration, gel or yield exists.",
-"miss_zh":"如果被問純化後的產量：我們沒有。純化與透析那一張實驗表在我們 wiki 上沒有產出結果，所以沒有任何純化後的濃度、膠或產量。",
+"miss_en":"If asked for a purified yield: we do not have one. The purification and dialysis sheet produced no result on our wiki, so no purified concentration, gel or yield exists. And the figure labels the second lane 10 mM where the caption prints 100 mM, so I would read the lane off the image rather than off the caption.",
+"miss_zh":"如果被問純化後的產量：我們沒有。純化與透析那一張實驗表在我們 wiki 上沒有產出結果，所以沒有任何純化後的濃度、膠或產量。而且圖上第二道標的是 10 mM，圖說印的卻是 100 mM，所以我會照圖讀那一道，而不是照圖說。",
 "img":"cf26d4e64d66.avif"
 },
 {
@@ -4068,19 +4114,19 @@ var REGISTRY = {
 },
 {
 "b":"1195 bp",
-"is_en":"what the deposited sequence and the two primers actually give",
-"is_zh":"用上傳序列和那兩支引子算出來的"
+"is_en":"what the deposited sequence and the two named primers give",
+"is_zh":"用上傳序列和頁面寫的兩支引子算出來的"
 },
 {
-"b":"1 of 1",
-"is_en":"colonies screened",
-"is_zh":"篩選的菌落數"
+"b":"8–10 kb",
+"is_en":"where the band actually sits on the image, against a high-range ladder",
+"is_zh":"帶在影像上的實際位置，對照高範圍標準品"
 }
 ],
-"say_en":"Neither number on the page is right and they contradict each other, which is ours to own. Working from the deposited sequence, Csn F anneals at 401 and ACCD R at 1540, so with the primer tails the product is 1195 bp. 1145 is a band size that belongs to a different part's gel; 7767 is plasmid scale and cannot be this amplicon.",
-"say_zh":"頁面上兩個數字都不對，而且彼此矛盾，這是我們要認的。用上傳的序列算，Csn F 黏在 401、ACCD R 黏在 1540，加上引子尾巴，產物是 1195 bp。1145 是另一個 part 的膠上的帶大小；7767 是質體等級，不可能是這個產物。",
-"miss_en":"The sibling SamyQ cassette, BBa_26XVQ3FS, states 1984 bp for what the page describes as the same backbone-primer screen. The three numbers cannot all be right and we have not reconciled them on the live pages.",
-"miss_zh":"姊妹的 SamyQ 卡匣 BBa_26XVQ3FS，對頁面描述為同一種骨架引子篩選寫的是 1984 bp。三個數字不可能都對，而我們還沒有在線上頁面把它們對起來。",
+"say_en":"Three numbers and a picture, and no two agree. The caption says 7767, the methods say 1145, the sequence with the stated primers gives 1195, and the band on the gel runs between the 8 and 10 kb rungs. So this lane was not produced by the primer pair the page names. That is ours to fix and I would not quote any of the three until we have re-run it.",
+"say_zh":"三個數字加一張圖，沒有兩個是一致的。圖說寫 7767、方法寫 1145、用序列和頁面寫的引子算是 1195，而膠上的帶跑在 8 到 10 kb 之間。所以這一道並不是頁面寫的那對引子做出來的。這是我們要修的，在重跑之前這三個數字我一個都不會引用。",
+"miss_en":"The sibling SamyQ cassette states 1984 bp for what the page calls the same screen, and its own gel shows eight colony lanes with four positives against a caption that says one of one.",
+"miss_zh":"姊妹的 SamyQ 卡匣，對頁面稱為同一種篩選的東西寫了 1984 bp，而它自己的膠上有八道菌落、四道陽性，圖說卻寫「1 個中的 1 個」。",
 "img":"ec8e3cdacc85.avif"
 },
 {
@@ -4946,8 +4992,8 @@ var REGISTRY = {
 "id":"BBa_26CXI09X",
 "q_en":"Your Verification paragraph says the expected band is 1145 bp. The caption under the gel says 7767. Same gel.",
 "q_zh":"你們的 Verification 段落寫期望帶是 1145 bp，膠下面的說明寫 7767。同一張膠。",
-"a_en":"That is a mistake on a live page and neither number is right. From the deposited sequence and the two primers the amplicon is 1195 bp; 1145 is the band size from a different part's gel caption, and 7767 is plasmid-scale. It is on the list to fix.",
-"a_zh":"那是線上頁面的一個錯誤，而且兩個數字都不對。用上傳的序列和那兩支引子算，產物是 1195 bp；1145 是另一個 part 的膠說明上的數字，7767 則是質體等級的大小。這一條在待修清單上。"
+"a_en":"That is a mistake on a live page and neither printed number matches the gel. Working from the deposited sequence and the two primers the page names, the product should be 1195 bp — but the band on the image sits between the 8 and 10 kb rungs of a high-range ladder, so whatever produced that lane was not the primer pair we wrote down. The honest position is that the caption, the methods text and the picture are three different answers and I would not defend any of them until we re-run it.",
+"a_zh":"那是線上頁面的錯誤，而且印出來的兩個數字都和膠對不上。用上傳的序列和頁面寫的那兩支引子算，產物應該是 1195 bp——但影像上的帶落在高範圍標準品的 8 到 10 kb 之間，所以產生那一道的東西並不是我們寫下來的那對引子。誠實的立場是：圖說、方法文字和圖片是三個不同的答案，在重跑之前我哪一個都不會辯護。"
 },
 {
 "id":"BBa_26Q3LKZU",
@@ -4995,8 +5041,8 @@ var REGISTRY = {
 "id":"BBa_269A97I7",
 "q_en":"Your gel screened ten colonies and your next figure takes clone 14 forward.",
 "q_zh":"你們的膠篩了十個菌落，下一張圖卻說用 clone 14 往下做。",
-"a_en":"The numbers do not line up and I cannot reconcile them from the page. The gel reads 1 of 10 at the stated size; the clone that went forward is numbered 14, which means the plate had more colonies than the gel shows. That needs the notebook, not the Registry.",
-"a_zh":"這兩個數字對不起來，光看頁面我沒辦法解釋。膠上是 10 個裡 1 個落在寫的大小；往下做的 clone 編號是 14，表示那盤的菌落比膠上顯示的多。這要翻實驗記錄本，不是 Registry。"
+"a_en":"The gel answers it. Its lanes are numbered 9 to 19, so what is shown is a window onto a bigger plate rather than the whole screen, and clone 14 sits inside that window. The caption's 'one of ten' is counting the lanes on the picture, not the colonies on the plate. The wording should say which ten, and it does not.",
+"a_zh":"膠本身回答了這個問題。它的道次編號是 9 到 19，所以顯示的是一個比較大的盤子的局部，而不是整次篩選，clone 14 就在這個範圍裡面。圖說的「10 個中的 1 個」數的是圖片上的道數，不是盤子上的菌落數。文字應該寫清楚是哪十個，而它沒有。"
 },
 {
 "id":"BBa_26PX0UGH",

@@ -9,6 +9,15 @@
   var BANK = (window.FIGURES && window.FIGURES.items) || [];
   var FMETA = (window.FIGURES && window.FIGURES.meta) || { doms: [] };
   var IMG = 'assets/img/fq/';
+  /** wave 3 is copied out of the Registry, so a figure may name its own folder */
+  function imgSrc(f) { return 'assets/img/' + (f.dir || 'fq') + '/' + f.img; }
+  /** where the figure is published: a wiki slug for waves 1 and 2, a Registry part for wave 3 */
+  function srcFor(f) {
+    if (!f.part) return S.srcLink(f.page);
+    var slug = String(f.part).toLowerCase().replace(/_/g, '-');
+    return '<a class="src" href="https://registry.igem.org/parts/' + slug +
+           '" target="_blank" rel="noopener">' + S.esc(f.part) + ' \u2197</a>';
+  }
 
   var MODES = [
     { id: 'open',   en: 'Say it out loud',  zh: '自己說出來' },
@@ -25,6 +34,7 @@
   var TIERS = [
     { id: 't1',    en: 'First wave',   zh: '第一梯次' },
     { id: 't2',    en: 'Second wave',  zh: '第二梯次' },
+    { id: 't3',    en: 'Registry wave', zh: 'Registry 梯次' },
     { id: 'all',   en: 'Everything',   zh: '全部' },
     { id: 'shaky', en: 'My shaky list', zh: '我的不熟清單' }
   ];
@@ -69,6 +79,7 @@
     named:  { en: 'named it', zh: '認得出來' },
     honest: { en: 'honest', zh: '誠實' },
     onwiki: { en: 'This figure is published on', zh: '這張圖發表在' },
+    onreg:  { en: 'This figure is on the Registry part', zh: '這張圖在 Registry part' },
     speak:  { en: 'Say what it is, out loud, before you open the answer.', zh: '先出聲說出它是什麼，再打開答案。' },
     picked: { en: 'Keys 1 to 4 work too.', zh: '鍵盤 1 到 4 也可以選。' },
     bankn:  { en: 'figures in the bank', zh: '張圖在題庫裡' },
@@ -214,6 +225,7 @@
       var f = BANK[i];
       if (state.tier === 't1' && f.tier !== 1) continue;
       if (state.tier === 't2' && f.tier !== 2) continue;
+      if (state.tier === 't3' && f.tier !== 3) continue;
       if (state.tier === 'shaky' && state.shaky.indexOf(f.id) < 0) continue;
       if (state.dom !== 'all' && f.dom !== state.dom) continue;
       out.push(f);
@@ -243,6 +255,7 @@
       var d = DOMS[i];
       if (state.tier === 't1' && d.tier !== 1) continue;
       if (state.tier === 't2' && d.tier !== 2) continue;
+      if (state.tier === 't3' && d.tier !== 3) continue;
       ds.push(d);
     }
     if (state.dom !== 'all') {
@@ -353,7 +366,7 @@
       '<span class="pill pill-line">' + S.esc(S.p(j.manner)) + '</span>';
 
     var img = el('figimg');
-    img.src = IMG + f.img;
+    img.src = imgSrc(f);
     img.alt = S.t(f, 'ask');
     el('figwrap').hidden = false;
 
@@ -361,7 +374,7 @@
 
     var d = domInfo(f.dom);
     el('meta').innerHTML =
-      '<span class="pill pill-' + (f.tier === 1 ? 'a' : 'b') + '">' + S.esc(S.p(d)) + '</span>' +
+      '<span class="pill pill-' + (f.tier === 1 ? 'a' : f.tier === 3 ? 'v' : 'b') + '">' + S.esc(S.p(d)) + '</span>' +
       '<span class="pill pill-line">' + (S.lang === 'zh' ? '第 ' + f.tier + ' 梯次' : 'wave ' + f.tier) + '</span>';
 
     el('start').hidden = true;
@@ -397,7 +410,8 @@
     var tr = S.t(f, 'trap');
     el('atrap').hidden = !tr;
     el('atrapt').textContent = tr ? ' ' + tr : '';
-    el('asrc').innerHTML = '<span class="src">' + S.esc(S.p(L.onwiki)) + '</span> ' + S.srcLink(f.page);
+    el('asrc').innerHTML = '<span class="src">' +
+      S.esc(S.p(f.part ? L.onreg : L.onwiki)) + '</span> ' + srcFor(f);
     el('ans').hidden = false;
   }
 
@@ -784,10 +798,10 @@
        browser will not nest one inside another — it hoists it out and the grid breaks */
     return '<div class="fq-card" data-id="' + S.esc(f.id) + '">' +
       '<button class="fq-card-btn" type="button" aria-label="' + S.esc(S.t(f, 'ask')) + '">' +
-        '<img src="' + IMG + f.img + '" alt="" loading="lazy" decoding="async"></button>' +
+        '<img src="' + imgSrc(f) + '" alt="" loading="lazy" decoding="async"></button>' +
       '<span class="fq-card-t">' + S.esc(S.t(f, 'ask')) + '</span>' +
-      '<span class="fq-card-m"><span class="pill pill-' + (f.tier === 1 ? 'a' : 'b') + '">' +
-        S.esc(S.p(d)) + '</span>' + S.srcLink(f.page) + '</span></div>';
+      '<span class="fq-card-m"><span class="pill pill-' + (f.tier === 1 ? 'a' : f.tier === 3 ? 'v' : 'b') + '">' +
+        S.esc(S.p(d)) + '</span>' + srcFor(f) + '</span></div>';
   }
 
   function drawShaky() {
@@ -933,7 +947,7 @@
       if (!card) return;
       var id = card.getAttribute('data-id');
       for (var i = 0; i < BANK.length; i++) if (BANK[i].id === id) {
-        el('lightimg').src = IMG + BANK[i].img;
+        el('lightimg').src = imgSrc(BANK[i]);
         el('lightbox').hidden = false;
       }
     }

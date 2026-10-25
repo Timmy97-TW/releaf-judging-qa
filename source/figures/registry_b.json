@@ -1,0 +1,635 @@
+{
+  "domain": "registry",
+  "figures": [
+    {
+      "id": "v01",
+      "img": "007541e6fe24.avif",
+      "dir": "reg",
+      "tier": 3,
+      "part": "BBa_26PGPSGK",
+      "ask_en": "Six lanes here. Which ones are positive, and what did that band prove?",
+      "ask_zh": "這裡有六個泳道。哪幾個是陽性？那條帶又證明了什麼？",
+      "a_en": "M plus six colony lanes. Only lanes 3 and 6 carry a band, sitting just above the 1.5 kb rung and labelled 1588 bp. That is the 2 of 6. Every lane, positives included, has a bright blob at the gel front, which is primer dimer off a colony template. The band says a fragment of roughly the right length went in. It does not say the four parts are in order or free of mutation. Clone 3 was sequenced.",
+      "a_zh": "M 加上六個菌落泳道。只有第 3 和第 6 道有帶，位置略高於 1.5 kb 標記，標註為 1588 bp，也就是 6 選 2。包含陽性在內的每一道，膠前緣都有一團亮點，那是以菌落為模板時的引子二聚體。這條帶只說明插入片段長度大致正確，並沒有說明四個元件的順序正確或沒有突變。送定序的是選殖株 3。",
+      "kw_en": ["2 of 6", "1588 bp", "length only"],
+      "kw_zh": ["6 選 2", "1588 bp", "只測長度"],
+      "q_en": "The page calls the insert 1788 bp, yet the product from primers flanking that insert is given as 1588 bp. What is wrong?",
+      "q_zh": "頁面寫插入片段為 1788 bp，但用跨越該插入片段的引子所得的產物卻寫成 1588 bp。問題出在哪？",
+      "opt_en": [
+        "A product spanning the insert cannot be shorter than the insert, so one number is wrong",
+        "Nothing: Golden Gate removes the BsaI sites, shortening the product by about 200 bp",
+        "Nothing: colony PCR routinely under-reports length on agarose",
+        "The 1788 bp figure includes the vector and the 1588 bp figure does not"
+      ],
+      "opt_zh": [
+        "跨越插入片段的產物不可能短於該插入片段，所以兩個數字必有一錯",
+        "沒問題：Golden Gate 切掉 BsaI 位點，讓產物短了約 200 bp",
+        "沒問題：菌落 PCR 在洋菜膠上本來就會低估長度",
+        "1788 bp 含載體序列，1588 bp 不含"
+      ],
+      "ans": 0,
+      "trap_en": "Reading \"band at the expected size\" as proof of correct assembly, when the gel only measures length.",
+      "trap_zh": "把「帶出現在預期大小」當成組裝正確的證據，但這張膠只量得出長度。"
+    },
+    {
+      "id": "v02",
+      "img": "0b523a149a6f.avif",
+      "dir": "reg",
+      "tier": 3,
+      "part": "BBa_26TOGLX3",
+      "ask_en": "Two lanes, numbered 2 and 11. What does that numbering tell you?",
+      "ask_zh": "只有兩道，編號是 2 和 11。這個編號透露了什麼？",
+      "a_en": "M plus two colony lanes, labelled 2 and 11. Both carry a band high up the gel, bracketed as 1331 bp. The caption says 2 of 2, but lane numbers 2 and 11 mean at least eleven colonies were picked and only two were run. The only labelled rungs are 800 and 700 bp, both far below the band, so nothing on this image sizes 1331 bp. Clone 2 was sequenced.",
+      "a_zh": "M 加上兩個菌落泳道，編號 2 和 11。兩道都在膠的上方有帶，括號標為 1331 bp。圖說寫「2 選 2」，但泳道編號 2 和 11 表示至少挑了十一個菌落，只跑了兩個。唯一有標字的刻度是 800 與 700 bp，都遠在帶的下方，所以這張圖本身無法定出 1331 bp。送定序的是選殖株 2。",
+      "kw_en": ["lane numbering", "ladder off-range", "2 of 2"],
+      "kw_zh": ["泳道編號", "標記超出範圍", "2 選 2"],
+      "q_en": "Why can this gel not confirm a 1331 bp product?",
+      "q_zh": "為什麼這張膠無法確認 1331 bp 的產物？",
+      "opt_en": [
+        "The only marked ladder rungs are 800 and 700 bp, both far below the band",
+        "The band is saturated, so its centre cannot be located",
+        "SamyQ is only 93 bp, too small to change migration",
+        "pSTK-0C migrates anomalously on agarose"
+      ],
+      "opt_zh": [
+        "唯一有標字的刻度只有 800 與 700 bp，都遠在該帶下方",
+        "帶已過曝，無法定出中心位置",
+        "SamyQ 只有 93 bp，太小，不足以改變遷移",
+        "pSTK-0C 在洋菜膠上遷移異常"
+      ],
+      "ans": 0,
+      "trap_en": "Taking \"2 of 2\" at face value when the lane labels show at least eleven colonies existed.",
+      "trap_zh": "照字面接受「2 選 2」，卻忽略泳道編號顯示至少存在過十一個菌落。"
+    },
+    {
+      "id": "v03",
+      "img": "101fcb99f2b1.avif",
+      "dir": "reg",
+      "tier": 3,
+      "part": "BBa_26DE5E2Q",
+      "ask_en": "Count the positives, then read the size. What does the caption get wrong?",
+      "ask_zh": "先數陽性，再看大小。圖說哪裡寫錯了？",
+      "a_en": "A ladder at both ends and sixteen colony lanes. Seven lanes give a clear band between the 1 kb and 1.5 kb rungs: 2, 3, 7, 9, 13, 14 and 15. That matches 7 of 16. Lanes 12 and 16 show a faint band at the same height that was not counted. The gel annotation and the methods text both say 1420 bp. The caption under the gel says 1588 bp. Clone 2 was sequenced.",
+      "a_zh": "兩端各有一條標記，中間十六個菌落泳道。有七道在 1 kb 與 1.5 kb 刻度之間出現清楚的帶：第 2、3、7、9、13、14、15 道，與「16 選 7」相符。第 12 和 16 道在同一高度有淡帶，沒有被計入。圖上的標註和方法段文字都寫 1420 bp，膠下方的圖說卻寫 1588 bp。送定序的是選殖株 2。",
+      "kw_en": ["7 of 16", "1420 vs 1588", "faint lanes"],
+      "kw_zh": ["16 選 7", "1420 對 1588", "淡帶泳道"],
+      "q_en": "The figure is annotated 1420 bp but its caption says [1588 bp]. Which number belongs here?",
+      "q_zh": "圖上標註 1420 bp，圖說卻寫 [1588 bp]。哪個數字才是這裡該用的？",
+      "opt_en": [
+        "1420 bp: the methods text and the gel annotation agree, and 1588 bp is the sister construct's number",
+        "1588 bp: the caption is the reviewed text and overrides the image",
+        "Both: 1420 bp is the insert and 1588 bp adds the vector",
+        "Neither: the primers are internal, so the product is the 1773 bp insert"
+      ],
+      "opt_zh": [
+        "1420 bp：方法段文字與圖上標註一致，1588 bp 是姊妹構築的數字",
+        "1588 bp：圖說是經過審閱的文字，應以圖說為準",
+        "兩個都對：1420 bp 是插入片段，1588 bp 再加上載體",
+        "兩個都不對：引子在內部，產物應為 1773 bp 的插入片段"
+      ],
+      "ans": 0,
+      "trap_en": "Counting the faint bands in lanes 12 and 16 as positives, or taking the caption's 1588 bp as this construct's screen size.",
+      "trap_zh": "把第 12、16 道的淡帶算成陽性，或把圖說的 1588 bp 當成這個構築的篩選大小。"
+    },
+    {
+      "id": "v04",
+      "img": "1bb1bfecc9e2.avif",
+      "dir": "reg",
+      "tier": 3,
+      "part": "BBa_2654HAF3",
+      "ask_en": "Three primer pairs, two clones. Does this gel prove the four modules are correct?",
+      "ask_zh": "三組引子、兩個選殖株。這張膠能證明四個模組都正確嗎？",
+      "a_en": "M plus six lanes: one clone in lanes 1 to 3, a second in lanes 4 to 6, each screened with three primer pairs at 375, 632 and 661 bp. All six bands land where the 300 to 700 rungs put them. Three junctions do fix the order of four modules. They say nothing about the sequence inside a module, and no Level 2 construct here has been sequenced end to end. Note the third pair is 661 bp here and 441 bp on the sister gel.",
+      "a_zh": "M 加上六道：第 1 至 3 道是一個選殖株，第 4 至 6 道是另一個，各用三組引子篩，預期 375、632、661 bp。六條帶都落在 300 至 700 刻度該有的位置。三個接點確實能定出四個模組的順序，卻完全不能說明模組內部的序列，而且這裡沒有任何 Level 2 構築做過全長定序。另外，第三組引子在這張是 661 bp，在姊妹膠上卻是 441 bp。",
+      "kw_en": ["three junctions", "module order", "no full sequence"],
+      "kw_zh": ["三個接點", "模組順序", "未全長定序"],
+      "q_en": "The caption claims \"correct bands across all 4 modules\". What did the gel actually test?",
+      "q_zh": "圖說寫「四個模組都有正確的帶」。這張膠實際測的是什麼？",
+      "opt_en": [
+        "Three junctions between the modules, not the modules' own sequences",
+        "All four module sequences, end to end",
+        "The four BsmBI overhangs used in the Level 2 reaction",
+        "The presence of the pSTK-EXP2 backbone in each clone"
+      ],
+      "opt_zh": [
+        "模組之間的三個接點，而不是模組本身的序列",
+        "四個模組的全長序列",
+        "Level 2 反應所用的四個 BsmBI 黏末端",
+        "每個選殖株中 pSTK-EXP2 骨架的存在"
+      ],
+      "ans": 0,
+      "trap_en": "Hearing \"all 4 modules\" and treating three junction bands as a sequence check.",
+      "trap_zh": "聽到「四個模組」就把三條接點帶當成序列驗證。"
+    },
+    {
+      "id": "v05",
+      "img": "2438a0dda56a.avif",
+      "dir": "reg",
+      "tier": 3,
+      "part": "BBa_26ZQ1T72",
+      "ask_en": "Sixteen out of sixteen. Is that a good result or a warning?",
+      "ask_zh": "16 選 16。這是好結果，還是警訊？",
+      "a_en": "M plus sixteen colony lanes, every one with a band at the same height just above the 800 bp rung, bracketed 811 bp. The bands are even in intensity, there is no empty lane and no control, so nothing on this gel shows what a failed colony looks like. The page's own arithmetic is 576 bp of insert plus 235 bp of vector, while sister pages quote about 209 bp for that same vector stretch. Clone 16 was sequenced.",
+      "a_zh": "M 加十六個菌落泳道，每一道都在 800 bp 刻度稍上方的同一高度有帶，括號標為 811 bp。亮度相當均勻，沒有空白道也沒有對照，所以這張膠裡看不到失敗的菌落長什麼樣。頁面自己的算法是插入片段 576 bp 加載體 235 bp，但姊妹頁對同一段載體寫的是約 209 bp。送定序的是選殖株 16。",
+      "kw_en": ["16 of 16", "no control", "vector arithmetic"],
+      "kw_zh": ["16 選 16", "沒有對照", "載體長度算法"],
+      "q_en": "What single extra lane would have made this 16-of-16 gel much stronger?",
+      "q_zh": "多跑哪一道，就能讓這張 16 選 16 的膠強上許多？",
+      "opt_en": [
+        "A no-template or empty-vector control, to show what a negative looks like",
+        "A second ladder on the right-hand side of the gel",
+        "A lane of uncut plasmid as a size reference",
+        "A repeat of lane 1 loaded at half the volume"
+      ],
+      "opt_zh": [
+        "無模板或空載體對照，用來顯示陰性長什麼樣",
+        "膠右側再放一條標記",
+        "一道未切割質體，當作大小參考",
+        "把第 1 道用一半體積再上樣一次"
+      ],
+      "ans": 0,
+      "trap_en": "Treating a clean sweep as strong evidence when there is no negative on the gel to calibrate it.",
+      "trap_zh": "把全數通過當成強證據，但膠上沒有陰性可以校準判讀。"
+    },
+    {
+      "id": "v06",
+      "img": "2463682d514c.avif",
+      "dir": "reg",
+      "tier": 3,
+      "part": "BBa_26J0GJGZ",
+      "ask_en": "Two lanes, labelled 1 and 3. What is missing from \"two of two\"?",
+      "ask_zh": "兩道，編號 1 和 3。「2 選 2」漏掉了什麼？",
+      "a_en": "M plus two colony lanes, numbered 1 and 3. Both carry a band between the 700 and 800 bp rungs, consistent with the stated 770 bp. That sizing is the one thing this small gel does well, because the band falls between two labelled markers. The caption says 2 of 2, but the lane labels skip 2, so at least three colonies existed. Lane 3 also has a heavy low smear. Clone 1 was sequenced.",
+      "a_zh": "M 加兩個菌落泳道，編號 1 和 3。兩道的帶都落在 700 與 800 bp 刻度之間，與所寫的 770 bp 相符。這張小膠最可取的就是這點：帶剛好夾在兩個有標字的刻度中間。圖說寫「2 選 2」，但泳道編號跳過了 2，表示至少有三個菌落。第 3 道下方還有一大片拖尾。送定序的是選殖株 1。",
+      "kw_en": ["770 bp", "lane 2 skipped", "bracketed by rungs"],
+      "kw_zh": ["770 bp", "跳過第 2 道", "夾在刻度之間"],
+      "q_en": "Why is this small gel's size claim better supported than most in the set?",
+      "q_zh": "為什麼這張小膠的大小主張，比這批裡大多數都站得住腳？",
+      "opt_en": [
+        "The 770 bp band falls between two labelled rungs, 700 and 800 bp",
+        "Both lanes agree, so the size is confirmed by replication",
+        "The ladder is a 100 bp ladder, which resolves to about 10 bp",
+        "The insert was sequenced before the gel was run"
+      ],
+      "opt_zh": [
+        "770 bp 的帶剛好落在 700 與 800 bp 兩個有標字的刻度之間",
+        "兩道結果一致，等於用重複驗證了大小",
+        "用的是 100 bp 標記，解析度可達約 10 bp",
+        "插入片段在跑膠之前就已經定序過"
+      ],
+      "ans": 0,
+      "trap_en": "Mistaking two agreeing lanes for a size check; agreement is not calibration.",
+      "trap_zh": "把兩道結果一致誤當成大小驗證；一致不等於校準。"
+    },
+    {
+      "id": "v07",
+      "img": "43e883f568b3.avif",
+      "dir": "reg",
+      "tier": 3,
+      "part": "BBa_26XZYM10",
+      "ask_en": "The caption says \"all colonies\". How many is that?",
+      "ask_zh": "圖說寫「所有菌落」。那到底是幾個？",
+      "a_en": "M plus three colony lanes, and all three carry a bright band between the 1.5 and 2 kb rungs, bracketed 1721 bp. \"All colonies\" means three here, because three is what was loaded. The missing denominator is the fix this figure needs. The bands are overloaded and run together across the three lanes, so a small difference in size between clones would not show. Clone 1 was sequenced.",
+      "a_zh": "M 加三個菌落泳道，三道都在 1.5 與 2 kb 刻度之間有明亮的帶，括號標為 1721 bp。這裡的「所有菌落」就是三個，因為只上了三道。這張圖要補的就是缺少的分母。帶都過載，三道之間幾乎連成一片，所以選殖株之間若有小幅大小差異也看不出來。送定序的是選殖株 1。",
+      "kw_en": ["no denominator", "three lanes", "overloaded"],
+      "kw_zh": ["沒有分母", "三個泳道", "上樣過量"],
+      "q_en": "The page says insert 1660 bp plus vector gives 1721 bp. What does that imply?",
+      "q_zh": "頁面寫插入片段 1660 bp 加載體後是 1721 bp。這代表什麼？",
+      "opt_en": [
+        "Only about 61 bp of vector lies between the two priming sites",
+        "The Ho1 F primer sits inside the insert, so the product is shorter than the insert",
+        "The L3S2P21 terminator was not included in the amplicon",
+        "pSTK-1A adds 61 bp of BsaI scar on each side of the insert"
+      ],
+      "opt_zh": [
+        "兩個引子結合位之間只有約 61 bp 的載體序列",
+        "Ho1 F 引子落在插入片段內部，所以產物比插入片段短",
+        "L3S2P21 終止子沒有被包含在擴增產物裡",
+        "pSTK-1A 在插入片段兩側各加了 61 bp 的 BsaI 疤痕"
+      ],
+      "ans": 0,
+      "trap_en": "Accepting \"all colonies\" as a count, when the figure never says how many were screened.",
+      "trap_zh": "把「所有菌落」當成一個數目，但圖從頭到尾沒說篩了幾個。"
+    },
+    {
+      "id": "v08",
+      "img": "469dcae98058.avif",
+      "dir": "reg",
+      "tier": 3,
+      "part": "BBa_269A97I7",
+      "ask_en": "Lanes run from 9 to 19. How does that square with \"1 of 10\"?",
+      "ask_zh": "泳道從 9 編到 19。這要怎麼跟「10 選 1」對得起來？",
+      "a_en": "M plus eleven lanes, numbered 9 to 19, which makes this the back half of a bigger screen. One faint band, in lane 14, bracketed 678 bp, and it sits level with the 750 bp rung rather than below it. The caption says 1 of 10 and then the page names clone 14, a number larger than ten. Every lane carries a bright primer-dimer blob at the front. One faint band from one colony is thin evidence.",
+      "a_zh": "M 加十一道，編號 9 到 19，所以這是一次較大篩選的後半段。只有第 14 道有一條淡帶，括號標為 678 bp，而且它和 750 bp 刻度齊平，而不是在其下方。圖說寫「10 選 1」，頁面接著說送定序的是選殖株 14，比十還大。每一道前緣都有明亮的引子二聚體。一個菌落、一條淡帶，證據很薄。",
+      "kw_en": ["lanes 9-19", "clone 14", "faint single band"],
+      "kw_zh": ["第 9 至 19 道", "選殖株 14", "單一淡帶"],
+      "q_en": "What is the clearest internal contradiction on this page?",
+      "q_zh": "這一頁最明顯的內部矛盾是什麼？",
+      "opt_en": [
+        "It screens ten colonies but takes clone 14 forward",
+        "The ladder is labelled 750 and 500 bp, which cannot resolve 678 bp",
+        "The gel shows eleven lanes, so eleven colonies were positive",
+        "It names clone 14, but lane 14 is the only empty lane on the gel"
+      ],
+      "opt_zh": [
+        "說篩了十個菌落，卻把選殖株 14 送下游",
+        "標記只標 750 與 500 bp，無法解析 678 bp",
+        "膠上有十一道，所以有十一個菌落是陽性",
+        "說選殖株 14，但第 14 道是膠上唯一的空白道"
+      ],
+      "ans": 0,
+      "trap_en": "Reading the single faint band as a clean positive without noticing it runs at the 750 bp rung.",
+      "trap_zh": "把那條單一淡帶當成乾淨的陽性，沒注意到它跑在 750 bp 刻度上。"
+    },
+    {
+      "id": "v09",
+      "img": "54aa2f3c3988.avif",
+      "dir": "reg",
+      "tier": 3,
+      "part": "BBa_26NXOP7S",
+      "ask_en": "Which lanes are positive here, and what is wrong with the ladder labels?",
+      "ask_zh": "這裡哪幾道是陽性？標記的標字又有什麼問題？",
+      "a_en": "M plus four colony lanes from a pGEM-T Easy ligation. Lanes 3 and 4 give bright bands just under the 1.5 kb rung, bracketed 1372 bp. Lane 2 has a faint band at the same height that the 2-of-4 count leaves out, and lane 1 is empty. The lower ladder mark is printed \"400k\", which has to mean 400 bp. The 1122 bp insert length quoted here is also quoted for the SamyQ version, though the two signal peptides differ by 15 bp.",
+      "a_zh": "M 加四個菌落泳道，來自 pGEM-T Easy 接合。第 3、4 道在 1.5 kb 刻度略下方有明亮的帶，括號標為 1372 bp。第 2 道在同一高度有一條淡帶，沒有被「4 選 2」算進去，第 1 道空白。標記下方那格印成「400k」，實際上應該是 400 bp。這裡寫的插入片段 1122 bp，在 SamyQ 版頁面上也是 1122 bp，但兩個訊號胜肽長度差 15 bp。",
+      "kw_en": ["lane 2 faint", "400k typo", "1122 bp reused"],
+      "kw_zh": ["第 2 道淡帶", "400k 筆誤", "1122 bp 重複使用"],
+      "q_en": "Lane 2 shows a faint band at the same height as lanes 3 and 4. What is the honest call?",
+      "q_zh": "第 2 道在和第 3、4 道同高處有淡帶。誠實的判讀應該是什麼？",
+      "opt_en": [
+        "Call it a weak positive worth rescreening, not a clean negative",
+        "Ignore it; anything fainter than the brightest band is non-specific",
+        "Count it and take it forward without rescreening",
+        "Discard the gel, because faint bands mean the PCR failed"
+      ],
+      "opt_zh": [
+        "當成值得重篩的弱陽性，而不是乾淨的陰性",
+        "忽略它；比最亮的帶暗的都算非專一性產物",
+        "直接算成陽性並送下游，不必重篩",
+        "整張膠作廢，因為出現淡帶代表 PCR 失敗"
+      ],
+      "ans": 0,
+      "trap_en": "Calling it 2 of 4 without mentioning the faint band in lane 2.",
+      "trap_zh": "直接說「4 選 2」，卻不提第 2 道那條淡帶。"
+    },
+    {
+      "id": "v10",
+      "img": "68787dec5c52.avif",
+      "dir": "reg",
+      "tier": 3,
+      "part": "BBa_26RF0X2E",
+      "ask_en": "Count the banded lanes, then count the labels. What does not add up?",
+      "ask_zh": "先數有帶的泳道，再數標號。哪裡對不起來？",
+      "a_en": "M then a run of banded lanes in repeating 375 / 632 / 441 triplets. I count twelve such lanes, but only three triplets carry the numbers 1, 2, 3. One triplet between the first and second labelled group has bands and no labels. Each triplet is one clone checked at three junctions. Nine or twelve, the junctions prove module order only. Nothing here reads the sequence inside a module.",
+      "a_zh": "M 之後是一連串有帶的泳道，以 375 / 632 / 441 三條一組重複。我數到十二道，但只有三組標了 1、2、3；在第一組與第二組標號之間，還有一組有帶卻沒有標號。每一組代表一個選殖株、三個接點。不論是九道還是十二道，接點只能證明模組順序，這裡沒有任何資料讀到模組內部的序列。",
+      "kw_en": ["twelve lanes", "three labelled triplets", "order only"],
+      "kw_zh": ["十二個泳道", "三組有標號", "只證順序"],
+      "q_en": "Three correct junction bands per clone prove what, exactly?",
+      "q_zh": "每個選殖株三條正確的接點帶，究竟證明了什麼？",
+      "opt_en": [
+        "That the four modules sit in the intended order",
+        "That all four modules are free of mutations",
+        "That the Level 2 plasmid is the right total size",
+        "That the assembled construct responds to green light"
+      ],
+      "opt_zh": [
+        "四個模組排在預期的順序上",
+        "四個模組都沒有突變",
+        "Level 2 質體的總長度正確",
+        "組好的構築會對綠光產生反應"
+      ],
+      "ans": 0,
+      "trap_en": "Repeating the caption's \"lanes 1, 2 and 3\" without noticing the gel carries more banded lanes than labels.",
+      "trap_zh": "照抄圖說的「第 1、2、3 道」，沒注意膠上有帶的泳道比標號還多。"
+    },
+    {
+      "id": "v11",
+      "img": "7ae42b9bff17.avif",
+      "dir": "reg",
+      "tier": 3,
+      "part": "BBa_26IA55UY",
+      "ask_en": "Four of five. Which lane failed, and how sure can you be of the reading?",
+      "ask_zh": "5 選 4。哪一道失敗了？這個判讀又有多確定？",
+      "a_en": "M plus five colony lanes. Lanes 1, 3, 4 and 5 carry a band between the 600 and 700 bp rungs, consistent with 678 bp. Lane 2 shows only a faint smudge at that height plus a lower band. That is the 4 of 5. The exposure is heavy: the positive bands are saturated and bleed sideways into each other. So the gel can say a band is present, not that it is a single clean product. Clone 5 was sequenced.",
+      "a_zh": "M 加五個菌落泳道。第 1、3、4、5 道在 600 與 700 bp 刻度之間有帶，與 678 bp 相符；第 2 道在那個高度只有一片模糊，另有一條較低的帶。這就是「5 選 4」。曝光偏重：陽性帶都過曝並向兩側暈開，所以這張膠只能說有帶，不能說那是單一乾淨的產物。送定序的是選殖株 5。",
+      "kw_en": ["4 of 5", "lane 2 smudge", "saturated"],
+      "kw_zh": ["5 選 4", "第 2 道模糊", "過曝"],
+      "q_en": "What does the overexposure on this gel cost you?",
+      "q_zh": "這張膠的過曝讓你損失了什麼？",
+      "opt_en": [
+        "You cannot tell one band from two close bands, or judge how much product there is",
+        "The band migrates higher than it should once saturated",
+        "The ladder rungs shift, so 678 bp cannot be verified",
+        "Nothing; saturation only affects how the ladder is quantified"
+      ],
+      "opt_zh": [
+        "分不出是一條帶還是兩條靠得很近的帶，也判斷不了產量",
+        "帶一旦過曝就會往上跑，位置偏高",
+        "標記刻度會位移，所以無法驗證 678 bp",
+        "沒有損失；過曝只影響標記的定量"
+      ],
+      "ans": 0,
+      "trap_en": "Calling the positives \"single, clean bands\" when saturation makes that undecidable.",
+      "trap_zh": "把陽性稱為「單一乾淨的帶」，但過曝下根本無法判斷。"
+    },
+    {
+      "id": "v12",
+      "img": "8834ba1b94f0.avif",
+      "dir": "reg",
+      "tier": 3,
+      "part": "BBa_26PX0UGH",
+      "ask_en": "Eighteen of nineteen. Look at lane 6: what actually happened there?",
+      "ask_zh": "19 選 18。看第 6 道，那裡究竟發生了什麼？",
+      "a_en": "M plus nineteen colony lanes. Eighteen carry a band sitting just above the 500 bp rung, bracketed 536 bp. Lane 6 is not empty. Its band runs clearly lower than the rest, so that colony amplified something shorter, not nothing. BoPep4 2.1 and 2.2 are both quoted at a 177 bp insert and a 536 bp product, so this gel cannot tell the two versions apart. Clone 2 was sequenced.",
+      "a_zh": "M 加十九個菌落泳道。其中十八道在 500 bp 刻度略上方有帶，括號標為 536 bp。第 6 道並非空白：它的帶明顯跑得比其他道低，表示那個菌落擴增出較短的東西，而不是什麼都沒有。BoPep4 2.1 與 2.2 兩版的插入片段都寫 177 bp、產物都寫 536 bp，所以這張膠分不出兩版。送定序的是選殖株 2。",
+      "kw_en": ["lane 6 runs low", "536 bp", "2.1 vs 2.2"],
+      "kw_zh": ["第 6 道偏低", "536 bp", "2.1 對 2.2"],
+      "q_en": "BoPep4 2.1 and 2.2 give the same 536 bp screen band. What follows from that?",
+      "q_zh": "BoPep4 2.1 與 2.2 的篩選帶同樣是 536 bp。這代表什麼？",
+      "opt_en": [
+        "Only sequencing can distinguish the two recoded versions",
+        "The two versions can be told apart by band intensity",
+        "Version 2.2 runs 15 bp higher because its signal peptide is longer",
+        "The 536 bp band confirms the recoded first 15 codons"
+      ],
+      "opt_zh": [
+        "只有定序才分得出這兩個重新編碼的版本",
+        "可以靠帶的亮度分辨兩個版本",
+        "2.2 版因為訊號胜肽較長，會高 15 bp",
+        "536 bp 的帶可以確認前 15 個密碼子已重新編碼"
+      ],
+      "ans": 0,
+      "trap_en": "Describing lane 6 as a failed reaction when it carries a band at the wrong size.",
+      "trap_zh": "把第 6 道說成反應失敗，其實它有帶，只是大小不對。"
+    },
+    {
+      "id": "v13",
+      "img": "a2f980ff8969.avif",
+      "dir": "reg",
+      "tier": 3,
+      "part": "BBa_26SG0NQQ",
+      "ask_en": "One lane, one band. How much does this figure actually establish?",
+      "ask_zh": "一道、一條帶。這張圖實際上建立了多少？",
+      "a_en": "One colony lane beside the ladder. The band called 735 bp is barely visible, a faint smudge below the 800 rung, while the brightest thing in the lane is the primer-dimer blob at the front. The ladder lane is overloaded enough that the 800 to 500 rungs merge into a white column, so the reference is poor too. One colony, one faint band. The page then says clone [X] was sequenced, leaving the placeholder unfilled.",
+      "a_zh": "標記旁只有一個菌落泳道。標為 735 bp 的帶幾乎看不見，只是 800 刻度下方一片淡淡的痕跡，而這一道最亮的東西是前緣的引子二聚體。標記那一道也過載，800 到 500 的刻度糊成一條白柱，參考價值很低。一個菌落、一條淡帶。頁面接著寫「選殖株 [X] 已定序」，佔位符根本沒填。",
+      "kw_en": ["faint band", "ladder saturated", "[X] placeholder"],
+      "kw_zh": ["淡帶", "標記過曝", "[X] 佔位符"],
+      "q_en": "Which problem on this page is easiest to fix?",
+      "q_zh": "這一頁哪個問題最容易修？",
+      "opt_en": [
+        "The unfilled clone placeholder, \"[X]\", in the sequencing line",
+        "The missing ladder, which would need the gel rerun",
+        "The band size, which would need a new primer pair",
+        "The colony count, which would need a fresh transformation"
+      ],
+      "opt_zh": [
+        "定序那一句裡沒填的選殖株佔位符「[X]」",
+        "缺少的標記，必須重跑整張膠",
+        "帶的大小，必須換一組新引子",
+        "菌落數，必須重做一次轉型"
+      ],
+      "ans": 0,
+      "trap_en": "Calling a barely visible smudge a band at the expected size.",
+      "trap_zh": "把幾乎看不見的痕跡說成「位於預期大小的帶」。"
+    },
+    {
+      "id": "v14",
+      "img": "b207909c8639.avif",
+      "dir": "reg",
+      "tier": 3,
+      "part": "BBa_261XH2RS",
+      "ask_en": "All three lanes have a band, yet the caption says 1 of 3. Why?",
+      "ask_zh": "三道都有帶，圖說卻寫「3 選 1」。為什麼？",
+      "a_en": "Three colony lanes with the ladder on the right, which is unusual but fine. All three carry a bright band near the 1.5 kb rung. Lane 1 runs a little higher than lanes 2 and 3, and only lane 1 is bracketed 1602 bp. So \"1 of 3\" is a judgement about migration height, not about presence. On a gel this overloaded that difference is a few pixels wide. Clone 1 was sequenced, and that is the evidence that holds.",
+      "a_zh": "三個菌落泳道，標記放在右側，雖然少見但沒問題。三道在 1.5 kb 刻度附近都有明亮的帶。第 1 道跑得比第 2、3 道略高，而且只有第 1 道被括號標為 1602 bp。所以「3 選 1」是對遷移高度的判斷，不是對有無帶的判斷。在這麼過載的膠上，那個差距只有幾個像素寬。送定序的是選殖株 1，真正站得住的是定序。",
+      "kw_en": ["all three banded", "height judgement", "overloaded"],
+      "kw_zh": ["三道都有帶", "以高度判定", "上樣過量"],
+      "q_en": "What would settle whether lanes 2 and 3 really carry a shorter product?",
+      "q_zh": "要怎麼確定第 2、3 道真的是較短的產物？",
+      "opt_en": [
+        "Rerun them on a longer gel beside the ladder, or sequence them",
+        "Compare the band intensities against lane 1",
+        "Repeat the colony PCR with more cycles",
+        "Nothing is needed; the bracket in the figure already settles it"
+      ],
+      "opt_zh": [
+        "在較長的膠上與標記並排重跑，或直接定序",
+        "把亮度拿來和第 1 道比較",
+        "用更多循環數重做一次菌落 PCR",
+        "不必再做；圖上的括號已經有結論"
+      ],
+      "ans": 0,
+      "trap_en": "Saying lanes 2 and 3 were negative, when all three lanes carry a band.",
+      "trap_zh": "說第 2、3 道是陰性，但其實三道都有帶。"
+    },
+    {
+      "id": "v15",
+      "img": "ba762e02cb85.avif",
+      "dir": "reg",
+      "tier": 3,
+      "part": "BBa_2654HAF3",
+      "ask_en": "Three bands per lane here. Which is the one that counts?",
+      "ask_zh": "這裡每道有三條帶。哪一條才算數？",
+      "a_en": "M plus four colony lanes, numbered 2 to 5. Lanes 3, 4 and 5 each show a band between the 500 and 750 rungs, the 632 bp junction product. Lane 2 is empty. Each positive lane also carries a band near 250 bp that is brighter than the target, plus faint high-molecular-weight material. The caption names both as non-specific amplification from a colony template, which is the right thing to do. Clone 4, at insert:vector 1:7, was sequenced.",
+      "a_zh": "M 加四個菌落泳道，編號 2 到 5。第 3、4、5 道在 500 與 750 刻度之間各有一條帶，就是 632 bp 的接點產物；第 2 道空白。每個陽性道還有一條約 250 bp、比目標帶更亮的帶，以及上方淡淡的高分子量痕跡。圖說把這兩者都點名為以菌落為模板的非專一性擴增，這是正確的做法。送定序的是選殖株 4（插入:載體 = 1:7）。",
+      "kw_en": ["632 bp junction", "named non-specifics", "lane 2 blank"],
+      "kw_zh": ["632 bp 接點", "點名非專一帶", "第 2 道空白"],
+      "q_en": "This caption does something most of the set does not. What?",
+      "q_zh": "這則圖說做了一件這批圖大多沒做的事。是什麼？",
+      "opt_en": [
+        "It names its own non-specific bands instead of ignoring them",
+        "It gives a denominator for the colonies screened",
+        "It reports the ladder brand and the run voltage",
+        "It states that the clone was sequenced end to end"
+      ],
+      "opt_zh": [
+        "它主動點名自己的非專一性帶，而不是略過不提",
+        "它給出了篩選菌落的分母",
+        "它寫出標記的廠牌和電泳電壓",
+        "它說明該選殖株已做過全長定序"
+      ],
+      "ans": 0,
+      "trap_en": "Calling the brightest band in each lane the result; the 250 bp band is non-specific and the 632 bp one is the target.",
+      "trap_zh": "把每道最亮的帶當成結果；250 bp 那條是非專一性的，632 bp 那條才是目標。"
+    },
+    {
+      "id": "v16",
+      "img": "bd64752e9f98.avif",
+      "dir": "reg",
+      "tier": 3,
+      "part": "BBa_26XVQ3FS",
+      "ask_en": "The caption says one of one. Count the lanes with a band near 2 kb.",
+      "ask_zh": "圖說寫「1 選 1」。數數看有幾道在 2 kb 附近有帶。",
+      "a_en": "M plus eight colony lanes. Four of them, lanes 2, 4, 5 and 7, carry a band just below the 2 kb rung, but only lane 7 is bracketed 1984 bp. Lanes 1 and 8 give a much shorter product and lanes 3 and 6 show only front smear. The caption's \"1 of 1 colonies\" does not describe this gel: eight were screened and at least four look positive. Clone 1 was sequenced, though lane 7 is the annotated one.",
+      "a_zh": "M 加八個菌落泳道。其中四道（第 2、4、5、7 道）在 2 kb 刻度略下方有帶，但只有第 7 道被括號標為 1984 bp。第 1、8 道是明顯短得多的產物，第 3、6 道只有前緣拖尾。圖說的「1 選 1」根本沒有描述這張膠：篩了八個，至少四個看起來是陽性。頁面說送定序的是選殖株 1，被標註的卻是第 7 道。",
+      "kw_en": ["eight lanes", "four positives", "caption mismatch"],
+      "kw_zh": ["八個泳道", "四道陽性", "圖說不符"],
+      "q_en": "Which statement about this figure is true?",
+      "q_zh": "關於這張圖，哪個敘述是對的？",
+      "opt_en": [
+        "Eight colonies were run and four show a band near the labelled size",
+        "One colony was run and it was positive",
+        "Eight colonies were run and only lane 7 shows any band at all",
+        "Lanes 1 and 8 are ladder lanes rather than colonies"
+      ],
+      "opt_zh": [
+        "跑了八個菌落，其中四道在標註大小附近有帶",
+        "只跑了一個菌落，而且是陽性",
+        "跑了八個菌落，但只有第 7 道有帶",
+        "第 1 和第 8 道是標記道，不是菌落"
+      ],
+      "ans": 0,
+      "trap_en": "Repeating \"1 of 1 colonies\" without counting the eight lanes actually on the gel.",
+      "trap_zh": "照抄「1 選 1」，沒去數膠上其實有八道。"
+    },
+    {
+      "id": "v17",
+      "img": "c00e095c212c.avif",
+      "dir": "reg",
+      "tier": 3,
+      "part": "BBa_26RF0X2E",
+      "ask_en": "Eleven for eleven at 632 bp. What can you not check on this image?",
+      "ask_zh": "11 道全部在 632 bp。這張圖上有什麼是你查不了的？",
+      "a_en": "M plus eleven colony lanes, every one with a strong band at the same height, bracketed 632 bp. Several lanes also show a faint lower band. The ladder lane has rungs but no printed sizes at all, so on this image alone you cannot place the band against any marker. The 632 bp claim rests on the sister gel, where the ladder is labelled. Eleven matching bands still prove only this one junction. Clone 1 was sequenced.",
+      "a_zh": "M 加十一個菌落泳道，每一道都在同一高度有明顯的帶，括號標為 632 bp。有幾道下方還有一條淡帶。標記那一道雖然有刻度，卻完全沒有印上數字，所以單憑這張圖無法把帶對到任何參考點，632 bp 這個說法得靠姊妹膠（那張的標記有標字）。十一條一致的帶，仍然只證明這一個接點。送定序的是選殖株 1。",
+      "kw_en": ["unlabelled ladder", "one junction", "11 lanes"],
+      "kw_zh": ["標記沒標字", "單一接點", "十一道"],
+      "q_en": "What is missing from this gel image that the other Level 2 gels have?",
+      "q_zh": "這張膠少了其他 Level 2 膠都有的什麼？",
+      "opt_en": [
+        "Printed size labels on the ladder",
+        "A separate lane for each of the three primer pairs",
+        "A no-template control lane",
+        "A bracket naming the expected product size"
+      ],
+      "opt_zh": [
+        "標記上印出的大小數字",
+        "三組引子各自獨立的泳道",
+        "一道無模板對照",
+        "標出預期產物大小的括號"
+      ],
+      "ans": 0,
+      "trap_en": "Accepting 632 bp from this image alone, when its ladder carries no size labels.",
+      "trap_zh": "單憑這張圖就接受 632 bp，但它的標記上沒有任何大小數字。"
+    },
+    {
+      "id": "v18",
+      "img": "c99753738e91.avif",
+      "dir": "reg",
+      "tier": 3,
+      "part": "BBa_267B69E3",
+      "ask_en": "Four for four. What does the loading do to this gel?",
+      "ask_zh": "4 選 4。上樣量對這張膠造成了什麼影響？",
+      "a_en": "M plus four colony lanes, each with a band just above the 500 bp rung, consistent with 536 bp. All four are overloaded and spread sideways until lanes 2, 3 and 4 nearly merge, so you cannot say whether any lane holds a second, close product. Four of four with no negative control means nothing on this gel shows what a failed colony looks like. Clone 1 was sequenced; the gel measured length only.",
+      "a_zh": "M 加四個菌落泳道，每道在 500 bp 刻度略上方有帶，與 536 bp 相符。四道都上樣過量並向兩側擴散，第 2、3、4 道幾乎連在一起，所以無法判斷任何一道是否還藏著第二條靠得很近的產物。4 選 4 又沒有陰性對照，等於這張膠裡看不到失敗的菌落長什麼樣。送定序的是選殖株 1；膠本身只量了長度。",
+      "kw_en": ["4 of 4", "lanes merge", "no control"],
+      "kw_zh": ["4 選 4", "泳道相連", "沒有對照"],
+      "q_en": "The page says insert 177 bp plus vector gives 536 bp. What is the vector contributing?",
+      "q_zh": "頁面寫插入片段 177 bp 加上載體後是 536 bp。載體貢獻了多少？",
+      "opt_en": [
+        "About 359 bp, where sister pages put the same vector stretch at roughly 209 bp",
+        "About 359 bp, matching every other pSTK-0C screen on the wiki",
+        "Nothing; 536 bp is the insert plus the 6xHis tag",
+        "About 177 bp, since insert and vector contribute equally"
+      ],
+      "opt_zh": [
+        "約 359 bp，但姊妹頁對同一段載體寫的是約 209 bp",
+        "約 359 bp，與 wiki 上其他 pSTK-0C 篩選完全一致",
+        "沒有貢獻；536 bp 是插入片段加上 6xHis 標籤",
+        "約 177 bp，因為插入片段與載體各佔一半"
+      ],
+      "ans": 0,
+      "trap_en": "Calling the four bands \"single, clean\" when they are overloaded into one another.",
+      "trap_zh": "把這四條帶說成「單一乾淨」，其實它們過載到彼此相連。"
+    },
+    {
+      "id": "v19",
+      "img": "ebfd0c76c34d.avif",
+      "dir": "reg",
+      "tier": 3,
+      "part": "BBa_26D5AX7S",
+      "ask_en": "Two of seven. What is lane 2 doing, and does it count?",
+      "ask_zh": "7 選 2。第 2 道在做什麼？它算不算數？",
+      "a_en": "M plus seven colony lanes. Lanes 1 and 4 carry a band just below the 1.5 kb rung, bracketed 1423 bp, which is the 2 of 7. Lane 2 is not blank: it has a strong band far lower down, a wrong-size product, and lanes 1 and 4 show faint low doublets of their own. Lanes 3, 5 and 7 are empty. A band at 1423 bp fixes length only. Clone 1 was sequenced and that is what the page rests on.",
+      "a_zh": "M 加七個菌落泳道。第 1、4 道在 1.5 kb 刻度略下方有帶，括號標為 1423 bp，也就是「7 選 2」。第 2 道並非空白：它在很下方有一條明亮的帶，是大小不對的產物；第 1、4 道自己下方也各有一對淡帶。第 3、5、7 道空白。1423 bp 的帶只固定了長度。送定序的是選殖株 1，頁面靠的是那份定序。",
+      "kw_en": ["2 of 7", "lane 2 wrong size", "low doublets"],
+      "kw_zh": ["7 選 2", "第 2 道大小不對", "下方雙帶"],
+      "q_en": "Lane 2's strong low band most likely means what?",
+      "q_zh": "第 2 道那條位置很低的亮帶，最可能代表什麼？",
+      "opt_en": [
+        "That colony amplified a shorter, wrong product: a mis-assembly or a primer artefact",
+        "That colony carries the insert in reverse orientation",
+        "That colony carries two copies of the plasmid",
+        "The lane was overloaded, which pushed the band downward"
+      ],
+      "opt_zh": [
+        "那個菌落擴增出較短、錯誤的產物：組裝錯誤或引子假象",
+        "那個菌落的插入片段方向相反",
+        "那個菌落帶有兩套質體",
+        "那一道上樣過量，把帶往下推了"
+      ],
+      "ans": 0,
+      "trap_en": "Describing lanes 2 and 6 as failed reactions when they carry wrong-size product instead.",
+      "trap_zh": "把第 2、6 道說成反應失敗，其實它們是跑出大小不對的產物。"
+    },
+    {
+      "id": "v20",
+      "img": "ec8e3cdacc85.avif",
+      "dir": "reg",
+      "tier": 3,
+      "part": "BBa_26CXI09X",
+      "ask_en": "The band here is multi-kilobase. What should it have been?",
+      "ask_zh": "這裡的帶是好幾 kb。它本來應該是多少？",
+      "a_en": "One colony lane beside a high-range ladder marked 10k, 8k and 6k. The single band sits between the 8k and 10k rungs, bracketed 7767 bp. The same page's methods say a correct band runs at [1145 bp], and the deposited sequence with the stated Csn F and ACCD R primers gives 1195 bp. Three numbers for one band, none matching the other two. Whatever this lane shows, it is not a 1.2 kb insert check.",
+      "a_zh": "一個菌落泳道，旁邊是標著 10k、8k、6k 的高範圍標記。唯一的帶落在 8k 與 10k 刻度之間，括號標為 7767 bp。同一頁的方法段寫「正確的帶在 [1145 bp]」，而用頁面所列的 Csn F 與 ACCD R 引子對已登錄序列計算，應為 1195 bp。一條帶、三個數字，彼此都對不上。這一道不論是什麼，都不是 1.2 kb 的插入片段檢查。",
+      "kw_en": ["7767 vs 1145", "1195 bp real", "high-range ladder"],
+      "kw_zh": ["7767 對 1145", "實際 1195 bp", "高範圍標記"],
+      "q_en": "This page gives the expected band as [1145 bp] in text and [7767 bp] in the caption. Which is closest to right?",
+      "q_zh": "這頁在正文寫預期帶為 [1145 bp]，圖說卻寫 [7767 bp]。哪一個最接近正確？",
+      "opt_en": [
+        "Neither; the deposited sequence with those primers gives 1195 bp",
+        "1145 bp, and the caption is a typo for the whole plasmid size",
+        "7767 bp, because the stated primers sit on the backbone",
+        "Both are right: 1145 bp linear and 7767 bp supercoiled"
+      ],
+      "opt_zh": [
+        "兩個都不對；用那組引子對已登錄序列計算應為 1195 bp",
+        "1145 bp，圖說是把整個質體大小誤植上去",
+        "7767 bp，因為所列的引子落在骨架上",
+        "兩個都對：1145 bp 是線性，7767 bp 是超螺旋"
+      ],
+      "ans": 0,
+      "trap_en": "Picking whichever of the two published numbers sounds better, when neither matches the deposited sequence.",
+      "trap_zh": "在兩個已發布的數字裡挑一個聽起來順的，其實兩個都對不上已登錄序列。"
+    },
+    {
+      "id": "v21",
+      "img": "fa7885bfe062.avif",
+      "dir": "reg",
+      "tier": 3,
+      "part": "BBa_26BDO8AQ",
+      "ask_en": "Two of four. What are lanes 1 and 3 showing?",
+      "ask_zh": "4 選 2。第 1 和第 3 道顯示的是什麼？",
+      "a_en": "M plus four colony lanes. Lanes 2 and 4 carry a band just below the 1.5 kb rung, bracketed 1442 bp, which is the 2 of 4. Lanes 1 and 3 are not empty: both give a bright, much shorter product, so those colonies amplified the wrong thing rather than nothing. The ladder is labelled only at 3K and 1.5K, so the 1442 bp reading rests on one nearby rung. Clone 4 was sequenced.",
+      "a_zh": "M 加四個菌落泳道。第 2、4 道在 1.5 kb 刻度略下方有帶，括號標為 1442 bp，也就是「4 選 2」。第 1、3 道並非空白：兩道都有明亮且短得多的產物，表示那些菌落擴增出錯的東西，而不是什麼都沒有。標記只在 3K 與 1.5K 有標字，所以 1442 bp 的判讀只靠附近一個刻度。送定序的是選殖株 4。",
+      "kw_en": ["2 of 4", "short wrong product", "two rungs only"],
+      "kw_zh": ["4 選 2", "較短的錯誤產物", "只有兩個刻度"],
+      "q_en": "This page quotes the ccaR composite insert twice. What is the problem?",
+      "q_zh": "這一頁兩次提到 ccaR 複合插入片段的長度。問題在哪？",
+      "opt_en": [
+        "It is given as 1257 bp in one place and 1174 bp in another",
+        "It is given in kilobases in one place and base pairs in another",
+        "It includes B0015 in one place and omits it in the other",
+        "It is quoted as 1442 bp, which is the amplicon rather than the insert"
+      ],
+      "opt_zh": [
+        "一處寫 1257 bp，另一處寫 1174 bp",
+        "一處用 kb，另一處用 bp",
+        "一處含 B0015，另一處漏掉它",
+        "寫成 1442 bp，那是擴增產物而不是插入片段"
+      ],
+      "ans": 0,
+      "trap_en": "Calling lanes 1 and 3 negative when both carry a bright band at the wrong size.",
+      "trap_zh": "把第 1、3 道說成陰性，其實兩道都有大小不對的亮帶。"
+    }
+  ]
+}

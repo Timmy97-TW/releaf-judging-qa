@@ -102,11 +102,18 @@ var FIGURES = {
 "en":"Overview",
 "zh":"總覽",
 "tier":2
+},
+{
+"id":"registry",
+"en":"Registry",
+"zh":"Registry",
+"tier":3
 }
 ],
-"n":86,
+"n":162,
 "t1":50,
-"t2":36
+"t2":36,
+"t3":76
 },
 "items":[
 {
@@ -2008,6 +2015,2970 @@ var FIGURES = {
 "trap_en":"Describing the timings without anchoring them to the stress day. The whole design hangs on that one date.",
 "trap_zh":"講時機卻沒有把它們錨定在施加逆境的那一天。整個設計就掛在那一個日期上。",
 "dom":"plant"
+},
+{
+"id":"q01",
+"img":"0316beea2c6c.avif",
+"dir":"reg",
+"tier":3,
+"part":"BBa_261XH2RS",
+"ask_en":"The part is 1693 bp. This map says 3792. Where did the rest come from?",
+"ask_zh":"這個部件是 1693 bp，圖上卻寫 3792。多出來的是什麼？",
+"a_en":"The map is the whole plasmid, not the part. The insert is the light-sensing unit: PliaG, R0-RBS, ccaS-m3, then the B0015 double terminator. That is the 1693 bp we deposited. Everything else is pSTK-1B backbone, the bla CDS and a high-copy ColE1 origin, so it is kept in E. coli on ampicillin. The name still carries sfGFP from the parent dropout vector.",
+"a_zh":"圖畫的是整個質體，不是部件本身。插入片段是光感測單元：PliaG、R0-RBS、ccaS-m3，再接 B0015 雙終止子，這就是我們存放的 1693 bp。其餘全是 pSTK-1B 骨架：bla CDS 和高拷貝 ColE1 起點，所以在大腸桿菌裡用安比西林篩選。構築名稱裡仍留著母載體的 sfGFP 字樣。",
+"kw_en":[
+"insert only is deposited",
+"1693 of 3792 bp",
+"bla plus ColE1 backbone"
+],
+"kw_zh":[
+"只存放插入片段",
+"3792 中的 1693 bp",
+"bla 加 ColE1 骨架"
+],
+"q_en":"The construct name reads pSTK-1B-sfGFP. What does sfGFP mean here?",
+"q_zh":"構築名稱寫著 pSTK-1B-sfGFP，這裡的 sfGFP 是什麼意思？",
+"opt_en":[
+"It names the parent dropout vector; the sfGFP cassette was replaced by this insert",
+"sfGFP is co-expressed as a reporter of ccaS-m3 activity",
+"sfGFP is translationally fused to the C-terminus of CcaS-m3",
+"sfGFP sits on the backbone as a transformation control"
+],
+"opt_zh":[
+"那是母載體 dropout 的名字；sfGFP 卡匣已被這段插入片段取代",
+"sfGFP 與 ccaS-m3 共同表達，作為活性報導基因",
+"sfGFP 以轉譯融合方式接在 CcaS-m3 的 C 端",
+"sfGFP 留在骨架上作為轉型對照"
+],
+"ans":0,
+"trap_en":"Reading sfGFP in the construct name as a reporter that is still present in this plasmid.",
+"trap_zh":"把構築名稱裡的 sfGFP 當成這個質體裡還存在的報導基因。",
+"dom":"registry"
+},
+{
+"id":"q02",
+"img":"2ea9a37bd6c1.avif",
+"dir":"reg",
+"tier":3,
+"part":"BBa_26NXOP7S",
+"ask_en":"This is not a SubtiToolKit vector. What is it, and why use it?",
+"ask_zh":"這不是 SubtiToolKit 的載體。那是什麼？為什麼用它？",
+"a_en":"It is Csn-AcdS-6xHis sitting in pGEM-T Easy, 4212 bp in total. You can see AmpR, the ColE1 ori, an f1 ori, lacZ-alpha split across the cloning site, and T7 and SP6 promoters flanking the insert. It is a holding step: PCR the coding sequence, confirm it here by blue-white screening and T7/SP6 colony PCR, then take the verified fragment into Golden Gate. No sfGFP dropout is involved.",
+"a_zh":"這是 Csn-AcdS-6xHis 放在 pGEM-T Easy 裡，全長 4212 bp。圖上看得到 AmpR、ColE1 起點、f1 起點、被選殖位點切開的 lacZ-alpha，以及兩側的 T7 與 SP6 啟動子。它只是暫存步驟：先 PCR 出編碼序列，用藍白篩選和 T7/SP6 菌落 PCR 在這裡確認，再把驗證過的片段帶進 Golden Gate。這裡沒有 sfGFP dropout。",
+"kw_en":[
+"pGEM-T Easy, 4212 bp",
+"blue-white on lacZ-alpha",
+"entry step before Golden Gate"
+],
+"kw_zh":[
+"pGEM-T Easy，4212 bp",
+"lacZ-alpha 藍白篩選",
+"進 Golden Gate 前的暫存"
+],
+"q_en":"How were correct clones picked in this vector?",
+"q_zh":"在這個載體裡，正確的選殖株是怎麼挑出來的？",
+"opt_en":[
+"White colonies from lacZ-alpha disruption, then colony PCR with T7 and SP6",
+"White colonies from the pSTK sfGFP dropout being replaced",
+"Green versus red light screening of the CcaSR output",
+"Erythromycin selection after transformation into B. subtilis"
+],
+"opt_zh":[
+"lacZ-alpha 被破壞而產生白色菌落，再用 T7 與 SP6 做菌落 PCR",
+"pSTK 的 sfGFP dropout 被取代而產生白色菌落",
+"用綠光與紅光篩選 CcaSR 的輸出",
+"轉型進枯草桿菌後用紅黴素篩選"
+],
+"ans":0,
+"trap_en":"Assuming every entry clone in this project used the pSTK sfGFP dropout for white-colony screening.",
+"trap_zh":"以為這個專案裡每個入門選殖株都是用 pSTK 的 sfGFP dropout 來做白色菌落篩選。",
+"dom":"registry"
+},
+{
+"id":"q03",
+"img":"312e8b798260.avif",
+"dir":"reg",
+"tier":3,
+"part":"BBa_26D5AX7S",
+"ask_en":"Why is this map 7191 bp when the deposited part is 1093 bp?",
+"ask_zh":"存放的部件是 1093 bp，為什麼這張圖是 7191 bp？",
+"a_en":"Because the drawing is the whole plasmid. The insert is pVeg, RiboJ, R0-RBS, SamyQ, LEA14 2.1 with a 6xHis, and B0015, which is the 1093 bp we deposited. The other 6098 bp is the pSTK-EXP1 backbone: Erm from the STK124 part, the bla CDS, repB, ColE1 and a truncated pBR322 ori. That same 6098 bp backbone is under every EXP1 map in this set.",
+"a_zh":"因為圖畫的是整個質體。插入片段是 pVeg、RiboJ、R0-RBS、SamyQ、帶 6xHis 的 LEA14 2.1，再接 B0015，就是我們存放的 1093 bp。其餘 6098 bp 是 pSTK-EXP1 骨架：來自 STK124 的 Erm、bla CDS、repB、ColE1 和截短的 pBR322 起點。這組圖裡每張 EXP1 地圖下面都是同樣的 6098 bp 骨架。",
+"kw_en":[
+"1093 bp insert",
+"6098 bp EXP1 backbone",
+"Erm plus bla on the map"
+],
+"kw_zh":[
+"1093 bp 插入片段",
+"6098 bp EXP1 骨架",
+"圖上同時有 Erm 與 bla"
+],
+"q_en":"The map shows both an Erm cassette and a bla CDS. Which one selects in B. subtilis?",
+"q_zh":"圖上同時有 Erm 卡匣與 bla CDS。在枯草桿菌裡是靠哪一個篩選？",
+"opt_en":[
+"Erythromycin; bla is the E. coli marker on the shuttle backbone",
+"Ampicillin, because bla is the larger and more prominent CDS",
+"Chloramphenicol, as on the Level 0 entry vector",
+"Both, since the shuttle backbone works the same way in each host"
+],
+"opt_zh":[
+"紅黴素；bla 是穿梭骨架上給大腸桿菌用的標記",
+"安比西林，因為 bla 是圖上比較大、比較顯眼的 CDS",
+"氯黴素，和 Level 0 入門載體一樣",
+"兩者皆是，因為穿梭骨架在兩個宿主裡作用相同"
+],
+"ans":0,
+"trap_en":"Seeing bla on the map and calling the construct an ampicillin plasmid in B. subtilis.",
+"trap_zh":"看到圖上有 bla，就說這個構築在枯草桿菌裡是安比西林質體。",
+"dom":"registry"
+},
+{
+"id":"q04",
+"img":"796dddbd81cc.avif",
+"dir":"reg",
+"tier":3,
+"part":"BBa_26J0GJGZ",
+"ask_en":"Point at the insert here and tell me what the rest of the plasmid is.",
+"ask_zh":"指出這裡的插入片段，其餘的質體是什麼？",
+"a_en":"The insert is the short run near the left: a small SamyQ arrow, then LEA14 2.1-Histag with the 6xHis marked under it. That is 564 bp of a 2645 bp plasmid. The rest is pSTK-0C, the Level 0 entry vector: a chloramphenicol acetyltransferase CDS drawn as two arrows because it straddles the point where the circle was cut open for drawing, plus a high-copy ColE1 origin.",
+"a_zh":"插入片段在偏左的短段：一個小的 SamyQ 箭頭，接著是 LEA14 2.1-Histag，下面標著 6xHis。那是 2645 bp 質體裡的 564 bp。其餘是 Level 0 入門載體 pSTK-0C：一個氯黴素乙醯轉移酶 CDS 被畫成兩個箭頭，因為它跨過了為了畫圖而把環狀質體切開的那一點，另外還有高拷貝 ColE1 起點。",
+"kw_en":[
+"564 bp of 2645 bp",
+"pSTK-0C, chloramphenicol",
+"CAT split by the cut point"
+],
+"kw_zh":[
+"2645 中的 564 bp",
+"pSTK-0C，氯黴素",
+"CAT 被切開點分成兩段"
+],
+"q_en":"Why does the chloramphenicol acetyltransferase appear twice on this map?",
+"q_zh":"為什麼氯黴素乙醯轉移酶在圖上出現兩次？",
+"opt_en":[
+"It is one CDS, split by where the circular plasmid was linearised for the drawing",
+"There are two copies, giving a higher level of chloramphenicol resistance",
+"One is CAT and the other is a second, unrelated resistance marker",
+"The clone carries a tandem duplication picked up during cloning"
+],
+"opt_zh":[
+"那是一個 CDS，被畫圖時把環狀質體線性化的位置切成兩段",
+"有兩份拷貝，可以提高氯黴素抗性",
+"一個是 CAT，另一個是第二個不相干的抗性標記",
+"這個選殖株在選殖過程中產生了串聯重複"
+],
+"ans":0,
+"trap_en":"Counting the two arrows as two separate genes rather than one CDS across the linearisation point.",
+"trap_zh":"把兩個箭頭算成兩個基因，而不是一個跨過線性化位置的 CDS。",
+"dom":"registry"
+},
+{
+"id":"q05",
+"img":"7aa19e0d0524.avif",
+"dir":"reg",
+"tier":3,
+"part":"BBa_26TOGLX3",
+"ask_en":"What is this, and what separates it from the LEA14 map next to it?",
+"ask_zh":"這是什麼？它和旁邊那張 LEA14 地圖差在哪裡？",
+"a_en":"Same Level 0 vector, different cargo. SamyQ, then an AcdS 2.1-Histag arrow with the 6xHis marked beneath, 1125 bp deposited inside a 3206 bp plasmid. The backbone is identical to the LEA14 one, chloramphenicol acetyltransferase and the ColE1 origin. Apart from the gene name on the arrow, the thing that separates them is total length: AcdS is about 560 bp longer than LEA14.",
+"a_zh":"同一個 Level 0 載體，不同的貨物。SamyQ 之後是 AcdS 2.1-Histag 箭頭，下面標著 6xHis，3206 bp 質體裡存放了 1125 bp。骨架和 LEA14 那張完全一樣：氯黴素乙醯轉移酶和 ColE1 起點。除了箭頭上的基因名稱，分辨兩者的就是總長度：AcdS 比 LEA14 長約 560 bp。",
+"kw_en":[
+"1125 bp of 3206 bp",
+"same pSTK-0C backbone",
+"length is the difference"
+],
+"kw_zh":[
+"3206 中的 1125 bp",
+"相同的 pSTK-0C 骨架",
+"差別在長度"
+],
+"q_en":"What does the 2.1 on the AcdS arrow refer to?",
+"q_zh":"AcdS 箭頭上的 2.1 是指什麼？",
+"opt_en":[
+"A recoded version: 12 of the first 15 acdS codons were changed to open up the mRNA start",
+"The second clone picked from the first plate",
+"Version 2 of the SnapGene map file, revision 1",
+"An insert of about 2.1 kb"
+],
+"opt_zh":[
+"重新編碼的版本：acdS 前 15 個密碼子中有 12 個被改過，以打開 mRNA 起始端的結構",
+"第一塊培養皿上挑出的第二個選殖株",
+"SnapGene 地圖檔的第 2 版、第 1 次修訂",
+"大約 2.1 kb 的插入片段"
+],
+"ans":0,
+"trap_en":"Reading 2.1 as a size in kilobases or as a clone number rather than a sequence variant.",
+"trap_zh":"把 2.1 讀成 kb 大小或選殖株編號，而不是序列變體。",
+"dom":"registry"
+},
+{
+"id":"q06",
+"img":"8349ecd5ea36.avif",
+"dir":"reg",
+"tier":3,
+"part":"BBa_26PGPSGK",
+"ask_en":"The same picture sits on two part pages. Which page does it actually match?",
+"ask_zh":"同一張圖出現在兩個部件頁面上。它其實對應哪一個？",
+"a_en":"It is the Level 1 output unit in pSTK-1D: PcpcG2-veg, EEBD, R0-RBS, Csn-AcdS-Histag with 6xHis, and B0015, on a bla and ColE1 backbone, 3857 bp total. Take off the 2108 bp pSTK-1D backbone and the insert is 1749 bp, which is BBa_26PGPSGK. The other page, BBa_26Q3LKZU, is listed at 2617 bp, 868 bp larger. The map fits the corrected deposit, not the older one.",
+"a_zh":"這是 pSTK-1D 裡的 Level 1 輸出單元：PcpcG2-veg、EEBD、R0-RBS、帶 6xHis 的 Csn-AcdS-Histag，再接 B0015，骨架是 bla 與 ColE1，全長 3857 bp。扣掉 2108 bp 的 pSTK-1D 骨架，插入片段是 1749 bp，也就是 BBa_26PGPSGK。另一個頁面 BBa_26Q3LKZU 登記 2617 bp，多了 868 bp。這張圖對應的是修正後的存放版本，不是舊的那個。",
+"kw_en":[
+"3857 minus 2108 backbone",
+"insert is 1749 bp",
+"matches the corrected deposit"
+],
+"kw_zh":[
+"3857 減 2108 骨架",
+"插入片段 1749 bp",
+"對應修正後的版本"
+],
+"q_en":"What are the extra 868 bp in BBa_26Q3LKZU?",
+"q_zh":"BBa_26Q3LKZU 多出來的 868 bp 是什麼？",
+"opt_en":[
+"The 1045 bp third-party BBa_254UKC9E, PcpcG2 plus an sfGFP reporter, where the team's own 177 bp PcpcG2-veg belongs",
+"An sfGFP dropout that was never excised from the pSTK-1D vector",
+"A second copy of the EEBD-RBS0 regulatory region",
+"The pSTK-1D backbone mistakenly counted into the part length"
+],
+"opt_zh":[
+"1045 bp 的第三方部件 BBa_254UKC9E，也就是 PcpcG2 加一個 sfGFP 報導基因，取代了團隊自己的 177 bp PcpcG2-veg",
+"pSTK-1D 載體裡沒切掉的 sfGFP dropout",
+"多了一份 EEBD-RBS0 調控區",
+"把 pSTK-1D 骨架誤算進部件長度"
+],
+"ans":0,
+"trap_en":"Assuming one figure on two pages means the two pages hold the same construct.",
+"trap_zh":"以為同一張圖放在兩個頁面上，就代表兩個頁面是同一個構築。",
+"dom":"registry"
+},
+{
+"id":"q07",
+"img":"9d5aa3d1fdfd.avif",
+"dir":"reg",
+"tier":3,
+"part":"BBa_26XVQ3FS",
+"ask_en":"Walk me left to right across the insert on this map.",
+"ask_zh":"請從左到右講一遍這張圖上的插入片段。",
+"a_en":"From the left edge: pVeg, RiboJ, the R0-RBS and its scar, SamyQ, then the AcdS 2.1-Histag arrow, then the B0015 double terminator. That is the 1654 bp deposited part. After it comes the pSTK-EXP1 backbone, Erm from the STK124 part, bla, repB, ColE1 and a truncated pBR322 ori, for 7752 bp total. The map shows order and annotation, not a sequencing read.",
+"a_zh":"從左邊開始：pVeg、RiboJ、R0-RBS 和它的 scar、SamyQ，接著是 AcdS 2.1-Histag 箭頭，然後是 B0015 雙終止子。那就是存放的 1654 bp。再來是 pSTK-EXP1 骨架：來自 STK124 的 Erm、bla、repB、ColE1 和截短的 pBR322 起點，全長 7752 bp。圖顯示的是順序與註解，不是定序結果。",
+"kw_en":[
+"pVeg RiboJ RBS0 SamyQ",
+"1654 bp insert",
+"annotation not sequencing"
+],
+"kw_zh":[
+"pVeg RiboJ RBS0 SamyQ",
+"1654 bp 插入片段",
+"是註解不是定序"
+],
+"q_en":"This plasmid is 7752 bp and the Csn version of the same unit is 7767. What is the 15 bp?",
+"q_zh":"這個質體是 7752 bp，同一單元的 Csn 版本是 7767。那 15 bp 是什麼？",
+"opt_en":[
+"Csn is 108 bp and SamyQ is 93 bp, so swapping the signal peptide costs 15 bp",
+"Only the Csn version carries the C-terminal 6xHis tag",
+"AcdS 2.1 has five extra recoded codons compared with wild-type acdS",
+"The Csn version uses a longer terminator than B0015"
+],
+"opt_zh":[
+"Csn 是 108 bp、SamyQ 是 93 bp，換訊號胜肽就差 15 bp",
+"只有 Csn 版本帶 C 端的 6xHis 標籤",
+"AcdS 2.1 比野生型 acdS 多了五個重新編碼的密碼子",
+"Csn 版本用的終止子比 B0015 長"
+],
+"ans":0,
+"trap_en":"Treating the two signal peptides as interchangeable in length as well as in function.",
+"trap_zh":"以為兩個訊號胜肽不只功能可互換，長度也一樣。",
+"dom":"registry"
+},
+{
+"id":"q08",
+"img":"bb80d9f09143.avif",
+"dir":"reg",
+"tier":3,
+"part":"BBa_26RF0X2E",
+"ask_en":"What does this growth curve settle, and what does it leave open?",
+"ask_zh":"這條生長曲線解決了什麼？又留下了什麼沒解決？",
+"a_en":"OD600 of WB800 carrying the CcaSR system, red 100% on the left and green 100% on the right, read at 2, 4, 6, 8 and 24 hours. Both end in the same place, 1.026 and 1.017, against a blank of 0.057 to 0.061. So green light does not cost growth. It says nothing about expression or secretion. Red is n=1, and nothing was read between 8 and 24 hours.",
+"a_zh":"帶有 CcaSR 系統的 WB800 的 OD600，左邊紅光 100%、右邊綠光 100%，在 2、4、6、8 和 24 小時讀取。兩邊最後落在同一個地方，1.026 與 1.017，空白值是 0.057 到 0.061。所以綠光不會損失生長。它對表達或分泌沒有任何說明。紅光只有 n=1，而且 8 到 24 小時之間沒有量測。",
+"kw_en":[
+"1.026 red, 1.017 green",
+"growth cost only",
+"red is n=1"
+],
+"kw_zh":[
+"紅光 1.026、綠光 1.017",
+"只談生長代價",
+"紅光只有 n=1"
+],
+"q_en":"What does the straight segment from 8 h to 24 h represent?",
+"q_zh":"從 8 小時到 24 小時那段直線代表什麼？",
+"opt_en":[
+"Nothing was measured in between; it is a line joining two points",
+"Steady exponential growth continued at a constant rate",
+"The culture had entered stationary phase",
+"Hourly readings were taken and the points overlap at this scale"
+],
+"opt_zh":[
+"中間沒有量測；那只是連接兩個點的直線",
+"指數生長以固定速率持續進行",
+"菌液已進入穩定期",
+"其實每小時都有讀值，只是在這個比例尺下點重疊了"
+],
+"ans":0,
+"trap_en":"Reading the 8 to 24 hour segment as measured growth kinetics rather than interpolation.",
+"trap_zh":"把 8 到 24 小時那段當成量到的生長動力學，而不是內插的直線。",
+"dom":"registry"
+},
+{
+"id":"q09",
+"img":"bd8c162daae6.avif",
+"dir":"reg",
+"tier":3,
+"part":"BBa_26PX0UGH",
+"ask_en":"The deposited insert is 183 bp. Find it on this map.",
+"ask_zh":"存放的插入片段是 183 bp。在這張圖上找出來。",
+"a_en":"It is the short arrow at the far left, labelled SamyQ-BoPep4 2.1-Histag, with 6xHis marked underneath. The whole fusion is drawn as one feature rather than split into signal peptide, peptide and tag. That is 183 bp of a 2263 bp plasmid; the rest is pSTK-0C, chloramphenicol acetyltransferase and the ColE1 origin. BoPep4 itself is only 69 bp, so most of the insert is signal and tag.",
+"a_zh":"就是最左邊那個短箭頭，標示 SamyQ-BoPep4 2.1-Histag，下面標著 6xHis。整個融合被畫成一個特徵，沒有拆成訊號胜肽、胜肽和標籤。那是 2263 bp 質體裡的 183 bp；其餘是 pSTK-0C、氯黴素乙醯轉移酶和 ColE1 起點。BoPep4 本身只有 69 bp，所以插入片段大部分是訊號和標籤。",
+"kw_en":[
+"one arrow, whole fusion",
+"183 bp of 2263 bp",
+"BoPep4 is only 69 bp"
+],
+"kw_zh":[
+"一個箭頭畫完整個融合",
+"2263 中的 183 bp",
+"BoPep4 只有 69 bp"
+],
+"q_en":"Of the 183 bp insert, how much is the BoPep4 peptide itself?",
+"q_zh":"183 bp 的插入片段裡，BoPep4 胜肽本身佔多少？",
+"opt_en":[
+"69 bp; the other 114 bp is the 93 bp SamyQ signal plus the His tag",
+"All 183 bp; the insert is the peptide coding sequence",
+"108 bp, the length of the secretion signal",
+"141 bp, the same as the Bopep4 15-23 truncation"
+],
+"opt_zh":[
+"69 bp；其餘 114 bp 是 93 bp 的 SamyQ 訊號加上 His 標籤",
+"全部 183 bp；插入片段就是胜肽的編碼序列",
+"108 bp，也就是分泌訊號的長度",
+"141 bp，和 Bopep4 15-23 截短版一樣"
+],
+"ans":0,
+"trap_en":"Taking the deposited part length as the length of the peptide it encodes.",
+"trap_zh":"把存放的部件長度當成它編碼的胜肽長度。",
+"dom":"registry"
+},
+{
+"id":"q10",
+"img":"c751930c77cf.avif",
+"dir":"reg",
+"tier":3,
+"part":"BBa_26RF0X2E",
+"ask_en":"This is the whole system. Name the four units in the order you see them.",
+"ask_zh":"這是完整系統。照你看到的順序說出四個單元。",
+"a_en":"Left to right: PtagC with RBS driving Ho1 and pcyA, closed by L3S2P21; then PliaG with ccaSm3; then pVeg with ccaR; then PcpcG2-veg with RiboJ, R0-RBS, SamyQ and the AcdS arrow labelled ACC. B0015 closes the last three. 10,377 bp in all on the pSTK-EXP2 backbone with a chloramphenicol cassette, repB, ColE1 and a truncated pBR322 ori.",
+"a_zh":"由左到右：PtagC 加 RBS 驅動 Ho1 與 pcyA，由 L3S2P21 收尾；接著是 PliaG 加 ccaSm3；再來是 pVeg 加 ccaR；最後是 PcpcG2-veg 加 RiboJ、R0-RBS、SamyQ 和標示為 ACC 的 AcdS 箭頭。後三個單元都由 B0015 收尾。全長 10,377 bp，骨架是 pSTK-EXP2，含氯黴素卡匣、repB、ColE1 和截短的 pBR322 起點。",
+"kw_en":[
+"PCB, sensor, CcaR, output",
+"10,377 bp with backbone",
+"junction PCR only"
+],
+"kw_zh":[
+"PCB、感測、CcaR、輸出",
+"含骨架 10,377 bp",
+"只有接點 PCR"
+],
+"q_en":"What does the evidence behind this Level 2 map actually support?",
+"q_zh":"這張 Level 2 地圖背後的證據，實際上支持到哪裡？",
+"opt_en":[
+"That the four modules are present in this order; the sequence between junctions is unverified",
+"That all 10,377 bp were sequenced and are free of mutations",
+"That the circuit was shown to switch output on under green light",
+"That each module was individually sequenced inside this finished plasmid"
+],
+"opt_zh":[
+"四個模組以這個順序存在；接點之間的序列尚未驗證",
+"全部 10,377 bp 都已定序且沒有突變",
+"已證實電路在綠光下會把輸出打開",
+"每個模組都在這個完成的質體裡個別定序過"
+],
+"ans":0,
+"trap_en":"Letting the Level 1 caption \"sequence-verified\" carry over to a 10.4 kb Level 2 plasmid that was only checked by junction PCR.",
+"trap_zh":"把 Level 1 圖說的「序列已驗證」套到只做過接點 PCR 的 10.4 kb Level 2 質體上。",
+"dom":"registry"
+},
+{
+"id":"q11",
+"img":"c8c3303a0770.avif",
+"dir":"reg",
+"tier":3,
+"part":"BBa_26DE5E2Q",
+"ask_en":"The page says 2602 bp and this map says 3842. Do those two agree?",
+"ask_zh":"頁面寫 2602 bp，這張圖寫 3842。這兩個數字對得上嗎？",
+"a_en":"No. The map is the whole plasmid, so the insert is 3842 minus the 2108 bp pSTK-1D backbone, which is 1734 bp. That is the corrected construct carrying the team's own 177 bp PcpcG2-veg, deposited separately as BBa_263IW021. The page this figure sits on is the older 2602 bp version with the 1045 bp third-party part, 868 bp larger. One of the reverse primers is still named Csn:ACCD on a SamyQ construct.",
+"a_zh":"對不上。圖畫的是整個質體，所以插入片段是 3842 減掉 2108 bp 的 pSTK-1D 骨架，等於 1734 bp。那是帶團隊自己 177 bp PcpcG2-veg 的修正版構築，另外以 BBa_263IW021 存放。這張圖所在的頁面是舊的 2602 bp 版本，含 1045 bp 的第三方部件，多了 868 bp。另外，SamyQ 構築上有一支反向引子仍叫 Csn:ACCD。",
+"kw_en":[
+"3842 minus 2108 is 1734",
+"page lists 2602 bp",
+"868 bp apart"
+],
+"kw_zh":[
+"3842 減 2108 等於 1734",
+"頁面登記 2602 bp",
+"相差 868 bp"
+],
+"q_en":"Which deposit does the construct drawn here actually correspond to?",
+"q_zh":"這裡畫的構築，實際上對應哪一個存放部件？",
+"opt_en":[
+"BBa_263IW021, the corrected 1734 bp version",
+"BBa_26DE5E2Q, the page the figure sits on",
+"BBa_26PGPSGK, the Csn version of the same unit",
+"BBa_26GJIT8W, the PcpcG2-veg promoter on its own"
+],
+"opt_zh":[
+"BBa_263IW021，修正後的 1734 bp 版本",
+"BBa_26DE5E2Q，也就是這張圖所在的頁面",
+"BBa_26PGPSGK，同一單元的 Csn 版本",
+"BBa_26GJIT8W，單獨的 PcpcG2-veg 啟動子"
+],
+"ans":0,
+"trap_en":"Trusting the length printed on the page because the figure happens to sit under it.",
+"trap_zh":"因為圖剛好放在那個頁面下方，就相信頁面上印的長度。",
+"dom":"registry"
+},
+{
+"id":"q12",
+"img":"cde051c48ace.avif",
+"dir":"reg",
+"tier":3,
+"part":"BBa_26BDO8AQ",
+"ask_en":"What is missing from this unit that every output unit has?",
+"ask_zh":"這個單元少了每個輸出單元都有的什麼東西？",
+"a_en":"A signal peptide and a 6xHis tag. This is the transduction unit in pSTK-1C: pVeg, R0-RBS, ccaR, B0015, 964 bp of a 3243 bp plasmid, with bla and a ColE1 origin as backbone. There is no SamyQ or Csn on it and no His tag, and no RiboJ either. CcaR is the response regulator and works inside the cell, so it is neither secreted nor pulled down on nickel.",
+"a_zh":"少了訊號胜肽和 6xHis 標籤。這是 pSTK-1C 裡的傳遞單元：pVeg、R0-RBS、ccaR、B0015，3243 bp 質體裡的 964 bp，骨架是 bla 與 ColE1 起點。上面沒有 SamyQ 或 Csn，也沒有 His 標籤，連 RiboJ 都沒有。CcaR 是反應調節蛋白，在細胞內作用，所以既不分泌，也不用鎳柱拉下來。",
+"kw_en":[
+"no signal, no His tag",
+"964 bp of 3243 bp",
+"CcaR stays intracellular"
+],
+"kw_zh":[
+"沒有訊號、沒有 His 標籤",
+"3243 中的 964 bp",
+"CcaR 留在細胞內"
+],
+"q_en":"Why does ccaR carry no 6xHis tag when the cargo genes all do?",
+"q_zh":"貨物基因都帶 6xHis，為什麼 ccaR 沒有？",
+"opt_en":[
+"It stays intracellular as the response regulator, so there is nothing to secrete or purify from the medium",
+"A C-terminal tag would block CcaR binding at the PcpcG2 promoter",
+"It was simply left off by mistake during design",
+"The B0015 terminator already provides a purification handle"
+],
+"opt_zh":[
+"它是反應調節蛋白、留在細胞內，沒有東西要分泌或從培養液純化",
+"C 端標籤會阻擋 CcaR 結合 PcpcG2 啟動子",
+"設計時單純漏掉了",
+"B0015 終止子已經提供了純化用的把手"
+],
+"ans":0,
+"trap_en":"Expecting every CDS in the kit to carry a secretion signal and a His tag.",
+"trap_zh":"以為這套工具包裡每個 CDS 都該帶分泌訊號和 His 標籤。",
+"dom":"registry"
+},
+{
+"id":"q13",
+"img":"d03c0ee204e2.avif",
+"dir":"reg",
+"tier":3,
+"part":"BBa_267B69E3",
+"ask_en":"How does this map differ from the BoPep4 2.1 map in the same vector?",
+"ask_zh":"這張圖和同一載體裡的 BoPep4 2.1 地圖差在哪？",
+"a_en":"Barely at all. Same pSTK-0C vector, same chloramphenicol acetyltransferase and ColE1 origin, same fusion drawn as one arrow with 6xHis beneath. This one reads 2264 bp and the 2.1 map reads 2263. But both inserts are deposited at 183 bp, so that one-base gap is a drawing inconsistency, not a real difference. 2.1 and 2.2 are codon variants of the same 69 bp peptide.",
+"a_zh":"幾乎沒差。同一個 pSTK-0C 載體，同樣的氯黴素乙醯轉移酶和 ColE1 起點，同樣用一個箭頭畫完整個融合、下面標 6xHis。這張寫 2264 bp，2.1 那張寫 2263。但兩個插入片段都登記為 183 bp，所以那一個鹼基的差距是畫圖不一致，不是真的差異。2.1 和 2.2 是同一段 69 bp 胜肽的密碼子變體。",
+"kw_en":[
+"2264 against 2263 bp",
+"both inserts are 183 bp",
+"codon variants, same length"
+],
+"kw_zh":[
+"2264 對 2263 bp",
+"兩個插入片段都是 183 bp",
+"密碼子變體、長度相同"
+],
+"q_en":"How do BoPep4 2.1 and 2.2 actually differ?",
+"q_zh":"BoPep4 2.1 和 2.2 實際上差在哪裡？",
+"opt_en":[
+"They are codon variants of the same 69 bp peptide and are the same length",
+"2.2 is one base longer, exactly as the two map totals show",
+"2.2 swaps the SamyQ signal peptide for Csn",
+"2.2 carries a second His tag at the N-terminus"
+],
+"opt_zh":[
+"它們是同一段 69 bp 胜肽的密碼子變體，長度相同",
+"2.2 多一個鹼基，就和兩張圖的總長一樣",
+"2.2 把 SamyQ 訊號胜肽換成 Csn",
+"2.2 在 N 端多帶一個 His 標籤"
+],
+"ans":0,
+"trap_en":"Trusting the 1 bp difference between the two map totals as a real sequence difference.",
+"trap_zh":"把兩張圖總長相差的 1 bp 當成真正的序列差異。",
+"dom":"registry"
+},
+{
+"id":"q14",
+"img":"d09d66204dd3.avif",
+"dir":"reg",
+"tier":3,
+"part":"BBa_260MVA1K",
+"ask_en":"The page title says Csn. What does the label under this map say?",
+"ask_zh":"頁面標題寫 Csn。這張圖下面的標示寫什麼？",
+"a_en":"SamyQ. The bold name reads ccaSR-SamyQ-AcdS-Histag, and that contradicts the page, which is CcaSR-Csn-AcdS-Histag. The map's own feature settles it: the fourth unit is annotated CDS-Csn_Acc, and the deposited sequence for BBa_260MVA1K is the Csn version at 6061 bp. So the page and the feature arrow are right and the bottom label is a mislabel. This map also prints no total length.",
+"a_zh":"寫 SamyQ。粗體名稱是 ccaSR-SamyQ-AcdS-Histag，這和頁面的 CcaSR-Csn-AcdS-Histag 矛盾。圖上自己的特徵就能判定：第四個單元註解為 CDS-Csn_Acc，而 BBa_260MVA1K 存放的序列是 6061 bp 的 Csn 版本。所以頁面和特徵箭頭是對的，底下的構築名稱標錯了。這張圖也沒有印出總長度。",
+"kw_en":[
+"bottom label says SamyQ",
+"feature says CDS-Csn_Acc",
+"deposited sequence is Csn"
+],
+"kw_zh":[
+"底下標示寫 SamyQ",
+"特徵寫 CDS-Csn_Acc",
+"存放序列是 Csn"
+],
+"q_en":"Page title and map label disagree. Which one does the deposited sequence back?",
+"q_zh":"頁面標題和地圖標示矛盾。存放的序列支持哪一個？",
+"opt_en":[
+"The page and the map's own CDS-Csn_Acc feature; the bold name at the bottom is wrong",
+"The bold name at the bottom; the page title was never updated",
+"Both, because SamyQ and Csn are two names for the same signal peptide",
+"It cannot be decided from this figure alone"
+],
+"opt_zh":[
+"頁面以及圖上自己的 CDS-Csn_Acc 特徵；底下的粗體名稱是錯的",
+"底下的粗體名稱；頁面標題一直沒更新",
+"兩者皆可，因為 SamyQ 和 Csn 是同一個訊號胜肽的兩種叫法",
+"光靠這張圖無法判斷"
+],
+"ans":0,
+"trap_en":"Reading the bold construct name under a map as the authoritative identity of the plasmid.",
+"trap_zh":"把地圖下方的粗體構築名稱當成這個質體身分的權威依據。",
+"dom":"registry"
+},
+{
+"id":"q15",
+"img":"d1767d23bdba.avif",
+"dir":"reg",
+"tier":3,
+"part":"BBa_26IA55UY",
+"ask_en":"What is this map, and what can you not tell from it?",
+"ask_zh":"這是什麼圖？有什麼是你從圖上看不出來的？",
+"a_en":"The BoPep4 2.2 expression construct in pSTK-EXP1: pVeg, RiboJ, R0-RBS, the fusion drawn as one arrow, 6xHis, B0015. That is 712 bp of insert on the 6098 bp EXP1 backbone with Erm, bla, repB and ColE1, 6810 bp in all. What you cannot tell is which BoPep4 variant it is. The arrow is labelled SamyQ-Bopep4-v2t1 and the 2.1 map is the same length with the same label.",
+"a_zh":"pSTK-EXP1 裡的 BoPep4 2.2 表達構築：pVeg、RiboJ、R0-RBS、用一個箭頭畫完的融合、6xHis、B0015。那是 712 bp 的插入片段，放在 6098 bp 的 EXP1 骨架上，含 Erm、bla、repB 和 ColE1，全長 6810 bp。看不出來的是它究竟是哪個 BoPep4 變體：箭頭標示為 SamyQ-Bopep4-v2t1，而 2.1 那張圖長度相同、標示也相同。",
+"kw_en":[
+"712 bp insert, 6810 bp total",
+"arrow says v2t1 on both",
+"map cannot separate the variants"
+],
+"kw_zh":[
+"712 bp 插入、全長 6810 bp",
+"兩張箭頭都寫 v2t1",
+"圖分不出變體"
+],
+"q_en":"How would you tell this plasmid apart from the BoPep4 2.1 version?",
+"q_zh":"你要怎麼把這個質體和 BoPep4 2.1 版本分開？",
+"opt_en":[
+"You cannot from the map: same length, same features, same arrow label. You need the sequence",
+"The 2.2 plasmid is one base longer than the 2.1 plasmid",
+"The 2.1 version uses the Csn signal peptide instead of SamyQ",
+"The 2.2 version carries an extra RiboJ insulator"
+],
+"opt_zh":[
+"從圖上分不出來：長度一樣、特徵一樣、箭頭標示也一樣，要看序列",
+"2.2 的質體比 2.1 多一個鹼基",
+"2.1 版本用的是 Csn 訊號胜肽，不是 SamyQ",
+"2.2 版本多帶一個 RiboJ 絕緣子"
+],
+"ans":0,
+"trap_en":"Assuming two different part numbers must look different on a plasmid map.",
+"trap_zh":"以為兩個不同的部件編號在質體圖上一定看起來不一樣。",
+"dom":"registry"
+},
+{
+"id":"q16",
+"img":"dd7ceaa83e24.avif",
+"dir":"reg",
+"tier":3,
+"part":"BBa_26CXI09X",
+"ask_en":"Which signal peptide is on this one, and how does the length show it?",
+"ask_zh":"這個用的是哪個訊號胜肽？長度怎麼看得出來？",
+"a_en":"Csn. The fusion is drawn as a single arrow, Csn-AcdS-Histag, in pSTK-EXP1 at 7767 bp. The SamyQ version of the same unit is 7752, which is 15 bp smaller, exactly Csn 108 minus SamyQ 93. The deposited inserts agree: 1669 against 1654. Everything else is the same 6098 bp backbone with Erm, bla, repB and ColE1, so length is the one number separating the two pictures.",
+"a_zh":"是 Csn。融合被畫成單一箭頭 Csn-AcdS-Histag，在 pSTK-EXP1 裡是 7767 bp。同一單元的 SamyQ 版本是 7752，小 15 bp，正好是 Csn 的 108 減 SamyQ 的 93。存放的插入片段也對得上：1669 對 1654。其餘都是同樣的 6098 bp 骨架，含 Erm、bla、repB 和 ColE1，所以長度是分辨兩張圖的唯一數字。",
+"kw_en":[
+"Csn, 7767 bp",
+"15 bp bigger than SamyQ",
+"1669 against 1654 bp"
+],
+"kw_zh":[
+"Csn，7767 bp",
+"比 SamyQ 大 15 bp",
+"1669 對 1654 bp"
+],
+"q_en":"Why does the team carry both a Csn and a SamyQ version of each cargo?",
+"q_zh":"為什麼每個貨物都同時做了 Csn 和 SamyQ 兩個版本？",
+"opt_en":[
+"They are two Sec signal peptides being compared head to head for secretion of the same protein",
+"Csn works in E. coli and SamyQ works in B. subtilis",
+"SamyQ is the His-tagged variant and Csn is the untagged one",
+"Csn is used at Level 1 and SamyQ only at Level 2"
+],
+"opt_zh":[
+"那是兩個 Sec 訊號胜肽，拿來正面比較同一個蛋白的分泌效果",
+"Csn 在大腸桿菌裡有效，SamyQ 在枯草桿菌裡有效",
+"SamyQ 是帶 His 標籤的版本，Csn 是不帶標籤的",
+"Csn 用在 Level 1，SamyQ 只用在 Level 2"
+],
+"ans":0,
+"trap_en":"Treating one of the two signal peptides as a failed version rather than as one arm of a comparison.",
+"trap_zh":"把兩個訊號胜肽裡的一個當成失敗的版本，而不是比較實驗的其中一組。",
+"dom":"registry"
+},
+{
+"id":"q17",
+"img":"e300abd83e05.avif",
+"dir":"reg",
+"tier":3,
+"part":"BBa_26XZYM10",
+"ask_en":"Why does this unit exist, and why are Ho1 and pcyA drawn as one piece?",
+"ask_zh":"這個單元為什麼要存在？Ho1 和 pcyA 為什麼被畫成一段？",
+"a_en":"It makes the chromophore. Ho1 turns heme into biliverdin and PcyA reduces that to PCB, which CcaS needs in order to sense green light, and B. subtilis does not make PCB on its own. The two enzymes are joined by a GGGGS double linker and expressed as one fusion, which is why the arrows abut. Driven by PtagC+RBS, closed by L3S2P21: 1655 bp of a 3754 bp pSTK-1A plasmid.",
+"a_zh":"它負責做發色團。Ho1 把血紅素轉成膽綠素，PcyA 再把它還原成 PCB，而 CcaS 需要 PCB 才能感測綠光，枯草桿菌自己不會做 PCB。兩個酵素由 GGGGS 雙重連接子接在一起、以單一融合蛋白表達，所以兩個箭頭是相連的。由 PtagC+RBS 驅動、L3S2P21 收尾：3754 bp 的 pSTK-1A 質體裡的 1655 bp。",
+"kw_en":[
+"Ho1 and PcyA make PCB",
+"GGGGS x2 fusion",
+"1655 bp of 3754 bp"
+],
+"kw_zh":[
+"Ho1 與 PcyA 做出 PCB",
+"GGGGS x2 融合",
+"3754 中的 1655 bp"
+],
+"q_en":"What does the GGGGS x2 linker between Ho1 and pcyA mean here?",
+"q_zh":"Ho1 和 pcyA 之間的 GGGGS x2 連接子在這裡代表什麼？",
+"opt_en":[
+"The two enzymes are translated as a single fusion protein, which raises PCB output",
+"It is a scar left behind by the Golden Gate junction",
+"It separates two independent CDSs, each with its own RBS",
+"It is the site where signal peptidase cuts the product"
+],
+"opt_zh":[
+"兩個酵素以單一融合蛋白轉譯，可以提高 PCB 產量",
+"那是 Golden Gate 接點留下的 scar",
+"它分隔兩個各自帶 RBS 的獨立 CDS",
+"那是訊號胜肽酶切開產物的位置"
+],
+"ans":0,
+"trap_en":"Counting Ho1 and pcyA as two separately expressed genes in one operon.",
+"trap_zh":"把 Ho1 和 pcyA 當成同一個操縱組裡兩個各自表達的基因。",
+"dom":"registry"
+},
+{
+"id":"q18",
+"img":"f3cde1565dbc.avif",
+"dir":"reg",
+"tier":3,
+"part":"BBa_26ZQ1T72",
+"ask_en":"This is Csn-LEA14. What should it weigh against the SamyQ version?",
+"ask_zh":"這是 Csn-LEA14。它和 SamyQ 版本相比應該差多少？",
+"a_en":"Fifteen base pairs more, if the signal peptide is the only change. The SamyQ-LEA14 2.1 map in the same pSTK-0C vector is 2645 bp and this one is 2660, which fits Csn 108 against SamyQ 93. But the deposited lengths are 582 and 564, which is 18 apart. Those two gaps do not match, so three bases somewhere need checking. Otherwise it is the same picture: one fusion arrow, 6xHis, CAT, ColE1.",
+"a_zh":"如果只換訊號胜肽，應該多 15 個鹼基對。同一個 pSTK-0C 載體裡的 SamyQ-LEA14 2.1 地圖是 2645 bp，這張是 2660，正好符合 Csn 的 108 對 SamyQ 的 93。但存放的長度是 582 和 564，相差 18。這兩個差距對不上，所以有三個鹼基需要查。其餘都一樣：一個融合箭頭、6xHis、CAT、ColE1。",
+"kw_en":[
+"2660 against 2645 bp",
+"deposited 582 against 564",
+"15 and 18 disagree"
+],
+"kw_zh":[
+"2660 對 2645 bp",
+"存放 582 對 564",
+"15 與 18 對不上"
+],
+"q_en":"Compare the two length gaps between the Csn and SamyQ LEA14 parts. What do you find?",
+"q_zh":"比較 Csn 與 SamyQ 版 LEA14 的兩組長度差，你發現什麼？",
+"opt_en":[
+"15 bp on the plasmid maps against 18 bp on the deposited lengths; they disagree by three bases",
+"15 bp and 15 bp; the maps and the deposited lengths agree",
+"18 bp and 18 bp; the maps and the deposited lengths agree",
+"They cannot be compared, because the two parts sit in different vectors"
+],
+"opt_zh":[
+"質體圖上差 15 bp，存放長度差 18 bp；兩者差了三個鹼基",
+"都是 15 bp；圖和存放長度一致",
+"都是 18 bp；圖和存放長度一致",
+"無法比較，因為兩個部件在不同載體裡"
+],
+"ans":0,
+"trap_en":"Checking only one of the two length pairs and calling the pair of parts consistent.",
+"trap_zh":"只對了其中一組長度就說這兩個部件沒問題。",
+"dom":"registry"
+},
+{
+"id":"q19",
+"img":"f96a66b9dd79.avif",
+"dir":"reg",
+"tier":3,
+"part":"BBa_269A97I7",
+"ask_en":"This is the same 6810 bp as the BoPep4 2.2 map. Is that right?",
+"ask_zh":"這張和 BoPep4 2.2 的圖同樣是 6810 bp。這樣對嗎？",
+"a_en":"Yes, and here two maps agreeing is the correct answer. Both BoPep4 Level 1 units are deposited at 712 bp and both sit on the 6098 bp pSTK-EXP1 backbone, so both plasmids come to 6810. The pSTK-0C maps of the same two inserts print 2263 and 2264, and those cannot both be right. Features here: pVeg, RiboJ, the fusion arrow, 6xHis, B0015, Erm and bla.",
+"a_zh":"對，而且這裡兩張圖數字一樣才是正確的。兩個 BoPep4 的 Level 1 單元都登記為 712 bp，也都放在 6098 bp 的 pSTK-EXP1 骨架上，所以兩個質體都是 6810。同樣這兩個插入片段的 pSTK-0C 地圖卻印成 2263 和 2264，那兩個不可能都對。這裡的特徵：pVeg、RiboJ、融合箭頭、6xHis、B0015、Erm 和 bla。",
+"kw_en":[
+"712 plus 6098 is 6810",
+"both EXP1 maps agree",
+"the 0C pair does not"
+],
+"kw_zh":[
+"712 加 6098 等於 6810",
+"兩張 EXP1 圖一致",
+"0C 那組不一致"
+],
+"q_en":"Which pair of BoPep4 maps is internally consistent with the deposited lengths?",
+"q_zh":"哪一組 BoPep4 地圖和存放長度彼此一致？",
+"opt_en":[
+"The two pSTK-EXP1 maps, both 6810 bp, matching two 712 bp inserts",
+"The two pSTK-0C maps, 2263 and 2264 bp",
+"Neither pair matches its deposited lengths",
+"Both pairs do, since one base is within normal drawing error"
+],
+"opt_zh":[
+"兩張 pSTK-EXP1 地圖，都是 6810 bp，對應兩個 712 bp 的插入片段",
+"兩張 pSTK-0C 地圖，2263 與 2264 bp",
+"兩組都和存放長度對不上",
+"兩組都一致，因為一個鹼基在畫圖誤差範圍內"
+],
+"ans":0,
+"trap_en":"Assuming a one-base difference is too small to be an error worth naming.",
+"trap_zh":"以為差一個鹼基太小，不值得當成錯誤提出來。",
+"dom":"registry"
+},
+{
+"id":"v01",
+"img":"007541e6fe24.avif",
+"dir":"reg",
+"tier":3,
+"part":"BBa_26PGPSGK",
+"ask_en":"Six lanes here. Which ones are positive, and what did that band prove?",
+"ask_zh":"這裡有六個泳道。哪幾個是陽性？那條帶又證明了什麼？",
+"a_en":"M plus six colony lanes. Only lanes 3 and 6 carry a band, sitting just above the 1.5 kb rung and labelled 1588 bp. That is the 2 of 6. Every lane, positives included, has a bright blob at the gel front, which is primer dimer off a colony template. The band says a fragment of roughly the right length went in. It does not say the four parts are in order or free of mutation. Clone 3 was sequenced.",
+"a_zh":"M 加上六個菌落泳道。只有第 3 和第 6 道有帶，位置略高於 1.5 kb 標記，標註為 1588 bp，也就是 6 選 2。包含陽性在內的每一道，膠前緣都有一團亮點，那是以菌落為模板時的引子二聚體。這條帶只說明插入片段長度大致正確，並沒有說明四個元件的順序正確或沒有突變。送定序的是選殖株 3。",
+"kw_en":[
+"2 of 6",
+"1588 bp",
+"length only"
+],
+"kw_zh":[
+"6 選 2",
+"1588 bp",
+"只測長度"
+],
+"q_en":"The page calls the insert 1788 bp, yet the product from primers flanking that insert is given as 1588 bp. What is wrong?",
+"q_zh":"頁面寫插入片段為 1788 bp，但用跨越該插入片段的引子所得的產物卻寫成 1588 bp。問題出在哪？",
+"opt_en":[
+"A product spanning the insert cannot be shorter than the insert, so one number is wrong",
+"Nothing: Golden Gate removes the BsaI sites, shortening the product by about 200 bp",
+"Nothing: colony PCR routinely under-reports length on agarose",
+"The 1788 bp figure includes the vector and the 1588 bp figure does not"
+],
+"opt_zh":[
+"跨越插入片段的產物不可能短於該插入片段，所以兩個數字必有一錯",
+"沒問題：Golden Gate 切掉 BsaI 位點，讓產物短了約 200 bp",
+"沒問題：菌落 PCR 在洋菜膠上本來就會低估長度",
+"1788 bp 含載體序列，1588 bp 不含"
+],
+"ans":0,
+"trap_en":"Reading \"band at the expected size\" as proof of correct assembly, when the gel only measures length.",
+"trap_zh":"把「帶出現在預期大小」當成組裝正確的證據，但這張膠只量得出長度。",
+"dom":"registry"
+},
+{
+"id":"v02",
+"img":"0b523a149a6f.avif",
+"dir":"reg",
+"tier":3,
+"part":"BBa_26TOGLX3",
+"ask_en":"Two lanes, numbered 2 and 11. What does that numbering tell you?",
+"ask_zh":"只有兩道，編號是 2 和 11。這個編號透露了什麼？",
+"a_en":"M plus two colony lanes, labelled 2 and 11. Both carry a band high up the gel, bracketed as 1331 bp. The caption says 2 of 2, but lane numbers 2 and 11 mean at least eleven colonies were picked and only two were run. The only labelled rungs are 800 and 700 bp, both far below the band, so nothing on this image sizes 1331 bp. Clone 2 was sequenced.",
+"a_zh":"M 加上兩個菌落泳道，編號 2 和 11。兩道都在膠的上方有帶，括號標為 1331 bp。圖說寫「2 選 2」，但泳道編號 2 和 11 表示至少挑了十一個菌落，只跑了兩個。唯一有標字的刻度是 800 與 700 bp，都遠在帶的下方，所以這張圖本身無法定出 1331 bp。送定序的是選殖株 2。",
+"kw_en":[
+"lane numbering",
+"ladder off-range",
+"2 of 2"
+],
+"kw_zh":[
+"泳道編號",
+"標記超出範圍",
+"2 選 2"
+],
+"q_en":"Why can this gel not confirm a 1331 bp product?",
+"q_zh":"為什麼這張膠無法確認 1331 bp 的產物？",
+"opt_en":[
+"The only marked ladder rungs are 800 and 700 bp, both far below the band",
+"The band is saturated, so its centre cannot be located",
+"SamyQ is only 93 bp, too small to change migration",
+"pSTK-0C migrates anomalously on agarose"
+],
+"opt_zh":[
+"唯一有標字的刻度只有 800 與 700 bp，都遠在該帶下方",
+"帶已過曝，無法定出中心位置",
+"SamyQ 只有 93 bp，太小，不足以改變遷移",
+"pSTK-0C 在洋菜膠上遷移異常"
+],
+"ans":0,
+"trap_en":"Taking \"2 of 2\" at face value when the lane labels show at least eleven colonies existed.",
+"trap_zh":"照字面接受「2 選 2」，卻忽略泳道編號顯示至少存在過十一個菌落。",
+"dom":"registry"
+},
+{
+"id":"v03",
+"img":"101fcb99f2b1.avif",
+"dir":"reg",
+"tier":3,
+"part":"BBa_26DE5E2Q",
+"ask_en":"Count the positives, then read the size. What does the caption get wrong?",
+"ask_zh":"先數陽性，再看大小。圖說哪裡寫錯了？",
+"a_en":"A ladder at both ends and sixteen colony lanes. Seven lanes give a clear band between the 1 kb and 1.5 kb rungs: 2, 3, 7, 9, 13, 14 and 15. That matches 7 of 16. Lanes 12 and 16 show a faint band at the same height that was not counted. The gel annotation and the methods text both say 1420 bp. The caption under the gel says 1588 bp. Clone 2 was sequenced.",
+"a_zh":"兩端各有一條標記，中間十六個菌落泳道。有七道在 1 kb 與 1.5 kb 刻度之間出現清楚的帶：第 2、3、7、9、13、14、15 道，與「16 選 7」相符。第 12 和 16 道在同一高度有淡帶，沒有被計入。圖上的標註和方法段文字都寫 1420 bp，膠下方的圖說卻寫 1588 bp。送定序的是選殖株 2。",
+"kw_en":[
+"7 of 16",
+"1420 vs 1588",
+"faint lanes"
+],
+"kw_zh":[
+"16 選 7",
+"1420 對 1588",
+"淡帶泳道"
+],
+"q_en":"The figure is annotated 1420 bp but its caption says [1588 bp]. Which number belongs here?",
+"q_zh":"圖上標註 1420 bp，圖說卻寫 [1588 bp]。哪個數字才是這裡該用的？",
+"opt_en":[
+"1420 bp: the methods text and the gel annotation agree, and 1588 bp is the sister construct's number",
+"1588 bp: the caption is the reviewed text and overrides the image",
+"Both: 1420 bp is the insert and 1588 bp adds the vector",
+"Neither: the primers are internal, so the product is the 1773 bp insert"
+],
+"opt_zh":[
+"1420 bp：方法段文字與圖上標註一致，1588 bp 是姊妹構築的數字",
+"1588 bp：圖說是經過審閱的文字，應以圖說為準",
+"兩個都對：1420 bp 是插入片段，1588 bp 再加上載體",
+"兩個都不對：引子在內部，產物應為 1773 bp 的插入片段"
+],
+"ans":0,
+"trap_en":"Counting the faint bands in lanes 12 and 16 as positives, or taking the caption's 1588 bp as this construct's screen size.",
+"trap_zh":"把第 12、16 道的淡帶算成陽性，或把圖說的 1588 bp 當成這個構築的篩選大小。",
+"dom":"registry"
+},
+{
+"id":"v04",
+"img":"1bb1bfecc9e2.avif",
+"dir":"reg",
+"tier":3,
+"part":"BBa_2654HAF3",
+"ask_en":"Three primer pairs, two clones. Does this gel prove the four modules are correct?",
+"ask_zh":"三組引子、兩個選殖株。這張膠能證明四個模組都正確嗎？",
+"a_en":"M plus six lanes: one clone in lanes 1 to 3, a second in lanes 4 to 6, each screened with three primer pairs at 375, 632 and 661 bp. All six bands land where the 300 to 700 rungs put them. Three junctions do fix the order of four modules. They say nothing about the sequence inside a module, and no Level 2 construct here has been sequenced end to end. Note the third pair is 661 bp here and 441 bp on the sister gel.",
+"a_zh":"M 加上六道：第 1 至 3 道是一個選殖株，第 4 至 6 道是另一個，各用三組引子篩，預期 375、632、661 bp。六條帶都落在 300 至 700 刻度該有的位置。三個接點確實能定出四個模組的順序，卻完全不能說明模組內部的序列，而且這裡沒有任何 Level 2 構築做過全長定序。另外，第三組引子在這張是 661 bp，在姊妹膠上卻是 441 bp。",
+"kw_en":[
+"three junctions",
+"module order",
+"no full sequence"
+],
+"kw_zh":[
+"三個接點",
+"模組順序",
+"未全長定序"
+],
+"q_en":"The caption claims \"correct bands across all 4 modules\". What did the gel actually test?",
+"q_zh":"圖說寫「四個模組都有正確的帶」。這張膠實際測的是什麼？",
+"opt_en":[
+"Three junctions between the modules, not the modules' own sequences",
+"All four module sequences, end to end",
+"The four BsmBI overhangs used in the Level 2 reaction",
+"The presence of the pSTK-EXP2 backbone in each clone"
+],
+"opt_zh":[
+"模組之間的三個接點，而不是模組本身的序列",
+"四個模組的全長序列",
+"Level 2 反應所用的四個 BsmBI 黏末端",
+"每個選殖株中 pSTK-EXP2 骨架的存在"
+],
+"ans":0,
+"trap_en":"Hearing \"all 4 modules\" and treating three junction bands as a sequence check.",
+"trap_zh":"聽到「四個模組」就把三條接點帶當成序列驗證。",
+"dom":"registry"
+},
+{
+"id":"v05",
+"img":"2438a0dda56a.avif",
+"dir":"reg",
+"tier":3,
+"part":"BBa_26ZQ1T72",
+"ask_en":"Sixteen out of sixteen. Is that a good result or a warning?",
+"ask_zh":"16 選 16。這是好結果，還是警訊？",
+"a_en":"M plus sixteen colony lanes, every one with a band at the same height just above the 800 bp rung, bracketed 811 bp. The bands are even in intensity, there is no empty lane and no control, so nothing on this gel shows what a failed colony looks like. The page's own arithmetic is 576 bp of insert plus 235 bp of vector, while sister pages quote about 209 bp for that same vector stretch. Clone 16 was sequenced.",
+"a_zh":"M 加十六個菌落泳道，每一道都在 800 bp 刻度稍上方的同一高度有帶，括號標為 811 bp。亮度相當均勻，沒有空白道也沒有對照，所以這張膠裡看不到失敗的菌落長什麼樣。頁面自己的算法是插入片段 576 bp 加載體 235 bp，但姊妹頁對同一段載體寫的是約 209 bp。送定序的是選殖株 16。",
+"kw_en":[
+"16 of 16",
+"no control",
+"vector arithmetic"
+],
+"kw_zh":[
+"16 選 16",
+"沒有對照",
+"載體長度算法"
+],
+"q_en":"What single extra lane would have made this 16-of-16 gel much stronger?",
+"q_zh":"多跑哪一道，就能讓這張 16 選 16 的膠強上許多？",
+"opt_en":[
+"A no-template or empty-vector control, to show what a negative looks like",
+"A second ladder on the right-hand side of the gel",
+"A lane of uncut plasmid as a size reference",
+"A repeat of lane 1 loaded at half the volume"
+],
+"opt_zh":[
+"無模板或空載體對照，用來顯示陰性長什麼樣",
+"膠右側再放一條標記",
+"一道未切割質體，當作大小參考",
+"把第 1 道用一半體積再上樣一次"
+],
+"ans":0,
+"trap_en":"Treating a clean sweep as strong evidence when there is no negative on the gel to calibrate it.",
+"trap_zh":"把全數通過當成強證據，但膠上沒有陰性可以校準判讀。",
+"dom":"registry"
+},
+{
+"id":"v06",
+"img":"2463682d514c.avif",
+"dir":"reg",
+"tier":3,
+"part":"BBa_26J0GJGZ",
+"ask_en":"Two lanes, labelled 1 and 3. What is missing from \"two of two\"?",
+"ask_zh":"兩道，編號 1 和 3。「2 選 2」漏掉了什麼？",
+"a_en":"M plus two colony lanes, numbered 1 and 3. Both carry a band between the 700 and 800 bp rungs, consistent with the stated 770 bp. That sizing is the one thing this small gel does well, because the band falls between two labelled markers. The caption says 2 of 2, but the lane labels skip 2, so at least three colonies existed. Lane 3 also has a heavy low smear. Clone 1 was sequenced.",
+"a_zh":"M 加兩個菌落泳道，編號 1 和 3。兩道的帶都落在 700 與 800 bp 刻度之間，與所寫的 770 bp 相符。這張小膠最可取的就是這點：帶剛好夾在兩個有標字的刻度中間。圖說寫「2 選 2」，但泳道編號跳過了 2，表示至少有三個菌落。第 3 道下方還有一大片拖尾。送定序的是選殖株 1。",
+"kw_en":[
+"770 bp",
+"lane 2 skipped",
+"bracketed by rungs"
+],
+"kw_zh":[
+"770 bp",
+"跳過第 2 道",
+"夾在刻度之間"
+],
+"q_en":"Why is this small gel's size claim better supported than most in the set?",
+"q_zh":"為什麼這張小膠的大小主張，比這批裡大多數都站得住腳？",
+"opt_en":[
+"The 770 bp band falls between two labelled rungs, 700 and 800 bp",
+"Both lanes agree, so the size is confirmed by replication",
+"The ladder is a 100 bp ladder, which resolves to about 10 bp",
+"The insert was sequenced before the gel was run"
+],
+"opt_zh":[
+"770 bp 的帶剛好落在 700 與 800 bp 兩個有標字的刻度之間",
+"兩道結果一致，等於用重複驗證了大小",
+"用的是 100 bp 標記，解析度可達約 10 bp",
+"插入片段在跑膠之前就已經定序過"
+],
+"ans":0,
+"trap_en":"Mistaking two agreeing lanes for a size check; agreement is not calibration.",
+"trap_zh":"把兩道結果一致誤當成大小驗證；一致不等於校準。",
+"dom":"registry"
+},
+{
+"id":"v07",
+"img":"43e883f568b3.avif",
+"dir":"reg",
+"tier":3,
+"part":"BBa_26XZYM10",
+"ask_en":"The caption says \"all colonies\". How many is that?",
+"ask_zh":"圖說寫「所有菌落」。那到底是幾個？",
+"a_en":"M plus three colony lanes, and all three carry a bright band between the 1.5 and 2 kb rungs, bracketed 1721 bp. \"All colonies\" means three here, because three is what was loaded. The missing denominator is the fix this figure needs. The bands are overloaded and run together across the three lanes, so a small difference in size between clones would not show. Clone 1 was sequenced.",
+"a_zh":"M 加三個菌落泳道，三道都在 1.5 與 2 kb 刻度之間有明亮的帶，括號標為 1721 bp。這裡的「所有菌落」就是三個，因為只上了三道。這張圖要補的就是缺少的分母。帶都過載，三道之間幾乎連成一片，所以選殖株之間若有小幅大小差異也看不出來。送定序的是選殖株 1。",
+"kw_en":[
+"no denominator",
+"three lanes",
+"overloaded"
+],
+"kw_zh":[
+"沒有分母",
+"三個泳道",
+"上樣過量"
+],
+"q_en":"The page says insert 1660 bp plus vector gives 1721 bp. What does that imply?",
+"q_zh":"頁面寫插入片段 1660 bp 加載體後是 1721 bp。這代表什麼？",
+"opt_en":[
+"Only about 61 bp of vector lies between the two priming sites",
+"The Ho1 F primer sits inside the insert, so the product is shorter than the insert",
+"The L3S2P21 terminator was not included in the amplicon",
+"pSTK-1A adds 61 bp of BsaI scar on each side of the insert"
+],
+"opt_zh":[
+"兩個引子結合位之間只有約 61 bp 的載體序列",
+"Ho1 F 引子落在插入片段內部，所以產物比插入片段短",
+"L3S2P21 終止子沒有被包含在擴增產物裡",
+"pSTK-1A 在插入片段兩側各加了 61 bp 的 BsaI 疤痕"
+],
+"ans":0,
+"trap_en":"Accepting \"all colonies\" as a count, when the figure never says how many were screened.",
+"trap_zh":"把「所有菌落」當成一個數目，但圖從頭到尾沒說篩了幾個。",
+"dom":"registry"
+},
+{
+"id":"v08",
+"img":"469dcae98058.avif",
+"dir":"reg",
+"tier":3,
+"part":"BBa_269A97I7",
+"ask_en":"Lanes run from 9 to 19. How does that square with \"1 of 10\"?",
+"ask_zh":"泳道從 9 編到 19。這要怎麼跟「10 選 1」對得起來？",
+"a_en":"M plus eleven lanes, numbered 9 to 19, which makes this the back half of a bigger screen. One faint band, in lane 14, bracketed 678 bp, and it sits level with the 750 bp rung rather than below it. The caption says 1 of 10 and then the page names clone 14, a number larger than ten. Every lane carries a bright primer-dimer blob at the front. One faint band from one colony is thin evidence.",
+"a_zh":"M 加十一道，編號 9 到 19，所以這是一次較大篩選的後半段。只有第 14 道有一條淡帶，括號標為 678 bp，而且它和 750 bp 刻度齊平，而不是在其下方。圖說寫「10 選 1」，頁面接著說送定序的是選殖株 14，比十還大。每一道前緣都有明亮的引子二聚體。一個菌落、一條淡帶，證據很薄。",
+"kw_en":[
+"lanes 9-19",
+"clone 14",
+"faint single band"
+],
+"kw_zh":[
+"第 9 至 19 道",
+"選殖株 14",
+"單一淡帶"
+],
+"q_en":"What is the clearest internal contradiction on this page?",
+"q_zh":"這一頁最明顯的內部矛盾是什麼？",
+"opt_en":[
+"It screens ten colonies but takes clone 14 forward",
+"The ladder is labelled 750 and 500 bp, which cannot resolve 678 bp",
+"The gel shows eleven lanes, so eleven colonies were positive",
+"It names clone 14, but lane 14 is the only empty lane on the gel"
+],
+"opt_zh":[
+"說篩了十個菌落，卻把選殖株 14 送下游",
+"標記只標 750 與 500 bp，無法解析 678 bp",
+"膠上有十一道，所以有十一個菌落是陽性",
+"說選殖株 14，但第 14 道是膠上唯一的空白道"
+],
+"ans":0,
+"trap_en":"Reading the single faint band as a clean positive without noticing it runs at the 750 bp rung.",
+"trap_zh":"把那條單一淡帶當成乾淨的陽性，沒注意到它跑在 750 bp 刻度上。",
+"dom":"registry"
+},
+{
+"id":"v09",
+"img":"54aa2f3c3988.avif",
+"dir":"reg",
+"tier":3,
+"part":"BBa_26NXOP7S",
+"ask_en":"Which lanes are positive here, and what is wrong with the ladder labels?",
+"ask_zh":"這裡哪幾道是陽性？標記的標字又有什麼問題？",
+"a_en":"M plus four colony lanes from a pGEM-T Easy ligation. Lanes 3 and 4 give bright bands just under the 1.5 kb rung, bracketed 1372 bp. Lane 2 has a faint band at the same height that the 2-of-4 count leaves out, and lane 1 is empty. The lower ladder mark is printed \"400k\", which has to mean 400 bp. The 1122 bp insert length quoted here is also quoted for the SamyQ version, though the two signal peptides differ by 15 bp.",
+"a_zh":"M 加四個菌落泳道，來自 pGEM-T Easy 接合。第 3、4 道在 1.5 kb 刻度略下方有明亮的帶，括號標為 1372 bp。第 2 道在同一高度有一條淡帶，沒有被「4 選 2」算進去，第 1 道空白。標記下方那格印成「400k」，實際上應該是 400 bp。這裡寫的插入片段 1122 bp，在 SamyQ 版頁面上也是 1122 bp，但兩個訊號胜肽長度差 15 bp。",
+"kw_en":[
+"lane 2 faint",
+"400k typo",
+"1122 bp reused"
+],
+"kw_zh":[
+"第 2 道淡帶",
+"400k 筆誤",
+"1122 bp 重複使用"
+],
+"q_en":"Lane 2 shows a faint band at the same height as lanes 3 and 4. What is the honest call?",
+"q_zh":"第 2 道在和第 3、4 道同高處有淡帶。誠實的判讀應該是什麼？",
+"opt_en":[
+"Call it a weak positive worth rescreening, not a clean negative",
+"Ignore it; anything fainter than the brightest band is non-specific",
+"Count it and take it forward without rescreening",
+"Discard the gel, because faint bands mean the PCR failed"
+],
+"opt_zh":[
+"當成值得重篩的弱陽性，而不是乾淨的陰性",
+"忽略它；比最亮的帶暗的都算非專一性產物",
+"直接算成陽性並送下游，不必重篩",
+"整張膠作廢，因為出現淡帶代表 PCR 失敗"
+],
+"ans":0,
+"trap_en":"Calling it 2 of 4 without mentioning the faint band in lane 2.",
+"trap_zh":"直接說「4 選 2」，卻不提第 2 道那條淡帶。",
+"dom":"registry"
+},
+{
+"id":"v10",
+"img":"68787dec5c52.avif",
+"dir":"reg",
+"tier":3,
+"part":"BBa_26RF0X2E",
+"ask_en":"Count the banded lanes, then count the labels. What does not add up?",
+"ask_zh":"先數有帶的泳道，再數標號。哪裡對不起來？",
+"a_en":"M then a run of banded lanes in repeating 375 / 632 / 441 triplets. I count twelve such lanes, but only three triplets carry the numbers 1, 2, 3. One triplet between the first and second labelled group has bands and no labels. Each triplet is one clone checked at three junctions. Nine or twelve, the junctions prove module order only. Nothing here reads the sequence inside a module.",
+"a_zh":"M 之後是一連串有帶的泳道，以 375 / 632 / 441 三條一組重複。我數到十二道，但只有三組標了 1、2、3；在第一組與第二組標號之間，還有一組有帶卻沒有標號。每一組代表一個選殖株、三個接點。不論是九道還是十二道，接點只能證明模組順序，這裡沒有任何資料讀到模組內部的序列。",
+"kw_en":[
+"twelve lanes",
+"three labelled triplets",
+"order only"
+],
+"kw_zh":[
+"十二個泳道",
+"三組有標號",
+"只證順序"
+],
+"q_en":"Three correct junction bands per clone prove what, exactly?",
+"q_zh":"每個選殖株三條正確的接點帶，究竟證明了什麼？",
+"opt_en":[
+"That the four modules sit in the intended order",
+"That all four modules are free of mutations",
+"That the Level 2 plasmid is the right total size",
+"That the assembled construct responds to green light"
+],
+"opt_zh":[
+"四個模組排在預期的順序上",
+"四個模組都沒有突變",
+"Level 2 質體的總長度正確",
+"組好的構築會對綠光產生反應"
+],
+"ans":0,
+"trap_en":"Repeating the caption's \"lanes 1, 2 and 3\" without noticing the gel carries more banded lanes than labels.",
+"trap_zh":"照抄圖說的「第 1、2、3 道」，沒注意膠上有帶的泳道比標號還多。",
+"dom":"registry"
+},
+{
+"id":"v11",
+"img":"7ae42b9bff17.avif",
+"dir":"reg",
+"tier":3,
+"part":"BBa_26IA55UY",
+"ask_en":"Four of five. Which lane failed, and how sure can you be of the reading?",
+"ask_zh":"5 選 4。哪一道失敗了？這個判讀又有多確定？",
+"a_en":"M plus five colony lanes. Lanes 1, 3, 4 and 5 carry a band between the 600 and 700 bp rungs, consistent with 678 bp. Lane 2 shows only a faint smudge at that height plus a lower band. That is the 4 of 5. The exposure is heavy: the positive bands are saturated and bleed sideways into each other. So the gel can say a band is present, not that it is a single clean product. Clone 5 was sequenced.",
+"a_zh":"M 加五個菌落泳道。第 1、3、4、5 道在 600 與 700 bp 刻度之間有帶，與 678 bp 相符；第 2 道在那個高度只有一片模糊，另有一條較低的帶。這就是「5 選 4」。曝光偏重：陽性帶都過曝並向兩側暈開，所以這張膠只能說有帶，不能說那是單一乾淨的產物。送定序的是選殖株 5。",
+"kw_en":[
+"4 of 5",
+"lane 2 smudge",
+"saturated"
+],
+"kw_zh":[
+"5 選 4",
+"第 2 道模糊",
+"過曝"
+],
+"q_en":"What does the overexposure on this gel cost you?",
+"q_zh":"這張膠的過曝讓你損失了什麼？",
+"opt_en":[
+"You cannot tell one band from two close bands, or judge how much product there is",
+"The band migrates higher than it should once saturated",
+"The ladder rungs shift, so 678 bp cannot be verified",
+"Nothing; saturation only affects how the ladder is quantified"
+],
+"opt_zh":[
+"分不出是一條帶還是兩條靠得很近的帶，也判斷不了產量",
+"帶一旦過曝就會往上跑，位置偏高",
+"標記刻度會位移，所以無法驗證 678 bp",
+"沒有損失；過曝只影響標記的定量"
+],
+"ans":0,
+"trap_en":"Calling the positives \"single, clean bands\" when saturation makes that undecidable.",
+"trap_zh":"把陽性稱為「單一乾淨的帶」，但過曝下根本無法判斷。",
+"dom":"registry"
+},
+{
+"id":"v12",
+"img":"8834ba1b94f0.avif",
+"dir":"reg",
+"tier":3,
+"part":"BBa_26PX0UGH",
+"ask_en":"Eighteen of nineteen. Look at lane 6: what actually happened there?",
+"ask_zh":"19 選 18。看第 6 道，那裡究竟發生了什麼？",
+"a_en":"M plus nineteen colony lanes. Eighteen carry a band sitting just above the 500 bp rung, bracketed 536 bp. Lane 6 is not empty. Its band runs clearly lower than the rest, so that colony amplified something shorter, not nothing. BoPep4 2.1 and 2.2 are both quoted at a 177 bp insert and a 536 bp product, so this gel cannot tell the two versions apart. Clone 2 was sequenced.",
+"a_zh":"M 加十九個菌落泳道。其中十八道在 500 bp 刻度略上方有帶，括號標為 536 bp。第 6 道並非空白：它的帶明顯跑得比其他道低，表示那個菌落擴增出較短的東西，而不是什麼都沒有。BoPep4 2.1 與 2.2 兩版的插入片段都寫 177 bp、產物都寫 536 bp，所以這張膠分不出兩版。送定序的是選殖株 2。",
+"kw_en":[
+"lane 6 runs low",
+"536 bp",
+"2.1 vs 2.2"
+],
+"kw_zh":[
+"第 6 道偏低",
+"536 bp",
+"2.1 對 2.2"
+],
+"q_en":"BoPep4 2.1 and 2.2 give the same 536 bp screen band. What follows from that?",
+"q_zh":"BoPep4 2.1 與 2.2 的篩選帶同樣是 536 bp。這代表什麼？",
+"opt_en":[
+"Only sequencing can distinguish the two recoded versions",
+"The two versions can be told apart by band intensity",
+"Version 2.2 runs 15 bp higher because its signal peptide is longer",
+"The 536 bp band confirms the recoded first 15 codons"
+],
+"opt_zh":[
+"只有定序才分得出這兩個重新編碼的版本",
+"可以靠帶的亮度分辨兩個版本",
+"2.2 版因為訊號胜肽較長，會高 15 bp",
+"536 bp 的帶可以確認前 15 個密碼子已重新編碼"
+],
+"ans":0,
+"trap_en":"Describing lane 6 as a failed reaction when it carries a band at the wrong size.",
+"trap_zh":"把第 6 道說成反應失敗，其實它有帶，只是大小不對。",
+"dom":"registry"
+},
+{
+"id":"v13",
+"img":"a2f980ff8969.avif",
+"dir":"reg",
+"tier":3,
+"part":"BBa_26SG0NQQ",
+"ask_en":"One lane, one band. How much does this figure actually establish?",
+"ask_zh":"一道、一條帶。這張圖實際上建立了多少？",
+"a_en":"One colony lane beside the ladder. The band called 735 bp is barely visible, a faint smudge below the 800 rung, while the brightest thing in the lane is the primer-dimer blob at the front. The ladder lane is overloaded enough that the 800 to 500 rungs merge into a white column, so the reference is poor too. One colony, one faint band. The page then says clone [X] was sequenced, leaving the placeholder unfilled.",
+"a_zh":"標記旁只有一個菌落泳道。標為 735 bp 的帶幾乎看不見，只是 800 刻度下方一片淡淡的痕跡，而這一道最亮的東西是前緣的引子二聚體。標記那一道也過載，800 到 500 的刻度糊成一條白柱，參考價值很低。一個菌落、一條淡帶。頁面接著寫「選殖株 [X] 已定序」，佔位符根本沒填。",
+"kw_en":[
+"faint band",
+"ladder saturated",
+"[X] placeholder"
+],
+"kw_zh":[
+"淡帶",
+"標記過曝",
+"[X] 佔位符"
+],
+"q_en":"Which problem on this page is easiest to fix?",
+"q_zh":"這一頁哪個問題最容易修？",
+"opt_en":[
+"The unfilled clone placeholder, \"[X]\", in the sequencing line",
+"The missing ladder, which would need the gel rerun",
+"The band size, which would need a new primer pair",
+"The colony count, which would need a fresh transformation"
+],
+"opt_zh":[
+"定序那一句裡沒填的選殖株佔位符「[X]」",
+"缺少的標記，必須重跑整張膠",
+"帶的大小，必須換一組新引子",
+"菌落數，必須重做一次轉型"
+],
+"ans":0,
+"trap_en":"Calling a barely visible smudge a band at the expected size.",
+"trap_zh":"把幾乎看不見的痕跡說成「位於預期大小的帶」。",
+"dom":"registry"
+},
+{
+"id":"v14",
+"img":"b207909c8639.avif",
+"dir":"reg",
+"tier":3,
+"part":"BBa_261XH2RS",
+"ask_en":"All three lanes have a band, yet the caption says 1 of 3. Why?",
+"ask_zh":"三道都有帶，圖說卻寫「3 選 1」。為什麼？",
+"a_en":"Three colony lanes with the ladder on the right, which is unusual but fine. All three carry a bright band near the 1.5 kb rung. Lane 1 runs a little higher than lanes 2 and 3, and only lane 1 is bracketed 1602 bp. So \"1 of 3\" is a judgement about migration height, not about presence. On a gel this overloaded that difference is a few pixels wide. Clone 1 was sequenced, and that is the evidence that holds.",
+"a_zh":"三個菌落泳道，標記放在右側，雖然少見但沒問題。三道在 1.5 kb 刻度附近都有明亮的帶。第 1 道跑得比第 2、3 道略高，而且只有第 1 道被括號標為 1602 bp。所以「3 選 1」是對遷移高度的判斷，不是對有無帶的判斷。在這麼過載的膠上，那個差距只有幾個像素寬。送定序的是選殖株 1，真正站得住的是定序。",
+"kw_en":[
+"all three banded",
+"height judgement",
+"overloaded"
+],
+"kw_zh":[
+"三道都有帶",
+"以高度判定",
+"上樣過量"
+],
+"q_en":"What would settle whether lanes 2 and 3 really carry a shorter product?",
+"q_zh":"要怎麼確定第 2、3 道真的是較短的產物？",
+"opt_en":[
+"Rerun them on a longer gel beside the ladder, or sequence them",
+"Compare the band intensities against lane 1",
+"Repeat the colony PCR with more cycles",
+"Nothing is needed; the bracket in the figure already settles it"
+],
+"opt_zh":[
+"在較長的膠上與標記並排重跑，或直接定序",
+"把亮度拿來和第 1 道比較",
+"用更多循環數重做一次菌落 PCR",
+"不必再做；圖上的括號已經有結論"
+],
+"ans":0,
+"trap_en":"Saying lanes 2 and 3 were negative, when all three lanes carry a band.",
+"trap_zh":"說第 2、3 道是陰性，但其實三道都有帶。",
+"dom":"registry"
+},
+{
+"id":"v15",
+"img":"ba762e02cb85.avif",
+"dir":"reg",
+"tier":3,
+"part":"BBa_2654HAF3",
+"ask_en":"Three bands per lane here. Which is the one that counts?",
+"ask_zh":"這裡每道有三條帶。哪一條才算數？",
+"a_en":"M plus four colony lanes, numbered 2 to 5. Lanes 3, 4 and 5 each show a band between the 500 and 750 rungs, the 632 bp junction product. Lane 2 is empty. Each positive lane also carries a band near 250 bp that is brighter than the target, plus faint high-molecular-weight material. The caption names both as non-specific amplification from a colony template, which is the right thing to do. Clone 4, at insert:vector 1:7, was sequenced.",
+"a_zh":"M 加四個菌落泳道，編號 2 到 5。第 3、4、5 道在 500 與 750 刻度之間各有一條帶，就是 632 bp 的接點產物；第 2 道空白。每個陽性道還有一條約 250 bp、比目標帶更亮的帶，以及上方淡淡的高分子量痕跡。圖說把這兩者都點名為以菌落為模板的非專一性擴增，這是正確的做法。送定序的是選殖株 4（插入:載體 = 1:7）。",
+"kw_en":[
+"632 bp junction",
+"named non-specifics",
+"lane 2 blank"
+],
+"kw_zh":[
+"632 bp 接點",
+"點名非專一帶",
+"第 2 道空白"
+],
+"q_en":"This caption does something most of the set does not. What?",
+"q_zh":"這則圖說做了一件這批圖大多沒做的事。是什麼？",
+"opt_en":[
+"It names its own non-specific bands instead of ignoring them",
+"It gives a denominator for the colonies screened",
+"It reports the ladder brand and the run voltage",
+"It states that the clone was sequenced end to end"
+],
+"opt_zh":[
+"它主動點名自己的非專一性帶，而不是略過不提",
+"它給出了篩選菌落的分母",
+"它寫出標記的廠牌和電泳電壓",
+"它說明該選殖株已做過全長定序"
+],
+"ans":0,
+"trap_en":"Calling the brightest band in each lane the result; the 250 bp band is non-specific and the 632 bp one is the target.",
+"trap_zh":"把每道最亮的帶當成結果；250 bp 那條是非專一性的，632 bp 那條才是目標。",
+"dom":"registry"
+},
+{
+"id":"v16",
+"img":"bd64752e9f98.avif",
+"dir":"reg",
+"tier":3,
+"part":"BBa_26XVQ3FS",
+"ask_en":"The caption says one of one. Count the lanes with a band near 2 kb.",
+"ask_zh":"圖說寫「1 選 1」。數數看有幾道在 2 kb 附近有帶。",
+"a_en":"M plus eight colony lanes. Four of them, lanes 2, 4, 5 and 7, carry a band just below the 2 kb rung, but only lane 7 is bracketed 1984 bp. Lanes 1 and 8 give a much shorter product and lanes 3 and 6 show only front smear. The caption's \"1 of 1 colonies\" does not describe this gel: eight were screened and at least four look positive. Clone 1 was sequenced, though lane 7 is the annotated one.",
+"a_zh":"M 加八個菌落泳道。其中四道（第 2、4、5、7 道）在 2 kb 刻度略下方有帶，但只有第 7 道被括號標為 1984 bp。第 1、8 道是明顯短得多的產物，第 3、6 道只有前緣拖尾。圖說的「1 選 1」根本沒有描述這張膠：篩了八個，至少四個看起來是陽性。頁面說送定序的是選殖株 1，被標註的卻是第 7 道。",
+"kw_en":[
+"eight lanes",
+"four positives",
+"caption mismatch"
+],
+"kw_zh":[
+"八個泳道",
+"四道陽性",
+"圖說不符"
+],
+"q_en":"Which statement about this figure is true?",
+"q_zh":"關於這張圖，哪個敘述是對的？",
+"opt_en":[
+"Eight colonies were run and four show a band near the labelled size",
+"One colony was run and it was positive",
+"Eight colonies were run and only lane 7 shows any band at all",
+"Lanes 1 and 8 are ladder lanes rather than colonies"
+],
+"opt_zh":[
+"跑了八個菌落，其中四道在標註大小附近有帶",
+"只跑了一個菌落，而且是陽性",
+"跑了八個菌落，但只有第 7 道有帶",
+"第 1 和第 8 道是標記道，不是菌落"
+],
+"ans":0,
+"trap_en":"Repeating \"1 of 1 colonies\" without counting the eight lanes actually on the gel.",
+"trap_zh":"照抄「1 選 1」，沒去數膠上其實有八道。",
+"dom":"registry"
+},
+{
+"id":"v17",
+"img":"c00e095c212c.avif",
+"dir":"reg",
+"tier":3,
+"part":"BBa_26RF0X2E",
+"ask_en":"Eleven for eleven at 632 bp. What can you not check on this image?",
+"ask_zh":"11 道全部在 632 bp。這張圖上有什麼是你查不了的？",
+"a_en":"M plus eleven colony lanes, every one with a strong band at the same height, bracketed 632 bp. Several lanes also show a faint lower band. The ladder lane has rungs but no printed sizes at all, so on this image alone you cannot place the band against any marker. The 632 bp claim rests on the sister gel, where the ladder is labelled. Eleven matching bands still prove only this one junction. Clone 1 was sequenced.",
+"a_zh":"M 加十一個菌落泳道，每一道都在同一高度有明顯的帶，括號標為 632 bp。有幾道下方還有一條淡帶。標記那一道雖然有刻度，卻完全沒有印上數字，所以單憑這張圖無法把帶對到任何參考點，632 bp 這個說法得靠姊妹膠（那張的標記有標字）。十一條一致的帶，仍然只證明這一個接點。送定序的是選殖株 1。",
+"kw_en":[
+"unlabelled ladder",
+"one junction",
+"11 lanes"
+],
+"kw_zh":[
+"標記沒標字",
+"單一接點",
+"十一道"
+],
+"q_en":"What is missing from this gel image that the other Level 2 gels have?",
+"q_zh":"這張膠少了其他 Level 2 膠都有的什麼？",
+"opt_en":[
+"Printed size labels on the ladder",
+"A separate lane for each of the three primer pairs",
+"A no-template control lane",
+"A bracket naming the expected product size"
+],
+"opt_zh":[
+"標記上印出的大小數字",
+"三組引子各自獨立的泳道",
+"一道無模板對照",
+"標出預期產物大小的括號"
+],
+"ans":0,
+"trap_en":"Accepting 632 bp from this image alone, when its ladder carries no size labels.",
+"trap_zh":"單憑這張圖就接受 632 bp，但它的標記上沒有任何大小數字。",
+"dom":"registry"
+},
+{
+"id":"v18",
+"img":"c99753738e91.avif",
+"dir":"reg",
+"tier":3,
+"part":"BBa_267B69E3",
+"ask_en":"Four for four. What does the loading do to this gel?",
+"ask_zh":"4 選 4。上樣量對這張膠造成了什麼影響？",
+"a_en":"M plus four colony lanes, each with a band just above the 500 bp rung, consistent with 536 bp. All four are overloaded and spread sideways until lanes 2, 3 and 4 nearly merge, so you cannot say whether any lane holds a second, close product. Four of four with no negative control means nothing on this gel shows what a failed colony looks like. Clone 1 was sequenced; the gel measured length only.",
+"a_zh":"M 加四個菌落泳道，每道在 500 bp 刻度略上方有帶，與 536 bp 相符。四道都上樣過量並向兩側擴散，第 2、3、4 道幾乎連在一起，所以無法判斷任何一道是否還藏著第二條靠得很近的產物。4 選 4 又沒有陰性對照，等於這張膠裡看不到失敗的菌落長什麼樣。送定序的是選殖株 1；膠本身只量了長度。",
+"kw_en":[
+"4 of 4",
+"lanes merge",
+"no control"
+],
+"kw_zh":[
+"4 選 4",
+"泳道相連",
+"沒有對照"
+],
+"q_en":"The page says insert 177 bp plus vector gives 536 bp. What is the vector contributing?",
+"q_zh":"頁面寫插入片段 177 bp 加上載體後是 536 bp。載體貢獻了多少？",
+"opt_en":[
+"About 359 bp, where sister pages put the same vector stretch at roughly 209 bp",
+"About 359 bp, matching every other pSTK-0C screen on the wiki",
+"Nothing; 536 bp is the insert plus the 6xHis tag",
+"About 177 bp, since insert and vector contribute equally"
+],
+"opt_zh":[
+"約 359 bp，但姊妹頁對同一段載體寫的是約 209 bp",
+"約 359 bp，與 wiki 上其他 pSTK-0C 篩選完全一致",
+"沒有貢獻；536 bp 是插入片段加上 6xHis 標籤",
+"約 177 bp，因為插入片段與載體各佔一半"
+],
+"ans":0,
+"trap_en":"Calling the four bands \"single, clean\" when they are overloaded into one another.",
+"trap_zh":"把這四條帶說成「單一乾淨」，其實它們過載到彼此相連。",
+"dom":"registry"
+},
+{
+"id":"v19",
+"img":"ebfd0c76c34d.avif",
+"dir":"reg",
+"tier":3,
+"part":"BBa_26D5AX7S",
+"ask_en":"Two of seven. What is lane 2 doing, and does it count?",
+"ask_zh":"7 選 2。第 2 道在做什麼？它算不算數？",
+"a_en":"M plus seven colony lanes. Lanes 1 and 4 carry a band just below the 1.5 kb rung, bracketed 1423 bp, which is the 2 of 7. Lane 2 is not blank: it has a strong band far lower down, a wrong-size product, and lanes 1 and 4 show faint low doublets of their own. Lanes 3, 5 and 7 are empty. A band at 1423 bp fixes length only. Clone 1 was sequenced and that is what the page rests on.",
+"a_zh":"M 加七個菌落泳道。第 1、4 道在 1.5 kb 刻度略下方有帶，括號標為 1423 bp，也就是「7 選 2」。第 2 道並非空白：它在很下方有一條明亮的帶，是大小不對的產物；第 1、4 道自己下方也各有一對淡帶。第 3、5、7 道空白。1423 bp 的帶只固定了長度。送定序的是選殖株 1，頁面靠的是那份定序。",
+"kw_en":[
+"2 of 7",
+"lane 2 wrong size",
+"low doublets"
+],
+"kw_zh":[
+"7 選 2",
+"第 2 道大小不對",
+"下方雙帶"
+],
+"q_en":"Lane 2's strong low band most likely means what?",
+"q_zh":"第 2 道那條位置很低的亮帶，最可能代表什麼？",
+"opt_en":[
+"That colony amplified a shorter, wrong product: a mis-assembly or a primer artefact",
+"That colony carries the insert in reverse orientation",
+"That colony carries two copies of the plasmid",
+"The lane was overloaded, which pushed the band downward"
+],
+"opt_zh":[
+"那個菌落擴增出較短、錯誤的產物：組裝錯誤或引子假象",
+"那個菌落的插入片段方向相反",
+"那個菌落帶有兩套質體",
+"那一道上樣過量，把帶往下推了"
+],
+"ans":0,
+"trap_en":"Describing lanes 2 and 6 as failed reactions when they carry wrong-size product instead.",
+"trap_zh":"把第 2、6 道說成反應失敗，其實它們是跑出大小不對的產物。",
+"dom":"registry"
+},
+{
+"id":"v20",
+"img":"ec8e3cdacc85.avif",
+"dir":"reg",
+"tier":3,
+"part":"BBa_26CXI09X",
+"ask_en":"The band here is multi-kilobase. What should it have been?",
+"ask_zh":"這裡的帶是好幾 kb。它本來應該是多少？",
+"a_en":"One colony lane beside a high-range ladder marked 10k, 8k and 6k. The single band sits between the 8k and 10k rungs, bracketed 7767 bp. The same page's methods say a correct band runs at [1145 bp], and the deposited sequence with the stated Csn F and ACCD R primers gives 1195 bp. Three numbers for one band, none matching the other two. Whatever this lane shows, it is not a 1.2 kb insert check.",
+"a_zh":"一個菌落泳道，旁邊是標著 10k、8k、6k 的高範圍標記。唯一的帶落在 8k 與 10k 刻度之間，括號標為 7767 bp。同一頁的方法段寫「正確的帶在 [1145 bp]」，而用頁面所列的 Csn F 與 ACCD R 引子對已登錄序列計算，應為 1195 bp。一條帶、三個數字，彼此都對不上。這一道不論是什麼，都不是 1.2 kb 的插入片段檢查。",
+"kw_en":[
+"7767 vs 1145",
+"1195 bp real",
+"high-range ladder"
+],
+"kw_zh":[
+"7767 對 1145",
+"實際 1195 bp",
+"高範圍標記"
+],
+"q_en":"This page gives the expected band as [1145 bp] in text and [7767 bp] in the caption. Which is closest to right?",
+"q_zh":"這頁在正文寫預期帶為 [1145 bp]，圖說卻寫 [7767 bp]。哪一個最接近正確？",
+"opt_en":[
+"Neither; the deposited sequence with those primers gives 1195 bp",
+"1145 bp, and the caption is a typo for the whole plasmid size",
+"7767 bp, because the stated primers sit on the backbone",
+"Both are right: 1145 bp linear and 7767 bp supercoiled"
+],
+"opt_zh":[
+"兩個都不對；用那組引子對已登錄序列計算應為 1195 bp",
+"1145 bp，圖說是把整個質體大小誤植上去",
+"7767 bp，因為所列的引子落在骨架上",
+"兩個都對：1145 bp 是線性，7767 bp 是超螺旋"
+],
+"ans":0,
+"trap_en":"Picking whichever of the two published numbers sounds better, when neither matches the deposited sequence.",
+"trap_zh":"在兩個已發布的數字裡挑一個聽起來順的，其實兩個都對不上已登錄序列。",
+"dom":"registry"
+},
+{
+"id":"v21",
+"img":"fa7885bfe062.avif",
+"dir":"reg",
+"tier":3,
+"part":"BBa_26BDO8AQ",
+"ask_en":"Two of four. What are lanes 1 and 3 showing?",
+"ask_zh":"4 選 2。第 1 和第 3 道顯示的是什麼？",
+"a_en":"M plus four colony lanes. Lanes 2 and 4 carry a band just below the 1.5 kb rung, bracketed 1442 bp, which is the 2 of 4. Lanes 1 and 3 are not empty: both give a bright, much shorter product, so those colonies amplified the wrong thing rather than nothing. The ladder is labelled only at 3K and 1.5K, so the 1442 bp reading rests on one nearby rung. Clone 4 was sequenced.",
+"a_zh":"M 加四個菌落泳道。第 2、4 道在 1.5 kb 刻度略下方有帶，括號標為 1442 bp，也就是「4 選 2」。第 1、3 道並非空白：兩道都有明亮且短得多的產物，表示那些菌落擴增出錯的東西，而不是什麼都沒有。標記只在 3K 與 1.5K 有標字，所以 1442 bp 的判讀只靠附近一個刻度。送定序的是選殖株 4。",
+"kw_en":[
+"2 of 4",
+"short wrong product",
+"two rungs only"
+],
+"kw_zh":[
+"4 選 2",
+"較短的錯誤產物",
+"只有兩個刻度"
+],
+"q_en":"This page quotes the ccaR composite insert twice. What is the problem?",
+"q_zh":"這一頁兩次提到 ccaR 複合插入片段的長度。問題在哪？",
+"opt_en":[
+"It is given as 1257 bp in one place and 1174 bp in another",
+"It is given in kilobases in one place and base pairs in another",
+"It includes B0015 in one place and omits it in the other",
+"It is quoted as 1442 bp, which is the amplicon rather than the insert"
+],
+"opt_zh":[
+"一處寫 1257 bp，另一處寫 1174 bp",
+"一處用 kb，另一處用 bp",
+"一處含 B0015，另一處漏掉它",
+"寫成 1442 bp，那是擴增產物而不是插入片段"
+],
+"ans":0,
+"trap_en":"Calling lanes 1 and 3 negative when both carry a bright band at the wrong size.",
+"trap_zh":"把第 1、3 道說成陰性，其實兩道都有大小不對的亮帶。",
+"dom":"registry"
+},
+{
+"id":"w01",
+"img":"18639698c5cc.avif",
+"dir":"reg",
+"tier":3,
+"part":"BBa_26RF0X2E",
+"ask_en":"Green beats red at all three times here. How big is that effect really?",
+"ask_zh":"這張圖三個時間點綠光都高於紅光。這個差距到底有多大？",
+"a_en":"This is the DNPH assay, so it reports activity, not amount. Baseline before light is about 2.7. Green is above red at every time: roughly 8 against 6 at 3 h, 12 against 9 at 6 h, 18 against 16 at 8 h. The clean gap is at 6 h. At 3 h and 8 h the error bars overlap. There is no plasmid-free bar on this plot, and the axis is still labelled concentration in µg/mL.",
+"a_zh":"這是 DNPH 活性測定，量的是活性不是蛋白量。照光前的 baseline 約 2.7。每個時間點綠光都高於紅光：3 小時約 8 比 6，6 小時約 12 比 9，8 小時約 18 比 16。差距最乾淨的是 6 小時；3 小時與 8 小時的誤差線互相重疊。這張圖沒有無質體的對照柱，而且 y 軸仍標成濃度 µg/mL。",
+"kw_en":[
+"baseline 2.7",
+"gap clean only at 6 h",
+"no plasmid-free bar"
+],
+"kw_zh":[
+"baseline 2.7",
+"只有 6 小時差距乾淨",
+"沒有無質體對照柱"
+],
+"q_en":"The ELISA from the same experiment carries one bar this plot does not. Which?",
+"q_zh":"同一組實驗的 ELISA 有一根這張圖沒有的柱子，是哪一根？",
+"opt_en":[
+"A plasmid-free WB800 negative control",
+"A baseline sample taken before illumination",
+"A green-light sample at 6 h",
+"A red-light sample at 3 h"
+],
+"opt_zh":[
+"無質體的 WB800 陰性對照",
+"照光前取的 baseline 樣本",
+"6 小時的綠光樣本",
+"3 小時的紅光樣本"
+],
+"ans":0,
+"trap_en":"Calling the rising bars proof of light control when the error bars overlap at two of the three time points.",
+"trap_zh":"把逐漸升高的柱子當成光控制的證據，但三個時間點中有兩個的誤差線是重疊的。",
+"dom":"registry"
+},
+{
+"id":"w02",
+"img":"23a9b510db69.avif",
+"dir":"reg",
+"tier":3,
+"part":"BBa_26CXI09X",
+"ask_en":"Your caption says this measures secretion and diffusion. Show me where.",
+"ask_zh":"圖說寫這張圖在看分泌與擴散。請指給我看在哪裡。",
+"a_en":"Nine time points, three fractions, each strip cropped to 35 to 48 kDa. The only signal is the lumen cell lysate at 14, 16 and 18 h, and it is saturated black, so it cannot be quantified. Both medium sets, lumen and shell, are blank at every time point. The 20 to 24 h row shows nothing anywhere. The figure shows intracellular protein; it does not show secretion or shell-side diffusion.",
+"a_zh":"九個時間點、三種樣品，每一條都只裁到 35 至 48 kDa。唯一有訊號的是 14、16、18 小時的管內側細胞裂解液，而且訊號已經飽和成全黑，無法定量。管內側與殼側的兩組培養液在所有時間點都是空白。20 至 24 小時那一排整條都沒有東西。這張圖呈現的是細胞內的蛋白，並沒有呈現分泌或往殼側的擴散。",
+"kw_en":[
+"lysate only, saturated",
+"both medium sets blank",
+"strips cropped 35-48 kDa"
+],
+"kw_zh":[
+"只有裂解液且已飽和",
+"兩組培養液都空白",
+"只裁 35-48 kDa"
+],
+"q_en":"Across all nine time points, what do the lumen medium and shell medium lanes show?",
+"q_zh":"在全部九個時間點裡，管內側培養液與殼側培養液的泳道顯示什麼？",
+"opt_en":[
+"No detectable band at any time point",
+"A band that grows steadily from 14 h to 24 h",
+"A band on the shell side only after 40 h",
+"A doublet at 37 and 70 kDa"
+],
+"opt_zh":[
+"所有時間點都偵測不到條帶",
+"從 14 小時到 24 小時逐漸變強的條帶",
+"只有 40 小時之後殼側才出現條帶",
+"37 與 70 kDa 的雙條帶"
+],
+"ans":0,
+"trap_en":"Reading the heavy black in the early lysate lanes as high secretion, when it is an overloaded intracellular sample and the medium lanes beside it are empty.",
+"trap_zh":"把早期裂解液泳道的濃黑讀成分泌量高，其實那是過載的細胞內樣品，旁邊的培養液泳道是空的。",
+"dom":"registry"
+},
+{
+"id":"w03",
+"img":"4c16bfff0d3c.avif",
+"dir":"reg",
+"tier":3,
+"part":"BBa_26U8UTMH",
+"ask_en":"Where is that band sitting, and what size did you predict?",
+"ask_zh":"這條帶跑在哪裡？你們預測的分子量是多少？",
+"a_en":"Three lanes, green light only, sampled 3, 6 and 8 h after a 16 h dark culture. Lane M is the ladder at 180, 130 and 100 kDa. Each lane carries one band just below 100 kDa. Our AcdS monomer is predicted at about 35 kDa, so this runs far too high. We offer a roughly 70 kDa homodimer as a possibility we have not tested. There is no red, dark or plasmid-free lane on this blot.",
+"a_zh":"三條泳道，全部都是綠光，在 16 小時暗培養後的 3、6、8 小時取樣。M 是 marker，標示 180、130、100 kDa。每一道都有一條略低於 100 kDa 的條帶。我們的 AcdS 單體預測約 35 kDa，所以這個位置明顯偏高。我們提出約 70 kDa 的同源二聚體作為一個尚未驗證的可能解釋。這張膜上沒有紅光、暗處或無質體的泳道。",
+"kw_en":[
+"one band just below 100 kDa",
+"predicted 35 kDa monomer",
+"green lanes only"
+],
+"kw_zh":[
+"單一條帶略低於 100 kDa",
+"預測單體 35 kDa",
+"只有綠光泳道"
+],
+"q_en":"This same blot is captioned on two part pages. How do the two readings differ?",
+"q_zh":"同一張膜在兩個 part 頁面各有一段圖說，兩邊的判讀差在哪裡？",
+"opt_en":[
+"One calls the three lanes similar; the other calls 8 h weaker than 3 and 6 h",
+"One gives the band as 37 kDa, the other as 70 kDa",
+"One says the samples are supernatant, the other says cell lysate",
+"One says green light, the other says red light"
+],
+"opt_zh":[
+"一邊說三道差不多，另一邊說 8 小時比 3、6 小時弱",
+"一邊說條帶是 37 kDa，另一邊說是 70 kDa",
+"一邊說樣品是上清液，另一邊說是細胞裂解液",
+"一邊說是綠光，另一邊說是紅光"
+],
+"ans":0,
+"trap_en":"Saying the band confirms ACCD without naming the gap between where it runs and the 35 kDa we predicted.",
+"trap_zh":"說這條帶證實了 ACCD，卻沒有講出它跑的位置和我們預測的 35 kDa 之間的落差。",
+"dom":"registry"
+},
+{
+"id":"w04",
+"img":"59fdb2dd4530.avif",
+"dir":"reg",
+"tier":3,
+"part":"BBa_26RF0X2E",
+"ask_en":"Walk me through the bar chart you put next to this blot.",
+"ask_zh":"請帶我看一下你們放在這張膜旁邊的長條圖。",
+"a_en":"The bars are the blot quantified, relative to 3 h set at 1.00: 6 h is 1.10 and 8 h is 0.65, so signal falls by about a third at 8 h. That is one blot, one replicate, and no loading control, so the numbers are normalised only to themselves. The band itself sits just below the 100 kDa marker, against a predicted 35 kDa monomer. All three lanes are green at 100 percent.",
+"a_zh":"長條圖是這張膜的定量結果，以 3 小時設為 1.00：6 小時是 1.10，8 小時是 0.65，也就是 8 小時掉了約三分之一。這是單一張膜、單一重複，而且沒有 loading control，所以這些數字只是自己對自己的正規化。條帶本身落在略低於 100 kDa 的位置，而預測單體是 35 kDa。三條泳道全部是 100% 綠光。",
+"kw_en":[
+"G3 1.00, G6 1.10, G8 0.65",
+"no loading control",
+"n = 1"
+],
+"kw_zh":[
+"G3 1.00、G6 1.10、G8 0.65",
+"沒有 loading control",
+"n = 1"
+],
+"q_en":"What does this densitometry still lack before the numbers mean anything?",
+"q_zh":"這組定量還缺什麼，數字才有意義？",
+"opt_en":[
+"A loading control to normalise against",
+"The position of the 100 kDa marker",
+"A stated sampling time for each lane",
+"A note of which light colour was used"
+],
+"opt_zh":[
+"一個可以用來正規化的 loading control",
+"100 kDa marker 的位置",
+"每一道的取樣時間",
+"註明用的是哪一種光色"
+],
+"ans":0,
+"trap_en":"Quoting 1.10 and 0.65 as expression levels when they are ratios from a single unnormalised blot.",
+"trap_zh":"把 1.10 和 0.65 當成表現量來引用，其實它們只是單一張未正規化的膜算出來的比值。",
+"dom":"registry"
+},
+{
+"id":"w05",
+"img":"90114dd860dc.avif",
+"dir":"reg",
+"tier":3,
+"part":"BBa_262YYNPV",
+"ask_en":"Is this a structure of your protein?",
+"ask_zh":"這是你們自己那個蛋白的結構嗎？",
+"a_en":"No. It is PDB 1TZJ chain A, a Pseudomonas ACC deaminase solved by X-ray at 1.99 Å, 83 percent identical to our acdS over 330 aligned residues. We use it as a reference for the fold and the active site. Panel b shows pyridoxal-5'-phosphate held by a Schiff base to Lys51, which aligns to Lys50 in our sequence, with D-vinylglycine bound as a substrate analogue. No structure of our own acdS has been determined.",
+"a_zh":"不是。這是 PDB 1TZJ 的 A 鏈，一個 Pseudomonas 的 ACC 去胺酶 X 光結構，解析度 1.99 Å，和我們的 acdS 在 330 個比對殘基上有 83% 相同。我們把它當作摺疊方式與活性中心的參考。(b) 圖顯示 pyridoxal-5'-phosphate 透過 Schiff base 接在 Lys51 上，對應到我們序列中的 Lys50，並有基質類似物 D-vinylglycine 結合在口袋裡。我們自己的 acdS 沒有解過結構。",
+"kw_en":[
+"PDB 1TZJ chain A",
+"83% over 330 residues",
+"PLP Schiff base to Lys51"
+],
+"kw_zh":[
+"PDB 1TZJ A 鏈",
+"330 殘基 83% 相同",
+"PLP 以 Schiff base 接 Lys51"
+],
+"q_en":"What holds the PLP cofactor in the active site in panel b?",
+"q_zh":"(b) 圖中，是什麼把 PLP 輔因子固定在活性中心？",
+"opt_en":[
+"A Schiff base to Lys51",
+"A disulfide bond to a nearby cysteine",
+"A salt bridge to Arg487",
+"A zinc ion coordinated by three histidines"
+],
+"opt_zh":[
+"與 Lys51 形成的 Schiff base",
+"與鄰近半胱胺酸形成的雙硫鍵",
+"與 Arg487 形成的鹽橋",
+"由三個組胺酸配位的鋅離子"
+],
+"ans":0,
+"trap_en":"Presenting this as a model of the team's own enzyme instead of an 83 percent identical homologue used as a reference.",
+"trap_zh":"把這張圖講成是團隊自己那個酵素的模型，其實它只是 83% 相同的同源蛋白，用來當參考。",
+"dom":"registry"
+},
+{
+"id":"w06",
+"img":"b8766a706c15.avif",
+"dir":"reg",
+"tier":3,
+"part":"BBa_265CD14Z",
+"ask_en":"What does your C-terminal His tag do to the contact in panel b?",
+"ask_zh":"你們的 C 端 His tag 會對 (b) 圖裡那個接觸造成什麼影響？",
+"a_en":"BoPep4, Gly1 to Asn23, is the orange chain lying in the inner groove of the PEPR1 ectodomain. It is threaded onto the 5GR8 PEPR1-AtPep1 crystal structure, so this is a model and the starting point of our MD runs, not an experiment. Panel b is the problem: the free C-terminal carboxylate of Asn23 is gripped by Arg487, with Asn465 and Asp441. A C-terminal 6xHis tag blocks that carboxylate, and every BoPep4 part we deposited carries one.",
+"a_zh":"橘色那條是 BoPep4，Gly1 到 Asn23，躺在 PEPR1 外域的內側溝槽裡。它是接到 5GR8（PEPR1-AtPep1）晶體結構上的，所以這是模型、是我們所有 MD 的起始結構，不是實驗。(b) 圖才是問題所在：Asn23 游離的 C 端羧基被 Arg487 夾住，Asn465 與 Asp441 一起完成這個夾持。C 端加 6xHis tag 會擋住那個羧基，而我們登錄的每一個 BoPep4 part 都帶著這個 tag。",
+"kw_en":[
+"Asn23 carboxylate to Arg487",
+"threaded onto 5GR8",
+"His tag blocks it"
+],
+"kw_zh":[
+"Asn23 羧基接 Arg487",
+"接到 5GR8 上建模",
+"His tag 會擋住"
+],
+"q_en":"Which part of BoPep4 does the Arg487 clamp grip?",
+"q_zh":"Arg487 夾住的是 BoPep4 的哪個部位？",
+"opt_en":[
+"The free C-terminal carboxylate of Asn23",
+"The N-terminal amine of Gly1",
+"A lysine side chain near the middle of the peptide",
+"The backbone carbonyl at residue 12"
+],
+"opt_zh":[
+"Asn23 游離的 C 端羧基",
+"Gly1 的 N 端胺基",
+"胜肽中段的一個離胺酸側鏈",
+"第 12 個殘基的主鏈羰基"
+],
+"ans":0,
+"trap_en":"Describing the docked pose as a measured binding result, when it is a threaded model and the MD starting structure.",
+"trap_zh":"把這個對接姿勢講成量測到的結合結果，其實它只是接出來的模型，也是 MD 的起始結構。",
+"dom":"registry"
+},
+{
+"id":"w07",
+"img":"ba29fa86398c.avif",
+"dir":"reg",
+"tier":3,
+"part":"BBa_26RF0X2E",
+"ask_en":"Your caption describes four lanes. Show me the four lanes.",
+"ask_zh":"你們的圖說寫有四條泳道，請指給我看那四條。",
+"a_en":"I have to flag the figure first. The caption describes four lanes, green and red at 13 and 16 h, but the image under it is the three-lane green-only blot from Figure 2, with the same G3, G6, G8 bar chart beside it. The four-lane blot the caption describes sits on BBa_26U8UTMH, where one band runs between the 75 and 100 kDa markers in all four lanes. Read the caption against that figure, not this one.",
+"a_zh":"我得先說圖本身的問題。圖說描述的是四條泳道，13 和 16 小時的綠光與紅光，但圖說底下那張圖其實是 Figure 2 那張只有綠光的三道膜，旁邊還是同一組 G3、G6、G8 長條圖。圖說描述的那張四道膜在 BBa_26U8UTMH 上，四條泳道都有一條跑在 75 與 100 kDa marker 之間的條帶。請拿那張圖來對照這段圖說，而不是這一張。",
+"kw_en":[
+"image does not match caption",
+"duplicate of Figure 2",
+"four-lane blot is on BBa_26U8UTMH"
+],
+"kw_zh":[
+"圖與圖說不符",
+"與 Figure 2 重複",
+"四道膜在 BBa_26U8UTMH"
+],
+"q_en":"What is actually shown in the image sitting under this Figure 3 caption?",
+"q_zh":"這段 Figure 3 圖說底下那張圖，實際上畫的是什麼？",
+"opt_en":[
+"The three-lane green-only 3, 6 and 8 h blot from Figure 2",
+"Four lanes: green and red at 13 h and 16 h",
+"An imidazole elution series, S1 to S4",
+"A bioreactor time course across lumen and shell fractions"
+],
+"opt_zh":[
+"Figure 2 那張只有綠光、3/6/8 小時的三道膜",
+"四條泳道：13 與 16 小時的綠光與紅光",
+"S1 到 S4 的 imidazole 沖提系列",
+"管內側與殼側的生物反應器時間序列"
+],
+"ans":0,
+"trap_en":"Answering from the caption and describing four lanes that are not in the picture.",
+"trap_zh":"照著圖說回答，描述了一張圖上根本沒有的四條泳道。",
+"dom":"registry"
+},
+{
+"id":"w08",
+"img":"bd3754cc481d.avif",
+"dir":"reg",
+"tier":3,
+"part":"BBa_26XVQ3FS",
+"ask_en":"Two lanes here. Which one is your negative control?",
+"ask_zh":"這張只有兩道。哪一道是你們的陰性對照？",
+"a_en":"Neither. The lanes are the ladder, at 63, 48 and 35 kDa, and the culture supernatant. The band sits between 35 and 48, at about 37 kDa, against a predicted 35 kDa for the secreted protein, and that agreement is real: this is one of the few figures on our site where the size matches. The band is saturated, so I would not quantify it, and there is no untransformed WB800 or empty-vector lane.",
+"a_zh":"兩道都不是。這兩道一道是 marker，標示 63、48、35 kDa，另一道是培養上清液。條帶落在 35 與 48 之間，大約 37 kDa，而分泌型蛋白的預測值是 35 kDa，這個吻合是真的：這是我們網站上少數幾張分子量對得上的圖。條帶已經飽和，所以我不會拿它定量；而且這裡沒有未轉形的 WB800，也沒有空載體的泳道。",
+"kw_en":[
+"about 37 kDa",
+"agrees with predicted 35 kDa",
+"no control lane"
+],
+"kw_zh":[
+"約 37 kDa",
+"與預測 35 kDa 吻合",
+"沒有對照泳道"
+],
+"q_en":"Why is roughly 37 kDa worth saying out loud on this particular figure?",
+"q_zh":"為什麼在這張圖上，「大約 37 kDa」這件事值得特別講出來？",
+"opt_en":[
+"It matches the predicted 35 kDa monomer, unlike the light-induced blots",
+"It matches the roughly 70 kDa homodimer we propose elsewhere",
+"It shows the His tag was cleaved off during secretion",
+"It confirms the protein stayed inside the cell"
+],
+"opt_zh":[
+"它和預測的 35 kDa 單體吻合，和那些光誘導的膜不一樣",
+"它和我們在別處提出的約 70 kDa 同源二聚體吻合",
+"它顯示 His tag 在分泌過程中被切掉了",
+"它證實蛋白留在細胞內"
+],
+"ans":0,
+"trap_en":"Calling this blot evidence of light-controlled secretion, when the construct is the constitutive Pveg version with no light input at all.",
+"trap_zh":"把這張膜當成光控分泌的證據，其實這個構築是組成型 Pveg 版本，完全沒有光的輸入。",
+"dom":"registry"
+},
+{
+"id":"w09",
+"img":"cf26d4e64d66.avif",
+"dir":"reg",
+"tier":3,
+"part":"BBa_26CXI09X",
+"ask_en":"Panel B. Talk me through your purification.",
+"ask_zh":"(B) 圖，請講一下你們的純化。",
+"a_en":"Panel B is the only purification panel we have anywhere. Lane S1 at 25 mM imidazole is empty; S2 at 10 mM, S3 at 150 mM and S4 at 250 mM each give a band just above the 35 kDa marker, and S2 also shows a fainter band near 40. Two caveats: the labels run 25 then 10 mM, which is not a rising series, and the page caption prints 100 mM for S2. We report no purified yield or concentration anywhere.",
+"a_zh":"(B) 圖是我們整個網站上唯一的純化圖。S1 的 25 mM imidazole 是空的；S2 的 10 mM、S3 的 150 mM、S4 的 250 mM 各有一條略高於 35 kDa marker 的條帶，S2 另外還有一條較淡、靠近 40 的條帶。兩個要注意的地方：標示是 25 之後接 10 mM，並不是遞增的序列；而且頁面圖說把 S2 寫成 100 mM。我們在任何地方都沒有給出純化的產量或濃度。",
+"kw_en":[
+"S1 empty, S2-S4 band near 35 kDa",
+"labels not a rising series",
+"no yield reported"
+],
+"kw_zh":[
+"S1 空白，S2-S4 在 35 kDa 附近有帶",
+"標示不是遞增序列",
+"沒有報告產量"
+],
+"q_en":"What does the page caption print for lane S2 that the figure itself does not?",
+"q_zh":"頁面圖說給 S2 的數字和圖上標的不一樣，差在哪？",
+"opt_en":[
+"100 mM, where the figure is labelled 10 mM",
+"250 mM, where the figure is labelled 150 mM",
+"A purified yield in mg per litre",
+"An elution volume in millilitres"
+],
+"opt_zh":[
+"圖說寫 100 mM，圖上標的是 10 mM",
+"圖說寫 250 mM，圖上標的是 150 mM",
+"一個 mg/L 的純化產量",
+"一個以毫升計的沖提體積"
+],
+"ans":0,
+"trap_en":"Describing this as a purified protein preparation when no yield, no gel and no concentration exist for it.",
+"trap_zh":"把這個講成已經純化好的蛋白製劑，其實它沒有產量、沒有膠圖、也沒有濃度。",
+"dom":"registry"
+},
+{
+"id":"w10",
+"img":"d087c7afc2e9.avif",
+"dir":"reg",
+"tier":3,
+"part":"BBa_26IN6G1D",
+"ask_en":"Why is the N-terminal arm coloured orange in both panels?",
+"ask_zh":"為什麼兩張圖裡 N 端那條手臂都是橘色的？",
+"a_en":"Because it has no fixed structure. This one is our own protein: PDB 1XO8 residues 2 to 151 are exactly the mature LEA14 our cassette encodes. The core is a 9-stranded β-sandwich with one helix. Panel b colours and thickens each residue by RMSF across the 20 NMR models: the core, residues 28 to 143, averages 0.42 Å, while the N-terminal 1 to 16 averages 8.75 Å and reaches 11.9 Å. Order actually begins at residue 17, already 1.13 Å.",
+"a_zh":"因為它沒有固定的結構。這一張是我們自己的蛋白：PDB 1XO8 的第 2 到 151 個殘基，正好就是我們卡匣編碼的成熟型 LEA14。核心是九股 β-sandwich 加一段螺旋。(b) 圖用 20 個 NMR 模型的每殘基 RMSF 來上色與加粗：核心（殘基 28 到 143）平均 0.42 Å，而 N 端 1 到 16 平均 8.75 Å，最高到 11.9 Å。真正開始有序是在第 17 個殘基，已經降到 1.13 Å。",
+"kw_en":[
+"N-term 1-16 at 8.75 A",
+"core 28-143 at 0.42 A",
+"PDB 1XO8, our own protein"
+],
+"kw_zh":[
+"N 端 1-16 為 8.75 Å",
+"核心 28-143 為 0.42 Å",
+"PDB 1XO8，是我們自己的蛋白"
+],
+"q_en":"Of the three structure figures on these part pages, which one shows the team's own protein?",
+"q_zh":"這些 part 頁面上的三張結構圖，哪一張畫的是團隊自己的蛋白？",
+"opt_en":[
+"LEA14, PDB 1XO8, residues 2 to 151",
+"ACC deaminase, PDB 1TZJ chain A",
+"BoPep4 threaded onto PEPR1 from 5GR8",
+"All three are models of our own sequences"
+],
+"opt_zh":[
+"LEA14，PDB 1XO8，殘基 2 到 151",
+"ACC 去胺酶，PDB 1TZJ 的 A 鏈",
+"接在 5GR8 的 PEPR1 上的 BoPep4",
+"三張都是我們自己序列的模型"
+],
+"ans":0,
+"trap_en":"Treating the disordered arm as a modelling artefact rather than a measured spread across 20 deposited NMR models.",
+"trap_zh":"把那條無序的手臂當成建模的假象，其實它是 20 個已登錄 NMR 模型量出來的分布。",
+"dom":"registry"
+},
+{
+"id":"w11",
+"img":"e4d3f567128c.avif",
+"dir":"reg",
+"tier":3,
+"part":"BBa_26RF0X2E",
+"ask_en":"Does this plate separate green from red?",
+"ask_zh":"這塊盤分得出綠光和紅光嗎？",
+"a_en":"No. Four bars, all between about 12 and 13 µg/mL: green at 13 h is highest at about 12.9 and red at 16 h lowest at about 12.1, so the whole spread is under 1 µg/mL with small error bars. Colour does nothing here and neither does time. Note what is missing against the short-term plate: there is no plasmid-free WB800 bar on this chart, so the floor is not shown.",
+"a_zh":"分不出來。四根柱子全部落在約 12 到 13 µg/mL：13 小時綠光最高，約 12.9；16 小時紅光最低，約 12.1，整個範圍不到 1 µg/mL，誤差線也很小。光色沒有造成差別，時間也沒有。還要注意相對於短期那塊盤少了什麼：這張圖上沒有無質體 WB800 的柱子，所以底線沒有被畫出來。",
+"kw_en":[
+"all four 12-13 ug/mL",
+"spread under 1 ug/mL",
+"no plasmid-free bar"
+],
+"kw_zh":[
+"四根都在 12-13 µg/mL",
+"全距不到 1 µg/mL",
+"沒有無質體柱"
+],
+"q_en":"The DNPH assay on these same four samples reported what at 13 h?",
+"q_zh":"同樣這四個樣品，DNPH 測定在 13 小時報告了什麼？",
+"opt_en":[
+"Green about fourteen times red, which this ELISA does not see",
+"Green and red within 10 percent of each other",
+"Red about three times green",
+"No measurable activity in any sample"
+],
+"opt_zh":[
+"綠光約為紅光的十四倍，而這張 ELISA 完全看不到",
+"綠光與紅光相差不到一成",
+"紅光約為綠光的三倍",
+"所有樣品都量不到活性"
+],
+"ans":0,
+"trap_en":"Quoting 12.9 against 12.1 as a green-over-red difference when the error bars sit on top of each other.",
+"trap_zh":"把 12.9 對 12.1 當成綠光勝過紅光的差異，其實誤差線根本疊在一起。",
+"dom":"registry"
+},
+{
+"id":"w12",
+"img":"e566cdecd66e.avif",
+"dir":"reg",
+"tier":3,
+"part":"BBa_26U8UTMH",
+"ask_en":"Point me at the difference between green and red on this blot.",
+"ask_zh":"請在這張膜上指出綠光和紅光的差別。",
+"a_en":"Five lanes: the ladder at 180, 130, 100 and 75 kDa, then green and red at 13 h and again at 16 h. One band per sample lane, running between the 75 and 100 kDa markers. By eye the four intensities are similar, which is what this caption says; our other page calls the green lanes somewhat stronger. Similar is the defensible reading, because nothing was quantified. Red light is the only negative control here.",
+"a_zh":"五條泳道：marker 標 180、130、100、75 kDa，然後是 13 小時的綠光與紅光，再來是 16 小時的綠光與紅光。每條樣品泳道一條帶，跑在 75 與 100 kDa marker 之間。用眼睛看，四道深淺差不多，這也是這段圖說寫的；我們另一頁則說綠光那兩道看起來稍微強一點。比較站得住腳的講法是「差不多」，因為我們沒有做定量。這裡唯一的陰性對照就是紅光。",
+"kw_en":[
+"band between 75 and 100 kDa",
+"four lanes similar by eye",
+"red is the only control"
+],
+"kw_zh":[
+"條帶在 75 與 100 kDa 之間",
+"四道目視差不多",
+"紅光是唯一對照"
+],
+"q_en":"What negative control does this blot carry?",
+"q_zh":"這張膜帶了什麼陰性對照？",
+"opt_en":[
+"Red light only; there is no dark and no plasmid-free lane",
+"An untransformed WB800 lane beside the ladder",
+"An empty-vector lane at each time point",
+"A dark-grown lane sampled at 13 h and 16 h"
+],
+"opt_zh":[
+"只有紅光；沒有暗處，也沒有無質體的泳道",
+"marker 旁邊有一道未轉形的 WB800",
+"每個時間點都有一道空載體",
+"13 與 16 小時各有一道暗培養的樣品"
+],
+"ans":0,
+"trap_en":"Saying the green lanes are stronger, which is the other page's wording and was never quantified on either page.",
+"trap_zh":"說綠光那幾道比較強——那是另一頁的寫法，而且兩頁都沒有做過定量。",
+"dom":"registry"
+},
+{
+"id":"w13",
+"img":"eb9f556de867.avif",
+"dir":"reg",
+"tier":3,
+"part":"BBa_26RF0X2E",
+"ask_en":"This is your biggest light effect. How much weight does it carry?",
+"ask_zh":"這是你們最大的光反應。它能承擔多少份量？",
+"a_en":"It is the cleanest light response we got and also the least supported. At 13 h green is about 10.4 nmol alpha-KB per mL per hour against about 0.7 for red, roughly fourteen to one. At 16 h it inverts: green about 1.1, red about 3.8. The 13 h green error bar runs from about 5 to 16, neither time point was repeated, and across both times colour comes out at p = 0.72.",
+"a_zh":"這是我們做出來最乾淨的光反應，同時也是支撐最弱的。13 小時綠光約 10.4 nmol alpha-KB mL⁻¹ h⁻¹，紅光約 0.7，大約十四比一。到 16 小時則反過來：綠光約 1.1，紅光約 3.8。13 小時綠光的誤差線從大約 5 拉到 16，兩個時間點都沒有重複，而且把兩個時間一起看，光色的 p 值是 0.72。",
+"kw_en":[
+"13 h green 10.4 vs red 0.7",
+"16 h inverts",
+"p = 0.72"
+],
+"kw_zh":[
+"13 小時綠 10.4 對紅 0.7",
+"16 小時反轉",
+"p = 0.72"
+],
+"q_en":"What happens to the green-over-red ordering at 16 h?",
+"q_zh":"到了 16 小時，綠光高於紅光這個順序發生什麼事？",
+"opt_en":[
+"It inverts: red is about 3.8 and green about 1.1",
+"It holds, with green still roughly fourteen times red",
+"Both conditions fall to zero",
+"Green rises further, to about 18"
+],
+"opt_zh":[
+"反轉了：紅光約 3.8，綠光約 1.1",
+"維持不變，綠光仍約為紅光的十四倍",
+"兩組都掉到零",
+"綠光繼續上升到約 18"
+],
+"ans":0,
+"trap_en":"Quoting the fourteen-fold figure on its own without the error bar, the missing replicate, or the inversion three hours later.",
+"trap_zh":"只引用十四倍這個數字，卻不講誤差線、沒有重複，以及三小時後就反轉這件事。",
+"dom":"registry"
+},
+{
+"id":"w14",
+"img":"ef5b2ee4ffa5.avif",
+"dir":"reg",
+"tier":3,
+"part":"BBa_26RF0X2E",
+"ask_en":"What does the light actually do to the amount of ACCD here?",
+"ask_zh":"在這張圖裡，光到底對 ACCD 的量做了什麼？",
+"a_en":"Nothing measurable. Baseline before any light is already about 3.0 µg/mL, and every illuminated sample sits between 2.6 and 3.2, green and red alike, with 6 h and 8 h slightly below the 3 h pair. The last bar, WB, is plasmid-free WB800 at about 1.3, and it separates clearly from the rest. That makes this one of the few figures we have where the negative control actually works.",
+"a_zh":"沒有造成可量到的改變。照光前的 baseline 已經約 3.0 µg/mL，所有照過光的樣品都落在 2.6 到 3.2 之間，綠光紅光都一樣，6 與 8 小時比 3 小時那一組略低一點。最後一根 WB 是無質體的 WB800，約 1.3，和其他柱子分得很開。這也讓它成為我們少數幾張陰性對照真的有作用的圖。",
+"kw_en":[
+"baseline already 3.0 ug/mL",
+"all samples 2.6-3.2",
+"WB control at 1.3"
+],
+"kw_zh":[
+"baseline 已經 3.0 µg/mL",
+"所有樣品 2.6-3.2",
+"WB 對照 1.3"
+],
+"q_en":"What does the WB bar on the right of this plot represent?",
+"q_zh":"這張圖最右邊那根 WB 柱代表什麼？",
+"opt_en":[
+"Plasmid-free WB800, at about 1.3 µg/mL",
+"The sample taken before illumination began",
+"Western blot densitometry added for comparison",
+"A purified ACCD standard at a known concentration"
+],
+"opt_zh":[
+"無質體的 WB800，約 1.3 µg/mL",
+"照光開始前取的樣本",
+"拿來比較的西方墨點定量值",
+"已知濃度的純化 ACCD 標準品"
+],
+"ans":0,
+"trap_en":"Reading WB as western blot rather than the plasmid-free WB800 host, which is the one working negative control on the plot.",
+"trap_zh":"把 WB 讀成西方墨點，其實它是無質體的 WB800 宿主，也是這張圖上唯一有作用的陰性對照。",
+"dom":"registry"
+},
+{
+"id":"w15",
+"img":"f858b4d704db.avif",
+"dir":"reg",
+"tier":3,
+"part":"BBa_260MVA1K",
+"ask_en":"Look at panel B. Which lane is the darkest?",
+"ask_zh":"請看 (B) 圖。最深的是哪一道？",
+"a_en":"Red 100 percent at 8 h, which is our off control. It peaks at the same time as green, so this blot does not show light control, and that is why we dropped this ABDI construct for ABDQ. That sentence lives on the Level 2 part page, not under this figure. The bands run at roughly 63 to 75 kDa against a 35 kDa monomer. The 0 h lane is the same strain before light, not a plasmid-free control.",
+"a_zh":"是 8 小時的 100% 紅光，也就是我們的關閉對照。它和綠光同時達到最強，所以這張膜並沒有顯示出光控制，這也是我們後來放棄這個 ABDI 構築、改用 ABDQ 的原因。不過那句話寫在 Level 2 的 part 頁面上，不在這張圖底下。條帶跑在大約 63 到 75 kDa，而單體是 35 kDa。0 小時那一道是同一株菌照光前的樣品，不是無質體對照。",
+"kw_en":[
+"red 100 at 8 h is darkest",
+"off control failed",
+"bands at 63-75 kDa"
+],
+"kw_zh":[
+"8 小時紅光 100 最深",
+"關閉對照失效",
+"條帶在 63-75 kDa"
+],
+"q_en":"What is the 0 h lane in each panel?",
+"q_zh":"每一張圖裡的 0 小時那一道是什麼？",
+"opt_en":[
+"The same strain sampled before light exposure",
+"Untransformed WB800 with no plasmid",
+"An empty-vector control",
+"A purified ACCD standard"
+],
+"opt_zh":[
+"同一株菌在照光前取的樣品",
+"未轉形、沒有質體的 WB800",
+"空載體對照",
+"純化的 ACCD 標準品"
+],
+"ans":0,
+"trap_en":"Claiming signal rose under green but not red, which is the application text on this page and the opposite of what panel B shows.",
+"trap_zh":"聲稱訊號只在綠光下上升、紅光下沒有——那是這一頁應用段落的寫法，和 (B) 圖看到的正好相反。",
+"dom":"registry"
+},
+{
+"id":"x01",
+"img":"32d2074018a8.avif",
+"dir":"reg",
+"tier":3,
+"part":"BBa_26D5AX7S",
+"ask_en":"What do these three LEA14 salinity panels actually show?",
+"ask_zh":"這三張 LEA14 鹽逆境圖實際上顯示了什麼？",
+"a_en":"Three readouts from the salinity set at 0, 75 and 100 mM NaCl, for untreated, pre-treatment and post-treatment LEA14 supernatant. Panel (a), fresh weight, carries one point per bar: untreated at 0 mM is highest at about 0.84 g and every other group sits between 0.54 and 0.61 g. Panel (b) divides chlorophyll by that single weight, panel (c) does not. Post-treatment has no 0 mM group, and the only significance bracket runs from untreated 0 mM to untreated 75 mM.",
+"a_zh":"這是鹽逆境組在 0、75、100 mM NaCl 下的三項讀數，比較未處理、前處理與後處理 LEA14 上清液。(a) 鮮重每根柱只有一個點：未處理 0 mM 最高，約 0.84 g，其餘各組都落在 0.54 到 0.61 g。(b) 是葉綠素除以那個單一鮮重，(c) 則未除。後處理沒有 0 mM 組，而唯一的顯著性括號是從未處理 0 mM 連到未處理 75 mM。",
+"kw_en":[
+"one point per bar",
+"FW normalisation",
+"missing 0 mM group"
+],
+"kw_zh":[
+"每柱一點",
+"鮮重標準化",
+"缺 0 mM 組"
+],
+"q_en":"In panel (b) post-treatment LEA14 at 75 mM NaCl is the tallest bar, near 1.8. What most limits that bar?",
+"q_zh":"在 (b) 圖中，後處理 LEA14 於 75 mM NaCl 是最高的一根，約 1.8。這根柱最大的限制是什麼？",
+"opt_en":[
+"It is chlorophyll divided by fresh weight, and fresh weight is a single pooled measurement per group, so a small denominator lifts the ratio.",
+"It is the only bar without replicate points, so it carries no error bar.",
+"It was measured at 100 mM NaCl rather than 75 mM, so the label is wrong.",
+"It is significantly different from its own salt-stressed control, as the bracket shows."
+],
+"opt_zh":[
+"它是葉綠素除以鮮重，而鮮重每組只有一個合併測值，分母一小、比值就被抬高。",
+"它是唯一沒有重複點的柱，所以沒有誤差棒。",
+"它其實量的是 100 mM NaCl 而非 75 mM，標籤標錯了。",
+"如括號所示，它和自己的鹽逆境對照組有顯著差異。"
+],
+"ans":0,
+"trap_en":"Reading panel (b) as protection: the same group falls to about 0.85 in panel (c), where chlorophyll is not divided by fresh weight.",
+"trap_zh":"把 (b) 圖當成保護效果：同一組在未除鮮重的 (c) 圖只剩約 0.85。",
+"dom":"registry"
+},
+{
+"id":"x02",
+"img":"3cafffeb48fc.avif",
+"dir":"reg",
+"tier":3,
+"part":"BBa_26LYCBW0",
+"ask_en":"Take me through this BoPep4 folding figure.",
+"ask_zh":"帶我看一下這張 BoPep4 摺疊圖。",
+"a_en":"A 236 nt translation-initiation window folded in ViennaRNA 2.7.2 at 37 °C. The table ranks the ordered design fourth of 42,581 variants: start+15 accessibility 0.396 to 0.497, Shine-Dalgarno core 0.067 to 0.634, nine codons changed, 11 bases recoded, CAI 0.87 down to 0.77. Panels (b) and (c) are the predicted minimum-free-energy structures and (d) the per-base unpaired probability. All of it is folding prediction. Translation initiation from this cassette has never been measured.",
+"a_zh":"這是 236 nt 的轉譯起始視窗，用 ViennaRNA 2.7.2 在 37 °C 下摺疊。表格顯示訂購的設計在 42,581 個變體中排第 4：start+15 可及性由 0.396 升到 0.497，Shine-Dalgarno 核心由 0.067 升到 0.634，改了 9 個密碼子、11 個鹼基，CAI 由 0.87 降到 0.77。(b)(c) 是預測的最低自由能結構，(d) 是每個鹼基的未配對機率。全部都是摺疊預測，這個卡匣的轉譯起始從未被量測過。",
+"kw_en":[
+"ViennaRNA prediction",
+"start+15 0.497",
+"rank 4 of 42,581"
+],
+"kw_zh":[
+"ViennaRNA 預測",
+"start+15 0.497",
+"42,581 中第 4"
+],
+"q_en":"The ordered variant has a lower MFE (-49.1) than the wild type (-43.2). Why is that not a contradiction?",
+"q_zh":"訂購的變體 MFE（-49.1）比野生型（-43.2）更低，為什麼這不矛盾？",
+"opt_en":[
+"The score is local accessibility at the ribosome binding site and start codon, not whole-window stability; the window can fold tighter elsewhere while opening at initiation.",
+"Lower MFE always means better initiation, so the two numbers agree.",
+"MFE and accessibility are in different units, so the two can never be compared at all.",
+"The ordered variant is shorter than the wild type, so its MFE is not comparable."
+],
+"opt_zh":[
+"評分看的是核醣體結合位與起始密碼子的局部可及性，不是整段視窗的穩定度；視窗其他地方可以摺得更緊，起始區仍然打開。",
+"MFE 越低就代表起始越好，所以兩個數字本來就一致。",
+"MFE 和可及性單位不同，兩者根本無法比較。",
+"訂購的變體比野生型短，所以 MFE 不能相比。"
+],
+"ans":0,
+"trap_en":"Treating the accessibility gain as measured expression; it is a ViennaRNA number and no translation from this cassette has been measured.",
+"trap_zh":"把可及性的提升當成量到的表現量；那只是 ViennaRNA 的數字，這個卡匣的轉譯從未量測。",
+"dom":"registry"
+},
+{
+"id":"x03",
+"img":"3da62e90de50.avif",
+"dir":"reg",
+"tier":3,
+"part":"BBa_26LYCBW0",
+"ask_en":"What does this Asn23-Arg487 panel tell you about the His tag?",
+"ask_zh":"這張 Asn23–Arg487 圖告訴你 His 標籤的什麼事？",
+"a_en":"Three panels on the one contact the design rests on. In (a) Arg487 grips the Asn23 C-terminal carboxylate with both oxygens in 100.0 % of wild-type frames and 99.5 % of AtPep1 frames; with a C-terminal 6xHis tag bidentate engagement is 0.0 % and monodentate 99.3 %. In (b) the first shell is the peptide C-terminal COO- for both controls and a backbone carbonyl for the tagged system. In (c) the charge centres sit 4.0 Å apart for the controls and 20.1 Å with the tag.",
+"a_zh":"三張圖都在講設計所倚靠的那一個接觸。(a) Arg487 以兩個氧抓住 Asn23 的 C 端羧基，野生型 100.0 % 的 frames、AtPep1 99.5 %；加上 C 端 6xHis 標籤後，雙齒結合變成 0.0 %，單齒 99.3 %。(b) 第一殼層在兩組對照是胜肽 C 端 COO−，在加標籤的系統則換成主鏈羰基。(c) 電荷中心距離在對照是 4.0 Å，加標籤後是 20.1 Å。",
+"kw_en":[
+"bidentate 100 to 0",
+"4.0 to 20.1 A",
+"backbone carbonyl"
+],
+"kw_zh":[
+"雙齒 100 變 0",
+"4.0 變 20.1 Å",
+"主鏈羰基"
+],
+"q_en":"Every BoPep4 part the team deposited carries a C-terminal His tag. What does panel (c) imply for them?",
+"q_zh":"團隊上傳的每一個 BoPep4 part 都帶 C 端 His 標籤。(c) 圖對它們意味著什麼？",
+"opt_en":[
+"The charge pair the model says holds the peptide is 20.1 Å apart in the tagged system, so the deposited constructs lack the contact the design rests on.",
+"Nothing, because SamyQ cleavage removes the C-terminal tag during secretion.",
+"The tag pulls the charge pair closer, so binding is predicted to improve.",
+"Nothing, because panel (c) only concerns AtPep1 and not BoPep4."
+],
+"opt_zh":[
+"模型認為抓住胜肽的那對電荷，在加標籤的系統相距 20.1 Å，所以上傳的構築缺少設計所倚靠的那個接觸。",
+"沒有影響，因為分泌時 SamyQ 的切割會把 C 端標籤移除。",
+"標籤把電荷對拉得更近，所以預測結合會變好。",
+"沒有影響，因為 (c) 圖只牽涉 AtPep1，與 BoPep4 無關。"
+],
+"ans":0,
+"trap_en":"Reading the red bar at 99.3 % in panel (a) as healthy engagement; it is monodentate, a backbone carbonyl standing in for the free carboxylate.",
+"trap_zh":"把 (a) 圖紅柱的 99.3 % 讀成結合良好；那是單齒，由主鏈羰基頂替了自由羧基。",
+"dom":"registry"
+},
+{
+"id":"x04",
+"img":"426238dcca98.avif",
+"dir":"reg",
+"tier":3,
+"part":"BBa_26XVQ3FS",
+"ask_en":"Point at the green plants on this rack. What can you conclude?",
+"ask_zh":"指著這盤架上還綠的植株，你能下什麼結論？",
+"a_en":"The hydroponic rack after four days at 37 °C. Most rosettes have bleached to white or pale yellow. Green is retained across the ACC deaminase row at all four dilutions, and also in the 1/40 WB800 vehicle bracketed in the same block; the 0.1x MS medium control in that block is bleached. It is one photograph of one rack, three seedlings per bracketed group, no repeat and no quantification on the panel itself.",
+"a_zh":"這是在 37 °C 放四天之後的水耕盤架。多數蓮座葉已經白化或變成淡黃。ACC deaminase 那一列四個稀釋度都還留著綠色，同一區塊裡被括起來的 1/40 WB800 載體對照也是綠的；同區塊的 0.1x MS 培養基對照則已白化。這只是一盤、一張照片，每個括號組三株，沒有重複，也沒有任何量化。",
+"kw_en":[
+"bleached rosettes",
+"vehicle also green",
+"one rack"
+],
+"kw_zh":[
+"白化蓮座葉",
+"載體也是綠的",
+"只有一盤"
+],
+"q_en":"The 1/40 WB800 vehicle beside the ACC deaminase row is also green. What does that do to the claim?",
+"q_zh":"ACC deaminase 列旁邊的 1/40 WB800 載體對照也是綠的。這對結論有什麼影響？",
+"opt_en":[
+"It weakens it: a control with no protectant survived as well, so greenness in that block cannot be attributed to the cargo.",
+"Nothing, because the WB800 vehicle is known to be inert.",
+"It strengthens it, because the vehicle carries the same ACC deaminase cassette.",
+"It means the ACC deaminase dose was too low to matter at any dilution."
+],
+"opt_zh":[
+"會削弱結論：一個不含保護蛋白的對照也活得一樣好，所以那一區塊的綠色不能歸功於貨物蛋白。",
+"沒有影響，因為已知 WB800 載體本身是惰性的。",
+"會強化結論，因為載體帶有相同的 ACC deaminase 卡匣。",
+"代表任何稀釋度下 ACC deaminase 劑量都低到沒有作用。"
+],
+"ans":0,
+"trap_en":"Scoring green against bleached across the rack by eye and calling it an effect of the supernatant, when the matching vehicle control in the same block is green too.",
+"trap_zh":"用肉眼比對整盤的綠與白化就當成上清液的效果，但同區塊相對應的載體對照同樣是綠的。",
+"dom":"registry"
+},
+{
+"id":"x05",
+"img":"4ff207877161.avif",
+"dir":"reg",
+"tier":3,
+"part":"BBa_26XVQ3FS",
+"ask_en":"What is this pre-stress rack photograph good for?",
+"ask_zh":"這張逆境前的盤架照片能用來做什麼？",
+"a_en":"The same hydroponic rack photographed before the heat stress, with 15-day-old Arabidopsis. Every plug is green and the rosettes look comparable. The rack carries ACC deaminase at 1/40, 1/60, 1/80 and 1/100, BoPep4 at the same four dilutions, and a 1/40 WB800 vehicle plus a 0.1x MS medium control repeated for each arm, three seedlings per bracket. White fuzz is visible on at least two plugs. This image carries no measurement.",
+"a_zh":"這是同一組水耕盤架在熱逆境之前拍的，裡面是 15 天大的阿拉伯芥。每個孔的植株都是綠的，蓮座葉看起來彼此相當。盤上有 ACC deaminase 的 1/40、1/60、1/80、1/100，BoPep4 同樣四個稀釋度，以及每一臂各自重複的 1/40 WB800 載體與 0.1x MS 培養基對照，每括號三株。至少兩個孔上看得到白色菌絲。這張照片本身沒有任何測量值。",
+"kw_en":[
+"baseline image",
+"uniform green",
+"two fuzzy plugs"
+],
+"kw_zh":[
+"基線照片",
+"一致的綠",
+"兩孔有白絲"
+],
+"q_en":"What is the legitimate use of this photograph in the argument?",
+"q_zh":"在論證裡，這張照片的正當用途是什麼？",
+"opt_en":[
+"Showing the rack started uniform and healthy, so later bleaching is not a pre-existing difference between groups.",
+"Showing that ACC deaminase supernatant already improved growth before the heat stress began.",
+"Scoring chlorophyll, since leaf colour in this image is quantitative.",
+"Establishing the replicate number, which the photograph sets at nine seedlings per group."
+],
+"opt_zh":[
+"顯示盤架一開始是整齊而健康的，所以後來的白化不是各組原本就有的差異。",
+"顯示在熱逆境開始前，ACC deaminase 上清液就已經促進了生長。",
+"用來評分葉綠素，因為這張影像的葉色是可量化的。",
+"用來確立重複數，照片顯示每組有九株。"
+],
+"ans":0,
+"trap_en":"Reading small size differences in the baseline photograph as a dose response; nothing was measured at this point.",
+"trap_zh":"把基線照片裡細微的大小差異讀成劑量反應；這個時間點什麼都還沒量。",
+"dom":"registry"
+},
+{
+"id":"x06",
+"img":"563e8334c64d.avif",
+"dir":"reg",
+"tier":3,
+"part":"BBa_26LYCBW0",
+"ask_en":"Walk me through the four trajectory panels.",
+"ask_zh":"帶我看一下這四張軌跡圖。",
+"a_en":"Eight peptide-bound systems plus apo PEPR1, 30 ns each, 1,500 frames, smoothed over 500 ps. Panel (a) is receptor Ca RMSD against a 3.0 A gate, (b) peptide backbone RMSD in the receptor frame against 4.0 A, (c) the minimum heavy-atom distance across Asn23-Arg487 with the 4 A cut-off and the 5GR8 crystal value at 2.4 A, and (d) clamp contacts against a floor of 3 of 4. Only the two 9-23 systems leave the band for long.",
+"a_zh":"八個結合胜肽的系統加上單獨的 PEPR1，各跑 30 ns、1,500 frames，用 500 ps 滾動平均平滑。(a) 是受體 Cα RMSD 對 3.0 Å 的門檻，(b) 是在受體座標下的胜肽主鏈 RMSD 對 4.0 Å，(c) 是 Asn23–Arg487 的最短重原子距離，標了 4 Å 判定線與 5GR8 晶體的 2.4 Å，(d) 是夾持接觸數對 4 取 3 的底線。只有兩個 9–23 系統長時間離開區間。",
+"kw_en":[
+"30 ns, 1500 frames",
+"acceptance gates",
+"9-23 pH 5.5"
+],
+"kw_zh":[
+"30 ns、1500 frames",
+"驗收門檻",
+"9–23 pH 5.5"
+],
+"q_en":"The red trace, wild type plus C-terminal His6, hugs the wild type in panel (c). Why is that misleading?",
+"q_zh":"紅色曲線（野生型加 C 端 His6）在 (c) 圖幾乎貼著野生型。為什麼這會誤導人？",
+"opt_en":[
+"Panel (c) is a minimum heavy-atom distance, which a backbone carbonyl can satisfy; in that system the bidentate carboxylate contact is 0.0 % of frames.",
+"The red trace is in fact above the 4 A line for most of the run.",
+"The tagged system was only run for 10 ns, so the rest of its trace is padding.",
+"The minimum distance in the tagged system is measured to a different arginine."
+],
+"opt_zh":[
+"(c) 圖量的是最短重原子距離，主鏈羰基就能滿足；而在那個系統裡，雙齒羧基接觸是 0.0 % 的 frames。",
+"紅色曲線其實大半段都在 4 Å 線之上。",
+"加標籤的系統只跑了 10 ns，後面的曲線是補上去的。",
+"加標籤系統的最短距離是量到另一個精胺酸。"
+],
+"ans":0,
+"trap_en":"Taking a trace that stays inside the gates as evidence of binding; the tagged and truncated systems stay inside while losing the contact the design rests on.",
+"trap_zh":"把留在門檻內的曲線當成結合的證據；加標籤與截短的系統都待在門檻內，卻失去了設計所倚靠的接觸。",
+"dom":"registry"
+},
+{
+"id":"x07",
+"img":"5e77975cbd45.avif",
+"dir":"reg",
+"tier":3,
+"part":"BBa_26LYCBW0",
+"ask_en":"Which of these bars should worry you most?",
+"ask_zh":"這些長條裡，哪一根最該讓你擔心？",
+"a_en":"Fraction of the 1,500 production frames in which each contact is made, for eight systems. Dashed red lines mark the 60 % pass mark on Arg487 within 4 A and on clamp at 3 of 4 or better, written down before the runs. Only BoPep4 9-23 at pH 5.5 fails, at 23.6 % and 19.3 %. BoPep4 WT plus C-His6 reads 99.8, 100.0, 99.7 and 100.0, and 15-23, the pre-registered negative control, reads 99.9, 97.1, 99.9 and 100.0.",
+"a_zh":"這是八個系統在 1,500 個生產 frames 中各接觸出現的比例。紅色虛線標出事前寫下的 60 % 通過線，分別落在 Arg487 ≤4 Å 與夾持 ≥3/4 兩欄。只有 BoPep4 9–23 在 pH 5.5 不通過，為 23.6 % 與 19.3 %。BoPep4 WT 加 C-His6 是 99.8、100.0、99.7、100.0；事前登記為陰性對照的 15–23 則是 99.9、97.1、99.9、100.0。",
+"kw_en":[
+"60 % pass mark",
+"C-His6 passes all",
+"9-23 pH 5.5 fails"
+],
+"kw_zh":[
+"60 % 通過線",
+"C-His6 全數通過",
+"9–23 pH 5.5 不通過"
+],
+"q_en":"Which system here is the clearest sign the criteria are not measuring binding?",
+"q_zh":"圖上哪一個系統最清楚顯示這些標準量的不是結合？",
+"opt_en":[
+"BoPep4 WT plus C-His6, which passes all four although the His tag removes the free C-terminal carboxylate entirely.",
+"BoPep4 9-23 at pH 5.5, which fails two of the four.",
+"AtPep1 7-23, the literature control, which scores 100 %.",
+"BoPep4 7-23, whose Asn465 occupancy is only 62.9 %."
+],
+"opt_zh":[
+"BoPep4 WT 加 C-His6：His 標籤把自由 C 端羧基完全拿掉，它卻四項全過。",
+"BoPep4 9–23 於 pH 5.5，它四項中有兩項不過。",
+"文獻對照 AtPep1 7–23，它拿到 100 %。",
+"BoPep4 7–23，它的 Asn465 佔有率只有 62.9 %。"
+],
+"ans":0,
+"trap_en":"Reading a bar near 100 % as a strong interface; occupancy counts a distance being satisfied, not which chemical group satisfies it.",
+"trap_zh":"把接近 100 % 的長條當成界面很強；佔有率只算距離有沒有被滿足，不管是哪個化學基團滿足它。",
+"dom":"registry"
+},
+{
+"id":"x08",
+"img":"62bf14698087.avif",
+"dir":"reg",
+"tier":3,
+"part":"BBa_269A97I7",
+"ask_en":"Does the BoPep4 salinity run show a protective effect?",
+"ask_zh":"這組 BoPep4 鹽逆境試驗有顯示保護效果嗎？",
+"a_en":"Three panels from the BoPep4 salinity run, twelve groups each, one bar per group, three seedlings, no error bars and no repeat. On fresh weight the best salt-stressed group is 1/40 BoPep4 at about 0.049 g, against 0.043 g for the 1/40 WB800 vehicle and 0.028 g for 0.1x MS medium. On chlorophyll per plant 1/40 BoPep4 reaches about 8.4 ug against 2.1 and 4.4. The third panel reverses the order.",
+"a_zh":"這是 BoPep4 鹽逆境試驗的三張圖，每張 12 組，每組一根柱、三株苗，沒有誤差棒也沒有重複。鮮重上，鹽逆境中最高的是 1/40 BoPep4 約 0.049 g，1/40 WB800 載體約 0.043 g，0.1x MS 培養基約 0.028 g。每株葉綠素上，1/40 BoPep4 約 8.4 µg，對照分別是 2.1 與 4.4。第三張圖則把順序倒過來。",
+"kw_en":[
+"1/40 highest",
+"no error bars",
+"third panel reverses"
+],
+"kw_zh":[
+"1/40 最高",
+"沒有誤差棒",
+"第三圖倒轉"
+],
+"q_en":"Panels one and two favour 1/40 BoPep4. What does the third panel do?",
+"q_zh":"前兩張圖都偏向 1/40 BoPep4，第三張圖呢？",
+"opt_en":[
+"It reverses the ranking: 0.1x MS medium is the highest salt-stressed group at about 0.99, above 1/40 BoPep4 at about 0.81.",
+"It repeats the same ranking on a smaller scale, with 1/40 BoPep4 still on top.",
+"It shows 1/40 BoPep4 highest again, this time with error bars added.",
+"It drops the medium control, so no comparison can be made there."
+],
+"opt_zh":[
+"它把順序倒過來：0.1x MS 培養基是鹽逆境組中最高的，約 0.99，高於 1/40 BoPep4 的約 0.81。",
+"它以較小的尺度重複同樣的排序，1/40 BoPep4 仍然最高。",
+"它再次顯示 1/40 BoPep4 最高，而且這次加了誤差棒。",
+"它把培養基對照拿掉了，所以沒辦法比較。"
+],
+"ans":0,
+"trap_en":"Quoting the chlorophyll panel alone; the relative chlorophyll panel on the same figure puts the untreated medium control on top.",
+"trap_zh":"只引用葉綠素那一張；同一張圖的相對葉綠素把未處理的培養基對照放在最上面。",
+"dom":"registry"
+},
+{
+"id":"x09",
+"img":"65b84544f840.avif",
+"dir":"reg",
+"tier":3,
+"part":"BBa_269A97I7",
+"ask_en":"Read me the heated groups in this BoPep4 heat figure.",
+"ask_zh":"把這張 BoPep4 熱逆境圖的加熱組念給我聽。",
+"a_en":"Three panels, twelve groups, one bar per group. Heat flattens everything: fresh weight falls from about 0.09 g unheated to between 0.011 and 0.030 g heated. Among the heated groups the 1/40 WB800 vehicle is the heaviest at about 0.030 g, above every BoPep4 dilution. On chlorophyll per plant 1/40 BoPep4 leads at about 2.2 ug against 0.6 for the vehicle, and on relative chlorophyll it leads at about 0.81 against 0.26. The two readouts disagree.",
+"a_zh":"三張圖、12 組，每組一根柱。熱逆境把一切壓平：鮮重從未加熱的約 0.09 g 掉到加熱後的 0.011 至 0.030 g。加熱組裡最重的是 1/40 WB800 載體，約 0.030 g，高於每一個 BoPep4 稀釋度。每株葉綠素上，1/40 BoPep4 約 2.2 µg，載體約 0.6；相對葉綠素上，1/40 BoPep4 約 0.81，載體約 0.26。兩種讀數彼此不一致。",
+"kw_en":[
+"vehicle heaviest",
+"1/40 leads chlorophyll",
+"readouts disagree"
+],
+"kw_zh":[
+"載體最重",
+"1/40 葉綠素領先",
+"讀數不一致"
+],
+"q_en":"On fresh weight, which heated group is the heaviest?",
+"q_zh":"就鮮重而言，加熱組裡哪一組最重？",
+"opt_en":[
+"The 1/40 WB800 vehicle, at about 0.030 g, above every BoPep4 dilution.",
+"1/40 BoPep4, at about 0.030 g, just above the vehicle.",
+"0.1x MS medium, at about 0.055 g.",
+"1/100 BoPep4, which recovers to roughly the unheated level."
+],
+"opt_zh":[
+"1/40 WB800 載體，約 0.030 g，高於每一個 BoPep4 稀釋度。",
+"1/40 BoPep4，約 0.030 g，剛好高過載體。",
+"0.1x MS 培養基，約 0.055 g。",
+"1/100 BoPep4，它回復到大約未加熱的水準。"
+],
+"ans":0,
+"trap_en":"Showing only the chlorophyll panels; on fresh weight the vehicle control sits above every treated group.",
+"trap_zh":"只秀葉綠素那兩張；在鮮重上，載體對照高於每一個處理組。",
+"dom":"registry"
+},
+{
+"id":"x10",
+"img":"6e350dfaf39f.avif",
+"dir":"reg",
+"tier":3,
+"part":"BBa_262YYNPV",
+"ask_en":"What does this AcdS folding figure claim, and what does it not?",
+"ask_zh":"這張 AcdS 摺疊圖主張了什麼，又沒有主張什麼？",
+"a_en":"A 236 nt initiation window folded in ViennaRNA 2.7.2 at 37 °C. The table ranks the ordered design third of 49,987: start+15 accessibility 0.563 to 0.773, Shine-Dalgarno core 0.088 to 0.203, twelve synonymous codon changes, 15 bases recoded, CAI 0.85 to 0.75. Panels (b) and (c) are predicted structures and (d) the per-base unpaired probability. Two limits: initiation has never been measured, and the deposited fusion keeps the 93 bp SamyQ segment identical to wild type.",
+"a_zh":"這是 236 nt 的起始視窗，用 ViennaRNA 2.7.2 在 37 °C 下摺疊。表格顯示訂購的設計在 49,987 個變體中排第 3：start+15 可及性 0.563 升到 0.773，Shine-Dalgarno 核心 0.088 升到 0.203，12 個同義密碼子變更、15 個鹼基改寫，CAI 由 0.85 降到 0.75。(b)(c) 是預測結構，(d) 是每鹼基未配對機率。兩個限制：起始從未被量測；而上傳的融合序列中，93 bp 的 SamyQ 區段與野生型完全相同。",
+"kw_en":[
+"rank 3 of 49,987",
+"0.563 to 0.773",
+"SamyQ unchanged in deposit"
+],
+"kw_zh":[
+"49,987 中第 3",
+"0.563 到 0.773",
+"上傳的 SamyQ 未改"
+],
+"q_en":"The folded window includes the SamyQ signal peptide. Why does that matter for the deposited part?",
+"q_zh":"摺疊的視窗包含 SamyQ 訊號胜肽，這對上傳的 part 有什麼影響？",
+"opt_en":[
+"The starred candidate recodes bases inside SamyQ, but the deposited fusions keep that 93 bp segment identical to wild type, so figure and deposit come from different runs.",
+"It does not matter, because SamyQ is cleaved off the mature protein anyway.",
+"It means the signal peptide was redesigned in the deposited sequence as well.",
+"It means the 236 nt window is too short to reach the start codon."
+],
+"opt_zh":[
+"被標記的候選在 SamyQ 內部改寫了鹼基，但上傳的融合序列把那 93 bp 區段保持與野生型相同，所以圖和上傳的序列來自不同次執行。",
+"沒有影響，因為 SamyQ 本來就會從成熟蛋白上被切掉。",
+"代表上傳的序列裡訊號胜肽也一併重新設計過。",
+"代表 236 nt 的視窗太短，根本涵蓋不到起始密碼子。"
+],
+"ans":0,
+"trap_en":"Assuming the sequence drawn in this panel is the sequence you would order; for AcdS the deposit keeps SamyQ wild type.",
+"trap_zh":"以為圖上畫的序列就是你會訂到的序列；AcdS 的上傳版本把 SamyQ 保留為野生型。",
+"dom":"registry"
+},
+{
+"id":"x11",
+"img":"6f90097d0ba9.avif",
+"dir":"reg",
+"tier":3,
+"part":"BBa_26YHOQCL",
+"ask_en":"Explain this predicted-versus-measured table.",
+"ask_zh":"解釋一下這張「預測對上量測」的表。",
+"a_en":"Four rows setting the pre-registered acceptance criteria against what the run gave. All four were predicted to fail. All four passed: receptor Ca RMSD 2.10 A against a 3.0 A gate, peptide backbone RMSD 1.83 A against 4.0 A, Asn23-Arg487 within 4 A for 99.9 % of frames, and clamp at 3 of 4 or better for 100.0 %. The note under the table says the criteria cannot tell this fragment from the wild type.",
+"a_zh":"四列把事前登記的驗收標準和實際跑出來的結果並排。四項都被預測為不通過，結果四項全過：受體 Cα RMSD 2.10 Å（門檻 3.0 Å）、胜肽主鏈 RMSD 1.83 Å（門檻 4.0 Å）、Asn23–Arg487 在 4 Å 內佔 99.9 % 的 frames、夾持 ≥3/4 佔 100.0 %。表下的註記直說：這些標準分辨不出這個片段和野生型。",
+"kw_en":[
+"pre-registered",
+"predicted FAIL",
+"four of four passed"
+],
+"kw_zh":[
+"事前登記",
+"預測不通過",
+"四項全過"
+],
+"q_en":"15-23 was built as a negative control and passed every criterion. What did the team do about it?",
+"q_zh":"15–23 是當陰性對照做的，卻每一項都通過。團隊怎麼處理？",
+"opt_en":[
+"Published it and concluded the criteria were measuring something other than binding.",
+"Loosened the gates until 15-23 failed, then reported the revised criteria.",
+"Dropped 15-23 from the panel as a failed simulation.",
+"Reclassified 15-23 as a positive control and claimed a second active peptide."
+],
+"opt_zh":[
+"照樣發表，並下結論說這些標準量到的不是結合。",
+"把門檻放寬到 15–23 不通過為止，再報告修改後的標準。",
+"把 15–23 當成失敗的模擬，從面板中拿掉。",
+"把 15–23 改歸類為陽性對照，宣稱找到第二個有活性的胜肽。"
+],
+"ans":0,
+"trap_en":"Reading four passes as four successes; failure was the prediction, so a pass here is a failure of the test, not of the peptide.",
+"trap_zh":"把四項通過讀成四項成功；原本預測的就是不通過，所以這裡的通過是測試失敗，不是胜肽失敗。",
+"dom":"registry"
+},
+{
+"id":"x12",
+"img":"773fb3882789.avif",
+"dir":"reg",
+"tier":3,
+"part":"BBa_26IN6G1D",
+"ask_en":"What changed between the wild type and the ordered LEA14 cassette?",
+"ask_zh":"野生型和訂購的 LEA14 卡匣之間改了什麼？",
+"a_en":"A 236 nt initiation window folded in ViennaRNA 2.7.2 at 37 °C, wild type against the ordered recoding, ranked first of 43,944. Start+15 accessibility rises from 0.538 to 0.669 and the balance score from 0.895 to 0.976, but Shine-Dalgarno core accessibility falls slightly, 0.357 to 0.307, and CAI drops from 0.85 to 0.81. Six codons changed, nine bases recoded. All predicted; initiation has not been measured, and the deposit keeps SamyQ wild type.",
+"a_zh":"236 nt 的起始視窗，用 ViennaRNA 2.7.2 在 37 °C 摺疊，野生型對上訂購的改寫版，在 43,944 個變體中排第 1。start+15 可及性由 0.538 升到 0.669，平衡分數由 0.895 升到 0.976，但 Shine-Dalgarno 核心可及性略降，從 0.357 到 0.307，CAI 由 0.85 降到 0.81。改了 6 個密碼子、9 個鹼基。全是預測；起始未經量測，且上傳版本的 SamyQ 保留野生型。",
+"kw_en":[
+"rank 1 of 43,944",
+"SD core falls",
+"6 codons, 9 bases"
+],
+"kw_zh":[
+"43,944 中第 1",
+"SD 核心下降",
+"6 密碼子、9 鹼基"
+],
+"q_en":"This variant ranks first of 43,944 but its Shine-Dalgarno accessibility goes down. How is that possible?",
+"q_zh":"這個變體在 43,944 個中排第 1，Shine-Dalgarno 可及性卻下降了，怎麼可能？",
+"opt_en":[
+"The ranking uses a balance score combining start-codon and Shine-Dalgarno accessibility, so a large start+15 gain outweighs a small Shine-Dalgarno loss.",
+"The ranking uses minimum free energy alone, so accessibility does not enter it.",
+"The Shine-Dalgarno value is a typo; the structure panels show it rising.",
+"Rank 1 refers to the codon adaptation index, which improved."
+],
+"opt_zh":[
+"排名用的是把起始密碼子與 Shine-Dalgarno 可及性合併的平衡分數，所以 start+15 的大幅提升蓋過 Shine-Dalgarno 的小幅下降。",
+"排名只看最低自由能，可及性根本不計入。",
+"Shine-Dalgarno 那個數字是打錯了，結構圖顯示它是上升的。",
+"第 1 名指的是密碼子適應指數，而那項有改善。"
+],
+"ans":0,
+"trap_en":"Reporting rank 1 of 43,944 as a measured improvement; it is a position inside a folding-model search, not an expression result.",
+"trap_zh":"把「43,944 中第 1」講成量到的改善；那只是摺疊模型搜尋裡的名次，不是表現量結果。",
+"dom":"registry"
+},
+{
+"id":"x13",
+"img":"857f2439d39f.avif",
+"dir":"reg",
+"tier":3,
+"part":"BBa_26XVQ3FS",
+"ask_en":"What do the significance brackets in panel (b) compare?",
+"ask_zh":"(b) 圖裡的顯著性括號在比較什麼？",
+"a_en":"Four readouts from the agar thermo-priming set on day 15, one plate per condition. In (a) fresh weight, the unheated untreated plate is 0.065 g while pre-, co- and post-treatment reach about 0.455, 0.23 and 0.665 g; all heated groups sit near 0.02 to 0.04 g. Panel (b) divides chlorophyll by that weight and sets the unheated untreated plate as the 1.0 reference. Panel (c) is unnormalised. In (d) the co-treatment box collapses to a line near 20 mm.",
+"a_zh":"這是洋菜熱馴化組第 15 天的四項讀數，每個條件只有一盤。(a) 鮮重：未加熱未處理為 0.065 g，前、同、後處理分別約 0.455、0.23、0.665 g；加熱各組都在 0.02 到 0.04 g 之間。(b) 把葉綠素除以那個鮮重，並以未加熱未處理盤當作 1.0 的基準。(c) 則未標準化。(d) 中同處理那一格塌成一條約 20 mm 的線。",
+"kw_en":[
+"one plate per condition",
+"1.0 reference",
+"collapsed box"
+],
+"kw_zh":[
+"每條件一盤",
+"1.0 基準",
+"塌成一線的盒"
+],
+"q_en":"In panel (b), what do the four **** brackets actually compare?",
+"q_zh":"(b) 圖的四個 **** 括號實際上在比較什麼？",
+"opt_en":[
+"The unstressed untreated control against the other groups; no bracket compares a treated group with its own heat-stressed control.",
+"Each treatment against its own heat-stressed control, which is the comparison that matters.",
+"Pre-treatment against post-treatment within the heat-stressed block.",
+"The normalised and unnormalised chlorophyll panels against each other."
+],
+"opt_zh":[
+"是未逆境、未處理的對照對上其他各組；沒有任何括號把處理組和它自己的熱逆境對照相比。",
+"是每個處理對上它自己的熱逆境對照，也就是真正重要的那個比較。",
+"是熱逆境區塊內前處理對上後處理。",
+"是標準化與未標準化兩張葉綠素圖互比。"
+],
+"ans":0,
+"trap_en":"Taking the brackets as evidence that ACC deaminase helped; they only show other groups differ from the unstressed untreated plate.",
+"trap_zh":"把這些括號當成 ACC deaminase 有效的證據；它們只顯示其他組和未逆境未處理那盤不同。",
+"dom":"registry"
+},
+{
+"id":"x14",
+"img":"967ad6a6fb98.avif",
+"dir":"reg",
+"tier":3,
+"part":"BBa_269A97I7",
+"ask_en":"Why does this vehicle-only figure sit on a BoPep4 part page?",
+"ask_zh":"為什麼這張純載體的圖會放在 BoPep4 的 part 頁上？",
+"a_en":"The vehicle on its own: TB medium carrying WB800 with no protectant, at 1, 1/2, 1/4, 1/8, 1/16 and 0, at pH 5.7 and pH 7.1. Undiluted vehicle drops fresh weight to about 0.006 g against 0.065 g with no medium at all, and even 1/16 stays below the no-medium group. Chlorophyll per plant follows the same order. Relative chlorophyll reverses it, with the 1/2 dilutions topping that panel near 3.3 and 3.5.",
+"a_zh":"這是單獨測載體：帶 WB800 但不含保護蛋白的 TB 培養液，稀釋為 1、1/2、1/4、1/8、1/16 與 0，並分 pH 5.7 與 pH 7.1。未稀釋的載體把鮮重壓到約 0.006 g，而完全不加培養液是約 0.065 g；就算 1/16 也仍低於不加培養液那組。每株葉綠素的順序相同。相對葉綠素則倒過來，1/2 那兩組衝到約 3.3 與 3.5 的最高點。",
+"kw_en":[
+"0.065 to 0.006 g",
+"1/16 still below",
+"ratio inverts"
+],
+"kw_zh":[
+"0.065 降到 0.006 g",
+"1/16 仍偏低",
+"比值倒轉"
+],
+"q_en":"Why is every protectant run read against a 1/40 WB800 control rather than medium alone?",
+"q_zh":"為什麼每次保護蛋白試驗都要對 1/40 WB800 來讀，而不是只對培養基？",
+"opt_en":[
+"Because the vehicle is not inert: undiluted it drops fresh weight from about 0.065 g to about 0.006 g, so medium alone is the wrong baseline.",
+"Because 0.1x MS medium cannot be made at those dilutions.",
+"Because WB800 supernatant already contains the protectant at a known concentration.",
+"Because pH 5.7 and pH 7.1 give different results, so a second control is needed."
+],
+"opt_zh":[
+"因為載體不是惰性的：未稀釋時把鮮重從約 0.065 g 壓到約 0.006 g，所以單用培養基當基準是錯的。",
+"因為 0.1x MS 培養基沒辦法配到那些稀釋度。",
+"因為 WB800 上清液本來就含有已知濃度的保護蛋白。",
+"因為 pH 5.7 和 pH 7.1 結果不同，所以需要第二個對照。"
+],
+"ans":0,
+"trap_en":"Reading the relative chlorophyll panel as a benefit of the vehicle; the ratio climbs because the fresh weight in its denominator has collapsed.",
+"trap_zh":"把相對葉綠素那張讀成載體有好處；比值變高是因為分母的鮮重垮掉了。",
+"dom":"registry"
+},
+{
+"id":"x15",
+"img":"a1dda76e26ac.avif",
+"dir":"reg",
+"tier":3,
+"part":"BBa_26YHOQCL",
+"ask_en":"What does 15-23 keep and what does it give up?",
+"ask_zh":"15–23 保住了什麼、又放棄了什麼？",
+"a_en":"Panel (a) plots total contact occupancy for each BoPep4 residue on the 30 ns wild-type run, residues 1-14 lost in red and 15-23 retained in teal; Asn23 is the tallest bar near 5.9, and His14, just outside the fragment, is about 4.2. Panel (b) is the ledger: 49.8 % of contact occupancy retained, 8 of 8 crystallographic contacts kept, 17 receptor partners lost including 5 tyrosines, Asn23-Arg487 kept, Arg9-Asp179 and Lys7-Asp129 lost.",
+"a_zh":"(a) 圖畫出 30 ns 野生型軌跡中每個 BoPep4 殘基的總接觸佔有率，紅色是 15–23 丟掉的 1–14 殘基，藍綠色是保留的 15–23；Asn23 是最高的一根，約 5.9，而剛好落在片段外的 His14 約 4.2。(b) 是帳本：接觸佔有率保留 49.8 %，8 個晶體接觸全數保留，失去 17 個受體夥伴（其中 5 個酪胺酸），Asn23–Arg487 保住，Arg9–Asp179 與 Lys7–Asp129 丟失。",
+"kw_en":[
+"49.8 % retained",
+"8 of 8 contacts",
+"17 partners lost"
+],
+"kw_zh":[
+"保留 49.8 %",
+"8 個接觸全留",
+"失去 17 夥伴"
+],
+"q_en":"15-23 keeps all eight crystallographic contacts. Why is that not reassuring?",
+"q_zh":"15–23 保住了全部八個晶體接觸，為什麼這並不讓人放心？",
+"opt_en":[
+"The checklist contacts survive while half the occupancy and two near-permanent salt bridges do not, so the checklist is not tracking the whole interface.",
+"Because the eight contacts were measured on a different receptor from the one simulated.",
+"Because all eight contacts lie inside residues 1-14 and were therefore lost.",
+"Because contact occupancy below 50 % is conventionally ignored."
+],
+"opt_zh":[
+"清單上的接觸都留著，但一半的佔有率和兩條近乎恆存的鹽橋沒了，可見這份清單追蹤的不是整個界面。",
+"因為那八個接觸是在另一個受體上量的，不是模擬的這個。",
+"因為那八個接觸全都位在 1–14 殘基裡，所以都丟失了。",
+"因為低於 50 % 的接觸佔有率照慣例可以忽略。"
+],
+"ans":0,
+"trap_en":"Treating 'all eight contacts kept' as binding preserved; 17 receptor partners and half the contact occupancy are gone.",
+"trap_zh":"把「八個接觸全留」當成結合沒變；17 個受體夥伴和一半的接觸佔有率已經不見了。",
+"dom":"registry"
+},
+{
+"id":"x16",
+"img":"bf0adfe3ac46.avif",
+"dir":"reg",
+"tier":3,
+"part":"BBa_26XVQ3FS",
+"ask_en":"Do these ACC deaminase panels agree with each other?",
+"ask_zh":"這些 ACC deaminase 的圖彼此一致嗎？",
+"a_en":"Three panels, twelve groups, one bar per group, three seedlings, no error bars. On chlorophyll per plant every heated ACC deaminase dilution sits above both heated controls, about 2.6 to 3.0 ug against 2.0 for the 1/40 WB800 vehicle and 1.75 for 0.1x MS medium. On fresh weight the heated bars are flat and do not line up: 1/40 ACC deaminase is about 0.014 g, below the vehicle at about 0.018 g.",
+"a_zh":"三張圖、12 組，每組一根柱、三株苗，沒有誤差棒。每株葉綠素上，加熱後每一個 ACC deaminase 稀釋度都高於兩個加熱對照，約 2.6 到 3.0 µg，而 1/40 WB800 載體約 2.0、0.1x MS 培養基約 1.75。鮮重上加熱各組都很平，而且對不上：1/40 ACC deaminase 約 0.014 g，低於載體的約 0.018 g。",
+"kw_en":[
+"chlorophyll favours ACCD",
+"fresh weight does not",
+"no error bars"
+],
+"kw_zh":[
+"葉綠素偏向 ACCD",
+"鮮重不支持",
+"沒有誤差棒"
+],
+"q_en":"Chlorophyll favours ACC deaminase and fresh weight does not. How does the page handle that?",
+"q_zh":"葉綠素偏向 ACC deaminase，鮮重卻不支持，頁面怎麼處理？",
+"opt_en":[
+"It says so: the captions state that the two readouts point opposite ways rather than quoting the chlorophyll panel alone.",
+"It removes the fresh-weight panel from the figure.",
+"It normalises fresh weight away by plotting only ratios.",
+"It treats fresh weight as the primary endpoint and reports no effect at all."
+],
+"opt_zh":[
+"直說：圖說明寫出兩種讀數指向相反，而不是只引用葉綠素那一張。",
+"把鮮重那張從圖裡拿掉。",
+"只畫比值，把鮮重標準化掉。",
+"把鮮重當成主要指標，然後報告完全沒有效果。"
+],
+"ans":0,
+"trap_en":"Quoting the chlorophyll gain alone; with one bar per group and no repeat, a 1 ug gap is not a result on its own.",
+"trap_zh":"只引用葉綠素的增幅；每組一根柱又沒有重複，1 µg 的差距本身構不成結果。",
+"dom":"registry"
+},
+{
+"id":"x17",
+"img":"c0ae657fc1d1.avif",
+"dir":"reg",
+"tier":3,
+"part":"BBa_26YHOQCL",
+"ask_en":"Why was 15-23 picked off this docking ladder?",
+"ask_zh":"為什麼從這張對接階梯上挑出 15–23？",
+"a_en":"Every N-terminal truncation from 1-23 to 17-23 docked twice: AlphaFold3 ipTM in green on the left axis, HADDOCK score in grey on the right. HADDOCK worsens steadily, from -197.8 for the wild type to -97.8 at 15-23, which is circled in red. ipTM stays between 0.86 and 0.94 down to 13-23, drops to 0.54 at 14-23, then reads 0.63, 0.62 and 0.73. Shading marks where AtPep1 equivalents stop being active in the literature.",
+"a_zh":"從 1–23 到 17–23 的每一個 N 端截短都做了兩種對接：綠色是左軸的 AlphaFold3 ipTM，灰色是右軸的 HADDOCK 分數。HADDOCK 一路變差，從野生型的 -197.8 到 15–23 的 -97.8，15–23 被紅圈標出。ipTM 一直到 13–23 都維持在 0.86 到 0.94，在 14–23 掉到 0.54，之後分別是 0.63、0.62、0.73。背景色標出文獻中 AtPep1 對應片段失去活性的位置。",
+"kw_en":[
+"two scoring methods",
+"-197.8 to -97.8",
+"ipTM not monotonic"
+],
+"kw_zh":[
+"兩種評分法",
+"-197.8 到 -97.8",
+"ipTM 非單調"
+],
+"q_en":"ipTM for 17-23 is about 0.73, higher than 15-23 at 0.63. What follows from that?",
+"q_zh":"17–23 的 ipTM 約 0.73，高於 15–23 的 0.63。這能推出什麼？",
+"opt_en":[
+"The ipTM curve is not monotonic in truncation length, so a single ipTM value cannot rank these fragments by activity.",
+"17-23 is the better peptide and should have been ordered instead of 15-23.",
+"15-23 was mis-docked and that run should be repeated.",
+"ipTM and HADDOCK agree here, so both confirm 17-23 is active."
+],
+"opt_zh":[
+"ipTM 隨截短長度並非單調變化，所以單一個 ipTM 值無法依活性排序這些片段。",
+"17–23 是比較好的胜肽，當初應該訂它而不是 15–23。",
+"15–23 對接出錯，那一次應該重跑。",
+"這裡 ipTM 和 HADDOCK 一致，兩者都確認 17–23 有活性。"
+],
+"ans":0,
+"trap_en":"Reading the ladder as a dose-response in peptide length; the two docking scores disagree in shape and neither was tested in a plant.",
+"trap_zh":"把這張階梯讀成胜肽長度的劑量反應；兩種對接分數的形狀彼此不合，而且都沒有在植物上測過。",
+"dom":"registry"
+},
+{
+"id":"x18",
+"img":"c82f7570ce2f.avif",
+"dir":"reg",
+"tier":3,
+"part":"BBa_269A97I7",
+"ask_en":"Can you rank the dilutions from this salinity rack photograph?",
+"ask_zh":"光看這張鹽逆境盤架照片，你能把稀釋度排序嗎？",
+"a_en":"The salinity rack with 15-day-old Arabidopsis: the upper block at 0 mM NaCl, the lower block at 100 mM. Within each block BoPep4 runs at 1/40, 1/60, 1/80 and 1/100, with a 1/40 WB800 vehicle and a 0.1x MS medium control, three seedlings per bracket. The salt block is visibly smaller, with purple-red and bleached leaves across all groups including 1/40. One rack, one photograph, no scoring, no repeat.",
+"a_zh":"這是鹽逆境盤架，裡面是 15 天大的阿拉伯芥：上半區 0 mM NaCl，下半區 100 mM。每一區裡 BoPep4 有 1/40、1/60、1/80、1/100，加上 1/40 WB800 載體與 0.1x MS 培養基對照，每括號三株。加鹽那一區明顯較小，所有組（含 1/40）都有紫紅與白化的葉片。只有一盤、一張照片，沒有評分、沒有重複。",
+"kw_en":[
+"two salt blocks",
+"purple and bleached",
+"three seedlings"
+],
+"kw_zh":[
+"兩個鹽區塊",
+"紫紅與白化",
+"每組三株"
+],
+"q_en":"A judge asks you to rank the four dilutions from this image. What is the right answer?",
+"q_zh":"評審要你從這張影像把四個稀釋度排序，正確的回答是什麼？",
+"opt_en":[
+"You cannot: three seedlings per bracket in one rack, no scoring and no repeat, so the ordering has to come from the measured panels.",
+"You can: 1/40 is clearly the largest in both blocks.",
+"You can, by counting leaves per plug, which is a validated proxy for biomass.",
+"You cannot, because this photograph was taken before the salt was applied."
+],
+"opt_zh":[
+"不能：一盤裡每括號只有三株，沒有評分也沒有重複，排序必須回到有量測的圖去看。",
+"可以：1/40 在兩個區塊裡都明顯最大。",
+"可以，數每個孔的葉片數就行，那是經過驗證的生物量替代指標。",
+"不能，因為這張照片是在加鹽之前拍的。"
+],
+"ans":0,
+"trap_en":"Reading leaf colour across the rack as a dose effect; position and plug-to-plug variation are not controlled in a single rack.",
+"trap_zh":"把整盤的葉色差異讀成劑量效應；單一盤架裡並沒有控制位置與孔間變異。",
+"dom":"registry"
+},
+{
+"id":"x19",
+"img":"c8817e5e189a.avif",
+"dir":"reg",
+"tier":3,
+"part":"BBa_26YHOQCL",
+"ask_en":"Which trace is the negative control, and how does it behave?",
+"ask_zh":"哪一條是陰性對照，它的表現如何？",
+"a_en":"Four systems over 30 ns, 1,500 frames, smoothed over 500 ps. In (a) the teal 15-23 trace is the one that travels furthest, touching about 3.5 A above the 3.0 A gate around 14 to 18 ns, though its 2.10 A mean passes. In (c) 15-23 holds the Asn23-Arg487 distance flat near 2.8 A for the whole run, flatter than the wild type, and in (d) its clamp never leaves 4 of 4. Only 9-23 misbehaves.",
+"a_zh":"四個系統各跑 30 ns、1,500 frames，用 500 ps 平滑。(a) 中藍綠色的 15–23 跑得最遠，在 14 到 18 ns 間觸到約 3.5 Å、越過 3.0 Å 門檻，但它的平均值 2.10 Å 仍通過。(c) 中 15–23 把 Asn23–Arg487 距離整段壓在約 2.8 Å，比野生型還平；(d) 中它的夾持從未離開 4/4。只有 9–23 不守規矩。",
+"kw_en":[
+"15-23 steadiest",
+"crosses 3.0 A in (a)",
+"9-23 only outlier"
+],
+"kw_zh":[
+"15–23 最平穩",
+"(a) 圖越過 3.0 Å",
+"只有 9–23 例外"
+],
+"q_en":"The negative control is the steadiest trace on the salt-bridge panel. What does that tell you?",
+"q_zh":"陰性對照在鹽橋那張圖上是最平穩的曲線，這告訴你什麼？",
+"opt_en":[
+"That the salt bridge survives the truncation, so it cannot distinguish a fragment missing half its interface from the full peptide.",
+"That 15-23 binds the receptor more tightly than the wild type does.",
+"That the wild-type run was too short to equilibrate properly.",
+"That the salt bridge is an artefact of the force field and should be ignored."
+],
+"opt_zh":[
+"鹽橋在截短後仍然存在，所以它分辨不出少了一半界面的片段和完整胜肽。",
+"15–23 和受體的結合比野生型更緊。",
+"野生型那一次跑太短，沒有平衡好。",
+"鹽橋是力場造成的假象，應該忽略。"
+],
+"ans":0,
+"trap_en":"Taking steadiness for affinity; a stable contact over 30 ns is not a binding constant, and no binding assay was run.",
+"trap_zh":"把穩定當成親和力；30 ns 內接觸穩定不是結合常數，而且根本沒做結合試驗。",
+"dom":"registry"
+},
+{
+"id":"x20",
+"img":"de3fe476b68b.avif",
+"dir":"reg",
+"tier":3,
+"part":"BBa_26XVQ3FS",
+"ask_en":"How many plates here are marked contaminated, and which ones?",
+"ask_zh":"這裡有幾盤被標為污染，是哪幾盤？",
+"a_en":"Eight vertical agar plates on day 15: the top row held at 22 °C, the bottom row thermo-primed at 37 °C, columns untreated, pre-, co- and post-treatment. Nine to ten seedlings per plate and one plate per condition, so the plate is the replicate. Three carry a printed *contaminated mark: co-treatment at 22 °C, and under heat both the co-treatment plate and the untreated control. Heated seedlings are white or pale yellow with much shorter roots.",
+"a_zh":"第 15 天的八盤垂直洋菜板：上排整段維持 22 °C，下排在 37 °C 熱馴化，欄位由左至右為未加、前處理、同處理、後處理。每盤 9 到 10 株，每個條件只有一盤，所以盤本身就是重複單位。其中三盤印有 *contaminated 標記：22 °C 的同處理，以及加熱組的同處理與未處理對照。加熱的苗是白色或淡黃，根也短得多。",
+"kw_en":[
+"three contaminated",
+"plate is the replicate",
+"heat control lost"
+],
+"kw_zh":[
+"三盤污染",
+"盤即重複單位",
+"熱逆境對照失守"
+],
+"q_en":"Of the three contaminated plates, which one costs the argument most?",
+"q_zh":"三盤污染裡，哪一盤對論證傷害最大？",
+"opt_en":[
+"The heat-stressed untreated control, because it is the plate any treatment has to beat.",
+"The 22 °C co-treatment plate, because it sets the unstressed baseline.",
+"The heat-stressed co-treatment plate, because co-treatment is the lead timing.",
+"None of them, because contamination was corrected for in the analysis."
+],
+"opt_zh":[
+"加熱的未處理對照，因為任何處理都必須勝過的就是那一盤。",
+"22 °C 的同處理盤，因為它決定了未逆境的基線。",
+"加熱的同處理盤，因為同處理是主打的施用時機。",
+"都不嚴重，因為分析時已經校正了污染。"
+],
+"ans":0,
+"trap_en":"Comparing a treated heat plate against the heat control without noticing that control is one of the three marked contaminated.",
+"trap_zh":"拿處理過的加熱盤去比熱逆境對照，卻沒注意到那個對照正是三盤被標污染的其中之一。",
+"dom":"registry"
+},
+{
+"id":"x21",
+"img":"f2d532ebc455.avif",
+"dir":"reg",
+"tier":3,
+"part":"BBa_26XVQ3FS",
+"ask_en":"What floor does this vehicle series set for the ACC deaminase runs?",
+"ask_zh":"這組載體系列為 ACC deaminase 的試驗定下了什麼底線？",
+"a_en":"The same vehicle-only series repeated on the ACC deaminase page: TB medium carrying WB800 with no protectant at 1, 1/2, 1/4, 1/8, 1/16 and 0, at pH 5.7 and pH 7.1. Fresh weight climbs with dilution at both pH values, from about 0.006 g undiluted to 0.065 g with no medium at pH 5.7, and 0.004 to 0.057 g at pH 7.1. The dose response on this figure belongs to the medium, not to any protectant.",
+"a_zh":"同一組純載體系列也出現在 ACC deaminase 頁：帶 WB800 但不含保護蛋白的 TB 培養液，稀釋為 1、1/2、1/4、1/8、1/16 與 0，分 pH 5.7 與 pH 7.1。兩個 pH 下鮮重都隨稀釋上升，pH 5.7 由未稀釋的約 0.006 g 升到不加培養液的約 0.065 g，pH 7.1 則是 0.004 升到 0.057 g。這張圖上的劑量反應屬於培養液本身，不屬於任何保護蛋白。",
+"kw_en":[
+"vehicle toxicity",
+"two pH values",
+"dose response of medium"
+],
+"kw_zh":[
+"載體毒性",
+"兩個 pH 值",
+"培養液的劑量反應"
+],
+"q_en":"What does this figure establish for the ACC deaminase trials?",
+"q_zh":"這張圖為 ACC deaminase 的試驗確立了什麼？",
+"opt_en":[
+"The toxicity of the carrier itself, which is why the protectant runs compare against a matched 1/40 WB800 vehicle.",
+"The optimum pH for ACC deaminase activity, which the enzyme literature puts at 8.0.",
+"The detection limit of the chlorophyll assay at low biomass.",
+"The dilution at which ACC deaminase stops being active."
+],
+"opt_zh":[
+"載體本身的毒性，這也正是保護蛋白試驗要對上配對的 1/40 WB800 載體的原因。",
+"ACC deaminase 活性的最適 pH，酵素文獻定在 8.0。",
+"低生物量下葉綠素測定的偵測極限。",
+"ACC deaminase 失去活性的稀釋度。"
+],
+"ans":0,
+"trap_en":"Reading 1/16 as harmless; it still sits well below the no-medium group at both pH values.",
+"trap_zh":"把 1/16 當成無害；在兩個 pH 下它仍遠低於完全不加培養液那組。",
+"dom":"registry"
 },
 {
 "id":"b01",

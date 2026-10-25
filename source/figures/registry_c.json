@@ -1,0 +1,455 @@
+{
+ "domain": "registry",
+ "figures": [
+  {
+   "id": "w01",
+   "img": "18639698c5cc.avif",
+   "dir": "reg",
+   "tier": 3,
+   "part": "BBa_26RF0X2E",
+   "ask_en": "Green beats red at all three times here. How big is that effect really?",
+   "ask_zh": "這張圖三個時間點綠光都高於紅光。這個差距到底有多大？",
+   "a_en": "This is the DNPH assay, so it reports activity, not amount. Baseline before light is about 2.7. Green is above red at every time: roughly 8 against 6 at 3 h, 12 against 9 at 6 h, 18 against 16 at 8 h. The clean gap is at 6 h. At 3 h and 8 h the error bars overlap. There is no plasmid-free bar on this plot, and the axis is still labelled concentration in µg/mL.",
+   "a_zh": "這是 DNPH 活性測定，量的是活性不是蛋白量。照光前的 baseline 約 2.7。每個時間點綠光都高於紅光：3 小時約 8 比 6，6 小時約 12 比 9，8 小時約 18 比 16。差距最乾淨的是 6 小時；3 小時與 8 小時的誤差線互相重疊。這張圖沒有無質體的對照柱，而且 y 軸仍標成濃度 µg/mL。",
+   "kw_en": ["baseline 2.7", "gap clean only at 6 h", "no plasmid-free bar"],
+   "kw_zh": ["baseline 2.7", "只有 6 小時差距乾淨", "沒有無質體對照柱"],
+   "q_en": "The ELISA from the same experiment carries one bar this plot does not. Which?",
+   "q_zh": "同一組實驗的 ELISA 有一根這張圖沒有的柱子，是哪一根？",
+   "opt_en": [
+    "A plasmid-free WB800 negative control",
+    "A baseline sample taken before illumination",
+    "A green-light sample at 6 h",
+    "A red-light sample at 3 h"
+   ],
+   "opt_zh": [
+    "無質體的 WB800 陰性對照",
+    "照光前取的 baseline 樣本",
+    "6 小時的綠光樣本",
+    "3 小時的紅光樣本"
+   ],
+   "ans": 0,
+   "trap_en": "Calling the rising bars proof of light control when the error bars overlap at two of the three time points.",
+   "trap_zh": "把逐漸升高的柱子當成光控制的證據，但三個時間點中有兩個的誤差線是重疊的。"
+  },
+  {
+   "id": "w02",
+   "img": "23a9b510db69.avif",
+   "dir": "reg",
+   "tier": 3,
+   "part": "BBa_26CXI09X",
+   "ask_en": "Your caption says this measures secretion and diffusion. Show me where.",
+   "ask_zh": "圖說寫這張圖在看分泌與擴散。請指給我看在哪裡。",
+   "a_en": "Nine time points, three fractions, each strip cropped to 35 to 48 kDa. The only signal is the lumen cell lysate at 14, 16 and 18 h, and it is saturated black, so it cannot be quantified. Both medium sets, lumen and shell, are blank at every time point. The 20 to 24 h row shows nothing anywhere. The figure shows intracellular protein; it does not show secretion or shell-side diffusion.",
+   "a_zh": "九個時間點、三種樣品，每一條都只裁到 35 至 48 kDa。唯一有訊號的是 14、16、18 小時的管內側細胞裂解液，而且訊號已經飽和成全黑，無法定量。管內側與殼側的兩組培養液在所有時間點都是空白。20 至 24 小時那一排整條都沒有東西。這張圖呈現的是細胞內的蛋白，並沒有呈現分泌或往殼側的擴散。",
+   "kw_en": ["lysate only, saturated", "both medium sets blank", "strips cropped 35-48 kDa"],
+   "kw_zh": ["只有裂解液且已飽和", "兩組培養液都空白", "只裁 35-48 kDa"],
+   "q_en": "Across all nine time points, what do the lumen medium and shell medium lanes show?",
+   "q_zh": "在全部九個時間點裡，管內側培養液與殼側培養液的泳道顯示什麼？",
+   "opt_en": [
+    "No detectable band at any time point",
+    "A band that grows steadily from 14 h to 24 h",
+    "A band on the shell side only after 40 h",
+    "A doublet at 37 and 70 kDa"
+   ],
+   "opt_zh": [
+    "所有時間點都偵測不到條帶",
+    "從 14 小時到 24 小時逐漸變強的條帶",
+    "只有 40 小時之後殼側才出現條帶",
+    "37 與 70 kDa 的雙條帶"
+   ],
+   "ans": 0,
+   "trap_en": "Reading the heavy black in the early lysate lanes as high secretion, when it is an overloaded intracellular sample and the medium lanes beside it are empty.",
+   "trap_zh": "把早期裂解液泳道的濃黑讀成分泌量高，其實那是過載的細胞內樣品，旁邊的培養液泳道是空的。"
+  },
+  {
+   "id": "w03",
+   "img": "4c16bfff0d3c.avif",
+   "dir": "reg",
+   "tier": 3,
+   "part": "BBa_26U8UTMH",
+   "ask_en": "Where is that band sitting, and what size did you predict?",
+   "ask_zh": "這條帶跑在哪裡？你們預測的分子量是多少？",
+   "a_en": "Three lanes, green light only, sampled 3, 6 and 8 h after a 16 h dark culture. Lane M is the ladder at 180, 130 and 100 kDa. Each lane carries one band just below 100 kDa. Our AcdS monomer is predicted at about 35 kDa, so this runs far too high. We offer a roughly 70 kDa homodimer as a possibility we have not tested. There is no red, dark or plasmid-free lane on this blot.",
+   "a_zh": "三條泳道，全部都是綠光，在 16 小時暗培養後的 3、6、8 小時取樣。M 是 marker，標示 180、130、100 kDa。每一道都有一條略低於 100 kDa 的條帶。我們的 AcdS 單體預測約 35 kDa，所以這個位置明顯偏高。我們提出約 70 kDa 的同源二聚體作為一個尚未驗證的可能解釋。這張膜上沒有紅光、暗處或無質體的泳道。",
+   "kw_en": ["one band just below 100 kDa", "predicted 35 kDa monomer", "green lanes only"],
+   "kw_zh": ["單一條帶略低於 100 kDa", "預測單體 35 kDa", "只有綠光泳道"],
+   "q_en": "This same blot is captioned on two part pages. How do the two readings differ?",
+   "q_zh": "同一張膜在兩個 part 頁面各有一段圖說，兩邊的判讀差在哪裡？",
+   "opt_en": [
+    "One calls the three lanes similar; the other calls 8 h weaker than 3 and 6 h",
+    "One gives the band as 37 kDa, the other as 70 kDa",
+    "One says the samples are supernatant, the other says cell lysate",
+    "One says green light, the other says red light"
+   ],
+   "opt_zh": [
+    "一邊說三道差不多，另一邊說 8 小時比 3、6 小時弱",
+    "一邊說條帶是 37 kDa，另一邊說是 70 kDa",
+    "一邊說樣品是上清液，另一邊說是細胞裂解液",
+    "一邊說是綠光，另一邊說是紅光"
+   ],
+   "ans": 0,
+   "trap_en": "Saying the band confirms ACCD without naming the gap between where it runs and the 35 kDa we predicted.",
+   "trap_zh": "說這條帶證實了 ACCD，卻沒有講出它跑的位置和我們預測的 35 kDa 之間的落差。"
+  },
+  {
+   "id": "w04",
+   "img": "59fdb2dd4530.avif",
+   "dir": "reg",
+   "tier": 3,
+   "part": "BBa_26RF0X2E",
+   "ask_en": "Walk me through the bar chart you put next to this blot.",
+   "ask_zh": "請帶我看一下你們放在這張膜旁邊的長條圖。",
+   "a_en": "The bars are the blot quantified, relative to 3 h set at 1.00: 6 h is 1.10 and 8 h is 0.65, so signal falls by about a third at 8 h. That is one blot, one replicate, and no loading control, so the numbers are normalised only to themselves. The band itself sits just below the 100 kDa marker, against a predicted 35 kDa monomer. All three lanes are green at 100 percent.",
+   "a_zh": "長條圖是這張膜的定量結果，以 3 小時設為 1.00：6 小時是 1.10，8 小時是 0.65，也就是 8 小時掉了約三分之一。這是單一張膜、單一重複，而且沒有 loading control，所以這些數字只是自己對自己的正規化。條帶本身落在略低於 100 kDa 的位置，而預測單體是 35 kDa。三條泳道全部是 100% 綠光。",
+   "kw_en": ["G3 1.00, G6 1.10, G8 0.65", "no loading control", "n = 1"],
+   "kw_zh": ["G3 1.00、G6 1.10、G8 0.65", "沒有 loading control", "n = 1"],
+   "q_en": "What does this densitometry still lack before the numbers mean anything?",
+   "q_zh": "這組定量還缺什麼，數字才有意義？",
+   "opt_en": [
+    "A loading control to normalise against",
+    "The position of the 100 kDa marker",
+    "A stated sampling time for each lane",
+    "A note of which light colour was used"
+   ],
+   "opt_zh": [
+    "一個可以用來正規化的 loading control",
+    "100 kDa marker 的位置",
+    "每一道的取樣時間",
+    "註明用的是哪一種光色"
+   ],
+   "ans": 0,
+   "trap_en": "Quoting 1.10 and 0.65 as expression levels when they are ratios from a single unnormalised blot.",
+   "trap_zh": "把 1.10 和 0.65 當成表現量來引用，其實它們只是單一張未正規化的膜算出來的比值。"
+  },
+  {
+   "id": "w05",
+   "img": "90114dd860dc.avif",
+   "dir": "reg",
+   "tier": 3,
+   "part": "BBa_262YYNPV",
+   "ask_en": "Is this a structure of your protein?",
+   "ask_zh": "這是你們自己那個蛋白的結構嗎？",
+   "a_en": "No. It is PDB 1TZJ chain A, a Pseudomonas ACC deaminase solved by X-ray at 1.99 Å, 83 percent identical to our acdS over 330 aligned residues. We use it as a reference for the fold and the active site. Panel b shows pyridoxal-5'-phosphate held by a Schiff base to Lys51, which aligns to Lys50 in our sequence, with D-vinylglycine bound as a substrate analogue. No structure of our own acdS has been determined.",
+   "a_zh": "不是。這是 PDB 1TZJ 的 A 鏈，一個 Pseudomonas 的 ACC 去胺酶 X 光結構，解析度 1.99 Å，和我們的 acdS 在 330 個比對殘基上有 83% 相同。我們把它當作摺疊方式與活性中心的參考。(b) 圖顯示 pyridoxal-5'-phosphate 透過 Schiff base 接在 Lys51 上，對應到我們序列中的 Lys50，並有基質類似物 D-vinylglycine 結合在口袋裡。我們自己的 acdS 沒有解過結構。",
+   "kw_en": ["PDB 1TZJ chain A", "83% over 330 residues", "PLP Schiff base to Lys51"],
+   "kw_zh": ["PDB 1TZJ A 鏈", "330 殘基 83% 相同", "PLP 以 Schiff base 接 Lys51"],
+   "q_en": "What holds the PLP cofactor in the active site in panel b?",
+   "q_zh": "(b) 圖中，是什麼把 PLP 輔因子固定在活性中心？",
+   "opt_en": [
+    "A Schiff base to Lys51",
+    "A disulfide bond to a nearby cysteine",
+    "A salt bridge to Arg487",
+    "A zinc ion coordinated by three histidines"
+   ],
+   "opt_zh": [
+    "與 Lys51 形成的 Schiff base",
+    "與鄰近半胱胺酸形成的雙硫鍵",
+    "與 Arg487 形成的鹽橋",
+    "由三個組胺酸配位的鋅離子"
+   ],
+   "ans": 0,
+   "trap_en": "Presenting this as a model of the team's own enzyme instead of an 83 percent identical homologue used as a reference.",
+   "trap_zh": "把這張圖講成是團隊自己那個酵素的模型，其實它只是 83% 相同的同源蛋白，用來當參考。"
+  },
+  {
+   "id": "w06",
+   "img": "b8766a706c15.avif",
+   "dir": "reg",
+   "tier": 3,
+   "part": "BBa_265CD14Z",
+   "ask_en": "What does your C-terminal His tag do to the contact in panel b?",
+   "ask_zh": "你們的 C 端 His tag 會對 (b) 圖裡那個接觸造成什麼影響？",
+   "a_en": "BoPep4, Gly1 to Asn23, is the orange chain lying in the inner groove of the PEPR1 ectodomain. It is threaded onto the 5GR8 PEPR1-AtPep1 crystal structure, so this is a model and the starting point of our MD runs, not an experiment. Panel b is the problem: the free C-terminal carboxylate of Asn23 is gripped by Arg487, with Asn465 and Asp441. A C-terminal 6xHis tag blocks that carboxylate, and every BoPep4 part we deposited carries one.",
+   "a_zh": "橘色那條是 BoPep4，Gly1 到 Asn23，躺在 PEPR1 外域的內側溝槽裡。它是接到 5GR8（PEPR1-AtPep1）晶體結構上的，所以這是模型、是我們所有 MD 的起始結構，不是實驗。(b) 圖才是問題所在：Asn23 游離的 C 端羧基被 Arg487 夾住，Asn465 與 Asp441 一起完成這個夾持。C 端加 6xHis tag 會擋住那個羧基，而我們登錄的每一個 BoPep4 part 都帶著這個 tag。",
+   "kw_en": ["Asn23 carboxylate to Arg487", "threaded onto 5GR8", "His tag blocks it"],
+   "kw_zh": ["Asn23 羧基接 Arg487", "接到 5GR8 上建模", "His tag 會擋住"],
+   "q_en": "Which part of BoPep4 does the Arg487 clamp grip?",
+   "q_zh": "Arg487 夾住的是 BoPep4 的哪個部位？",
+   "opt_en": [
+    "The free C-terminal carboxylate of Asn23",
+    "The N-terminal amine of Gly1",
+    "A lysine side chain near the middle of the peptide",
+    "The backbone carbonyl at residue 12"
+   ],
+   "opt_zh": [
+    "Asn23 游離的 C 端羧基",
+    "Gly1 的 N 端胺基",
+    "胜肽中段的一個離胺酸側鏈",
+    "第 12 個殘基的主鏈羰基"
+   ],
+   "ans": 0,
+   "trap_en": "Describing the docked pose as a measured binding result, when it is a threaded model and the MD starting structure.",
+   "trap_zh": "把這個對接姿勢講成量測到的結合結果，其實它只是接出來的模型，也是 MD 的起始結構。"
+  },
+  {
+   "id": "w07",
+   "img": "ba29fa86398c.avif",
+   "dir": "reg",
+   "tier": 3,
+   "part": "BBa_26RF0X2E",
+   "ask_en": "Your caption describes four lanes. Show me the four lanes.",
+   "ask_zh": "你們的圖說寫有四條泳道，請指給我看那四條。",
+   "a_en": "I have to flag the figure first. The caption describes four lanes, green and red at 13 and 16 h, but the image under it is the three-lane green-only blot from Figure 2, with the same G3, G6, G8 bar chart beside it. The four-lane blot the caption describes sits on BBa_26U8UTMH, where one band runs between the 75 and 100 kDa markers in all four lanes. Read the caption against that figure, not this one.",
+   "a_zh": "我得先說圖本身的問題。圖說描述的是四條泳道，13 和 16 小時的綠光與紅光，但圖說底下那張圖其實是 Figure 2 那張只有綠光的三道膜，旁邊還是同一組 G3、G6、G8 長條圖。圖說描述的那張四道膜在 BBa_26U8UTMH 上，四條泳道都有一條跑在 75 與 100 kDa marker 之間的條帶。請拿那張圖來對照這段圖說，而不是這一張。",
+   "kw_en": ["image does not match caption", "duplicate of Figure 2", "four-lane blot is on BBa_26U8UTMH"],
+   "kw_zh": ["圖與圖說不符", "與 Figure 2 重複", "四道膜在 BBa_26U8UTMH"],
+   "q_en": "What is actually shown in the image sitting under this Figure 3 caption?",
+   "q_zh": "這段 Figure 3 圖說底下那張圖，實際上畫的是什麼？",
+   "opt_en": [
+    "The three-lane green-only 3, 6 and 8 h blot from Figure 2",
+    "Four lanes: green and red at 13 h and 16 h",
+    "An imidazole elution series, S1 to S4",
+    "A bioreactor time course across lumen and shell fractions"
+   ],
+   "opt_zh": [
+    "Figure 2 那張只有綠光、3/6/8 小時的三道膜",
+    "四條泳道：13 與 16 小時的綠光與紅光",
+    "S1 到 S4 的 imidazole 沖提系列",
+    "管內側與殼側的生物反應器時間序列"
+   ],
+   "ans": 0,
+   "trap_en": "Answering from the caption and describing four lanes that are not in the picture.",
+   "trap_zh": "照著圖說回答，描述了一張圖上根本沒有的四條泳道。"
+  },
+  {
+   "id": "w08",
+   "img": "bd3754cc481d.avif",
+   "dir": "reg",
+   "tier": 3,
+   "part": "BBa_26XVQ3FS",
+   "ask_en": "Two lanes here. Which one is your negative control?",
+   "ask_zh": "這張只有兩道。哪一道是你們的陰性對照？",
+   "a_en": "Neither. The lanes are the ladder, at 63, 48 and 35 kDa, and the culture supernatant. The band sits between 35 and 48, at about 37 kDa, against a predicted 35 kDa for the secreted protein, and that agreement is real: this is one of the few figures on our site where the size matches. The band is saturated, so I would not quantify it, and there is no untransformed WB800 or empty-vector lane.",
+   "a_zh": "兩道都不是。這兩道一道是 marker，標示 63、48、35 kDa，另一道是培養上清液。條帶落在 35 與 48 之間，大約 37 kDa，而分泌型蛋白的預測值是 35 kDa，這個吻合是真的：這是我們網站上少數幾張分子量對得上的圖。條帶已經飽和，所以我不會拿它定量；而且這裡沒有未轉形的 WB800，也沒有空載體的泳道。",
+   "kw_en": ["about 37 kDa", "agrees with predicted 35 kDa", "no control lane"],
+   "kw_zh": ["約 37 kDa", "與預測 35 kDa 吻合", "沒有對照泳道"],
+   "q_en": "Why is roughly 37 kDa worth saying out loud on this particular figure?",
+   "q_zh": "為什麼在這張圖上，「大約 37 kDa」這件事值得特別講出來？",
+   "opt_en": [
+    "It matches the predicted 35 kDa monomer, unlike the light-induced blots",
+    "It matches the roughly 70 kDa homodimer we propose elsewhere",
+    "It shows the His tag was cleaved off during secretion",
+    "It confirms the protein stayed inside the cell"
+   ],
+   "opt_zh": [
+    "它和預測的 35 kDa 單體吻合，和那些光誘導的膜不一樣",
+    "它和我們在別處提出的約 70 kDa 同源二聚體吻合",
+    "它顯示 His tag 在分泌過程中被切掉了",
+    "它證實蛋白留在細胞內"
+   ],
+   "ans": 0,
+   "trap_en": "Calling this blot evidence of light-controlled secretion, when the construct is the constitutive Pveg version with no light input at all.",
+   "trap_zh": "把這張膜當成光控分泌的證據，其實這個構築是組成型 Pveg 版本，完全沒有光的輸入。"
+  },
+  {
+   "id": "w09",
+   "img": "cf26d4e64d66.avif",
+   "dir": "reg",
+   "tier": 3,
+   "part": "BBa_26CXI09X",
+   "ask_en": "Panel B. Talk me through your purification.",
+   "ask_zh": "(B) 圖，請講一下你們的純化。",
+   "a_en": "Panel B is the only purification panel we have anywhere. Lane S1 at 25 mM imidazole is empty; S2 at 10 mM, S3 at 150 mM and S4 at 250 mM each give a band just above the 35 kDa marker, and S2 also shows a fainter band near 40. Two caveats: the labels run 25 then 10 mM, which is not a rising series, and the page caption prints 100 mM for S2. We report no purified yield or concentration anywhere.",
+   "a_zh": "(B) 圖是我們整個網站上唯一的純化圖。S1 的 25 mM imidazole 是空的；S2 的 10 mM、S3 的 150 mM、S4 的 250 mM 各有一條略高於 35 kDa marker 的條帶，S2 另外還有一條較淡、靠近 40 的條帶。兩個要注意的地方：標示是 25 之後接 10 mM，並不是遞增的序列；而且頁面圖說把 S2 寫成 100 mM。我們在任何地方都沒有給出純化的產量或濃度。",
+   "kw_en": ["S1 empty, S2-S4 band near 35 kDa", "labels not a rising series", "no yield reported"],
+   "kw_zh": ["S1 空白，S2-S4 在 35 kDa 附近有帶", "標示不是遞增序列", "沒有報告產量"],
+   "q_en": "What does the page caption print for lane S2 that the figure itself does not?",
+   "q_zh": "頁面圖說給 S2 的數字和圖上標的不一樣，差在哪？",
+   "opt_en": [
+    "100 mM, where the figure is labelled 10 mM",
+    "250 mM, where the figure is labelled 150 mM",
+    "A purified yield in mg per litre",
+    "An elution volume in millilitres"
+   ],
+   "opt_zh": [
+    "圖說寫 100 mM，圖上標的是 10 mM",
+    "圖說寫 250 mM，圖上標的是 150 mM",
+    "一個 mg/L 的純化產量",
+    "一個以毫升計的沖提體積"
+   ],
+   "ans": 0,
+   "trap_en": "Describing this as a purified protein preparation when no yield, no gel and no concentration exist for it.",
+   "trap_zh": "把這個講成已經純化好的蛋白製劑，其實它沒有產量、沒有膠圖、也沒有濃度。"
+  },
+  {
+   "id": "w10",
+   "img": "d087c7afc2e9.avif",
+   "dir": "reg",
+   "tier": 3,
+   "part": "BBa_26IN6G1D",
+   "ask_en": "Why is the N-terminal arm coloured orange in both panels?",
+   "ask_zh": "為什麼兩張圖裡 N 端那條手臂都是橘色的？",
+   "a_en": "Because it has no fixed structure. This one is our own protein: PDB 1XO8 residues 2 to 151 are exactly the mature LEA14 our cassette encodes. The core is a 9-stranded β-sandwich with one helix. Panel b colours and thickens each residue by RMSF across the 20 NMR models: the core, residues 28 to 143, averages 0.42 Å, while the N-terminal 1 to 16 averages 8.75 Å and reaches 11.9 Å. Order actually begins at residue 17, already 1.13 Å.",
+   "a_zh": "因為它沒有固定的結構。這一張是我們自己的蛋白：PDB 1XO8 的第 2 到 151 個殘基，正好就是我們卡匣編碼的成熟型 LEA14。核心是九股 β-sandwich 加一段螺旋。(b) 圖用 20 個 NMR 模型的每殘基 RMSF 來上色與加粗：核心（殘基 28 到 143）平均 0.42 Å，而 N 端 1 到 16 平均 8.75 Å，最高到 11.9 Å。真正開始有序是在第 17 個殘基，已經降到 1.13 Å。",
+   "kw_en": ["N-term 1-16 at 8.75 A", "core 28-143 at 0.42 A", "PDB 1XO8, our own protein"],
+   "kw_zh": ["N 端 1-16 為 8.75 Å", "核心 28-143 為 0.42 Å", "PDB 1XO8，是我們自己的蛋白"],
+   "q_en": "Of the three structure figures on these part pages, which one shows the team's own protein?",
+   "q_zh": "這些 part 頁面上的三張結構圖，哪一張畫的是團隊自己的蛋白？",
+   "opt_en": [
+    "LEA14, PDB 1XO8, residues 2 to 151",
+    "ACC deaminase, PDB 1TZJ chain A",
+    "BoPep4 threaded onto PEPR1 from 5GR8",
+    "All three are models of our own sequences"
+   ],
+   "opt_zh": [
+    "LEA14，PDB 1XO8，殘基 2 到 151",
+    "ACC 去胺酶，PDB 1TZJ 的 A 鏈",
+    "接在 5GR8 的 PEPR1 上的 BoPep4",
+    "三張都是我們自己序列的模型"
+   ],
+   "ans": 0,
+   "trap_en": "Treating the disordered arm as a modelling artefact rather than a measured spread across 20 deposited NMR models.",
+   "trap_zh": "把那條無序的手臂當成建模的假象，其實它是 20 個已登錄 NMR 模型量出來的分布。"
+  },
+  {
+   "id": "w11",
+   "img": "e4d3f567128c.avif",
+   "dir": "reg",
+   "tier": 3,
+   "part": "BBa_26RF0X2E",
+   "ask_en": "Does this plate separate green from red?",
+   "ask_zh": "這塊盤分得出綠光和紅光嗎？",
+   "a_en": "No. Four bars, all between about 12 and 13 µg/mL: green at 13 h is highest at about 12.9 and red at 16 h lowest at about 12.1, so the whole spread is under 1 µg/mL with small error bars. Colour does nothing here and neither does time. Note what is missing against the short-term plate: there is no plasmid-free WB800 bar on this chart, so the floor is not shown.",
+   "a_zh": "分不出來。四根柱子全部落在約 12 到 13 µg/mL：13 小時綠光最高，約 12.9；16 小時紅光最低，約 12.1，整個範圍不到 1 µg/mL，誤差線也很小。光色沒有造成差別，時間也沒有。還要注意相對於短期那塊盤少了什麼：這張圖上沒有無質體 WB800 的柱子，所以底線沒有被畫出來。",
+   "kw_en": ["all four 12-13 ug/mL", "spread under 1 ug/mL", "no plasmid-free bar"],
+   "kw_zh": ["四根都在 12-13 µg/mL", "全距不到 1 µg/mL", "沒有無質體柱"],
+   "q_en": "The DNPH assay on these same four samples reported what at 13 h?",
+   "q_zh": "同樣這四個樣品，DNPH 測定在 13 小時報告了什麼？",
+   "opt_en": [
+    "Green about fourteen times red, which this ELISA does not see",
+    "Green and red within 10 percent of each other",
+    "Red about three times green",
+    "No measurable activity in any sample"
+   ],
+   "opt_zh": [
+    "綠光約為紅光的十四倍，而這張 ELISA 完全看不到",
+    "綠光與紅光相差不到一成",
+    "紅光約為綠光的三倍",
+    "所有樣品都量不到活性"
+   ],
+   "ans": 0,
+   "trap_en": "Quoting 12.9 against 12.1 as a green-over-red difference when the error bars sit on top of each other.",
+   "trap_zh": "把 12.9 對 12.1 當成綠光勝過紅光的差異，其實誤差線根本疊在一起。"
+  },
+  {
+   "id": "w12",
+   "img": "e566cdecd66e.avif",
+   "dir": "reg",
+   "tier": 3,
+   "part": "BBa_26U8UTMH",
+   "ask_en": "Point me at the difference between green and red on this blot.",
+   "ask_zh": "請在這張膜上指出綠光和紅光的差別。",
+   "a_en": "Five lanes: the ladder at 180, 130, 100 and 75 kDa, then green and red at 13 h and again at 16 h. One band per sample lane, running between the 75 and 100 kDa markers. By eye the four intensities are similar, which is what this caption says; our other page calls the green lanes somewhat stronger. Similar is the defensible reading, because nothing was quantified. Red light is the only negative control here.",
+   "a_zh": "五條泳道：marker 標 180、130、100、75 kDa，然後是 13 小時的綠光與紅光，再來是 16 小時的綠光與紅光。每條樣品泳道一條帶，跑在 75 與 100 kDa marker 之間。用眼睛看，四道深淺差不多，這也是這段圖說寫的；我們另一頁則說綠光那兩道看起來稍微強一點。比較站得住腳的講法是「差不多」，因為我們沒有做定量。這裡唯一的陰性對照就是紅光。",
+   "kw_en": ["band between 75 and 100 kDa", "four lanes similar by eye", "red is the only control"],
+   "kw_zh": ["條帶在 75 與 100 kDa 之間", "四道目視差不多", "紅光是唯一對照"],
+   "q_en": "What negative control does this blot carry?",
+   "q_zh": "這張膜帶了什麼陰性對照？",
+   "opt_en": [
+    "Red light only; there is no dark and no plasmid-free lane",
+    "An untransformed WB800 lane beside the ladder",
+    "An empty-vector lane at each time point",
+    "A dark-grown lane sampled at 13 h and 16 h"
+   ],
+   "opt_zh": [
+    "只有紅光；沒有暗處，也沒有無質體的泳道",
+    "marker 旁邊有一道未轉形的 WB800",
+    "每個時間點都有一道空載體",
+    "13 與 16 小時各有一道暗培養的樣品"
+   ],
+   "ans": 0,
+   "trap_en": "Saying the green lanes are stronger, which is the other page's wording and was never quantified on either page.",
+   "trap_zh": "說綠光那幾道比較強——那是另一頁的寫法，而且兩頁都沒有做過定量。"
+  },
+  {
+   "id": "w13",
+   "img": "eb9f556de867.avif",
+   "dir": "reg",
+   "tier": 3,
+   "part": "BBa_26RF0X2E",
+   "ask_en": "This is your biggest light effect. How much weight does it carry?",
+   "ask_zh": "這是你們最大的光反應。它能承擔多少份量？",
+   "a_en": "It is the cleanest light response we got and also the least supported. At 13 h green is about 10.4 nmol alpha-KB per mL per hour against about 0.7 for red, roughly fourteen to one. At 16 h it inverts: green about 1.1, red about 3.8. The 13 h green error bar runs from about 5 to 16, neither time point was repeated, and across both times colour comes out at p = 0.72.",
+   "a_zh": "這是我們做出來最乾淨的光反應，同時也是支撐最弱的。13 小時綠光約 10.4 nmol alpha-KB mL⁻¹ h⁻¹，紅光約 0.7，大約十四比一。到 16 小時則反過來：綠光約 1.1，紅光約 3.8。13 小時綠光的誤差線從大約 5 拉到 16，兩個時間點都沒有重複，而且把兩個時間一起看，光色的 p 值是 0.72。",
+   "kw_en": ["13 h green 10.4 vs red 0.7", "16 h inverts", "p = 0.72"],
+   "kw_zh": ["13 小時綠 10.4 對紅 0.7", "16 小時反轉", "p = 0.72"],
+   "q_en": "What happens to the green-over-red ordering at 16 h?",
+   "q_zh": "到了 16 小時，綠光高於紅光這個順序發生什麼事？",
+   "opt_en": [
+    "It inverts: red is about 3.8 and green about 1.1",
+    "It holds, with green still roughly fourteen times red",
+    "Both conditions fall to zero",
+    "Green rises further, to about 18"
+   ],
+   "opt_zh": [
+    "反轉了：紅光約 3.8，綠光約 1.1",
+    "維持不變，綠光仍約為紅光的十四倍",
+    "兩組都掉到零",
+    "綠光繼續上升到約 18"
+   ],
+   "ans": 0,
+   "trap_en": "Quoting the fourteen-fold figure on its own without the error bar, the missing replicate, or the inversion three hours later.",
+   "trap_zh": "只引用十四倍這個數字，卻不講誤差線、沒有重複，以及三小時後就反轉這件事。"
+  },
+  {
+   "id": "w14",
+   "img": "ef5b2ee4ffa5.avif",
+   "dir": "reg",
+   "tier": 3,
+   "part": "BBa_26RF0X2E",
+   "ask_en": "What does the light actually do to the amount of ACCD here?",
+   "ask_zh": "在這張圖裡，光到底對 ACCD 的量做了什麼？",
+   "a_en": "Nothing measurable. Baseline before any light is already about 3.0 µg/mL, and every illuminated sample sits between 2.6 and 3.2, green and red alike, with 6 h and 8 h slightly below the 3 h pair. The last bar, WB, is plasmid-free WB800 at about 1.3, and it separates clearly from the rest. That makes this one of the few figures we have where the negative control actually works.",
+   "a_zh": "沒有造成可量到的改變。照光前的 baseline 已經約 3.0 µg/mL，所有照過光的樣品都落在 2.6 到 3.2 之間，綠光紅光都一樣，6 與 8 小時比 3 小時那一組略低一點。最後一根 WB 是無質體的 WB800，約 1.3，和其他柱子分得很開。這也讓它成為我們少數幾張陰性對照真的有作用的圖。",
+   "kw_en": ["baseline already 3.0 ug/mL", "all samples 2.6-3.2", "WB control at 1.3"],
+   "kw_zh": ["baseline 已經 3.0 µg/mL", "所有樣品 2.6-3.2", "WB 對照 1.3"],
+   "q_en": "What does the WB bar on the right of this plot represent?",
+   "q_zh": "這張圖最右邊那根 WB 柱代表什麼？",
+   "opt_en": [
+    "Plasmid-free WB800, at about 1.3 µg/mL",
+    "The sample taken before illumination began",
+    "Western blot densitometry added for comparison",
+    "A purified ACCD standard at a known concentration"
+   ],
+   "opt_zh": [
+    "無質體的 WB800，約 1.3 µg/mL",
+    "照光開始前取的樣本",
+    "拿來比較的西方墨點定量值",
+    "已知濃度的純化 ACCD 標準品"
+   ],
+   "ans": 0,
+   "trap_en": "Reading WB as western blot rather than the plasmid-free WB800 host, which is the one working negative control on the plot.",
+   "trap_zh": "把 WB 讀成西方墨點，其實它是無質體的 WB800 宿主，也是這張圖上唯一有作用的陰性對照。"
+  },
+  {
+   "id": "w15",
+   "img": "f858b4d704db.avif",
+   "dir": "reg",
+   "tier": 3,
+   "part": "BBa_260MVA1K",
+   "ask_en": "Look at panel B. Which lane is the darkest?",
+   "ask_zh": "請看 (B) 圖。最深的是哪一道？",
+   "a_en": "Red 100 percent at 8 h, which is our off control. It peaks at the same time as green, so this blot does not show light control, and that is why we dropped this ABDI construct for ABDQ. That sentence lives on the Level 2 part page, not under this figure. The bands run at roughly 63 to 75 kDa against a 35 kDa monomer. The 0 h lane is the same strain before light, not a plasmid-free control.",
+   "a_zh": "是 8 小時的 100% 紅光，也就是我們的關閉對照。它和綠光同時達到最強，所以這張膜並沒有顯示出光控制，這也是我們後來放棄這個 ABDI 構築、改用 ABDQ 的原因。不過那句話寫在 Level 2 的 part 頁面上，不在這張圖底下。條帶跑在大約 63 到 75 kDa，而單體是 35 kDa。0 小時那一道是同一株菌照光前的樣品，不是無質體對照。",
+   "kw_en": ["red 100 at 8 h is darkest", "off control failed", "bands at 63-75 kDa"],
+   "kw_zh": ["8 小時紅光 100 最深", "關閉對照失效", "條帶在 63-75 kDa"],
+   "q_en": "What is the 0 h lane in each panel?",
+   "q_zh": "每一張圖裡的 0 小時那一道是什麼？",
+   "opt_en": [
+    "The same strain sampled before light exposure",
+    "Untransformed WB800 with no plasmid",
+    "An empty-vector control",
+    "A purified ACCD standard"
+   ],
+   "opt_zh": [
+    "同一株菌在照光前取的樣品",
+    "未轉形、沒有質體的 WB800",
+    "空載體對照",
+    "純化的 ACCD 標準品"
+   ],
+   "ans": 0,
+   "trap_en": "Claiming signal rose under green but not red, which is the application text on this page and the opposite of what panel B shows.",
+   "trap_zh": "聲稱訊號只在綠光下上升、紅光下沒有——那是這一頁應用段落的寫法，和 (B) 圖看到的正好相反。"
+  }
+ ]
+}

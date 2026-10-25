@@ -13425,20 +13425,22 @@ var QUESTIONS = [
 "seat":"wet1",
 "backup":"wet2",
 "kw_en":[
-"cannot reconcile from the page",
-"plate had more than the gel shows",
-"notebook question"
+"lanes numbered 9 to 19",
+"a window, not the whole plate",
+"caption counts lanes"
 ],
 "kw_zh":[
-"光看頁面對不起來",
-"盤上的菌落比膠多",
-"要翻記錄本"
+"道次編號 9 到 19",
+"局部，不是整盤",
+"圖說數的是道數"
 ],
-"a_en":"I cannot reconcile that from the page. The gel reads one of ten at the stated size and the clone taken forward is numbered fourteen, which means the plate had more colonies than that gel shows. I would want to check the notebook rather than guess at it here. The sibling cassette has the same shape of problem: five colonies screened and clone five taken forward with four of five positive.",
-"a_zh":"光看頁面我對不起來。膠上是十個裡一個落在寫的大小，而往下做的 clone 編號是十四，表示那盤的菌落比那張膠顯示的多。我寧可回去翻實驗記錄本，也不想在這裡用猜的。姊妹卡匣有同樣形狀的問題：篩了五個菌落、四個陽性，而往下做的是 clone 5。",
-"trap_en":"Inventing a second plate on the spot. Not knowing is a fine answer; being caught making one up is not.",
-"trap_zh":"當場編出第二盤。不知道是可以接受的答案，被抓到現編不是。",
+"a_en":"The gel answers it, once you look at it. Its lanes are numbered 9 to 19, so the picture is a window onto a bigger plate rather than the whole screen, and clone 14 sits inside that window. The caption's 'one of ten' is counting lanes on the image, not colonies on the plate. The wording should say which ten and it does not, so I can see why it reads as a contradiction.",
+"a_zh":"看一下那張膠就有答案了。它的道次編號是 9 到 19，所以這張圖是比較大的盤子的局部，而不是整次篩選，clone 14 就落在這個範圍裡。圖說的「10 個中的 1 個」數的是圖片上的道數，不是盤子上的菌落數。文字應該寫清楚是哪十個，而它沒有，所以我明白為什麼讀起來像矛盾。",
+"trap_en":"Saying you cannot reconcile it without looking at the gel. The lane numbers are printed on the image.",
+"trap_zh":"沒看膠就說對不起來。道次編號就印在圖片上。",
 "basis":"two numbers on adjacent figures of one page",
+"ev_en":"BBa_269A97I7 Figure 1: eleven lanes numbered 9 to 19, with the band in lane 14.",
+"ev_zh":"BBa_269A97I7 的 Figure 1：十一道，編號 9 到 19，帶在第 14 道。",
 "dom":"registry",
 "deep":0,
 "id":"q442"
