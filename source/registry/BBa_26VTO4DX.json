@@ -1,0 +1,253 @@
+{
+ "id": "BBa_26VTO4DX",
+ "search": {
+  "uuid": "550ce717-d746-44b3-b3e3-a8eafa7d5f20",
+  "name": "BBa_26VTO4DX",
+  "slug": "bba-26vto4dx",
+  "status": "published",
+  "title": "CDS replacable cassette-mScarlet-I",
+  "description": "This Level 1 module is the customizable output of the optogenetic circuit. It places a replaceable CDS cassette under the control of the green-light-responsive promoter PcpcG2-veg, followed by the EEBD and RBS0 elements and the B0015 terminator. Phosphorylated CcaR activates PcpcG2-veg, so the cassette is expressed in green light and shut off in red light.",
+  "role": {
+   "uuid": "6b0d75b8-835a-4106-aebf-7f121a129403",
+   "accession": "SO:0001248",
+   "label": "Assembly",
+   "deprecated": false,
+   "glyph": "http://sbols.org/visual/v2#UnspecifiedGlyph"
+  },
+  "sequenceLength": 2181,
+  "audit": {
+   "created": "2026-10-21T09:13:48.944Z",
+   "updated": "2026-10-21T11:13:15.704Z"
+  },
+  "usageCount": 1
+ },
+ "part": {
+  "uuid": "550ce717-d746-44b3-b3e3-a8eafa7d5f20",
+  "name": "BBa_26VTO4DX",
+  "slug": "bba-26vto4dx",
+  "status": "published",
+  "title": "CDS replacable cassette-mScarlet-I",
+  "description": "This Level 1 module is the customizable output of the optogenetic circuit. It places a replaceable CDS cassette under the control of the green-light-responsive promoter PcpcG2-veg, followed by the EEBD and RBS0 elements and the B0015 terminator. Phosphorylated CcaR activates PcpcG2-veg, so the cassette is expressed in green light and shut off in red light.",
+  "role": {
+   "uuid": "6b0d75b8-835a-4106-aebf-7f121a129403",
+   "accession": "SO:0001248",
+   "label": "Assembly",
+   "deprecated": false,
+   "glyph": "http://sbols.org/visual/v2#UnspecifiedGlyph"
+  },
+  "topology": {
+   "uuid": "b2bb9a86-0436-40d2-b56a-f2fbef932193",
+   "accession": "SO:0000987",
+   "label": "Linear",
+   "uri": "https://purl.obolibrary.org/obo/SO_0000987",
+   "glyph": null
+  },
+  "licenseUUID": "d6c69ca7-8be4-4bc0-b4a8-d3ae1d428aa6",
+  "source": "CcaSR green red light-responsive system for transcriptional control in B. subtilis (Haller et al., 2025; 10.1007/978-1-0716-40), SubtiToolKit",
+  "sequence": "AGCCCATTGTGCTTTTCTCTATCAACCTCAGCTTACCTGAAGGGGTGAACAGGTCTGGGTTAATTCATGTTGCGAAATGTAACAGTTTTAGTCGCATCAGCTAACTTTCCGATTTCTTTACGATTTTCTCCCCCTTTTCTTCAATTTTACTTTGTTATAATAAATGTAGTGAGGTGGACTTCCTAGAATATATATTATGTAAACTCCAGGCATCAAATAAAACGAAAGGCTCAGTCGAAAGACTGGGCCTTTCGTTTTATCTGTTGTTTGTCGGTGAACGCTCTCTACTAGAGTCACACTGGCTCACCTTCGGGTGGGCCTTTCTGCGTTTATAACTTCCTAGAATATATATTATGTAAACTTAAGGAGGAAAAAAAGGTATTAAACAAAATTATTTGTAGAGGCTGTTTCGTCCTCACGGACTCATCAGACCGGAAAGCACATCCGGTGACAGCTGATTAACTAATAAGGAGGACAAACTATGAGAGACCGTTTGACGGCTAGCTCAGTCCTAGGTACAGTGCTAGCGGATCTTAGCTACTAGAGAAAGAGGAGAAATACTAGATGCGTAAAGGCGAAGAGCTGTTCACTGGTGTCGTCCCTATTCTGGTGGAACTGGATGGTGATGTCAACGGTCATAAGTTTTCCGTGCGTGGCGAGGGTGAAGGTGACGCAACTAATGGTAAACTGACGCTGAAGTTCATCTGTACTACTGGTAAACTGCCGGTTCCTTGGCCGACTCTGGTAACGACGCTGACTTATGGTGTTCAGTGCTTTGCTCGTTATCCGGACCATATGAAGCAGCATGACTTCTTCAAGTCCGCCATGCCGGAAGGCTATGTGCAGGAACGCACGATTTCCTTTAAGGATGACGGCACGTACAAAACGCGTGCGGAAGTGAAATTTGAAGGCGATACCCTGGTAAACCGCATTGAGCTGAAAGGCATTGACTTTAAAGAGGACGGCAATATCCTGGGCCATAAGCTGGAATACAATTTTAACAGCCACAATGTTTACATCACCGCCGATAAACAAAAAAATGGCATTAAAGCGAATTTTAAAATTCGCCACAACGTGGAGGATGGCAGCGTGCAGCTGGCTGATCACTACCAGCAAAACACTCCAATCGGTGATGGTCCTGTTCTGCTGCCAGACAATCACTATCTGAGCACGCAAAGCGTTCTGTCTAAAGATCCGAACGAGAAACGCGATCATATGGTTCTGCTGGAGTTCGTAACCGCAGCGGGCATCACGCATGGTATGGATGAACTGTACAAATGATAAGGTCTCTGACAAAAGCTTACATAAGGAGGAACTACTATGGTGAGCAAGGGCGAGGCAGTGATCAAGGAGTTCATGCGGTTCAAGGTGCACATGGAGGGCTCCATGAACGGCCACGAGTTCGAGATCGAGGGCGAGGGCGAGGGCCGCCCCTACGAGGGCACCCAGACCGCCAAGCTGAAGGTGACCAAGGGTGGCCCCCTGCCCTTCTCCTGGGACATCCTGTCCCCTCAGTTCATGTACGGCTCCAGGGCCTTCACCAAGCACCCCGCCGACATCCCCGACTACTATAAGCAGTCCTTCCCCGAGGGCTTCAAGTGGGAGCGCGTGATGAACTTCGAGGACGGCGGCGCCGTGACCGTGACCCAGGACACCTCCCTGGAGGACGGCACCCTGATCTACAAGGTGAAGCTCCGCGGCACCAACTTCCCTCCTGACGGCCCCGTAATGCAGAAGAAGACAATGGGCTGGGAAGCGTCCACCGAGCGGTTGTACCCCGAGGACGGCGTGCTGAAGGGCGACATTAAGATGGCCCTGCGCCTGAAGGACGGCGGCCGCTACCTGGCGGACTTCAAGACCACCTACAAGGCCAAGAAGCCCGTGCAGATGCCCGGCGCCTACAACGTCGACCGCAAGTTGGACATCACCTCCCACAACGAGGACTACACCGTGGTGGAACAGTACGAACGCTCCGAGGGCCGCCACTCCACCGGCGGCATGGACGAGCTGTACAAGGCTGCAAACGACGAAAACTACGCTGCTGCTGTTTAACCAGGCATCAAATAAAACGAAAGGCTCAGTCGAAAGACTGGGCCTTTCGTTTTATCTGTTGTTTGTCGGTGAACGCTCTCTACTAGAGTCACACTGGCTCACCTTCGGGTGGGCCTTTCTGCGTTTATA",
+  "audit": {
+   "created": "2026-10-21T09:13:48.944Z",
+   "updated": "2026-10-21T11:13:15.704Z"
+  },
+  "chassis": {
+   "designedFor": [
+    {
+     "uuid": "e8dba87d-1e5c-4535-b51c-6542aeacf5dc",
+     "id": 562,
+     "scientificName": "Escherichia coli",
+     "commonName": null,
+     "rank": "species",
+     "lineageSummary": [
+      "1",
+      "131567",
+      "2",
+      "3379134",
+      "1224",
+      "1236",
+      "91347",
+      "543",
+      "561",
+      "562"
+     ],
+     "documentationUUID": null,
+     "addedBy": {
+      "uuid": "8de7ff3d-7d8b-42ed-a284-c454c5534c3c",
+      "firstName": "Sophie",
+      "lastName": "Chen",
+      "orcidID": null
+     },
+     "addedAt": "2026-10-21T09:13:49.775Z"
+    },
+    {
+     "uuid": "defe0f53-98a2-4cb3-a589-7cc8c8ae9aff",
+     "id": 1423,
+     "scientificName": "Bacillus subtilis",
+     "commonName": null,
+     "rank": "species",
+     "lineageSummary": [
+      "1",
+      "131567",
+      "2",
+      "1783272",
+      "1239",
+      "91061",
+      "1385",
+      "186817",
+      "1386",
+      "653685",
+      "1423"
+     ],
+     "documentationUUID": null,
+     "addedBy": {
+      "uuid": "8de7ff3d-7d8b-42ed-a284-c454c5534c3c",
+      "firstName": "Sophie",
+      "lastName": "Chen",
+      "orcidID": null
+     },
+     "addedAt": "2026-10-21T09:13:50.303Z"
+    }
+   ],
+   "characterisedIn": [],
+   "sourceOrganism": []
+  },
+  "usageCount": 1
+ },
+ "documentation": [
+  {
+   "uuid": "273d0c5c-bbf2-4914-879e-47d8ecd627f3",
+   "title": "Design",
+   "type": "design",
+   "created": "2026-10-21T13:42:48.162Z",
+   "value": "The CDS in the Light-Responsive Expression Module is replaceable, so the same light-controlled circuit can be used to produce any protectant a user chooses. The module includes an mScarlet-I reporter, which lets users verify and characterize the light response of the circuit. The exchange uses BsaI: a Level 1 construct carrying the desired output module can be inserted directly in place of the existing cassette, while the promoter and regulatory elements stay unchanged. The protectant is then expressed under the same green/red light control in the Optogenetic Circuit, so users can adapt the system to their own needs without rebuilding the circuit.",
+   "lastEditedBy": "Sophie Chen",
+   "authorUUID": "8de7ff3d-7d8b-42ed-a284-c454c5534c3c",
+   "organisationUUID": "3f22886d-da0b-4a5a-8711-7b14b020c9de",
+   "organisation": {
+    "uuid": "3f22886d-da0b-4a5a-8711-7b14b020c9de",
+    "name": "GEMS-Taiwan (2026)",
+    "type": "igem-team",
+    "link": "https://teams.igem.org/6072",
+    "archivedAt": null,
+    "audit": {
+     "created": "2026-07-02T08:04:11.172Z",
+     "updated": "2026-07-02T08:04:11.172Z"
+    }
+   },
+   "updated": "2026-10-21T13:44:55.162Z"
+  },
+  {
+   "uuid": "7993eaea-3fef-462e-a433-af2a52b8b601",
+   "title": "Experiment",
+   "type": "experiment",
+   "created": "2026-10-21T13:43:10.662Z",
+   "value": "This construct was assembled by de novo synthesis.",
+   "lastEditedBy": "Sophie Chen",
+   "authorUUID": "8de7ff3d-7d8b-42ed-a284-c454c5534c3c",
+   "organisationUUID": "3f22886d-da0b-4a5a-8711-7b14b020c9de",
+   "organisation": {
+    "uuid": "3f22886d-da0b-4a5a-8711-7b14b020c9de",
+    "name": "GEMS-Taiwan (2026)",
+    "type": "igem-team",
+    "link": "https://teams.igem.org/6072",
+    "archivedAt": null,
+    "audit": {
+     "created": "2026-07-02T08:04:11.172Z",
+     "updated": "2026-07-02T08:04:11.172Z"
+    }
+   },
+   "updated": "2026-10-21T13:43:10.662Z"
+  }
+ ],
+ "composition": [
+  {
+   "uuid": "95bf4996-862b-4c6e-b031-f57be96a847c",
+   "componentUUID": "c04554e4-3b90-4a58-bf50-399753a2bc11",
+   "componentName": "BBa_26GJIT8W",
+   "role": {
+    "uuid": "35e00de3-f02a-4935-9add-72cfb517fa15",
+    "accession": "SO:0000167",
+    "label": "Promoter",
+    "uri": "http://purl.obolibrary.org/obo/SO_0000167",
+    "glyph": "http://sbols.org/visual/v2#PromoterSiteGlyph"
+   },
+   "start": 1,
+   "end": 177,
+   "strand": "forward"
+  },
+  {
+   "uuid": "2664cbac-e03e-463b-8a9d-24e6f092b9a7",
+   "componentUUID": "d0e17221-fd5b-4b6f-9dd8-d53f42f0eeca",
+   "componentName": "BBa_26V6CPEV",
+   "role": {
+    "uuid": "79d631aa-7dd3-4099-8227-82a84b9c4e3d",
+    "accession": "SO:0005836",
+    "label": "Regulatory Region",
+    "uri": "http://purl.obolibrary.org/obo/SO_0005836",
+    "glyph": "http://sbols.org/visual/v2#UnspecifiedGlyph"
+   },
+   "start": 178,
+   "end": 480,
+   "strand": "forward"
+  },
+  {
+   "uuid": "345ad2ed-0148-45af-a1b8-40270cb8e79c",
+   "componentUUID": "9b3b1fbd-1557-49a5-964a-7f8b491c9101",
+   "componentName": "BBa_J23100",
+   "role": {
+    "uuid": "35e00de3-f02a-4935-9add-72cfb517fa15",
+    "accession": "SO:0000167",
+    "label": "Promoter",
+    "uri": "http://purl.obolibrary.org/obo/SO_0000167",
+    "glyph": "http://sbols.org/visual/v2#PromoterSiteGlyph"
+   },
+   "start": 494,
+   "end": 528,
+   "strand": "forward"
+  },
+  {
+   "uuid": "94630e90-602c-4a10-bc82-73ec14280b7b",
+   "componentUUID": "5ad18e6a-e740-4791-a59b-992ee394dab1",
+   "componentName": "BBa_K5119033",
+   "role": {
+    "uuid": "65f1c72e-396c-4d02-b574-af06b3a073a9",
+    "accession": "SO:0000316",
+    "label": "CDS",
+    "uri": "http://purl.obolibrary.org/obo/SO_0000316",
+    "glyph": "http://sbols.org/visual/v2#CDSGlyph"
+   },
+   "start": 565,
+   "end": 1281,
+   "strand": "forward"
+  },
+  {
+   "uuid": "13462396-c5cc-48bc-b9d5-8975a8a428e4",
+   "componentUUID": "534bb32b-7dc7-41ba-848b-62e9fbad0ee4",
+   "componentName": "BBa_K4321004",
+   "role": {
+    "uuid": "0a6e2d17-78fd-42f3-836c-181d545cfe27",
+    "accession": "IGEM:0000005",
+    "label": "Reporter",
+    "uri": null,
+    "glyph": null
+   },
+   "start": 1321,
+   "end": 2016,
+   "strand": "forward"
+  },
+  {
+   "uuid": "a8087c41-e787-40a8-987f-8218d0ad47f5",
+   "componentUUID": "a0ebeeab-3947-440e-9cf1-f0a47bbc4c33",
+   "componentName": "BBa_B0015",
+   "role": {
+    "uuid": "ae5c878a-2fdb-4c2e-b904-e6eb1a1224f2",
+    "accession": "SO:0000141",
+    "label": "Terminator",
+    "uri": "http://purl.obolibrary.org/obo/SO_0000141",
+    "glyph": "http://sbols.org/visual/v2#TerminatorGlyph"
+   },
+   "start": 2053,
+   "end": 2181,
+   "strand": "forward"
+  }
+ ]
+}

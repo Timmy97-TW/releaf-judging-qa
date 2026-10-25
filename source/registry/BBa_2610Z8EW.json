@@ -1,0 +1,186 @@
+{
+ "id": "BBa_2610Z8EW",
+ "search": {
+  "uuid": "76be32b3-975c-4876-b4b8-bae7416f6a6a",
+  "name": "BBa_2610Z8EW",
+  "slug": "bba-2610z8ew",
+  "status": "published",
+  "title": "CcaSR-CDS replacable cassette-mScarlet-I",
+  "description": "The system is an engineered construct that produces and secretes plant-protective proteins under green/red light control. The PCB Production Module ([BBa\\_26XZYM10](https://registry.igem.org/parts/bba-26xzym10)) supplies the chromophore phycocyanobilin. The Light Sensing Module ([BBa\\_261XH2RS](https://registry.igem.org/parts/bba-261xh2rs)) expresses CcaS-m3, which detects green light and autophosphorylates. The Transduction Module ([BBa\\_26BDO8AQ](https://registry.igem.org/parts/bba-26bdo8aq))\u2026",
+  "role": {
+   "uuid": "6b0d75b8-835a-4106-aebf-7f121a129403",
+   "accession": "SO:0001248",
+   "label": "Assembly",
+   "deprecated": false,
+   "glyph": "http://sbols.org/visual/v2#UnspecifiedGlyph"
+  },
+  "sequenceLength": 6521,
+  "audit": {
+   "created": "2026-10-21T11:23:41.005Z",
+   "updated": "2026-10-21T11:30:57.418Z"
+  },
+  "usageCount": 0
+ },
+ "part": {
+  "uuid": "76be32b3-975c-4876-b4b8-bae7416f6a6a",
+  "name": "BBa_2610Z8EW",
+  "slug": "bba-2610z8ew",
+  "status": "published",
+  "title": "CcaSR-CDS replacable cassette-mScarlet-I",
+  "description": "The system is an engineered construct that produces and secretes plant-protective proteins under green/red light control. The PCB Production Module ([BBa\\_26XZYM10](https://registry.igem.org/parts/bba-26xzym10)) supplies the chromophore phycocyanobilin. The Light Sensing Module ([BBa\\_261XH2RS](https://registry.igem.org/parts/bba-261xh2rs)) expresses CcaS-m3, which detects green light and autophosphorylates. The Transduction Module ([BBa\\_26BDO8AQ](https://registry.igem.org/parts/bba-26bdo8aq)) expresses CcaR, which receives the phosphoryl group. Phosphorylated CcaR activates PcpcG2-veg in the Light-Responsive Expression Module, driving secretion of the protectant. Expression is on in green light and off in red, giving external control instead of a constant burden on the cell. The CDS is replaceable, so any protectant can be produced.",
+  "role": {
+   "uuid": "6b0d75b8-835a-4106-aebf-7f121a129403",
+   "accession": "SO:0001248",
+   "label": "Assembly",
+   "deprecated": false,
+   "glyph": "http://sbols.org/visual/v2#UnspecifiedGlyph"
+  },
+  "topology": {
+   "uuid": "b2bb9a86-0436-40d2-b56a-f2fbef932193",
+   "accession": "SO:0000987",
+   "label": "Linear",
+   "uri": "https://purl.obolibrary.org/obo/SO_0000987",
+   "glyph": null
+  },
+  "licenseUUID": "d6c69ca7-8be4-4bc0-b4a8-d3ae1d428aa6",
+  "source": "CcaSR green red light-responsive system for transcriptional control in B. subtilis (Haller et al., 2025; 10.1007/978-1-0716-40), SubtiToolKit",
+  "sequence": "ACAGAACAAGTGTTCTTTTTTCTATTGAATACCGAACGTATGTTTGCTTTAATGTAATTAGTTGCTTATGGCAGCAAATAATAATAGAGGTGGTAAATTTATGTCAGTAAATTTAGCATCACAATTAAGAGAAGGAACAAAAAAATCACACTCCATGGCGGAGAACGTCGGCTTTGTCAAATGCTTCCTCAAGGGCGTTGTCGAGAAAAATTCCTACCGTAAGCTGGTTGGCAATCTCTACTTTGTCTACAGTGCCATGGAAGAGGAAATGGCAAAATTTAAGGACCATCCCATCCTCAGCCACATTTACTTCCCCGAACTCAACCGCAAACAAAGCCTAGAGCAAGACCTGCAATTCTATTACGGCTCCAACTGGCGGCAAGAAGTGAAAATTTCTGCCGCTGGCCAAGCCTATGTGGACCGAGTCCGGCAAGTGGCCGCTACGGCCCCTGAATTGTTGGTGGCCCATTCCTACACCCGTTACCTGGGGGATCTTTCCGGCGGTCAAATTCTCAAGAAAATTGCCCAAAATGCCATGAATCTCCACGATGGTGGCACAGCTTTCTATGAATTTGCCGACATTGATGACGAAAAGGCTTTTAAAAATACCTACCGTCAAGCTATGAATGATCTGCCCATTGACCAAGCCACCGCCGAACGGATTGTGGATGAAGCCAATGACGCCTTTGCCATGAACATGAAAATGTTCAACGAACTTGAAGGCAACCTGATCAAGGCGATCGGCATTATGGTGTTCAACAGCCTCACCCGTCGCCGCAGTCAAGGCAGCACCGAAGTTGGCCTCGCCACCTCCGAAGGCGGTGGTGGTGGTTCTGGTGGTGGTGGTTCTGCAGTTACAGATCTGAGCCTGACAAATTCATCACTGATGCCGACACTGAATCCGATGATTCAACAACTGGCACTGGCAATTGCAGCATCATGGCAATCACTGCCGCTGAAACCGTATCAACTGCCGGAAGATCTGGGCTATGTTGAAGGCAGACTGGAAGGCGAAAAACTGGTTATTGAAAATCGCTGCTATCAGACACCGCAATTTAGAAAAATGCATCTGGAACTGGCAAAAGTTGGCAAAGGCCTGGATATTCTGCATTGCGTTATGTTTCCGGAACCGCTGTATGGCCTGCCGCTGTTTGGCTGCGATATTGTTGCAGGCCCTGGCGGAGTTTCAGCAGCAATTGCGGATCTGTCACCGACACAATCAGATAGACAACTTCCGGCTGCATATCAAAAATCACTGGCAGAACTGGGCCAACCGGAATTTGAACAACAAAGAGAACTTCCGCCTTGGGGAGAAATCTTTTCAGAATATTGCCTGTTTATTCGTCCGAGCAATGTCACAGAAGAAGAAAGATTTGTTCAGCGCGTTGTCGATTTTCTGCAAATTCATTGCCATCAAAGCATTGTCGCAGAACCGCTTTCAGAAGCACAAACACTGGAACATAGACAAGGCCAGATTCATTATTGCCAACAGCAGCAGAAAAACGATAAAACAAGACGCGTTCTGGAAAAAGCATTTGGCGAAGCATGGGCAGAAAGATATATGTCACAAGTTCTGTTTGATGTCATCCAGTAAGGACCAAAACGAAAAAAGGCCCCCCTTTCGGGAGGCCTCTTTTCTGGAATTTGGTACCGAGAGTCAATGTATGAATGGATACGGGATATGAATCAATAAGTACGTGAAAGAGAAAAGCAACCCAGATATGATAGGGAACTTTTCTCTTTCTTGTTTTACATTGAATCTTTACAATCCTATTGATATAATCTAAGCTAGTGTATTTTGCGTTTAATAGTGATTAACTAATAAGGAGGACAAACGGAAAATTTTTAATTCCAATTGAATTTGTATTTTTAGCAATTGCCATGACCTGTTATTTATGGCACAGACAAAACCAAGAACGCCGCAGGATTGAAATTAGCATCAAGCAACAAACCCAACGGGAACGATTTATTAACCAAATTACCCAACATATCCGCCAATCTTTAAACTTGGAAACGGTTTTAAATACCACCGTCGCTGAAGTTAAAACCCTGTTGCAAGTTGATCGAGTTCTAATTTATCGCATTTGGCAAGATGGCACGGGCAGCGCCATTACGGAATCGGTGAATGCCAATTATCCTAGTATTTTAGGGCGGACCTTTTCCGATGAAGTTTTTCCCGTTGAATACCATCAAGCCTACACCAAAGGTAAAGTACGGGCCATTAATGACATTGACCAGGATGACATAGAGATTTGCCTAGCTGATTTCGTCAAACAATTTGGCGTGAAATCAAAATTAGTAGTGCCCATTCTTCAACATAATCGTGCTTCTTCCCTAGATAATGAATCAGAATTTCCCTATCTTTGGGGGCTGTTAATTACCCATCAATGTGCTTTTACCCGGCCATGGCAACCGTGGGAAGTGGAGTTAATGAAACAGCTAGCCAATCAGGTCGCGATCGCCATCCAACAATCGGAATTATATGAGCAATTGCAGCGACGCACGGAGGAAGTCCGCCTAGCTTTAGAACGGGAAAAAGAATTAAGCCGCCTAAAAACTCGTTTTTTCTCCATGGCTTCCCATGAATTTCGTACTCCCCTCAGTACGGCCTTAGCTGCTGCCCAATTACTGGAAAATTCTGAAGTGGCCTGGCTTGATCCCGATAAGCGTAGCCGGAACTTACACCGTATTCAAAATTCCGTGAAAAATATGGTACAGCTCCTGGATGATATTTTAATCATTAACCGTGCCGAAGCGGGCAAATTGGAATTTAATCCTAATTGGTTAGATTTGAAATTATTGTTCCAGCAATTTATCGAAGAAATTCAATTAAGTGTCAGTGACCAATATTATTTTGACTTTATTTGTAGCGCTCAAGATACGAAGGCATTGGTGGATGAAAGGTTAGTGCGGTCTATTTTATCTAATCTGTTATCTAATGCGATTAAATACTCTCCCGGGGGAGGGCAGATTAAAATTGCCCTAAGCCTAGATTCGGAACAGATTATTTTTGAAGTCACCGACCAGGGCATTGGCATTTCGCCAGAGGACCAAAAGCAAATTTTTGAACCCTTTCATCGGGGCAAAAATGTCAGAAATATTACGGGAACAGGACTCGGTTTAATGGTTGCCAAGAAATGTGTTGACTTACACAGTGGCAGTATCTTGCTAAAAAGTGCAGTTGACCAGGGAACAACAGTTACTATCTGTTTAAAACGCTATAACCATTTGCCTCGAGCTTAACCAGGCATCAAATAAAACGAAAGGCTCAGTCGAAAGACTGGGCCTTTCGTTTTATCTGTTGTTTGTCGGTGAACGCTCTCTACTAGAGTCACACTGGCTCACCTTCGGGTGGGCCTTTCTGCGTTTATAACGGAATTTTGTCAAAATAATTTTATTGACAACGTCTTATTAACGTTGATATAATTTAAATTTTATTTGACAAAAATGGGCTCGTGTTGTACAATAAATGTGATTAACTAATAAGGAGGACAAACATGGGTATGATGAGAATTCTTTTAGTGGAGGATGATTTGCCGCTGGCGGAAACCCTTGCTGAAGCATTGAGTGACCAGCTTTACACCGTTGATATTGCCACCGACGCTTCCCTCGCCTGGGACTATGCCTCCCGACTGGAATATGACCTCGTTATTTTGGATGTGATGCTGCCGGAGTTGGACGGGATTACCCTCTGTCAAAAATGGCGATCGCACAGTTATTTAATGCCAATTTTGATGATGACAGCCAGGGATACGATCAATGATAAAATCACGGGCTTGGATGCGGGGGCGGATGATTATGTGGTCAAGCCAGTGGATTTGGGGGAGTTATTTGCCAGGGTGCGAGCTTTGTTGCGTCGGGGTTGTGCAACGTGCCAACCAGTTTTAGAGTGGGGGCCAATCAGGTTGGATCCAAGCACCTATGAAGTTAGTTATGACAATGAGGTTTTGTCTTTGACCCGCAAGGAATACAGCATTCTGGAATTACTACTCCGCAATGGCCGTCGGGTGCTAAGTCGGAGCATGATTATCGATAGTATCTGGAAGTTGGAGAGTCCCCCAGAGGAAGATACGGTTAAGGTGCATGTGCGGAGTTTGCGACAAAAATTAAAAAGTGCCGGTTTATCAGCAGATGCCATTGAAACGGTCCATGGCATTGGGTATCGTCTGGCCAATTTAACGGAAAAATCTTTGTGCCAAGGGAAAAACTAGCCAGGCATCAAATAAAACGAAAGGCTCAGTCGAAAGACTGGGCCTTTCGTTTTATCTGTTGTTTGTCGGTGAACGCTCTCTACTAGAGTCACACTGGCTCACCTTCGGGTGGGCCTTTCTGCGTTTATAAGCCCATTGTGCTTTTCTCTATCAACCTCAGCTTACCTGAAGGGGTGAACAGGTCTGGGTTAATTCATGTTGCGAAATGTAACAGTTTTAGTCGCATCAGCTAACTTTCCGATTTCTTTACGATTTTCTCCCCCTTTTCTTCAATTTTACTTTGTTATAATAAATGTAGTGAGGTGGACTTCCTAGAATATATATTATGTAAACTCCAGGCATCAAATAAAACGAAAGGCTCAGTCGAAAGACTGGGCCTTTCGTTTTATCTGTTGTTTGTCGGTGAACGCTCTCTACTAGAGTCACACTGGCTCACCTTCGGGTGGGCCTTTCTGCGTTTATAACTTCCTAGAATATATATTATGTAAACTTAAGGAGGAAAAAAAGGTATTAAACAAAATTATTTGTAGAGGCTGTTTCGTCCTCACGGACTCATCAGACCGGAAAGCACATCCGGTGACAGCTGATTAACTAATAAGGAGGACAAACTATGAGAGACCGTTTGACGGCTAGCTCAGTCCTAGGTACAGTGCTAGCGGATCTTAGCTACTAGAGAAAGAGGAGAAATACTAGATGCGTAAAGGCGAAGAGCTGTTCACTGGTGTCGTCCCTATTCTGGTGGAACTGGATGGTGATGTCAACGGTCATAAGTTTTCCGTGCGTGGCGAGGGTGAAGGTGACGCAACTAATGGTAAACTGACGCTGAAGTTCATCTGTACTACTGGTAAACTGCCGGTTCCTTGGCCGACTCTGGTAACGACGCTGACTTATGGTGTTCAGTGCTTTGCTCGTTATCCGGACCATATGAAGCAGCATGACTTCTTCAAGTCCGCCATGCCGGAAGGCTATGTGCAGGAACGCACGATTTCCTTTAAGGATGACGGCACGTACAAAACGCGTGCGGAAGTGAAATTTGAAGGCGATACCCTGGTAAACCGCATTGAGCTGAAAGGCATTGACTTTAAAGAGGACGGCAATATCCTGGGCCATAAGCTGGAATACAATTTTAACAGCCACAATGTTTACATCACCGCCGATAAACAAAAAAATGGCATTAAAGCGAATTTTAAAATTCGCCACAACGTGGAGGATGGCAGCGTGCAGCTGGCTGATCACTACCAGCAAAACACTCCAATCGGTGATGGTCCTGTTCTGCTGCCAGACAATCACTATCTGAGCACGCAAAGCGTTCTGTCTAAAGATCCGAACGAGAAACGCGATCATATGGTTCTGCTGGAGTTCGTAACCGCAGCGGGCATCACGCATGGTATGGATGAACTGTACAAATGATAAGGTCTCTGACAAAAGCTTACATAAGGAGGAACTACTATGGTGAGCAAGGGCGAGGCAGTGATCAAGGAGTTCATGCGGTTCAAGGTGCACATGGAGGGCTCCATGAACGGCCACGAGTTCGAGATCGAGGGCGAGGGCGAGGGCCGCCCCTACGAGGGCACCCAGACCGCCAAGCTGAAGGTGACCAAGGGTGGCCCCCTGCCCTTCTCCTGGGACATCCTGTCCCCTCAGTTCATGTACGGCTCCAGGGCCTTCACCAAGCACCCCGCCGACATCCCCGACTACTATAAGCAGTCCTTCCCCGAGGGCTTCAAGTGGGAGCGCGTGATGAACTTCGAGGACGGCGGCGCCGTGACCGTGACCCAGGACACCTCCCTGGAGGACGGCACCCTGATCTACAAGGTGAAGCTCCGCGGCACCAACTTCCCTCCTGACGGCCCCGTAATGCAGAAGAAGACAATGGGCTGGGAAGCGTCCACCGAGCGGTTGTACCCCGAGGACGGCGTGCTGAAGGGCGACATTAAGATGGCCCTGCGCCTGAAGGACGGCGGCCGCTACCTGGCGGACTTCAAGACCACCTACAAGGCCAAGAAGCCCGTGCAGATGCCCGGCGCCTACAACGTCGACCGCAAGTTGGACATCACCTCCCACAACGAGGACTACACCGTGGTGGAACAGTACGAACGCTCCGAGGGCCGCCACTCCACCGGCGGCATGGACGAGCTGTACAAGGCTGCAAACGACGAAAACTACGCTGCTGCTGTTTAACCAGGCATCAAATAAAACGAAAGGCTCAGTCGAAAGACTGGGCCTTTCGTTTTATCTGTTGTTTGTCGGTGAACGCTCTCTACTAGAGTCACACTGGCTCACCTTCGGGTGGGCCTTTCTGCGTTTATA",
+  "audit": {
+   "created": "2026-10-21T11:23:41.005Z",
+   "updated": "2026-10-21T11:30:57.418Z"
+  },
+  "chassis": {
+   "designedFor": [
+    {
+     "uuid": "47e596bb-d477-4baa-b23e-1df994bce623",
+     "id": 562,
+     "scientificName": "Escherichia coli",
+     "commonName": null,
+     "rank": "species",
+     "lineageSummary": [
+      "1",
+      "131567",
+      "2",
+      "3379134",
+      "1224",
+      "1236",
+      "91347",
+      "543",
+      "561",
+      "562"
+     ],
+     "documentationUUID": null,
+     "addedBy": {
+      "uuid": "8de7ff3d-7d8b-42ed-a284-c454c5534c3c",
+      "firstName": "Sophie",
+      "lastName": "Chen",
+      "orcidID": null
+     },
+     "addedAt": "2026-10-21T11:23:42.225Z"
+    },
+    {
+     "uuid": "f41023c9-5080-449e-9182-c67308a4a43a",
+     "id": 1423,
+     "scientificName": "Bacillus subtilis",
+     "commonName": null,
+     "rank": "species",
+     "lineageSummary": [
+      "1",
+      "131567",
+      "2",
+      "1783272",
+      "1239",
+      "91061",
+      "1385",
+      "186817",
+      "1386",
+      "653685",
+      "1423"
+     ],
+     "documentationUUID": null,
+     "addedBy": {
+      "uuid": "8de7ff3d-7d8b-42ed-a284-c454c5534c3c",
+      "firstName": "Sophie",
+      "lastName": "Chen",
+      "orcidID": null
+     },
+     "addedAt": "2026-10-21T11:23:42.427Z"
+    }
+   ],
+   "characterisedIn": [],
+   "sourceOrganism": []
+  },
+  "usageCount": 0
+ },
+ "documentation": [
+  {
+   "uuid": "ea0d055b-4e4b-4d9f-b6af-7162dcef4170",
+   "title": "Design",
+   "type": "design",
+   "created": "2026-10-21T13:50:16.360Z",
+   "value": "## Overview\n\nThis is the assembled Level 2 construct of our stress-responsive optogenetic bioreactor. It carries four Level 1 transcriptional units on a single plasmid, so that *Bacillus subtilis* can sense and respond to light signals on its own. The first module makes the chromophore PCB, the second expresses the sensor kinase CcaSm3, and the third expresses the response regulator CcaR. The fourth is the output, a replaceable CDS cassette that is expressed when green light is present. It carries the fluorescent reporter mScarlet-I by default, and users can exchange the sfGFP it for the protectant of their choice. This is the CcaSR-CDS Replaceable Cassette-mScarlet-I construct ([BBa\\_26VTO4DX](https://registry.igem.org/parts/bba-26vto4dx)).\n\nThe part is a composite of four transcriptional units in this order:\u00a0\n\n1. **PCB production** ([BBa\\_26XZYM10](https://registry.igem.org/parts/bba-26xzym10)): PtagC + RBS ([<u>**BBa\\_26A4MT29**</u>](https://registry.igem.org/parts/bba-26a4mt29))-ho1:pcyA ([<u>**BBa\\_K4354012**</u>](https://registry.igem.org/parts/bba-k4354012)\u00a0)-L3S2P21 ([<u>**BBa\\_K2675031**</u>](https://share.google/pocPiJukHq9mm39e5)). Ho1 converts heme to biliverdin IXa, and PcyA subsequently reduces it to PCB. Fusing the two enzymes raises PCB production about 80 fold (Castillo-Hair et al. 2019). We used the shorter PtagC+RBS instead of Pveg and RBS0 to cut down repeated sequences and make Level 2 assembly easier .\n2. **Light Sensing** ([BBa\\_261XH2RS](https://registry.igem.org/parts/bba-261xh2rs)): PliaG (BBa\\_K823000)-RBS0\u00a0 (BBa\\_26OSLRE4)- ccaS-m3 ([BBa\\_26OSLRE4](https://registry.igem.org/parts/bba-26oslre4))- B0015 (BBa\\_B0015). This module expresses CcaSm3, the light sensor. Green light switches CcaS to an active state that passes a phosphate to CcaR, and red light switches it back.\n3. **Transduction** ([BBa\\_26BDO8AQ](https://registry.igem.org/parts/bba-26bdo8aq)): Pveg (BBa\\_K143012) \u2013 RBS0 \u2013 ccaR (BBa\\_K5431017) \u2013 B0015. When CcaS phosphorylates it under green light, CcaR binds the PcpcG2 promoter and activates transcription, and under red light it is likely dephosphorylated so that output switches off. Pveg keeps CcaR constitutively expressed, so light is the only input to the circuit.\u00a0\n4. **Light responsive** ([BBa\\_26VTO4DX](https://registry.igem.org/parts/bba-26vto4dx)): PcpcG2-veg-EEBD-RBS0-CDS Replaceable Cassette-mScarlet-I-B0015. PcpcG2-veg is a strong promoter derived from Castillo-Hair et al. (2019). The replaceable cassette carries the mScarlet-I reporter, which lets users verify the light response of the circuit. The sfGFP can be exchanged for any protectant CDS by BsaI enzyme, with the promoter and regulatory elements left unchanged.\n\nThis complete construct was assembled by Golden gate assembly into the Level 2 vector pSTK-EXP2 with BsmBI enzyme\n\n## About\n\n* Biosafety level: S1\n* Target organism: *Bacillus subtilis* \\[168/WB800]\n* Main purpose of use: light controlled expression and secretion of ACC deaminase in the host *B. subtilis*\n* Potential application: controlling the release of plant growth promoting protectants with green and red light. Users can set stress thresholds for each crop through a microcontroller based sensor without redesigning the entire genetic circuit\n\n## Literature\n\n**How the circuit works:** CcaS binds PCB through its GAF domain and is made in a green-light sensitive ground state. Absorbing green light switches it to an active state that autophosphorylates and passes the phosphate to CcaR. Phosphorylated CcaR activates the PcpcG2 output promoter. Red light returns CcaS to the ground state and probably causes CcaS to dephosphorylate CcaR, which turns output off (Castillo-Hair et al., 2019; Hirose et al., 2008). Because *B. subtilis* does not make PCB, the circuit needs all four modules on the same plasmid to work.\u00a0\n\n**Why optogenetic:** Our original plan was to release engineered rhizobacteria that sensed stress themselves, which limits the usable stressors, and crops also differ in their thresholds. For example, heat stress in *Arabidopsis* starts at about 30\u201337 \u00b0C, whereas peanut tolerates about 35\u201340 \u00b0C. Using light as the only input lets the user program thresholds per crop without redesigning the circuit.\u00a0\n\n**Differences from the published system:** Castillo-Hair et al. (2019) drove *ccaS* from the xylose-inducible PxylA and *ccaR* from the IPTG-inducible Phy-spank. We replaced both with constitutive promoters (PliaG and Pveg) so that light is the only input and no inducer dosing is needed.\u00a0\n\n**Output module:** PcpcG2-veg is a promoter from Castillo-Hair et al. (2019), in which the sequence after the \u221210 hexamer comes from the strong Pveg promoter while the CcaR binding site stays intact. In the original study this gave much higher output than PcpcG2-172. The EEBD (*E. coli* expression-blocking device) sits upstream of the RBS to stop leaky expression of the output gene in *E. coli* during cloning, before the construct is moved into *B. subtilis*. The output is a replaceable CDS cassette, which carries mScarlet-I by default. The cassette can be exchanged for any protectant CDS by BsaI, so the same light-controlled circuit can produce whichever protectant the user chooses.\n\n## References\n\n1. Castillo-Hair, S. M., Baerman, E. A., Fujita, M., Igoshin, O. A., & Tabor, J. J. (2019). Optogenetic control of *Bacillus subtilis* gene expression. *Nature Communications*, 10, 3099.\n2. Hirose, Y., Shimada, T., Narikawa, R., Katayama, M., & Ikeuchi, M. (2008). Cyanobacteriochrome CcaS is the green light receptor that induces the expression of phycobilisome linker protein. *PNAS*, 105(28), 9528\u20139533.\n3. Caro-Astorga, J., Rogan, M., Malc\u0131, K., Ming, H., Debenedictis, E., James, P., & Ellis, T. (2025). SubtiToolKit: A bioengineering kit for *Bacillus subtilis* and Gram-positive bacteria. *Trends in Biotechnology*, 43(6), 1446\u20131469.\n4. Fern\u00e1ndez, S., Ayora, S., & Alonso, J. C. (2000). *Bacillus subtilis* homologous recombination: Genes and products. *Research in Microbiology*, 151(6), 481\u2013486.\n5. Chen, Y.-J., et al. (2013). Characterization of 582 natural and synthetic terminators and quantification of their design constraints. *Nature Methods*, 10(7), 659\u2013664.\n6. Haller, D. J., Castillo-Hair, S. M., & Tabor, J. J. (2025). Optogenetic control of *B. subtilis* gene expression using the CcaSR system. *Methods in Molecular Biology*, 2840, 1\u201317.\n7. Radeck, J., et al. (2013). The Bacillus BioBrick Box. *Journal of Biological Engineering*, 7, 29.",
+   "lastEditedBy": "Sophie Chen",
+   "authorUUID": "8de7ff3d-7d8b-42ed-a284-c454c5534c3c",
+   "organisationUUID": "3f22886d-da0b-4a5a-8711-7b14b020c9de",
+   "organisation": {
+    "uuid": "3f22886d-da0b-4a5a-8711-7b14b020c9de",
+    "name": "GEMS-Taiwan (2026)",
+    "type": "igem-team",
+    "link": "https://teams.igem.org/6072",
+    "archivedAt": null,
+    "audit": {
+     "created": "2026-07-02T08:04:11.172Z",
+     "updated": "2026-07-02T08:04:11.172Z"
+    }
+   },
+   "updated": "2026-10-21T13:50:16.360Z"
+  }
+ ],
+ "composition": [
+  {
+   "uuid": "e92a3505-e69a-4ea7-832f-79581e6fa463",
+   "componentUUID": "4eb79f0c-d3db-4276-b9f2-ab8d335092ac",
+   "componentName": "BBa_26XZYM10",
+   "role": {
+    "uuid": "6b0d75b8-835a-4106-aebf-7f121a129403",
+    "accession": "SO:0001248",
+    "label": "Assembly",
+    "uri": "http://purl.obolibrary.org/obo/SO_0001248",
+    "glyph": "http://sbols.org/visual/v2#UnspecifiedGlyph"
+   },
+   "start": 1,
+   "end": 1655,
+   "strand": "forward"
+  },
+  {
+   "uuid": "7862469c-fb2d-49e6-b2f5-3f70bfbad592",
+   "componentUUID": "1bda1f28-782d-4c71-a2c3-ec442b5c5820",
+   "componentName": "BBa_26BDO8AQ",
+   "role": {
+    "uuid": "6b0d75b8-835a-4106-aebf-7f121a129403",
+    "accession": "SO:0001248",
+    "label": "Assembly",
+    "uri": "http://purl.obolibrary.org/obo/SO_0001248",
+    "glyph": "http://sbols.org/visual/v2#UnspecifiedGlyph"
+   },
+   "start": 3377,
+   "end": 4340,
+   "strand": "forward"
+  },
+  {
+   "uuid": "a81da191-2cfe-491b-8e08-c23651915b6f",
+   "componentUUID": "550ce717-d746-44b3-b3e3-a8eafa7d5f20",
+   "componentName": "BBa_26VTO4DX",
+   "role": {
+    "uuid": "6b0d75b8-835a-4106-aebf-7f121a129403",
+    "accession": "SO:0001248",
+    "label": "Assembly",
+    "uri": "http://purl.obolibrary.org/obo/SO_0001248",
+    "glyph": "http://sbols.org/visual/v2#UnspecifiedGlyph"
+   },
+   "start": 4341,
+   "end": 6521,
+   "strand": "forward"
+  }
+ ]
+}

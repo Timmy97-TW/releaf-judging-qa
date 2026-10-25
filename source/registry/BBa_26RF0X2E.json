@@ -1,0 +1,289 @@
+{
+ "id": "BBa_26RF0X2E",
+ "search": {
+  "uuid": "d305fe97-b889-4447-9e25-104112fa88cc",
+  "name": "BBa_26RF0X2E",
+  "slug": "bba-26rf0x2e",
+  "status": "published",
+  "title": "CcaSR-SamyQ-AcdS 2.1-Histag",
+  "description": "The system is an engineered construct that produces and secretes plant-protective proteins under green/red light control. The PCB Production Module ([BBa\\_26XZYM10](https://registry.igem.org/parts/bba-26xzym10)) supplies the chromophore phycocyanobilin. The Light Sensing Module ([BBa\\_261XH2RS](https://registry.igem.org/parts/bba-261xh2rs)) expresses CcaS-m3, which detects green light and autophosphorylates. The Transduction Module ([BBa\\_26BDO8AQ](https://registry.igem.org/parts/bba-26bdo8aq))\u2026",
+  "role": {
+   "uuid": "6b0d75b8-835a-4106-aebf-7f121a129403",
+   "accession": "SO:0001248",
+   "label": "Assembly",
+   "deprecated": false,
+   "glyph": "http://sbols.org/visual/v2#UnspecifiedGlyph"
+  },
+  "sequenceLength": 6125,
+  "audit": {
+   "created": "2026-10-21T11:03:29.922Z",
+   "updated": "2026-10-21T14:34:33.063Z"
+  },
+  "usageCount": 0
+ },
+ "part": {
+  "uuid": "d305fe97-b889-4447-9e25-104112fa88cc",
+  "name": "BBa_26RF0X2E",
+  "slug": "bba-26rf0x2e",
+  "status": "published",
+  "title": "CcaSR-SamyQ-AcdS 2.1-Histag",
+  "description": "The system is an engineered construct that produces and secretes plant-protective proteins under green/red light control. The PCB Production Module ([BBa\\_26XZYM10](https://registry.igem.org/parts/bba-26xzym10)) supplies the chromophore phycocyanobilin. The Light Sensing Module ([BBa\\_261XH2RS](https://registry.igem.org/parts/bba-261xh2rs)) expresses CcaS-m3, which detects green light and autophosphorylates. The Transduction Module ([BBa\\_26BDO8AQ](https://registry.igem.org/parts/bba-26bdo8aq)) expresses CcaR, which receives its phosphoryl group. Phosphorylated CcaR activates PcpcG2-veg in the Light-Responsive Expression Module ([BBa\\_263IW021](https://registry.igem.org/parts/bba-263iw021)), driving secretion of ACC deaminase via the SamyQ signal peptide. Expression is on in green light and off in red, giving external control over protein production instead of a constant burden on the cell.",
+  "role": {
+   "uuid": "6b0d75b8-835a-4106-aebf-7f121a129403",
+   "accession": "SO:0001248",
+   "label": "Assembly",
+   "deprecated": false,
+   "glyph": "http://sbols.org/visual/v2#UnspecifiedGlyph"
+  },
+  "topology": {
+   "uuid": "b2bb9a86-0436-40d2-b56a-f2fbef932193",
+   "accession": "SO:0000987",
+   "label": "Linear",
+   "uri": "https://purl.obolibrary.org/obo/SO_0000987",
+   "glyph": null
+  },
+  "licenseUUID": "d6c69ca7-8be4-4bc0-b4a8-d3ae1d428aa6",
+  "source": "CcaSR green red light-responsive system for transcriptional control in B. subtilis (Haller et al., 2025; 10.1007/978-1-0716-40)",
+  "sequence": "AGCCCATTGTGCTTTTCTCTATCAACCTCAGCTTACCTGAAGGGGTGAACAGGTCTGGGTTAATTCATGTTGCGAAATGTAACAGTTTTAGTCGCATCAGCTAACTTTCCGATTTCTTTACGATTTTCTCCCCCTTTTCTTCAATTTTACTTTGTTATAATAAATGTAGTGAGGTGGACTTCCTAGAATATATATTATGTAAACTCCAGGCATCAAATAAAACGAAAGGCTCAGTCGAAAGACTGGGCCTTTCGTTTTATCTGTTGTTTGTCGGTGAACGCTCTCTACTAGAGTCACACTGGCTCACCTTCGGGTGGGCCTTTCTGCGTTTATAACTTCCTAGAATATATATTATGTAAACTTAAGGAGGAAAAAAAGGTATTAAACAAAATTATTTGTAGAGGCTGTTTCGTCCTCACGGACTCATCAGACCGGAAAGCACATCCGGTGACAGCTGATTAACTAATAAGGAGGACAAACATGATTCAAAAACGAAAGCGGACAGTTTCGTTCAGACTTGTGCTTATGTGCACGCTGTTATTTGTCAGTTTGCCGATTACAAAAACATCAGCCAATTTGAACCGCTTTGAACGCTACCCCCTTACTTTTGGGCCAAGTCCGATCACGCCGTTAAAAAGACTTTCTGAACATCTTGGCGGAAAAGTTGAGCTTTATGCGAAAAGAGAAGACTGCAACAGCGGCCTTGCGTTTGGCGGAAACAAAACACGCAAACTTGAGTATTTAATTCCGGAAGCGATTGAACAAGGATGCGATACACTTGTATCTATCGGCGGCATTCAAAGCAACCAAACACGCCAAGTTGCGGCGGTTGCGGCGCATCTTGGCATGAAATGTGTGCTTGTGCAGGAAAACTGGGTAAACTACTCTGATGCGGTTTATGACCGCGTTGGAAACATTGAAATGAGCCGCATTATGGGAGCTGATGTACGCCTTGATGCGGCAGGCTTTGATATCGGCATCCGCCCGAGCTGGGAGAAAGCGATGTCAGATGTTGTTGAGCGCGGCGGAAAACCGTTCCCGATTCCGGCAGGCTGCTCTGAGCATCCGTACGGCGGCTTAGGCTTTGTCGGCTTTGCTGAAGAAGTGCGCCAGCAAGAGAAAGAGCTTGGCTTTAAATTTGATTACATTGTTGTGTGCTCTGTAACAGGCAGCACACAAGCAGGCATGGTAGTCGGCTTTGCGGCTGATGGCCGCAGCAAAAACGTCATCGGCGTAGATGCATCTGCAAAGCCGGAGCAAACAAAAGCGCAAATTCTGCGCATTGCGCGCCACACAGCGGAGCTTGTTGAGCTTGGCAGAGAGATCACAGAAGAAGATGTTGTGCTTGATACACGCTTTGCTTATCCGGAATACGGCCTTCCGAATGAAGGCACACTTGAAGCGATCCGCCTTTGCGGCAGCCTTGAAGGCGTGTTAACAGATCCGGTTTATGAAGGAAAAAGCATGCACGGCATGATTGAAATGGTGCGCCGCGGAGAGTTCCCGGACGGAAGCAAAGTGCTTTATGCGCATTTAGGCGGAGCGCCGGCGTTAAATGCTTATAGCTTCCTTTTCCGCAACGGACATCATCATCATCATCATTAACCAGGCATCAAATAAAACGAAAGGCTCAGTCGAAAGACTGGGCCTTTCGTTTTATCTGTTGTTTGTCGGTGAACGCTCTCTACTAGAGTCACACTGGCTCACCTTCGGGTGGGCCTTTCTGCGTTTATACAAAAATCAGACCAGACAAAAGCGGCAAATGAATAAGCGGAACGGGGAAGGATTTGCGGTCAAGTCCTTCCCTTCCGCACGTATCAATTCGCAAGCTTTTCCTTTATAATAGAATGAATGAGATTAACTAATAAGGAGGACAAACATGGGTATGATGGGAAAATTTTTAATTCCAATTGAATTTGTATTTTTAGCAATTGCCATGACCTGTTATTTATGGCACAGACAAAACCAAGAACGCCGCAGGATTGAAATTAGCATCAAGCAACAAACCCAACGGGAACGATTTATTAACCAAATTACCCAACATATCCGCCAATCTTTAAACTTGGAAACGGTTTTAAATACCACCGTCGCTGAAGTTAAAACCCTGTTGCAAGTTGATCGAGTTCTAATTTATCGCATTTGGCAAGATGGCACGGGCAGCGCCATTACGGAATCGGTGAATGCCAATTATCCTAGTATTTTAGGGCGGACCTTTTCCGATGAAGTTTTTCCCGTTGAATACCATCAAGCCTACACCAAAGGTAAAGTACGGGCCATTAATGACATTGACCAGGATGACATAGAGATTTGCCTAGCTGATTTCGTCAAACAATTTGGCGTGAAATCAAAATTAGTAGTGCCCATTCTTCAACATAATCGTGCTTCTTCCCTAGATAATGAATCAGAATTTCCCTATCTTTGGGGGCTGTTAATTACCCATCAATGTGCTTTTACCCGGCCATGGCAACCGTGGGAAGTGGAGTTAATGAAACAGCTAGCCAATCAGGTCGCGATCGCCATCCAACAATCGGAATTATATGAGCAATTGCAGCGACGCACGGAGGAAGTCCGCCTAGCTTTAGAACGGGAAAAAGAATTAAGCCGCCTAAAAACTCGTTTTTTCTCCATGGCTTCCCATGAATTTCGTACTCCCCTCAGTACGGCCTTAGCTGCTGCCCAATTACTGGAAAATTCTGAAGTGGCCTGGCTTGATCCCGATAAGCGTAGCCGGAACTTACACCGTATTCAAAATTCCGTGAAAAATATGGTACAGCTCCTGGATGATATTTTAATCATTAACCGTGCCGAAGCGGGCAAATTGGAATTTAATCCTAATTGGTTAGATTTGAAATTATTGTTCCAGCAATTTATCGAAGAAATTCAATTAAGTGTCAGTGACCAATATTATTTTGACTTTATTTGTAGCGCTCAAGATACGAAGGCATTGGTGGATGAAAGGTTAGTGCGGTCTATTTTATCTAATCTGTTATCTAATGCGATTAAATACTCTCCCGGGGGAGGGCAGATTAAAATTGCCCTAAGCCTAGATTCGGAACAGATTATTTTTGAAGTCACCGACCAGGGCATTGGCATTTCGCCAGAGGACCAAAAGCAAATTTTTGAACCCTTTCATCGGGGCAAAAATGTCAGAAATATTACGGGAACAGGACTCGGTTTAATGGTTGCCAAGAAATGTGTTGACTTACACAGTGGCAGTATCTTGCTAAAAAGTGCAGTTGACCAGGGAACAACAGTTACTATCTGTTTAAAACGCTATAACCATTTGCCTCGAGCTTAACCAGGCATCAAATAAAACGAAAGGCTCAGTCGAAAGACTGGGCCTTTCGTTTTATCTGTTGTTTGTCGGTGAACGCTCTCTACTAGAGTCACACTGGCTCACCTTCGGGTGGGCCTTTCTGCGTTTATAAATTTTGTCAAAATAATTTTATTGACAACGTCTTATTAACGTTGATATAATTTAAATTTTATTTGACAAAAATGGGCTCGTGTTGTACAATAAATGTGATTAACTAATAAGGAGGACAAACATGGGTATGATGAGAATTCTTTTAGTGGAGGATGATTTGCCGCTGGCGGAAACCCTTGCTGAAGCATTGAGTGACCAGCTTTACACCGTTGATATTGCCACCGACGCTTCCCTCGCCTGGGACTATGCCTCCCGACTGGAATATGACCTCGTTATTTTGGATGTGATGCTGCCGGAGTTGGACGGGATTACCCTCTGTCAAAAATGGCGATCGCACAGTTATTTAATGCCAATTTTGATGATGACAGCCAGGGATACGATCAATGATAAAATCACGGGCTTGGATGCGGGGGCGGATGATTATGTGGTCAAGCCAGTGGATTTGGGGGAGTTATTTGCCAGGGTGCGAGCTTTGTTGCGTCGGGGTTGTGCAACGTGCCAACCAGTTTTAGAGTGGGGGCCAATCAGGTTGGATCCAAGCACCTATGAAGTTAGTTATGACAATGAGGTTTTGTCTTTGACCCGCAAGGAATACAGCATTCTGGAATTACTACTCCGCAATGGCCGTCGGGTGCTAAGTCGGAGCATGATTATCGATAGTATCTGGAAGTTGGAGAGTCCCCCAGAGGAAGATACGGTTAAGGTGCATGTGCGGAGTTTGCGACAAAAATTAAAAAGTGCCGGTTTATCAGCAGATGCCATTGAAACGGTCCATGGCATTGGGTATCGTCTGGCCAATTTAACGGAAAAATCTTTGTGCCAAGGGAAAAACTAGCCAGGCATCAAATAAAACGAAAGGCTCAGTCGAAAGACTGGGCCTTTCGTTTTATCTGTTGTTTGTCGGTGAACGCTCTCTACTAGAGTCACACTGGCTCACCTTCGGGTGGGCCTTTCTGCGTTTATAAGCCCATTGTGCTTTTCTCTATCAACCTCAGCTTACCTGAAGGGGTGAACAGGTCTGGGTTAATTCATGTTGCGAAATGTAACAGTTTTAGTCGCATCAGCTAACTTTCCGATTTCTTTACGATTTTCTCCCCCTTTTCTTCAATTTTACTTTGTTATAATAAATGTAGTGAGGTGGACTTCCTAGAATATATATTATGTAAACTCCAGGCATCAAATAAAACGAAAGGCTCAGTCGAAAGACTGGGCCTTTCGTTTTATCTGTTGTTTGTCGGTGAACGCTCTCTACTAGAGTCACACTGGCTCACCTTCGGGTGGGCCTTTCTGCGTTTATAACTTCCTAGAATATATATTATGTAAACTTAAGGAGGAAAAAAAGGTATTAAACAAAATTATTTGTAGAGGCTGTTTCGTCCTCACGGACTCATCAGACCGGAAAGCACATCCGGTGACAGCTGATTAACTAATAAGGAGGACAAACATGATTCAAAAACGAAAGCGGACAGTTTCGTTCAGACTTGTGCTTATGTGCACGCTGTTATTTGTCAGTTTGCCGATTACAAAAACATCAGCCAATTTGAACCGCTTTGAACGCTACCCCCTTACTTTTGGGCCAAGTCCGATCACGCCGTTAAAAAGACTTTCTGAACATCTTGGCGGAAAAGTTGAGCTTTATGCGAAAAGAGAAGACTGCAACAGCGGCCTTGCGTTTGGCGGAAACAAAACACGCAAACTTGAGTATTTAATTCCGGAAGCGATTGAACAAGGATGCGATACACTTGTATCTATCGGCGGCATTCAAAGCAACCAAACACGCCAAGTTGCGGCGGTTGCGGCGCATCTTGGCATGAAATGTGTGCTTGTGCAGGAAAACTGGGTAAACTACTCTGATGCGGTTTATGACCGCGTTGGAAACATTGAAATGAGCCGCATTATGGGAGCTGATGTACGCCTTGATGCGGCAGGCTTTGATATCGGCATCCGCCCGAGCTGGGAGAAAGCGATGTCAGATGTTGTTGAGCGCGGCGGAAAACCGTTCCCGATTCCGGCAGGCTGCTCTGAGCATCCGTACGGCGGCTTAGGCTTTGTCGGCTTTGCTGAAGAAGTGCGCCAGCAAGAGAAAGAGCTTGGCTTTAAATTTGATTACATTGTTGTGTGCTCTGTAACAGGCAGCACACAAGCAGGCATGGTAGTCGGCTTTGCGGCTGATGGCCGCAGCAAAAACGTCATCGGCGTAGATGCATCTGCAAAGCCGGAGCAAACAAAAGCGCAAATTCTGCGCATTGCGCGCCACACAGCGGAGCTTGTTGAGCTTGGCAGAGAGATCACAGAAGAAGATGTTGTGCTTGATACACGCTTTGCTTATCCGGAATACGGCCTTCCGAATGAAGGCACACTTGAAGCGATCCGCCTTTGCGGCAGCCTTGAAGGCGTGTTAACAGATCCGGTTTATGAAGGAAAAAGCATGCACGGCATGATTGAAATGGTGCGCCGCGGAGAGTTCCCGGACGGAAGCAAAGTGCTTTATGCGCATTTAGGCGGAGCGCCGGCGTTAAATGCTTATAGCTTCCTTTTCCGCAACGGACATCATCATCATCATCATTAACCAGGCATCAAATAAAACGAAAGGCTCAGTCGAAAGACTGGGCCTTTCGTTTTATCTGTTGTTTGTCGGTGAACGCTCTCTACTAGAGTCACACTGGCTCACCTTCGGGTGGGCCTTTCTGCGTTTATA",
+  "audit": {
+   "created": "2026-10-21T11:03:29.922Z",
+   "updated": "2026-10-21T14:34:33.063Z"
+  },
+  "chassis": {
+   "designedFor": [
+    {
+     "uuid": "212d02da-4886-46da-bdcf-8fd152cac603",
+     "id": 562,
+     "scientificName": "Escherichia coli",
+     "commonName": null,
+     "rank": "species",
+     "lineageSummary": [
+      "1",
+      "131567",
+      "2",
+      "3379134",
+      "1224",
+      "1236",
+      "91347",
+      "543",
+      "561",
+      "562"
+     ],
+     "documentationUUID": null,
+     "addedBy": {
+      "uuid": "8de7ff3d-7d8b-42ed-a284-c454c5534c3c",
+      "firstName": "Sophie",
+      "lastName": "Chen",
+      "orcidID": null
+     },
+     "addedAt": "2026-10-21T11:03:31.985Z"
+    },
+    {
+     "uuid": "a32d1e59-bf4d-4249-bf12-a0d705cd9326",
+     "id": 1423,
+     "scientificName": "Bacillus subtilis",
+     "commonName": null,
+     "rank": "species",
+     "lineageSummary": [
+      "1",
+      "131567",
+      "2",
+      "1783272",
+      "1239",
+      "91061",
+      "1385",
+      "186817",
+      "1386",
+      "653685",
+      "1423"
+     ],
+     "documentationUUID": null,
+     "addedBy": {
+      "uuid": "8de7ff3d-7d8b-42ed-a284-c454c5534c3c",
+      "firstName": "Sophie",
+      "lastName": "Chen",
+      "orcidID": null
+     },
+     "addedAt": "2026-10-21T11:03:31.791Z"
+    }
+   ],
+   "characterisedIn": [],
+   "sourceOrganism": []
+  },
+  "usageCount": 0
+ },
+ "documentation": [
+  {
+   "uuid": "f81a4775-3e18-460d-abda-8cffecb29361",
+   "title": "Design",
+   "type": "design",
+   "created": "2026-10-21T12:49:09.180Z",
+   "value": "## Overview\n\nThis is the assembled Level 2 construct of our stress-responsive optogenetic bioreactor. It carries four Level 1 transcriptional units on a single plasmid, so that *Bacillus subtilis* can sense and respond to light signals on its own. The first module makes the chromophore PCB, the second expresses the sensor kinase CcaSm3, and the third expresses the response regulator CcaR. The fourth is the output, which secretes ACC deaminase (AcdS) when green light is present - specifically, CcasR-Csn-AcdS-Histag (Bba\\_2654HAF3), the wildtype output with the Csn signal peptide.\n\nThe part is a composite of four transcriptional units in this order:\u00a0\n\n1. **PCB production (**[**BBa\\_26XZYM10**](https://registry.igem.org/parts/bba-26xzym10)**):** PtagC + RBS ([<u>**BBa\\_26A4MT29**</u>](https://registry.igem.org/parts/bba-26a4mt29))-ho1:pcyA ([<u>**BBa\\_K4354012**</u>](https://registry.igem.org/parts/bba-k4354012)\u00a0)-L3S2P21 ([<u>**BBa\\_K2675031**</u>](https://share.google/pocPiJukHq9mm39e5)). Ho1 converts heme to biliverdin IXa, and PcyA subsequently reduces it to PCB. Fusing the two enzymes raises PCB production about 80 fold (Castillo-Hair et al. 2019). We used the shorter PtagC+RBS instead of Pveg and RBS0 to cut down repeated sequences and make Level 2 assembly easier .\n2. **Light Sensing (**[**BBa\\_261XH2RS**](https://registry.igem.org/parts/bba-261xh2rs)**):** PliaG (BBa\\_K823000)-RBS0\u00a0 (BBa\\_26OSLRE4)- ccaS-m3 ([BBa\\_26OSLRE4](https://registry.igem.org/parts/bba-26oslre4))- B0015 (BBa\\_B0015). This module expresses CcaSm3, the light sensor. Green light switches CcaS to an active state that passes a phosphate to CcaR, and red light switches it back.\n3. **Transduction (**[**BBa\\_26BDO8AQ**](https://registry.igem.org/parts/bba-26bdo8aq)): Pveg (BBa\\_K143012) \u2013 RBS0 \u2013 ccaR (BBa\\_K5431017) \u2013 B0015. When CcaS phosphorylates it under green light, CcaR binds the PcpcG2 promoter and activates transcription, and under red light it is likely dephosphorylated so that output switches off. Pveg keeps CcaR constitutively expressed, so light is the only input to the circuit.\u00a0\n4. **Light responsive (**[BBa\\_263IW021](https://registry.igem.org/parts/bba-263iw021)**)**: PcpcG2-veg \u2013 EEBD \u2013 RBS0 \u2013 SamyQ\u2013 AcdS 2.1\u2013 6xHis ([BBa\\_26TOGLX3](https://registry.igem.org/parts/bba-26toglx3)) \u2013 B0015. PcpcG2-veg is a strong promoter derived from Castillo-Hair et al. 2019, the Csn signal peptide directs ACC deaminase through the Sec pathway for secretion, where it degrades ACC, and the C-terminal 6xHis tag enables detection of the protein.\n\nThis complete construct was assembled by Golden gate assembly into the Level 2 vector pSTK-EXP2 with BsmBI enzyme\n\n## About\n\n* Biosafety level: S1\n* Target organism: *Bacillus subtilis* \\[168/WB800]\n* Main purpose of use: light controlled expression and secretion of ACC deaminase in the host *B. subtilis*\n* Potential application: controlling the release of plant growth promoting protectants with green and red light. Users can set stress thresholds for each crop through a microcontroller based sensor without redesigning the entire genetic circuit\n\n## Literature\n\n**How the circuit works:** CcaS binds PCB through its GAF domain and is made in a green-light sensitive ground state. Absorbing green light switches it to an active state that autophosphorylates and passes the phosphate to CcaR. Phosphorylated CcaR activates the PcpcG2 output promoter. Red light returns CcaS to the ground state and probably causes CcaS to dephosphorylate CcaR, which turns output off (Castillo-Hair et al., 2019; Hirose et al., 2008). Because *B. subtilis* does not make PCB, the circuit needs all four modules on the same plasmid to work.\u00a0\n\n**Why optogenetic:** Our original plan was to release engineered rhizobacteria that sensed stress themselves, which limits the usable stressors, and crops also differ in their thresholds. For example, heat stress in *Arabidopsis* starts at about 30\u201337 \u00b0C, whereas peanut tolerates about 35\u201340 \u00b0C. Using light as the only input lets the user program thresholds per crop without redesigning the circuit.\u00a0\n\n**Differences from the published system:** Castillo-Hair et al. (2019) drove *ccaS* from the xylose-inducible PxylA and *ccaR* from the IPTG-inducible Phy-spank. We replaced both with constitutive promoters (PliaG and Pveg) so that light is the only input and no inducer dosing is needed.\u00a0\n\n**Output module:** PcpcG2-veg is promoter from Castillo-Hair et al. (2019), in which the sequence after the \u221210 hexamer comes from the strong Pveg promoter while the CcaR binding site stays intact. In the original study this gave much higher output than PcpcG2-172. The EEBD (*E. coli* expression-blocking device) sits upstream of the RBS to stop leaky expression of the output gene in *E. coli* during cloning, before the construct is moved into *B. subtilis*. The output gene is a fusion of a Sec signal peptide, *P. putida acdS*, and a 6xHis tag. In the SamyQ version, 12 of the first 15 *acdS* codons were recoded to open up the mRNA structure around the start codon.\u00a0\n\n## References\n\n1. Castillo-Hair, S. M., Baerman, E. A., Fujita, M., Igoshin, O. A., & Tabor, J. J. (2019). Optogenetic control of *Bacillus subtilis* gene expression. *Nature Communications*, 10, 3099.\n2. Hirose, Y., Shimada, T., Narikawa, R., Katayama, M., & Ikeuchi, M. (2008). Cyanobacteriochrome CcaS is the green light receptor that induces the expression of phycobilisome linker protein. *PNAS*, 105(28), 9528\u20139533.\n3. Caro-Astorga, J., Rogan, M., Malc\u0131, K., Ming, H., Debenedictis, E., James, P., & Ellis, T. (2025). SubtiToolKit: A bioengineering kit for *Bacillus subtilis* and Gram-positive bacteria. *Trends in Biotechnology*, 43(6), 1446\u20131469.\n4. Fern\u00e1ndez, S., Ayora, S., & Alonso, J. C. (2000). *Bacillus subtilis* homologous recombination: Genes and products. *Research in Microbiology*, 151(6), 481\u2013486.\n5. Chen, Y.-J., et al. (2013). Characterization of 582 natural and synthetic terminators and quantification of their design constraints. *Nature Methods*, 10(7), 659\u2013664.\n6. Haller, D. J., Castillo-Hair, S. M., & Tabor, J. J. (2025). Optogenetic control of *B. subtilis* gene expression using the CcaSR system. *Methods in Molecular Biology*, 2840, 1\u201317.\n7. Radeck, J., et al. (2013). The Bacillus BioBrick Box. *Journal of Biological Engineering*, 7, 29.",
+   "lastEditedBy": "Sophie Chen",
+   "authorUUID": "8de7ff3d-7d8b-42ed-a284-c454c5534c3c",
+   "organisationUUID": "3f22886d-da0b-4a5a-8711-7b14b020c9de",
+   "organisation": {
+    "uuid": "3f22886d-da0b-4a5a-8711-7b14b020c9de",
+    "name": "GEMS-Taiwan (2026)",
+    "type": "igem-team",
+    "link": "https://teams.igem.org/6072",
+    "archivedAt": null,
+    "audit": {
+     "created": "2026-07-02T08:04:11.172Z",
+     "updated": "2026-07-02T08:04:11.172Z"
+    }
+   },
+   "updated": "2026-10-21T14:34:22.409Z"
+  },
+  {
+   "uuid": "37e8fb9e-7585-4d24-91af-75492496131c",
+   "title": "Experiment",
+   "type": "experiment",
+   "created": "2026-10-21T12:49:31.904Z",
+   "value": "## Construction/assembly (wet lab)\n\nEach module was first built and sequence verified as a Level 1 transcription unit in the SubtiToolKit pSTK-1A, -1B, -1C, and -1D vectors (Caro-Astorga et al. 2025). The four sequence verified Level 1 units were then combined in a single Golden Gate reaction into the pSTK-EXP2 Level 2 vector, in the order Module 1-Module 2-Module 3-Module 4. We tested two vectors to insert ratios, 1:5 and 1:7. The reaction was transformed into *E. coli* DH5\u03b1, and clones were screened by colony PCR with primers specific to each module and sequence verified. The verified plasmid was then electroporated into *B. subtilis* 168 and WB800 at 2.1-2.3 kV\u00a0\n\nConstruct details:\n\n* Composite insert: pSTK-EXP2-sfGFP-PtagC+RBS-Ho1:pcyA-L3S2P21-PliaG-RBS0-CcaSm3-B0015-Pveg-RBS0-CcaR-B0015-PcpcG2-veg-EEBD-RBS0-SamyQ:AcdS 2.1-Histag-B0015\u00a0\n* Vector: pSTK-EXP2 (Level 2 vector)\n* Assembly method: Golden Gate Assembly (BsmbI)\n* Vector:insert ratios tested: 1:5 and 1:7\n* Thermal cycle\n\n| Temperature        | Time   | Cycles    |\n| ------------------ | ------ | --------- |\n| 42 degrees Celcius | 5 min  | 45 cycles |\n| 16 degrees Celcius | 5 min  |           |\n| 55 degrees celsius | 10 min | 1 cycle   |\n| 80 degrees Celcius | 20 min | 1 cycle   |\n\n## Verification (wet lab)\n\nColonies from the Level 2 transformation were screened by colony PCR, with primers specific to each module, and products were run on an agarose gel alongside a DNA ladder. A colony was a positive candidate only if it gave a band of the expected size for the modules . Positive candidates were then sequenced to confirm that all four modules are correct and in the right order. We checked every module because one module being positive doesn\u2019t necessarily verify the state of the others. Constructs that were confirmed were then electroporated into *B. subtilis* and grown into liquid culture to initiate full functional runs in the LPA.\u00a0\n\n| Primer      | Sequence                       |\n| ----------- | ------------------------------ |\n| L2-pcyA-F   | GCG AAG CAT GGG CAG AAA GA     |\n| L2-ccaSm3 R | GCG TTC TTG GTT TTG TCT GTG CC |\n| L2-ccaSm3 F | GGG AAC AGG ACT CGG TTT AAT GG |\n| L2-ccaR R   | CCA GCG GCA AAT CAT CCT CC     |\n| L2-ccaR F   | GGT CCA TGG CAT TGG GTA TCG    |\n| L2-SamyQ R  | GAA CGA AAC TGT CCG CTT TCG TT |\n\n## Results\n\n![](https://registry.igem.wiki/documentation/ceb2e430-3a0a-4a10-8496-5d6acb63c0ea/c00e095c212cd17717dc7c38297ccb986edb743ff6d766157cd99588f240c246.avif)\n\n**Fig. 1. Colony PCR verification of the Level 2 CcasR-SamyQ-AcdS 2.1-Histag construct.** Lanes 1 through 11 represent individual colonies screened using CcaSm3 fw and CcaR rv primers. The electrophoresis results highlight that lanes 1 through 11 yield a band around the expected size of 632 basepairs.\u00a0\n\n![](https://registry.igem.wiki/documentation/ceb2e430-3a0a-4a10-8496-5d6acb63c0ea/68787dec5c522066ab3a008b06d1c5a2581dfda420e14af37e40128647249b32.avif)\n\n**Fig. 2. Colony PCR verification of the Level 2 CcasR-SamyQ-AcdS 2.1-Histag construct.** Lanes 1 represent individual colonies screened using Ho1:pcyA fw and Ccasm3 rv primers; Lanes 2 represent individual colonies screened using CcaSm3 fw and CcaR rv primers; and Lanes 3 represent colonies screened using CcaR fw and ACCD rv primers. The electrophoresis results indicate that lanes 1, 2 and 3 yield a single band around the expected sizes of 375, 632, and 441 basepairs accordingly.\n\n![](https://registry.igem.wiki/documentation/ceb2e430-3a0a-4a10-8496-5d6acb63c0ea/c751930c77cfbb1cf49bb82e2f9af192a5329e6d5b8007ec28d20d71d27f5953.avif)\n\n**Fig. 3. Clone 1 was sequence-verified and used downstream.**",
+   "lastEditedBy": "Sophie Chen",
+   "authorUUID": "8de7ff3d-7d8b-42ed-a284-c454c5534c3c",
+   "organisationUUID": "3f22886d-da0b-4a5a-8711-7b14b020c9de",
+   "organisation": {
+    "uuid": "3f22886d-da0b-4a5a-8711-7b14b020c9de",
+    "name": "GEMS-Taiwan (2026)",
+    "type": "igem-team",
+    "link": "https://teams.igem.org/6072",
+    "archivedAt": null,
+    "audit": {
+     "created": "2026-07-02T08:04:11.172Z",
+     "updated": "2026-07-02T08:04:11.172Z"
+    }
+   },
+   "updated": "2026-10-21T12:52:24.584Z"
+  },
+  {
+   "uuid": "3ead716b-2e90-4435-b7d4-e39da3431269",
+   "title": "Characterisation",
+   "type": "characterisation",
+   "created": "2026-10-21T13:23:24.019Z",
+   "value": "The circuit depends on light as the external control signal connecting environmental prediction to biological production. We therefore tested the light plate to determine whether it could provide reproducible illumination across the culture area.\n\nThe Light Plate Apparatus (LPA) is an open-source hardware, a 24-well plate with an independently programmable LED under each well, so identical cultures can be held at different red and green light intensities in one experiment. We used it to check whether light can act as a reliable dial for protectant production; we checked whether 2%, 12%, 100% light gives clearly separated levels of expression, and whether any setting slows growth. Growth was read by OD600 and protein production by Western blot, and later by ELISA and DNPH assays.\n\n**OD600**\n\nWe measured OD600 first because we did not know whether our bacteria could grow normally in the LPA under red and green light, especially since green light may place a heavy burden on the cells. The growth curves show that the cultures grew normally under both red and green light at 100% intensity, so light exposure in the LPA does not hinder growth (Figure 1).\n\n![](https://registry.igem.wiki/documentation/3ead716b-2e90-4435-b7d4-e39da3431269/bb80d9f091432a732a04f4a01b5b4471eff201570d879c5319f03cfb4e53aa81.avif)\n\n**Figure 1. OD600 of B. subtilis WB800 carrying CcaSR in the LPA.** OD600 was read at 2, 4, 6, 8 and 24 hr. The left shows red 100% (n=1) and the right green 100% (n=3). Lines join the mean at each time and dots are single tubes. The dashed line is the measured blank (0.057\u20130.061), and the number at the end of each line is the 24 hr value. Through 8 hr both conditions grew alike (OD600 0.09\u20130.29), with more spread among green tubes at 6 hr. At 24 hr red 100% reached 1.026, and green 100% reached 1.017. OD600 reflects turbidity instead of specific protein output.\n\n**Western Blot**\n\nWestern blotting was used to identify and measure ACCD produced after *B. subtilis* is exposed to different intensities of red and green light.\u00a0\n\nBecause we switched from AcdS to AcdS 2.1, we first tested whether ABDQ could be expressed and whether expression changed over time under green-light induction. A short term light response experiment was therefore performed (Figure 2). Supernatant samples were collected at 3, 6, and 8 hr after the onset of green light, following a 16 h dark culture. Western blot showed that the secreted protein was detected at all three time points (Figure 2, left panel). In addition, quantification of the western blot indicated that protectant expression decreased at 8 hr compared with 3 and 6 hr (Figure 2, right panel). These results indicate that the ABDQ circuit is suitable for further experiments.\n\nIn contrast to the short term experiment, we next performed a long-term light response experiment to determine whether short-term induction was sufficient for protectant production (Figure 3). Cells were cultured in the LPA under green or red light for 13-16 h, and supernatant samples were collected at 13 and 16 h. Western blot showed clear, bright bands, indicating high protein accumulation after long term induction (Figure 3, left panel). Quantification showed greater accumulation in the green-light group than in the red-light group (Figure 3, right panel). These results indicate that protectant accumulation is higher under green light than red light, consistent with light dependent regulation.\n\n![](https://registry.igem.wiki/documentation/3ead716b-2e90-4435-b7d4-e39da3431269/59fdb2dd4530d2f6b7e74df3a231852838736f4e7dbe4dc1797f57dfd1379717.avif)\n\n**Figure 2. Western blot analysis of AcdS 2.1 (ABDQ) in *B. subtilis* WB800 carrying CcaSR after an overnight culture, under green light at 100% intensity.** An overnight culture (16 hr) was prepared first and then moved into the LPA, and samples were taken after 3, 6 and 8 hr in the LPA. All lanes are green 100%. A band ran just below the 100 kDa marker all three times. It was strong at 3 hr and 6 hr and weaker at 8 hr.\n\n![](https://registry.igem.wiki/documentation/3ead716b-2e90-4435-b7d4-e39da3431269/ba29fa86398c7c5f46effac07ce9b7f0007a19b625fcd6018b3654dbf26bebd0.avif)\n\n**Figure 3. Western blot analysis of AcdS 2.1 (ABDQ) in *B. subtilis* WB800 carrying CcaSR after 13 h and 16 h in the LPA.** Cultures were put directly into the LPA and each was sampled once, at 13 hr or 16 hr. G, green light; R, red light, both at 100% intensity. A single band ran between the 75 and 100 kDa markers in all four lanes. The green lanes looked somewhat stronger than the red lanes at both times, but the difference is small and has not been quantified.\n\n**ELISA and DNPH Assay**\n\nFollowing the western blot results, ELISA and DNPH assays were introduced as more precise quantitative methods to measure ACCD accumulation and activity under short term and long term light induction. Competitive ELISA replaced the Western blot and estimated how much ACCD was in each sample, as a concentration. The DNPH assay measured ACCD activity by detecting \u03b1-ketobutyrate (\u03b1-KB), the product of the enzyme, and so showed whether the ACCD works. Running both on the same samples separated how much ACCD was present from how active it was. We ran them in two sets of experiments.\n\n\\- Short-term Light Response\n\nThe first set was a new experiment. Cultures were grown for 12 h in the dark, then placed under green or red light, and supernatants were collected 3, 6 and 8 h after illumination began. The ELISA is shown in Figure 4 and the DNPH assay in Figure 5.\n\n![](https://registry.igem.wiki/documentation/3ead716b-2e90-4435-b7d4-e39da3431269/ef5b2ee4ffa5db7771e5de8d42193fba4ee18f856e757e9e1e16e668e0f5a498.avif)\n\n**Figure 4. ELISA of ACCD concentration over time under green and red light.** The ELISA data showed the concentration of ACCD under green or red light following a 12 h dark culture. Supernatants were collected at 3, 6, and 8 h after the onset of illumination. Secreted ACCD levels remained comparable over time and between light conditions. The baseline group corresponds to ACCD concentration measured before illumination began, and WB refers to the plasmid-free negative control. G and R refer to green and red light, respectively.\n\n![](https://registry.igem.wiki/documentation/3ead716b-2e90-4435-b7d4-e39da3431269/18639698c5cc8a087fadf1f8002dc3f01b4a928cbedd7a9d4c3cd8c6c71491b5.avif)\n\n**Figure 5.\u00a0 DNPH assay of ACCD activity over time under green and red light.** The DNPH assay showed ACCD activity under green or red light following a 12 h dark culture. Supernatants were collected at 3, 6, and 8 h after the onset of illumination. The data showed that activity increased over time, and the green-light group showed higher activity than the red-light group. The baseline group corresponds to ACCD activity measured before illumination began. G and R refer to green and red light, respectively.\n\nThe ELISA showed no change over time. ACCD was already present at the baseline (about 3.0 \u00b5g/mL before illumination) and measured 2.6\u20133.2 \u00b5g/mL at every time point under both colors, well above the plasmid-free control (about 1.3 \u00b5g/mL), indicating that the cultures produced ACCD but the amount did not rise with light (Figure 4). In contrast, the DNPH assay showed an increase in activity. Activity rose from the baseline (about 2.7 on the plotted axis) to about 18 under green light and 16 under red light by 8 h, and green was higher than red at every time point (about 8 vs 6 at 3 h, 12 vs 9 at 6 h and 18 vs 16 at 8 h; (Figure 5). However, the gap was clearest at 6 h, and the error bars overlapped at 3 h and 8 h. Taken together, the amount of His-tagged ACCD stayed the same while its activity kept rising and leaned toward green. This may be because the protein takes time to become active: the ELISA counts the His-tagged protein whether or not it is working, whereas the DNPH assay only detects the active enzyme. We have not tested this directly.\n\n\\- Long-term Light Response\n\nThe second set repeated the design of Figure 5. Cultures were placed directly into the LPA under green or red light at 100% intensity, and supernatants were collected at 13 h and 16 h. The ELISA for this set is shown in Figure 6 and the DNPH result in Figure 7.\n\n![](https://registry.igem.wiki/documentation/3ead716b-2e90-4435-b7d4-e39da3431269/e4d3f567128cc439279e27038cdecfc9966e07742a5f00a1d1e14239b176aa86.avif)\n\n**Figure 6. ELISA of ACCD concentration at 13 hr and 16 hr under green and red light.** The ELISA data showed the concentrations of ACCD after 13 and 16 hr of culture under green or red light. Supernatants were collected at each time point. Secreted ACCD levels remained comparable over time and between light conditions. G and R refer to green and red light, respectively.\n\n![](https://registry.igem.wiki/documentation/3ead716b-2e90-4435-b7d4-e39da3431269/eb9f556de867a2cdce159fc616a89e237084d1659a5077a581b8c665cdd84b91.avif)\n\n**Figure 7. DNPH assay of ACCD activity at 13 hr and 16 hr under green and red light.** The DNPH assay showed ACCD activity after 13 and 16 hr of culture under green or red light. Supernatants were collected at each time point. The highest activity was observed at 13 hr under green light, indicating responsiveness to green light. However, it decreased dramatically over the following 3 hr. G and R refer to green and red light, respectively.\n\nThe ELISA showed about 12\u201313 \u00b5g/mL of ACCD in all four conditions, with no clear difference between green and red light or between 13 hr and 16 hr (Figure 9). The DNPH activity did not follow this pattern (Figure 7). At 13 hr, green light gave the highest activity (about 10 nmol \u03b1-KB mL\u207b\u00b9 h\u207b\u00b9, with a large error bar) compared with about 0.7 under red light, which suggests responsiveness to green light. However, by 16 hr the activity under green light had fallen to about 1, while red light was about 3.7. Because the amount of ACCD barely changed while its activity varied, the two assays gave different information, and the 13 hr green result was not repeated at 16 hr.\n\n**Summary**\n\nThe light plate delivered red and green light to the B. subtilis cultures without slowing growth: at 100% intensity, both colors grew alike through 8 h and reached an OD600 of about 1.0 at 24 h (1.026 red, 1.017 green). On Western blots, the original ABDI construct gave an unclear result because the red 100% reference also showed its strongest band at 8 h, so we switched to the codon optimized ABDQ construct. With ABDQ, green light alone switched ACCD expression on, and green lanes were somewhat stronger than red at 13 h and 16 h, although the difference was small and not yet quantified. ELISA and the DNPH assay then gave more precise readings. In the short-term set, the amount of His-tagged ACCD stayed flat while its activity rose over time and leaned toward green, which may be because the protein takes time to become active. In the long-term set, ACCD amounts were again similar under both colors, and the high green-light activity at 13 h was not maintained at 16 h. The similar ELISA values across conditions may be due to too many samples in the LPA at once, so that light from neighboring wells affected each other. In addition, CcaSR needs red light at about 672 nm to switch off, but our red LEDs emit at 640 nm, which may be why red light did not turn expression off efficiently. We have not tested either explanation directly. Taken together, these results suggest that the plate can serve as our light-control platform and that ABDQ is expressed under green light, but they do not yet show a clean, graded response to light intensity. Before relying on light as a control signal, we will quantify the blots against a loading control, add a WB800 lane without the plasmid, and repeat the ELISA and DNPH assays with biological replicates.\n",
+   "lastEditedBy": "Sophie Chen",
+   "authorUUID": "8de7ff3d-7d8b-42ed-a284-c454c5534c3c",
+   "organisationUUID": "3f22886d-da0b-4a5a-8711-7b14b020c9de",
+   "organisation": {
+    "uuid": "3f22886d-da0b-4a5a-8711-7b14b020c9de",
+    "name": "GEMS-Taiwan (2026)",
+    "type": "igem-team",
+    "link": "https://teams.igem.org/6072",
+    "archivedAt": null,
+    "audit": {
+     "created": "2026-07-02T08:04:11.172Z",
+     "updated": "2026-07-02T08:04:11.172Z"
+    }
+   },
+   "updated": "2026-10-21T13:23:24.019Z"
+  },
+  {
+   "uuid": "ab871707-f9ee-46f2-abda-5951f61ce4ab",
+   "title": "Application",
+   "type": "application",
+   "created": "2026-10-21T13:24:20.280Z",
+   "value": "The Level 2 construct ccaSR-SamyQ-AcdS 2.1-Histag (BBa\\_2654HAF3) shows that *Bacillus subtilis* can sense light and respond to it on its own. All four modules sit on a single plasmid. The first makes the chromophore PCB, the second expresses the sensor kinase CcaS-m3, the third expresses the response regulator CcaR, and the fourth secretes ACC deaminase (AcdS 2.1) when green light is present. Because *B. subtilis* does not make PCB, the circuit only works with all four modules together.",
+   "lastEditedBy": "Sophie Chen",
+   "authorUUID": "8de7ff3d-7d8b-42ed-a284-c454c5534c3c",
+   "organisationUUID": "3f22886d-da0b-4a5a-8711-7b14b020c9de",
+   "organisation": {
+    "uuid": "3f22886d-da0b-4a5a-8711-7b14b020c9de",
+    "name": "GEMS-Taiwan (2026)",
+    "type": "igem-team",
+    "link": "https://teams.igem.org/6072",
+    "archivedAt": null,
+    "audit": {
+     "created": "2026-07-02T08:04:11.172Z",
+     "updated": "2026-07-02T08:04:11.172Z"
+    }
+   },
+   "updated": "2026-10-21T13:24:20.280Z"
+  },
+  {
+   "uuid": "92731dac-e693-4c74-9e4b-dd4dc611fc3b",
+   "title": "Discussion",
+   "type": "discussion",
+   "created": "2026-10-21T13:24:38.831Z",
+   "value": "#### Use in plant protection\n\nThe aim is to release plant-protective proteins only when and where they are needed. A secreted ACC deaminase lowers stress ethylene around roots, so it could be used as part of a plant-growth-promoting bioprotectant. Light as the only input offers a practical advantage over circuits that sense stress themselves. Crops differ in their stress thresholds (for example, heat stress starts at about 30 to 37 \u00b0C in *Arabidopsis* but about 35 to 40 \u00b0C in peanut), and a self-sensing strain would have to be redesigned for each stressor and each crop. With light control, a user can set thresholds for each crop through a microcontroller-based sensor that switches the light, without redesigning the genetic circuit. This is the role the circuit plays in our bioreactor system.\n\n#### A modular platform for other protectants\n\nModules 1 to 3 form a reusable light-sensing chassis, and only Module 4 defines the output. Any of our protectant cassettes can in principle be placed behind PcpcG2-veg:\n\n* **AcdS** lowers ethylene levels. This is the version built and tested in the full circuit.\n* **LEA14** protects cellular structures under environmental stress. We did not build the light-responsive Module 4 with LEA14. Instead, we characterized the constitutive LEA14 version to see how it would behave in the whole system, and it also protects plants facing salinity stress. This avoids repeating the same assembly, since ccaSR-AcdS already demonstrates that the concept works.\n* **BoPep4**, a broccoli plant elicitor peptide, activates plant defense responses.\n\nOur constitutive constructs, which use Pveg in place of the light switch, give the maximal secretion and production of each protectant. They also serve as a benchmark for the light-controlled version.\n\n#### Beyond our project\n\nReplacing the xylose-inducible and IPTG-inducible promoters of the published CcaSR system (Castillo-Hair et al., 2019) with constitutive ones means no inducer dosing is required. Other teams can reuse the four-module Level 2 plasmid for any secreted protein, simply by exchanging the output cassette. This makes light-controlled secretion in *B. subtilis* usable beyond plant protection, for example for other enzymes or peptides that should be produced on demand.",
+   "lastEditedBy": "Sophie Chen",
+   "authorUUID": "8de7ff3d-7d8b-42ed-a284-c454c5534c3c",
+   "organisationUUID": "3f22886d-da0b-4a5a-8711-7b14b020c9de",
+   "organisation": {
+    "uuid": "3f22886d-da0b-4a5a-8711-7b14b020c9de",
+    "name": "GEMS-Taiwan (2026)",
+    "type": "igem-team",
+    "link": "https://teams.igem.org/6072",
+    "archivedAt": null,
+    "audit": {
+     "created": "2026-07-02T08:04:11.172Z",
+     "updated": "2026-07-02T08:04:11.172Z"
+    }
+   },
+   "updated": "2026-10-21T13:24:38.831Z"
+  }
+ ],
+ "composition": [
+  {
+   "uuid": "3da53063-bcb8-4aa1-89c3-3f0530424576",
+   "componentUUID": "7d70cb60-bc6e-4dff-9708-072a8f0f41b5",
+   "componentName": "BBa_263IW021",
+   "role": {
+    "uuid": "6b0d75b8-835a-4106-aebf-7f121a129403",
+    "accession": "SO:0001248",
+    "label": "Assembly",
+    "uri": "http://purl.obolibrary.org/obo/SO_0001248",
+    "glyph": "http://sbols.org/visual/v2#UnspecifiedGlyph"
+   },
+   "start": 1,
+   "end": 1734,
+   "strand": "forward"
+  },
+  {
+   "uuid": "b48c8f13-d50f-4768-95b5-c26fbb22d7c7",
+   "componentUUID": "76c8f46c-3fc0-4406-b485-ea73f871344c",
+   "componentName": "BBa_261XH2RS",
+   "role": {
+    "uuid": "6b0d75b8-835a-4106-aebf-7f121a129403",
+    "accession": "SO:0001248",
+    "label": "Assembly",
+    "uri": "http://purl.obolibrary.org/obo/SO_0001248",
+    "glyph": "http://sbols.org/visual/v2#UnspecifiedGlyph"
+   },
+   "start": 1735,
+   "end": 3427,
+   "strand": "forward"
+  },
+  {
+   "uuid": "e2158e20-3029-4e23-8cb3-0c6fa021aed2",
+   "componentUUID": "1bda1f28-782d-4c71-a2c3-ec442b5c5820",
+   "componentName": "BBa_26BDO8AQ",
+   "role": {
+    "uuid": "6b0d75b8-835a-4106-aebf-7f121a129403",
+    "accession": "SO:0001248",
+    "label": "Assembly",
+    "uri": "http://purl.obolibrary.org/obo/SO_0001248",
+    "glyph": "http://sbols.org/visual/v2#UnspecifiedGlyph"
+   },
+   "start": 3428,
+   "end": 4391,
+   "strand": "forward"
+  },
+  {
+   "uuid": "293eeef6-3dad-4ed0-8c98-e073e0cf81c5",
+   "componentUUID": "7d70cb60-bc6e-4dff-9708-072a8f0f41b5",
+   "componentName": "BBa_263IW021",
+   "role": {
+    "uuid": "6b0d75b8-835a-4106-aebf-7f121a129403",
+    "accession": "SO:0001248",
+    "label": "Assembly",
+    "uri": "http://purl.obolibrary.org/obo/SO_0001248",
+    "glyph": "http://sbols.org/visual/v2#UnspecifiedGlyph"
+   },
+   "start": 4392,
+   "end": 6125,
+   "strand": "forward"
+  }
+ ]
+}

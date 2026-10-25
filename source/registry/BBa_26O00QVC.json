@@ -1,0 +1,215 @@
+{
+ "id": "BBa_26O00QVC",
+ "search": {
+  "uuid": "f99ca730-8d37-46a6-b9a6-2cb1075883fc",
+  "name": "BBa_26O00QVC",
+  "slug": "bba-26o00qvc",
+  "status": "published",
+  "title": "SamyQ-Bopep4 15-23-Histag",
+  "description": "This part encodes encodes BoPep4, a 23-residue plant elicitor peptide (PEP) from broccoli (*Brassica oleracea var. italica);* the wild-type BoPep4 sequence is registered as [BBa\\_26ILD3SO](https://registry.igem.org/parts/bba-26ild3so). BoPep4 acts as a peptide hormone and signaling molecule to regulate plant defense mechanisms and salt tolerance. The BoPep4 protein is fused to the alpha-amylase signal peptide (SamyQ) at the N-terminus and a 6x Histag at the C-terminus. In this version of\u2026",
+  "role": {
+   "uuid": "65f1c72e-396c-4d02-b574-af06b3a073a9",
+   "accession": "SO:0000316",
+   "label": "CDS",
+   "deprecated": false,
+   "glyph": "http://sbols.org/visual/v2#CDSGlyph"
+  },
+  "sequenceLength": 141,
+  "audit": {
+   "created": "2026-10-19T02:14:04.263Z",
+   "updated": "2026-10-20T19:26:32.138Z"
+  },
+  "usageCount": 1
+ },
+ "part": {
+  "uuid": "f99ca730-8d37-46a6-b9a6-2cb1075883fc",
+  "name": "BBa_26O00QVC",
+  "slug": "bba-26o00qvc",
+  "status": "published",
+  "title": "SamyQ-Bopep4 15-23-Histag",
+  "description": "This part encodes encodes BoPep4, a 23-residue plant elicitor peptide (PEP) from broccoli (*Brassica oleracea var. italica);* the wild-type BoPep4 sequence is registered as [BBa\\_26ILD3SO](https://registry.igem.org/parts/bba-26ild3so). BoPep4 acts as a peptide hormone and signaling molecule to regulate plant defense mechanisms and salt tolerance. The BoPep4 protein is fused to the alpha-amylase signal peptide (SamyQ) at the N-terminus and a 6x Histag at the C-terminus. In this version of BoPep4, residues 1-14 were deleted.",
+  "role": {
+   "uuid": "65f1c72e-396c-4d02-b574-af06b3a073a9",
+   "accession": "SO:0000316",
+   "label": "CDS",
+   "deprecated": false,
+   "glyph": "http://sbols.org/visual/v2#CDSGlyph"
+  },
+  "topology": {
+   "uuid": "b2bb9a86-0436-40d2-b56a-f2fbef932193",
+   "accession": "SO:0000987",
+   "label": "Linear",
+   "uri": "https://purl.obolibrary.org/obo/SO_0000987",
+   "glyph": null
+  },
+  "licenseUUID": "d6c69ca7-8be4-4bc0-b4a8-d3ae1d428aa6",
+  "source": "doi:10.1016/j.plantsci.2025.112954, doi:10.3390/ijms23063090, doi:10.1038/cr.2014.161, doi:10.1186/1748-7188-6-26, doi:10.1110/ps.051579205",
+  "sequence": "ATGATTCAAAAACGAAAGCGGACAGTTTCGTTCAGACTTGTGCTTATGTGCACGCTGTTATTTGTCAGTTTGCCGATTACAAAAACATCAGCCAGTAGTGGAAAGCCAGGAGGTCATAATCATCATCATCATCATCATTAA",
+  "audit": {
+   "created": "2026-10-19T02:14:04.263Z",
+   "updated": "2026-10-20T19:26:32.138Z"
+  },
+  "chassis": {
+   "designedFor": [
+    {
+     "uuid": "83c626c7-0ef0-4ae8-a6c9-5a00d77f2977",
+     "id": 562,
+     "scientificName": "Escherichia coli",
+     "commonName": null,
+     "rank": "species",
+     "lineageSummary": [
+      "1",
+      "131567",
+      "2",
+      "3379134",
+      "1224",
+      "1236",
+      "91347",
+      "543",
+      "561",
+      "562"
+     ],
+     "documentationUUID": null,
+     "addedBy": {
+      "uuid": "8de7ff3d-7d8b-42ed-a284-c454c5534c3c",
+      "firstName": "Sophie",
+      "lastName": "Chen",
+      "orcidID": null
+     },
+     "addedAt": "2026-10-19T02:14:05.744Z"
+    },
+    {
+     "uuid": "2e9018e1-5a71-4eec-9503-9fd1e065c455",
+     "id": 1423,
+     "scientificName": "Bacillus subtilis",
+     "commonName": null,
+     "rank": "species",
+     "lineageSummary": [
+      "1",
+      "131567",
+      "2",
+      "1783272",
+      "1239",
+      "91061",
+      "1385",
+      "186817",
+      "1386",
+      "653685",
+      "1423"
+     ],
+     "documentationUUID": null,
+     "addedBy": {
+      "uuid": "8de7ff3d-7d8b-42ed-a284-c454c5534c3c",
+      "firstName": "Sophie",
+      "lastName": "Chen",
+      "orcidID": null
+     },
+     "addedAt": "2026-10-19T02:14:05.435Z"
+    }
+   ],
+   "characterisedIn": [],
+   "sourceOrganism": []
+  },
+  "usageCount": 1
+ },
+ "documentation": [
+  {
+   "uuid": "f276ea0e-92e2-410d-8e6e-18f4a566ea1a",
+   "title": "Design",
+   "type": "design",
+   "created": "2026-10-20T12:34:37.217Z",
+   "value": "## Overview\n\nThis part encodes BoPep4, a 23-residue plant elicitor peptide (PEP) from broccoli (*Brassica oleracea var. italica).*\n\nThe part is a translational fusion with three elements, in this order:\n\n1. **SamyQ signal peptide (BBa\\_K1074014):** N-terminal signal peptide of the amyQ gene, which encodes a highly efficient \u03b1-amylase natively found in Bacillus subtilis (and related lineages like Bacillus amyloliquefaciens). Csn and SamyQ were selected as candidates to determine which signal peptide offers higher secretion efficiency.\n2. **Bopep4 \u0394 15-23 (**[BBa\\_26YHOQCL](https://registry.igem.org/parts/bba-26yhoqcl)**):** encodes BoPep4, a 23-residue plant elicitor peptide (PEP) from broccoli (*Brassica oleracea var. italica)*. In this version of BoPep4, residues 15\u201323 were deleted.\n3. **6x Histag:** fused N-terminally to the peptide. This allows detection and quantification of the short peptide after successful assembly and electroporation.\n\nThe complete part was obtained by de novo gene synthesis.\n\n## **About**\n\n* **Biosafety level:** S1\u00a0\n* **Target organism:** *Bacillus subtilis* \\[168 / WB800]\n* **Main purpose of use:** negative control for the truncation series. It is the nine C-terminal residues, chosen because the AtPep1 literature shows activity collapses at this length. Any positive result is only meaningful with a construct that should fail sitting next to it.\n* **Potential application:**&#x20;\n  * A cheap second negative control in a dose-response assay, alongside every reported positive.\n  * A benchmark for testing whether simulation acceptance criteria can separate binders from non-binders, since it passed a checklist it was expected to fail.\n  * A guide to the minimal active region of BoPep4, for designing shorter variants.\n\n## Literature\n\n**Why we built it**\n\n**A positive result is only worth as much as the control next to it.** Our truncation series needed one construct that should not work, so that the constructs that do work mean something. BoPep4 15\u201323 is that construct. It was ordered to fail.\n\n**The literature chose the fragment for us.** Pearce and colleagues ran exactly this experiment on AtPep1, the Arabidopsis peptide BoPep4 is modelled on. Removing residues from the N-terminus barely changed activity down to AtPep1(9\u201323) \u2014 but activity was completely abolished when nine C-terminal amino acids remained. BoPep4 15\u201323 **is** those nine residues. The smallest fragment still active in their hands was 14\u201323, one residue longer. So the cut point is not arbitrary: it is one residue past a measured activity cliff, on the peptide family our part belongs to.\n\n**Our own docking agreed before we ran anything.** We docked the whole ladder \u2014 1\u201323 down to 17\u201323, 17 peptides against the PEPR1 ectodomain \u2014 with two independent methods. 15\u201323 sits at the bottom of both: a HADDOCK score of -97.8 kcal/mol against -197.8 for the wild type, and an AlphaFold3 interface confidence of 0.63 against 0.82. Figure T-1.\n\n**What it keeps, and what it gives up**\n\nThis is where the construct stopped being routine. 15\u201323 keeps **all eight** of the crystallographic contacts Tang and colleagues identified, and 49.8 % of the total contact occupancy our wild-type simulation measures. What it loses is everything the N-terminal half was doing: **17 receptor partners** at 50 % occupancy or better, 5 of them tyrosines, and two salt bridges that are present in almost every frame of the wild-type run \u2014 Arg9\u2013Asp179 at 99.3 % and Lys7\u2013Asp129 at 96.4 %. Figure T-2.\n\nSo the fragment was expected to sit in the groove by its C-terminal anchor and fall out, because half the interface that holds it there is gone.\n\n**What we predicted, and what happened**\n\nThe prediction was written into the simulation notebook before the run, and we are quoting it unchanged:\u00a0\n\n*\u201cThe acceptance criteria are EXPECTED TO FAIL here. That is the result, not an error.\u201d*\n\n**Four of four passed.** Over 30 ns, 15\u201323 held the Asn23\u2013Arg487 salt bridge for 99.9 % of frames and full clamp integrity for 99.9 % \u2014 against 100.0 % and 100.0 % for the full-length wild type. Its peptide RMSD, 1.83 \u00c5, is lower than the wild type's 2.77 \u00c5. By every measure we had written down, the negative control is indistinguishable from the molecule it was meant to be the opposite of. Figures T-3 and T-4.\n\n**What we take from it \u2014 and what we do not claim**\n\n**We are not claiming 15\u201323 is active.** Pearce measured the AtPep1 equivalent as inactive, and we have no activity data of our own on BoPep4. A peptide can stay in a groove for 30 ns and still be a poor binder; residence on this timescale is not affinity.\n\n**What the run does establish is about our method, and it is the more useful result.** A 30 ns simulation scored on a contact checklist measures whether a modelled pose is self-consistent \u2014 not whether a peptide binds. The checklist had eight contacts on it, 15\u201323 keeps all eight, and so the checklist cannot separate it from the wild type. The 17 partners and two salt bridges it loses were never on the list. The negative control did its job by failing to fail: it showed us the limits of our own acceptance criteria before we read anything into them.\n\n**This also reframes the rest of the panel.** The ordered minimal construct 9\u201323 is the weakest system we simulated at pH 7 (Arg487 81.1 %, clamp 77.1 %), weaker than the fragment we built to be dead. Any ranking of these constructs by simulation alone should be treated as untested until a dose\u2013response measures them.\n\n**What would settle it:** a dose\u2013response assay. 15\u201323 is cheap to include and, if the literature transfers, it is a free second negative control for every positive we report.\n\n## Dry lab / computational analysis\n\n\n\n![](https://registry.igem.wiki/documentation/ee99915c-c6fa-4df0-9249-53c418ad9dc6/c0ae657fc1d1f7ccbee27e8f44d6535bb0f4bdffa9f32e1e20c8539c3aca25fc.avif)\n\n**Figure 1. Where 15\u201323 sits in the truncation ladder.** Every N-terminal truncation of BoPep4 from 1\u201323 to 17\u201323 docked against the PEPR1 ectodomain by two independent methods: AlphaFold3 interface confidence (ipTM, green, left axis) and HADDOCK score (grey, right axis; more negative is better). 15\u201323 is circled in red: HADDOCK -97.8 kcal/mol and ipTM 0.63, against -197.8 and 0.82 for the wild type. The background shading marks what Pearce and colleagues measured on the equivalent AtPep1 fragments \u2014 active down to 14\u201323, inactive at 15\u201323 and shorter. Two honest notes. The ipTM minimum falls at 14\u201323, which is the shortest **active** fragment in Pearce's hands, so the computed cliff and the measured cliff do not land on the same residue. And no ipTM value was returned for 2\u201323, which is why the green line is broken there. Docking ranks engagement, not affinity; it was used here to choose where to sample the ladder, not to predict potency.\n\n\n\n![](https://registry.igem.wiki/documentation/ee99915c-c6fa-4df0-9249-53c418ad9dc6/a1dda76e26ac032ee68efd1155252378488f110b5473999adfbb0f0e2cb0577a.avif)\n\n**Figure 2. 15\u201323 keeps every checklist contact and gives up half the interface.** (a) Total contact occupancy contributed by each BoPep4 residue, summed over all receptor residues, measured on the 30 ns wild-type trajectory. Residues 1\u201314, lost in this construct, are red; residues 15\u201323, retained, are teal. (b) The ledger. 15\u201323 retains 49.8 % of total contact occupancy and all eight of the crystallographic contacts, but loses 17 receptor partners at 50 % occupancy or better \u2014 5 of them tyrosines \u2014 and two near-permanent salt bridges, Arg9\u2013Asp179 (99.3 % of frames) and Lys7\u2013Asp129 (96.4 %). The Asn23 carboxylate\u2013Arg487 salt bridge, present in 100 % of wild-type frames, is retained. Receptor residues are in the original PEPR1 numbering. This is the structural reason the construct was expected to fail: the anchor survives, the shelf that holds the peptide against the groove does not.\n\n\n\n![](https://registry.igem.wiki/documentation/ee99915c-c6fa-4df0-9249-53c418ad9dc6/c8817e5e189a17a9f7d0e8fff92cf2352cfe30231dd8a1bc9c9aab45c9867fff.avif)\n\n**Figure 3. The negative control behaves like the wild type.** Four systems over 30 ns, 1,500 frames each, smoothed with a 500 ps rolling average for legibility. (a) Receptor backbone movement. (b) Peptide movement measured in the receptor's frame, so the trace reports displacement within the groove rather than the peptide's own flexibility. (c) Shortest heavy-atom distance across the Asn23\u2013Arg487 salt bridge. (d) Clamp integrity, the number of the four defining contacts made per frame. In (c) and (d) the 15\u201323 trace (teal) lies on top of the wild type (green) for the whole run, while the ordered 9\u201323 construct (orange) repeatedly opens and closes. Dotted lines are the pre-registered acceptance gates. OpenMM 8, AMBER ff19SB, OPC water, 0.15 M NaCl, full 710-residue PEPR1 ectodomain, about 127,000 atoms, single run per system.\n\n\n\n![](https://registry.igem.wiki/documentation/ee99915c-c6fa-4df0-9249-53c418ad9dc6/6f90097d0ba9368d52fc2b67a5266963d78f4661ff939a11ab4ce799b2e263ac.avif)\n\n**Figure 4. What we predicted against what we measured.** The four acceptance criteria were written down before the simulation ran, together with the explicit prediction that this construct would fail all of them. It passed all four: receptor C\u03b1 RMSD 2.10 \u00c5, peptide backbone RMSD 1.83 \u00c5, Asn23\u2013Arg487 within 4 \u00c5 for 99.9 % of frames, and clamp integrity at or above 3 of 4 for 100.0 %. We report this as the result rather than adjusting the criteria afterwards. The criteria were not wrong about the chemistry \u2014 they were measuring something other than binding.\n\n## **References**\n\n**1.**\u00a0 Pearce, G., Yamaguchi, Y., Munske, G. & Ryan, C. A. (2008) Structure-activity studies of AtPep1, a plant peptide signal involved in the innate immune response. Peptides 29, 2083-2089.\u00a0 doi:10.1016/j.peptides.2008.08.019\u00a0 *\u2014 the measured activity cliff; the nine-residue fragment is inactive*\n\n**2.**\u00a0 Tang, J., Han, Z., Sun, Y., Zhang, H., Gong, X. & Chai, J. (2015) Structural basis for recognition of an endogenous peptide by the plant receptor kinase PEPR1. Cell Research 25, 110-120.\u00a0 doi:10.1038/cr.2014.161\u00a0 *\u2014 PDB 5GR8; the eight contacts and the Asn23-Arg487 salt bridge*\n\n**3.**\u00a0 Wang, A., Guo, J., Wang, S., Zhang, Y., Lu, F., Duan, J., Liu, Z. & Ji, W. (2022) BoPEP4, a C-terminally encoded plant elicitor peptide from broccoli, plays a role in salinity stress tolerance. International Journal of Molecular Sciences 23, 3090.\u00a0 doi:10.3390/ijms23063090\u00a0 *\u2014 BoPep4 itself*\n\n**4.**\u00a0 Abramson, J. et al. (2024) Accurate structure prediction of biomolecular interactions with AlphaFold3. Nature 630, 493-500.\u00a0 doi:10.1038/s41586-024-07487-w\u00a0 *\u2014 the ipTM values in Figure T-1*\n\n**5.**\u00a0 Dominguez, C., Boelens, R. & Bonvin, A. M. J. J. (2003) HADDOCK: a protein-protein docking approach based on biochemical or biophysical information. Journal of the American Chemical Society 125, 1731-1737.\u00a0 doi:10.1021/ja026939x\u00a0 *\u2014 the HADDOCK scores in Figure T-1*\n\n**6.**\u00a0 Eastman, P., Galvelis, R., Pelaez, R. P. et al. (2024) OpenMM 8: molecular dynamics simulation with machine learning potentials. Journal of Physical Chemistry B 128, 109-116.\u00a0 doi:10.1021/acs.jpcb.3c06662\u00a0 *\u2014 the MD engine*\n\n**7.**\u00a0 Tian, C., Kasavajhala, K., Belfon, K. A. A. et al. (2020) ff19SB: amino-acid-specific protein backbone parameters trained against quantum mechanics energy surfaces in solution. Journal of Chemical Theory and Computation 16, 528-552.\u00a0 doi:10.1021/acs.jctc.9b00591\u00a0 *\u2014 the protein force field*\n\n**8.**\u00a0 Izadi, S., Anandakrishnan, R. & Onufriev, A. V. (2014) Building water models: a different approach. Journal of Physical Chemistry Letters 5, 3863-3871.\u00a0 *\u2014 the OPC water model*\n\n**9.** Li, R., Liu, M., Hu, X., Li, J., Pang, Q., Yan, X., Li, J., & Ji, W. (2026). Broccoli plant elicitor peptide BoPep4 enhances plant salt tolerance by improving glucosinolate metabolism. *Plant Science, 364, 112954.*",
+   "lastEditedBy": "Sophie Chen",
+   "authorUUID": "8de7ff3d-7d8b-42ed-a284-c454c5534c3c",
+   "organisationUUID": "3f22886d-da0b-4a5a-8711-7b14b020c9de",
+   "organisation": {
+    "uuid": "3f22886d-da0b-4a5a-8711-7b14b020c9de",
+    "name": "GEMS-Taiwan (2026)",
+    "type": "igem-team",
+    "link": "https://teams.igem.org/6072",
+    "archivedAt": null,
+    "audit": {
+     "created": "2026-07-02T08:04:11.172Z",
+     "updated": "2026-07-02T08:04:11.172Z"
+    }
+   },
+   "updated": "2026-10-20T12:34:37.217Z"
+  },
+  {
+   "uuid": "24b4addf-f9a1-4536-a06c-d02d09006fe3",
+   "title": "Experiment",
+   "type": "experiment",
+   "created": "2026-10-20T12:36:00.908Z",
+   "value": "This CDS was incorporated in Pveg-EEBD-RBS0-SamyQ-Bopep4 \u0394 15-23-B0015 by de novo gene synthesis.",
+   "lastEditedBy": "Sophie Chen",
+   "authorUUID": "8de7ff3d-7d8b-42ed-a284-c454c5534c3c",
+   "organisationUUID": "3f22886d-da0b-4a5a-8711-7b14b020c9de",
+   "organisation": {
+    "uuid": "3f22886d-da0b-4a5a-8711-7b14b020c9de",
+    "name": "GEMS-Taiwan (2026)",
+    "type": "igem-team",
+    "link": "https://teams.igem.org/6072",
+    "archivedAt": null,
+    "audit": {
+     "created": "2026-07-02T08:04:11.172Z",
+     "updated": "2026-07-02T08:04:11.172Z"
+    }
+   },
+   "updated": "2026-10-20T12:36:00.908Z"
+  },
+  {
+   "uuid": "a0bd8a6d-8827-4ce1-a7d8-a8c0579f28c1",
+   "title": "Application",
+   "type": "application",
+   "created": "2026-10-20T12:36:34.905Z",
+   "value": "This part was designed for the GEMS-Taiwan 2026 iGEM team\u2019s work on a Stress-Responsive Optogenetic Bioreactor for Precision Plant Protection and is used in the construction of the composite part:\n\n* **Pveg-EEBD-RBS0-SamyQ-Bopep4 \u0394 15-23-Histag-B0015** ([BBa\\_26Z8FHTR](https://registry.igem.org/parts/bba-26z8fhtr)): this Protectant Module constitutively expresses potential stress-mitigation proteins and enables evaluation of their secretion and detection, with its constitutive promoter Pveg, RBS EEBD-RBS0, and terminator B0015.",
+   "lastEditedBy": "Sophie Chen",
+   "authorUUID": "8de7ff3d-7d8b-42ed-a284-c454c5534c3c",
+   "organisationUUID": "3f22886d-da0b-4a5a-8711-7b14b020c9de",
+   "organisation": {
+    "uuid": "3f22886d-da0b-4a5a-8711-7b14b020c9de",
+    "name": "GEMS-Taiwan (2026)",
+    "type": "igem-team",
+    "link": "https://teams.igem.org/6072",
+    "archivedAt": null,
+    "audit": {
+     "created": "2026-07-02T08:04:11.172Z",
+     "updated": "2026-07-02T08:04:11.172Z"
+    }
+   },
+   "updated": "2026-10-20T12:57:05.581Z"
+  }
+ ],
+ "composition": [
+  {
+   "uuid": "34803c2f-7ea8-475a-b250-66eb5690dfe2",
+   "componentUUID": "affa5457-936a-4c03-b18c-6ddc1f290560",
+   "componentName": "BBa_K1074014",
+   "role": {
+    "uuid": "65f1c72e-396c-4d02-b574-af06b3a073a9",
+    "accession": "SO:0000316",
+    "label": "CDS",
+    "uri": "http://purl.obolibrary.org/obo/SO_0000316",
+    "glyph": "http://sbols.org/visual/v2#CDSGlyph"
+   },
+   "start": 1,
+   "end": 93,
+   "strand": "forward"
+  },
+  {
+   "uuid": "a45d31cb-628e-4988-a237-fd057407f5bf",
+   "componentUUID": "a59fad99-1663-431b-87a4-b2539d5497e3",
+   "componentName": "BBa_26YHOQCL",
+   "role": {
+    "uuid": "65f1c72e-396c-4d02-b574-af06b3a073a9",
+    "accession": "SO:0000316",
+    "label": "CDS",
+    "uri": "http://purl.obolibrary.org/obo/SO_0000316",
+    "glyph": "http://sbols.org/visual/v2#CDSGlyph"
+   },
+   "start": 94,
+   "end": 120,
+   "strand": "forward"
+  }
+ ]
+}

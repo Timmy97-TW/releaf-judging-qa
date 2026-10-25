@@ -1,0 +1,191 @@
+{
+ "id": "BBa_265CD14Z",
+ "search": {
+  "uuid": "d44d57d2-79fc-4a0e-a12f-04ff94cc05f0",
+  "name": "BBa_265CD14Z",
+  "slug": "bba-265cd14z",
+  "status": "published",
+  "title": "BoPep4",
+  "description": "This part encodes BoPep4, a 23-residue plant elicitor peptide (PEP) from broccoli (*Brassica oleracea var. italica).* BoPep4 acts as a peptide hormone and signaling molecule to regulate plant defense mechanisms and salt tolerance. The BoPep4 coding sequence was codon-optimized for *B. subtilis*.",
+  "role": {
+   "uuid": "65f1c72e-396c-4d02-b574-af06b3a073a9",
+   "accession": "SO:0000316",
+   "label": "CDS",
+   "deprecated": false,
+   "glyph": "http://sbols.org/visual/v2#CDSGlyph"
+  },
+  "sequenceLength": 69,
+  "audit": {
+   "created": "2026-10-15T04:41:06.800Z",
+   "updated": "2026-10-17T07:34:15.965Z"
+  },
+  "usageCount": 1
+ },
+ "part": {
+  "uuid": "d44d57d2-79fc-4a0e-a12f-04ff94cc05f0",
+  "name": "BBa_265CD14Z",
+  "slug": "bba-265cd14z",
+  "status": "published",
+  "title": "BoPep4",
+  "description": "This part encodes BoPep4, a 23-residue plant elicitor peptide (PEP) from broccoli (*Brassica oleracea var. italica).* BoPep4 acts as a peptide hormone and signaling molecule to regulate plant defense mechanisms and salt tolerance. The BoPep4 coding sequence was codon-optimized for *B. subtilis*.",
+  "role": {
+   "uuid": "65f1c72e-396c-4d02-b574-af06b3a073a9",
+   "accession": "SO:0000316",
+   "label": "CDS",
+   "deprecated": false,
+   "glyph": "http://sbols.org/visual/v2#CDSGlyph"
+  },
+  "topology": {
+   "uuid": "b2bb9a86-0436-40d2-b56a-f2fbef932193",
+   "accession": "SO:0000987",
+   "label": "Linear",
+   "uri": "https://purl.obolibrary.org/obo/SO_0000987",
+   "glyph": null
+  },
+  "licenseUUID": "d6c69ca7-8be4-4bc0-b4a8-d3ae1d428aa6",
+  "source": "doi:10.1016/j.plantsci.2025.112954, doi:10.3390/ijms23063090",
+  "sequence": "GGCATTTTAATTGGATCAAAAAAAAGACCGAGAGAACCGCATTCATCAGGAAAACCGGGAGGACATAAT",
+  "audit": {
+   "created": "2026-10-15T04:41:06.800Z",
+   "updated": "2026-10-17T07:34:15.965Z"
+  },
+  "chassis": {
+   "designedFor": [
+    {
+     "uuid": "0a0535a9-5e1e-43a0-a8ac-594496767e20",
+     "id": 562,
+     "scientificName": "Escherichia coli",
+     "commonName": null,
+     "rank": "species",
+     "lineageSummary": [
+      "1",
+      "131567",
+      "2",
+      "3379134",
+      "1224",
+      "1236",
+      "91347",
+      "543",
+      "561",
+      "562"
+     ],
+     "documentationUUID": null,
+     "addedBy": {
+      "uuid": "8de7ff3d-7d8b-42ed-a284-c454c5534c3c",
+      "firstName": "Sophie",
+      "lastName": "Chen",
+      "orcidID": null
+     },
+     "addedAt": "2026-10-15T04:41:07.501Z"
+    },
+    {
+     "uuid": "53c3ffa4-c080-4f2b-b6b4-869d1474c3b2",
+     "id": 1423,
+     "scientificName": "Bacillus subtilis",
+     "commonName": null,
+     "rank": "species",
+     "lineageSummary": [
+      "1",
+      "131567",
+      "2",
+      "1783272",
+      "1239",
+      "91061",
+      "1385",
+      "186817",
+      "1386",
+      "653685",
+      "1423"
+     ],
+     "documentationUUID": null,
+     "addedBy": {
+      "uuid": "8de7ff3d-7d8b-42ed-a284-c454c5534c3c",
+      "firstName": "Sophie",
+      "lastName": "Chen",
+      "orcidID": null
+     },
+     "addedAt": "2026-10-15T04:41:07.889Z"
+    }
+   ],
+   "characterisedIn": [
+    {
+     "uuid": "3ee199d0-55d9-4d31-b6e9-0b1a7188db34",
+     "id": 668369,
+     "scientificName": "Escherichia coli DH5[alpha]",
+     "commonName": null,
+     "rank": "strain",
+     "lineageSummary": [
+      "1",
+      "131567",
+      "2",
+      "3379134",
+      "1224",
+      "1236",
+      "91347",
+      "543",
+      "561",
+      "562",
+      "668369"
+     ],
+     "documentationUUID": null,
+     "addedBy": {
+      "uuid": "bf88b316-183f-4ca1-9623-f6d8f90bfc2d",
+      "firstName": "Yashan",
+      "lastName": "Yu",
+      "orcidID": null
+     },
+     "addedAt": "2026-10-17T07:27:29.650Z"
+    }
+   ],
+   "sourceOrganism": []
+  },
+  "usageCount": 1
+ },
+ "documentation": [
+  {
+   "uuid": "db789e4a-bc1e-43a6-8afd-de6ca8e4cbc4",
+   "title": "Design",
+   "type": "design",
+   "created": "2026-10-18T07:03:24.521Z",
+   "value": "## **About**\n\n* **Biosafety level:** S1\u00a0\n* **Target organism:** *Bacillus subtilis* \\[168 / WB800]\u00a0\n\n## Dry lab / computational analysis\n\n![](https://registry.igem.wiki/documentation/db789e4a-bc1e-43a6-8afd-de6ca8e4cbc4/b8766a706c1563004798167ebc968c6c37fb1bdc8ab7e6f71e9a6c0a198a09bd.avif)\n\n**Figure ST-3. BoPep4 bound to the plant receptor PEPR1.** (a) The PEPR1 ectodomain, residues 29-738 (710 modelled), shown as a grey surface, with BoPep4 \u2014 BoPep4 1-23, Gly1 to Asn23 \u2014 in orange, lying in the inner groove of the leucine-rich-repeat solenoid. This is the starting structure of every molecular dynamics run in this document, threaded onto the 5GR8 (PEPR1-AtPep1) crystal structure of PEPR1 with AtPep1. Teal patches are the eight crystallographic contact residues: Asp273, Val297, Asp348, Phe371, Asp441, Ile443, Asn465, Arg487. (b) The Asn23 clamp, the interaction the peptide works through. The free C-terminal carboxylate of Asn23 is gripped by the Arg487 guanidinium (orange dashes); Asn465 and Asp441 complete the clamp. This is the contact that the molecular dynamics tracks, and the one a C-terminal purification tag destroys. BoPep4 is a 23-amino-acid plant elicitor peptide from broccoli. Binding PEPR1 switches on the plant's own salt-tolerance response, so a small amount of secreted peptide produces a plant-side effect. The pose is a model, not an experimental structure of BoPep4 with PEPR1.\n\n## **References**\n\n1. Wang, A., Guo, J., Wang, S., Zhang, Y., Lu, F., Duan, J., Liu, Z., & Ji, W. (2022). BoPEP4, a C-Terminally Encoded Plant Elicitor Peptide from Broccoli, Plays a Role in Salinity Stress Tolerance. International Journal of Molecular Sciences, 23(6), 3090\u20133090. [<u>https://doi.org/10.3390/ijms23063090</u>](https://doi.org/10.3390/ijms23063090)\n2. Li, R., Liu, M., Hu, X., Li, J., Pang, Q., Yan, X., Li, J., & Ji, W. (2026). Broccoli plant elicitor peptide BoPep4 enhances plant salt tolerance by improving glucosinolate metabolism. Plant Science, 364, 112954.",
+   "lastEditedBy": "Sophie Chen",
+   "authorUUID": "8de7ff3d-7d8b-42ed-a284-c454c5534c3c",
+   "organisationUUID": "3f22886d-da0b-4a5a-8711-7b14b020c9de",
+   "organisation": {
+    "uuid": "3f22886d-da0b-4a5a-8711-7b14b020c9de",
+    "name": "GEMS-Taiwan (2026)",
+    "type": "igem-team",
+    "link": "https://teams.igem.org/6072",
+    "archivedAt": null,
+    "audit": {
+     "created": "2026-07-02T08:04:11.172Z",
+     "updated": "2026-07-02T08:04:11.172Z"
+    }
+   },
+   "updated": "2026-10-20T11:47:08.056Z"
+  },
+  {
+   "uuid": "ccff5670-6871-4c50-85fe-1d1c9afdb5e9",
+   "title": "Application",
+   "type": "application",
+   "created": "2026-10-18T07:08:01.918Z",
+   "value": "This part was designed for the GEMS-Taiwan 2026 iGEM team\u2019s work on a Stress-Responsive Optogenetic Bioreactor for Precision Plant Protection and is used in the construction of composite parts:\n\n* **BoPep4 2.1 (**[<u>BBa\\_26LYCBW0</u>](https://registry.igem.org/parts/bba-26lycbw0)): In this variant, the first 15 codons of the BoPep4 coding sequence were optimized to improve the mRNA secondary structure of the translation start site.\n* **BoPep4 2.2 (**[<u>BBa\\_26ERHWWI</u>](https://registry.igem.org/parts/bba-26erhwwi)): This is a second optimized variant of the first 15 codons of the BoPep4 coding sequence, designed with the same aim of improving the mRNA secondary structure of the translation start site.\n* **SamyQ-BoPep4-Histag** ([<u>BBa\\_26ILD3SO</u>](https://registry.igem.org/parts/bba-26ild3so)): The BoPep4 protein, a C-terminally encoded plant elicitor peptide derived from broccoli, is fused to the SamyQ signal peptide at the N-terminus and a 6x Histag at the C-terminus.\n* **Pveg-EEBD-RBS0-SamyQ-BoPep4-Histag-B0015** ([<u>BBa\\_26FSZTWM</u>](https://registry.igem.org/parts/bba-26fsztwm)): this Protectant Module constitutively expresses potential stress-mitigation proteins and enables evaluation of their secretion and detection, with its constitutive promoter Pveg, RBS EEBD-RBS0, and terminator B0015.",
+   "lastEditedBy": "Sophie Chen",
+   "authorUUID": "8de7ff3d-7d8b-42ed-a284-c454c5534c3c",
+   "organisationUUID": "3f22886d-da0b-4a5a-8711-7b14b020c9de",
+   "organisation": {
+    "uuid": "3f22886d-da0b-4a5a-8711-7b14b020c9de",
+    "name": "GEMS-Taiwan (2026)",
+    "type": "igem-team",
+    "link": "https://teams.igem.org/6072",
+    "archivedAt": null,
+    "audit": {
+     "created": "2026-07-02T08:04:11.172Z",
+     "updated": "2026-07-02T08:04:11.172Z"
+    }
+   },
+   "updated": "2026-10-18T07:08:01.918Z"
+  }
+ ],
+ "composition": []
+}

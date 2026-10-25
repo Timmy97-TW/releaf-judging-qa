@@ -4,7 +4,7 @@
     {
       "name": "qa",
       "runtimeExecutable": "sh",
-      "runtimeArgs": ["-c", "cd /private/tmp/claude-501/-Users-timmy-Documents-Claude-Projects-Releaf-Wiki/8610ac36-3ed7-40af-bf77-496348b3f6e6/scratchpad/serve && python3 -m http.server 8811"],
+      "runtimeArgs": ["-c", "cd /Users/timmy/Documents/Claude/Projects/releaf-judging-qa/docs && exec python3 -m http.server 8811"],
       "port": 8811
     }
   ]

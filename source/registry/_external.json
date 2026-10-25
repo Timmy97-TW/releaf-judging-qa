@@ -1,0 +1,128 @@
+{
+ "BBa_254UKC9E": {
+  "uuid": "7f81686f-7e34-4f5a-8ab8-fa40f9a08d38",
+  "title": "PcpcG2 Green Light-Inducible sfGFP",
+  "slug": "bba-254ukc9e",
+  "role": "Reporter",
+  "len": 1045,
+  "org": "Reporter setup described by Olsen et al. Mol Sys Biol 2017, https://doi.org/10.15252/msb.20167456",
+  "desc": "sfGFP under the regulation of the CcaS-CcaR green optogenetic switch, using the 172 bp truncated PcpcG2 promoter and a B0015 Terminator. sfGFP contains a mutation to remove a native SapI site."
+ },
+ "BBa_B0015": {
+  "uuid": "a0ebeeab-3947-440e-9cf1-f0a47bbc4c33",
+  "title": "double terminator (B0010-B0012)",
+  "slug": "bba-b0015",
+  "role": "Terminator",
+  "len": 129,
+  "org": {},
+  "desc": "Double terminator consisting of BBa_B0010 and BBa_B0012"
+ },
+ "BBa_J23100": {
+  "uuid": "9b3b1fbd-1557-49a5-964a-7f8b491c9101",
+  "title": "constitutive promoter family member",
+  "slug": "bba-j23100",
+  "role": "Promoter",
+  "len": 35,
+  "org": "Isolated from library of promoters",
+  "desc": "Replace later"
+ },
+ "BBa_K1074014": {
+  "uuid": "affa5457-936a-4c03-b18c-6ddc1f290560",
+  "title": "SamyQ",
+  "slug": "bba-k1074014",
+  "role": "CDS",
+  "len": 93,
+  "org": "From recombinant plasmid PHT43.",
+  "desc": "SamyQ is the signal peptide of the amyQ gene encoding an &#945;-amylase in Bacillus subtilis WB800N. Fuse it with the recombinant proteins to obtain the secretion of recombinant proteins in Bacillus s"
+ },
+ "BBa_K143012": {
+  "uuid": "a6f49c0a-83f4-4bd5-a97a-0d18fb4be669",
+  "title": "Promoter veg  a constitutive promoter for B. subtilis",
+  "slug": "bba-k143012",
+  "role": "Regulatory",
+  "len": 97,
+  "org": "The Pveg promoter was suggested to us by Dr. Jan-Willem Veening of Newcastle University. This sequence supplied was compared to that of the DBTBS database<cite>#3</cite> then a section containing the binding site synthesised by Geneart.",
+  "desc": "Pveg is a constitutive promoter that constitutively expresses the P43 protein in ''B.subtilis''. Pveg contains binding sites for the ''B.sutbilis'' major sigma factor<cite>#1</cite>. Pveg in ''B.subti"
+ },
+ "BBa_K1679038": {
+  "uuid": "47ee8c7e-0ee7-4cfb-b4e9-0237a66b508d",
+  "title": "RiboJ",
+  "slug": "bba-k1679038",
+  "role": "Regulatory",
+  "len": 75,
+  "org": "Synthesized by Genewiz.",
+  "desc": "After transcription, RiboJ becomes a section of functional RNA which comprises the sTRSV- ribozyme and an additional 23-nt hairpin immediately downstream to help expose the RBS. STRSV can cleaves the "
+ },
+ "BBa_K2486008": {
+  "uuid": "b9e7d60b-f333-42b2-b8ee-d9d44f78227d",
+  "title": "L3S2P21 Synthetic Terminator",
+  "slug": "bba-k2486008",
+  "role": "Terminator",
+  "len": 61,
+  "org": "Synthetic terminator library by Chen et al.\n\nChen, Y. J., Liu, P., Nielsen, A. A., Brophy, J. A., Clancy, K., Peterson, T., & Voigt, C. A. (2013). Characterization of 582 natural and synthetic terminators and quantification of their design constraints. Nature methods, 10(7), 659-664.",
+  "desc": "Here we describe the synthetic transcriptional terminator L3S2P21 obtained from a library by Chen et al (1). We choose this terminator because of its well-documented characteristics like strength and "
+ },
+ "BBa_K2675031": {
+  "uuid": "4fab7464-705e-4a97-9d53-628862cd7cc1",
+  "title": "L3S2P21 Terminator",
+  "slug": "bba-k2675031",
+  "role": "Terminator",
+  "len": 61,
+  "org": "DNA Synthesis",
+  "desc": "L3S2P21 Terminator"
+ },
+ "BBa_K3317069": {
+  "uuid": "45603d72-3edb-4205-8448-c4cdecfa839d",
+  "title": "ccaSm3*",
+  "slug": "bba-k3317069",
+  "role": "CDS",
+  "len": 1410,
+  "org": "Castillo-Hair, S., Baerman, E., Fujita, M., Igoshin, O., & Tabor, J. (2019). Optogenetic control of Bacillus subtilis gene expression. Nature Communications, 10(1). doi: 10.1038/s41467-019-10906-6",
+  "desc": "Miniaturized version of the fusion protein of light responsive domains of CcaS from Synechocystis sp. For the use as a green light activated sensor in E. coli. Miniaturized sensor kinase miniCcaS#3, w"
+ },
+ "BBa_K4321004": {
+  "uuid": "534bb32b-7dc7-41ba-848b-62e9fbad0ee4",
+  "title": "mScarlet",
+  "slug": "bba-k4321004",
+  "role": "Reporter",
+  "len": 696,
+  "org": "Snapgene",
+  "desc": "RFP"
+ },
+ "BBa_K4354012": {
+  "uuid": "51f60551-5d2a-46c6-b022-58679200008a",
+  "title": "ho1- pcyA gene to express a protein PCB",
+  "slug": "bba-k4354012",
+  "role": "CDS",
+  "len": 1494,
+  "org": "We synthesize it according to its sequence.",
+  "desc": "According to literature, we select CcaS/CcaR system as our green-light regulating path.Ho1- pcyA gene expresses a protein named PCB, which is a light-sensitive protein for downstream gene gruop."
+ },
+ "BBa_K5119033": {
+  "uuid": "5ad18e6a-e740-4791-a59b-992ee394dab1",
+  "title": "sfGFP Reporter Protein",
+  "slug": "bba-k5119033",
+  "role": "CDS",
+  "len": 717,
+  "org": "ABC",
+  "desc": "ABC"
+ },
+ "BBa_K5431017": {
+  "uuid": "b1622924-2697-43fe-a6cf-fd49c6c32cff",
+  "title": "Ccar",
+  "slug": "bba-k5431017",
+  "role": "CDS",
+  "len": 705,
+  "org": "This regulator, along with its sensor partner (CcaS) are derived from the organism &#8203;&#8203;Synechocystis sp. PCC6803 (PCC6803). Originating from this strain of cyanobacteria, the photoreceptor is known as a cyanobacteriochrome (CBCR). The sequence was originally published by Kobayashi et al. in a 2019 ScienceDirect paper.",
+  "desc": "The UV intensity response regulator (CcaR), is the other half of a two-component regulatory system. This type of system is known to consist of the sensor histidine kinase and response regulator, along"
+ },
+ "BBa_K823000": {
+  "uuid": "de4ee3e9-1439-434d-a419-ba19c1f89007",
+  "title": "P<sub>liaG</sub>",
+  "slug": "bba-k823000",
+  "role": "Regulatory",
+  "len": 121,
+  "org": "Bacillus subtilis",
+  "desc": "Promoter of the liaG gene of Bacillus subtilis, weak constitutive"
+ }
+}

@@ -26,23 +26,29 @@ Static HTML and vanilla JavaScript: no build step to view it, no server, works o
 | **181 recorded questions** | What judges actually asked other teams in 2025 and earlier, from the team's own notes |
 | **58 milestones** | The year as a vertical timeline, with 47 of the team's own result figures |
 | **86 figures** | Key figures lifted off the wiki, each one a question in two modes: name it out loud, or pick it out of four |
+| **41 parts** | The whole Registry collection, pulled live from the API: four assembly levels, 101 figures on the pages, and seventeen places a judge who digs will land |
 
 All of it is drawn from the frozen wiki at [2026.igem.wiki/gems-taiwan](https://2026.igem.wiki/gems-taiwan/).
 Nothing is invented. Where the wiki is silent, the answer says so.
 
-## The eight pages
+## The nine pages
 
 1. **Start** — the session facts, the countdown, and five rules that decide the twenty minutes.
 2. **Facts** — searchable fact base, plus the ten numbers to know by heart, plus the honest list.
 3. **Terms** — big search, and a quiz box that keeps rotating. Space reveals, right arrow moves on.
-4. **Mock Room** — a panel generated for the session, a question whose domain stays hidden until you
+4. **Registry Room** — the forty-one parts we deposited, mapped across the four levels they were built
+   in. Click a part and the map lights its lineage while a panel shows everything on its page. Then the
+   five documentation slots and a filing drill, the figures a judge can point at with every band read
+   off them, the numbers that are public under the team's name, seventeen soft spots ranked by how
+   little work they take to find, and a drill in the genre. Built from a live API pull, not from the wiki.
+5. **Mock Room** — a panel generated for the session, a question whose domain stays hidden until you
    call a seat, points, streaks, twenty-second follow-ups, and a card to post when the run ends.
-5. **Figure Room** — the same four judges, but they point at a picture. Eighty-six figures off the
+6. **Figure Room** — the same four judges, but they point at a picture. Eighty-six figures off the
    wiki, ten to a run, filterable by wave and by domain. Two modes: say what it is out loud and mark
    yourself, or pick one of four. Wrong answers go on a shaky list, and the run ends in a card.
-6. **Mic Map** — seven seats, what each one owns, ten double-dip rules, and an assignment drill.
-7. **Delivery** — the shape of a good answer, sentences worth memorising, and eleven habits that cost points.
-8. **Timeline** — the year in evidence: every dated result in the order it happened, with the gel, plate,
+7. **Mic Map** — seven seats, what each one owns, ten double-dip rules, and an assignment drill.
+8. **Delivery** — the shape of a good answer, sentences worth memorising, and eleven habits that cost points.
+9. **Timeline** — the year in evidence: every dated result in the order it happened, with the gel, plate,
    plot or dashboard it produced, filterable by track. Figures are copied into the repo so it works offline.
    Nine entries carry a date worked out from context rather than stated on the wiki; they are marked with a
    tilde, an amber dot and a note saying what the date was inferred from.
@@ -105,6 +111,28 @@ overview.
 
 The images themselves are copied out of `static.igem.wiki` into the repo so the page works offline on
 the day. `.jpg` assets on that CDN answer 403 to a plain fetch; pick the `.webp` of the same figure.
+
+## The Registry pull
+
+The Registry Room is built from the live API, not from the wiki, because the part pages are what a judge
+reads and they change after the wiki freezes. Two scripts:
+
+```bash
+python3 build/registry_pull.py   # api.registry.igem.org -> source/registry/*.json
+python3 build/registry.py        # that, plus source/registry_notes.json -> docs/data/registry.js
+```
+
+`registry_pull.py` walks the organisation listing twenty parts at a time and then fetches the record,
+the documentation and the composition for each one, at about a request a second because the API
+throttles hard. It also resolves the non-ReLEAF parts our composites are built on. A full pull is
+roughly three minutes.
+
+`registry.py` derives the structure and never asks anyone to type it: assembly level comes from the
+composition graph, so a part that gains a component moves on the map by itself, and the flags — no
+documentation, unfilled brackets, has a twin, reused inside other parts, carries the old promoter
+deposit — are computed from the pulled record. Everything written in sentences lives in
+`source/registry_notes.json`: the anatomy of the five documentation slots, the figure readings, the
+soft spots, the drills and the card. That file is edited by hand and is the only place to write prose.
 
 ## Local preview
 

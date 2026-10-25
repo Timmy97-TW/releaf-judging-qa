@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Registry Room · ReLEAF Judging Trainer</title>
+<meta name="description" content="Forty-one parts, four assembly levels, one author. The map of the ReLEAF Registry, the figures on it, and what a judge finds when they open it mid-answer.">
+<link rel="stylesheet" href="assets/css/base.css?v=202610251041">
+<link rel="stylesheet" href="assets/css/pages.css?v=202610251041">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M4 20c0-8 5.5-14.5 16-15.5C19.5 14 14 20 4 20Z' fill='%231a7f45'/%3E%3C/svg%3E">
+</head>
+<body>
+
+<header class="hero wrap">
+  <p class="eyebrow" data-en="03 · Registry Room" data-zh="03 · Registry 會場"></p>
+  <h1 data-en="They open your part page while you are still talking." data-zh="你還在講的時候，他們已經打開你的 part 頁面。"></h1>
+  <p class="lede" style="max-width:60ch"
+     data-en="One student wrote all of it. A judge only needs one line of it. This is the whole Registry laid out so that any question lands somewhere you have already been."
+     data-zh="整個 Registry 是一個人寫的，而評審只需要其中一行。這一頁把整個 Registry 攤開，讓任何問題落下來的地方，你都已經去過。"></p>
+  <div class="reg-stats" id="regstats"></div>
+  <p class="src" id="regpulled" style="margin-top:1rem"></p>
+</header>
+
+<!-- ───────────────── the question that proves judges read it ───────────────── -->
+<section class="wrap" id="asked">
+  <div class="sec-head">
+    <h2 data-en="This is a real question, asked out loud" data-zh="這是一個真的被問出口的問題"></h2>
+    <p data-en="A judge, in a session like yours, having read a team's Registry pages. Read it once at full speed, the way it arrives in the room."
+       data-zh="在一場和你們一樣的會談裡，一位讀過某隊 Registry 頁面的評審。先用正常速度讀一次，就像它在現場抵達你耳朵的樣子。"></p>
+  </div>
+  <div class="reg-quote" id="askedq"></div>
+  <div class="sec-head" style="margin:2.5rem 0 1.25rem">
+    <h3 data-en="Four things that question did at once" data-zh="那個問題同時做了四件事"></h3>
+  </div>
+  <div class="reg-anat" id="askedanat"></div>
+  <div class="note note-a" id="askedans" style="margin-top:1.5rem" data-html></div>
+</section>
+
+<!-- ───────────────── the interactive map ───────────────── -->
+<section class="wrap" id="map">
+  <div class="sec-head">
+    <h2 data-en="The map" data-zh="全圖"></h2>
+    <p data-en="Every part we deposited, in the four levels it was built in. Click one: the column lights up its lineage, and the panel underneath is everything on its page. This is the shape to keep in your head — information you learn later has a box here to go in."
+       data-zh="我們上傳的每一個 part，依照組裝的四個層級排好。點一個：整張圖只亮起它的家族線，下面的面板就是它頁面上的全部內容。這就是要記在腦袋裡的形狀——以後學到的東西，在這裡都有一個格子可以放。"></p>
+  </div>
+
+  <div class="reg-tools">
+    <div class="reg-tool">
+      <h4 id="l-mod"></h4>
+      <div class="chips" id="modchips"></div>
+    </div>
+    <div class="reg-tool">
+      <h4 id="l-lens"></h4>
+      <div class="chips" id="lenschips"></div>
+    </div>
+    <div class="reg-tool reg-tool-find">
+      <h4 id="l-find"></h4>
+      <input class="search reg-find" id="findbox" type="search" autocomplete="off"
+             data-ph-en="BBa_… or a name" data-ph-zh="BBa_… 或名稱">
+    </div>
+  </div>
+
+  <div class="reg-levels" id="levels"></div>
+  <p class="reg-hint" id="maphint"></p>
+
+  <div class="reg-detail" id="detail" hidden></div>
+</section>
+
+<!-- ───────────────── anatomy: where a result goes ───────────────── -->
+<section class="wrap" id="anatomy">
+  <div class="sec-head">
+    <h2 data-en="Where does it go?" data-zh="這東西要放哪裡？"></h2>
+    <p data-en="A part page has five documentation slots and they are not interchangeable. Judges read them as a claim and its evidence, in that order, so a result filed in the wrong slot reads as a result with nothing behind it."
+       data-zh="一個 part 頁面有五個文件欄位，而它們不能互換。評審把它們讀成「主張」與「證據」，順序就是這個順序；放錯欄位的結果，讀起來就像沒有證據的結果。"></p>
+  </div>
+  <div class="reg-slots" id="slots"></div>
+
+  <div class="reg-sort">
+    <div class="reg-sort-head">
+      <h3 data-en="Filing drill" data-zh="歸檔練習"></h3>
+      <p data-en="One line off a real page. Which slot does it belong in?" data-zh="一行真實頁面上的內容。它屬於哪個欄位？"></p>
+    </div>
+    <p class="reg-sort-item" id="sortitem"></p>
+    <div class="chips" id="sortopts"></div>
+    <p class="reg-sort-ans" id="sortans" hidden></p>
+    <div class="btn-row" style="margin-top:1rem">
+      <button class="btn btn-ghost btn-sm" id="sortnext" type="button"></button>
+      <span class="reg-sort-score" id="sortscore"></span>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────────── the figures on the pages ───────────────── -->
+<section class="wrap" id="figures">
+  <div class="sec-head">
+    <h2 data-en="The figures on the pages" data-zh="頁面上的那些圖"></h2>
+    <p data-en="A figure-level question is the one that catches teams, because the answer is not on the wiki — it is in the picture. Each card is one figure a judge can point at, every band it shows, and the sentence to start with."
+       data-zh="會抓到隊伍的，就是這種「圖層級」的問題，因為答案不在 wiki 上——答案在那張圖裡面。每張卡片是一張評審可以指著的圖、它上面的每一條帶，以及要用來開口的那句話。"></p>
+  </div>
+  <div class="chips" id="figfilter" style="margin-bottom:1.25rem"></div>
+  <div class="reg-figs" id="figs"></div>
+</section>
+
+<!-- ───────────────── numbers ───────────────── -->
+<section class="wrap" id="numbers">
+  <div class="sec-head">
+    <h2 data-en="Numbers that live on a part page" data-zh="活在 part 頁面上的數字"></h2>
+    <p data-en="Checkable, public, and in writing under your team's name. If one of these is wrong, it is wrong where a judge can read it off the screen."
+       data-zh="可查、公開，而且是掛著你們隊名寫下來的。這些數字只要有一個錯，就是錯在評審可以直接從螢幕上讀出來的地方。"></p>
+  </div>
+  <input class="search" id="numfind" type="search" autocomplete="off"
+         data-ph-en="Search a number, a part, a band size" data-ph-zh="搜尋數字、part、band 大小" style="margin-bottom:1.1rem">
+  <div class="reg-nums" id="nums"></div>
+</section>
+
+<!-- ───────────────── soft spots ───────────────── -->
+<section class="wrap" id="soft">
+  <div class="sec-head">
+    <h2 data-en="Where a judge who digs will land" data-zh="會挖的評審會落在哪裡"></h2>
+    <p data-en="Ranked by how little work it takes to find. Everything here is visible to anyone with the part page open, so the only question is whether you get there first. Each one ends in a sentence you can say out loud without flinching."
+       data-zh="依照「找到它要花多少力氣」排序。這裡每一項，任何打開 part 頁面的人都看得到，所以唯一的問題是你有沒有先到。每一項最後都給一句可以不皺眉頭說出口的話。"></p>
+  </div>
+  <div class="reg-soft" id="softlist"></div>
+</section>
+
+<!-- ───────────────── drill ───────────────── -->
+<section class="wrap narrow" id="drill">
+  <div class="sec-head">
+    <h2 data-en="Registry drill" data-zh="Registry 練習"></h2>
+    <p data-en="Questions in the genre at the top of this page: specific, visual, and written by someone who has the page open. Answer out loud before you turn the card."
+       data-zh="題目和這一頁最上面那種一樣：具體、看得見，而且出題的人正把頁面開著。先出聲回答，再翻卡片。"></p>
+  </div>
+  <div class="reg-drill" id="drilllist"></div>
+</section>
+
+<!-- ───────────────── the card ───────────────── -->
+<section class="wrap narrow" id="card">
+  <div class="sec-head">
+    <h2 data-en="The card" data-zh="小卡"></h2>
+    <p data-en="If you remember nothing else off this page, remember this. Print it, or read it on the plane."
+       data-zh="這一頁其他都忘了也沒關係，記住這個就好。印出來，或是在飛機上讀。"></p>
+  </div>
+  <ol class="reg-card" id="cardlist"></ol>
+  <p class="note" style="margin-top:1.5rem"
+     data-en="Everything on this page was pulled from the live Registry, not from our wiki. If a part page changes, re-run build/registry_pull.py and build/registry.py and this page changes with it."
+     data-zh="這一頁的內容是從線上 Registry 直接抓下來的，不是從我們的 wiki。如果 part 頁面改了，重跑 build/registry_pull.py 和 build/registry.py，這一頁就跟著改。"></p>
+</section>
+
+<script src="assets/js/site.js?v=202610251041"></script>
+<script src="data/registry.js?v=202610251041"></script>
+<script src="assets/js/registry.js?v=202610251041"></script>
+</body>
+</html>

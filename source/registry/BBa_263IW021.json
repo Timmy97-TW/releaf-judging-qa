@@ -1,0 +1,178 @@
+{
+ "id": "BBa_263IW021",
+ "search": {
+  "uuid": "7d70cb60-bc6e-4dff-9708-072a8f0f41b5",
+  "name": "BBa_263IW021",
+  "slug": "bba-263iw021",
+  "status": "published",
+  "title": "PcpcG2-veg-EEBD-RBS0-SamyQ-AcdS 2.1-Histag-B0015",
+  "description": "This module includes the light-responsive promoter P*cpcG2*-veg, the RBS EEBD-RBS0, a protectant CDS, and the terminator B0015, which together drive the expression of downstream genes in response to green-light signaling in *Bacillus Subtilis* after [BBa\\_26XZYM10](https://registry.igem.org/parts/bba-26xzym10), [BBa\\_261XH2RS](https://registry.igem.org/parts/bba-261xh2rs), and [BBa\\_26BDO8AQ](https://registry.igem.org/parts/bba-26bdo8aq). The CDS\u00a0evaluated was ACC deaminase protein,\u00a0fused to\u2026",
+  "role": {
+   "uuid": "6b0d75b8-835a-4106-aebf-7f121a129403",
+   "accession": "SO:0001248",
+   "label": "Assembly",
+   "deprecated": false,
+   "glyph": "http://sbols.org/visual/v2#UnspecifiedGlyph"
+  },
+  "sequenceLength": 1734,
+  "audit": {
+   "created": "2026-10-21T10:49:17.295Z",
+   "updated": "2026-10-21T10:50:34.465Z"
+  },
+  "usageCount": 1
+ },
+ "part": {
+  "uuid": "7d70cb60-bc6e-4dff-9708-072a8f0f41b5",
+  "name": "BBa_263IW021",
+  "slug": "bba-263iw021",
+  "status": "published",
+  "title": "PcpcG2-veg-EEBD-RBS0-SamyQ-AcdS 2.1-Histag-B0015",
+  "description": "This module includes the light-responsive promoter P*cpcG2*-veg, the RBS EEBD-RBS0, a protectant CDS, and the terminator B0015, which together drive the expression of downstream genes in response to green-light signaling in *Bacillus Subtilis* after [BBa\\_26XZYM10](https://registry.igem.org/parts/bba-26xzym10), [BBa\\_261XH2RS](https://registry.igem.org/parts/bba-261xh2rs), and [BBa\\_26BDO8AQ](https://registry.igem.org/parts/bba-26bdo8aq). The CDS\u00a0evaluated was ACC deaminase protein,\u00a0fused to the SamyQ secretion signal and 6x Histag. Together, these components convert light-induced regulatory signals into measurable visual outputs or stress-mitigation functions.",
+  "role": {
+   "uuid": "6b0d75b8-835a-4106-aebf-7f121a129403",
+   "accession": "SO:0001248",
+   "label": "Assembly",
+   "deprecated": false,
+   "glyph": "http://sbols.org/visual/v2#UnspecifiedGlyph"
+  },
+  "topology": {
+   "uuid": "b2bb9a86-0436-40d2-b56a-f2fbef932193",
+   "accession": "SO:0000987",
+   "label": "Linear",
+   "uri": "https://purl.obolibrary.org/obo/SO_0000987",
+   "glyph": null
+  },
+  "licenseUUID": "d6c69ca7-8be4-4bc0-b4a8-d3ae1d428aa6",
+  "source": "Haller et al., 2025; 10.1007/978-1-0716-4047-0_1, UniProtKB/Swiss-Prot: Q5PWZ8.1, DOI: 10.1139/w98-074, DOI: 10.1016/j.bbapap.2004.09.015",
+  "sequence": "AGCCCATTGTGCTTTTCTCTATCAACCTCAGCTTACCTGAAGGGGTGAACAGGTCTGGGTTAATTCATGTTGCGAAATGTAACAGTTTTAGTCGCATCAGCTAACTTTCCGATTTCTTTACGATTTTCTCCCCCTTTTCTTCAATTTTACTTTGTTATAATAAATGTAGTGAGGTGGACTTCCTAGAATATATATTATGTAAACTCCAGGCATCAAATAAAACGAAAGGCTCAGTCGAAAGACTGGGCCTTTCGTTTTATCTGTTGTTTGTCGGTGAACGCTCTCTACTAGAGTCACACTGGCTCACCTTCGGGTGGGCCTTTCTGCGTTTATAACTTCCTAGAATATATATTATGTAAACTTAAGGAGGAAAAAAAGGTATTAAACAAAATTATTTGTAGAGGCTGTTTCGTCCTCACGGACTCATCAGACCGGAAAGCACATCCGGTGACAGCTGATTAACTAATAAGGAGGACAAACATGATTCAAAAACGAAAGCGGACAGTTTCGTTCAGACTTGTGCTTATGTGCACGCTGTTATTTGTCAGTTTGCCGATTACAAAAACATCAGCCAATTTGAACCGCTTTGAACGCTACCCCCTTACTTTTGGGCCAAGTCCGATCACGCCGTTAAAAAGACTTTCTGAACATCTTGGCGGAAAAGTTGAGCTTTATGCGAAAAGAGAAGACTGCAACAGCGGCCTTGCGTTTGGCGGAAACAAAACACGCAAACTTGAGTATTTAATTCCGGAAGCGATTGAACAAGGATGCGATACACTTGTATCTATCGGCGGCATTCAAAGCAACCAAACACGCCAAGTTGCGGCGGTTGCGGCGCATCTTGGCATGAAATGTGTGCTTGTGCAGGAAAACTGGGTAAACTACTCTGATGCGGTTTATGACCGCGTTGGAAACATTGAAATGAGCCGCATTATGGGAGCTGATGTACGCCTTGATGCGGCAGGCTTTGATATCGGCATCCGCCCGAGCTGGGAGAAAGCGATGTCAGATGTTGTTGAGCGCGGCGGAAAACCGTTCCCGATTCCGGCAGGCTGCTCTGAGCATCCGTACGGCGGCTTAGGCTTTGTCGGCTTTGCTGAAGAAGTGCGCCAGCAAGAGAAAGAGCTTGGCTTTAAATTTGATTACATTGTTGTGTGCTCTGTAACAGGCAGCACACAAGCAGGCATGGTAGTCGGCTTTGCGGCTGATGGCCGCAGCAAAAACGTCATCGGCGTAGATGCATCTGCAAAGCCGGAGCAAACAAAAGCGCAAATTCTGCGCATTGCGCGCCACACAGCGGAGCTTGTTGAGCTTGGCAGAGAGATCACAGAAGAAGATGTTGTGCTTGATACACGCTTTGCTTATCCGGAATACGGCCTTCCGAATGAAGGCACACTTGAAGCGATCCGCCTTTGCGGCAGCCTTGAAGGCGTGTTAACAGATCCGGTTTATGAAGGAAAAAGCATGCACGGCATGATTGAAATGGTGCGCCGCGGAGAGTTCCCGGACGGAAGCAAAGTGCTTTATGCGCATTTAGGCGGAGCGCCGGCGTTAAATGCTTATAGCTTCCTTTTCCGCAACGGACATCATCATCATCATCATTAACCAGGCATCAAATAAAACGAAAGGCTCAGTCGAAAGACTGGGCCTTTCGTTTTATCTGTTGTTTGTCGGTGAACGCTCTCTACTAGAGTCACACTGGCTCACCTTCGGGTGGGCCTTTCTGCGTTTATA",
+  "audit": {
+   "created": "2026-10-21T10:49:17.295Z",
+   "updated": "2026-10-21T10:50:34.465Z"
+  },
+  "chassis": {
+   "designedFor": [
+    {
+     "uuid": "91a3ad91-0320-463c-a3dd-d4d8e10de487",
+     "id": 562,
+     "scientificName": "Escherichia coli",
+     "commonName": null,
+     "rank": "species",
+     "lineageSummary": [
+      "1",
+      "131567",
+      "2",
+      "3379134",
+      "1224",
+      "1236",
+      "91347",
+      "543",
+      "561",
+      "562"
+     ],
+     "documentationUUID": null,
+     "addedBy": {
+      "uuid": "8de7ff3d-7d8b-42ed-a284-c454c5534c3c",
+      "firstName": "Sophie",
+      "lastName": "Chen",
+      "orcidID": null
+     },
+     "addedAt": "2026-10-21T10:49:18.536Z"
+    },
+    {
+     "uuid": "33676a0d-d150-4c83-946c-0a67211d621e",
+     "id": 1423,
+     "scientificName": "Bacillus subtilis",
+     "commonName": null,
+     "rank": "species",
+     "lineageSummary": [
+      "1",
+      "131567",
+      "2",
+      "1783272",
+      "1239",
+      "91061",
+      "1385",
+      "186817",
+      "1386",
+      "653685",
+      "1423"
+     ],
+     "documentationUUID": null,
+     "addedBy": {
+      "uuid": "8de7ff3d-7d8b-42ed-a284-c454c5534c3c",
+      "firstName": "Sophie",
+      "lastName": "Chen",
+      "orcidID": null
+     },
+     "addedAt": "2026-10-21T10:49:18.744Z"
+    }
+   ],
+   "characterisedIn": [],
+   "sourceOrganism": []
+  },
+  "usageCount": 1
+ },
+ "documentation": [],
+ "composition": [
+  {
+   "uuid": "5d8807a4-524a-4de0-9134-63671083139c",
+   "componentUUID": "c04554e4-3b90-4a58-bf50-399753a2bc11",
+   "componentName": "BBa_26GJIT8W",
+   "role": {
+    "uuid": "35e00de3-f02a-4935-9add-72cfb517fa15",
+    "accession": "SO:0000167",
+    "label": "Promoter",
+    "uri": "http://purl.obolibrary.org/obo/SO_0000167",
+    "glyph": "http://sbols.org/visual/v2#PromoterSiteGlyph"
+   },
+   "start": 1,
+   "end": 177,
+   "strand": "forward"
+  },
+  {
+   "uuid": "274d9be4-6e80-45d7-a62a-22feb89f3770",
+   "componentUUID": "d0e17221-fd5b-4b6f-9dd8-d53f42f0eeca",
+   "componentName": "BBa_26V6CPEV",
+   "role": {
+    "uuid": "79d631aa-7dd3-4099-8227-82a84b9c4e3d",
+    "accession": "SO:0005836",
+    "label": "Regulatory Region",
+    "uri": "http://purl.obolibrary.org/obo/SO_0005836",
+    "glyph": "http://sbols.org/visual/v2#UnspecifiedGlyph"
+   },
+   "start": 178,
+   "end": 480,
+   "strand": "forward"
+  },
+  {
+   "uuid": "f5c25eff-5f2c-4295-9d2c-aee6eef6b2e0",
+   "componentUUID": "8a6e3841-2a75-4716-8d0c-548f37844778",
+   "componentName": "BBa_26TOGLX3",
+   "role": {
+    "uuid": "65f1c72e-396c-4d02-b574-af06b3a073a9",
+    "accession": "SO:0000316",
+    "label": "CDS",
+    "uri": "http://purl.obolibrary.org/obo/SO_0000316",
+    "glyph": "http://sbols.org/visual/v2#CDSGlyph"
+   },
+   "start": 481,
+   "end": 1605,
+   "strand": "forward"
+  },
+  {
+   "uuid": "709df365-5b9f-4734-b784-15cf5a125fbb",
+   "componentUUID": "a0ebeeab-3947-440e-9cf1-f0a47bbc4c33",
+   "componentName": "BBa_B0015",
+   "role": {
+    "uuid": "ae5c878a-2fdb-4c2e-b904-e6eb1a1224f2",
+    "accession": "SO:0000141",
+    "label": "Terminator",
+    "uri": "http://purl.obolibrary.org/obo/SO_0000141",
+    "glyph": "http://sbols.org/visual/v2#TerminatorGlyph"
+   },
+   "start": 1606,
+   "end": 1734,
+   "strand": "forward"
+  }
+ ]
+}

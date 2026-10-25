@@ -1,0 +1,863 @@
+[
+ {
+  "uuid": "047d8a66-79ae-4c64-833b-ad7fa1353a5b",
+  "name": "BBa_26Z8FHTR",
+  "slug": "bba-26z8fhtr",
+  "status": "published",
+  "title": "Pveg-EEBD-RBS0-SamyQ-Bopep4 15-23-Histag-B0015",
+  "description": "This **Protectant Module** constitutively expresses potential stress-mitigation proteins and enables evaluation of their secretion and detection, with its constitutive promoter Pveg, RBS EEBD-RBS, and terminator B0015.\u00a0The CDS encodes BoPep4, a 23-residue plant elicitor peptide (PEP) from broccoli (*Brassica oleracea var. italica).* The BoPep4 ([BBa\\_265CD14Z](https://registry.igem.org/parts/bba-265cd14z)) protein is fused to the alpha-amylase signal peptide (SamyQ) at the N-terminus and a 6x\u2026",
+  "role": {
+   "uuid": "6b0d75b8-835a-4106-aebf-7f121a129403",
+   "accession": "SO:0001248",
+   "label": "Assembly",
+   "deprecated": false,
+   "glyph": "http://sbols.org/visual/v2#UnspecifiedGlyph"
+  },
+  "sequenceLength": 670,
+  "audit": {
+   "created": "2026-10-16T16:05:06.053Z",
+   "updated": "2026-10-20T19:24:58.033Z"
+  },
+  "usageCount": 0
+ },
+ {
+  "uuid": "0db08296-7d74-4e3e-853f-b07545b09262",
+  "name": "BBa_26SG0NQQ",
+  "slug": "bba-26sg0nqq",
+  "status": "published",
+  "title": "Pveg-EEBD-RBS0-Csn-LEA14-Histag-B0015",
+  "description": "This **Protectant Module** constitutively expresses potential stress-mitigation proteins and enables evaluation of their secretion and detection, with its constitutive promoter Pveg, RBS EEBD-RBS, and terminator B0015. The CDS of this construct encodes a Late Embryogenesis Abundant 14 protein (LEA14) fused to the Csn signal peptide and a 6x Histag (Csn-LEA14-Histag: [BBa\\_26ZQ1T72](https://registry.igem.org/parts/bba-26zq1t72)).",
+  "role": {
+   "uuid": "6b0d75b8-835a-4106-aebf-7f121a129403",
+   "accession": "SO:0001248",
+   "label": "Assembly",
+   "deprecated": false,
+   "glyph": "http://sbols.org/visual/v2#UnspecifiedGlyph"
+  },
+  "sequenceLength": 1111,
+  "audit": {
+   "created": "2026-10-16T15:48:10.648Z",
+   "updated": "2026-10-17T14:27:17.812Z"
+  },
+  "usageCount": 0
+ },
+ {
+  "uuid": "10faf181-3ff9-4769-be02-474c664a8a62",
+  "name": "BBa_26LTB0W1",
+  "slug": "bba-26ltb0w1",
+  "status": "published",
+  "title": "LEA14",
+  "description": "This part encodes a Late Embryogenesis Abundant 14 protein (LEA14) from *Arabidopsis thaliana* gene *At1g01470.1*, which belongs to LEA\\_2 subgroup. The paper showed overexpression of AtLEA14 enhances salt stress tolerance in *Arabidopsis thaliana*. Therefore, LEA14 is might be the potential gene involved in plant responses to abiotic stress. The LEA14 coding sequence was codon-optimized for *B. subtilis*.",
+  "role": {
+   "uuid": "65f1c72e-396c-4d02-b574-af06b3a073a9",
+   "accession": "SO:0000316",
+   "label": "CDS",
+   "deprecated": false,
+   "glyph": "http://sbols.org/visual/v2#CDSGlyph"
+  },
+  "sequenceLength": 450,
+  "audit": {
+   "created": "2026-10-14T12:10:09.492Z",
+   "updated": "2026-10-17T04:22:44.942Z"
+  },
+  "usageCount": 2
+ },
+ {
+  "uuid": "135dce7a-ce62-450f-99b7-33dac5aa0b9f",
+  "name": "BBa_26ERHWWI",
+  "slug": "bba-26erhwwi",
+  "status": "published",
+  "title": "Bopep4 2.2",
+  "description": "This part encodes BoPep4, a 23-residue plant elicitor peptide (PEP) from broccoli (*Brassica oleracea var. italica);* the wild-type BoPep4 sequence is registered as [BBa\\_26ILD3SO](https://registry.igem.org/parts/bba-26ild3so)*.* BoPep4 acts as a peptide hormone and signaling molecule to regulate plant defense mechanisms and salt tolerance. In this variant, the first 15 codons of the coding sequence were optimized to improve the mRNA secondary structure of the translation start site.",
+  "role": {
+   "uuid": "65f1c72e-396c-4d02-b574-af06b3a073a9",
+   "accession": "SO:0000316",
+   "label": "CDS",
+   "deprecated": false,
+   "glyph": "http://sbols.org/visual/v2#CDSGlyph"
+  },
+  "sequenceLength": 69,
+  "audit": {
+   "created": "2026-10-15T10:00:44.561Z",
+   "updated": "2026-10-17T07:06:13.796Z"
+  },
+  "usageCount": 1
+ },
+ {
+  "uuid": "13b6bd71-3409-45a6-a2e2-813b0d65d6a8",
+  "name": "BBa_26IA55UY",
+  "slug": "bba-26ia55uy",
+  "status": "published",
+  "title": "Pveg-EEBD-RBS0-SamyQ-BoPep4 2.2-Histag-B0015",
+  "description": "This **Protectant Module** constitutively expresses potential stress-mitigation proteins and enables evaluation of their secretion and detection, with its constitutive promoter Pveg, RBS EEBD-RBS, and terminator B0015. The CDS of this construct encodes BoPep4, fused to the SamyQ signal peptide and a 6x Histag (SamyQ-BoPep4 2.2-Histag: [BBa\\_267B69E3](https://registry.igem.org/parts/bba-267b69e3)).",
+  "role": {
+   "uuid": "6b0d75b8-835a-4106-aebf-7f121a129403",
+   "accession": "SO:0001248",
+   "label": "Assembly",
+   "deprecated": false,
+   "glyph": "http://sbols.org/visual/v2#UnspecifiedGlyph"
+  },
+  "sequenceLength": 712,
+  "audit": {
+   "created": "2026-10-16T16:01:13.038Z",
+   "updated": "2026-10-18T02:06:12.335Z"
+  },
+  "usageCount": 0
+ },
+ {
+  "uuid": "1bda1f28-782d-4c71-a2c3-ec442b5c5820",
+  "name": "BBa_26BDO8AQ",
+  "slug": "bba-26bdo8aq",
+  "status": "published",
+  "title": "Pveg-RBS0-ccaR-B0015",
+  "description": "This module consists of CcaR, the response regulator component of the cyanobacterial CcaS/CcaR two-component signaling system, along with the constitutive promoter Pveg, the RBS RBS0, and the terminator B0015. Acting as the intermediary between light perception and gene expression, CcaR receives the phosphoryl group from the green light-activated CcaS and activates transcription from the PcpcG2 promoter. Together, it enables the conversion of environmental light cues into a transcriptional\u2026",
+  "role": {
+   "uuid": "6b0d75b8-835a-4106-aebf-7f121a129403",
+   "accession": "SO:0001248",
+   "label": "Assembly",
+   "deprecated": false,
+   "glyph": "http://sbols.org/visual/v2#UnspecifiedGlyph"
+  },
+  "sequenceLength": 964,
+  "audit": {
+   "created": "2026-10-16T11:22:59.878Z",
+   "updated": "2026-10-17T10:48:29.368Z"
+  },
+  "usageCount": 5
+ },
+ {
+  "uuid": "21874aff-201b-4937-a730-4befa7b9323e",
+  "name": "BBa_26XVQ3FS",
+  "slug": "bba-26xvq3fs",
+  "status": "published",
+  "title": "Pveg-EEBD-RBS0-SamyQ-AcdS 2.1-Histag-B0015",
+  "description": "This **Protectant Module** constitutively expresses potential stress-mitigation proteins and enables evaluation of their secretion and detection, with its constitutive promoter Pveg, RBS EEBD-RBS, and terminator B0015. The CDS of this construct encodes 1-aminocyclopropane-1-carboxylate (ACC) deaminase fused to the SamyQ signal peptide and a 6x Histag (**SamyQ-AcdS 2.1-Histag**: [BBa\\_26TOGLX3](https://registry.igem.org/parts/bba-26toglx3)).",
+  "role": {
+   "uuid": "6b0d75b8-835a-4106-aebf-7f121a129403",
+   "accession": "SO:0001248",
+   "label": "Assembly",
+   "deprecated": false,
+   "glyph": "http://sbols.org/visual/v2#UnspecifiedGlyph"
+  },
+  "sequenceLength": 1654,
+  "audit": {
+   "created": "2026-10-16T15:16:25.336Z",
+   "updated": "2026-10-17T14:23:56.043Z"
+  },
+  "usageCount": 0
+ },
+ {
+  "uuid": "30ffe272-a473-4dfe-9dde-61943e7e27dd",
+  "name": "BBa_26J0GJGZ",
+  "slug": "bba-26j0gjgz",
+  "status": "published",
+  "title": "SamyQ-LEA14 2.1-Histag ",
+  "description": "This part encodes a Late Embryogenesis Abundant 14 protein (LEA14) from *Arabidopsis thaliana* gene *At1g01470.1*, which belongs to LEA\\_2 subgrou&#x70;*;* the wild-type LEA sequence is registered as [BBa\\_26LTB0W1](https://registry.igem.org/parts/bba-26ltb0w1). The paper showed overexpression of AtLEA14 enhances salt stress tolerance in *Arabidopsis thaliana*. Therefore, LEA14 is might be the potential gene involved in plant responses to abiotic stress. The LEA14 protein is fused to the\u2026",
+  "role": {
+   "uuid": "65f1c72e-396c-4d02-b574-af06b3a073a9",
+   "accession": "SO:0000316",
+   "label": "CDS",
+   "deprecated": false,
+   "glyph": "http://sbols.org/visual/v2#CDSGlyph"
+  },
+  "sequenceLength": 564,
+  "audit": {
+   "created": "2026-10-13T00:10:51.214Z",
+   "updated": "2026-10-17T09:40:32.198Z"
+  },
+  "usageCount": 1
+ },
+ {
+  "uuid": "36fbe8f9-6977-4a73-b9c6-407a5c7a8af9",
+  "name": "BBa_26DE5E2Q",
+  "slug": "bba-26de5e2q",
+  "status": "published",
+  "title": "PcpcG2-veg-EEBD-RBS0-SamyQ-AcdS 2.1-Histag-B0015",
+  "description": "This module includes the light-responsive promoter P*cpcG2*-veg, the RBS EEBD-RBS0, a protectant CDS, and the terminator B0015, which together drive the expression of downstream genes in response to green-light signaling in *Bacillus Subtilis* after [BBa\\_26XZYM10](https://registry.igem.org/parts/bba-26xzym10), [BBa\\_261XH2RS](https://registry.igem.org/parts/bba-261xh2rs), and [BBa\\_26BDO8AQ](https://registry.igem.org/parts/bba-26bdo8aq). The CDS\u00a0evaluated was ACC deaminase protein,\u00a0fused to\u2026",
+  "role": {
+   "uuid": "6b0d75b8-835a-4106-aebf-7f121a129403",
+   "accession": "SO:0001248",
+   "label": "Assembly",
+   "deprecated": false,
+   "glyph": "http://sbols.org/visual/v2#UnspecifiedGlyph"
+  },
+  "sequenceLength": 2602,
+  "audit": {
+   "created": "2026-10-16T15:02:42.427Z",
+   "updated": "2026-10-17T11:46:36.636Z"
+  },
+  "usageCount": 1
+ },
+ {
+  "uuid": "40c9f975-bcfb-4450-b86d-5c6bb3c44741",
+  "name": "BBa_26CXI09X",
+  "slug": "bba-26cxi09x",
+  "status": "published",
+  "title": "Pveg-EEBD-RBS0-Csn-AcdS-Histag-B0015",
+  "description": "This **Protectant Module** constitutively expresses potential stress-mitigation proteins and enables evaluation of their secretion and detection, with its constitutive promoter Pveg, RBS EEBD-RBS, and terminator B0015. The CDS of this construct encodes 1-aminocyclopropane-1-carboxylate (ACC) deaminase fused to the Csn signal peptide and a 6x Histag (Csn-AcdS-Histag: [BBa\\_26NXOP7S](https://registry.igem.org/parts/bba-26nxop7s)).",
+  "role": {
+   "uuid": "6b0d75b8-835a-4106-aebf-7f121a129403",
+   "accession": "SO:0001248",
+   "label": "Assembly",
+   "deprecated": false,
+   "glyph": "http://sbols.org/visual/v2#UnspecifiedGlyph"
+  },
+  "sequenceLength": 1669,
+  "audit": {
+   "created": "2026-10-16T15:10:41.502Z",
+   "updated": "2026-10-17T14:23:32.066Z"
+  },
+  "usageCount": 0
+ },
+ {
+  "uuid": "4eb79f0c-d3db-4276-b9f2-ab8d335092ac",
+  "name": "BBa_26XZYM10",
+  "slug": "bba-26xzym10",
+  "status": "published",
+  "title": "PtagC+RBS-Ho1:pcyA-L3S2P21",
+  "description": "The PCB Production Module supplies the chromophore required for light sensing. It consists of the H*o1-pcyA* CDS, along with the PtagC+RBS composite promoter and RBS and the L3S2P21 terminator, which converts endogenous heme into phycocyanobilin (PCB), the chromophore necessary for CcaS photoreceptor activity. PCB enables the light-sensing system to detect and respond to green light.",
+  "role": {
+   "uuid": "6b0d75b8-835a-4106-aebf-7f121a129403",
+   "accession": "SO:0001248",
+   "label": "Assembly",
+   "deprecated": false,
+   "glyph": "http://sbols.org/visual/v2#UnspecifiedGlyph"
+  },
+  "sequenceLength": 1655,
+  "audit": {
+   "created": "2026-10-13T14:30:54.470Z",
+   "updated": "2026-10-17T10:39:39.633Z"
+  },
+  "usageCount": 4
+ },
+ {
+  "uuid": "550ce717-d746-44b3-b3e3-a8eafa7d5f20",
+  "name": "BBa_26VTO4DX",
+  "slug": "bba-26vto4dx",
+  "status": "published",
+  "title": "CDS replacable cassette-mScarlet-I",
+  "description": "This Level 1 module is the customizable output of the optogenetic circuit. It places a replaceable CDS cassette under the control of the green-light-responsive promoter PcpcG2-veg, followed by the EEBD and RBS0 elements and the B0015 terminator. Phosphorylated CcaR activates PcpcG2-veg, so the cassette is expressed in green light and shut off in red light.",
+  "role": {
+   "uuid": "6b0d75b8-835a-4106-aebf-7f121a129403",
+   "accession": "SO:0001248",
+   "label": "Assembly",
+   "deprecated": false,
+   "glyph": "http://sbols.org/visual/v2#UnspecifiedGlyph"
+  },
+  "sequenceLength": 2181,
+  "audit": {
+   "created": "2026-10-21T09:13:48.944Z",
+   "updated": "2026-10-21T11:13:15.704Z"
+  },
+  "usageCount": 1
+ },
+ {
+  "uuid": "76be32b3-975c-4876-b4b8-bae7416f6a6a",
+  "name": "BBa_2610Z8EW",
+  "slug": "bba-2610z8ew",
+  "status": "published",
+  "title": "CcaSR-CDS replacable cassette-mScarlet-I",
+  "description": "The system is an engineered construct that produces and secretes plant-protective proteins under green/red light control. The PCB Production Module ([BBa\\_26XZYM10](https://registry.igem.org/parts/bba-26xzym10)) supplies the chromophore phycocyanobilin. The Light Sensing Module ([BBa\\_261XH2RS](https://registry.igem.org/parts/bba-261xh2rs)) expresses CcaS-m3, which detects green light and autophosphorylates. The Transduction Module ([BBa\\_26BDO8AQ](https://registry.igem.org/parts/bba-26bdo8aq))\u2026",
+  "role": {
+   "uuid": "6b0d75b8-835a-4106-aebf-7f121a129403",
+   "accession": "SO:0001248",
+   "label": "Assembly",
+   "deprecated": false,
+   "glyph": "http://sbols.org/visual/v2#UnspecifiedGlyph"
+  },
+  "sequenceLength": 6521,
+  "audit": {
+   "created": "2026-10-21T11:23:41.005Z",
+   "updated": "2026-10-21T11:30:57.418Z"
+  },
+  "usageCount": 0
+ },
+ {
+  "uuid": "76c8f46c-3fc0-4406-b485-ea73f871344c",
+  "name": "BBa_261XH2RS",
+  "slug": "bba-261xh2rs",
+  "status": "published",
+  "title": "PliaG-RBS0-ccaS-m3-B0015",
+  "description": "This module consists of the engineered sensor kinase CcaS-m3 driven by the constitutive promoter PliaG, the RBS RBS0 and terminator B0015. When supplied with the chromophore phycocyanobilin (PCB) from the PCB Production Module [BBa\\_26XZYM10](https://registry.igem.org/parts/bba-26xzym10), ccaS-m3 can detect green light and initiate signal transduction. Altogether, these components enable the conversion of external light stimuli into a regulatory signal for downstream gene expression.",
+  "role": {
+   "uuid": "6b0d75b8-835a-4106-aebf-7f121a129403",
+   "accession": "SO:0001248",
+   "label": "Assembly",
+   "deprecated": false,
+   "glyph": "http://sbols.org/visual/v2#UnspecifiedGlyph"
+  },
+  "sequenceLength": 1693,
+  "audit": {
+   "created": "2026-10-16T11:23:16.379Z",
+   "updated": "2026-10-17T10:59:04.926Z"
+  },
+  "usageCount": 4
+ },
+ {
+  "uuid": "77092c55-5010-4d15-9fee-ae601e7ebdd0",
+  "name": "BBa_269A97I7",
+  "slug": "bba-269a97i7",
+  "status": "published",
+  "title": "Pveg-EEBD-RBS0-SamyQ-BoPep4 2.1-Histag-B0015",
+  "description": "This **Protectant Module** constitutively expresses potential stress-mitigation proteins and enables evaluation of their secretion and detection, with its constitutive promoter Pveg, RBS EEBD-RBS, and terminator B0015. The CDS of this construct encodes BoPep4, fused to the SamyQ signal peptide and a 6x Histag (SamyQ-BoPep4 2.1-Histag: [BBa\\_26PX0UGH](https://registry.igem.org/parts/bba-26px0ugh)).",
+  "role": {
+   "uuid": "6b0d75b8-835a-4106-aebf-7f121a129403",
+   "accession": "SO:0001248",
+   "label": "Assembly",
+   "deprecated": false,
+   "glyph": "http://sbols.org/visual/v2#UnspecifiedGlyph"
+  },
+  "sequenceLength": 712,
+  "audit": {
+   "created": "2026-10-16T15:58:42.330Z",
+   "updated": "2026-10-18T01:52:20.120Z"
+  },
+  "usageCount": 0
+ },
+ {
+  "uuid": "7d70cb60-bc6e-4dff-9708-072a8f0f41b5",
+  "name": "BBa_263IW021",
+  "slug": "bba-263iw021",
+  "status": "published",
+  "title": "PcpcG2-veg-EEBD-RBS0-SamyQ-AcdS 2.1-Histag-B0015",
+  "description": "This module includes the light-responsive promoter P*cpcG2*-veg, the RBS EEBD-RBS0, a protectant CDS, and the terminator B0015, which together drive the expression of downstream genes in response to green-light signaling in *Bacillus Subtilis* after [BBa\\_26XZYM10](https://registry.igem.org/parts/bba-26xzym10), [BBa\\_261XH2RS](https://registry.igem.org/parts/bba-261xh2rs), and [BBa\\_26BDO8AQ](https://registry.igem.org/parts/bba-26bdo8aq). The CDS\u00a0evaluated was ACC deaminase protein,\u00a0fused to\u2026",
+  "role": {
+   "uuid": "6b0d75b8-835a-4106-aebf-7f121a129403",
+   "accession": "SO:0001248",
+   "label": "Assembly",
+   "deprecated": false,
+   "glyph": "http://sbols.org/visual/v2#UnspecifiedGlyph"
+  },
+  "sequenceLength": 1734,
+  "audit": {
+   "created": "2026-10-21T10:49:17.295Z",
+   "updated": "2026-10-21T10:50:34.465Z"
+  },
+  "usageCount": 1
+ },
+ {
+  "uuid": "8a6e3841-2a75-4716-8d0c-548f37844778",
+  "name": "BBa_26TOGLX3",
+  "slug": "bba-26toglx3",
+  "status": "published",
+  "title": "SamyQ-AcdS 2.1-Histag",
+  "description": "This part encodes 1-aminocyclopropane-1-carboxylate (ACC) deaminase from *Pseudomonas putida* (Arthrobacter siderocapsulatus) strain UW&#x34;*;* the wild-type acdS sequence is registered as [BBa\\_26MA70QI](https://registry.igem.org/parts/bba-26ma70qi).  It is an enzyme commonly found in plant growth-promoting rhizobacteria (PGPR). ACC deaminase degrades ACC, the precursor of the plant hormone ethylene, thereby alleviating ethylene-induced growth inhibition in plants under stress. The ACC\u2026",
+  "role": {
+   "uuid": "65f1c72e-396c-4d02-b574-af06b3a073a9",
+   "accession": "SO:0000316",
+   "label": "CDS",
+   "deprecated": false,
+   "glyph": "http://sbols.org/visual/v2#CDSGlyph"
+  },
+  "sequenceLength": 1125,
+  "audit": {
+   "created": "2026-10-11T06:15:14.848Z",
+   "updated": "2026-10-17T09:00:57.127Z"
+  },
+  "usageCount": 3
+ },
+ {
+  "uuid": "8dfa1ea2-d3ab-43a9-973a-e210d7ad1b32",
+  "name": "BBa_26LYCBW0",
+  "slug": "bba-26lycbw0",
+  "status": "published",
+  "title": "BoPep4 2.1",
+  "description": "This part encodes BoPep4, a 23-residue plant elicitor peptide (PEP) from broccoli (*Brassica oleracea var. italica);* the wild-type BoPep4 sequence is registered as [BBa\\_26ILD3SO](https://registry.igem.org/parts/bba-26ild3so)*.* BoPep4 acts as a peptide hormone and signaling molecule to regulate plant defense mechanisms and salt tolerance. In this variant, the first 15 codons of the coding sequence were optimized to improve the mRNA secondary structure of the translation start site.",
+  "role": {
+   "uuid": "65f1c72e-396c-4d02-b574-af06b3a073a9",
+   "accession": "SO:0000316",
+   "label": "CDS",
+   "deprecated": false,
+   "glyph": "http://sbols.org/visual/v2#CDSGlyph"
+  },
+  "sequenceLength": 69,
+  "audit": {
+   "created": "2026-10-15T09:56:26.350Z",
+   "updated": "2026-10-17T07:10:20.997Z"
+  },
+  "usageCount": 1
+ },
+ {
+  "uuid": "94cf431f-1575-4e49-9940-9c1ab7bb5297",
+  "name": "BBa_267B69E3",
+  "slug": "bba-267b69e3",
+  "status": "published",
+  "title": "SamyQ-BoPep4 2.2-Histag",
+  "description": "This part encodes encodes BoPep4, a 23-residue plant elicitor peptide (PEP) from broccoli (*Brassica oleracea var. italica);* the wild-type BoPep4 sequence is registered as [BBa\\_26ILD3SO](https://registry.igem.org/parts/bba-26ild3so). BoPep4 acts as a peptide hormone and signaling molecule to regulate plant defense mechanisms and salt tolerance. The BoPep4 protein is fused to the alpha-amylase signal peptide (SamyQ) at the N-terminus and a 6x Histag at the C-terminus. In this variant, the\u2026",
+  "role": {
+   "uuid": "65f1c72e-396c-4d02-b574-af06b3a073a9",
+   "accession": "SO:0000316",
+   "label": "CDS",
+   "deprecated": false,
+   "glyph": "http://sbols.org/visual/v2#CDSGlyph"
+  },
+  "sequenceLength": 183,
+  "audit": {
+   "created": "2026-10-13T07:42:58.598Z",
+   "updated": "2026-10-17T09:56:54.220Z"
+  },
+  "usageCount": 1
+ },
+ {
+  "uuid": "99849af0-47b0-4d33-be57-65f5c91e157b",
+  "name": "BBa_262YYNPV",
+  "slug": "bba-262yynpv",
+  "status": "published",
+  "title": "AcdS 2.1",
+  "description": "This part encodes 1-aminocyclopropane-1-carboxylate (ACC) deaminase from *Pseudomonas putida* (Arthrobacter siderocapsulatus) strain UW4; ; the wild-type acdS sequence is registered as [BBa\\_26MA70QI](https://registry.igem.org/parts/bba-26ma70qi). It is an enzyme commonly found in plant growth-promoting rhizobacteria (PGPR). ACC deaminase degrades ACC, the precursor of the plant hormone ethylene, thereby alleviating ethylene-induced growth inhibition in plants under stress. In this variant, the\u2026",
+  "role": {
+   "uuid": "65f1c72e-396c-4d02-b574-af06b3a073a9",
+   "accession": "SO:0000316",
+   "label": "CDS",
+   "deprecated": false,
+   "glyph": "http://sbols.org/visual/v2#CDSGlyph"
+  },
+  "sequenceLength": 1011,
+  "audit": {
+   "created": "2026-10-14T11:51:08.797Z",
+   "updated": "2026-10-17T07:25:03.417Z"
+  },
+  "usageCount": 2
+ },
+ {
+  "uuid": "9ef2347f-79bb-49b7-87b7-14af52a0b14a",
+  "name": "BBa_26A4MT29",
+  "slug": "bba-26a4mt29",
+  "status": "published",
+  "title": "PtagC+RBS",
+  "description": "A standardized genetic part combining a bacterial promoter (PtagC) and a Ribosome Binding Site (RBS). This composite part provides control of both transcription and translation for a downstream gene of interest.",
+  "role": {
+   "uuid": "6b0d75b8-835a-4106-aebf-7f121a129403",
+   "accession": "SO:0001248",
+   "label": "Assembly",
+   "deprecated": false,
+   "glyph": "http://sbols.org/visual/v2#UnspecifiedGlyph"
+  },
+  "sequenceLength": 100,
+  "audit": {
+   "created": "2026-10-09T04:31:06.050Z",
+   "updated": "2026-10-17T10:18:02.488Z"
+  },
+  "usageCount": 1
+ },
+ {
+  "uuid": "a59fad99-1663-431b-87a4-b2539d5497e3",
+  "name": "BBa_26YHOQCL",
+  "slug": "bba-26yhoqcl",
+  "status": "published",
+  "title": "Bopep4 15-23",
+  "description": "This part encodes BoPep4, a 23-residue plant elicitor peptide (PEP) from broccoli (*Brassica oleracea var. italica);* the wild-type BoPep4 sequence is registered as [BBa\\_26ILD3SO](https://registry.igem.org/parts/bba-26ild3so)*.* BoPep4 acts as a peptide hormone and signaling molecule to regulate plant defense mechanisms and salt tolerance. In this version of BoPep4, residues 1-14 were deleted.",
+  "role": {
+   "uuid": "65f1c72e-396c-4d02-b574-af06b3a073a9",
+   "accession": "SO:0000316",
+   "label": "CDS",
+   "deprecated": false,
+   "glyph": "http://sbols.org/visual/v2#CDSGlyph"
+  },
+  "sequenceLength": 27,
+  "audit": {
+   "created": "2026-10-16T15:41:29.868Z",
+   "updated": "2026-10-20T19:23:58.921Z"
+  },
+  "usageCount": 1
+ },
+ {
+  "uuid": "a8294809-f78d-454c-af20-4d7c891a892a",
+  "name": "BBa_26Q3LKZU",
+  "slug": "bba-26q3lkzu",
+  "status": "published",
+  "title": "PcpcG2-veg-EEBD-RBS0-Csn-AcdS-Histag-B0015",
+  "description": "This module includes the light-responsive promoter P*cpcG2*-veg, the RBS EEBD-RBS0, a protectant CDS, and the terminator B0015, which together drive the expression of downstream genes in response to green-light signaling in *Bacillus Subtilis* after [BBa\\_26XZYM10](https://registry.igem.org/parts/bba-26xzym10), [BBa\\_261XH2RS](https://registry.igem.org/parts/bba-261xh2rs), and [BBa\\_26BDO8AQ](https://registry.igem.org/parts/bba-26bdo8aq). The CDS\u00a0evaluated\u2026",
+  "role": {
+   "uuid": "6b0d75b8-835a-4106-aebf-7f121a129403",
+   "accession": "SO:0001248",
+   "label": "Assembly",
+   "deprecated": false,
+   "glyph": "http://sbols.org/visual/v2#UnspecifiedGlyph"
+  },
+  "sequenceLength": 2617,
+  "audit": {
+   "created": "2026-10-16T11:40:11.018Z",
+   "updated": "2026-10-18T02:39:31.417Z"
+  },
+  "usageCount": 1
+ },
+ {
+  "uuid": "bd291f1a-6be2-4cd3-a757-ec4a53c27ee9",
+  "name": "BBa_26D5AX7S",
+  "slug": "bba-26d5ax7s",
+  "status": "published",
+  "title": "Pveg-EEBD-RBS0-SamyQ-LEA14 2.1-Histag-B0015",
+  "description": "This **Protectant Module** constitutively expresses potential stress-mitigation proteins and enables evaluation of their secretion and detection, with its constitutive promoter Pveg, RBS EEBD-RBS, and terminator B0015. The CDS of this construct encodes a Late Embryogenesis Abundant 14 protein (LEA14) fused to the SamyQ signal peptide and a 6x Histag (SamyQ-LEA14 2.1-Histag: [BBa\\_26J0GJGZ](https://registry.igem.org/parts/bba-26j0gjgz)).",
+  "role": {
+   "uuid": "6b0d75b8-835a-4106-aebf-7f121a129403",
+   "accession": "SO:0001248",
+   "label": "Assembly",
+   "deprecated": false,
+   "glyph": "http://sbols.org/visual/v2#UnspecifiedGlyph"
+  },
+  "sequenceLength": 1093,
+  "audit": {
+   "created": "2026-10-16T15:52:39.386Z",
+   "updated": "2026-10-18T01:32:38.349Z"
+  },
+  "usageCount": 0
+ },
+ {
+  "uuid": "c04554e4-3b90-4a58-bf50-399753a2bc11",
+  "name": "BBa_26GJIT8W",
+  "slug": "bba-26gjit8w",
+  "status": "published",
+  "title": "PcpcG2-veg",
+  "description": "Light induced promoter",
+  "role": {
+   "uuid": "35e00de3-f02a-4935-9add-72cfb517fa15",
+   "accession": "SO:0000167",
+   "label": "Promoter",
+   "deprecated": false,
+   "glyph": "http://sbols.org/visual/v2#PromoterSiteGlyph"
+  },
+  "sequenceLength": 177,
+  "audit": {
+   "created": "2026-10-21T10:33:18.440Z",
+   "updated": "2026-10-21T10:36:08.296Z"
+  },
+  "usageCount": 3
+ },
+ {
+  "uuid": "ca084155-2ec0-4d77-8850-a4f2322d4820",
+  "name": "BBa_26IN6G1D",
+  "slug": "bba-26in6g1d",
+  "status": "published",
+  "title": "LEA14 2.1",
+  "description": "This part encodes a Late Embryogenesis Abundant 14 protein (LEA14) from *Arabidopsis thaliana* gene *At1g01470.1*, which belongs to LEA\\_2 subgroup; the wild-type LEA sequence is registered as [BBa\\_26LTB0W1](https://registry.igem.org/parts/bba-26ltb0w1). The paper showed overexpression of AtLEA14 enhances salt stress tolerance in *Arabidopsis thaliana*. Therefore, LEA14 is might be the potential gene involved in plant responses to abiotic stress.  In this variant, the first 15 amino acids of\u2026",
+  "role": {
+   "uuid": "65f1c72e-396c-4d02-b574-af06b3a073a9",
+   "accession": "SO:0000316",
+   "label": "CDS",
+   "deprecated": false,
+   "glyph": "http://sbols.org/visual/v2#CDSGlyph"
+  },
+  "sequenceLength": 450,
+  "audit": {
+   "created": "2026-10-14T12:20:56.931Z",
+   "updated": "2026-10-17T07:04:50.736Z"
+  },
+  "usageCount": 2
+ },
+ {
+  "uuid": "d0e17221-fd5b-4b6f-9dd8-d53f42f0eeca",
+  "name": "BBa_26V6CPEV",
+  "slug": "bba-26v6cpev",
+  "status": "published",
+  "title": "EEBD-RBS0",
+  "description": "A composite ribosome binding site element containing a synthetic RBS sequence to improve translation initiation efficiency. EEBD is the *Escherichia coli* expression blocking device, consisting of a B0015 terminator between two recombination sites to prevent unwanted gene expression, including the production of toxic proteins, during cloning DNA constructs in *Escherichia. coli*.",
+  "role": {
+   "uuid": "79d631aa-7dd3-4099-8227-82a84b9c4e3d",
+   "accession": "SO:0005836",
+   "label": "Regulatory Region",
+   "deprecated": false,
+   "glyph": "http://sbols.org/visual/v2#UnspecifiedGlyph"
+  },
+  "sequenceLength": 303,
+  "audit": {
+   "created": "2026-10-09T04:42:16.267Z",
+   "updated": "2026-10-17T10:14:06.332Z"
+  },
+  "usageCount": 13
+ },
+ {
+  "uuid": "d20eb03d-3090-4551-bc15-4b48c73ad66d",
+  "name": "BBa_26NXOP7S",
+  "slug": "bba-26nxop7s",
+  "status": "published",
+  "title": "Csn-AcdS-Histag",
+  "description": "This part encodes 1-aminocyclopropane-1-carboxylate (ACC) deaminase (AcdS: [BBa\\_26MA70QI](https://registry.igem.org/parts/bba-26ma70qi)) from *Pseudomonas putida* (Arthrobacter siderocapsulatus) strain UW4. It is an enzyme commonly found in plant growth-promoting rhizobacteria (PGPR). ACC deaminase degrades ACC, the precursor of the plant hormone ethylene, thereby alleviating ethylene-induced growth inhibition in plants under stress. The ACC deaminase protein is fused to the chitosanase signal\u2026",
+  "role": {
+   "uuid": "65f1c72e-396c-4d02-b574-af06b3a073a9",
+   "accession": "SO:0000316",
+   "label": "CDS",
+   "deprecated": false,
+   "glyph": "http://sbols.org/visual/v2#CDSGlyph"
+  },
+  "sequenceLength": 1140,
+  "audit": {
+   "created": "2026-10-09T05:05:03.414Z",
+   "updated": "2026-10-17T08:35:40.471Z"
+  },
+  "usageCount": 3
+ },
+ {
+  "uuid": "d305fe97-b889-4447-9e25-104112fa88cc",
+  "name": "BBa_26RF0X2E",
+  "slug": "bba-26rf0x2e",
+  "status": "published",
+  "title": "CcaSR-SamyQ-AcdS 2.1-Histag",
+  "description": "The system is an engineered construct that produces and secretes plant-protective proteins under green/red light control. The PCB Production Module ([BBa\\_26XZYM10](https://registry.igem.org/parts/bba-26xzym10)) supplies the chromophore phycocyanobilin. The Light Sensing Module ([BBa\\_261XH2RS](https://registry.igem.org/parts/bba-261xh2rs)) expresses CcaS-m3, which detects green light and autophosphorylates. The Transduction Module ([BBa\\_26BDO8AQ](https://registry.igem.org/parts/bba-26bdo8aq))\u2026",
+  "role": {
+   "uuid": "6b0d75b8-835a-4106-aebf-7f121a129403",
+   "accession": "SO:0001248",
+   "label": "Assembly",
+   "deprecated": false,
+   "glyph": "http://sbols.org/visual/v2#UnspecifiedGlyph"
+  },
+  "sequenceLength": 6125,
+  "audit": {
+   "created": "2026-10-21T11:03:29.922Z",
+   "updated": "2026-10-21T14:34:33.063Z"
+  },
+  "usageCount": 0
+ },
+ {
+  "uuid": "d3f07ae2-4349-42e7-8947-973eba6185dc",
+  "name": "BBa_26U8UTMH",
+  "slug": "bba-26u8utmh",
+  "status": "published",
+  "title": "ccaSR-SamyQ-AcdS 2.1-Histag",
+  "description": "The system is an engineered construct that produces and secretes plant-protective proteins under green/red light control. The PCB Production Module ([BBa\\_26XZYM10](https://registry.igem.org/parts/bba-26xzym10)) supplies the chromophore phycocyanobilin. The Light Sensing Module ([BBa\\_261XH2RS](https://registry.igem.org/parts/bba-261xh2rs)) expresses CcaS-m3, which detects green light and autophosphorylates. The Transduction Module ([BBa\\_26BDO8AQ](https://registry.igem.org/parts/bba-26bdo8aq))\u2026",
+  "role": {
+   "uuid": "6b0d75b8-835a-4106-aebf-7f121a129403",
+   "accession": "SO:0001248",
+   "label": "Assembly",
+   "deprecated": false,
+   "glyph": "http://sbols.org/visual/v2#UnspecifiedGlyph"
+  },
+  "sequenceLength": 6914,
+  "audit": {
+   "created": "2026-10-18T02:21:46.908Z",
+   "updated": "2026-10-18T10:45:05.836Z"
+  },
+  "usageCount": 0
+ },
+ {
+  "uuid": "d44d57d2-79fc-4a0e-a12f-04ff94cc05f0",
+  "name": "BBa_265CD14Z",
+  "slug": "bba-265cd14z",
+  "status": "published",
+  "title": "BoPep4",
+  "description": "This part encodes BoPep4, a 23-residue plant elicitor peptide (PEP) from broccoli (*Brassica oleracea var. italica).* BoPep4 acts as a peptide hormone and signaling molecule to regulate plant defense mechanisms and salt tolerance. The BoPep4 coding sequence was codon-optimized for *B. subtilis*.",
+  "role": {
+   "uuid": "65f1c72e-396c-4d02-b574-af06b3a073a9",
+   "accession": "SO:0000316",
+   "label": "CDS",
+   "deprecated": false,
+   "glyph": "http://sbols.org/visual/v2#CDSGlyph"
+  },
+  "sequenceLength": 69,
+  "audit": {
+   "created": "2026-10-15T04:41:06.800Z",
+   "updated": "2026-10-17T07:34:15.965Z"
+  },
+  "usageCount": 1
+ },
+ {
+  "uuid": "d4ec33a2-3bc9-468b-a5aa-acd0507faf76",
+  "name": "BBa_26FSZTWM",
+  "slug": "bba-26fsztwm",
+  "status": "published",
+  "title": "Pveg-EEBD-RBS0-SamyQ-BoPep4-Histag-B0015",
+  "description": "This **Protectant Module** constitutively expresses potential stress-mitigation proteins and enables evaluation of their secretion and detection, with its constitutive promoter Pveg, RBS EEBD-RBS, and terminator B0015. The CDS of this construct encodes BoPep4, fused to the SamyQ signal peptide and a 6x Histag (SamyQ-BoPep4-Histag: [BBa\\_26ILD3SO](https://registry.igem.org/parts/bba-26ild3so)).",
+  "role": {
+   "uuid": "6b0d75b8-835a-4106-aebf-7f121a129403",
+   "accession": "SO:0001248",
+   "label": "Assembly",
+   "deprecated": false,
+   "glyph": "http://sbols.org/visual/v2#UnspecifiedGlyph"
+  },
+  "sequenceLength": 712,
+  "audit": {
+   "created": "2026-10-16T15:55:32.000Z",
+   "updated": "2026-10-18T01:41:00.991Z"
+  },
+  "usageCount": 0
+ },
+ {
+  "uuid": "ddeb42f3-df81-43c2-a548-814ca119099e",
+  "name": "BBa_26OSLRE4",
+  "slug": "bba-26oslre4",
+  "status": "published",
+  "title": "RBS0",
+  "description": "RBS0 is a synthetic, high-strength ribosome binding site optimized for *Bacillus subtilis*  that recruits the ribosome to initiate protein translation",
+  "role": {
+   "uuid": "9c7c4d6d-ac06-4c93-8515-e95ba3bea3bb",
+   "accession": "SO:0000139",
+   "label": "Ribosome Entry Site",
+   "deprecated": false,
+   "glyph": "http://sbols.org/visual/v2#RibosomeEntrySiteGlyph"
+  },
+  "sequenceLength": 33,
+  "audit": {
+   "created": "2026-10-09T04:32:36.203Z",
+   "updated": "2026-10-17T10:22:17.808Z"
+  },
+  "usageCount": 2
+ },
+ {
+  "uuid": "de2942ce-43c1-4f7a-964b-0284fc47317c",
+  "name": "BBa_26MA70QI",
+  "slug": "bba-26ma70qi",
+  "status": "published",
+  "title": "AcdS",
+  "description": "This part encodes 1-aminocyclopropane-1-carboxylate (ACC) deaminase from *Pseudomonas putida* (Arthrobacter siderocapsulatus) strain UW4. It is an enzyme commonly found in plant growth-promoting rhizobacteria (PGPR). ACC deaminase degrades ACC, the precursor of the plant hormone ethylene, thereby alleviating ethylene-induced growth inhibition in plants under stress. The ACC deaminase coding sequence was codon-optimized for *B. subtilis*.",
+  "role": {
+   "uuid": "65f1c72e-396c-4d02-b574-af06b3a073a9",
+   "accession": "SO:0000316",
+   "label": "CDS",
+   "deprecated": false,
+   "glyph": "http://sbols.org/visual/v2#CDSGlyph"
+  },
+  "sequenceLength": 1011,
+  "audit": {
+   "created": "2026-10-14T11:46:24.196Z",
+   "updated": "2026-10-16T12:16:19.458Z"
+  },
+  "usageCount": 2
+ },
+ {
+  "uuid": "e102de3e-3ec8-4f83-b122-d33e292ac22d",
+  "name": "BBa_2654HAF3",
+  "slug": "bba-2654haf3",
+  "status": "published",
+  "title": "CcaSR-Csn-AcdS-Histag",
+  "description": "The system is an engineered construct that produces and secretes plant-protective proteins under green/red light control. The PCB Production Module ([BBa\\_26XZYM10](https://registry.igem.org/parts/bba-26xzym10)) supplies the chromophore phycocyanobilin. The Light Sensing Module ([BBa\\_261XH2RS](https://registry.igem.org/parts/bba-261xh2rs)) expresses CcaS-m3, which detects green light and autophosphorylates. The Transduction Module ([BBa\\_26BDO8AQ](https://registry.igem.org/parts/bba-26bdo8aq))\u2026",
+  "role": {
+   "uuid": "6b0d75b8-835a-4106-aebf-7f121a129403",
+   "accession": "SO:0001248",
+   "label": "Assembly",
+   "deprecated": false,
+   "glyph": "http://sbols.org/visual/v2#UnspecifiedGlyph"
+  },
+  "sequenceLength": 6929,
+  "audit": {
+   "created": "2026-10-16T16:22:24.605Z",
+   "updated": "2026-10-21T14:32:37.660Z"
+  },
+  "usageCount": 0
+ },
+ {
+  "uuid": "e74ef383-4554-4712-a2d4-a4f55aba4a64",
+  "name": "BBa_26ZQ1T72",
+  "slug": "bba-26zq1t72",
+  "status": "published",
+  "title": "Csn-LEA14-Histag",
+  "description": "This part encodes a Late Embryogenesis Abundant 14 protein (LEA14) (LEA: [BBa\\_26LTB0W1](https://registry.igem.org/parts/bba-26ltb0w1)) from *Arabidopsis thaliana* gene *At1g01470.1*, which belongs to LEA\\_2 subgroup. The paper showed overexpression of AtLEA14 enhances salt stress tolerance in *Arabidopsis thaliana*. Therefore, LEA14 is might be the potential gene involved in plant responses to abiotic stress. The LEA14 protein is fused to the chitosanase signal (Csn) peptide at the N-terminus\u2026",
+  "role": {
+   "uuid": "65f1c72e-396c-4d02-b574-af06b3a073a9",
+   "accession": "SO:0000316",
+   "label": "CDS",
+   "deprecated": false,
+   "glyph": "http://sbols.org/visual/v2#CDSGlyph"
+  },
+  "sequenceLength": 582,
+  "audit": {
+   "created": "2026-10-11T06:33:28.996Z",
+   "updated": "2026-10-17T09:10:17.098Z"
+  },
+  "usageCount": 1
+ },
+ {
+  "uuid": "ecfe3236-ec98-42b3-a734-f64237969cd3",
+  "name": "BBa_260MVA1K",
+  "slug": "bba-260mva1k",
+  "status": "published",
+  "title": "CcaSR-Csn-AcdS-Histag",
+  "description": "The system is an engineered construct that produces and secretes plant-protective proteins under green/red light control. The PCB Production Module ([BBa\\_26XZYM10](https://registry.igem.org/parts/bba-26xzym10)) supplies the chromophore phycocyanobilin. The Light Sensing Module ([BBa\\_261XH2RS](https://registry.igem.org/parts/bba-261xh2rs)) expresses CcaS-m3, which detects green light and autophosphorylates. The Transduction Module ([BBa\\_26BDO8AQ](https://registry.igem.org/parts/bba-26bdo8aq))\u2026",
+  "role": {
+   "uuid": "6b0d75b8-835a-4106-aebf-7f121a129403",
+   "accession": "SO:0001248",
+   "label": "Assembly",
+   "deprecated": false,
+   "glyph": "http://sbols.org/visual/v2#UnspecifiedGlyph"
+  },
+  "sequenceLength": 6061,
+  "audit": {
+   "created": "2026-10-21T10:55:04.029Z",
+   "updated": "2026-10-21T10:57:48.575Z"
+  },
+  "usageCount": 0
+ },
+ {
+  "uuid": "eeda7e4c-f6ec-4c0c-8522-fa06555b72d2",
+  "name": "BBa_26ILD3SO",
+  "slug": "bba-26ild3so",
+  "status": "published",
+  "title": "SamyQ-BoPep4-Histag",
+  "description": "This part encodes BoPep4, a 23-residue plant elicitor peptide (PEP) from broccoli (*Brassica oleracea var. italica).* BoPep4 acts as a peptide hormone and signaling molecule to regulate plant defense mechanisms and salt tolerance. The BoPep4 ([BBa\\_265CD14Z](https://registry.igem.org/parts/bba-265cd14z)) protein is fused to the alpha-amylase signal peptide (SamyQ) at the N-terminus and a 6x Histag at the C-terminus. The BoPep4 coding sequence was codon-optimized for *B. subtilis.*&#x20;",
+  "role": {
+   "uuid": "65f1c72e-396c-4d02-b574-af06b3a073a9",
+   "accession": "SO:0000316",
+   "label": "CDS",
+   "deprecated": false,
+   "glyph": "http://sbols.org/visual/v2#CDSGlyph"
+  },
+  "sequenceLength": 183,
+  "audit": {
+   "created": "2026-10-13T02:43:36.016Z",
+   "updated": "2026-10-20T12:06:30.200Z"
+  },
+  "usageCount": 1
+ },
+ {
+  "uuid": "f3395ca0-67f6-4867-ad6a-64d00bac178c",
+  "name": "BBa_26PGPSGK",
+  "slug": "bba-26pgpsgk",
+  "status": "published",
+  "title": "PcpcG2-veg-EEBD-RBS0-Csn-AcdS-Histag-B0015",
+  "description": "This module includes the light-responsive promoter P*cpcG2*-veg, the RBS EEBD-RBS0, a protectant CDS, and the terminator B0015, which together drive the expression of downstream genes in response to green-light signaling in *Bacillus Subtilis* after [BBa\\_26XZYM10](https://registry.igem.org/parts/bba-26xzym10), [BBa\\_261XH2RS](https://registry.igem.org/parts/bba-261xh2rs), and [BBa\\_26BDO8AQ](https://registry.igem.org/parts/bba-26bdo8aq). The CDS\u00a0evaluated\u2026",
+  "role": {
+   "uuid": "6b0d75b8-835a-4106-aebf-7f121a129403",
+   "accession": "SO:0001248",
+   "label": "Assembly",
+   "deprecated": false,
+   "glyph": "http://sbols.org/visual/v2#UnspecifiedGlyph"
+  },
+  "sequenceLength": 1749,
+  "audit": {
+   "created": "2026-10-21T10:39:05.058Z",
+   "updated": "2026-10-21T10:40:53.435Z"
+  },
+  "usageCount": 1
+ },
+ {
+  "uuid": "f473bf48-3f29-4113-b856-72df15585dcd",
+  "name": "BBa_26PX0UGH",
+  "slug": "bba-26px0ugh",
+  "status": "published",
+  "title": "SamyQ-BoPep4 2.1-Histag",
+  "description": "This part encodes encodes BoPep4, a 23-residue plant elicitor peptide (PEP) from broccoli (*Brassica oleracea var. italica);* the wild-type BoPep4 sequence is registered as [BBa\\_26ILD3SO](https://registry.igem.org/parts/bba-26ild3so). BoPep4 acts as a peptide hormone and signaling molecule to regulate plant defense mechanisms and salt tolerance. The BoPep4 protein is fused to the alpha-amylase signal peptide (SamyQ) at the N-terminus and a 6x Histag at the C-terminus. In this variant, the\u2026",
+  "role": {
+   "uuid": "65f1c72e-396c-4d02-b574-af06b3a073a9",
+   "accession": "SO:0000316",
+   "label": "CDS",
+   "deprecated": false,
+   "glyph": "http://sbols.org/visual/v2#CDSGlyph"
+  },
+  "sequenceLength": 183,
+  "audit": {
+   "created": "2026-10-13T02:48:15.353Z",
+   "updated": "2026-10-17T10:00:18.254Z"
+  },
+  "usageCount": 1
+ },
+ {
+  "uuid": "f99ca730-8d37-46a6-b9a6-2cb1075883fc",
+  "name": "BBa_26O00QVC",
+  "slug": "bba-26o00qvc",
+  "status": "published",
+  "title": "SamyQ-Bopep4 15-23-Histag",
+  "description": "This part encodes encodes BoPep4, a 23-residue plant elicitor peptide (PEP) from broccoli (*Brassica oleracea var. italica);* the wild-type BoPep4 sequence is registered as [BBa\\_26ILD3SO](https://registry.igem.org/parts/bba-26ild3so). BoPep4 acts as a peptide hormone and signaling molecule to regulate plant defense mechanisms and salt tolerance. The BoPep4 protein is fused to the alpha-amylase signal peptide (SamyQ) at the N-terminus and a 6x Histag at the C-terminus. In this version of\u2026",
+  "role": {
+   "uuid": "65f1c72e-396c-4d02-b574-af06b3a073a9",
+   "accession": "SO:0000316",
+   "label": "CDS",
+   "deprecated": false,
+   "glyph": "http://sbols.org/visual/v2#CDSGlyph"
+  },
+  "sequenceLength": 141,
+  "audit": {
+   "created": "2026-10-19T02:14:04.263Z",
+   "updated": "2026-10-20T19:26:32.138Z"
+  },
+  "usageCount": 1
+ }
+]

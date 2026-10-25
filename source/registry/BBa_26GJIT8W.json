@@ -1,0 +1,117 @@
+{
+ "id": "BBa_26GJIT8W",
+ "search": {
+  "uuid": "c04554e4-3b90-4a58-bf50-399753a2bc11",
+  "name": "BBa_26GJIT8W",
+  "slug": "bba-26gjit8w",
+  "status": "published",
+  "title": "PcpcG2-veg",
+  "description": "Light induced promoter",
+  "role": {
+   "uuid": "35e00de3-f02a-4935-9add-72cfb517fa15",
+   "accession": "SO:0000167",
+   "label": "Promoter",
+   "deprecated": false,
+   "glyph": "http://sbols.org/visual/v2#PromoterSiteGlyph"
+  },
+  "sequenceLength": 177,
+  "audit": {
+   "created": "2026-10-21T10:33:18.440Z",
+   "updated": "2026-10-21T10:36:08.296Z"
+  },
+  "usageCount": 3
+ },
+ "part": {
+  "uuid": "c04554e4-3b90-4a58-bf50-399753a2bc11",
+  "name": "BBa_26GJIT8W",
+  "slug": "bba-26gjit8w",
+  "status": "published",
+  "title": "PcpcG2-veg",
+  "description": "Light induced promoter",
+  "role": {
+   "uuid": "35e00de3-f02a-4935-9add-72cfb517fa15",
+   "accession": "SO:0000167",
+   "label": "Promoter",
+   "deprecated": false,
+   "glyph": "http://sbols.org/visual/v2#PromoterSiteGlyph"
+  },
+  "topology": {
+   "uuid": "b2bb9a86-0436-40d2-b56a-f2fbef932193",
+   "accession": "SO:0000987",
+   "label": "Linear",
+   "uri": "https://purl.obolibrary.org/obo/SO_0000987",
+   "glyph": null
+  },
+  "licenseUUID": "d6c69ca7-8be4-4bc0-b4a8-d3ae1d428aa6",
+  "source": "SubtiToolKit",
+  "sequence": "AGCCCATTGTGCTTTTCTCTATCAACCTCAGCTTACCTGAAGGGGTGAACAGGTCTGGGTTAATTCATGTTGCGAAATGTAACAGTTTTAGTCGCATCAGCTAACTTTCCGATTTCTTTACGATTTTCTCCCCCTTTTCTTCAATTTTACTTTGTTATAATAAATGTAGTGAGGTGG",
+  "audit": {
+   "created": "2026-10-21T10:33:18.440Z",
+   "updated": "2026-10-21T10:36:08.296Z"
+  },
+  "chassis": {
+   "designedFor": [
+    {
+     "uuid": "32ec8448-f961-43e1-9aef-2896b44ae23c",
+     "id": 562,
+     "scientificName": "Escherichia coli",
+     "commonName": null,
+     "rank": "species",
+     "lineageSummary": [
+      "1",
+      "131567",
+      "2",
+      "3379134",
+      "1224",
+      "1236",
+      "91347",
+      "543",
+      "561",
+      "562"
+     ],
+     "documentationUUID": null,
+     "addedBy": {
+      "uuid": "8de7ff3d-7d8b-42ed-a284-c454c5534c3c",
+      "firstName": "Sophie",
+      "lastName": "Chen",
+      "orcidID": null
+     },
+     "addedAt": "2026-10-21T10:35:39.027Z"
+    },
+    {
+     "uuid": "6f96ad42-7e31-4a68-adc8-bcfe3fb4ebba",
+     "id": 1423,
+     "scientificName": "Bacillus subtilis",
+     "commonName": null,
+     "rank": "species",
+     "lineageSummary": [
+      "1",
+      "131567",
+      "2",
+      "1783272",
+      "1239",
+      "91061",
+      "1385",
+      "186817",
+      "1386",
+      "653685",
+      "1423"
+     ],
+     "documentationUUID": null,
+     "addedBy": {
+      "uuid": "8de7ff3d-7d8b-42ed-a284-c454c5534c3c",
+      "firstName": "Sophie",
+      "lastName": "Chen",
+      "orcidID": null
+     },
+     "addedAt": "2026-10-21T10:35:51.640Z"
+    }
+   ],
+   "characterisedIn": [],
+   "sourceOrganism": []
+  },
+  "usageCount": 3
+ },
+ "documentation": [],
+ "composition": []
+}

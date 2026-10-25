@@ -1,0 +1,4543 @@
+var REGISTRY = {
+"meta":{
+"pulled":"2026-10-25",
+"org":"3f22886d-da0b-4a5a-8711-7b14b020c9de",
+"parts":41,
+"published":41,
+"words":48287,
+"imgs":101,
+"brackets":126,
+"bp":63948,
+"nodoc":5,
+"external":14,
+"levels":[
+{
+"n":0,
+"en":"Basic part",
+"zh":"基本元件",
+"note":"One promoter, one RBS, one coding sequence. Nothing of ours inside it.",
+"count":12
+},
+{
+"n":1,
+"en":"Transcriptional unit",
+"zh":"轉錄單元",
+"note":"A signal peptide fused to a cargo, or a promoter driving one gene.",
+"count":12
+},
+{
+"n":2,
+"en":"Cassette",
+"zh":"表現卡匣",
+"note":"Promoter, RBS, fusion and terminator — one plasmid you can transform.",
+"count":13
+},
+{
+"n":3,
+"en":"Whole system",
+"zh":"完整系統",
+"note":"Four transcriptional units on one plasmid: the light circuit plus a cargo.",
+"count":4
+}
+],
+"mods":[
+{
+"id":"light",
+"en":"Light module",
+"zh":"光控模組",
+"count":5
+},
+{
+"id":"system",
+"en":"Whole system",
+"zh":"完整系統",
+"count":4
+},
+{
+"id":"protectant",
+"en":"Protectant",
+"zh":"保護蛋白",
+"count":28
+},
+{
+"id":"reporter",
+"en":"Reporter cassette",
+"zh":"報導基因模組",
+"count":2
+},
+{
+"id":"toolkit",
+"en":"Shared blocks",
+"zh":"共用元件",
+"count":2
+}
+],
+"docTypes":[
+{
+"id":"design",
+"count":36
+},
+{
+"id":"experiment",
+"count":27
+},
+{
+"id":"characterisation",
+"count":6
+},
+{
+"id":"application",
+"count":34
+},
+{
+"id":"discussion",
+"count":11
+}
+]
+},
+"parts":[
+{
+"id":"BBa_260MVA1K",
+"title":"CcaSR-Csn-AcdS-Histag",
+"slug":"bba-260mva1k",
+"status":"published",
+"role":"Assembly",
+"bp":6061,
+"level":3,
+"mod":"system",
+"driver":"",
+"cargo":"AcdS",
+"desc":"The system is an engineered construct that produces and secretes plant-protective proteins under green/red light control. The PCB Production Module (BBa_26XZYM10) supplies the chromophore phycocyanobilin. The Light Sensing Module (BBa_261XH2RS) expresses CcaS-m3, which detects green light and autophosphorylates. The Transduction Module (BBa_26BDO8AQ) expresses CcaR, which receives its phosphoryl group. Phosphorylated CcaR activates PcpcG2-veg in the Light-Responsive Expression Module (BBa_26PGPSGK), driving secretion of ACC deaminase via the Csn signal peptide. Expression is on in green light and off in red, giving external control over protein production instead of a constant burden on the cell.",
+"comp":[
+{
+"id":"BBa_26XZYM10",
+"start":1,
+"end":1655,
+"role":"Assembly",
+"mine":true
+},
+{
+"id":"BBa_261XH2RS",
+"start":1656,
+"end":3348,
+"role":"Assembly",
+"mine":true
+},
+{
+"id":"BBa_26BDO8AQ",
+"start":3349,
+"end":4312,
+"role":"Assembly",
+"mine":true
+},
+{
+"id":"BBa_26PGPSGK",
+"start":4313,
+"end":6061,
+"role":"Assembly",
+"mine":true
+}
+],
+"usedin":[],
+"twins":[
+"BBa_2654HAF3"
+],
+"docs":[
+{
+"type":"design",
+"words":883,
+"imgs":0,
+"brackets":1,
+"updated":"2026-10-21"
+},
+{
+"type":"experiment",
+"words":521,
+"imgs":3,
+"brackets":0,
+"updated":"2026-10-21"
+},
+{
+"type":"characterisation",
+"words":168,
+"imgs":1,
+"brackets":0,
+"updated":"2026-10-21"
+},
+{
+"type":"application",
+"words":135,
+"imgs":0,
+"brackets":0,
+"updated":"2026-10-21"
+},
+{
+"type":"discussion",
+"words":352,
+"imgs":0,
+"brackets":0,
+"updated":"2026-10-21"
+}
+],
+"words":2059,
+"imgs":4,
+"brackets":1,
+"flags":[
+"blot",
+"brackets",
+"twin"
+]
+},
+{
+"id":"BBa_2610Z8EW",
+"title":"CcaSR-CDS replacable cassette-mScarlet-I",
+"slug":"bba-2610z8ew",
+"status":"published",
+"role":"Assembly",
+"bp":6521,
+"level":2,
+"mod":"reporter",
+"driver":"",
+"cargo":"mScarlet",
+"desc":"The system is an engineered construct that produces and secretes plant-protective proteins under green/red light control. The PCB Production Module (BBa_26XZYM10) supplies the chromophore phycocyanobilin. The Light Sensing Module (BBa_261XH2RS) expresses CcaS-m3, which detects green light and autophosphorylates. The Transduction Module (BBa_26BDO8AQ) expresses CcaR, which receives the phosphoryl group. Phosphorylated CcaR activates PcpcG2-veg in the Light-Responsive Expression Module, driving secretion of the protectant. Expression is on in green light and off in red, giving external control instead of a constant burden on the cell. The CDS is replaceable, so any protectant can be produced.",
+"comp":[
+{
+"id":"BBa_26XZYM10",
+"start":1,
+"end":1655,
+"role":"Assembly",
+"mine":true
+},
+{
+"id":"BBa_26BDO8AQ",
+"start":3377,
+"end":4340,
+"role":"Assembly",
+"mine":true
+},
+{
+"id":"BBa_26VTO4DX",
+"start":4341,
+"end":6521,
+"role":"Assembly",
+"mine":true
+}
+],
+"usedin":[],
+"twins":[],
+"docs":[
+{
+"type":"design",
+"words":897,
+"imgs":0,
+"brackets":1,
+"updated":"2026-10-21"
+}
+],
+"words":897,
+"imgs":0,
+"brackets":1,
+"flags":[
+"brackets"
+]
+},
+{
+"id":"BBa_261XH2RS",
+"title":"PliaG-RBS0-ccaS-m3-B0015",
+"slug":"bba-261xh2rs",
+"status":"published",
+"role":"Assembly",
+"bp":1693,
+"level":1,
+"mod":"light",
+"driver":"",
+"cargo":"",
+"desc":"This module consists of the engineered sensor kinase CcaS-m3 driven by the constitutive promoter PliaG, the RBS RBS0 and terminator B0015. When supplied with the chromophore phycocyanobilin (PCB) from the PCB Production Module BBa_26XZYM10, ccaS-m3 can detect green light and initiate signal transduction. Altogether, these components enable the conversion of external light stimuli into a regulatory signal for downstream gene expression.",
+"comp":[
+{
+"id":"BBa_K823000",
+"start":1,
+"end":121,
+"role":"Regulatory",
+"mine":false
+},
+{
+"id":"BBa_26OSLRE4",
+"start":122,
+"end":154,
+"role":"Ribosome Entry Site",
+"mine":true
+},
+{
+"id":"BBa_K3317069",
+"start":155,
+"end":1564,
+"role":"CDS",
+"mine":false
+},
+{
+"id":"BBa_B0015",
+"start":1565,
+"end":1693,
+"role":"Terminator",
+"mine":false
+}
+],
+"usedin":[
+"BBa_260MVA1K",
+"BBa_2654HAF3",
+"BBa_26RF0X2E",
+"BBa_26U8UTMH"
+],
+"twins":[],
+"docs":[
+{
+"type":"design",
+"words":1063,
+"imgs":0,
+"brackets":1,
+"updated":"2026-10-18"
+},
+{
+"type":"experiment",
+"words":476,
+"imgs":2,
+"brackets":6,
+"updated":"2026-10-19"
+},
+{
+"type":"application",
+"words":59,
+"imgs":0,
+"brackets":0,
+"updated":"2026-10-21"
+}
+],
+"words":1598,
+"imgs":2,
+"brackets":7,
+"flags":[
+"brackets",
+"hub"
+]
+},
+{
+"id":"BBa_262YYNPV",
+"title":"AcdS 2.1",
+"slug":"bba-262yynpv",
+"status":"published",
+"role":"CDS",
+"bp":1011,
+"level":0,
+"mod":"protectant",
+"driver":"",
+"cargo":"AcdS",
+"desc":"This part encodes 1-aminocyclopropane-1-carboxylate (ACC) deaminase from Pseudomonas putida (Arthrobacter siderocapsulatus) strain UW4; ; the wild-type acdS sequence is registered as BBa_26MA70QI. It is an enzyme commonly found in plant growth-promoting rhizobacteria (PGPR). ACC deaminase degrades ACC, the precursor of the plant hormone ethylene, thereby alleviating ethylene-induced growth inhibition in plants under stress. In this variant, the first 15 codons of the coding sequence were optimized to improve the mRNA secondary structure of the translation start site.&#x20;",
+"comp":[],
+"usedin":[
+"BBa_26TOGLX3",
+"BBa_26XVQ3FS"
+],
+"twins":[],
+"docs":[
+{
+"type":"design",
+"words":669,
+"imgs":2,
+"brackets":1,
+"updated":"2026-10-21"
+},
+{
+"type":"application",
+"words":144,
+"imgs":0,
+"brackets":0,
+"updated":"2026-10-21"
+}
+],
+"words":813,
+"imgs":2,
+"brackets":1,
+"flags":[
+"brackets"
+]
+},
+{
+"id":"BBa_263IW021",
+"title":"PcpcG2-veg-EEBD-RBS0-SamyQ-AcdS 2.1-Histag-B0015",
+"slug":"bba-263iw021",
+"status":"published",
+"role":"Assembly",
+"bp":1734,
+"level":2,
+"mod":"protectant",
+"driver":"light",
+"cargo":"AcdS",
+"desc":"This module includes the light-responsive promoter PcpcG2-veg, the RBS EEBD-RBS0, a protectant CDS, and the terminator B0015, which together drive the expression of downstream genes in response to green-light signaling in Bacillus Subtilis after BBa_26XZYM10, BBa_261XH2RS, and BBa_26BDO8AQ. The CDS evaluated was ACC deaminase protein, fused to the SamyQ secretion signal and 6x Histag. Together, these components convert light-induced regulatory signals into measurable visual outputs or stress-mitigation functions.",
+"comp":[
+{
+"id":"BBa_26GJIT8W",
+"start":1,
+"end":177,
+"role":"Promoter",
+"mine":true
+},
+{
+"id":"BBa_26V6CPEV",
+"start":178,
+"end":480,
+"role":"Regulatory Region",
+"mine":true
+},
+{
+"id":"BBa_26TOGLX3",
+"start":481,
+"end":1605,
+"role":"CDS",
+"mine":true
+},
+{
+"id":"BBa_B0015",
+"start":1606,
+"end":1734,
+"role":"Terminator",
+"mine":false
+}
+],
+"usedin":[
+"BBa_26RF0X2E",
+"BBa_26RF0X2E"
+],
+"twins":[
+"BBa_26DE5E2Q"
+],
+"docs":[],
+"words":0,
+"imgs":0,
+"brackets":0,
+"flags":[
+"nodoc",
+"twin",
+"own"
+]
+},
+{
+"id":"BBa_2654HAF3",
+"title":"CcaSR-Csn-AcdS-Histag",
+"slug":"bba-2654haf3",
+"status":"published",
+"role":"Assembly",
+"bp":6929,
+"level":3,
+"mod":"system",
+"driver":"",
+"cargo":"AcdS",
+"desc":"The system is an engineered construct that produces and secretes plant-protective proteins under green/red light control. The PCB Production Module (BBa_26XZYM10) supplies the chromophore phycocyanobilin. The Light Sensing Module (BBa_261XH2RS) expresses CcaS-m3, which detects green light and autophosphorylates. The Transduction Module (BBa_26BDO8AQ) expresses CcaR, which receives its phosphoryl group. Phosphorylated CcaR activates PcpcG2-veg in the Light-Responsive Expression Module (BBa_26PGPSGK), driving secretion of ACC deaminase via the Csn signal peptide. Expression is on in green light and off in red, giving external control over protein production instead of a constant burden on the cell.",
+"comp":[
+{
+"id":"BBa_26XZYM10",
+"start":1,
+"end":1655,
+"role":"Assembly",
+"mine":true
+},
+{
+"id":"BBa_261XH2RS",
+"start":1656,
+"end":3348,
+"role":"Assembly",
+"mine":true
+},
+{
+"id":"BBa_26BDO8AQ",
+"start":3349,
+"end":4312,
+"role":"Assembly",
+"mine":true
+},
+{
+"id":"BBa_26Q3LKZU",
+"start":4313,
+"end":6929,
+"role":"Assembly",
+"mine":true
+}
+],
+"usedin":[],
+"twins":[
+"BBa_260MVA1K"
+],
+"docs":[
+{
+"type":"design",
+"words":883,
+"imgs":0,
+"brackets":1,
+"updated":"2026-10-21"
+},
+{
+"type":"experiment",
+"words":521,
+"imgs":3,
+"brackets":0,
+"updated":"2026-10-19"
+},
+{
+"type":"characterisation",
+"words":145,
+"imgs":1,
+"brackets":0,
+"updated":"2026-10-19"
+},
+{
+"type":"application",
+"words":135,
+"imgs":0,
+"brackets":0,
+"updated":"2026-10-18"
+},
+{
+"type":"discussion",
+"words":352,
+"imgs":0,
+"brackets":0,
+"updated":"2026-10-18"
+}
+],
+"words":2036,
+"imgs":4,
+"brackets":1,
+"flags":[
+"blot",
+"brackets",
+"twin"
+]
+},
+{
+"id":"BBa_265CD14Z",
+"title":"BoPep4",
+"slug":"bba-265cd14z",
+"status":"published",
+"role":"CDS",
+"bp":69,
+"level":0,
+"mod":"protectant",
+"driver":"",
+"cargo":"BoPep4",
+"desc":"This part encodes BoPep4, a 23-residue plant elicitor peptide (PEP) from broccoli (Brassica oleracea var. italica). BoPep4 acts as a peptide hormone and signaling molecule to regulate plant defense mechanisms and salt tolerance. The BoPep4 coding sequence was codon-optimized for B. subtilis.",
+"comp":[],
+"usedin":[
+"BBa_26ILD3SO"
+],
+"twins":[],
+"docs":[
+{
+"type":"design",
+"words":273,
+"imgs":1,
+"brackets":1,
+"updated":"2026-10-20"
+},
+{
+"type":"application",
+"words":155,
+"imgs":0,
+"brackets":0,
+"updated":"2026-10-18"
+}
+],
+"words":428,
+"imgs":1,
+"brackets":1,
+"flags":[
+"brackets"
+]
+},
+{
+"id":"BBa_267B69E3",
+"title":"SamyQ-BoPep4 2.2-Histag",
+"slug":"bba-267b69e3",
+"status":"published",
+"role":"CDS",
+"bp":183,
+"level":1,
+"mod":"protectant",
+"driver":"",
+"cargo":"BoPep4",
+"desc":"This part encodes encodes BoPep4, a 23-residue plant elicitor peptide (PEP) from broccoli (Brassica oleracea var. italica); the wild-type BoPep4 sequence is registered as BBa_26ILD3SO. BoPep4 acts as a peptide hormone and signaling molecule to regulate plant defense mechanisms and salt tolerance. The BoPep4 protein is fused to the alpha-amylase signal peptide (SamyQ) at the N-terminus and a 6x Histag at the C-terminus. In this variant, the first 15 codons of the coding sequence were optimized to improve the mRNA secondary structure of the translation start site.",
+"comp":[
+{
+"id":"BBa_K1074014",
+"start":1,
+"end":93,
+"role":"CDS",
+"mine":false
+},
+{
+"id":"BBa_26ERHWWI",
+"start":94,
+"end":162,
+"role":"CDS",
+"mine":true
+}
+],
+"usedin":[
+"BBa_26IA55UY"
+],
+"twins":[],
+"docs":[
+{
+"type":"design",
+"words":565,
+"imgs":0,
+"brackets":1,
+"updated":"2026-10-18"
+},
+{
+"type":"experiment",
+"words":399,
+"imgs":2,
+"brackets":4,
+"updated":"2026-10-19"
+},
+{
+"type":"application",
+"words":60,
+"imgs":0,
+"brackets":0,
+"updated":"2026-10-18"
+}
+],
+"words":1024,
+"imgs":2,
+"brackets":5,
+"flags":[
+"brackets"
+]
+},
+{
+"id":"BBa_269A97I7",
+"title":"Pveg-EEBD-RBS0-SamyQ-BoPep4 2.1-Histag-B0015",
+"slug":"bba-269a97i7",
+"status":"published",
+"role":"Assembly",
+"bp":712,
+"level":2,
+"mod":"protectant",
+"driver":"veg",
+"cargo":"BoPep4",
+"desc":"This Protectant Module constitutively expresses potential stress-mitigation proteins and enables evaluation of their secretion and detection, with its constitutive promoter Pveg, RBS EEBD-RBS, and terminator B0015. The CDS of this construct encodes BoPep4, fused to the SamyQ signal peptide and a 6x Histag (SamyQ-BoPep4 2.1-Histag: BBa_26PX0UGH).",
+"comp":[
+{
+"id":"BBa_K143012",
+"start":1,
+"end":97,
+"role":"Regulatory",
+"mine":false
+},
+{
+"id":"BBa_26V6CPEV",
+"start":98,
+"end":400,
+"role":"Regulatory Region",
+"mine":true
+},
+{
+"id":"BBa_26PX0UGH",
+"start":401,
+"end":583,
+"role":"CDS",
+"mine":true
+},
+{
+"id":"BBa_B0015",
+"start":584,
+"end":712,
+"role":"Terminator",
+"mine":false
+}
+],
+"usedin":[],
+"twins":[],
+"docs":[
+{
+"type":"design",
+"words":967,
+"imgs":0,
+"brackets":0,
+"updated":"2026-10-18"
+},
+{
+"type":"experiment",
+"words":366,
+"imgs":2,
+"brackets":5,
+"updated":"2026-10-19"
+},
+{
+"type":"application",
+"words":783,
+"imgs":4,
+"brackets":0,
+"updated":"2026-10-19"
+},
+{
+"type":"discussion",
+"words":73,
+"imgs":0,
+"brackets":0,
+"updated":"2026-10-19"
+}
+],
+"words":2189,
+"imgs":6,
+"brackets":5,
+"flags":[
+"brackets"
+]
+},
+{
+"id":"BBa_26A4MT29",
+"title":"PtagC+RBS",
+"slug":"bba-26a4mt29",
+"status":"published",
+"role":"Assembly",
+"bp":100,
+"level":0,
+"mod":"light",
+"driver":"",
+"cargo":"",
+"desc":"A standardized genetic part combining a bacterial promoter (PtagC) and a Ribosome Binding Site (RBS). This composite part provides control of both transcription and translation for a downstream gene of interest.",
+"comp":[],
+"usedin":[
+"BBa_26XZYM10"
+],
+"twins":[],
+"docs":[],
+"words":0,
+"imgs":0,
+"brackets":0,
+"flags":[
+"nodoc"
+]
+},
+{
+"id":"BBa_26BDO8AQ",
+"title":"Pveg-RBS0-ccaR-B0015",
+"slug":"bba-26bdo8aq",
+"status":"published",
+"role":"Assembly",
+"bp":964,
+"level":1,
+"mod":"light",
+"driver":"veg",
+"cargo":"",
+"desc":"This module consists of CcaR, the response regulator component of the cyanobacterial CcaS/CcaR two-component signaling system, along with the constitutive promoter Pveg, the RBS RBS0, and the terminator B0015. Acting as the intermediary between light perception and gene expression, CcaR receives the phosphoryl group from the green light-activated CcaS and activates transcription from the PcpcG2 promoter. Together, it enables the conversion of environmental light cues into a transcriptional response.",
+"comp":[
+{
+"id":"BBa_K143012",
+"start":1,
+"end":97,
+"role":"Regulatory",
+"mine":false
+},
+{
+"id":"BBa_26OSLRE4",
+"start":98,
+"end":130,
+"role":"Ribosome Entry Site",
+"mine":true
+},
+{
+"id":"BBa_K5431017",
+"start":131,
+"end":835,
+"role":"CDS",
+"mine":false
+},
+{
+"id":"BBa_B0015",
+"start":836,
+"end":964,
+"role":"Terminator",
+"mine":false
+}
+],
+"usedin":[
+"BBa_260MVA1K",
+"BBa_2610Z8EW",
+"BBa_2654HAF3",
+"BBa_26RF0X2E",
+"BBa_26U8UTMH"
+],
+"twins":[],
+"docs":[
+{
+"type":"design",
+"words":822,
+"imgs":0,
+"brackets":1,
+"updated":"2026-10-18"
+},
+{
+"type":"experiment",
+"words":494,
+"imgs":2,
+"brackets":8,
+"updated":"2026-10-21"
+},
+{
+"type":"application",
+"words":59,
+"imgs":0,
+"brackets":0,
+"updated":"2026-10-21"
+}
+],
+"words":1375,
+"imgs":2,
+"brackets":9,
+"flags":[
+"brackets",
+"hub"
+]
+},
+{
+"id":"BBa_26CXI09X",
+"title":"Pveg-EEBD-RBS0-Csn-AcdS-Histag-B0015",
+"slug":"bba-26cxi09x",
+"status":"published",
+"role":"Assembly",
+"bp":1669,
+"level":2,
+"mod":"protectant",
+"driver":"veg",
+"cargo":"AcdS",
+"desc":"This Protectant Module constitutively expresses potential stress-mitigation proteins and enables evaluation of their secretion and detection, with its constitutive promoter Pveg, RBS EEBD-RBS, and terminator B0015. The CDS of this construct encodes 1-aminocyclopropane-1-carboxylate (ACC) deaminase fused to the Csn signal peptide and a 6x Histag (Csn-AcdS-Histag: BBa_26NXOP7S).",
+"comp":[
+{
+"id":"BBa_K143012",
+"start":1,
+"end":97,
+"role":"Regulatory",
+"mine":false
+},
+{
+"id":"BBa_26V6CPEV",
+"start":98,
+"end":400,
+"role":"Regulatory Region",
+"mine":true
+},
+{
+"id":"BBa_26NXOP7S",
+"start":401,
+"end":1540,
+"role":"CDS",
+"mine":true
+},
+{
+"id":"BBa_26MA70QI",
+"start":509,
+"end":1519,
+"role":"CDS",
+"mine":true
+},
+{
+"id":"BBa_B0015",
+"start":1541,
+"end":1669,
+"role":"Terminator",
+"mine":false
+}
+],
+"usedin":[],
+"twins":[],
+"docs":[
+{
+"type":"design",
+"words":542,
+"imgs":0,
+"brackets":1,
+"updated":"2026-10-18"
+},
+{
+"type":"experiment",
+"words":461,
+"imgs":2,
+"brackets":5,
+"updated":"2026-10-19"
+},
+{
+"type":"characterisation",
+"words":205,
+"imgs":2,
+"brackets":1,
+"updated":"2026-10-19"
+},
+{
+"type":"application",
+"words":73,
+"imgs":0,
+"brackets":0,
+"updated":"2026-10-19"
+},
+{
+"type":"discussion",
+"words":114,
+"imgs":0,
+"brackets":0,
+"updated":"2026-10-19"
+}
+],
+"words":1395,
+"imgs":4,
+"brackets":7,
+"flags":[
+"blot",
+"brackets"
+]
+},
+{
+"id":"BBa_26D5AX7S",
+"title":"Pveg-EEBD-RBS0-SamyQ-LEA14 2.1-Histag-B0015",
+"slug":"bba-26d5ax7s",
+"status":"published",
+"role":"Assembly",
+"bp":1093,
+"level":2,
+"mod":"protectant",
+"driver":"veg",
+"cargo":"LEA14",
+"desc":"This Protectant Module constitutively expresses potential stress-mitigation proteins and enables evaluation of their secretion and detection, with its constitutive promoter Pveg, RBS EEBD-RBS, and terminator B0015. The CDS of this construct encodes a Late Embryogenesis Abundant 14 protein (LEA14) fused to the SamyQ signal peptide and a 6x Histag (SamyQ-LEA14 2.1-Histag: BBa_26J0GJGZ).",
+"comp":[
+{
+"id":"BBa_K143012",
+"start":1,
+"end":97,
+"role":"Regulatory",
+"mine":false
+},
+{
+"id":"BBa_26V6CPEV",
+"start":98,
+"end":400,
+"role":"Regulatory Region",
+"mine":true
+},
+{
+"id":"BBa_26J0GJGZ",
+"start":401,
+"end":964,
+"role":"CDS",
+"mine":true
+},
+{
+"id":"BBa_26IN6G1D",
+"start":494,
+"end":943,
+"role":"CDS",
+"mine":true
+},
+{
+"id":"BBa_B0015",
+"start":965,
+"end":1093,
+"role":"Terminator",
+"mine":false
+}
+],
+"usedin":[],
+"twins":[],
+"docs":[
+{
+"type":"design",
+"words":881,
+"imgs":0,
+"brackets":0,
+"updated":"2026-10-18"
+},
+{
+"type":"experiment",
+"words":458,
+"imgs":2,
+"brackets":5,
+"updated":"2026-10-19"
+},
+{
+"type":"application",
+"words":108,
+"imgs":1,
+"brackets":0,
+"updated":"2026-10-19"
+},
+{
+"type":"discussion",
+"words":85,
+"imgs":0,
+"brackets":0,
+"updated":"2026-10-19"
+}
+],
+"words":1532,
+"imgs":3,
+"brackets":5,
+"flags":[
+"brackets"
+]
+},
+{
+"id":"BBa_26DE5E2Q",
+"title":"PcpcG2-veg-EEBD-RBS0-SamyQ-AcdS 2.1-Histag-B0015",
+"slug":"bba-26de5e2q",
+"status":"published",
+"role":"Assembly",
+"bp":2602,
+"level":2,
+"mod":"protectant",
+"driver":"light",
+"cargo":"AcdS",
+"desc":"This module includes the light-responsive promoter PcpcG2-veg, the RBS EEBD-RBS0, a protectant CDS, and the terminator B0015, which together drive the expression of downstream genes in response to green-light signaling in Bacillus Subtilis after BBa_26XZYM10, BBa_261XH2RS, and BBa_26BDO8AQ. The CDS evaluated was ACC deaminase protein, fused to the SamyQ secretion signal and 6x Histag. Together, these components convert light-induced regulatory signals into measurable visual outputs or stress-mitigation functions.",
+"comp":[
+{
+"id":"BBa_254UKC9E",
+"start":1,
+"end":1045,
+"role":"Reporter",
+"mine":false
+},
+{
+"id":"BBa_26V6CPEV",
+"start":1046,
+"end":1348,
+"role":"Regulatory Region",
+"mine":true
+},
+{
+"id":"BBa_26TOGLX3",
+"start":1349,
+"end":2473,
+"role":"CDS",
+"mine":true
+},
+{
+"id":"BBa_B0015",
+"start":2474,
+"end":2602,
+"role":"Terminator",
+"mine":false
+}
+],
+"usedin":[
+"BBa_26U8UTMH"
+],
+"twins":[
+"BBa_263IW021"
+],
+"docs":[
+{
+"type":"design",
+"words":1143,
+"imgs":0,
+"brackets":1,
+"updated":"2026-10-18"
+},
+{
+"type":"experiment",
+"words":465,
+"imgs":2,
+"brackets":5,
+"updated":"2026-10-19"
+},
+{
+"type":"application",
+"words":59,
+"imgs":0,
+"brackets":0,
+"updated":"2026-10-18"
+}
+],
+"words":1667,
+"imgs":2,
+"brackets":6,
+"flags":[
+"brackets",
+"twin",
+"legacy"
+]
+},
+{
+"id":"BBa_26ERHWWI",
+"title":"Bopep4 2.2",
+"slug":"bba-26erhwwi",
+"status":"published",
+"role":"CDS",
+"bp":69,
+"level":0,
+"mod":"protectant",
+"driver":"",
+"cargo":"BoPep4",
+"desc":"This part encodes BoPep4, a 23-residue plant elicitor peptide (PEP) from broccoli (Brassica oleracea var. italica); the wild-type BoPep4 sequence is registered as BBa_26ILD3SO. BoPep4 acts as a peptide hormone and signaling molecule to regulate plant defense mechanisms and salt tolerance. In this variant, the first 15 codons of the coding sequence were optimized to improve the mRNA secondary structure of the translation start site.",
+"comp":[],
+"usedin":[
+"BBa_267B69E3"
+],
+"twins":[],
+"docs":[
+{
+"type":"design",
+"words":873,
+"imgs":5,
+"brackets":1,
+"updated":"2026-10-20"
+},
+{
+"type":"application",
+"words":94,
+"imgs":0,
+"brackets":0,
+"updated":"2026-10-18"
+}
+],
+"words":967,
+"imgs":5,
+"brackets":1,
+"flags":[
+"brackets"
+]
+},
+{
+"id":"BBa_26FSZTWM",
+"title":"Pveg-EEBD-RBS0-SamyQ-BoPep4-Histag-B0015",
+"slug":"bba-26fsztwm",
+"status":"published",
+"role":"Assembly",
+"bp":712,
+"level":2,
+"mod":"protectant",
+"driver":"veg",
+"cargo":"BoPep4",
+"desc":"This Protectant Module constitutively expresses potential stress-mitigation proteins and enables evaluation of their secretion and detection, with its constitutive promoter Pveg, RBS EEBD-RBS, and terminator B0015. The CDS of this construct encodes BoPep4, fused to the SamyQ signal peptide and a 6x Histag (SamyQ-BoPep4-Histag: BBa_26ILD3SO).",
+"comp":[
+{
+"id":"BBa_K143012",
+"start":1,
+"end":97,
+"role":"Regulatory",
+"mine":false
+},
+{
+"id":"BBa_26V6CPEV",
+"start":98,
+"end":400,
+"role":"Regulatory Region",
+"mine":true
+},
+{
+"id":"BBa_26ILD3SO",
+"start":401,
+"end":583,
+"role":"CDS",
+"mine":true
+},
+{
+"id":"BBa_B0015",
+"start":584,
+"end":712,
+"role":"Terminator",
+"mine":false
+}
+],
+"usedin":[],
+"twins":[],
+"docs":[
+{
+"type":"design",
+"words":612,
+"imgs":0,
+"brackets":0,
+"updated":"2026-10-18"
+},
+{
+"type":"experiment",
+"words":278,
+"imgs":0,
+"brackets":2,
+"updated":"2026-10-20"
+},
+{
+"type":"application",
+"words":52,
+"imgs":0,
+"brackets":0,
+"updated":"2026-10-18"
+},
+{
+"type":"discussion",
+"words":77,
+"imgs":0,
+"brackets":0,
+"updated":"2026-10-19"
+}
+],
+"words":1019,
+"imgs":0,
+"brackets":2,
+"flags":[
+"nofig",
+"brackets"
+]
+},
+{
+"id":"BBa_26GJIT8W",
+"title":"PcpcG2-veg",
+"slug":"bba-26gjit8w",
+"status":"published",
+"role":"Promoter",
+"bp":177,
+"level":0,
+"mod":"light",
+"driver":"",
+"cargo":"",
+"desc":"Light induced promoter",
+"comp":[],
+"usedin":[
+"BBa_263IW021",
+"BBa_26PGPSGK",
+"BBa_26VTO4DX"
+],
+"twins":[],
+"docs":[],
+"words":0,
+"imgs":0,
+"brackets":0,
+"flags":[
+"nodoc",
+"hub"
+]
+},
+{
+"id":"BBa_26IA55UY",
+"title":"Pveg-EEBD-RBS0-SamyQ-BoPep4 2.2-Histag-B0015",
+"slug":"bba-26ia55uy",
+"status":"published",
+"role":"Assembly",
+"bp":712,
+"level":2,
+"mod":"protectant",
+"driver":"veg",
+"cargo":"BoPep4",
+"desc":"This Protectant Module constitutively expresses potential stress-mitigation proteins and enables evaluation of their secretion and detection, with its constitutive promoter Pveg, RBS EEBD-RBS, and terminator B0015. The CDS of this construct encodes BoPep4, fused to the SamyQ signal peptide and a 6x Histag (SamyQ-BoPep4 2.2-Histag: BBa_267B69E3).",
+"comp":[
+{
+"id":"BBa_K143012",
+"start":1,
+"end":97,
+"role":"Regulatory",
+"mine":false
+},
+{
+"id":"BBa_26V6CPEV",
+"start":98,
+"end":400,
+"role":"Regulatory Region",
+"mine":true
+},
+{
+"id":"BBa_267B69E3",
+"start":401,
+"end":583,
+"role":"CDS",
+"mine":true
+},
+{
+"id":"BBa_B0015",
+"start":584,
+"end":712,
+"role":"Terminator",
+"mine":false
+}
+],
+"usedin":[],
+"twins":[],
+"docs":[
+{
+"type":"design",
+"words":981,
+"imgs":0,
+"brackets":0,
+"updated":"2026-10-18"
+},
+{
+"type":"experiment",
+"words":366,
+"imgs":2,
+"brackets":5,
+"updated":"2026-10-19"
+},
+{
+"type":"application",
+"words":52,
+"imgs":0,
+"brackets":0,
+"updated":"2026-10-19"
+},
+{
+"type":"discussion",
+"words":77,
+"imgs":0,
+"brackets":0,
+"updated":"2026-10-19"
+}
+],
+"words":1476,
+"imgs":2,
+"brackets":5,
+"flags":[
+"brackets"
+]
+},
+{
+"id":"BBa_26ILD3SO",
+"title":"SamyQ-BoPep4-Histag",
+"slug":"bba-26ild3so",
+"status":"published",
+"role":"CDS",
+"bp":183,
+"level":1,
+"mod":"protectant",
+"driver":"",
+"cargo":"BoPep4",
+"desc":"This part encodes BoPep4, a 23-residue plant elicitor peptide (PEP) from broccoli (Brassica oleracea var. italica). BoPep4 acts as a peptide hormone and signaling molecule to regulate plant defense mechanisms and salt tolerance. The BoPep4 (BBa_265CD14Z) protein is fused to the alpha-amylase signal peptide (SamyQ) at the N-terminus and a 6x Histag at the C-terminus. The BoPep4 coding sequence was codon-optimized for B. subtilis.&#x20;",
+"comp":[
+{
+"id":"BBa_K1074014",
+"start":1,
+"end":93,
+"role":"CDS",
+"mine":false
+},
+{
+"id":"BBa_265CD14Z",
+"start":94,
+"end":162,
+"role":"CDS",
+"mine":true
+}
+],
+"usedin":[
+"BBa_26FSZTWM"
+],
+"twins":[],
+"docs":[
+{
+"type":"design",
+"words":258,
+"imgs":0,
+"brackets":1,
+"updated":"2026-10-18"
+},
+{
+"type":"experiment",
+"words":11,
+"imgs":0,
+"brackets":0,
+"updated":"2026-10-18"
+},
+{
+"type":"application",
+"words":59,
+"imgs":0,
+"brackets":0,
+"updated":"2026-10-18"
+}
+],
+"words":328,
+"imgs":0,
+"brackets":1,
+"flags":[
+"thin",
+"nofig",
+"brackets"
+]
+},
+{
+"id":"BBa_26IN6G1D",
+"title":"LEA14 2.1",
+"slug":"bba-26in6g1d",
+"status":"published",
+"role":"CDS",
+"bp":450,
+"level":0,
+"mod":"protectant",
+"driver":"",
+"cargo":"LEA14",
+"desc":"This part encodes a Late Embryogenesis Abundant 14 protein (LEA14) from Arabidopsis thaliana gene At1g01470.1, which belongs to LEA_2 subgroup; the wild-type LEA sequence is registered as BBa_26LTB0W1. The paper showed overexpression of AtLEA14 enhances salt stress tolerance in Arabidopsis thaliana. Therefore, LEA14 is might be the potential gene involved in plant responses to abiotic stress. In this variant, the first 15 amino acids of the LEA14 coding sequence were codon-optimized, which is predicted to reduce mRNA secondary structure at the 5′ end and thereby enhance translation initiation.",
+"comp":[],
+"usedin":[
+"BBa_26D5AX7S",
+"BBa_26J0GJGZ"
+],
+"twins":[],
+"docs":[
+{
+"type":"design",
+"words":692,
+"imgs":2,
+"brackets":1,
+"updated":"2026-10-20"
+},
+{
+"type":"application",
+"words":87,
+"imgs":0,
+"brackets":0,
+"updated":"2026-10-18"
+}
+],
+"words":779,
+"imgs":2,
+"brackets":1,
+"flags":[
+"brackets"
+]
+},
+{
+"id":"BBa_26J0GJGZ",
+"title":"SamyQ-LEA14 2.1-Histag",
+"slug":"bba-26j0gjgz",
+"status":"published",
+"role":"CDS",
+"bp":564,
+"level":1,
+"mod":"protectant",
+"driver":"",
+"cargo":"LEA14",
+"desc":"This part encodes a Late Embryogenesis Abundant 14 protein (LEA14) from Arabidopsis thaliana gene At1g01470.1, which belongs to LEA_2 subgrou&#x70;; the wild-type LEA sequence is registered as BBa_26LTB0W1. The paper showed overexpression of AtLEA14 enhances salt stress tolerance in Arabidopsis thaliana. Therefore, LEA14 is might be the potential gene involved in plant responses to abiotic stress. The LEA14 protein is fused to the alpha-amylase signal peptide (SamyQ) at the N-terminus and a 6x Histag at the C-terminus. The first 15 amino acids of the LEA14 coding sequence were codon-optimized, which is predicted to reduce mRNA secondary structure at the 5′ end and thereby enhance translation initiation.",
+"comp":[
+{
+"id":"BBa_K1074014",
+"start":1,
+"end":93,
+"role":"CDS",
+"mine":false
+},
+{
+"id":"BBa_26IN6G1D",
+"start":94,
+"end":543,
+"role":"CDS",
+"mine":true
+}
+],
+"usedin":[
+"BBa_26D5AX7S"
+],
+"twins":[],
+"docs":[
+{
+"type":"design",
+"words":708,
+"imgs":0,
+"brackets":1,
+"updated":"2026-10-18"
+},
+{
+"type":"experiment",
+"words":442,
+"imgs":2,
+"brackets":4,
+"updated":"2026-10-21"
+},
+{
+"type":"application",
+"words":60,
+"imgs":0,
+"brackets":0,
+"updated":"2026-10-18"
+}
+],
+"words":1210,
+"imgs":2,
+"brackets":5,
+"flags":[
+"brackets"
+]
+},
+{
+"id":"BBa_26LTB0W1",
+"title":"LEA14",
+"slug":"bba-26ltb0w1",
+"status":"published",
+"role":"CDS",
+"bp":450,
+"level":0,
+"mod":"protectant",
+"driver":"",
+"cargo":"LEA14",
+"desc":"This part encodes a Late Embryogenesis Abundant 14 protein (LEA14) from Arabidopsis thaliana gene At1g01470.1, which belongs to LEA_2 subgroup. The paper showed overexpression of AtLEA14 enhances salt stress tolerance in Arabidopsis thaliana. Therefore, LEA14 is might be the potential gene involved in plant responses to abiotic stress. The LEA14 coding sequence was codon-optimized for B. subtilis.",
+"comp":[],
+"usedin":[
+"BBa_26SG0NQQ",
+"BBa_26ZQ1T72"
+],
+"twins":[],
+"docs":[
+{
+"type":"design",
+"words":373,
+"imgs":1,
+"brackets":1,
+"updated":"2026-10-20"
+},
+{
+"type":"application",
+"words":114,
+"imgs":0,
+"brackets":0,
+"updated":"2026-10-18"
+}
+],
+"words":487,
+"imgs":1,
+"brackets":1,
+"flags":[
+"brackets"
+]
+},
+{
+"id":"BBa_26LYCBW0",
+"title":"BoPep4 2.1",
+"slug":"bba-26lycbw0",
+"status":"published",
+"role":"CDS",
+"bp":69,
+"level":0,
+"mod":"protectant",
+"driver":"",
+"cargo":"BoPep4",
+"desc":"This part encodes BoPep4, a 23-residue plant elicitor peptide (PEP) from broccoli (Brassica oleracea var. italica); the wild-type BoPep4 sequence is registered as BBa_26ILD3SO. BoPep4 acts as a peptide hormone and signaling molecule to regulate plant defense mechanisms and salt tolerance. In this variant, the first 15 codons of the coding sequence were optimized to improve the mRNA secondary structure of the translation start site.",
+"comp":[],
+"usedin":[
+"BBa_26PX0UGH"
+],
+"twins":[],
+"docs":[
+{
+"type":"design",
+"words":873,
+"imgs":5,
+"brackets":1,
+"updated":"2026-10-20"
+},
+{
+"type":"application",
+"words":92,
+"imgs":0,
+"brackets":0,
+"updated":"2026-10-18"
+}
+],
+"words":965,
+"imgs":5,
+"brackets":1,
+"flags":[
+"brackets"
+]
+},
+{
+"id":"BBa_26MA70QI",
+"title":"AcdS",
+"slug":"bba-26ma70qi",
+"status":"published",
+"role":"CDS",
+"bp":1011,
+"level":0,
+"mod":"protectant",
+"driver":"",
+"cargo":"AcdS",
+"desc":"This part encodes 1-aminocyclopropane-1-carboxylate (ACC) deaminase from Pseudomonas putida (Arthrobacter siderocapsulatus) strain UW4. It is an enzyme commonly found in plant growth-promoting rhizobacteria (PGPR). ACC deaminase degrades ACC, the precursor of the plant hormone ethylene, thereby alleviating ethylene-induced growth inhibition in plants under stress. The ACC deaminase coding sequence was codon-optimized for B. subtilis.",
+"comp":[],
+"usedin":[
+"BBa_26CXI09X",
+"BBa_26NXOP7S"
+],
+"twins":[],
+"docs":[
+{
+"type":"design",
+"words":426,
+"imgs":1,
+"brackets":2,
+"updated":"2026-10-20"
+},
+{
+"type":"application",
+"words":172,
+"imgs":0,
+"brackets":0,
+"updated":"2026-10-21"
+}
+],
+"words":598,
+"imgs":1,
+"brackets":2,
+"flags":[
+"brackets"
+]
+},
+{
+"id":"BBa_26NXOP7S",
+"title":"Csn-AcdS-Histag",
+"slug":"bba-26nxop7s",
+"status":"published",
+"role":"CDS",
+"bp":1140,
+"level":1,
+"mod":"protectant",
+"driver":"",
+"cargo":"AcdS",
+"desc":"This part encodes 1-aminocyclopropane-1-carboxylate (ACC) deaminase (AcdS: BBa_26MA70QI) from Pseudomonas putida (Arthrobacter siderocapsulatus) strain UW4. It is an enzyme commonly found in plant growth-promoting rhizobacteria (PGPR). ACC deaminase degrades ACC, the precursor of the plant hormone ethylene, thereby alleviating ethylene-induced growth inhibition in plants under stress. The ACC deaminase protein is fused to the chitosanase signal (Csn) peptide at the N-terminus and a 6x Histag at the C-terminus.&#x20;",
+"comp":[
+{
+"id":"BBa_26MA70QI",
+"start":109,
+"end":1119,
+"role":"CDS",
+"mine":true
+}
+],
+"usedin":[
+"BBa_26CXI09X",
+"BBa_26PGPSGK",
+"BBa_26Q3LKZU"
+],
+"twins":[],
+"docs":[
+{
+"type":"design",
+"words":410,
+"imgs":0,
+"brackets":2,
+"updated":"2026-10-21"
+},
+{
+"type":"experiment",
+"words":351,
+"imgs":2,
+"brackets":4,
+"updated":"2026-10-21"
+},
+{
+"type":"application",
+"words":118,
+"imgs":0,
+"brackets":0,
+"updated":"2026-10-21"
+}
+],
+"words":879,
+"imgs":2,
+"brackets":6,
+"flags":[
+"brackets",
+"hub"
+]
+},
+{
+"id":"BBa_26O00QVC",
+"title":"SamyQ-Bopep4 15-23-Histag",
+"slug":"bba-26o00qvc",
+"status":"published",
+"role":"CDS",
+"bp":141,
+"level":1,
+"mod":"protectant",
+"driver":"",
+"cargo":"BoPep4",
+"desc":"This part encodes encodes BoPep4, a 23-residue plant elicitor peptide (PEP) from broccoli (Brassica oleracea var. italica); the wild-type BoPep4 sequence is registered as BBa_26ILD3SO. BoPep4 acts as a peptide hormone and signaling molecule to regulate plant defense mechanisms and salt tolerance. The BoPep4 protein is fused to the alpha-amylase signal peptide (SamyQ) at the N-terminus and a 6x Histag at the C-terminus. In this version of BoPep4, residues 1-14 were deleted.",
+"comp":[
+{
+"id":"BBa_K1074014",
+"start":1,
+"end":93,
+"role":"CDS",
+"mine":false
+},
+{
+"id":"BBa_26YHOQCL",
+"start":94,
+"end":120,
+"role":"CDS",
+"mine":true
+}
+],
+"usedin":[
+"BBa_26Z8FHTR"
+],
+"twins":[],
+"docs":[
+{
+"type":"design",
+"words":1791,
+"imgs":4,
+"brackets":1,
+"updated":"2026-10-20"
+},
+{
+"type":"experiment",
+"words":13,
+"imgs":0,
+"brackets":0,
+"updated":"2026-10-20"
+},
+{
+"type":"application",
+"words":61,
+"imgs":0,
+"brackets":0,
+"updated":"2026-10-20"
+}
+],
+"words":1865,
+"imgs":4,
+"brackets":1,
+"flags":[
+"brackets"
+]
+},
+{
+"id":"BBa_26OSLRE4",
+"title":"RBS0",
+"slug":"bba-26oslre4",
+"status":"published",
+"role":"Ribosome Entry Site",
+"bp":33,
+"level":0,
+"mod":"toolkit",
+"driver":"",
+"cargo":"",
+"desc":"RBS0 is a synthetic, high-strength ribosome binding site optimized for Bacillus subtilis that recruits the ribosome to initiate protein translation",
+"comp":[],
+"usedin":[
+"BBa_261XH2RS",
+"BBa_26BDO8AQ"
+],
+"twins":[],
+"docs":[],
+"words":0,
+"imgs":0,
+"brackets":0,
+"flags":[
+"nodoc"
+]
+},
+{
+"id":"BBa_26PGPSGK",
+"title":"PcpcG2-veg-EEBD-RBS0-Csn-AcdS-Histag-B0015",
+"slug":"bba-26pgpsgk",
+"status":"published",
+"role":"Assembly",
+"bp":1749,
+"level":2,
+"mod":"protectant",
+"driver":"light",
+"cargo":"AcdS",
+"desc":"This module includes the light-responsive promoter PcpcG2-veg, the RBS EEBD-RBS0, a protectant CDS, and the terminator B0015, which together drive the expression of downstream genes in response to green-light signaling in Bacillus Subtilis after BBa_26XZYM10, BBa_261XH2RS, and BBa_26BDO8AQ. The CDS evaluated (BBa_26NXOP7S) was ACC deaminase protein, fused to the Csn secretion signal and 6x Histag. Together, these components convert light-induced regulatory signals into measurable visual outputs or stress-mitigation functions.",
+"comp":[
+{
+"id":"BBa_26GJIT8W",
+"start":1,
+"end":177,
+"role":"Promoter",
+"mine":true
+},
+{
+"id":"BBa_26V6CPEV",
+"start":178,
+"end":480,
+"role":"Regulatory Region",
+"mine":true
+},
+{
+"id":"BBa_26NXOP7S",
+"start":481,
+"end":1620,
+"role":"CDS",
+"mine":true
+},
+{
+"id":"BBa_B0015",
+"start":1621,
+"end":1749,
+"role":"Terminator",
+"mine":false
+}
+],
+"usedin":[
+"BBa_260MVA1K"
+],
+"twins":[
+"BBa_26Q3LKZU"
+],
+"docs":[
+{
+"type":"design",
+"words":1092,
+"imgs":0,
+"brackets":1,
+"updated":"2026-10-21"
+},
+{
+"type":"experiment",
+"words":471,
+"imgs":2,
+"brackets":5,
+"updated":"2026-10-21"
+},
+{
+"type":"application",
+"words":59,
+"imgs":0,
+"brackets":0,
+"updated":"2026-10-21"
+}
+],
+"words":1622,
+"imgs":2,
+"brackets":6,
+"flags":[
+"brackets",
+"twin",
+"own"
+]
+},
+{
+"id":"BBa_26PX0UGH",
+"title":"SamyQ-BoPep4 2.1-Histag",
+"slug":"bba-26px0ugh",
+"status":"published",
+"role":"CDS",
+"bp":183,
+"level":1,
+"mod":"protectant",
+"driver":"",
+"cargo":"BoPep4",
+"desc":"This part encodes encodes BoPep4, a 23-residue plant elicitor peptide (PEP) from broccoli (Brassica oleracea var. italica); the wild-type BoPep4 sequence is registered as BBa_26ILD3SO. BoPep4 acts as a peptide hormone and signaling molecule to regulate plant defense mechanisms and salt tolerance. The BoPep4 protein is fused to the alpha-amylase signal peptide (SamyQ) at the N-terminus and a 6x Histag at the C-terminus. In this variant, the first 15 codons of the coding sequence were optimized to improve the mRNA secondary structure of the translation start site.",
+"comp":[
+{
+"id":"BBa_K1074014",
+"start":1,
+"end":93,
+"role":"CDS",
+"mine":false
+},
+{
+"id":"BBa_26LYCBW0",
+"start":94,
+"end":162,
+"role":"CDS",
+"mine":true
+}
+],
+"usedin":[
+"BBa_269A97I7"
+],
+"twins":[],
+"docs":[
+{
+"type":"design",
+"words":564,
+"imgs":0,
+"brackets":1,
+"updated":"2026-10-18"
+},
+{
+"type":"experiment",
+"words":399,
+"imgs":2,
+"brackets":4,
+"updated":"2026-10-18"
+},
+{
+"type":"application",
+"words":60,
+"imgs":0,
+"brackets":0,
+"updated":"2026-10-18"
+}
+],
+"words":1023,
+"imgs":2,
+"brackets":5,
+"flags":[
+"brackets"
+]
+},
+{
+"id":"BBa_26Q3LKZU",
+"title":"PcpcG2-veg-EEBD-RBS0-Csn-AcdS-Histag-B0015",
+"slug":"bba-26q3lkzu",
+"status":"published",
+"role":"Assembly",
+"bp":2617,
+"level":2,
+"mod":"protectant",
+"driver":"light",
+"cargo":"AcdS",
+"desc":"This module includes the light-responsive promoter PcpcG2-veg, the RBS EEBD-RBS0, a protectant CDS, and the terminator B0015, which together drive the expression of downstream genes in response to green-light signaling in Bacillus Subtilis after BBa_26XZYM10, BBa_261XH2RS, and BBa_26BDO8AQ. The CDS evaluated (BBa_26NXOP7S) was ACC deaminase protein, fused to the Csn secretion signal and 6x Histag. Together, these components convert light-induced regulatory signals into measurable visual outputs or stress-mitigation functions.",
+"comp":[
+{
+"id":"BBa_254UKC9E",
+"start":1,
+"end":1045,
+"role":"Reporter",
+"mine":false
+},
+{
+"id":"BBa_26V6CPEV",
+"start":1046,
+"end":1348,
+"role":"Regulatory Region",
+"mine":true
+},
+{
+"id":"BBa_26NXOP7S",
+"start":1349,
+"end":2488,
+"role":"CDS",
+"mine":true
+},
+{
+"id":"BBa_B0015",
+"start":2489,
+"end":2617,
+"role":"Terminator",
+"mine":false
+}
+],
+"usedin":[
+"BBa_2654HAF3"
+],
+"twins":[
+"BBa_26PGPSGK"
+],
+"docs":[
+{
+"type":"design",
+"words":1092,
+"imgs":0,
+"brackets":1,
+"updated":"2026-10-18"
+},
+{
+"type":"experiment",
+"words":471,
+"imgs":2,
+"brackets":5,
+"updated":"2026-10-19"
+},
+{
+"type":"application",
+"words":59,
+"imgs":0,
+"brackets":0,
+"updated":"2026-10-18"
+}
+],
+"words":1622,
+"imgs":2,
+"brackets":6,
+"flags":[
+"brackets",
+"twin",
+"legacy"
+]
+},
+{
+"id":"BBa_26RF0X2E",
+"title":"CcaSR-SamyQ-AcdS 2.1-Histag",
+"slug":"bba-26rf0x2e",
+"status":"published",
+"role":"Assembly",
+"bp":6125,
+"level":3,
+"mod":"system",
+"driver":"",
+"cargo":"AcdS",
+"desc":"The system is an engineered construct that produces and secretes plant-protective proteins under green/red light control. The PCB Production Module (BBa_26XZYM10) supplies the chromophore phycocyanobilin. The Light Sensing Module (BBa_261XH2RS) expresses CcaS-m3, which detects green light and autophosphorylates. The Transduction Module (BBa_26BDO8AQ) expresses CcaR, which receives its phosphoryl group. Phosphorylated CcaR activates PcpcG2-veg in the Light-Responsive Expression Module (BBa_263IW021), driving secretion of ACC deaminase via the SamyQ signal peptide. Expression is on in green light and off in red, giving external control over protein production instead of a constant burden on the cell.",
+"comp":[
+{
+"id":"BBa_263IW021",
+"start":1,
+"end":1734,
+"role":"Assembly",
+"mine":true
+},
+{
+"id":"BBa_261XH2RS",
+"start":1735,
+"end":3427,
+"role":"Assembly",
+"mine":true
+},
+{
+"id":"BBa_26BDO8AQ",
+"start":3428,
+"end":4391,
+"role":"Assembly",
+"mine":true
+},
+{
+"id":"BBa_263IW021",
+"start":4392,
+"end":6125,
+"role":"Assembly",
+"mine":true
+}
+],
+"usedin":[],
+"twins":[
+"BBa_26U8UTMH"
+],
+"docs":[
+{
+"type":"design",
+"words":883,
+"imgs":0,
+"brackets":1,
+"updated":"2026-10-21"
+},
+{
+"type":"experiment",
+"words":527,
+"imgs":3,
+"brackets":0,
+"updated":"2026-10-21"
+},
+{
+"type":"characterisation",
+"words":1869,
+"imgs":7,
+"brackets":0,
+"updated":"2026-10-21"
+},
+{
+"type":"application",
+"words":78,
+"imgs":0,
+"brackets":0,
+"updated":"2026-10-21"
+},
+{
+"type":"discussion",
+"words":352,
+"imgs":0,
+"brackets":0,
+"updated":"2026-10-21"
+}
+],
+"words":3709,
+"imgs":10,
+"brackets":1,
+"flags":[
+"blot",
+"brackets",
+"twin"
+]
+},
+{
+"id":"BBa_26SG0NQQ",
+"title":"Pveg-EEBD-RBS0-Csn-LEA14-Histag-B0015",
+"slug":"bba-26sg0nqq",
+"status":"published",
+"role":"Assembly",
+"bp":1111,
+"level":2,
+"mod":"protectant",
+"driver":"veg",
+"cargo":"LEA14",
+"desc":"This Protectant Module constitutively expresses potential stress-mitigation proteins and enables evaluation of their secretion and detection, with its constitutive promoter Pveg, RBS EEBD-RBS, and terminator B0015. The CDS of this construct encodes a Late Embryogenesis Abundant 14 protein (LEA14) fused to the Csn signal peptide and a 6x Histag (Csn-LEA14-Histag: BBa_26ZQ1T72).",
+"comp":[
+{
+"id":"BBa_K143012",
+"start":1,
+"end":97,
+"role":"Regulatory",
+"mine":false
+},
+{
+"id":"BBa_26V6CPEV",
+"start":98,
+"end":400,
+"role":"Regulatory Region",
+"mine":true
+},
+{
+"id":"BBa_26ZQ1T72",
+"start":401,
+"end":982,
+"role":"CDS",
+"mine":true
+},
+{
+"id":"BBa_26LTB0W1",
+"start":512,
+"end":961,
+"role":"CDS",
+"mine":true
+},
+{
+"id":"BBa_B0015",
+"start":983,
+"end":1111,
+"role":"Terminator",
+"mine":false
+}
+],
+"usedin":[],
+"twins":[],
+"docs":[
+{
+"type":"design",
+"words":771,
+"imgs":0,
+"brackets":0,
+"updated":"2026-10-18"
+},
+{
+"type":"experiment",
+"words":455,
+"imgs":1,
+"brackets":6,
+"updated":"2026-10-19"
+},
+{
+"type":"application",
+"words":52,
+"imgs":0,
+"brackets":0,
+"updated":"2026-10-18"
+},
+{
+"type":"discussion",
+"words":92,
+"imgs":0,
+"brackets":0,
+"updated":"2026-10-19"
+}
+],
+"words":1370,
+"imgs":1,
+"brackets":6,
+"flags":[
+"brackets"
+]
+},
+{
+"id":"BBa_26TOGLX3",
+"title":"SamyQ-AcdS 2.1-Histag",
+"slug":"bba-26toglx3",
+"status":"published",
+"role":"CDS",
+"bp":1125,
+"level":1,
+"mod":"protectant",
+"driver":"",
+"cargo":"AcdS",
+"desc":"This part encodes 1-aminocyclopropane-1-carboxylate (ACC) deaminase from Pseudomonas putida (Arthrobacter siderocapsulatus) strain UW&#x34;; the wild-type acdS sequence is registered as BBa_26MA70QI. It is an enzyme commonly found in plant growth-promoting rhizobacteria (PGPR). ACC deaminase degrades ACC, the precursor of the plant hormone ethylene, thereby alleviating ethylene-induced growth inhibition in plants under stress. The ACC deaminase protein is fused to the alpha-amylase signal peptide (SamyQ) at the N-terminus and a 6x Histag at the C-terminus. In this variant, the first 15 codons of the coding sequence were optimized to improve the mRNA secondary structure of the translation start site.",
+"comp":[
+{
+"id":"BBa_K1074014",
+"start":1,
+"end":93,
+"role":"CDS",
+"mine":false
+},
+{
+"id":"BBa_262YYNPV",
+"start":94,
+"end":1104,
+"role":"CDS",
+"mine":true
+}
+],
+"usedin":[
+"BBa_263IW021",
+"BBa_26DE5E2Q",
+"BBa_26XVQ3FS"
+],
+"twins":[],
+"docs":[
+{
+"type":"design",
+"words":815,
+"imgs":0,
+"brackets":1,
+"updated":"2026-10-18"
+},
+{
+"type":"experiment",
+"words":366,
+"imgs":2,
+"brackets":4,
+"updated":"2026-10-21"
+},
+{
+"type":"application",
+"words":121,
+"imgs":0,
+"brackets":0,
+"updated":"2026-10-21"
+}
+],
+"words":1302,
+"imgs":2,
+"brackets":5,
+"flags":[
+"brackets",
+"hub"
+]
+},
+{
+"id":"BBa_26U8UTMH",
+"title":"ccaSR-SamyQ-AcdS 2.1-Histag",
+"slug":"bba-26u8utmh",
+"status":"published",
+"role":"Assembly",
+"bp":6914,
+"level":3,
+"mod":"system",
+"driver":"",
+"cargo":"AcdS",
+"desc":"The system is an engineered construct that produces and secretes plant-protective proteins under green/red light control. The PCB Production Module (BBa_26XZYM10) supplies the chromophore phycocyanobilin. The Light Sensing Module (BBa_261XH2RS) expresses CcaS-m3, which detects green light and autophosphorylates. The Transduction Module (BBa_26BDO8AQ) expresses CcaR, which receives its phosphoryl group. Phosphorylated CcaR activates PcpcG2-veg in the Light-Responsive Expression Module (BBa_26DE5E2Q), driving secretion of ACC deaminase via the SamyQ signal peptide. Expression is on in green light and off in red, giving external control over protein production instead of a constant burden on the cell.",
+"comp":[
+{
+"id":"BBa_26XZYM10",
+"start":1,
+"end":1655,
+"role":"Assembly",
+"mine":true
+},
+{
+"id":"BBa_261XH2RS",
+"start":1656,
+"end":3348,
+"role":"Assembly",
+"mine":true
+},
+{
+"id":"BBa_26BDO8AQ",
+"start":3349,
+"end":4312,
+"role":"Assembly",
+"mine":true
+},
+{
+"id":"BBa_26DE5E2Q",
+"start":4313,
+"end":6914,
+"role":"Assembly",
+"mine":true
+}
+],
+"usedin":[],
+"twins":[
+"BBa_26RF0X2E"
+],
+"docs":[
+{
+"type":"design",
+"words":883,
+"imgs":0,
+"brackets":1,
+"updated":"2026-10-21"
+},
+{
+"type":"experiment",
+"words":527,
+"imgs":3,
+"brackets":0,
+"updated":"2026-10-19"
+},
+{
+"type":"characterisation",
+"words":152,
+"imgs":2,
+"brackets":0,
+"updated":"2026-10-19"
+},
+{
+"type":"application",
+"words":137,
+"imgs":0,
+"brackets":0,
+"updated":"2026-10-18"
+},
+{
+"type":"discussion",
+"words":352,
+"imgs":0,
+"brackets":0,
+"updated":"2026-10-18"
+}
+],
+"words":2051,
+"imgs":5,
+"brackets":1,
+"flags":[
+"blot",
+"brackets",
+"twin"
+]
+},
+{
+"id":"BBa_26V6CPEV",
+"title":"EEBD-RBS0",
+"slug":"bba-26v6cpev",
+"status":"published",
+"role":"Regulatory Region",
+"bp":303,
+"level":0,
+"mod":"toolkit",
+"driver":"",
+"cargo":"",
+"desc":"A composite ribosome binding site element containing a synthetic RBS sequence to improve translation initiation efficiency. EEBD is the Escherichia coli expression blocking device, consisting of a B0015 terminator between two recombination sites to prevent unwanted gene expression, including the production of toxic proteins, during cloning DNA constructs in Escherichia. coli.",
+"comp":[
+{
+"id":"BBa_B0015",
+"start":29,
+"end":157,
+"role":"Terminator",
+"mine":false
+},
+{
+"id":"BBa_K1679038",
+"start":205,
+"end":279,
+"role":"Regulatory",
+"mine":false
+}
+],
+"usedin":[
+"BBa_263IW021",
+"BBa_269A97I7",
+"BBa_26CXI09X",
+"BBa_26D5AX7S",
+"BBa_26DE5E2Q",
+"BBa_26FSZTWM",
+"BBa_26IA55UY",
+"BBa_26PGPSGK",
+"BBa_26Q3LKZU",
+"BBa_26SG0NQQ",
+"BBa_26VTO4DX",
+"BBa_26XVQ3FS",
+"BBa_26Z8FHTR"
+],
+"twins":[],
+"docs":[],
+"words":0,
+"imgs":0,
+"brackets":0,
+"flags":[
+"nodoc",
+"hub"
+]
+},
+{
+"id":"BBa_26VTO4DX",
+"title":"CDS replacable cassette-mScarlet-I",
+"slug":"bba-26vto4dx",
+"status":"published",
+"role":"Assembly",
+"bp":2181,
+"level":1,
+"mod":"reporter",
+"driver":"light",
+"cargo":"mScarlet",
+"desc":"This Level 1 module is the customizable output of the optogenetic circuit. It places a replaceable CDS cassette under the control of the green-light-responsive promoter PcpcG2-veg, followed by the EEBD and RBS0 elements and the B0015 terminator. Phosphorylated CcaR activates PcpcG2-veg, so the cassette is expressed in green light and shut off in red light.",
+"comp":[
+{
+"id":"BBa_26GJIT8W",
+"start":1,
+"end":177,
+"role":"Promoter",
+"mine":true
+},
+{
+"id":"BBa_26V6CPEV",
+"start":178,
+"end":480,
+"role":"Regulatory Region",
+"mine":true
+},
+{
+"id":"BBa_J23100",
+"start":494,
+"end":528,
+"role":"Promoter",
+"mine":false
+},
+{
+"id":"BBa_K5119033",
+"start":565,
+"end":1281,
+"role":"CDS",
+"mine":false
+},
+{
+"id":"BBa_K4321004",
+"start":1321,
+"end":2016,
+"role":"Reporter",
+"mine":false
+},
+{
+"id":"BBa_B0015",
+"start":2053,
+"end":2181,
+"role":"Terminator",
+"mine":false
+}
+],
+"usedin":[
+"BBa_2610Z8EW"
+],
+"twins":[],
+"docs":[
+{
+"type":"design",
+"words":102,
+"imgs":0,
+"brackets":0,
+"updated":"2026-10-21"
+},
+{
+"type":"experiment",
+"words":8,
+"imgs":0,
+"brackets":0,
+"updated":"2026-10-21"
+}
+],
+"words":110,
+"imgs":0,
+"brackets":0,
+"flags":[
+"thin",
+"nofig",
+"own"
+]
+},
+{
+"id":"BBa_26XVQ3FS",
+"title":"Pveg-EEBD-RBS0-SamyQ-AcdS 2.1-Histag-B0015",
+"slug":"bba-26xvq3fs",
+"status":"published",
+"role":"Assembly",
+"bp":1654,
+"level":2,
+"mod":"protectant",
+"driver":"veg",
+"cargo":"AcdS",
+"desc":"This Protectant Module constitutively expresses potential stress-mitigation proteins and enables evaluation of their secretion and detection, with its constitutive promoter Pveg, RBS EEBD-RBS, and terminator B0015. The CDS of this construct encodes 1-aminocyclopropane-1-carboxylate (ACC) deaminase fused to the SamyQ signal peptide and a 6x Histag (SamyQ-AcdS 2.1-Histag: BBa_26TOGLX3).",
+"comp":[
+{
+"id":"BBa_K143012",
+"start":1,
+"end":97,
+"role":"Regulatory",
+"mine":false
+},
+{
+"id":"BBa_26V6CPEV",
+"start":98,
+"end":400,
+"role":"Regulatory Region",
+"mine":true
+},
+{
+"id":"BBa_26TOGLX3",
+"start":401,
+"end":1525,
+"role":"CDS",
+"mine":true
+},
+{
+"id":"BBa_262YYNPV",
+"start":494,
+"end":1504,
+"role":"CDS",
+"mine":true
+},
+{
+"id":"BBa_B0015",
+"start":1526,
+"end":1654,
+"role":"Terminator",
+"mine":false
+}
+],
+"usedin":[],
+"twins":[],
+"docs":[
+{
+"type":"design",
+"words":717,
+"imgs":0,
+"brackets":0,
+"updated":"2026-10-18"
+},
+{
+"type":"experiment",
+"words":429,
+"imgs":2,
+"brackets":5,
+"updated":"2026-10-19"
+},
+{
+"type":"characterisation",
+"words":64,
+"imgs":1,
+"brackets":0,
+"updated":"2026-10-19"
+},
+{
+"type":"application",
+"words":1109,
+"imgs":6,
+"brackets":0,
+"updated":"2026-10-19"
+},
+{
+"type":"discussion",
+"words":106,
+"imgs":0,
+"brackets":0,
+"updated":"2026-10-19"
+}
+],
+"words":2425,
+"imgs":9,
+"brackets":5,
+"flags":[
+"blot",
+"brackets"
+]
+},
+{
+"id":"BBa_26XZYM10",
+"title":"PtagC+RBS-Ho1:pcyA-L3S2P21",
+"slug":"bba-26xzym10",
+"status":"published",
+"role":"Assembly",
+"bp":1655,
+"level":1,
+"mod":"light",
+"driver":"",
+"cargo":"",
+"desc":"The PCB Production Module supplies the chromophore required for light sensing. It consists of the Ho1-pcyA CDS, along with the PtagC+RBS composite promoter and RBS and the L3S2P21 terminator, which converts endogenous heme into phycocyanobilin (PCB), the chromophore necessary for CcaS photoreceptor activity. PCB enables the light-sensing system to detect and respond to green light.",
+"comp":[
+{
+"id":"BBa_26A4MT29",
+"start":1,
+"end":100,
+"role":"Assembly",
+"mine":true
+},
+{
+"id":"BBa_K4354012",
+"start":101,
+"end":1594,
+"role":"CDS",
+"mine":false
+},
+{
+"id":"BBa_K2675031",
+"start":1595,
+"end":1655,
+"role":"Terminator",
+"mine":false
+},
+{
+"id":"BBa_K2486008",
+"start":1595,
+"end":1655,
+"role":"Terminator",
+"mine":false
+}
+],
+"usedin":[
+"BBa_260MVA1K",
+"BBa_2610Z8EW",
+"BBa_2654HAF3",
+"BBa_26U8UTMH"
+],
+"twins":[],
+"docs":[
+{
+"type":"design",
+"words":561,
+"imgs":0,
+"brackets":1,
+"updated":"2026-10-18"
+},
+{
+"type":"experiment",
+"words":257,
+"imgs":2,
+"brackets":6,
+"updated":"2026-10-19"
+},
+{
+"type":"application",
+"words":59,
+"imgs":0,
+"brackets":0,
+"updated":"2026-10-21"
+}
+],
+"words":877,
+"imgs":2,
+"brackets":7,
+"flags":[
+"brackets",
+"hub"
+]
+},
+{
+"id":"BBa_26YHOQCL",
+"title":"Bopep4 15-23",
+"slug":"bba-26yhoqcl",
+"status":"published",
+"role":"CDS",
+"bp":27,
+"level":0,
+"mod":"protectant",
+"driver":"",
+"cargo":"BoPep4",
+"desc":"This part encodes BoPep4, a 23-residue plant elicitor peptide (PEP) from broccoli (Brassica oleracea var. italica); the wild-type BoPep4 sequence is registered as BBa_26ILD3SO. BoPep4 acts as a peptide hormone and signaling molecule to regulate plant defense mechanisms and salt tolerance. In this version of BoPep4, residues 1-14 were deleted.",
+"comp":[],
+"usedin":[
+"BBa_26O00QVC"
+],
+"twins":[],
+"docs":[
+{
+"type":"design",
+"words":1557,
+"imgs":4,
+"brackets":1,
+"updated":"2026-10-20"
+},
+{
+"type":"application",
+"words":92,
+"imgs":0,
+"brackets":0,
+"updated":"2026-10-19"
+}
+],
+"words":1649,
+"imgs":4,
+"brackets":1,
+"flags":[
+"brackets"
+]
+},
+{
+"id":"BBa_26Z8FHTR",
+"title":"Pveg-EEBD-RBS0-SamyQ-Bopep4 15-23-Histag-B0015",
+"slug":"bba-26z8fhtr",
+"status":"published",
+"role":"Assembly",
+"bp":670,
+"level":2,
+"mod":"protectant",
+"driver":"veg",
+"cargo":"BoPep4",
+"desc":"This Protectant Module constitutively expresses potential stress-mitigation proteins and enables evaluation of their secretion and detection, with its constitutive promoter Pveg, RBS EEBD-RBS, and terminator B0015. The CDS encodes BoPep4, a 23-residue plant elicitor peptide (PEP) from broccoli (Brassica oleracea var. italica). The BoPep4 (BBa_265CD14Z) protein is fused to the alpha-amylase signal peptide (SamyQ) at the N-terminus and a 6x Histag at the C-terminus. BoPep4 acts as a peptide hormone and signaling molecule to regulate plant defense mechanisms and salt tolerance. In this version of BoPep4, residues 1-14 were deleted.",
+"comp":[
+{
+"id":"BBa_K143012",
+"start":1,
+"end":97,
+"role":"Regulatory",
+"mine":false
+},
+{
+"id":"BBa_26V6CPEV",
+"start":98,
+"end":400,
+"role":"Regulatory Region",
+"mine":true
+},
+{
+"id":"BBa_26O00QVC",
+"start":401,
+"end":541,
+"role":"CDS",
+"mine":true
+},
+{
+"id":"BBa_B0015",
+"start":542,
+"end":670,
+"role":"Terminator",
+"mine":false
+}
+],
+"usedin":[],
+"twins":[],
+"docs":[
+{
+"type":"design",
+"words":1803,
+"imgs":4,
+"brackets":1,
+"updated":"2026-10-20"
+},
+{
+"type":"experiment",
+"words":310,
+"imgs":0,
+"brackets":2,
+"updated":"2026-10-20"
+},
+{
+"type":"application",
+"words":25,
+"imgs":0,
+"brackets":0,
+"updated":"2026-10-20"
+}
+],
+"words":2138,
+"imgs":4,
+"brackets":3,
+"flags":[
+"brackets"
+]
+},
+{
+"id":"BBa_26ZQ1T72",
+"title":"Csn-LEA14-Histag",
+"slug":"bba-26zq1t72",
+"status":"published",
+"role":"CDS",
+"bp":582,
+"level":1,
+"mod":"protectant",
+"driver":"",
+"cargo":"LEA14",
+"desc":"This part encodes a Late Embryogenesis Abundant 14 protein (LEA14) (LEA: BBa_26LTB0W1) from Arabidopsis thaliana gene At1g01470.1, which belongs to LEA_2 subgroup. The paper showed overexpression of AtLEA14 enhances salt stress tolerance in Arabidopsis thaliana. Therefore, LEA14 is might be the potential gene involved in plant responses to abiotic stress. The LEA14 protein is fused to the chitosanase signal (Csn) peptide at the N-terminus and a 6x Histag at the C-terminus.&#x20;",
+"comp":[
+{
+"id":"BBa_26LTB0W1",
+"start":112,
+"end":561,
+"role":"CDS",
+"mine":true
+}
+],
+"usedin":[
+"BBa_26SG0NQQ"
+],
+"twins":[],
+"docs":[
+{
+"type":"design",
+"words":384,
+"imgs":0,
+"brackets":1,
+"updated":"2026-10-18"
+},
+{
+"type":"experiment",
+"words":360,
+"imgs":2,
+"brackets":4,
+"updated":"2026-10-19"
+},
+{
+"type":"application",
+"words":59,
+"imgs":0,
+"brackets":0,
+"updated":"2026-10-18"
+}
+],
+"words":803,
+"imgs":2,
+"brackets":5,
+"flags":[
+"brackets"
+]
+}
+],
+"external":[
+{
+"id":"BBa_254UKC9E",
+"title":"PcpcG2 Green Light-Inducible sfGFP",
+"role":"Reporter",
+"bp":1045,
+"slug":"bba-254ukc9e",
+"usedby":[
+"BBa_26DE5E2Q",
+"BBa_26Q3LKZU"
+]
+},
+{
+"id":"BBa_B0015",
+"title":"double terminator (B0010-B0012)",
+"role":"Terminator",
+"bp":129,
+"slug":"bba-b0015",
+"usedby":[
+"BBa_261XH2RS",
+"BBa_263IW021",
+"BBa_269A97I7",
+"BBa_26BDO8AQ",
+"BBa_26CXI09X",
+"BBa_26D5AX7S",
+"BBa_26DE5E2Q",
+"BBa_26FSZTWM",
+"BBa_26IA55UY",
+"BBa_26PGPSGK",
+"BBa_26Q3LKZU",
+"BBa_26SG0NQQ",
+"BBa_26V6CPEV",
+"BBa_26VTO4DX",
+"BBa_26XVQ3FS",
+"BBa_26Z8FHTR"
+]
+},
+{
+"id":"BBa_J23100",
+"title":"constitutive promoter family member",
+"role":"Promoter",
+"bp":35,
+"slug":"bba-j23100",
+"usedby":[
+"BBa_26VTO4DX"
+]
+},
+{
+"id":"BBa_K1074014",
+"title":"SamyQ",
+"role":"CDS",
+"bp":93,
+"slug":"bba-k1074014",
+"usedby":[
+"BBa_267B69E3",
+"BBa_26ILD3SO",
+"BBa_26J0GJGZ",
+"BBa_26O00QVC",
+"BBa_26PX0UGH",
+"BBa_26TOGLX3"
+]
+},
+{
+"id":"BBa_K143012",
+"title":"Promoter veg a constitutive promoter for B. subtilis",
+"role":"Regulatory",
+"bp":97,
+"slug":"bba-k143012",
+"usedby":[
+"BBa_269A97I7",
+"BBa_26BDO8AQ",
+"BBa_26CXI09X",
+"BBa_26D5AX7S",
+"BBa_26FSZTWM",
+"BBa_26IA55UY",
+"BBa_26SG0NQQ",
+"BBa_26XVQ3FS",
+"BBa_26Z8FHTR"
+]
+},
+{
+"id":"BBa_K1679038",
+"title":"RiboJ",
+"role":"Regulatory",
+"bp":75,
+"slug":"bba-k1679038",
+"usedby":[
+"BBa_26V6CPEV"
+]
+},
+{
+"id":"BBa_K2486008",
+"title":"L3S2P21 Synthetic Terminator",
+"role":"Terminator",
+"bp":61,
+"slug":"bba-k2486008",
+"usedby":[
+"BBa_26XZYM10"
+]
+},
+{
+"id":"BBa_K2675031",
+"title":"L3S2P21 Terminator",
+"role":"Terminator",
+"bp":61,
+"slug":"bba-k2675031",
+"usedby":[
+"BBa_26XZYM10"
+]
+},
+{
+"id":"BBa_K3317069",
+"title":"ccaSm3",
+"role":"CDS",
+"bp":1410,
+"slug":"bba-k3317069",
+"usedby":[
+"BBa_261XH2RS"
+]
+},
+{
+"id":"BBa_K4321004",
+"title":"mScarlet",
+"role":"Reporter",
+"bp":696,
+"slug":"bba-k4321004",
+"usedby":[
+"BBa_26VTO4DX"
+]
+},
+{
+"id":"BBa_K4354012",
+"title":"ho1- pcyA gene to express a protein PCB",
+"role":"CDS",
+"bp":1494,
+"slug":"bba-k4354012",
+"usedby":[
+"BBa_26XZYM10"
+]
+},
+{
+"id":"BBa_K5119033",
+"title":"sfGFP Reporter Protein",
+"role":"CDS",
+"bp":717,
+"slug":"bba-k5119033",
+"usedby":[
+"BBa_26VTO4DX"
+]
+},
+{
+"id":"BBa_K5431017",
+"title":"Ccar",
+"role":"CDS",
+"bp":705,
+"slug":"bba-k5431017",
+"usedby":[
+"BBa_26BDO8AQ"
+]
+},
+{
+"id":"BBa_K823000",
+"title":"PliaG",
+"role":"Regulatory",
+"bp":121,
+"slug":"bba-k823000",
+"usedby":[
+"BBa_261XH2RS"
+]
+}
+],
+"anatomy":[
+{
+"id":"design",
+"name_en":"Design",
+"name_zh":"設計",
+"asks_en":"Why does this part look like this?",
+"asks_zh":"這個 part 為什麼長這樣？",
+"holds_en":"What the part is, where the sequence came from, the choice of promoter, signal peptide and tag, and any modelling that informed it. On 36 of our 41 pages. It is the only slot that may contain a prediction.",
+"holds_zh":"這個 part 是什麼、序列從哪裡來、為什麼選這個啟動子、訊號肽與標籤，以及支撐這些選擇的模擬。41 頁裡有 36 頁有。它是唯一可以放「預測」的欄位。",
+"heads":[
+"## Overview",
+"## About",
+"## Literature",
+"## Dry lab / computational analysis",
+"## References"
+],
+"trap_en":"A prediction written in the past tense reads as a result. Our codon figures say \"ranks 1 of 43,944\" — that is a score from a folding model, not a measurement, and the sentence after it must say so.",
+"trap_zh":"用過去式寫的預測，讀起來就是結果。我們的密碼子圖寫著「43,944 中排第 1」——那是摺疊模型算出來的分數，不是量測；下一句必須講清楚。"
+},
+{
+"id":"experiment",
+"name_en":"Experiment",
+"name_zh":"實驗",
+"asks_en":"How was it built, and how do you know it is what you say?",
+"asks_zh":"它是怎麼組出來的？你怎麼知道它就是你說的那個？",
+"holds_en":"Assembly method and enzyme, the entry and expression vectors, the insert length, the primer table, the colony PCR gel with its expected band, how many colonies gave it, and which clone went forward. On 27 pages, always in the same three headings.",
+"holds_zh":"組裝方法與酵素、entry 與表現載體、插入片段長度、引子表、菌落 PCR 膠與期望帶大小、幾個菌落有帶，以及最後用了哪個 clone。27 頁有，而且永遠是同樣三個標題。",
+"heads":[
+"## Construction/assembly (wet lab)",
+"## Verification (wet lab)",
+"## Results"
+],
+"trap_en":"This is the slot a judge can check against the Sequence tab without leaving the page. Seven of our cassettes state a band 191 to 198 bp longer than the deposited sequence allows.",
+"trap_zh":"這是評審不必離開頁面、直接對照 Sequence 分頁就能查的欄位。我們有七個卡匣寫的帶大小，比上傳序列算得出來的多了 191 到 198 bp。"
+},
+{
+"id":"characterisation",
+"name_en":"Characterisation",
+"name_zh":"特性分析",
+"asks_en":"What does it do once it is in a cell?",
+"asks_zh":"它進到細胞裡之後，做了什麼？",
+"holds_en":"Measured behaviour of this part: the Western blots, the ELISA, the DNPH activity, the growth curves. Only 6 of our 41 pages have one, and all six are ACC deaminase. No part page carries characterisation of LEA14 or BoPep4.",
+"holds_zh":"這個 part 被量到的行為：Western blot、ELISA、DNPH 活性、生長曲線。41 頁裡只有 6 頁有，而且六頁全是 ACC deaminase。沒有任何一個 part 頁面有 LEA14 或 BoPep4 的特性分析。",
+"heads":[
+"**OD600",
+"**Western Blot",
+"**ELISA and DNPH Assay",
+"**Summary"
+],
+"trap_en":"An empty Characterisation slot is a judge's shortest route in. They will ask about the one part that has it, and then about the thirty-five that do not.",
+"trap_zh":"空的 Characterisation 欄位，是評審最短的切入路徑。他們會先問那個有資料的 part，然後問另外三十五個沒有的。"
+},
+{
+"id":"application",
+"name_en":"Application",
+"name_zh":"應用",
+"asks_en":"What is it for, and what happened when you used it?",
+"asks_zh":"它要拿來做什麼？你們用了之後發生什麼事？",
+"holds_en":"What the part is meant to achieve in the field, and the plant trials. On 34 pages. The plant figures live here, and so do the sentences that reach furthest beyond the data.",
+"holds_zh":"這個 part 在田裡要達成什麼，以及植物試驗。34 頁有。植物的圖放在這裡，而講得比數據還遠的句子也在這裡。",
+"heads":[
+"## Application-specific characterisation",
+"**Figure 1.",
+"**Figure 2."
+],
+"trap_en":"No part was ever applied to a plant. Every trial sprayed a filtered WB800 supernatant, so a claim in this slot is a claim about a culture, not about the part. Say \"the supernatant from this construct\", never \"this part\".",
+"trap_zh":"沒有任何一個 part 真的被施用到植物上。每一次試驗噴的都是過濾過的 WB800 上清液，所以這個欄位裡的主張，講的是一份培養液，不是那個 part。要說「這個構築的上清液」，絕對不要說「這個 part」。"
+},
+{
+"id":"discussion",
+"name_en":"Discussion",
+"name_zh":"討論",
+"asks_en":"What does it mean, and where does it stop?",
+"asks_zh":"這代表什麼？到哪裡為止？",
+"holds_en":"The reading of the data, the limitations, and what you would do next. On only 11 pages, always under the same three bold headings. This is the slot that earns you the benefit of the doubt.",
+"holds_zh":"對數據的解讀、限制，以及下一步。只有 11 頁有，而且永遠是同樣三個粗體標題。這個欄位是替你們爭取「評審願意相信」的地方。",
+"heads":[
+"**What the data mean.",
+"**Limitations.",
+"**Future directions."
+],
+"trap_en":"A limitation you wrote yourself cannot be used against you. A limitation a judge finds for you can. Thirty of our parts have no Discussion at all.",
+"trap_zh":"你自己寫下來的限制，不會被拿來打你；評審替你找出來的限制，會。我們有三十個 parts 完全沒有 Discussion。"
+}
+],
+"soft":[
+{
+"ease":1,
+"head_en":"Two parts share a name, and one of them carries an sfGFP cassette it should not have",
+"head_zh":"兩個 part 同名，其中一個帶著它不該有的 sfGFP 卡匣",
+"body_en":"BBa_26Q3LKZU is 2617 bp and BBa_26PGPSGK is 1749 bp, with identical titles. The difference is 868 bp: the older deposit carries the whole of BBa_254UKC9E, a 1045 bp third-party part that is PcpcG2 plus an sfGFP reporter and a terminator, where it should carry our own 177 bp promoter alone. As deposited, there is a terminator between the promoter and the ribosome binding site. The same pattern holds for BBa_26DE5E2Q against BBa_263IW021, and for both Level 2 systems. Anyone who opens the Sequence tab on two tabs side by side sees it.",
+"body_zh":"BBa_26Q3LKZU 是 2617 bp、BBa_26PGPSGK 是 1749 bp，標題一模一樣。差距是 868 bp：較舊的那一筆帶著整段 BBa_254UKC9E——一個 1045 bp 的第三方 part，內容是 PcpcG2 加上 sfGFP 報導基因與終止子——而它應該只帶我們自己 177 bp 的啟動子。以上傳的序列來看，啟動子和核醣體結合位之間夾著一個終止子。BBa_26DE5E2Q 對 BBa_263IW021 也是同樣的情形，兩個 Level 2 系統也是。任何人只要把兩個分頁的 Sequence 並排打開就看得到。",
+"parts":[
+"BBa_26Q3LKZU",
+"BBa_26PGPSGK",
+"BBa_26DE5E2Q",
+"BBa_263IW021"
+],
+"say_en":"We found it ourselves, and the fix is on the Registry: we deposited PcpcG2-veg as our own part, BBa_26GJIT8W, and re-deposited four corrected constructs in October. We kept the old ones up because they are the deposits our gels were run on. If you want the engineering cycle on our Registry, this is it.",
+"say_zh":"是我們自己發現的，而且修正就在 Registry 上：我們把 PcpcG2-veg 自己上傳成 BBa_26GJIT8W，並在十月重新上傳了四個修正後的構築。舊的我們留著，因為那是我們的膠當初跑的版本。如果你想看我們 Registry 上的工程循環，就是這個。"
+},
+{
+"ease":1,
+"head_en":"One page states two different expected band sizes for the same gel",
+"head_zh":"同一頁、同一張膠，寫了兩個不同的期望帶大小",
+"body_en":"On BBa_26CXI09X the Verification paragraph says the expected band is [1145 bp] and the caption eight lines below says [7767 bp]. Neither is right: from the deposited sequence and the stated primers the product is 1195 bp. The 1145 figure is a band size from a different part's wiki gel caption, and 7767 is plasmid scale. The sibling SamyQ cassette states 1984 bp for what it calls the same screen.",
+"body_zh":"在 BBa_26CXI09X 上，Verification 段落寫期望帶是 [1145 bp]，八行之後的圖說寫 [7767 bp]。兩個都不對：用上傳的序列和頁面寫的引子算，產物是 1195 bp。1145 是另一個 part 的 wiki 膠說明裡的數字，7767 則是質體等級。姊妹的 SamyQ 卡匣對它所稱的同一種篩選寫的是 1984 bp。",
+"parts":[
+"BBa_26CXI09X",
+"BBa_26XVQ3FS"
+],
+"say_en":"That is a mistake on a live page and it is ours. The number the sequence supports is 1195 bp. The gel itself is fine — one colony, one band, sequence-verified afterwards — but the caption is wrong and I would rather say so than defend it.",
+"say_zh":"那是線上頁面的錯，是我們的錯。序列支持的數字是 1195 bp。膠本身沒有問題——一個菌落、一條帶、之後有定序確認——但圖說是錯的，我寧可直接說出來，也不要替它辯護。"
+},
+{
+"ease":1,
+"head_en":"Seven cassettes state a band size longer than their own sequence allows",
+"head_zh":"七個卡匣寫的帶大小，比它們自己的序列能給的還長",
+"body_en":"Every one of our eight Pveg cassettes carries Pveg at positions 1 to 97, byte-identical, with a complete −35 and −10. Seven of them state a composite insert that needs a promoter of 288 to 295 bp. Five are the same −194 offset, one is −198, one is −191. The plainest version needs no arithmetic at all: BBa_26FSZTWM, BBa_269A97I7 and BBa_26IA55UY are architecturally identical at 712 bp and state 910, 906 and 906.",
+"body_zh":"我們八個 Pveg 卡匣每一個都在 1 到 97 位帶著 Pveg，序列完全相同，具備完整的 −35 和 −10。其中七個寫的複合插入長度，需要一個 288 到 295 bp 的啟動子才成立。五個是同樣的 −194 偏差，一個是 −198，一個是 −191。最直白的版本根本不用算：BBa_26FSZTWM、BBa_269A97I7 和 BBa_26IA55UY 結構完全相同、都是 712 bp，卻分別寫了 910、906、906。",
+"parts":[
+"BBa_26FSZTWM",
+"BBa_269A97I7",
+"BBa_26IA55UY",
+"BBa_26CXI09X",
+"BBa_26XVQ3FS",
+"BBa_26D5AX7S",
+"BBa_26SG0NQQ"
+],
+"say_en":"It is one fault repeated across seven pages: the promoter length we carried into the insert arithmetic was about 290 bp and Pveg is 97. The gels are not affected — those band sizes match our wiki captions — but the stated expected sizes are wrong and we recomputed all of them from the deposited sequences.",
+"say_zh":"這是同一個錯誤在七頁上重複：我們帶進插入長度計算裡的啟動子長度大約是 290 bp，而 Pveg 是 97。膠沒有受影響——那些帶大小和我們 wiki 上的圖說是一致的——但寫下來的期望大小是錯的，我們已經用上傳的序列把它們全部重算過。"
+},
+{
+"ease":1,
+"head_en":"Five published parts have no documentation at all",
+"head_zh":"五個已發布的 parts 完全沒有文件",
+"body_en":"BBa_26V6CPEV (EEBD-RBS0), BBa_26OSLRE4 (RBS0), BBa_26A4MT29 (PtagC+RBS), BBa_26GJIT8W (PcpcG2-veg) and BBa_263IW021 (a full PcpcG2-veg cassette) are published with empty pages. EEBD-RBS0 sits inside thirteen of our constructs; it is the constant that makes the Csn-against-SamyQ comparison a fair one. BBa_26GJIT8W is the promoter we deposited to fix the sfGFP problem, and its page does not say so.",
+"body_zh":"BBa_26V6CPEV（EEBD-RBS0）、BBa_26OSLRE4（RBS0）、BBa_26A4MT29（PtagC+RBS）、BBa_26GJIT8W（PcpcG2-veg）和 BBa_263IW021（一個完整的 PcpcG2-veg 卡匣）都是已發布但頁面空白。EEBD-RBS0 在我們十三個構築裡面；它是讓 Csn 對 SamyQ 的比較能成立的常數。BBa_26GJIT8W 是我們為了修正 sfGFP 問題而上傳的啟動子，而它的頁面上沒有寫這件事。",
+"parts":[
+"BBa_26V6CPEV",
+"BBa_26OSLRE4",
+"BBa_26A4MT29",
+"BBa_26GJIT8W",
+"BBa_263IW021"
+],
+"say_en":"Yes, and the empty ones are not the unimportant ones. EEBD-RBS0 is in thirteen constructs and PcpcG2-veg is the fix we are proudest of. Those are the two I would write first, and I can tell you now what each page would say.",
+"say_zh":"是的，而且空白的那幾個不是不重要的。EEBD-RBS0 在十三個構築裡，PcpcG2-veg 是我們最得意的一次修正。那兩個我會最先補，而且我現在就可以告訴你每一頁會寫什麼。"
+},
+{
+"ease":2,
+"head_en":"Two part pages describe the same two blots and reach opposite conclusions",
+"head_zh":"兩個 part 頁面描述同樣兩張墨點圖，卻得到相反的結論",
+"body_en":"BBa_26U8UTMH Fig.1 says \"band intensities were similar across all lanes\"; BBa_26RF0X2E Figure 3 says \"the green lanes looked somewhat stronger than the red lanes\". Same construct, same 13 and 16 hour design, different image file. The pair repeats for the overnight blot: \"similar levels throughout\" against \"strong at 3 hr and 6 hr and weaker at 8 hr\". Both captions are ours.",
+"body_zh":"BBa_26U8UTMH 的 Fig.1 寫「各道強度相近」；BBa_26RF0X2E 的 Figure 3 寫「綠光那幾道看起來比紅光稍強」。同一個構築、同樣的 13 與 16 小時設計、不同的影像檔。隔夜那張圖也是一樣：「全程水準相近」對上「3 和 6 小時強、8 小時較弱」。兩段圖說都是我們寫的。",
+"parts":[
+"BBa_26U8UTMH",
+"BBa_26RF0X2E"
+],
+"say_en":"Both are ours and they disagree, so we take the conservative reading: on those blots green and red are not distinguishable. The ELISA on the same samples reads 12.9 against 11.8 µg/mL. We have time-resolved green induction for the Csn system and we do not claim it for the SamyQ system.",
+"say_zh":"兩段都是我們寫的，而且互相矛盾，所以我們採保守的讀法：在那些墨點圖上，綠光和紅光分不出來。同樣樣品的 ELISA 是 12.9 對 11.8 µg/mL。我們對 Csn 系統有隨時間變化的綠光誘導，對 SamyQ 系統我們不作這個主張。"
+},
+{
+"ease":2,
+"head_en":"No Western blot anywhere carries a plasmid-free host lane",
+"head_zh":"沒有任何一張 Western blot 有無質體宿主對照道",
+"body_en":"Across nine blot figures on six part pages, not one has an untransformed WB800, empty-vector or dark lane. Red light is the only negative control on the optogenetic blots, and on the flagship ABDI blot the red 100 percent reference peaked at 8 hours alongside the green. Where we did run the untransformed host — on the ELISA — it read 4.562 to 5.452 µg/mL, the same range as four of our six constructs.",
+"body_zh":"六個 part 頁面上的九張墨點圖，沒有一張有未轉形 WB800、空載體或暗處對照道。在光遺傳學的圖上，紅光是唯一的陰性對照，而在招牌的 ABDI 圖上，紅光 100% 這個參考組在 8 小時和綠光一起達到最強。真的有跑未轉形宿主的地方是 ELISA，讀到 4.562 到 5.452 µg/mL，和我們六個構築裡的四個同一個範圍。",
+"parts":[
+"BBa_260MVA1K",
+"BBa_26RF0X2E",
+"BBa_26U8UTMH",
+"BBa_26XVQ3FS",
+"BBa_26CXI09X"
+],
+"say_en":"We name that gap in our own summary: add a WB800 lane without the plasmid, and quantify against a loading control. Until that run exists, no blot of ours proves the band is recombinant rather than a host protein the antibody picks up. On the ELISA where we did run the host, the control defeated the plate and we reported it that way.",
+"say_zh":"我們自己在 Summary 裡點名了這個缺口：加一道沒有質體的 WB800，並用上樣對照做量化。在那次實驗存在之前，我們沒有任何一張墨點圖能證明那條帶是重組蛋白，而不是抗體抓到的宿主蛋白。在真的有跑宿主的那次 ELISA 上，對照把整盤打敗了，我們就照這樣報告。"
+},
+{
+"ease":2,
+"head_en":"The same protein has five molecular weights across our pages",
+"head_zh":"同一個蛋白，在我們的頁面上有五個分子量",
+"body_en":"ACC deaminase appears as 35 kDa predicted, ~36, ~37 observed on the constitutive blots, ~41 cited from the literature and ~42 on the bioreactor blot — and the observed bands on the Level 2 light blots sit at 63 to 75 kDa and just below 100. No page reconciles them. Two explanations are offered and both are explicitly untested: a homodimer at about 70 kDa, and a fusion tag or incomplete denaturation moving the apparent weight.",
+"body_zh":"ACC deaminase 在頁面上出現過 35 kDa（預測）、約 36、約 37（組成型墨點圖上觀察到）、約 41（引自文獻）和約 42（生物反應器墨點圖）——而 Level 2 光控圖上觀察到的帶落在 63 到 75 kDa 以及 100 下面一點。沒有任何一頁把它們對起來。我們提了兩個解釋，而且都明說未經驗證：大約 70 kDa 的同源二聚體，以及融合標籤或變性不完全會改變表觀分子量。",
+"parts":[
+"BBa_260MVA1K",
+"BBa_26RF0X2E",
+"BBa_26CXI09X",
+"BBa_26XVQ3FS"
+],
+"say_en":"Our constitutive blots give about 37 kDa against a 35 kDa predicted monomer, which agrees. The Level 2 blots give 63 to 75, which we read as the roughly 70 kDa homodimer and have not tested. The 41 kDa literature number is the untagged, signal-peptide-free purified enzyme, so it is not directly comparable to ours.",
+"say_zh":"我們組成型的墨點圖給的是大約 37 kDa，對上預測的 35 kDa 單體，是吻合的。Level 2 的墨點圖給的是 63 到 75，我們解讀成大約 70 kDa 的同源二聚體，但沒有驗證。41 kDa 那個文獻數字是沒有標籤、沒有訊號肽的純化酵素，和我們的不能直接比較。"
+},
+{
+"ease":2,
+"head_en":"A whole paragraph from another part's page is live on BBa_26XZYM10",
+"head_zh":"BBa_26XZYM10 上公開著另一個 part 頁面的一整段",
+"body_en":"The Design section of our chromophore module, PtagC+RBS-Ho1:pcyA-L3S2P21, carries about 165 words describing the cloning of Csn-AcdS: it names Pveg, EEBD-RBS0, Csn-AcdS-Histag and the pSTK-EXP1 expression vector, none of which is in this part. It is the only block of its kind in the collection.",
+"body_zh":"我們色素基團模組 PtagC+RBS-Ho1:pcyA-L3S2P21 的 Design 區段，帶著大約 165 個字在描述 Csn-AcdS 的選殖：裡面提到 Pveg、EEBD-RBS0、Csn-AcdS-Histag 和 pSTK-EXP1 表現載體，全都不在這個 part 裡。這是整個收藏裡唯一一處這樣的區塊。",
+"parts":[
+"BBa_26XZYM10"
+],
+"say_en":"That is a copy-paste error and it should not be there. The right fix is deletion, not rewriting — this part was built in pSTK-1A and nothing in that paragraph describes it. It is on our list.",
+"say_zh":"那是複製貼上的錯誤，不應該在那裡。正確的處理是刪除，不是改寫——這個 part 是在 pSTK-1A 裡做的，那一段完全沒有在描述它。這條在我們的待修清單上。"
+},
+{
+"ease":2,
+"head_en":"A caption with no figure, and a clone number that is still a placeholder",
+"head_zh":"有圖說卻沒有圖，而 clone 編號還是佔位符",
+"body_en":"BBa_26SG0NQQ's experiment section ends \"Figure 2. Clone [X] was sequence-verified and used downstream.\" with blank lines where every sibling cassette has a sequencing image. BBa_26FSZTWM goes further and says it in bold: the gel image is unavailable, although the construct was verified by gel electrophoresis. That page has no images at all and no stated band size.",
+"body_zh":"BBa_26SG0NQQ 的 experiment 區段結尾是「Figure 2. Clone [X] 已定序確認並用於後續實驗。」，而其他同系列卡匣在這個位置都有定序圖，這一頁只有空行。BBa_26FSZTWM 走得更遠，直接用粗體寫出來：膠的影像沒有，但構築確實經過電泳驗證。那一頁完全沒有圖，也沒有寫期望帶大小。",
+"parts":[
+"BBa_26SG0NQQ",
+"BBa_26FSZTWM"
+],
+"say_en":"Both are true and both are thin. For BBa_26SG0NQQ the gel above it is real and matches our wiki caption at 735 bp, but the sequencing claim has nothing visible behind it. BBa_26FSZTWM was made by synthesising the whole construct with no Level 0 entry step, so it has the least evidence of the seven cassettes and the sentence above the gap is more confident than it has earned.",
+"say_zh":"兩件事都是真的，而且都很薄。BBa_26SG0NQQ 上面那張膠是真的，和我們 wiki 上的圖說一樣是 735 bp，但定序那個聲明背後沒有任何看得見的東西。BBa_26FSZTWM 是整段合成、沒有經過 Level 0 entry 步驟，所以在七個卡匣裡證據最少，而缺口上面那句話的自信超過它應得的。"
+},
+{
+"ease":2,
+"head_en":"Our own modelling says the His tag on three of our parts kills the binding contact",
+"head_zh":"我們自己的模擬說，三個 part 上的 His 標籤會破壞結合接觸",
+"body_en":"The molecular dynamics figure on BBa_26ERHWWI and BBa_26LYCBW0 shows bidentate engagement with Arg487 falling from 100.0 percent of frames to 0.0, with the charge centres separating from 4.0 Å to 20.1 Å, when a C-terminal 6xHis is appended past Asn23. All three SamyQ-BoPep4 deposits carry the tag at the C terminus. One of our legends records a decision to move it to the N terminus for constructs ordered after 16 August.",
+"body_zh":"BBa_26ERHWWI 和 BBa_26LYCBW0 上的分子動力學圖顯示，在 Asn23 後面接上 C 端 6xHis 之後，與 Arg487 的雙齒結合從 100.0% 的影格掉到 0.0，電荷中心從 4.0 Å 拉開到 20.1 Å。三筆 SamyQ-BoPep4 上傳都把標籤放在 C 端。我們有一段圖說記錄了一個決定：8 月 16 日之後訂的構築要把標籤移到 N 端。",
+"parts":[
+"BBa_26PX0UGH",
+"BBa_267B69E3",
+"BBa_26ILD3SO",
+"BBa_26ERHWWI"
+],
+"say_en":"Our deposits contradict that note. Either they were ordered before 16 August or the decision was never applied, and I do not have the ordering record to tell you which. What I can tell you is why the simulation did not stop us at the time: the tagged system passed all four pre-registered criteria, because a backbone carbonyl keeps a minimum-distance measure looking healthy.",
+"say_zh":"我們上傳的序列和那段註記是矛盾的。不是它們在 8 月 16 日之前就訂了，就是那個決定沒有被執行，而我沒有訂購紀錄可以告訴你是哪一個。我可以告訴你的是，當時模擬為什麼沒有攔下我們：有標籤的系統通過了全部四項事先登記的標準，因為主鏈的羰基讓「最短距離」這個指標看起來很正常。"
+},
+{
+"ease":1,
+"head_en":"Seven pages say the His tag is N-terminal and the same pages say it is C-terminal",
+"head_zh":"七個頁面說 His 標籤在 N 端，而同樣這些頁面又說它在 C 端",
+"body_en":"Every BoPep4 fusion and cassette carries the element list line \"6x Histag: fused N-terminally to the peptide\", while the short description of the same part says a His tag at the C terminus and the composition puts SamyQ at 1 to 93, ahead of the cargo. The sequences settle it: all three SamyQ-BoPep4 deposits end in six histidine codons before the stop, so the tag is C-terminal. The same class of error runs through the truncation names: BBa_26Z8FHTR is titled with \"Δ 15-23\", meaning residues 15 to 23 deleted, while its own short description says residues 1 to 14 were deleted, which is the opposite construct.",
+"body_zh":"每一個 BoPep4 的融合與卡匣，元件列表裡都有一行「6x Histag：融合在胜肽的 N 端」，而同一個 part 的簡述卻說 His 標籤在 C 端，組成裡 SamyQ 也排在 1 到 93、在 cargo 前面。序列可以定案：三筆 SamyQ-BoPep4 的上傳都在終止密碼子前以六個組胺酸密碼子結尾，所以標籤在 C 端。同一類錯誤也出現在截短的命名上：BBa_26Z8FHTR 的標題寫「Δ 15-23」，意思是刪掉第 15 到 23 個殘基，而它自己的簡述說刪掉的是第 1 到 14 個——那是相反的構築。",
+"parts":[
+"BBa_26PX0UGH",
+"BBa_267B69E3",
+"BBa_26ILD3SO",
+"BBa_26O00QVC",
+"BBa_26Z8FHTR",
+"BBa_26YHOQCL"
+],
+"say_en":"The tag is C-terminal; the sequence shows six histidine codons before the stop on all three. The N-terminal line is a template error that propagated across seven pages, and the delta naming on the truncation is inverted. Both are wrong on the page and right in the deposited sequence, which is the order I would rather have it.",
+"say_zh":"標籤在 C 端；序列上三筆都是終止密碼子前六個組胺酸密碼子。「N 端」那一行是模板錯誤，跟著擴散到七頁；截短的 delta 命名也寫反了。兩個都是頁面錯、上傳的序列對，而這個順序是我比較希望的那一個。"
+},
+{
+"ease":1,
+"head_en":"Each ACC deaminase page sends you to the other one for the plant result",
+"head_zh":"兩個 ACC deaminase 頁面，各自把植物結果推給對方",
+"body_en":"BBa_26CXI09X is the Csn construct and its Application says the effect was shown by the SamyQ construct, BBa_26XVQ3FS. Open BBa_26XVQ3FS and its plant figure legend says the sprayed material was culture supernatant from the Pveg-EEBD-RBS0-Csn-AcdS-B0015 construct — the Csn one. A judge who clicks once lands back where they started.",
+"body_zh":"BBa_26CXI09X 是 Csn 的構築，它的 Application 說效果是由 SamyQ 的構築 BBa_26XVQ3FS 展示的。打開 BBa_26XVQ3FS，它的植物圖說寫著噴的材料是 Pveg-EEBD-RBS0-Csn-AcdS-B0015 構築的培養上清——也就是 Csn 的那個。評審只要點一下，就會回到他出發的地方。",
+"parts":[
+"BBa_26CXI09X",
+"BBa_26XVQ3FS"
+],
+"say_en":"The figure legend is the one to trust: the supernatant sprayed on those plates came from the Csn construct. The Application sentence on the Csn page pointing at the SamyQ page is wrong, and the loop it makes is ours to break. The honest version is that we have a plant result for one construct's supernatant and not a Csn-against-SamyQ comparison.",
+"say_zh":"要相信的是圖說：噴在那些盤子上的上清液來自 Csn 的構築。Csn 頁面上那句把讀者指向 SamyQ 頁面的 Application 是錯的，這個迴圈是我們自己要打破的。誠實的說法是：我們有一個構築的上清液的植物結果，但沒有 Csn 對 SamyQ 的比較。"
+},
+{
+"ease":2,
+"head_en":"Open the sequence view and two composites are missing a module",
+"head_zh":"打開序列檢視，兩個複合元件少了一個模組",
+"body_en":"BBa_26RF0X2E lists BBa_263IW021 twice, at 1 to 1734 and again at 4392 to 6125, and does not list the PCB module at all — on a page whose own Design says the circuit needs all four modules on one plasmid because B. subtilis does not make PCB. BBa_2610Z8EW lists three modules and leaves 1721 bp unaccounted for, exactly the length of the light-sensing unit it omits. BBa_26XZYM10 lists two different terminator parts at the same coordinates, one forward and one reverse.",
+"body_zh":"BBa_26RF0X2E 把 BBa_263IW021 列了兩次，一次在 1 到 1734、一次在 4392 到 6125，而且完全沒有列 PCB 模組——而這一頁自己的 Design 寫著：因為枯草桿菌不會自己做 PCB，整個線路需要四個模組在同一個質體上。BBa_2610Z8EW 只列了三個模組，留下 1721 bp 沒有交代，而那正好是它漏掉的光感應單元的長度。BBa_26XZYM10 在同樣的座標上列了兩個不同的終止子 part，一個正向、一個反向。",
+"parts":[
+"BBa_26RF0X2E",
+"BBa_2610Z8EW",
+"BBa_26XZYM10"
+],
+"say_en":"Those are composition entries, not sequences — the deposited DNA is right and the part list on the page is wrong. On BBa_26RF0X2E the PCB module is in the 6125 bases we deposited; what is wrong is which component rows we attached. I would rather you check the sequence than the table.",
+"say_zh":"那些是組成欄位，不是序列——上傳的 DNA 是對的，頁面上的元件列表是錯的。在 BBa_26RF0X2E 上，PCB 模組就在我們上傳的 6125 個鹼基裡面；錯的是我們掛上去的元件列。我寧可你去看序列，而不是看那張表。"
+},
+{
+"ease":2,
+"head_en":"BoPep4 2.1 and 2.2 publish the same codon list on one page and different ones on another",
+"head_zh":"BoPep4 2.1 和 2.2 在一頁上是同一份密碼子清單，在另一頁上卻不同",
+"body_en":"BBa_26PX0UGH (2.1) and BBa_267B69E3 (2.2) carry character-for-character the same nine codon changes and the same accessibility numbers. BBa_26IA55UY, the cassette that carries 2.2, lists eight different codon changes and different numbers. The dry-lab figures on the two cargo parts are also the same image with the same caption, so the figures cannot tell them apart either.",
+"body_zh":"BBa_26PX0UGH（2.1）和 BBa_267B69E3（2.2）帶著逐字相同的九個密碼子改動，以及相同的可及性數字。而帶著 2.2 的卡匣 BBa_26IA55UY 列的是八個不同的密碼子改動和不同的數字。兩個 cargo part 上的乾式實驗圖也是同一張影像、同一段圖說，所以連圖都分不出它們。",
+"parts":[
+"BBa_26PX0UGH",
+"BBa_267B69E3",
+"BBa_26IA55UY",
+"BBa_26LYCBW0",
+"BBa_26ERHWWI"
+],
+"say_en":"The deposits are different — 2.1 and 2.2 differ from wild type at 11 and 15 bases of 69 — so the sequences are distinct even where the write-ups are not. The 2.2 text on the Level 0 fusion is a copy of the 2.1 text, and the cassette page has the right one. Read the cassette, not the fusion.",
+"say_zh":"上傳的序列是不同的——2.1 和 2.2 相對於野生型，在 69 bp 中分別有 11 和 15 個鹼基不同——所以即使文字沒有分開，序列是分開的。Level 0 融合上的 2.2 文字是 2.1 的複製，卡匣頁面上的那份才是對的。要讀卡匣，不要讀融合。"
+},
+{
+"ease":2,
+"head_en":"Three reference links carry a chatgpt.com tracking tag",
+"head_zh":"三個參考文獻連結帶著 chatgpt.com 的追蹤標記",
+"body_en":"Three UniProt links and one NCBI link on our pages end in ?utm_source=chatgpt.com. Separately, the project's central reference, Castillo-Hair et al. 2019, is credited to two different last authors on different pages, and the internal codenames ABDI, ABDQ, O8, PL01, PL03, PL04 and PL06 appear in figure legends across six parts and are defined on none of them.",
+"body_zh":"我們頁面上有三個 UniProt 連結和一個 NCBI 連結，網址結尾是 ?utm_source=chatgpt.com。另外，整個專題最核心的參考文獻 Castillo-Hair et al. 2019，在不同頁面上被歸給兩位不同的末位作者；而內部代號 ABDI、ABDQ、O8、PL01、PL03、PL04、PL06 出現在六個 part 的圖說裡，卻沒有任何一頁定義過它們。",
+"parts":[
+"BBa_262YYNPV",
+"BBa_26MA70QI",
+"BBa_26NXOP7S",
+"BBa_261XH2RS"
+],
+"say_en":"The tracking tag is a copied URL and it should not be there; the reference itself is the right paper and I can give you the citation. The codenames are our internal strain shorthand — ABDI is the Csn wild-type cargo Level 2 system, ABDQ is the SamyQ AcdS 2.1 one — and they should have been spelled out on the pages.",
+"say_zh":"那個追蹤標記是複製網址帶進來的，不該在那裡；文獻本身是對的，我可以直接給你引用資訊。那些代號是我們內部的菌株簡稱——ABDI 是 Csn 野生型 cargo 的 Level 2 系統，ABDQ 是 SamyQ AcdS 2.1 的那個——它們本來就應該在頁面上寫清楚。"
+},
+{
+"ease":3,
+"head_en":"The wiki says thirty-five parts and the Registry has forty-one",
+"head_zh":"wiki 寫三十五個 parts，Registry 上有四十一個",
+"body_en":"Our Parts page presents thirty-five and its source note says the organisation held thirty-nine on 21 October. The live organisation listing today returns forty-one, all published. Eight of them did not exist when the staging pack was built on 19 October, and they are the corrected re-deposits plus the parts that made the correction possible.",
+"body_zh":"我們的 Parts 頁面介紹三十五個，而它的原始註解寫 10 月 21 日時組織底下有三十九個。今天線上的組織清單回傳四十一個，全部已發布。其中八個在 10 月 19 日建立準備包時還不存在，它們就是修正後重新上傳的那些，加上讓那次修正成為可能的那幾個。",
+"parts":[
+"BBa_26GJIT8W",
+"BBa_26PGPSGK",
+"BBa_263IW021",
+"BBa_260MVA1K",
+"BBa_26RF0X2E",
+"BBa_26VTO4DX",
+"BBa_2610Z8EW",
+"BBa_26O00QVC"
+],
+"say_en":"Forty-one are deposited and our wiki presents thirty-five of them, because we withheld four and because the last re-deposits landed after the page was written. If you are counting from the Registry you will get forty-one, and that is the number I would use.",
+"say_zh":"上傳的是四十一個，我們的 wiki 介紹其中三十五個，因為有四個我們保留，而且最後幾筆重新上傳是在那一頁寫完之後才上去的。如果你是從 Registry 數，你會得到四十一，那也是我會用的數字。"
+},
+{
+"ease":3,
+"head_en":"A codon figure stars a sequence none of our parts carries",
+"head_zh":"一張密碼子圖標星的序列，我們沒有任何一個 part 帶著它",
+"body_en":"The AcdS and LEA14 codon-optimisation figures star a candidate that recodes the SamyQ segment by 19 to 21 bases. The 93 bp SamyQ segment is byte-identical to wild type in all four of our SamyQ fusions. The cargo recoding is real — 15 bases of 1011 for AcdS, 9 of 450 for LEA14 — but the starred row is from a different search run than the sequence that was ordered. BoPep4 2.1 is the exception: there the starred candidate's first 45 nucleotides are the deposit, base for base.",
+"body_zh":"AcdS 和 LEA14 的密碼子最佳化圖，標星的候選把 SamyQ 區段重新編碼了 19 到 21 個鹼基。而在我們四個 SamyQ 融合裡，那段 93 bp 的 SamyQ 和野生型完全相同。cargo 的重新編碼是真的——AcdS 是 1011 中的 15 個、LEA14 是 450 中的 9 個——但標星的那一列來自和實際訂購序列不同的搜尋。BoPep4 2.1 是例外：那裡標星候選的前 45 個核苷酸，和上傳的序列逐鹼基相同。",
+"parts":[
+"BBa_262YYNPV",
+"BBa_26IN6G1D",
+"BBa_26TOGLX3",
+"BBa_26J0GJGZ",
+"BBa_26LYCBW0"
+],
+"say_en":"The figure and the deposit are from different runs for AcdS and LEA14, and I will not pretend otherwise. What is consistent is the cargo recoding itself, which is in every 2.1 and 2.2 sequence, and the BoPep4 pair, where the starred candidate is the deposit base for base. Which came first needs the ordering history and I do not have it.",
+"say_zh":"就 AcdS 和 LEA14 來說，圖和上傳的序列來自不同的搜尋，我不會假裝不是。一致的部分是 cargo 本身的重新編碼，那在每一個 2.1 和 2.2 的序列裡都有；還有 BoPep4 那一對，標星的候選和上傳的序列逐鹼基相同。哪一個在前需要訂購歷史，而那我沒有。"
+}
+],
+"figures":[
+{
+"part":"BBa_260MVA1K",
+"slot":"characterisation",
+"label":"Fig.1",
+"kind":"Western blot",
+"hot":true,
+"what_en":"Wild-type ACCD under four light conditions, the flagship light-control blot",
+"what_zh":"野生型 ACCD 在四種光照條件下，光控的招牌墨點圖",
+"cap":"Fig.1. Western blot of wild-type ACCD in Bacillus subtilis WB800 carrying CcaSR under different light intensities in the LPA (ABDI). (A) Green 100% and green 12%. (B) Green 2% and red 100%. Samples at 0, 2, 4, 6 and 8 h.",
+"bands":[
+{
+"b":"63–75 kDa",
+"is_en":"where the signal actually ran, in every lane",
+"is_zh":"訊號實際跑到的位置，每一道都是"
+},
+{
+"b":"~35 kDa",
+"is_en":"the monomer we predicted and never saw",
+"is_zh":"我們預測、但從來沒看到的單體"
+},
+{
+"b":"~70 kDa",
+"is_en":"the homodimer we offer as a possibility, untested",
+"is_zh":"我們提出的同源二聚體可能性，未經驗證"
+},
+{
+"b":"red 100%, 8 h",
+"is_en":"the control lane the caption never reports",
+"is_zh":"圖說從來沒有交代的對照道"
+}
+],
+"say_en":"The bands run at 63 to 75 kDa against a 35 kDa predicted monomer. ACC deaminase forms a homodimer at about 70, so that is our reading, but we have not tested it and the caption says so. The part we have to be straight about is the red lane: on the next page over we write that the red 100 percent reference also peaked at 8 hours, which is why we moved to the codon-optimised construct.",
+"say_zh":"帶跑在 63 到 75 kDa，而預測的單體是 35 kDa。ACC deaminase 會形成大約 70 kDa 的同源二聚體，那是我們的解讀，但我們沒有驗證過，圖說裡也這樣寫。必須講清楚的是紅光那一道：在隔壁那一頁我們自己寫了，紅光 100% 這個參考組在 8 小時也達到最強，這就是我們換成密碼子最佳化構築的原因。",
+"miss_en":"If pushed on why the control failed: spectral leakage is one explanation and the ABDI strain could not be recovered from glycerol stock, so every repeat needed a fresh electroporation. We have not tested either explanation directly.",
+"miss_zh":"如果被追問對照組為什麼失效：光譜外溢是一個解釋，另一個是 ABDI 菌株無法從甘油管復甦，所以每一次重複都要重新電穿孔。這兩個解釋我們都沒有直接驗證過。"
+},
+{
+"part":"BBa_26RF0X2E",
+"slot":"characterisation",
+"label":"Figure 2",
+"kind":"Western blot",
+"hot":true,
+"what_en":"AcdS 2.1 after an overnight culture, three green-light lanes and no control at all",
+"what_zh":"AcdS 2.1 隔夜培養後，三道綠光、完全沒有對照",
+"cap":"Figure 2. Western blot analysis of AcdS 2.1 (ABDQ) in B. subtilis WB800 carrying CcaSR after an overnight culture, under green light at 100% intensity. All lanes are green 100%. A band ran just below the 100 kDa marker all three times.",
+"bands":[
+{
+"b":"just under 100 kDa",
+"is_en":"the band, at 3, 6 and 8 h",
+"is_zh":"那條帶，在 3、6、8 小時"
+},
+{
+"b":"3 h and 6 h",
+"is_en":"strong",
+"is_zh":"強"
+},
+{
+"b":"8 h",
+"is_en":"weaker",
+"is_zh":"較弱"
+},
+{
+"b":"no control lane",
+"is_en":"no red, no dark, no plasmid-free host",
+"is_zh":"沒有紅光、沒有暗處、沒有無質體宿主"
+}
+],
+"say_en":"Three lanes, all green, no control of any kind on the film. The band sits just under 100 kDa for a protein we call 37 elsewhere, and we cannot tell you from this blot that the band is ours rather than a WB800 protein that cross-reacts. The missing lane is the one we name in our own summary.",
+"say_zh":"三道，全部是綠光，底片上沒有任何對照。那條帶落在 100 kDa 下面一點，而我們在別處說這個蛋白是 37 kDa；光看這張圖，我們沒辦法告訴你那條帶是我們的，而不是 WB800 自己交叉反應的蛋白。少掉的那一道，就是我們自己在 Summary 裡點名的那一道。",
+"miss_en":"The same experiment appears on BBa_26U8UTMH as Fig.2 with a different image and the opposite reading, \"similar levels throughout\". Both captions are ours. We read the conservative one.",
+"miss_zh":"同一個實驗在 BBa_26U8UTMH 上是 Fig.2，用的是不同影像、結論相反：「全程水準相近」。兩段圖說都是我們寫的。我們採信保守的那一個。"
+},
+{
+"part":"BBa_26CXI09X",
+"slot":"characterisation",
+"label":"Fig. 1 (B)",
+"kind":"Western blot",
+"hot":true,
+"what_en":"The only purification panel on the whole Registry — four imidazole fractions",
+"what_zh":"整個 Registry 上唯一一張純化的圖——四個 imidazole 分液",
+"cap":"(B) Western blot of the purification of ACC deaminase. S1 to S4 correspond to different concentrations of imidazole buffer ([25 mM, 100 mM, 150 mM and 250 mM]).",
+"bands":[
+{
+"b":"S1–S4",
+"is_en":"four imidazole fractions, lane order not stated in the caption",
+"is_zh":"四個 imidazole 分液，圖說沒寫道次順序"
+},
+{
+"b":"10, 150, 250 mM",
+"is_en":"where bands appear, per the wiki; strongest at 250",
+"is_zh":"依 wiki，有帶的位置；250 最強"
+},
+{
+"b":"no kDa",
+"is_en":"the caption gives no molecular weight for this panel",
+"is_zh":"這一格圖說沒有給分子量"
+},
+{
+"b":"[ ]",
+"is_en":"the concentration list is still an unfilled placeholder",
+"is_zh":"濃度那一串還是沒填的佔位符"
+}
+],
+"say_en":"This is the only purification we have anywhere. Everything else on our Registry is crude supernatant or lysate. The panel shows which imidazole buffers recovered protein and nothing more: the fractions were loaded 25, 10, 150, 250 and the caption on the live page still has the concentration list in brackets, which is an error we own.",
+"say_zh":"這是我們唯一的一次純化，Registry 上其他全部是粗萃上清或裂解液。這一格只顯示哪些 imidazole 緩衝液有回收到蛋白，沒有更多：分液的上樣順序是 25、10、150、250，而線上頁面的圖說裡那串濃度還夾在方括號裡，這是我們自己的錯。",
+"miss_en":"If asked for a purified yield: we do not have one. The purification and dialysis sheet produced no result on our wiki, so no purified concentration, gel or yield exists.",
+"miss_zh":"如果被問純化後的產量：我們沒有。純化與透析那一張實驗表在我們 wiki 上沒有產出結果，所以沒有任何純化後的濃度、膠或產量。"
+},
+{
+"part":"BBa_26XVQ3FS",
+"slot":"characterisation",
+"label":"Fig. 1",
+"kind":"Western blot",
+"what_en":"The constitutive SamyQ-AcdS 2.1 supernatant blot — one lane, one band, no control",
+"what_zh":"組成型 SamyQ-AcdS 2.1 上清墨點圖——一道、一條帶、沒有對照",
+"cap":"Fig. 1. Western blot analysis of constitutive ACC deaminase-2.1-Histag expression in Bacillus subtilis. Lane ACCD represents the culture supernatant in which a clear band was detected at approximately 37 kDa, consistent with the predicted size of the secreted ACCD.",
+"bands":[
+{
+"b":"~37 kDa",
+"is_en":"the band, and the only ACCD size on our Registry that matches prediction",
+"is_zh":"那條帶，也是我們 Registry 上唯一和預測吻合的 ACCD 大小"
+},
+{
+"b":"Lane ACCD",
+"is_en":"culture supernatant, the only sample lane",
+"is_zh":"培養上清，唯一的樣品道"
+},
+{
+"b":"—",
+"is_en":"no marker lane named, no negative control named",
+"is_zh":"沒有點名標準品道，也沒有點名陰性對照"
+}
+],
+"say_en":"One lane of culture supernatant with a band at about 37 kDa, which is where we predicted the secreted enzyme. This is the cleanest size agreement we have. It is also one lane with no control beside it, so it shows secretion at the expected size and not that the band is the only thing the antibody saw.",
+"say_zh":"一道培養上清，帶在大約 37 kDa，正是我們預測分泌型酵素的位置。這是我們最乾淨的一次大小吻合。它同時也只有一道、旁邊沒有對照，所以它顯示的是「在期望大小有分泌」，而不是「抗體只看到這一條」。",
+"miss_en":"The sibling Csn construct gives the same 37 kDa on BBa_26CXI09X panel A. The Csn-against-SamyQ comparison those matched pairs were built for cannot be read off these two single lanes.",
+"miss_zh":"姊妹的 Csn 構築在 BBa_26CXI09X 的 A 格也是 37 kDa。這兩對構築本來是為了比較 Csn 和 SamyQ 而做的，但光靠這兩道單獨的樣品道讀不出那個比較。"
+},
+{
+"part":"BBa_260MVA1K",
+"slot":"experiment",
+"label":"Fig. 1",
+"kind":"Colony PCR gel",
+"what_en":"Level 2 junction screen, with the non-specific bands named in the caption",
+"what_zh":"Level 2 接點篩選，圖說裡直接點名了非專一性的帶",
+"cap":"Lanes 2 through 5 represent individual colonies screened using ccaSm3 F and ccaR R primers. Lanes 3, 4 and 5 yield a band migrating between the 500 and 750 basepair markers, consistent with the expected size of 632 basepairs, while lane 2 yields no product. The bright band near 250 basepairs and the faint higher-molecular-weight bands in lanes 3 through 5 are non-specific amplifications.",
+"bands":[
+{
+"b":"632 bp",
+"is_en":"the junction we were screening for; 3 of 4 colonies",
+"is_zh":"我們要篩的接點；4 個菌落中 3 個"
+},
+{
+"b":"~250 bp",
+"is_en":"bright, non-specific, named as such in our own caption",
+"is_zh":"亮、非專一性，我們自己的圖說就是這樣寫"
+},
+{
+"b":"high MW, faint",
+"is_en":"also non-specific, lanes 3 to 5",
+"is_zh":"也是非專一性，第 3 到 5 道"
+},
+{
+"b":"lane 2",
+"is_en":"no product",
+"is_zh":"沒有產物"
+}
+],
+"say_en":"This is the one figure on our Registry where we called an extra band in our own caption instead of waiting to be asked. The 632 bp band is the ccaS-to-ccaR junction; the bright 250 bp band and the faint high-molecular-weight ones are non-specific amplification from a colony template, which is normal for colony PCR and is why we went on to sequence-verify the clone.",
+"say_zh":"這是我們 Registry 上唯一一張「自己在圖說裡先把多出來的帶講出來」的圖，而不是等人問。632 bp 那條是 ccaS 到 ccaR 的接點；亮的 250 bp 和微弱的高分子量帶是菌落模板的非專一性擴增，菌落 PCR 本來就常見，這也是我們後面還要做定序確認的原因。",
+"miss_en":"Fig. 2 on the same page screens all four modules in two clones and reports correct bands across all four. Nine correct junctions say the modules are in the right order; they say nothing about the sequence between the junctions.",
+"miss_zh":"同一頁的 Fig. 2 在兩個 clone 上篩了全部四個模組，四個都有正確的帶。九個正確的接點說明模組的順序是對的；它們沒有說接點之間的序列是對的。"
+},
+{
+"part":"BBa_26CXI09X",
+"slot":"experiment",
+"label":"Figure 1",
+"kind":"Colony PCR gel",
+"hot":true,
+"what_en":"The gel whose expected band size the same page states twice, differently",
+"what_zh":"同一頁把期望帶大小寫了兩次、兩個數字的那張膠",
+"cap":"Figure 1. Colony PCR of pSTK-EXP1-Pveg-EEBD-RBS0-Csn-AcdS-Histag-B0015. 1 of 1 colonies gave a band at the expected size ([7767 bp]).",
+"bands":[
+{
+"b":"[7767 bp]",
+"is_en":"what the caption says",
+"is_zh":"圖說寫的"
+},
+{
+"b":"[1145 bp]",
+"is_en":"what the Verification paragraph eight lines above says",
+"is_zh":"上面八行的 Verification 段落寫的"
+},
+{
+"b":"1195 bp",
+"is_en":"what the deposited sequence and the two primers actually give",
+"is_zh":"用上傳序列和那兩支引子算出來的"
+},
+{
+"b":"1 of 1",
+"is_en":"colonies screened",
+"is_zh":"篩選的菌落數"
+}
+],
+"say_en":"Neither number on the page is right and they contradict each other, which is ours to own. Working from the deposited sequence, Csn F anneals at 401 and ACCD R at 1540, so with the primer tails the product is 1195 bp. 1145 is a band size that belongs to a different part's gel; 7767 is plasmid scale and cannot be this amplicon.",
+"say_zh":"頁面上兩個數字都不對，而且彼此矛盾，這是我們要認的。用上傳的序列算，Csn F 黏在 401、ACCD R 黏在 1540，加上引子尾巴，產物是 1195 bp。1145 是另一個 part 的膠上的帶大小；7767 是質體等級，不可能是這個產物。",
+"miss_en":"The sibling SamyQ cassette, BBa_26XVQ3FS, states 1984 bp for what the page describes as the same backbone-primer screen. The three numbers cannot all be right and we have not reconciled them on the live pages.",
+"miss_zh":"姊妹的 SamyQ 卡匣 BBa_26XVQ3FS，對頁面描述為同一種骨架引子篩選寫的是 1984 bp。三個數字不可能都對，而我們還沒有在線上頁面把它們對起來。"
+},
+{
+"part":"BBa_26ERHWWI",
+"slot":"design",
+"label":"Figure 4",
+"kind":"Molecular dynamics",
+"hot":true,
+"what_en":"The figure that says our own His tag destroys the contact BoPep4 works through",
+"what_zh":"說我們自己的 His 標籤會破壞 BoPep4 賴以作用的接觸的那張圖",
+"cap":"A C-terminal 6xHis tag removes the free carboxylate entirely: bidentate engagement falls from 100.0 % to 0.0 % of frames, the peptide C-terminal carboxylate leaves the first shell (100.0 % to 0.0 %) and the charges separate from 4.0 Å to 20.1 Å — while a backbone carbonyl keeps a simple minimum-distance measurement looking healthy, which is why the tagged system passed all four acceptance criteria.",
+"bands":[
+{
+"b":"100.0% to 0.0%",
+"is_en":"bidentate engagement with Arg487, untagged against tagged",
+"is_zh":"與 Arg487 的雙齒結合，無標籤對有標籤"
+},
+{
+"b":"4.0 Å to 20.1 Å",
+"is_en":"separation of the two charge centres",
+"is_zh":"兩個電荷中心的距離"
+},
+{
+"b":"passed 4 of 4",
+"is_en":"the tagged system still cleared every acceptance gate",
+"is_zh":"有標籤的系統仍然通過全部四項標準"
+},
+{
+"b":"C-terminal",
+"is_en":"where the His tag sits on all three of our SamyQ-BoPep4 deposits",
+"is_zh":"我們三個 SamyQ-BoPep4 上傳的 His 標籤位置"
+}
+],
+"say_en":"Our own simulation says a C-terminal tag abolishes the Asn23 to Arg487 salt bridge, and all three of our SamyQ-BoPep4 deposits are C-terminally tagged. One of our legends records a decision to move the tag to the N terminus for constructs ordered after 16 August. The deposits contradict that sentence, so either they predate the decision or it was not applied, and we do not have the ordering record to say which.",
+"say_zh":"我們自己的模擬說 C 端標籤會消掉 Asn23 到 Arg487 的鹽橋，而我們三個 SamyQ-BoPep4 的上傳都是 C 端加標籤。我們有一段圖說記錄了一個決定：8 月 16 日之後訂的構築把標籤移到 N 端。上傳的序列和那句話矛盾，所以不是它們早於那個決定，就是那個決定沒有被執行，而我們沒有訂購紀錄可以判斷。",
+"miss_en":"The point the figure makes that is worth repeating: the tagged system passed all four pre-registered criteria anyway, because a backbone carbonyl keeps a minimum-distance measure looking healthy. The criteria were measuring something other than binding.",
+"miss_zh":"這張圖裡最值得複述的一點：有標籤的系統還是通過了全部四項事先登記的標準，因為主鏈的羰基讓「最短距離」這個指標看起來很正常。那些標準量到的不是結合。"
+},
+{
+"part":"BBa_26O00QVC",
+"slot":"design",
+"label":"Figure 4",
+"kind":"Molecular dynamics",
+"what_en":"A pre-registered prediction we got wrong, published as the result",
+"what_zh":"一個事先登記、而我們猜錯的預測，照樣當成結果發表",
+"cap":"Figure 4. What we predicted against what we measured. The four acceptance criteria were written down before the simulation ran, together with the explicit prediction that this construct would fail all of them. It passed all four. We report this as the result rather than adjusting the criteria afterwards.",
+"bands":[
+{
+"b":"2.10 Å",
+"is_en":"receptor Cα RMSD",
+"is_zh":"受體 Cα RMSD"
+},
+{
+"b":"1.83 Å",
+"is_en":"peptide backbone RMSD",
+"is_zh":"胜肽主鏈 RMSD"
+},
+{
+"b":"99.9%",
+"is_en":"frames with Asn23–Arg487 within 4 Å",
+"is_zh":"Asn23–Arg487 在 4 Å 內的影格比例"
+},
+{
+"b":"100.0%",
+"is_en":"clamp integrity at 3 of 4 or better",
+"is_zh":"夾持完整度達 4 取 3 以上的比例"
+}
+],
+"say_en":"We wrote down before the run that 15 to 23 was our negative control and would fail all four gates. It passed all four. We published that instead of moving the goalposts, and the honest reading is in our own caption: the criteria were not wrong about the chemistry, they were measuring something other than binding.",
+"say_zh":"我們在跑之前就寫下來，15 到 23 是我們的陰性對照，應該四項全部失敗。結果四項全部通過。我們照樣發表，沒有事後改標準；誠實的解讀就在我們自己的圖說裡：那些標準對化學的判斷沒有錯，它們量到的不是結合。",
+"miss_en":"This is the strongest honesty card on our Registry. If a judge asks what you learned from modelling, this is the answer: a pre-registered prediction we lost, kept in public.",
+"miss_zh":"這是我們 Registry 上最強的一張誠實牌。如果評審問你從模擬裡學到什麼，答案就是這個：一個事先登記、我們輸掉、而且公開留著的預測。"
+},
+{
+"part":"BBa_26XVQ3FS",
+"slot":"application",
+"label":"Figure 2",
+"kind":"Plant trial",
+"what_en":"Agar thermo-priming readouts whose untreated control plate is marked contaminated",
+"what_zh":"洋菜熱預處理的量測結果，而未處理對照盤被標記為污染",
+"cap":"The four-star brackets run from the untreated unstressed control to the other groups; they do not compare a treated group with its own untreated control inside the heat-stressed block. No panel here shows a statistically tested advantage of ACC deaminase over its untreated heat-stressed control, and that control plate was contaminated.",
+"bands":[
+{
+"b":"3 of 8 plates",
+"is_en":"marked contaminated on the panel itself",
+"is_zh":"在圖上就被標記為污染"
+},
+{
+"b":"0.09 vs 0.07 mg/g",
+"is_en":"pre-treatment against untreated, heat-stressed, panel (c)",
+"is_zh":"預處理對未處理，熱逆境，(c) 格"
+},
+{
+"b":"four stars",
+"is_en":"comparing to the unstressed control, not the stressed one",
+"is_zh":"比較的是無逆境對照，不是逆境對照"
+},
+{
+"b":"1 plate per condition",
+"is_en":"the plate is the replicate",
+"is_zh":"一盤就是一個重複"
+}
+],
+"say_en":"Our own caption says it: no panel here shows a statistically tested advantage over the untreated heat-stressed control, and that control plate is one of the three marked contaminated. The stars compare everything to the unstressed control, which is the wrong comparison for the claim. We left both facts on the public page rather than cropping them.",
+"say_zh":"我們自己的圖說就寫了：這裡沒有任何一格顯示出相對於「未處理的熱逆境對照」有經統計檢定的優勢，而那個對照盤正是三個被標記污染的盤之一。那些星號比的是無逆境對照，對這個主張來說是錯的比較。我們把這兩件事留在公開頁面上，沒有裁掉。",
+"miss_en":"The companion hydroponic figure has chlorophyll and fresh weight pointing opposite ways, and the vehicle figure shows the TB medium alone suppressing growth from 0.065 g to 0.006 g. That is why every protectant run is read against a matched 1/40 WB800 vehicle control and not against medium alone.",
+"miss_zh":"搭配的水耕圖裡，葉綠素和鮮重指向相反方向；而載體對照圖顯示光是 TB 培養液就把生長從 0.065 g 壓到 0.006 g。這就是為什麼每一次保護蛋白試驗都要對 1/40 WB800 載體對照讀，而不是對純培養基讀。"
+},
+{
+"part":"BBa_26RF0X2E",
+"slot":"characterisation",
+"label":"Figure 7",
+"kind":"Assay plot",
+"what_en":"The DNPH light response that reverses three hours later",
+"what_zh":"三小時之後就反轉的 DNPH 光反應",
+"cap":"Figure 7. DNPH assay of ACCD activity at 13 hr and 16 hr under green and red light. The highest activity was observed at 13 hr under green light, indicating responsiveness to green light. However, it decreased dramatically over the following 3 hr.",
+"bands":[
+{
+"b":"13 h green",
+"is_en":"0.1249 mM, the cleanest light response the assay produced",
+"is_zh":"0.1249 mM，這個檢測產出過最乾淨的光反應"
+},
+{
+"b":"13 h red",
+"is_en":"0.0089 mM — a fourteenfold separation",
+"is_zh":"0.0089 mM——十四倍的差距"
+},
+{
+"b":"16 h",
+"is_en":"it inverts: red 0.0923, green 0.0130",
+"is_zh":"反轉了：紅光 0.0923、綠光 0.0130"
+},
+{
+"b":"n = 1",
+"is_en":"neither point repeated; p = 0.72 for colour",
+"is_zh":"兩個時間點都沒有重複；顏色的 p = 0.72"
+}
+],
+"say_en":"At 13 hours green beats red fourteen to one, which is the best light response this assay has given us. At 16 hours it inverts. Neither point is repeated, the error bar on the 13 hour green point runs from about 5 to 16 on the activity scale, and across both times colour comes out at p = 0.72. So we have a promising single observation and not a demonstrated switch.",
+"say_zh":"在 13 小時，綠光以十四比一勝過紅光，那是這個檢測給過我們最好的光反應。到 16 小時就反轉了。兩個時間點都沒有重複，13 小時綠光那一點的誤差棒在活性尺度上從大約 5 延伸到 16，而兩個時間合起來看，顏色的 p 值是 0.72。所以我們有一個值得追的單次觀察，不是一個被證實的開關。",
+"miss_en":"The experiment that would settle it is the obvious one and is not in our record: the same culture, one maturation time, both colours, repeated.",
+"miss_zh":"能定案的實驗很明顯，而我們的紀錄裡沒有：同一批培養、固定一個成熟時間、兩種顏色、做重複。"
+},
+{
+"part":"BBa_26Q3LKZU",
+"slot":"experiment",
+"label":"Figure 1",
+"kind":"Colony PCR gel",
+"what_en":"The gel that was run on the deposit carrying the sfGFP dropout",
+"what_zh":"在還帶著 sfGFP dropout 的那一版上跑的膠",
+"cap":"Figure 1. Colony PCR of pSTK-1D-PcpcG2-veg-EEBD-RBS0-Csn-AcdS-Histag-B0015. 2 of 6 colonies gave a band at the expected size ([1588 bp]).",
+"bands":[
+{
+"b":"[1588 bp]",
+"is_en":"stated expected size, still bracketed",
+"is_zh":"寫下的期望大小，還夾在方括號裡"
+},
+{
+"b":"2 of 6",
+"is_en":"colonies positive",
+"is_zh":"陽性菌落數"
+},
+{
+"b":"clone 3",
+"is_en":"taken forward",
+"is_zh":"往下做的 clone"
+},
+{
+"b":"2617 bp",
+"is_en":"the deposited sequence this screen belongs to",
+"is_zh":"這次篩選所屬的上傳序列長度"
+}
+],
+"say_en":"The same gel and the same caption appear on BBa_26PGPSGK, which is the corrected deposit. We ran the screen once, on the construct as it was then, and when we found the 868 bp sfGFP dropout in the sequence we re-deposited rather than re-shoot the gel. A judge should know the figure belongs to the older deposit.",
+"say_zh":"同一張膠、同一段圖說也出現在 BBa_26PGPSGK 上，那是修正後的版本。這個篩選我們只跑過一次，跑的是當時那個構築；後來在序列裡發現 868 bp 的 sfGFP dropout，我們選擇重新上傳，而不是重拍一張膠。評審應該知道這張圖屬於比較舊的那一筆。",
+"miss_en":"The 1588 bp number is also stated on BBa_26DE5E2Q for a different insert screened with a different primer pair. The same total for two different constructs cannot both be right.",
+"miss_zh":"1588 bp 這個數字在 BBa_26DE5E2Q 上也出現，但那是不同的插入片段、用不同的引子對篩選。同一個總長度對兩個不同構築，不可能都對。"
+}
+],
+"numbers":[
+{
+"v":"41",
+"what_en":"parts on the Registry under GEMS-Taiwan (2026), all published, as of 25 October",
+"what_zh":"GEMS-Taiwan (2026) 名下的 Registry parts，全部已發布，截至 10 月 25 日",
+"parts":[],
+"kind":"collection",
+"warn":true,
+"warn_en":"Our own Parts page says thirty-five, and its source note says the organisation holds thirty-nine. Three counts, three dates. Say forty-one and say which you are presenting.",
+"warn_zh":"我們自己的 Parts 頁面寫三十五，它的原始註解寫組織底下有三十九。三個數字、三個日期。講四十一，然後說明你們要介紹的是哪些。"
+},
+{
+"v":"4",
+"what_en":"assembly levels: basic part, transcriptional unit, cassette, whole system",
+"what_zh":"四個組裝層級：基本元件、轉錄單元、表現卡匣、完整系統",
+"parts":[],
+"kind":"collection"
+},
+{
+"v":"12 / 12 / 13 / 4",
+"what_en":"parts at level 0, 1, 2 and 3",
+"what_zh":"第 0、1、2、3 層的 parts 數",
+"parts":[],
+"kind":"collection"
+},
+{
+"v":"14",
+"what_en":"parts from earlier teams our composites are built on",
+"what_zh":"我們的複合元件所建立在的、來自過去隊伍的 parts",
+"parts":[],
+"kind":"collection"
+},
+{
+"v":"101",
+"what_en":"images embedded across the part pages — 61 distinct files, 46 of the embeds are re-uses",
+"what_zh":"part 頁面上嵌入的影像——61 個不同檔案，其中 46 次嵌入是重複使用",
+"parts":[],
+"kind":"figures"
+},
+{
+"v":"9",
+"what_en":"Western blot figures, on six part pages, all anti-His",
+"what_zh":"Western blot 圖，分佈在六個 part 頁面，全部是 anti-His",
+"parts":[
+"BBa_260MVA1K",
+"BBa_2654HAF3",
+"BBa_26CXI09X",
+"BBa_26RF0X2E",
+"BBa_26U8UTMH",
+"BBa_26XVQ3FS"
+],
+"kind":"figures"
+},
+{
+"v":"6 of 41",
+"what_en":"part pages that carry a Characterisation section — all six are ACC deaminase",
+"what_zh":"有 Characterisation 區段的 part 頁面——六個全部是 ACC deaminase",
+"parts":[],
+"kind":"coverage",
+"warn":true,
+"warn_en":"No part page carries characterisation of LEA14 or BoPep4. BoPep4 at 23 residues is too small for a standard blot, which is why ELISA is its detection method.",
+"warn_zh":"沒有任何 part 頁面有 LEA14 或 BoPep4 的特性分析。BoPep4 只有 23 個胺基酸，標準墨點圖解析不出來，所以它的偵測方法是 ELISA。"
+},
+{
+"v":"5",
+"what_en":"published parts of ours with no documentation at all",
+"what_zh":"我們已發布但完全沒有文件的 parts",
+"parts":[
+"BBa_263IW021",
+"BBa_26A4MT29",
+"BBa_26GJIT8W",
+"BBa_26OSLRE4",
+"BBa_26V6CPEV"
+],
+"kind":"coverage",
+"warn":true,
+"warn_en":"EEBD-RBS0 sits inside thirteen of our constructs and RBS0 inside two. The empty pages are not the unimportant ones.",
+"warn_zh":"EEBD-RBS0 在我們十三個構築裡面，RBS0 在兩個裡面。空白的頁面不是不重要的那些。"
+},
+{
+"v":"126",
+"what_en":"unfilled [bracketed] placeholders still live, on 35 of the 41 pages; 20 of them inside figure captions",
+"what_zh":"仍然公開的未填 [方括號] 佔位符，分佈在 41 頁中的 35 頁；其中 20 個在圖說裡",
+"parts":[],
+"kind":"defect",
+"warn":true,
+"warn_en":"The worst are [XXXX bp] on BBa_26BDO8AQ and \"Clone [X] was sequence-verified\" on BBa_26SG0NQQ — a verification claim whose clone number is a placeholder.",
+"warn_zh":"最嚴重的是 BBa_26BDO8AQ 上的 [XXXX bp]，以及 BBa_26SG0NQQ 上的「Clone [X] 已定序確認」——一個 clone 編號還是佔位符的確認聲明。"
+},
+{
+"v":"97 bp",
+"what_en":"the length of Pveg, BBa_K143012, in all eight of our Pveg cassettes",
+"what_zh":"Pveg（BBa_K143012）在我們八個 Pveg 卡匣裡的長度",
+"parts":[
+"BBa_26CXI09X",
+"BBa_26XVQ3FS",
+"BBa_26SG0NQQ",
+"BBa_26D5AX7S"
+],
+"kind":"sequence",
+"warn":true,
+"warn_en":"Seven of our cassettes state a composite insert that needs a promoter of 288 to 295 bp. One fault, seven pages.",
+"warn_zh":"我們有七個卡匣寫的複合插入長度，需要一個 288 到 295 bp 的啟動子才成立。一個錯誤，七個頁面。"
+},
+{
+"v":"712 bp",
+"what_en":"the deposited length of all three Pveg-SamyQ-BoPep4 cassettes",
+"what_zh":"三個 Pveg-SamyQ-BoPep4 卡匣上傳的長度",
+"parts":[
+"BBa_26FSZTWM",
+"BBa_269A97I7",
+"BBa_26IA55UY"
+],
+"kind":"sequence",
+"warn":true,
+"warn_en":"They are architecturally identical and state 910, 906 and 906 bp. Three pages, three numbers, one sequence length.",
+"warn_zh":"三者結構完全相同，卻分別寫了 910、906、906 bp。三頁、三個數字、同一個序列長度。"
+},
+{
+"v":"868 bp",
+"what_en":"the sfGFP dropout cassette carried by the two older PcpcG2-veg deposits",
+"what_zh":"兩筆較舊的 PcpcG2-veg 上傳所帶著的 sfGFP dropout 卡匣",
+"parts":[
+"BBa_26Q3LKZU",
+"BBa_26DE5E2Q"
+],
+"kind":"sequence",
+"warn":true,
+"warn_en":"Exactly the difference between each old deposit and its corrected twin. The old ones carry the whole 1045 bp BBa_254UKC9E where they should carry our 177 bp promoter.",
+"warn_zh":"正好是每一筆舊上傳和它修正版雙胞胎的差距。舊的那些帶著整段 1045 bp 的 BBa_254UKC9E，而它們應該只帶我們 177 bp 的啟動子。"
+},
+{
+"v":"1195 bp",
+"what_en":"the colony PCR product BBa_26CXI09X's own sequence and primers give",
+"what_zh":"用 BBa_26CXI09X 自己的序列和引子算出的菌落 PCR 產物",
+"parts":[
+"BBa_26CXI09X"
+],
+"kind":"sequence",
+"warn":true,
+"warn_en":"The page says [1145 bp] in the text and [7767 bp] in the caption, for the same gel.",
+"warn_zh":"同一張膠，頁面內文寫 [1145 bp]，圖說寫 [7767 bp]。"
+},
+{
+"v":"1122 bp",
+"what_en":"an insert length stated on both BBa_26TOGLX3 and BBa_26NXOP7S",
+"what_zh":"BBa_26TOGLX3 和 BBa_26NXOP7S 都寫了的插入片段長度",
+"parts":[
+"BBa_26TOGLX3",
+"BBa_26NXOP7S"
+],
+"kind":"sequence",
+"warn":true,
+"warn_en":"It is right for SamyQ, which is 93 bp, and wrong for Csn, which is 108. BBa_26NXOP7S should read 1137 bp. The two differ by exactly 15.",
+"warn_zh":"對 SamyQ（93 bp）是對的，對 Csn（108 bp）是錯的。BBa_26NXOP7S 應該是 1137 bp。兩者剛好差 15。"
+},
+{
+"v":"~37 kDa",
+"what_en":"the ACC deaminase band on both constitutive supernatant blots",
+"what_zh":"兩張組成型上清墨點圖上的 ACC deaminase 帶",
+"parts":[
+"BBa_26CXI09X",
+"BBa_26XVQ3FS"
+],
+"kind":"protein"
+},
+{
+"v":"63–75 kDa",
+"what_en":"where the same protein runs on the Level 2 light-control blots",
+"what_zh":"同一個蛋白在 Level 2 光控墨點圖上跑到的位置",
+"parts":[
+"BBa_260MVA1K",
+"BBa_2654HAF3"
+],
+"kind":"protein",
+"warn":true,
+"warn_en":"Our pages give five ACCD sizes — 35, ~36, ~37, ~41 and ~42 kDa — plus observed bands at 63 to 75 and just below 100. None of the pages reconciles them.",
+"warn_zh":"我們的頁面給了五個 ACCD 大小——35、約 36、約 37、約 41、約 42 kDa——再加上觀察到的 63 到 75 以及 100 下面一點。沒有任何一頁把它們對起來。"
+},
+{
+"v":"~70 kDa",
+"what_en":"the homodimer we offer to explain the high bands, explicitly untested",
+"what_zh":"我們用來解釋高位帶的同源二聚體，明說未經驗證",
+"parts":[
+"BBa_260MVA1K"
+],
+"kind":"protein"
+},
+{
+"v":"0 lanes",
+"what_en":"plasmid-free WB800 control lanes on any Western blot on any part page",
+"what_zh":"任何 part 頁面任何 Western blot 上，無質體 WB800 對照道的數量",
+"parts":[],
+"kind":"controls",
+"warn":true,
+"warn_en":"We name the gap ourselves on BBa_26RF0X2E: \"add a WB800 lane without the plasmid\". Until then no blot proves the band is ours.",
+"warn_zh":"我們自己在 BBa_26RF0X2E 上點名了這個缺口：「加一道沒有質體的 WB800」。在那之前，沒有任何一張墨點圖能證明那條帶是我們的。"
+},
+{
+"v":"4.562 – 5.452 µg/mL",
+"what_en":"what untransformed WB800 read on the construct-panel ELISA",
+"what_zh":"未轉形的 WB800 在構築面板 ELISA 上的讀值",
+"parts":[],
+"kind":"controls",
+"warn":true,
+"warn_en":"The same range as four of our six constructs. We report that plate as defeated by its own control, which is the right call and a good thing to say first.",
+"warn_zh":"和我們六個構築裡的四個落在同一個範圍。我們把那一盤報告成「被自己的對照打敗」，這是正確的處理，也是很適合先講出來的一句話。"
+},
+{
+"v":"6.3 U/mg",
+"what_en":"specific activity of ACCD in shell permeate at 18 h, rising to 5–8.4 U/mg through 72 h",
+"what_zh":"18 小時時殼側透過液中 ACCD 的比活性，到 72 小時維持在 5 至 8.4 U/mg",
+"parts":[],
+"kind":"activity"
+},
+{
+"v":"15 / 9 / 11",
+"what_en":"bases recoded between wild type and 2.1 for AcdS (1011 bp), LEA14 (450 bp) and BoPep4 (69 bp)",
+"what_zh":"AcdS（1011 bp）、LEA14（450 bp）、BoPep4（69 bp）野生型與 2.1 之間重新編碼的鹼基數",
+"parts":[
+"BBa_262YYNPV",
+"BBa_26IN6G1D",
+"BBa_26LYCBW0"
+],
+"kind":"sequence"
+},
+{
+"v":"0 edits",
+"what_en":"changes to the 93 bp SamyQ segment in all four SamyQ fusions",
+"what_zh":"四個 SamyQ 融合中，93 bp SamyQ 區段的改動數",
+"parts":[
+"BBa_26TOGLX3",
+"BBa_26J0GJGZ",
+"BBa_26PX0UGH",
+"BBa_267B69E3"
+],
+"kind":"sequence",
+"warn":true,
+"warn_en":"The AcdS and LEA14 codon figures star a candidate that recodes SamyQ by 19 to 21 bases. The figure and the deposit are from different runs.",
+"warn_zh":"AcdS 和 LEA14 的密碼子圖標星的候選，把 SamyQ 重新編碼了 19 到 21 個鹼基。圖和上傳的序列來自不同的搜尋。"
+},
+{
+"v":"100.0% → 0.0%",
+"what_en":"bidentate Arg487 engagement, untagged BoPep4 against C-terminally tagged",
+"what_zh":"與 Arg487 的雙齒結合，無標籤 BoPep4 對 C 端加標籤",
+"parts":[
+"BBa_26PX0UGH",
+"BBa_267B69E3",
+"BBa_26ILD3SO"
+],
+"kind":"model",
+"warn":true,
+"warn_en":"All three SamyQ-BoPep4 deposits carry the tag at the C terminus, against a design note dated 16 August saying it moved to the N terminus.",
+"warn_zh":"三筆 SamyQ-BoPep4 上傳都把標籤放在 C 端，而一份 8 月 16 日的設計註記說它已經移到 N 端。"
+},
+{
+"v":"1 of 10, clone 14",
+"what_en":"the colony count and the clone taken forward on the BoPep4 2.1 cassette",
+"what_zh":"BoPep4 2.1 卡匣上的菌落數與往下做的 clone",
+"parts":[
+"BBa_269A97I7"
+],
+"kind":"cloning",
+"warn":true,
+"warn_en":"Ten colonies screened and clone 14 taken forward. The page cannot explain that; the notebook has to.",
+"warn_zh":"篩了十個菌落，卻用 clone 14 往下做。頁面解釋不了，只能回去翻實驗記錄本。"
+},
+{
+"v":"18 of 19",
+"what_en":"the best colony PCR hit rate on any of our parts",
+"what_zh":"我們所有 parts 裡最好的菌落 PCR 命中率",
+"parts":[
+"BBa_26PX0UGH"
+],
+"kind":"cloning"
+},
+{
+"v":"632 / 375 / 441 bp",
+"what_en":"the three junction amplicons that verify a Level 2 assembly",
+"what_zh":"驗證 Level 2 組裝的三個接點產物",
+"parts":[
+"BBa_26RF0X2E",
+"BBa_26U8UTMH"
+],
+"kind":"cloning"
+},
+{
+"v":"0 parts",
+"what_en":"parts that were ever applied to a plant",
+"what_zh":"真的被施用到植物上的 parts 數",
+"parts":[],
+"kind":"plants",
+"warn":true,
+"warn_en":"Every plant trial applied a 0.22 µm-filtered WB800 culture supernatant. The chain stops at the cargo and never reaches a coding variant or a cassette.",
+"warn_zh":"每一次植物試驗施用的都是 0.22 µm 過濾的 WB800 培養上清。這條鏈在 cargo 就停了，從來沒有延伸到某個編碼變體或某個卡匣。"
+},
+{
+"v":"1/40",
+"what_en":"the single dilution at which BoPep4 supernatant improved plant readouts under salinity",
+"what_zh":"BoPep4 上清液在鹽逆境下改善植物指標的唯一稀釋倍數",
+"parts":[
+"BBa_269A97I7",
+"BBa_26FSZTWM"
+],
+"kind":"plants",
+"warn":true,
+"warn_en":"One dilution, one unreplicated hydroponic run, and on the third panel the medium-only control is the highest salt-stressed group. 1/60, 1/80 and 1/100 gave nothing.",
+"warn_zh":"一個稀釋倍數、一次沒有重複的水耕試驗，而且在第三格裡，純培養基對照是鹽逆境組中最高的。1/60、1/80、1/100 完全沒有效果。"
+},
+{
+"v":"1 editor, 2 days",
+"what_en":"every documentation section was written by Sophie Chen, almost all on 17 and 18 October",
+"what_zh":"所有文件區段都是 Sophie Chen 寫的，幾乎全部在 10 月 17 和 18 日",
+"parts":[],
+"kind":"collection"
+}
+],
+"drill":[
+{
+"q_en":"You have forty-one parts. Which one are you proudest of, and why that one?",
+"q_zh":"你們有四十一個 parts。你最得意的是哪一個？為什麼是它？",
+"a_en":"BBa_26GJIT8W, PcpcG2-veg at 177 bp. It is the smallest thing we deposited and it exists because we caught a mistake: our first green-light cassettes carried a 1045 bp third-party part that includes an sfGFP dropout, so we isolated the promoter, deposited it ourselves, and re-deposited four corrected constructs around it. A part that exists because of a failure is worth more than a part that works.",
+"a_zh":"BBa_26GJIT8W，177 bp 的 PcpcG2-veg。它是我們上傳過最小的東西，而它之所以存在，是因為我們抓到一個錯誤：我們最早的綠光卡匣帶著一個 1045 bp 的第三方 part，裡面包含 sfGFP dropout；所以我們把啟動子單獨切出來、自己上傳，再用它重新上傳四個修正後的構築。一個因為失敗而存在的 part，比一個剛好能用的 part 更有價值。",
+"ev_en":"The 868 bp difference between each old deposit and its corrected twin is checkable from the Sequence tab in two clicks.",
+"ev_zh":"每一筆舊上傳和它修正版雙胞胎之間的 868 bp 差距，從 Sequence 分頁點兩下就能查。",
+"miss_en":"Naming the Level 2 system instead. It is the biggest, not the best, and it is the one carrying the uncorrected deposit.",
+"miss_zh":"改口說 Level 2 系統。它是最大的，不是最好的，而且它正是帶著未修正版本的那一個。",
+"parts":[
+"BBa_26GJIT8W",
+"BBa_26PGPSGK"
+]
+},
+{
+"q_en":"I am looking at your Western blot. The band is at seventy-five kilodaltons and you say the protein is thirty-seven. Explain.",
+"q_zh":"我正在看你們的 Western blot。帶在 75 kDa，而你們說蛋白是 37。解釋一下。",
+"a_en":"Both are on our pages and we have not reconciled them. On the constitutive supernatant blots the band is at about 37 kDa, which is where we predicted the secreted enzyme. On the Level 2 light blots it runs at 63 to 75. ACC deaminase forms a homodimer at about 70 kDa, which is our reading, and our caption says in writing that it is a possibility we plan to test and have not.",
+"a_zh":"兩個都寫在我們的頁面上，而且我們還沒有把它們對起來。在組成型上清的墨點圖上，帶在大約 37 kDa，那正是我們預測分泌型酵素的位置。在 Level 2 的光控圖上，它跑在 63 到 75。ACC deaminase 會形成大約 70 kDa 的同源二聚體，那是我們的解讀，而我們的圖說白紙黑字寫著這只是一個我們打算驗證、但還沒驗證的可能。",
+"ev_en":"The caption on BBa_260MVA1K states both the 35 kDa monomer and the 63–75 kDa observation, and calls the dimer a possibility.",
+"ev_zh":"BBa_260MVA1K 的圖說同時寫了 35 kDa 單體和 63–75 kDa 的觀察，並把二聚體稱為一種可能。",
+"miss_en":"Asserting the dimer as fact. We have no cross-linking, no native gel and no plasmid-free lane, so it stays a hypothesis.",
+"miss_zh":"把二聚體當事實講。我們沒有交聯、沒有原生膠、也沒有無質體對照道，所以它只能是假說。",
+"parts":[
+"BBa_260MVA1K",
+"BBa_26XVQ3FS",
+"BBa_26RF0X2E"
+]
+},
+{
+"q_en":"Which of your parts has the weakest evidence behind it, and what would it take to fix that?",
+"q_zh":"你們哪一個 part 背後的證據最弱？要補到什麼程度才算修好？",
+"a_en":"BBa_26FSZTWM, the first SamyQ-BoPep4 cassette. The page says in bold that the gel image is unavailable, it gives no expected band size, and it was made by synthesising the whole construct with no Level 0 entry step, so there is no intermediate screen either. One colony PCR with a stated size and a sequencing trace would close it.",
+"a_zh":"BBa_26FSZTWM，第一個 SamyQ-BoPep4 卡匣。那一頁用粗體寫著膠的影像沒有，也沒有給期望帶大小，而且它是整段合成的、沒有經過 Level 0 entry 步驟，所以連中間的篩選都沒有。一次有寫明大小的菌落 PCR 加一份定序結果就能補起來。",
+"ev_en":"The page has zero images and 948 words, the fewest of the seven protectant cassettes.",
+"ev_zh":"那一頁沒有任何圖、948 個字，是七個保護蛋白卡匣裡最少的。",
+"miss_en":"Naming a part with no documentation instead. An empty page is a smaller problem than a confident sentence with nothing behind it.",
+"miss_zh":"改口說某個完全沒有文件的 part。空白頁面是比較小的問題；比較大的問題是一句很有自信、後面卻什麼都沒有的話。",
+"parts":[
+"BBa_26FSZTWM"
+]
+},
+{
+"q_en":"Your part collection has two entries with the same title. Did you upload the same thing twice?",
+"q_zh":"你們的 part 收藏裡有兩筆標題一樣。你們是不是同一個東西上傳了兩次？",
+"a_en":"No — they are different sequences, 868 bp apart. The first carries a third-party promoter part that includes an sfGFP dropout cassette; the second carries the 177 bp promoter we deposited ourselves. We kept both because our gels were run on the first one, so deleting it would orphan the evidence.",
+"a_zh":"不是——它們是不同的序列，差 868 bp。第一個帶著一個包含 sfGFP dropout 卡匣的第三方啟動子 part；第二個帶的是我們自己上傳的 177 bp 啟動子。兩個都留著，是因為我們的膠跑的是第一個，刪掉它會讓證據變成孤兒。",
+"ev_en":"Four pairs do this: the two PcpcG2-veg cassettes and the two Level 2 systems.",
+"ev_zh":"有四對是這樣：兩個 PcpcG2-veg 卡匣和兩個 Level 2 系統。",
+"miss_en":"Saying it was a mistake and leaving it there. The second half of the answer is the part that scores.",
+"miss_zh":"只說「那是個錯誤」就停住。真正得分的是答案的後半段。",
+"parts":[
+"BBa_26Q3LKZU",
+"BBa_26PGPSGK",
+"BBa_26U8UTMH",
+"BBa_26RF0X2E"
+]
+},
+{
+"q_en":"On this gel you screened ten colonies. Your next figure says clone fourteen. Where did clone fourteen come from?",
+"q_zh":"這張膠上你們篩了十個菌落，下一張圖卻說 clone 14。clone 14 是哪裡來的？",
+"a_en":"I cannot reconcile that from the page. The gel reads one of ten at the stated size and the clone taken forward is numbered fourteen, so the plate had more colonies than the gel shows. That is a notebook question and I would want to check it rather than guess at it here.",
+"a_zh":"光看頁面我沒辦法把它對起來。膠上是十個裡有一個落在寫的大小，而往下做的 clone 編號是十四，表示那盤的菌落比膠上顯示的多。這要回去翻實驗記錄本，我寧可去查，也不想在這裡用猜的。",
+"ev_en":"BBa_269A97I7: \"1 of 10 colonies gave a band at the expected size\" then \"Clone 14 was sequence-verified and used downstream.\"",
+"ev_zh":"BBa_269A97I7：「10 個菌落中有 1 個在期望大小出現帶」，接著「Clone 14 已定序確認並用於後續實驗」。",
+"miss_en":"Inventing a second plate. Not knowing is a fine answer; being caught making one up is not.",
+"miss_zh":"臨時編出第二盤。不知道是可以接受的答案；被抓到現編就不是。",
+"parts":[
+"BBa_269A97I7"
+]
+},
+{
+"q_en":"Your Application sections say the protectant helped plants. Which part did you put on a plant?",
+"q_zh":"你們的 Application 區段說保護蛋白對植物有幫助。你們把哪一個 part 放到植物上？",
+"a_en":"None of them. Every trial applied a 0.22 micron filtered culture supernatant from WB800 carrying one of the cassettes, so the evidence reaches the cargo and stops there. We cannot tell you from any plant figure whether a 2.1 coding variant outperforms its wild type, because that comparison was never run on a plant.",
+"a_zh":"一個都沒有。每一次試驗施用的都是帶著某個卡匣的 WB800、經 0.22 微米過濾的培養上清，所以證據只到 cargo 這一層就停了。任何一張植物圖都無法告訴你某個 2.1 編碼變體是否優於它的野生型，因為那個比較從來沒有在植物上做過。",
+"ev_en":"The Application captions name the supernatant, the dilution and the vehicle control, never the part.",
+"ev_zh":"Application 的圖說寫的是上清液、稀釋倍數和載體對照，從來不是 part 本身。",
+"miss_en":"Saying \"this part protects plants\". Say \"the supernatant from this construct\" and the claim becomes defensible.",
+"miss_zh":"說「這個 part 保護植物」。改說「這個構築的上清液」，這個主張就站得住。",
+"parts":[
+"BBa_269A97I7",
+"BBa_26XVQ3FS",
+"BBa_26D5AX7S"
+]
+},
+{
+"q_en":"I see brackets on your pages. [1588 bp], [ampicillin], [X]. What are those?",
+"q_zh":"我在你們頁面上看到方括號。[1588 bp]、[ampicillin]、[X]。那些是什麼？",
+"a_en":"Unfilled placeholders from our drafting template that went public. There are about a hundred and twenty-six of them on thirty-five of the forty-one pages, twenty inside figure captions. We know where every one is and what each resolves to, and the ones that cannot be resolved from our own records are staying bracketed rather than being guessed at.",
+"a_zh":"那是我們草稿模板裡沒填的佔位符，跟著上線了。四十一頁裡有三十五頁帶著，總共大約一百二十六個，其中二十個在圖說裡。我們知道每一個在哪裡、各自該填什麼；而那些從我們自己的紀錄裡無法確定的，我們寧可讓它們保持方括號，也不要用猜的填上去。",
+"ev_en":"The worst are [XXXX bp] on BBa_26BDO8AQ and \"Clone [X] was sequence-verified\" on BBa_26SG0NQQ.",
+"ev_zh":"最嚴重的是 BBa_26BDO8AQ 上的 [XXXX bp]，以及 BBa_26SG0NQQ 上的「Clone [X] 已定序確認」。",
+"miss_en":"Calling it a rendering bug. It is an unfinished page and saying so costs less.",
+"miss_zh":"說那是顯示錯誤。那就是一頁沒寫完的頁面，直接承認代價比較小。",
+"parts":[
+"BBa_26BDO8AQ",
+"BBa_26SG0NQQ"
+]
+},
+{
+"q_en":"What is the single piece of evidence on your Registry that you would stake the project on?",
+"q_zh":"你們 Registry 上，哪一個證據是你敢拿整個專題去賭的？",
+"a_en":"The permeate. ACC deaminase in shell permeate above 2 micrograms per millilitre through a seventy-two hour run, and catalytically active from eighteen hours, with specific activity reaching 6.3 units per milligram and holding between 5 and 8.4 through 72 h. It is the one place where protein identity, protein quantity and enzyme function are measured on the same material coming out of the rig.",
+"a_zh":"透過液。殼側透過液裡的 ACC deaminase 在七十二小時的運轉中維持在 2 微克每毫升以上，而且從十八小時起具有催化活性，比活性達到 6.3 單位每毫克，到 72 小時維持在 5 到 8.4 之間。那是唯一一個地方，蛋白的身分、蛋白的量和酵素的功能，是在同一份從機器裡出來的材料上量的。",
+"ev_en":"ELISA, DNPH and the specific-activity panel on the same nine permeate samples.",
+"ev_zh":"同樣九個透過液樣品上的 ELISA、DNPH 和比活性面板。",
+"miss_en":"Reaching for the ELISA construct panel or a DNPH plate. Those did not clear their controls and a judge who knows will take the answer apart.",
+"miss_zh":"去拿 ELISA 構築面板或某一盤 DNPH。那些沒有通過自己的對照，懂的評審會把這個答案拆掉。",
+"parts":[]
+},
+{
+"q_en":"Show me a part where the modelling changed what you built.",
+"q_zh":"給我看一個「模擬改變了你們實際做出來的東西」的 part。",
+"a_en":"BBa_26O00QVC, the 15 to 23 truncation. We wrote down four acceptance criteria before the run and the explicit prediction that this fragment would fail all four, because it loses half the contact surface. It passed all four. We published that as the result rather than moving the criteria, and our own caption says what it means: the criteria were measuring something other than binding.",
+"a_zh":"BBa_26O00QVC，15 到 23 的截短。我們在跑之前就寫下四項接受標準，以及一個明確的預測：這個片段會四項全部失敗，因為它少掉一半的接觸面。結果四項全部通過。我們把這個當成結果發表，而不是去改標準；我們自己的圖說也寫了這代表什麼：那些標準量到的不是結合。",
+"ev_en":"Receptor Cα RMSD 2.10 Å, peptide backbone 1.83 Å, Asn23–Arg487 within 4 Å for 99.9 percent of frames, clamp integrity 100.0 percent.",
+"ev_zh":"受體 Cα RMSD 2.10 Å、胜肽主鏈 1.83 Å、Asn23–Arg487 在 4 Å 內佔 99.9% 的影格、夾持完整度 100.0%。",
+"miss_en":"Presenting it as a success. The value is that it is a loss we kept in public.",
+"miss_zh":"把它講成一次成功。它的價值在於那是一次我們公開留著的失敗。",
+"parts":[
+"BBa_26O00QVC",
+"BBa_26Z8FHTR"
+]
+},
+{
+"q_en":"Who wrote your part documentation?",
+"q_zh":"你們的 part 文件是誰寫的？",
+"a_en":"I did, all forty-one pages, mostly over the seventeenth and eighteenth of October. That is visible in the Registry's own edit record, so there is no point in saying otherwise, and it is also the honest answer to why the five empty pages are empty.",
+"a_zh":"我寫的，四十一頁全部，主要是在十月十七和十八日兩天。這在 Registry 自己的編輯紀錄上就看得到，沒有必要講別的；這也誠實地回答了另一個問題：那五個空白頁面為什麼是空的。",
+"ev_en":"Every documentation record in the API carries one author and a 17–18 October timestamp.",
+"ev_zh":"API 裡每一筆文件紀錄都只有一位作者，時間戳記都是 10 月 17 至 18 日。",
+"miss_en":"Spreading the credit vaguely. The record is public and checking it takes one click.",
+"miss_zh":"含糊地把功勞分給大家。紀錄是公開的，點一下就查得到。",
+"parts":[]
+},
+{
+"q_en":"Your part pages have a Characterisation section on six of forty-one. Why so few?",
+"q_zh":"你們四十一個 part 裡只有六個有 Characterisation。為什麼這麼少？",
+"a_en":"Because characterisation means measured behaviour and we only have it for ACC deaminase. BoPep4 is twenty-three residues and does not resolve on a standard blot, which is why ELISA is its detection method, and we never ran a blot for LEA14. Writing a Characterisation section for the other thirty-five would mean writing something we did not measure.",
+"a_zh":"因為 characterisation 指的是量到的行為，而我們只有 ACC deaminase 有。BoPep4 只有二十三個胺基酸，標準墨點圖解析不出來，所以它的偵測方法是 ELISA；LEA14 我們則從來沒有跑過墨點圖。替其他三十五個寫 Characterisation，就等於寫我們沒有量過的東西。",
+"ev_en":"All six characterisation sections are ACC deaminase: two constitutive, four Level 2.",
+"ev_zh":"六個 characterisation 區段全部是 ACC deaminase：兩個組成型、四個 Level 2。",
+"miss_en":"Promising they are coming. Say what exists and why the rest does not, and stop.",
+"miss_zh":"承諾之後會補。講清楚現在有什麼、其他為什麼沒有，然後停住。",
+"parts":[
+"BBa_26CXI09X",
+"BBa_26XVQ3FS",
+"BBa_260MVA1K",
+"BBa_26RF0X2E"
+]
+},
+{
+"q_en":"Which construct's supernatant went on the plants?",
+"q_zh":"噴到植物上的是哪一個構築的上清液？",
+"a_en":"The Csn ACC deaminase construct, BBa_26CXI09X. I say that because the figure legend on the plant panel names it, and a figure legend written at the bench beats an Application sentence written afterwards. The Application paragraph on the Csn page points at the SamyQ page for the same result, which makes a loop, and that sentence is wrong.",
+"a_zh":"是 Csn 的 ACC deaminase 構築，BBa_26CXI09X。我這樣說，是因為植物那一格的圖說上寫的就是它，而在實驗台旁邊寫下的圖說，勝過事後補上的 Application 句子。Csn 頁面上的 Application 段落把同一個結果指向 SamyQ 頁面，造成一個迴圈，而那句話是錯的。",
+"ev_en":"BBa_26XVQ3FS Figure 1: \"a 0.22 µm-filtered culture supernatant from the Pveg-EEBD-RBS0-Csn-AcdS-B0015 construct\".",
+"ev_zh":"BBa_26XVQ3FS 的 Figure 1：「來自 Pveg-EEBD-RBS0-Csn-AcdS-B0015 構築、經 0.22 µm 過濾的培養上清」。",
+"miss_en":"Saying \"both\". Only one supernatant was sprayed and we cannot claim a Csn-against-SamyQ plant comparison.",
+"miss_zh":"回答「兩個都有」。只有一種上清液被噴過，我們不能主張有 Csn 對 SamyQ 的植物比較。",
+"parts":[
+"BBa_26CXI09X",
+"BBa_26XVQ3FS"
+]
+},
+{
+"q_en":"Is your His tag on the front of the peptide or the back? Your page says both.",
+"q_zh":"你們的 His 標籤在胜肽前面還是後面？你們的頁面兩種都寫了。",
+"a_en":"The back. The deposited sequence ends in six histidine codons before the stop on all three SamyQ-BoPep4 parts, so it is C-terminal. The element list line saying N-terminal is a template error that went onto seven pages, and the short description on the same pages has it right.",
+"a_zh":"後面。三個 SamyQ-BoPep4 的 part，上傳的序列都在終止密碼子前以六個組胺酸密碼子結尾，所以是 C 端。元件列表裡寫「N 端」那一行是模板錯誤，跟著上了七頁，而同樣這些頁面的簡述寫的是對的。",
+"ev_en":"All three parts are 183 bp: SamyQ 1–93, cargo 94–162, His tag 163–180, stop 181–183.",
+"ev_zh":"三個 part 都是 183 bp：SamyQ 1–93、cargo 94–162、His 標籤 163–180、終止密碼子 181–183。",
+"miss_en":"Not volunteering what comes next: our own simulation says that position costs the Asn23 contact. Say it before they ask.",
+"miss_zh":"沒有主動講出下一步：我們自己的模擬說那個位置會犧牲 Asn23 的接觸。在他們問之前先講。",
+"parts":[
+"BBa_26PX0UGH",
+"BBa_267B69E3",
+"BBa_26ILD3SO"
+]
+},
+{
+"q_en":"If another team wanted to use your work, which part would you tell them to take?",
+"q_zh":"如果別的隊伍想用你們的東西，你會叫他們拿哪一個？",
+"a_en":"BBa_26VTO4DX, the CDS-replaceable cassette, with mScarlet-I in the slot. It lets you swap your own cargo into our green-light system without rebuilding the circuit, and the reporter is there so you can see the swap worked before you commit. Its page is Design only at the moment, so what I have just said is still a claim rather than a demonstration.",
+"a_zh":"BBa_26VTO4DX，可換 CDS 的卡匣，槽位上放著 mScarlet-I。它讓你把自己的 cargo 換進我們的綠光系統，不用重建線路，而報導基因放在那裡，是讓你在投入之前先看到換得起來。它的頁面目前只有 Design，所以我剛剛講的還是一個主張，不是一次展示。",
+"ev_en":"It is built on our own PcpcG2-veg and EEBD-RBS0, with J23100, sfGFP and mScarlet from earlier teams.",
+"ev_zh":"它建立在我們自己的 PcpcG2-veg 和 EEBD-RBS0 上，加上過去隊伍的 J23100、sfGFP 和 mScarlet。",
+"miss_en":"Over-selling it. The last sentence — that the page is Design only — is what keeps the rest credible.",
+"miss_zh":"講得太滿。最後那一句「頁面目前只有 Design」，才是讓前面可信的東西。",
+"parts":[
+"BBa_26VTO4DX",
+"BBa_2610Z8EW"
+]
+}
+],
+"card":[
+{
+"head_en":"Forty-one parts, four levels, one author.",
+"head_zh":"四十一個 parts、四個層級、一位作者。",
+"body_en":"Twelve basic parts, twelve transcriptional units, thirteen cassettes, four whole systems, built on fourteen parts from earlier teams. Our wiki presents thirty-five of the forty-one. Say the Registry number.",
+"body_zh":"十二個基本元件、十二個轉錄單元、十三個表現卡匣、四個完整系統，建立在十四個過去隊伍的 parts 上。我們的 wiki 介紹其中三十五個。要講 Registry 上的數字。"
+},
+{
+"head_en":"The compliment is the runway.",
+"head_zh":"稱讚是跑道。",
+"body_en":"\"You uploaded everything, very impressive\" is the first half of a question about one band on one figure. Do not relax into it.",
+"body_zh":"「你們全部都上傳了，很厲害」是一個關於某張圖上某一條帶的問題的上半句。不要被它鬆懈掉。"
+},
+{
+"head_en":"Five slots, and they are not interchangeable.",
+"head_zh":"五個欄位，不能互換。",
+"body_en":"Design is why. Experiment is how it was built and how you checked. Characterisation is what it does. Application is what it is for. Discussion is where it stops.",
+"body_zh":"Design 是為什麼。Experiment 是怎麼組的、怎麼驗的。Characterisation 是它做了什麼。Application 是它要幹嘛。Discussion 是到哪裡為止。"
+},
+{
+"head_en":"We never purified anything.",
+"head_zh":"我們沒有純化過任何東西。",
+"body_en":"One imidazole elution panel, and that is all. Every other blot is crude supernatant or lysate. If a judge asks about purification, that sentence goes first.",
+"body_zh":"只有一張 imidazole 沖提的圖，就這樣。其他每一張墨點圖都是粗萃上清或裂解液。如果評審問到純化，先講這一句。"
+},
+{
+"head_en":"No blot has a plasmid-free lane.",
+"head_zh":"沒有一張墨點圖有無質體對照道。",
+"body_en":"Nine blot figures, zero untransformed WB800 lanes. We name the gap ourselves. Where we did run the host, on the ELISA, it read 4.6 to 5.5 µg/mL and defeated the plate.",
+"body_zh":"九張墨點圖，零道未轉形 WB800。這個缺口是我們自己點名的。真的有跑宿主的那次 ELISA，讀到 4.6 到 5.5 µg/mL，把整盤打敗了。"
+},
+{
+"head_en":"The sfGFP story is a win, not a wound.",
+"head_zh":"sfGFP 這件事是戰績，不是傷口。",
+"body_en":"Two deposits carry an 868 bp dropout cassette they should not have. We found it, deposited PcpcG2-veg ourselves, and re-deposited four corrected constructs. Tell it in that order.",
+"body_zh":"兩筆上傳帶著 868 bp 它們不該有的 dropout 卡匣。我們發現了，自己上傳了 PcpcG2-veg，並重新上傳四個修正後的構築。按這個順序講。"
+},
+{
+"head_en":"ACC deaminase has five molecular weights on our pages.",
+"head_zh":"ACC deaminase 在我們頁面上有五個分子量。",
+"body_en":"37 on the constitutive blots, 63 to 75 on the Level 2 blots, 41 in the literature for the untagged purified enzyme. The dimer is our reading and it is untested.",
+"body_zh":"組成型墨點圖上是 37，Level 2 墨點圖上是 63 到 75，文獻上無標籤純化酵素是 41。二聚體是我們的解讀，而且沒有驗證過。"
+},
+{
+"head_en":"No part was ever put on a plant.",
+"head_zh":"沒有任何一個 part 真的放到植物上。",
+"body_en":"Every trial sprayed a filtered WB800 supernatant. Say \"the supernatant from this construct\", never \"this part\". The vehicle alone suppresses growth, which is why the control is 1/40 WB800 and not medium.",
+"body_zh":"每一次試驗噴的都是過濾的 WB800 上清液。要說「這個構築的上清液」，絕對不要說「這個 part」。光是載體就會抑制生長，所以對照是 1/40 WB800，不是純培養基。"
+},
+{
+"head_en":"Name the limit before they find it.",
+"head_zh":"在他們找到之前先講出限制。",
+"body_en":"A limitation you wrote yourself cannot be used against you. Thirty of our parts have no Discussion section, so for those the limit has to come out of your mouth.",
+"body_zh":"你自己寫下來的限制不會被拿來打你。我們有三十個 parts 沒有 Discussion，所以那些的限制必須由你親口講出來。"
+},
+{
+"head_en":"When you do not know, say what would settle it.",
+"head_zh":"不知道的時候，說什麼實驗能定案。",
+"body_en":"\"I cannot reconcile that from the page\" followed by the experiment that would, scores higher than a guess. A judge who is guessing respects a correction.",
+"body_zh":"「光看頁面我沒辦法把它對起來」，接著說出能定案的那個實驗，分數高於用猜的。正在猜的評審會尊重更正。"
+}
+],
+"asked":{
+"src_en":"Transcribed from a judging session recording, iGEM Grand Jamboree. The judge had read the team's Registry pages before the room. Two words came through the transcript misheard — \"vestrum\" is Western, \"histec\" is His-tag.",
+"src_zh":"逐字稿來自一場 iGEM Grand Jamboree 的評審會談錄音。那位評審在進會談室之前已經讀過該隊的 Registry 頁面。逐字稿中有兩個字聽錯了——「vestrum」是 Western，「histec」是 His-tag。",
+"lines":[
+{
+"t":"22:36",
+"q_en":"I have a question regarding your protein purification.",
+"q_zh":"我想問你們蛋白純化的部分。"
+},
+{
+"t":"22:38",
+"q_en":"It's a minor thing.",
+"q_zh":"是個小細節。"
+},
+{
+"t":"22:40",
+"q_en":"And you actually uploaded all the parts to the registry. Very impressive.",
+"q_zh":"而且你們真的把所有 parts 都上傳到 Registry 了，非常厲害。"
+},
+{
+"t":"22:43",
+"q_en":"So it might have been there. I might have missed it.",
+"q_zh":"所以可能本來就寫在那裡，是我漏看了。"
+},
+{
+"t":"22:44",
+"q_en":"But you can very clearly see the double band on your Western blots against the His-tag.",
+"q_zh":"但是在你們用 His-tag 抗體做的 Western blot 上，可以很清楚看到雙帶。"
+},
+{
+"t":"22:50",
+"q_en":"Could you comment on that?",
+"q_zh":"可以說明一下嗎？"
+},
+{
+"t":"22:51",
+"q_en":"It's some kind of degradation product that you observed.",
+"q_zh":"那是你們觀察到的某種降解產物。"
+},
+{
+"t":"22:53",
+"q_en":"You even observed it on the wild type, I guess.",
+"q_zh":"我猜你們在野生型上也看到了。"
+},
+{
+"t":"22:56",
+"q_en":"So is it typically reported in the literature that the enzyme is unstable during purification?",
+"q_zh":"文獻上一般會說這個酵素在純化過程中不穩定嗎？"
+},
+{
+"t":"23:00",
+"q_en":"Or could you just comment on the double band?",
+"q_zh":"還是說，你們就直接說明一下那個雙帶？"
+}
+],
+"moves":[
+{
+"head_en":"The compliment was the runway.",
+"head_zh":"那句稱讚是跑道。",
+"body_en":"\"Very impressive\" lands at 22:40 and the real question lands four seconds later. Praising the Registry upload is what buys a judge permission to go four levels deeper than the wiki. Treat any compliment about your parts as the first half of a parts question.",
+"body_zh":"「非常厲害」出現在 22:40，真正的問題四秒後就落下來。稱讚你們有上傳 Registry，正是評審取得「可以比 wiki 再往下挖四層」許可的方式。任何關於你們 parts 的稱讚，都要當成一個 parts 問題的上半句。"
+},
+{
+"head_en":"It names a feature, not a topic.",
+"head_zh":"它指的是一個特徵，不是一個題目。",
+"body_en":"Not \"tell me about your purification\". A double band, on a blot, against the His tag. There is no paragraph anywhere that answers it: the answer is in the picture, and only someone who has looked at the picture has one.",
+"body_zh":"它問的不是「講一下你們的純化」。而是一條雙帶、在某張墨點圖上、用 His-tag 抗體打出來的。沒有任何一段文字能回答它：答案在那張圖裡，只有真的看過那張圖的人才答得出來。"
+},
+{
+"head_en":"It hands you two hypotheses and a hedge.",
+"head_zh":"它塞給你兩個假設和一個保留。",
+"body_en":"\"Some kind of degradation product\" and \"on the wild type too, I guess\". The hedge is the test. Agreeing with an observation the judge is only guessing at is worse than correcting it, and a judge who is guessing will respect the correction.",
+"body_zh":"「某種降解產物」、「我猜野生型上也有」。那個「我猜」就是考題。評審只是在猜，你卻順著點頭，比直接更正還糟；而正在猜的評審，會尊重你的更正。"
+},
+{
+"head_en":"It leaves an exit through the literature.",
+"head_zh":"它在文獻那邊留了一個出口。",
+"body_en":"The last-but-one sentence asks whether instability on purification is reported for this enzyme. That is the answer the judge would accept: the band explained by how the protein behaves, not by your gel being bad. An answer that reaches a citation is an answer that stops the follow-up.",
+"body_zh":"倒數第二句問的是：文獻上有沒有報告這個酵素在純化時不穩定。那就是評審願意接受的答案——用蛋白本身的行為解釋那條帶，而不是說你們的膠跑壞了。能走到引用文獻的答案，就是能讓追問停下來的答案。"
+}
+],
+"shapehead_en":"The shape of the answer, in four sentences.",
+"shapehead_zh":"答案的形狀，四句話。",
+"shape_en":"Where the band sits. Whether the control lane has it. What you think it is, with the one clause of why. What would settle it, and whether you ran that. For ReLEAF the first sentence has to be the honest one: we have one imidazole elution panel and no other purification — every other blot is crude supernatant or lysate, so there is no purification step for a degradation product to come from.",
+"shape_zh":"那條帶在哪個位置。對照組那一道有沒有。你認為它是什麼，加上一句為什麼。什麼實驗能定案，以及你們有沒有做。對 ReLEAF 來說，第一句就必須是誠實的那一句：我們只有一張 imidazole 沖提的圖，其他完全沒有純化——所有其他墨點圖都是粗萃上清或細胞裂解液，所以根本沒有一個「純化過程」可以生出降解產物。"
+},
+"where":[
+{
+"id":"BBa_26U8UTMH",
+"q_en":"Your Fig.1 says band intensities were similar under green and red. The same experiment on BBa_26RF0X2E says green was stronger. Which is it?",
+"q_zh":"你們的 Fig.1 說綠光紅光下強度差不多，但同一個實驗在 BBa_26RF0X2E 上寫的是綠光比較強。到底是哪個？",
+"a_en":"Both captions are ours and they disagree; the honest reading is the conservative one. On that blot green and red are not distinguishable, the ELISA on the same four samples reads 12.9 against 11.8 µg/mL at 13 h, and we have never run a plasmid-free WB800 lane, so we do not claim a fold change for the SamyQ system.",
+"a_zh":"兩段說明都是我們寫的，而且互相矛盾；誠實的讀法是取保守的那個。在那張圖上綠光和紅光分不出來，同樣四個樣品的 ELISA 在 13 小時是 12.9 對 11.8 µg/mL，而且我們從來沒有跑過沒有質體的 WB800 對照道，所以 SamyQ 系統我們不主張任何倍率。"
+},
+{
+"id":"BBa_26RF0X2E",
+"q_en":"Figure 2 puts the band just below 100 kDa. Your other pages say ACC deaminase is 37. What is the band?",
+"q_zh":"Figure 2 的帶就在 100 kDa 下面一點，但你們其他頁面說 ACC deaminase 是 37。那條帶到底是什麼？",
+"a_en":"We do not know, and we say so on BBa_260MVA1K: the monomer is about 35 kDa, the bands run at 63 to 75, and the homodimer at about 70 kDa is a possibility we have not tested. The experiment that would settle it is a plasmid-free WB800 lane on the same film, and it is not in our record.",
+"a_zh":"我們不知道，而且我們在 BBa_260MVA1K 上就這樣寫：單體大約 35 kDa，帶卻跑在 63 到 75，大約 70 kDa 的同源二聚體是一個我們沒有測試過的可能。能定案的實驗是在同一張底片上放一道沒有質體的 WB800，而我們的紀錄裡沒有。"
+},
+{
+"id":"BBa_26CXI09X",
+"q_en":"Your Verification paragraph says the expected band is 1145 bp. The caption under the gel says 7767. Same gel.",
+"q_zh":"你們的 Verification 段落寫期望帶是 1145 bp，膠下面的說明寫 7767。同一張膠。",
+"a_en":"That is a mistake on a live page and neither number is right. From the deposited sequence and the two primers the amplicon is 1195 bp; 1145 is the band size from a different part's gel caption, and 7767 is plasmid-scale. It is on the list to fix.",
+"a_zh":"那是線上頁面的一個錯誤，而且兩個數字都不對。用上傳的序列和那兩支引子算，產物是 1195 bp；1145 是另一個 part 的膠說明上的數字，7767 則是質體等級的大小。這一條在待修清單上。"
+},
+{
+"id":"BBa_26Q3LKZU",
+"q_en":"Your composition lists four elements, but the deposited sequence is 2617 bp. What is the extra 868?",
+"q_zh":"你們的組成列了四個元件，但上傳的序列是 2617 bp。多出來的 868 是什麼？",
+"a_en":"The dropout cassette. This deposit carries the whole of BBa_254UKC9E, 1045 bp of PcpcG2 plus an sfGFP reporter and a terminator, where it should carry the 177 bp promoter alone. We found it, deposited PcpcG2-veg as our own part, BBa_26GJIT8W, and re-deposited the corrected cassette as BBa_26PGPSGK. Both are still up because the old one is what the gel was run on.",
+"a_zh":"是 dropout 卡匣。這一筆上傳帶著整段 BBa_254UKC9E——1045 bp 的 PcpcG2 加上一個 sfGFP 報導基因和一個終止子——而它應該只帶 177 bp 的啟動子。我們發現了，把 PcpcG2-veg 自己上傳成 BBa_26GJIT8W，再把修正後的卡匣重新上傳成 BBa_26PGPSGK。兩個都還留著，因為當初跑膠的是舊的那個。"
+},
+{
+"id":"BBa_26PGPSGK",
+"q_en":"Why is there a second part with exactly the same name as BBa_26Q3LKZU?",
+"q_zh":"為什麼有第二個 part，名字跟 BBa_26Q3LKZU 一模一樣？",
+"a_en":"Because the first one was wrong. BBa_26Q3LKZU is 2617 bp and carries the sfGFP dropout; this one is 1749 bp and carries our own 177 bp PcpcG2-veg deposit. The difference is exactly 868 bp. It is the cleanest engineering-cycle evidence on our Registry, and we would rather show both than quietly delete one.",
+"a_zh":"因為第一個是錯的。BBa_26Q3LKZU 是 2617 bp，帶著 sfGFP dropout；這一個是 1749 bp，帶的是我們自己上傳的 177 bp PcpcG2-veg。差距剛好 868 bp。這是我們 Registry 上最乾淨的一次工程循環證據，我們寧可兩個都留著，也不要默默刪掉一個。"
+},
+{
+"id":"BBa_26XZYM10",
+"q_en":"This part's Design section describes cloning Csn-AcdS. This part is Ho1:pcyA.",
+"q_zh":"這個 part 的 Design 寫的是選殖 Csn-AcdS 的過程，但這個 part 是 Ho1:pcyA。",
+"a_en":"A whole paragraph from another part's page, about 165 words, is on this one by mistake. It names Pveg, EEBD-RBS0, Csn-AcdS-Histag and pSTK-EXP1, none of which is in this part. It is the worst copy-paste on our Registry and it is queued for deletion, not rewriting.",
+"a_zh":"另一個 part 頁面上的一整段、大約 165 個字，誤貼到這一頁。裡面提到 Pveg、EEBD-RBS0、Csn-AcdS-Histag 和 pSTK-EXP1，全都不在這個 part 裡。這是我們 Registry 上最嚴重的一次複製貼上，而且處理方式是刪掉，不是改寫。"
+},
+{
+"id":"BBa_26SG0NQQ",
+"q_en":"Figure 2 has a caption and no picture, and the clone number is still [X].",
+"q_zh":"Figure 2 有說明卻沒有圖，而且 clone 編號還是 [X]。",
+"a_en":"Correct. Every sibling cassette pairs that caption with a sequencing image and this one does not, so the sequence-verification claim on this page currently rests on nothing visible. The gel above it is real: 1 of 1 colony at 735 bp, which matches the wiki caption for the same gel.",
+"a_zh":"沒錯。其他同系列的卡匣那句說明下面都有定序圖，只有這一頁沒有，所以這一頁的「定序確認」目前沒有任何看得見的東西撐著。上面那張膠是真的：1 個菌落中 1 個在 735 bp，和 wiki 上同一張膠的說明一致。"
+},
+{
+"id":"BBa_26FSZTWM",
+"q_en":"This page says a correct band runs at the expected size, but gives no size and shows no gel.",
+"q_zh":"這一頁說「正確的帶跑在期望大小」，卻沒有給大小，也沒有膠。",
+"a_en":"The page says so itself, in bold: the gel image is unavailable. This cassette was made by de novo synthesis of the whole construct with no Level 0 entry step, so it has the thinnest evidence of the seven and the sentence above it is more confident than it has earned.",
+"a_zh":"這一頁自己用粗體寫了：膠的影像沒有。這個卡匣是整段從頭合成的，沒有經過 Level 0 的 entry 步驟，所以在七個卡匣裡證據最薄，而它上面那句話的自信超過它應得的。"
+},
+{
+"id":"BBa_26V6CPEV",
+"q_en":"This part sits inside thirteen of your constructs and has no documentation at all.",
+"q_zh":"這個 part 在你們十三個構築裡面，卻完全沒有文件。",
+"a_en":"Yes. EEBD-RBS0 is the constant that every protectant cassette shares and the reason the Csn and SamyQ comparison is a fair one, and it is one of five published parts of ours with an empty page. It is the first of the five I would write.",
+"a_zh":"是的。EEBD-RBS0 是每一個保護蛋白卡匣共用的常數，也是 Csn 和 SamyQ 能公平比較的原因，而它是我們五個「已發布但頁面空白」的 parts 之一。五個裡面我會第一個補它。"
+},
+{
+"id":"BBa_269A97I7",
+"q_en":"Your gel screened ten colonies and your next figure takes clone 14 forward.",
+"q_zh":"你們的膠篩了十個菌落，下一張圖卻說用 clone 14 往下做。",
+"a_en":"The numbers do not line up and I cannot reconcile them from the page. The gel reads 1 of 10 at the stated size; the clone that went forward is numbered 14, which means the plate had more colonies than the gel shows. That needs the notebook, not the Registry.",
+"a_zh":"這兩個數字對不起來，光看頁面我沒辦法解釋。膠上是 10 個裡 1 個落在寫的大小；往下做的 clone 編號是 14，表示那盤的菌落比膠上顯示的多。這要翻實驗記錄本，不是 Registry。"
+},
+{
+"id":"BBa_26PX0UGH",
+"q_en":"Your own molecular dynamics says a C-terminal His tag kills the binding contact. This part has one.",
+"q_zh":"你們自己的分子動力學說 C 端 His 標籤會破壞那個結合接觸，而這個 part 就是 C 端。",
+"a_en":"It does, and the figure is on our own pages: bidentate engagement with Arg487 falls from 100 percent of frames to zero and the charges separate from 4.0 to 20.1 Å. One of our legends says the tag moved to the N terminus for BoPep4 constructs ordered after 16 August. All three SamyQ-BoPep4 deposits are C-terminal, so either they predate that decision or it was never applied — I do not have the ordering record to say which.",
+"a_zh":"確實如此，而且那張圖就在我們自己的頁面上：與 Arg487 的雙齒結合從 100% 的影格掉到 0，電荷中心從 4.0 Å 拉開到 20.1 Å。我們有一段圖說寫著，8 月 16 日之後訂的 BoPep4 構築把標籤移到 N 端。三個 SamyQ-BoPep4 的上傳都是 C 端，所以不是它們早於那個決定，就是那個決定沒有被執行——我手上沒有訂購紀錄可以判斷是哪一個。"
+},
+{
+"id":"BBa_262YYNPV",
+"q_en":"Your codon figure stars a candidate that recodes the SamyQ segment. Does your deposit carry that sequence?",
+"q_zh":"你們的密碼子圖標星的那個候選重新編碼了 SamyQ 區段。你們上傳的序列是那一條嗎？",
+"a_en":"No, and that is a real inconsistency. The SamyQ 93 bp segment is byte-identical to wild type in all four of our SamyQ fusions. The cargo recoding is real — AcdS wild type against 2.1 differs at 15 bases out of 1011 — but the starred row in that figure is from a different search run than the sequence we ordered.",
+"a_zh":"不是，而且這是一個真的不一致。SamyQ 那段 93 bp 在我們四個 SamyQ 融合裡和野生型完全相同。cargo 的重新編碼是真的——AcdS 野生型對 2.1 在 1011 bp 中有 15 個鹼基不同——但那張圖上標星的那一列，和我們實際訂的序列來自不同的搜尋。"
+},
+{
+"id":"BBa_26MA70QI",
+"q_en":"This is registered as a CDS and it has neither a start nor a stop codon.",
+"q_zh":"這個登記成 CDS，卻既沒有起始密碼子也沒有終止密碼子。",
+"a_en":"Deliberately. The native start and stop were removed so the cargo can be fused behind a signal peptide and in front of a His tag; the start lives in SamyQ or Csn and the stop after the tag. We explain that in a draft that is not published, which is why the live page does not say it.",
+"a_zh":"這是刻意的。原生的起始與終止被拿掉，好讓 cargo 可以接在訊號肽後面、His 標籤前面；起始密碼子在 SamyQ 或 Csn 裡，終止密碼子在標籤後面。我們在一份還沒發布的草稿裡有說明，所以線上頁面上看不到。"
+},
+{
+"id":"BBa_2610Z8EW",
+"q_en":"What is an mScarlet cassette doing in a plant-protectant collection?",
+"q_zh":"一個 mScarlet 卡匣為什麼會出現在植物保護蛋白的收藏裡？",
+"a_en":"It is the chassis, not the product. The CDS-replaceable cassette lets the next team swap a cargo into our green-light system without rebuilding the circuit, and mScarlet is the visible stand-in that shows the swap works. Its page is Design only, so what it does is still a claim.",
+"a_zh":"它是底座，不是產品。這個可換 CDS 的卡匣讓下一隊可以把自己的 cargo 換進我們的綠光系統，不用重建整個線路，而 mScarlet 是看得見的替身，用來證明換得起來。它的頁面只有 Design，所以它能做什麼目前還只是一個主張。"
+},
+{
+"id":"BBa_26XVQ3FS",
+"q_en":"Your Application says the plant effect came from this SamyQ construct. Your own figure legend says the Csn one.",
+"q_zh":"你們的 Application 說植物的效果來自這個 SamyQ 構築，你們自己的圖說卻寫 Csn 那個。",
+"a_en":"The figure legend is right. The supernatant sprayed on those plates came from the Csn construct, and the sentence on BBa_26CXI09X that points here for the result is wrong. We have a plant result for one construct's supernatant, not a comparison between the two signal peptides.",
+"a_zh":"圖說是對的。噴在那些盤子上的上清液來自 Csn 的構築，而 BBa_26CXI09X 上那句把結果指到這裡的話是錯的。我們有一個構築的上清液的植物結果，不是兩種訊號肽之間的比較。"
+},
+{
+"id":"BBa_26ILD3SO",
+"q_en":"Four of your pages call this part the wild-type BoPep4 sequence. It is a fusion.",
+"q_zh":"你們有四個頁面把這個 part 稱為野生型 BoPep4 序列。它是一個融合。",
+"a_en":"It is, and the wild-type coding sequence is BBa_265CD14Z at 69 bp. This part is the 183 bp SamyQ fusion. The recoding story for BoPep4 is supposed to read against the 69 bp cargo part, so four pages are pointing at the wrong baseline. It is also the thinnest of our eight Level 0 fusions and the only one with no gel.",
+"a_zh":"沒錯，野生型的編碼序列是 69 bp 的 BBa_265CD14Z。這個 part 是 183 bp 的 SamyQ 融合。BoPep4 的重新編碼故事本來應該對照那個 69 bp 的 cargo part，所以有四頁指到了錯的基準。它同時也是我們八個 Level 0 融合裡最薄的一個，而且是唯一沒有膠的。"
+},
+{
+"part":"BBa_26XVQ3FS",
+"line_en":"\"1 of 1 colonies gave a band at the expected size (1984 bp).\"",
+"line_zh":"「1 個菌落中有 1 個在期望大小（1984 bp）出現帶。」",
+"slot":"experiment",
+"why_en":"A screen and its result. Construction, Verification, Results — all three live in Experiment, and the gel goes under Verification.",
+"why_zh":"一次篩選和它的結果。Construction、Verification、Results 三段都在 Experiment 裡，膠放在 Verification 下面。"
+},
+{
+"part":"BBa_260MVA1K",
+"line_en":"\"ACCD is about 35 kDa as a monomer, yet the bands ran at roughly 63 to 75 kDa.\"",
+"line_zh":"「ACCD 單體大約 35 kDa，但帶卻跑在大約 63 到 75 kDa。」",
+"slot":"characterisation",
+"why_en":"A measured behaviour of the protein the part makes. Blots, ELISA, DNPH and growth curves all belong in Characterisation, not in Experiment — Experiment is about the DNA.",
+"why_zh":"這是 part 做出來的蛋白被量到的行為。墨點圖、ELISA、DNPH 和生長曲線都屬於 Characterisation，不屬於 Experiment——Experiment 講的是 DNA。"
+},
+{
+"part":"BBa_262YYNPV",
+"line_en":"\"Start-codon accessibility 0.563 to 0.773; all 12 codon changes are synonymous.\"",
+"line_zh":"「起始密碼子可及性 0.563 到 0.773；12 個密碼子改動全部是同義。」",
+"slot":"design",
+"why_en":"A computed prediction that explains a choice. Dry lab goes under Design, and Design is the only slot allowed to contain something that was never measured.",
+"why_zh":"一個解釋選擇的計算預測。乾式實驗放在 Design 下面，而 Design 是唯一允許放「從來沒量過的東西」的欄位。"
+},
+{
+"part":"BBa_269A97I7",
+"line_en":"\"Under 100 mM NaCl the 1/40 BoPEP4 group is the highest group on fresh weight, about 0.049 g.\"",
+"line_zh":"「在 100 mM NaCl 下，1/40 BoPEP4 組鮮重最高，大約 0.049 g。」",
+"slot":"application",
+"why_en":"A plant trial. It is a use of the thing this part makes, not a property of the part, so it goes in Application — and the sentence has to say supernatant, not part.",
+"why_zh":"這是植物試驗。它是「這個 part 做出來的東西」的用途，不是 part 本身的性質，所以放在 Application——而且句子要寫上清液，不能寫 part。"
+},
+{
+"part":"BBa_26D5AX7S",
+"line_en":"\"The one AtLEA14 salinity trial was charted and never scored, so we have no plant outcome for LEA14.\"",
+"line_zh":"「唯一一次 AtLEA14 的鹽逆境試驗畫了圖但沒有評分，所以 LEA14 沒有植物端的結果。」",
+"slot":"discussion",
+"why_en":"A limit on what the data supports. Discussion holds What the data mean, Limitations and Future directions — this is the second of those, and it is the sentence that protects the Application paragraph above it.",
+"why_zh":"這是對「數據撐得起什麼」的界線。Discussion 放的是數據的意義、限制與下一步——這句是第二項，也是保護它上面那段 Application 的那一句。"
+},
+{
+"part":"BBa_26TOGLX3",
+"line_en":"\"Insert: SamyQ 1–93, AcdS 2.1 94–1104, Histag 1105–1122.\"",
+"line_zh":"「插入片段：SamyQ 1–93、AcdS 2.1 94–1104、Histag 1105–1122。」",
+"slot":"experiment",
+"why_en":"The build record. Insert lengths and primer tables sit under Construction/assembly in Experiment — which is exactly where a judge checks them against the Sequence tab.",
+"why_zh":"這是組裝紀錄。插入片段長度和引子表放在 Experiment 的 Construction/assembly 下面——而那正是評審拿它去對 Sequence 分頁的地方。"
+},
+{
+"part":"BBa_265CD14Z",
+"line_en":"\"BoPep4 is a 23-amino-acid plant elicitor peptide from broccoli.\"",
+"line_zh":"「BoPep4 是一段來自青花菜的 23 個胺基酸植物激發肽。」",
+"slot":"design",
+"why_en":"What the part is and where it came from. That is the About block at the top of Design, and it is the first thing a judge reads.",
+"why_zh":"這個 part 是什麼、從哪裡來。那是 Design 最上面的 About 區塊，也是評審看到的第一句。"
+},
+{
+"part":"BBa_26RF0X2E",
+"line_en":"\"We will quantify the blots against a loading control and add a WB800 lane without the plasmid.\"",
+"line_zh":"「我們會用上樣對照把墨點圖量化，並加一道沒有質體的 WB800。」",
+"slot":"characterisation",
+"why_en":"Trick one. On this page it sits in the Characterisation summary, next to the data it qualifies. It would also be right in Discussion — what matters is that it is beside the figure it limits, not three slots away.",
+"why_zh":"這題有陷阱。在這一頁它放在 Characterisation 的 Summary，就貼著它所限定的數據。放在 Discussion 也沒錯——重點是它要在它所限制的那張圖旁邊，而不是隔了三個欄位。"
+},
+{
+"part":"BBa_26CXI09X",
+"line_en":"\"S1 to S4 correspond to different concentrations of imidazole buffer.\"",
+"line_zh":"「S1 到 S4 對應不同濃度的 imidazole 緩衝液。」",
+"slot":"characterisation",
+"why_en":"It is a figure legend on a blot, so it lives with the blot in Characterisation. Note what it does not say: which lane is which concentration. That is the whole purification panel we have.",
+"why_zh":"這是墨點圖的圖說，所以和墨點圖一起放在 Characterisation。注意它沒說的部分：哪一道是哪個濃度。而那就是我們全部的純化證據。"
+},
+{
+"part":"BBa_26Z8FHTR",
+"line_en":"\"15–23 retains 49.8 percent of total contact occupancy and all eight crystallographic contacts.\"",
+"line_zh":"「15–23 保留了 49.8% 的總接觸佔有率，以及全部八個晶體學接觸。」",
+"slot":"design",
+"why_en":"Simulation output explaining why a truncation was built. Design. It is a prediction — and on this construct the prediction was that it would fail, and it passed all four criteria.",
+"why_zh":"這是模擬輸出，用來解釋為什麼做這個截短。放 Design。它是預測——而這個構築的預測是會失敗，結果四項標準全部通過。"
+},
+{
+"part":"BBa_26GJIT8W",
+"line_en":"\"PcpcG2-veg, 177 bp, the green-light promoter we deposited ourselves.\"",
+"line_zh":"「PcpcG2-veg，177 bp，我們自己上傳的綠光啟動子。」",
+"slot":"design",
+"why_en":"What the part is. It would go in the About block of Design — except this page has no documentation at all, which is why it is on the soft-spot list.",
+"why_zh":"這個 part 是什麼。本來應該放在 Design 的 About 區塊——只是這一頁根本沒有任何文件，所以它才會在弱點清單上。"
+}
+]
+};
