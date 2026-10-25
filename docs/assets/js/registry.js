@@ -61,7 +61,9 @@
     wrong:{ en: 'Not that one', zh: '不是這個' },
     ev:   { en: 'Evidence on the page', zh: '頁面上的證據' },
     mist: { en: 'The mistake', zh: '常見錯誤' },
-    find0:{ en: 'Nothing matches.', zh: '沒有符合的。' }
+    find0:{ en: 'Nothing matches.', zh: '沒有符合的。' },
+    onpage:{ en: 'Figures on the page', zh: '頁面上的圖' },
+    close:{ en: 'Close', zh: '關閉' }
   };
 
   function L(k) { return S.p(LAB[k]); }
@@ -261,6 +263,17 @@
           return '<button class="reg-link" data-part="' + t + '" type="button">' + esc(t) + '</button>';
         }).join(', ') + '</p>' : '') +
       '<h4 class="reg-det-h">' + L('docs') + '</h4>' + docBar(p) +
+      (p.figs && p.figs.length
+        ? '<h4 class="reg-det-h">' + L('onpage') + ' · ' + p.figs.length + '</h4>' +
+          '<div class="reg-strip">' + p.figs.map(function (f) {
+            return '<figure class="reg-thumb"><button type="button" data-img="' + esc(f.file) +
+              '" data-cap="' + esc(f.cap) + '">' +
+              '<img src="assets/img/reg/' + esc(f.file) + '" alt="' + esc(f.cap.slice(0, 120)) +
+              '" loading="lazy" decoding="async"></button>' +
+              '<figcaption><i>' + esc(f.slot) + '</i>' + esc(f.cap.slice(0, 90)) +
+              (f.cap.length > 90 ? '…' : '') + '</figcaption></figure>';
+          }).join('') + '</div>'
+        : '') +
       '<div class="grid g2" style="margin-top:1.25rem">' +
         '<div><h4 class="reg-det-h">' + L('built') + '</h4><div class="reg-minis">' +
           chipRow(p.comp.map(function (c) { return c.id; }), { span: span }) + '</div></div>' +
@@ -401,6 +414,10 @@
           '<span class="src">' + esc(f.slot) + (f.label ? ' · ' + esc(f.label) : '') + '</span>' +
         '</div>' +
         '<h3>' + esc(S.t(f, 'what')) + '</h3>' +
+        (f.img ? '<button class="reg-shot" type="button" data-img="' + esc(f.img) +
+          '" data-cap="' + esc(f.cap || S.t(f, 'what')) + '">' +
+          '<img src="assets/img/reg/' + esc(f.img) + '" alt="' + esc(S.t(f, 'what')) +
+          '" loading="lazy" decoding="async"></button>' : '') +
         (f.bands ? '<ul class="reg-bands">' + f.bands.map(function (b) {
             return '<li><b>' + esc(b.b) + '</b><span>' + esc(S.t(b, 'is')) + '</span></li>';
           }).join('') + '</ul>' : '') +
@@ -491,6 +508,43 @@
     }).join('');
   }
 
+  /* ── lightbox ────────────────────────────────────────────────────────── */
+  var box;
+
+  function lightbox() {
+    box = document.createElement('div');
+    box.className = 'reg-lb';
+    box.hidden = true;
+    box.innerHTML = '<button class="reg-lb-x" type="button" aria-label="Close">\u00d7</button>' +
+      '<figure><img alt=""><figcaption></figcaption></figure>';
+    document.body.appendChild(box);
+    box.addEventListener('click', function (e) {
+      if (e.target === box || e.target.closest('.reg-lb-x')) shut();
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && !box.hidden) shut();
+    });
+    document.body.addEventListener('click', function (e) {
+      var b = e.target.closest('[data-img]');
+      if (!b) return;
+      open(b.getAttribute('data-img'), b.getAttribute('data-cap') || '');
+    });
+  }
+
+  function open(file, cap) {
+    box.querySelector('img').src = 'assets/img/reg/' + file;
+    box.querySelector('img').alt = cap.slice(0, 160);
+    box.querySelector('figcaption').textContent = cap;
+    box.hidden = false;
+    document.body.style.overflow = 'hidden';
+  }
+
+  function shut() {
+    box.hidden = true;
+    box.querySelector('img').src = '';
+    document.body.style.overflow = '';
+  }
+
   /* ── boot ────────────────────────────────────────────────────────────── */
   function redraw() {
     stats(); asked(); drawTools(); drawMap(); slots(); sortDraw(); figs(); nums(); soft(); drill(); card();
@@ -498,7 +552,7 @@
 
   document.addEventListener('DOMContentLoaded', function () {
     sq = S.shuffle((R.where || []).filter(function (w) { return w.slot; }));
-    wireMap(); sortWire(); figWire();
+    wireMap(); sortWire(); figWire(); lightbox();
     document.getElementById('numfind').addEventListener('input', nums);
     redraw();
     S.applyStatic();

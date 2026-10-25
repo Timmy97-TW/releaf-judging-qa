@@ -17,7 +17,7 @@ Static HTML and vanilla JavaScript: no build step to view it, no server, works o
 |---|---|
 | **280 facts** | Every checkable number in the project, each linked to the wiki page it came from |
 | **306 terms** | From DNPH to hollow fiber to contained use, three keywords then one compact definition |
-| **460 questions** | Written for this project, in ten question types, with a model answer and the likely mistake |
+| **510 questions** | Written for this project, in ten question types, with a model answer and the likely mistake |
 | **140 deep** | Graduate-level: mechanism, trade-offs, and numbers with their uncertainty. The Deep end deck drills these alone |
 | **34 reasoning** | No answer anywhere on the wiki. The student is given a premise and has to get to the end of it |
 | **12 positioning** | Hollow fibre and DIY OD meters are old news — what did this team actually add? |
@@ -26,7 +26,8 @@ Static HTML and vanilla JavaScript: no build step to view it, no server, works o
 | **181 recorded questions** | What judges actually asked other teams in 2025 and earlier, from the team's own notes |
 | **58 milestones** | The year as a vertical timeline, with 47 of the team's own result figures |
 | **86 figures** | Key figures lifted off the wiki, each one a question in two modes: name it out loud, or pick it out of four |
-| **41 parts** | The whole Registry collection, pulled live from the API: four assembly levels, 101 figures on the pages, and seventeen places a judge who digs will land |
+| **41 parts** | The whole Registry collection, pulled live from the API: four assembly levels, 101 figures copied into the repo, and seventeen places a judge who digs will land |
+| **50 registry** | A question bank for the part pages alone — the band a judge points at, the twin deposits, the missing control lane |
 
 All of it is drawn from the frozen wiki at [2026.igem.wiki/gems-taiwan](https://2026.igem.wiki/gems-taiwan/).
 Nothing is invented. Where the wiki is silent, the answer says so.
@@ -118,8 +119,9 @@ The Registry Room is built from the live API, not from the wiki, because the par
 reads and they change after the wiki freezes. Two scripts:
 
 ```bash
-python3 build/registry_pull.py   # api.registry.igem.org -> source/registry/*.json
-python3 build/registry.py        # that, plus source/registry_notes.json -> docs/data/registry.js
+python3 build/registry_pull.py     # api.registry.igem.org -> source/registry/*.json
+python3 build/registry_images.py   # the figures on those pages -> docs/assets/img/reg/
+python3 build/registry.py          # that, plus source/registry-notes.json -> docs/data/registry.js
 ```
 
 `registry_pull.py` walks the organisation listing twenty parts at a time and then fetches the record,
@@ -127,12 +129,22 @@ the documentation and the composition for each one, at about a request a second 
 throttles hard. It also resolves the non-ReLEAF parts our composites are built on. A full pull is
 roughly three minutes.
 
+`registry_images.py` copies the 76 distinct figures off `registry.igem.wiki` into the repo,
+named by the first twelve characters of the Registry's own content hash, so the room works
+offline on the day and a judging session never waits on someone else's CDN. A file already
+present is left alone, so a re-run after a fresh pull fetches only what is new, and
+`registry.py` refuses to build if a figure named in the documentation is not there.
+
 `registry.py` derives the structure and never asks anyone to type it: assembly level comes from the
 composition graph, so a part that gains a component moves on the map by itself, and the flags — no
 documentation, unfilled brackets, has a twin, reused inside other parts, carries the old promoter
 deposit — are computed from the pulled record. Everything written in sentences lives in
-`source/registry_notes.json`: the anatomy of the five documentation slots, the figure readings, the
+`source/registry-notes.json`: the anatomy of the five documentation slots, the figure readings, the
 soft spots, the drills and the card. That file is edited by hand and is the only place to write prose.
+
+The fifty questions about the parts are a domain of the ordinary bank, not part of this:
+they live in `source/registry*.json` and build into `docs/data/bank.js` with everything else,
+so the Mock Room can draw them like any other domain or drill them alone.
 
 ## Local preview
 

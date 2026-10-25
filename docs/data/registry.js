@@ -186,6 +186,28 @@ var REGISTRY = {
 "blot",
 "brackets",
 "twin"
+],
+"figs":[
+{
+"file":"ba762e02cb85.avif",
+"slot":"experiment",
+"cap":"Fig. 1. Colony PCR verification of the ccaSR-Csn-AcdS-Histag construct. Lane M contains the DNA ladder, and lanes 2 through 5 represent individual colonies screened using ccaSm3 F and ccaR R primers. The electrophoresis results indicate that lanes 3, 4 and 5 yield a band migrating between the 500 and 750 basepair markers, consistent with the expected size of 632 basepairs, while lane 2 yields no p"
+},
+{
+"file":"1bb1bfecc9e2.avif",
+"slot":"experiment",
+"cap":"Fig. 2. Colony PCR verification of the ccaSR-Csn-AcdS-Histag construct. The gel indicates that both clones have correct bands across all 4 modules, confirming successful assembly."
+},
+{
+"file":"d09d66204dd3.avif",
+"slot":"experiment",
+"cap":"Figure 3. Clone 4 (insert:vector = 1:7) was sequence-verified and used for further experiments."
+},
+{
+"file":"f858b4d704db.avif",
+"slot":"characterisation",
+"cap":"Fig.1. Western blot of wild-type ACCD in Bacillus subtilis WB800 carrying CcaSR under different light intensities in the LPA (ABDI). Samples were collected before light exposure (0 h) and at 2, 4, 6, and 8 h. (A) Green 100% and green 12%. (B) Green 2% and red 100%. Lane M is the molecular weight marker (kDa). Signals increased over time under green 100%, 12%, and 2%, but not in a clear order acros"
+}
 ]
 },
 {
@@ -239,7 +261,8 @@ var REGISTRY = {
 "brackets":1,
 "flags":[
 "brackets"
-]
+],
+"figs":[]
 },
 {
 "id":"BBa_261XH2RS",
@@ -319,6 +342,18 @@ var REGISTRY = {
 "flags":[
 "brackets",
 "hub"
+],
+"figs":[
+{
+"file":"b207909c8639.avif",
+"slot":"experiment",
+"cap":"Figure 1. Colony PCR of [pSTK-1B]-PliaG-RBS0-ccaS-m3-B0015. 1 of 3 colonies gave a band at the expected size ([1602 bp])."
+},
+{
+"file":"0316beea2c6c.avif",
+"slot":"experiment",
+"cap":"Figure 2. Clone 1 was sequence-verified and used for downstream experiments."
+}
 ]
 },
 {
@@ -360,6 +395,18 @@ var REGISTRY = {
 "brackets":1,
 "flags":[
 "brackets"
+],
+"figs":[
+{
+"file":"90114dd860dc.avif",
+"slot":"design",
+"cap":"Figure ST-1. ACC deaminase, the enzyme this cassette secretes. (a) The fold of ACC deaminase, drawn from PDB 1TZJ chain A (Pseudomonas sp. ACP, X-ray, 1.99 Å). This is the closest experimentally determined structure to our own acdS: 83 % identical over 330 aligned residues. It is a structural reference for the fold and the active site — it is not a model of our exact protein, and no structure of o"
+},
+{
+"file":"6e350dfaf39f.avif",
+"slot":"design",
+"cap":"Figure CO-1. Translation-initiation structure of the ACCD v2 top1 cassette. (a) The ordered design against the wild type, a naive low-GC recoding rule, and the best candidates of a replicate 50,000-variant search; it ranks 3 of 49,987, the top 0.006 % of the pool. (b) Predicted minimum-free-energy secondary structure of the wild-type messenger RNA window — 236 nt: recombination site, MF001 ribosom"
+}
 ]
 },
 {
@@ -419,7 +466,8 @@ var REGISTRY = {
 "nodoc",
 "twin",
 "own"
-]
+],
+"figs":[]
 },
 {
 "id":"BBa_2654HAF3",
@@ -511,6 +559,28 @@ var REGISTRY = {
 "blot",
 "brackets",
 "twin"
+],
+"figs":[
+{
+"file":"ba762e02cb85.avif",
+"slot":"experiment",
+"cap":"Fig. 1. Colony PCR verification of the ccaSR-Csn-AcdS-Histag construct. Lane M contains the DNA ladder, and lanes 2 through 5 represent individual colonies screened using ccaSm3 F and ccaR R primers. The electrophoresis results indicate that lanes 3, 4 and 5 yield a band migrating between the 500 and 750 basepair markers, consistent with the expected size of 632 basepairs, while lane 2 yields no p"
+},
+{
+"file":"1bb1bfecc9e2.avif",
+"slot":"experiment",
+"cap":"Fig. 2. Colony PCR verification of the ccaSR-Csn-AcdS-Histag construct. The gel indicates that both clones have correct bands across all 4 modules, confirming successful assembly."
+},
+{
+"file":"d09d66204dd3.avif",
+"slot":"experiment",
+"cap":"Figure 3. Clone 4 (insert:vector = 1:7) was sequence-verified and used for further experiments."
+},
+{
+"file":"f858b4d704db.avif",
+"slot":"characterisation",
+"cap":"Fig.1. Western blot of wild-type ACCD in Bacillus subtilis WB800 carrying CcaSR under different light intensities in the LPA (ABDI). Samples were collected before light exposure (0 h) and at 2, 4, 6, and 8 h. (A) Green 100% and green 12%. (B) Green 2% and red 100%. Lane M is the molecular weight marker (kDa). Signals increased over time under green 100%, 12%, and 2%, but not in a clear order acros"
+}
 ]
 },
 {
@@ -551,6 +621,13 @@ var REGISTRY = {
 "brackets":1,
 "flags":[
 "brackets"
+],
+"figs":[
+{
+"file":"b8766a706c15.avif",
+"slot":"design",
+"cap":"Figure ST-3. BoPep4 bound to the plant receptor PEPR1. (a) The PEPR1 ectodomain, residues 29-738 (710 modelled), shown as a grey surface, with BoPep4 — BoPep4 1-23, Gly1 to Asn23 — in orange, lying in the inner groove of the leucine-rich-repeat solenoid. This is the starting structure of every molecular dynamics run in this document, threaded onto the 5GR8 (PEPR1-AtPep1) crystal structure of PEPR1"
+}
 ]
 },
 {
@@ -613,6 +690,18 @@ var REGISTRY = {
 "brackets":5,
 "flags":[
 "brackets"
+],
+"figs":[
+{
+"file":"c99753738e91.avif",
+"slot":"experiment",
+"cap":"Figure 1. Colony PCR of pSTK-0C-SamyQ-BoPep4 2.2-Histag. The figure indicates that 4 of 4 colonies gave a band at the expected size ([536 bp])"
+},
+{
+"file":"d03c0ee204e2.avif",
+"slot":"experiment",
+"cap":"Figure 2. Clone 1 was sequence-verified and used downstream."
+}
 ]
 },
 {
@@ -694,6 +783,38 @@ var REGISTRY = {
 "brackets":5,
 "flags":[
 "brackets"
+],
+"figs":[
+{
+"file":"469dcae98058.avif",
+"slot":"experiment",
+"cap":"Figure 1. Colony PCR of pSTK-EXP1-Pveg-EEBD-RBS0-SamyQ-BoPep4 2.1-Histag-B0015. 1 of 10 colonies gave a band at the expected size ([678 bp])."
+},
+{
+"file":"f96a66b9dd79.avif",
+"slot":"experiment",
+"cap":"Figure 2. Clone 14 was sequence-verified and used downstream."
+},
+{
+"file":"c82f7570ce2f.avif",
+"slot":"application",
+"cap":"Figure 1. The hydroponic tube rack for the BoPep4 salinity run, 15-day-old Arabidopsis thaliana. The upper block was held at 0 mM NaCl and the lower block at 100 mM NaCl. Within each block, BoPep4 was supplied in the root solution at 1/40, 1/60, 1/80 and 1/100, alongside a 1/40 WB800 control (TB medium carrying Bacillus subtilis WB800 with no protectant) and a 0.1× MS medium control. Three seedlin"
+},
+{
+"file":"62bf14698087.avif",
+"slot":"application",
+"cap":"Figure 2. Readouts from the BoPep4 salinity run shown in PL06. Three panels: fresh weight in g, chlorophyll content in µg per plant, and relative chlorophyll content as a ratio. Twelve groups per panel: BoPEP4 at 1/40, 1/60, 1/80 and 1/100, 1/40 WB800 (TB medium carrying Bacillus subtilis WB800 with no protectant) and 0.1× MS medium, each at 0 mM and at 100 mM NaCl. One bar per group, three seedli"
+},
+{
+"file":"65b84544f840.avif",
+"slot":"application",
+"cap":"Figure 3. Readouts for the BoPep4 arm of the hydroponic 37 °C run whose rack is shown in PL03 and PL04, 15-day-old Arabidopsis thaliana after four days at 37 °C. Three panels: fresh weight in g, chlorophyll content in µg per plant, and relative chlorophyll content as a ratio. Twelve groups per panel: BoPEP4 at 1/40, 1/60, 1/80 and 1/100, 1/40 WB800 (TB medium carrying Bacillus subtilis WB800 with "
+},
+{
+"file":"967ad6a6fb98.avif",
+"slot":"application",
+"cap":"Figure 4. Vehicle control for every hydroponic protectant run: the TB medium carrying Bacillus subtilis WB800 with no protectant, all 11 BoPep4 applied to Arabidopsis thaliana in the hydroponic rack at dilutions of 1, 1/2, 1/4, 1/8, 1/16 and 0 (no TB medium), at pH 5.7 and at pH 7.1. Three panels: fresh weight in g, chlorophyll content in µg per plant, and relative chlorophyll content as a ratio. "
+}
 ]
 },
 {
@@ -719,7 +840,8 @@ var REGISTRY = {
 "brackets":0,
 "flags":[
 "nodoc"
-]
+],
+"figs":[]
 },
 {
 "id":"BBa_26BDO8AQ",
@@ -800,6 +922,18 @@ var REGISTRY = {
 "flags":[
 "brackets",
 "hub"
+],
+"figs":[
+{
+"file":"fa7885bfe062.avif",
+"slot":"experiment",
+"cap":"Figure 1. Colony PCR of pSTK-1C-Pveg-RBS0-ccaR-B0015. 2 of 4 colonies gave a band at the expected size ([1442 bp])."
+},
+{
+"file":"cde051c48ace.avif",
+"slot":"experiment",
+"cap":"Figure 2. Clone 4 was sequence-verified and used for downstream experiments."
+}
 ]
 },
 {
@@ -896,6 +1030,28 @@ var REGISTRY = {
 "flags":[
 "blot",
 "brackets"
+],
+"figs":[
+{
+"file":"ec8e3cdacc85.avif",
+"slot":"experiment",
+"cap":"Figure 1. Colony PCR of pSTK-EXP1-Pveg-EEBD-RBS0-Csn-AcdS-Histag-B0015. 1 of 1 colonies gave a band at the expected size ([7767 bp])."
+},
+{
+"file":"dd7ceaa83e24.avif",
+"slot":"experiment",
+"cap":"Figure 2. Clone 1 was sequence-verified and used downstream."
+},
+{
+"file":"cf26d4e64d66.avif",
+"slot":"characterisation",
+"cap":"Fig. 1. Western blot analysis of constitutive ACC deaminase expression in Bacillus subtilis. Detection used a mouse monoclonal anti-Histag antibody. (A) Immunodetection verified expression and secretion of ACC deaminase from the constitutive Pveg construct. Lane ACCD is the culture supernatant, with a clear band at approximately 37 kDa, consistent with the predicted size of the secreted ACCD. (B) "
+},
+{
+"file":"23a9b510db69.avif",
+"slot":"characterisation",
+"cap":"Fig. 2. Time course protein expression and compartmental distribution of the ACCD in a bioreactor. Samples were collected from the lumen side (cell lysate and culture medium fractions) and the shell side (culture medium fraction) at the indicated time points (t = 14, 16, 18, 20, 22, 24, 40, 42 and 44 hours) to assess expression levels, secretion efficiency and compartmental diffusion."
+}
 ]
 },
 {
@@ -984,6 +1140,23 @@ var REGISTRY = {
 "brackets":5,
 "flags":[
 "brackets"
+],
+"figs":[
+{
+"file":"ebfd0c76c34d.avif",
+"slot":"experiment",
+"cap":"Figure 1. Colony PCR of pSTK-EXP1-Pveg-EEBD-RBS0-SamyQ-LEA14 2.1-Histag-B0015. 2 of 7 colonies gave a band at the expected size ([1423 bp])."
+},
+{
+"file":"312e8b798260.avif",
+"slot":"experiment",
+"cap":"Figure 2. Clone 1 was sequence-verified and used downstream."
+},
+{
+"file":"32d2074018a8.avif",
+"slot":"application",
+"cap":"Figure 1. Fresh weight, chlorophyll content with fresh weight normalization, and chlorophyll content without normalization."
+}
 ]
 },
 {
@@ -1064,6 +1237,18 @@ var REGISTRY = {
 "brackets",
 "twin",
 "legacy"
+],
+"figs":[
+{
+"file":"101fcb99f2b1.avif",
+"slot":"experiment",
+"cap":"Figure 1. Colony PCR of pSTK-1D-PcpcG2-veg-EEBD-RBS0-SamyQ-AcdS 2.1-Histag-B0015. 7 of 16 colonies gave a band at the expected size ([1588 bp])."
+},
+{
+"file":"c8c3303a0770.avif",
+"slot":"experiment",
+"cap":"Figure 2. Clone 2 was sequence-verified and used for downstream experiments."
+}
 ]
 },
 {
@@ -1104,6 +1289,33 @@ var REGISTRY = {
 "brackets":1,
 "flags":[
 "brackets"
+],
+"figs":[
+{
+"file":"b8766a706c15.avif",
+"slot":"design",
+"cap":"Figure 1. BoPep4 bound to the plant receptor PEPR1. (a) The PEPR1 ectodomain, residues 29-738 (710 modelled), shown as a grey surface, with BoPep4 — BoPep4 1-23, Gly1 to Asn23 — in orange, lying in the inner groove of the leucine-rich-repeat solenoid. This is the starting structure of every molecular dynamics run in this document, threaded onto the 5GR8 (PEPR1-AtPep1) crystal structure of PEPR1 wi"
+},
+{
+"file":"3cafffeb48fc.avif",
+"slot":"design",
+"cap":"Figure 1. Translation-initiation structure of the BoPep4 v2 top1 cassette. (a) The ordered design against the wild type, a naive low-GC recoding rule, and the best candidates of a replicate 50,000-variant search; it ranks 4 of 42,581, the top 0.009 % of the pool. (b) Predicted minimum-free-energy secondary structure of the wild-type messenger RNA window — 236 nt: recombination site, MF001 ribosome"
+},
+{
+"file":"563e8334c64d.avif",
+"slot":"design",
+"cap":"Figure 2. Trajectory behaviour of the BoPep4–PEPR1 panel. Eight peptide-bound systems and the receptor alone, 30 ns each, 1,500 frames; traces are smoothed with a 500 ps rolling average for legibility. (a) Receptor backbone movement against the starting structure. (b) Peptide movement measured in the receptor's frame, so the trace reports displacement within the binding groove rather than the pept"
+},
+{
+"file":"5e77975cbd45.avif",
+"slot":"design",
+"cap":"Figure 3. Contact occupancies against the pre-registered acceptance criteria. Fraction of the 1,500 production frames in which each contact is made: the Arg487 and Asn465 pairs within 4 Å, and the Asn23 clamp at full (4 of 4) and relaxed (at least 3 of 4) stringency. Dashed red lines mark the 60 % pass mark, written down before the runs. BoPep4 9–23 at pH 5.5 is the only system that fails a criter"
+},
+{
+"file":"3da62e90de50.avif",
+"slot":"design",
+"cap":"Figure 4. The Asn23–Arg487 salt bridge resolved to oxygens and hydrogen bonds. (a) How the Arg487 guanidinium engages the Asn23 C-terminus: with both terminal oxygens (bidentate), one (monodentate), or neither. (b) What occupies the guanidinium's first shell, split by chemical identity. (c) Distance between the two charge centres, mean ± SD over 1,500 frames. A C-terminal 6×His tag removes the fre"
+}
 ]
 },
 {
@@ -1186,7 +1398,8 @@ var REGISTRY = {
 "flags":[
 "nofig",
 "brackets"
-]
+],
+"figs":[]
 },
 {
 "id":"BBa_26GJIT8W",
@@ -1214,7 +1427,8 @@ var REGISTRY = {
 "flags":[
 "nodoc",
 "hub"
-]
+],
+"figs":[]
 },
 {
 "id":"BBa_26IA55UY",
@@ -1295,6 +1509,18 @@ var REGISTRY = {
 "brackets":5,
 "flags":[
 "brackets"
+],
+"figs":[
+{
+"file":"7ae42b9bff17.avif",
+"slot":"experiment",
+"cap":"Figure 1. Colony PCR of pSTK-EXP1-Pveg-EEBD-RBS0-SamyQ-BoPep4 2.2-Histag-B0015. 4 of 5 colonies gave a band at the expected size ([678 bp])."
+},
+{
+"file":"d1767d23bdba.avif",
+"slot":"experiment",
+"cap":"Figure 2. Clone 5 was sequence-verified and used downstream."
+}
 ]
 },
 {
@@ -1359,7 +1585,8 @@ var REGISTRY = {
 "thin",
 "nofig",
 "brackets"
-]
+],
+"figs":[]
 },
 {
 "id":"BBa_26IN6G1D",
@@ -1400,6 +1627,18 @@ var REGISTRY = {
 "brackets":1,
 "flags":[
 "brackets"
+],
+"figs":[
+{
+"file":"773fb3882789.avif",
+"slot":"design",
+"cap":"Figure 1. Translation-initiation structure of the LEA14 v2 top1 cassette. (a) The ordered design against the wild type, a naive low-GC recoding rule, and the best candidates of a replicate 50,000-variant search; it ranks 1 of 43,944, the top 0.002 % of the pool. (b) Predicted minimum-free-energy secondary structure of the wild-type messenger RNA window — 236 nt: recombination site, MF001 ribosome "
+},
+{
+"file":"d087c7afc2e9.avif",
+"slot":"design",
+"cap":"Figure ST-2. LEA14, a β-sandwich with a disordered N-terminal arm. (a) The LEA14 fold, from PDB 1XO8 model 1 (solution NMR, 20 models, O03983 (LEA14_ARATH)). Residues residues 2–151 of this structure are exactly the mature protein our cassette encodes — the structure is of our own protein, not a homologue. The core is a 9-stranded β-sandwich with one helix (residues 98–112); the N-terminal 16 resi"
+}
 ]
 },
 {
@@ -1462,6 +1701,18 @@ var REGISTRY = {
 "brackets":5,
 "flags":[
 "brackets"
+],
+"figs":[
+{
+"file":"2463682d514c.avif",
+"slot":"experiment",
+"cap":"Figure 1. Colony PCR of pSTK-0C-SamyQ-LEA14 2.1-Histag. The figure indicates that 2 of 2 colonies gave a band at the expected size ([770 bp])"
+},
+{
+"file":"796dddbd81cc.avif",
+"slot":"experiment",
+"cap":"Figure 2. Clone 1 was sequence-verified and used downstream."
+}
 ]
 },
 {
@@ -1503,6 +1754,13 @@ var REGISTRY = {
 "brackets":1,
 "flags":[
 "brackets"
+],
+"figs":[
+{
+"file":"d087c7afc2e9.avif",
+"slot":"design",
+"cap":"Figure ST-2. LEA14, a β-sandwich with a disordered N-terminal arm. (a) The LEA14 fold, from PDB 1XO8 model 1 (solution NMR, 20 models, O03983 (LEA14_ARATH)). Residues residues 2–151 of this structure are exactly the mature protein our cassette encodes — the structure is of our own protein, not a homologue. The core is a 9-stranded β-sandwich with one helix (residues 98–112); the N-terminal 16 resi"
+}
 ]
 },
 {
@@ -1543,6 +1801,33 @@ var REGISTRY = {
 "brackets":1,
 "flags":[
 "brackets"
+],
+"figs":[
+{
+"file":"b8766a706c15.avif",
+"slot":"design",
+"cap":"Figure 1. BoPep4 bound to the plant receptor PEPR1. (a) The PEPR1 ectodomain, residues 29-738 (710 modelled), shown as a grey surface, with BoPep4 — BoPep4 1-23, Gly1 to Asn23 — in orange, lying in the inner groove of the leucine-rich-repeat solenoid. This is the starting structure of every molecular dynamics run in this document, threaded onto the 5GR8 (PEPR1-AtPep1) crystal structure of PEPR1 wi"
+},
+{
+"file":"3cafffeb48fc.avif",
+"slot":"design",
+"cap":"Figure 2. Translation-initiation structure of the BoPep4 v2 top1 cassette. (a) The ordered design against the wild type, a naive low-GC recoding rule, and the best candidates of a replicate 50,000-variant search; it ranks 4 of 42,581, the top 0.009 % of the pool. (b) Predicted minimum-free-energy secondary structure of the wild-type messenger RNA window — 236 nt: recombination site, MF001 ribosome"
+},
+{
+"file":"563e8334c64d.avif",
+"slot":"design",
+"cap":"Figure 3. Trajectory behaviour of the BoPep4–PEPR1 panel. Eight peptide-bound systems and the receptor alone, 30 ns each, 1,500 frames; traces are smoothed with a 500 ps rolling average for legibility. (a) Receptor backbone movement against the starting structure. (b) Peptide movement measured in the receptor's frame, so the trace reports displacement within the binding groove rather than the pept"
+},
+{
+"file":"5e77975cbd45.avif",
+"slot":"design",
+"cap":"Figure 4. Contact occupancies against the pre-registered acceptance criteria. Fraction of the 1,500 production frames in which each contact is made: the Arg487 and Asn465 pairs within 4 Å, and the Asn23 clamp at full (4 of 4) and relaxed (at least 3 of 4) stringency. Dashed red lines mark the 60 % pass mark, written down before the runs. BoPep4 9–23 at pH 5.5 is the only system that fails a criter"
+},
+{
+"file":"3da62e90de50.avif",
+"slot":"design",
+"cap":"Figure 5. The Asn23–Arg487 salt bridge resolved to oxygens and hydrogen bonds. (a) How the Arg487 guanidinium engages the Asn23 C-terminus: with both terminal oxygens (bidentate), one (monodentate), or neither. (b) What occupies the guanidinium's first shell, split by chemical identity. (c) Distance between the two charge centres, mean ± SD over 1,500 frames. A C-terminal 6×His tag removes the fre"
+}
 ]
 },
 {
@@ -1584,6 +1869,13 @@ var REGISTRY = {
 "brackets":2,
 "flags":[
 "brackets"
+],
+"figs":[
+{
+"file":"90114dd860dc.avif",
+"slot":"design",
+"cap":"Figure ST-1. ACC deaminase, the enzyme this cassette secretes. (a) The fold of ACC deaminase, drawn from PDB 1TZJ chain A (Pseudomonas sp. ACP, X-ray, 1.99 Å). This is the closest experimentally determined structure to our own acdS: 83 % identical over 330 aligned residues. It is a structural reference for the fold and the active site — it is not a model of our exact protein, and no structure of o"
+}
 ]
 },
 {
@@ -1642,6 +1934,18 @@ var REGISTRY = {
 "flags":[
 "brackets",
 "hub"
+],
+"figs":[
+{
+"file":"54aa2f3c3988.avif",
+"slot":"experiment",
+"cap":"Figure 1. Colony PCR of pGEM-T Easy-Csn-AcdS-Histag. The figure indicates that 2 of 4 colonies gave a band at the expected size ([1372 bp])"
+},
+{
+"file":"2ea9a37bd6c1.avif",
+"slot":"experiment",
+"cap":"Figure 2. Clone 3 was sequence-verified and used downstream."
+}
 ]
 },
 {
@@ -1704,6 +2008,28 @@ var REGISTRY = {
 "brackets":1,
 "flags":[
 "brackets"
+],
+"figs":[
+{
+"file":"c0ae657fc1d1.avif",
+"slot":"design",
+"cap":"Figure 1. Where 15–23 sits in the truncation ladder. Every N-terminal truncation of BoPep4 from 1–23 to 17–23 docked against the PEPR1 ectodomain by two independent methods: AlphaFold3 interface confidence (ipTM, green, left axis) and HADDOCK score (grey, right axis; more negative is better). 15–23 is circled in red: HADDOCK -97.8 kcal/mol and ipTM 0.63, against -197.8 and 0.82 for the wild type. "
+},
+{
+"file":"a1dda76e26ac.avif",
+"slot":"design",
+"cap":"Figure 2. 15–23 keeps every checklist contact and gives up half the interface. (a) Total contact occupancy contributed by each BoPep4 residue, summed over all receptor residues, measured on the 30 ns wild-type trajectory. Residues 1–14, lost in this construct, are red; residues 15–23, retained, are teal. (b) The ledger. 15–23 retains 49.8 % of total contact occupancy and all eight of the crystallo"
+},
+{
+"file":"c8817e5e189a.avif",
+"slot":"design",
+"cap":"Figure 3. The negative control behaves like the wild type. Four systems over 30 ns, 1,500 frames each, smoothed with a 500 ps rolling average for legibility. (a) Receptor backbone movement. (b) Peptide movement measured in the receptor's frame, so the trace reports displacement within the groove rather than the peptide's own flexibility. (c) Shortest heavy-atom distance across the Asn23–Arg487 sal"
+},
+{
+"file":"6f90097d0ba9.avif",
+"slot":"design",
+"cap":"Figure 4. What we predicted against what we measured. The four acceptance criteria were written down before the simulation ran, together with the explicit prediction that this construct would fail all of them. It passed all four: receptor Cα RMSD 2.10 Å, peptide backbone RMSD 1.83 Å, Asn23–Arg487 within 4 Å for 99.9 % of frames, and clamp integrity at or above 3 of 4 for 100.0 %. We report this as"
+}
 ]
 },
 {
@@ -1730,7 +2056,8 @@ var REGISTRY = {
 "brackets":0,
 "flags":[
 "nodoc"
-]
+],
+"figs":[]
 },
 {
 "id":"BBa_26PGPSGK",
@@ -1810,6 +2137,18 @@ var REGISTRY = {
 "brackets",
 "twin",
 "own"
+],
+"figs":[
+{
+"file":"007541e6fe24.avif",
+"slot":"experiment",
+"cap":"Figure 1. Colony PCR of pSTK-1D-PcpcG2-veg-EEBD-RBS0-Csn-AcdS-Histag-B0015. 2 of 6 colonies gave a band at the expected size ([1588 bp])."
+},
+{
+"file":"8349ecd5ea36.avif",
+"slot":"experiment",
+"cap":"Figure 2. Clone 3 was sequence-verified and used for downstream experiments."
+}
 ]
 },
 {
@@ -1872,6 +2211,18 @@ var REGISTRY = {
 "brackets":5,
 "flags":[
 "brackets"
+],
+"figs":[
+{
+"file":"8834ba1b94f0.avif",
+"slot":"experiment",
+"cap":"Figure 1. Colony PCR of pSTK-0C-SamyQ-BoPep4 2.1-Histag. The figure indicates that 18 of 19 colonies gave a band at the expected size ([536 bp])"
+},
+{
+"file":"bd8c162daae6.avif",
+"slot":"experiment",
+"cap":"Figure 2. Clone 2 was sequence-verified and used downstream."
+}
 ]
 },
 {
@@ -1952,6 +2303,18 @@ var REGISTRY = {
 "brackets",
 "twin",
 "legacy"
+],
+"figs":[
+{
+"file":"007541e6fe24.avif",
+"slot":"experiment",
+"cap":"Figure 1. Colony PCR of pSTK-1D-PcpcG2-veg-EEBD-RBS0-Csn-AcdS-Histag-B0015. 2 of 6 colonies gave a band at the expected size ([1588 bp])."
+},
+{
+"file":"8349ecd5ea36.avif",
+"slot":"experiment",
+"cap":"Figure 2. Clone 3 was sequence-verified and used for downstream experiments."
+}
 ]
 },
 {
@@ -2044,6 +2407,58 @@ var REGISTRY = {
 "blot",
 "brackets",
 "twin"
+],
+"figs":[
+{
+"file":"c00e095c212c.avif",
+"slot":"experiment",
+"cap":"Fig. 1. Colony PCR verification of the Level 2 CcasR-SamyQ-AcdS 2.1-Histag construct. Lanes 1 through 11 represent individual colonies screened using CcaSm3 fw and CcaR rv primers. The electrophoresis results highlight that lanes 1 through 11 yield a band around the expected size of 632 basepairs."
+},
+{
+"file":"68787dec5c52.avif",
+"slot":"experiment",
+"cap":"Fig. 2. Colony PCR verification of the Level 2 CcasR-SamyQ-AcdS 2.1-Histag construct. Lanes 1 represent individual colonies screened using Ho1:pcyA fw and Ccasm3 rv primers; Lanes 2 represent individual colonies screened using CcaSm3 fw and CcaR rv primers; and Lanes 3 represent colonies screened using CcaR fw and ACCD rv primers. The electrophoresis results indicate that lanes 1, 2 and 3 yield a "
+},
+{
+"file":"c751930c77cf.avif",
+"slot":"experiment",
+"cap":"Fig. 3. Clone 1 was sequence-verified and used downstream."
+},
+{
+"file":"bb80d9f09143.avif",
+"slot":"characterisation",
+"cap":"Figure 1. OD600 of B. subtilis WB800 carrying CcaSR in the LPA. OD600 was read at 2, 4, 6, 8 and 24 hr. The left shows red 100% (n=1) and the right green 100% (n=3). Lines join the mean at each time and dots are single tubes. The dashed line is the measured blank (0.057–0.061), and the number at the end of each line is the 24 hr value. Through 8 hr both conditions grew alike (OD600 0.09–0.29), wit"
+},
+{
+"file":"59fdb2dd4530.avif",
+"slot":"characterisation",
+"cap":"Figure 2. Western blot analysis of AcdS 2.1 (ABDQ) in B. subtilis WB800 carrying CcaSR after an overnight culture, under green light at 100% intensity. An overnight culture (16 hr) was prepared first and then moved into the LPA, and samples were taken after 3, 6 and 8 hr in the LPA. All lanes are green 100%. A band ran just below the 100 kDa marker all three times. It was strong at 3 hr and 6 hr a"
+},
+{
+"file":"ba29fa86398c.avif",
+"slot":"characterisation",
+"cap":"Figure 3. Western blot analysis of AcdS 2.1 (ABDQ) in B. subtilis WB800 carrying CcaSR after 13 h and 16 h in the LPA. Cultures were put directly into the LPA and each was sampled once, at 13 hr or 16 hr. G, green light; R, red light, both at 100% intensity. A single band ran between the 75 and 100 kDa markers in all four lanes. The green lanes looked somewhat stronger than the red lanes at both t"
+},
+{
+"file":"ef5b2ee4ffa5.avif",
+"slot":"characterisation",
+"cap":"Figure 4. ELISA of ACCD concentration over time under green and red light. The ELISA data showed the concentration of ACCD under green or red light following a 12 h dark culture. Supernatants were collected at 3, 6, and 8 h after the onset of illumination. Secreted ACCD levels remained comparable over time and between light conditions. The baseline group corresponds to ACCD concentration measured "
+},
+{
+"file":"18639698c5cc.avif",
+"slot":"characterisation",
+"cap":"Figure 5. DNPH assay of ACCD activity over time under green and red light. The DNPH assay showed ACCD activity under green or red light following a 12 h dark culture. Supernatants were collected at 3, 6, and 8 h after the onset of illumination. The data showed that activity increased over time, and the green-light group showed higher activity than the red-light group. The baseline group correspond"
+},
+{
+"file":"e4d3f567128c.avif",
+"slot":"characterisation",
+"cap":"Figure 6. ELISA of ACCD concentration at 13 hr and 16 hr under green and red light. The ELISA data showed the concentrations of ACCD after 13 and 16 hr of culture under green or red light. Supernatants were collected at each time point. Secreted ACCD levels remained comparable over time and between light conditions. G and R refer to green and red light, respectively."
+},
+{
+"file":"eb9f556de867.avif",
+"slot":"characterisation",
+"cap":"Figure 7. DNPH assay of ACCD activity at 13 hr and 16 hr under green and red light. The DNPH assay showed ACCD activity after 13 and 16 hr of culture under green or red light. Supernatants were collected at each time point. The highest activity was observed at 13 hr under green light, indicating responsiveness to green light. However, it decreased dramatically over the following 3 hr. G and R refe"
+}
 ]
 },
 {
@@ -2132,6 +2547,13 @@ var REGISTRY = {
 "brackets":6,
 "flags":[
 "brackets"
+],
+"figs":[
+{
+"file":"a2f980ff8969.avif",
+"slot":"experiment",
+"cap":"Figure 1. Colony PCR of pSTK-EXP1-Pveg-EEBD-RBS0-Csn-LEA14-Histag-B0015. 1 of 1 colony gave a band at the expected size ([735 bp])."
+}
 ]
 },
 {
@@ -2197,6 +2619,18 @@ var REGISTRY = {
 "flags":[
 "brackets",
 "hub"
+],
+"figs":[
+{
+"file":"0b523a149a6f.avif",
+"slot":"experiment",
+"cap":"Figure 1. Colony PCR of pSTK-0C-SamyQ-AcdS-Histag 2.1. The figure indicates that 2 of 2 colonies gave a band at the expected size ([1331 bp])"
+},
+{
+"file":"7aa19e0d0524.avif",
+"slot":"experiment",
+"cap":"Figure 2. Clone 2 was sequence-verified and used downstream."
+}
 ]
 },
 {
@@ -2289,6 +2723,33 @@ var REGISTRY = {
 "blot",
 "brackets",
 "twin"
+],
+"figs":[
+{
+"file":"c00e095c212c.avif",
+"slot":"experiment",
+"cap":"Fig. 1. Colony PCR verification of the Level 2 CcasR-SamyQ-AcdS 2.1-Histag construct. Lanes 1 through 11 represent individual colonies screened using CcaSm3 fw and CcaR rv primers. The electrophoresis results highlight that lanes 1 through 11 yield a band around the expected size of 632 basepairs."
+},
+{
+"file":"68787dec5c52.avif",
+"slot":"experiment",
+"cap":"Fig. 2. Colony PCR verification of the Level 2 CcasR-SamyQ-AcdS 2.1-Histag construct. Lanes 1 represent individual colonies screened using Ho1:pcyA fw and Ccasm3 rv primers; Lanes 2 represent individual colonies screened using CcaSm3 fw and CcaR rv primers; and Lanes 3 represent colonies screened using CcaR fw and ACCD rv primers. The electrophoresis results indicate that lanes 1, 2 and 3 yield a "
+},
+{
+"file":"c751930c77cf.avif",
+"slot":"experiment",
+"cap":"Fig. 3. Clone 1 was sequence-verified and used downstream."
+},
+{
+"file":"e566cdecd66e.avif",
+"slot":"characterisation",
+"cap":"Fig.1. Level 2 optogenetic control of His-tagged ACC deaminase expression (ABDQ). Cells were grown under green light (G), which is expected to activate ACCD expression, or red light (R), which served as the repressing control. Samples were collected 13 h and 16 h after light exposure and probed with an anti-His primary antibody. Lane M is the protein marker ladder. Band intensities were similar ac"
+},
+{
+"file":"4c16bfff0d3c.avif",
+"slot":"characterisation",
+"cap":"Fig.2. Optogenetic induced time-course of ACC deaminase expression under secondary regulation (ABDQ). Western blot of His-tagged ACCD in B. subtilis cultures that were kept in the dark overnight (16 h) and then exposed to green light for 3, 6, or 8 h (O8). Lane M is the protein molecular weight marker. Probing with an anti-His primary antibody showed ACCD at all time points, with similar levels th"
+}
 ]
 },
 {
@@ -2342,7 +2803,8 @@ var REGISTRY = {
 "flags":[
 "nodoc",
 "hub"
-]
+],
+"figs":[]
 },
 {
 "id":"BBa_26VTO4DX",
@@ -2427,7 +2889,8 @@ var REGISTRY = {
 "thin",
 "nofig",
 "own"
-]
+],
+"figs":[]
 },
 {
 "id":"BBa_26XVQ3FS",
@@ -2523,6 +2986,53 @@ var REGISTRY = {
 "flags":[
 "blot",
 "brackets"
+],
+"figs":[
+{
+"file":"bd64752e9f98.avif",
+"slot":"experiment",
+"cap":"Figure 1. Colony PCR of pSTK-EXP1-Pveg-EEBD-RBS0-SamyQ-AcdS 2.1-Histag-B0015. 1 of 1 colonies gave a band at the expected size ([1984 bp])."
+},
+{
+"file":"9d5aa3d1fdfd.avif",
+"slot":"experiment",
+"cap":"Figure 2. Clone 1 was sequence-verified and used downstream."
+},
+{
+"file":"bd3754cc481d.avif",
+"slot":"characterisation",
+"cap":"Fig. 1. Western blot analysis of constitutive ACC deaminase-2.1-Histag expression in Bacillus subtilis. Detection was performed using a mouse monoclonal anti-Histag antibody. Immunodetection verified successful expression and secretion of ACC deaminase from the constitutive Pveg promoter construct. Lane ACCD represents the culture supernatant in which a clear band was detected at approximately 37 "
+},
+{
+"file":"de3fe476b68b.avif",
+"slot":"application",
+"cap":"Figure 1. Arabidopsis thaliana seedlings on vertical agar plates, photographed on day 15, after five days of thermo priming at 37 °C and five days of recovery at 22 °C. Top row, plates held at 22 °C throughout; bottom row, plates thermo-primed at 37 °C. Columns, left to right: no ACC deaminase added, pre-treatment, co-treatment, post-treatment. The protectant was a 0.22 µm-filtered culture superna"
+},
+{
+"file":"857f2439d39f.avif",
+"slot":"application",
+"cap":"Figure 2. Quantitative readouts from the same agar thermo-priming set as PL01, scored on day 15. (a) Fresh weight in grams. (b) Relative chlorophyll a+b in mg g⁻¹ normalised to fresh weight. (c) Relative chlorophyll a+b in mg g⁻¹ without fresh-weight normalisation. (d) Primary root length in mm, as box plots over the individual seedlings. Each bar carries three points, shown as dots. Conditions ar"
+},
+{
+"file":"4ff207877161.avif",
+"slot":"application",
+"cap":"Figure 3. The hydroponic tube rack carrying the 37 °C heat run, photographed before the heat stress, with 15-day-old Arabidopsis thaliana. The rack carries both arms of that run: ACC deaminase at 1/40, 1/60, 1/80 and 1/100, BoPEP4 at the same four dilutions, and two controls repeated for each arm, 1/40 WB800 (the same TB medium carrying Bacillus subtilis WB800 with no protectant) and 0.1× MS mediu"
+},
+{
+"file":"426238dcca98.avif",
+"slot":"application",
+"cap":"Figure 4. The same hydroponic tube rack as PL03, photographed after four days at 37 °C. Layout and labels are unchanged: ACC deaminase and BoPEP4 at 1/40, 1/60, 1/80 and 1/100, each arm with a 1/40 WB800 vehicle control and a 0.1× MS medium control, three seedlings per labelled group. Read off the panel: most rosettes on the rack have bleached to white or pale yellow, and the groups that retain vi"
+},
+{
+"file":"bf0adfe3ac46.avif",
+"slot":"application",
+"cap":"Figure 5. Readouts from the hydroponic 37 °C run shown in PL03 and PL04, 15-day-old Arabidopsis thaliana after four days at 37 °C. Three panels: fresh weight in g, chlorophyll content in µg per plant, and relative chlorophyll content as a ratio. Twelve groups per panel: ACC deaminase at 1/40, 1/60, 1/80 and 1/100, 1/40 WB800 (TB medium carrying Bacillus subtilis WB800 with no protectant) and 0.1× "
+},
+{
+"file":"f2d532ebc455.avif",
+"slot":"application",
+"cap":"Figure 6. The TB medium carrying Bacillus subtilis WB800 with no protectant, applied to Arabidopsis thaliana in the hydroponic rack at dilutions of 1, 1/2, 1/4, 1/8, 1/16 and 0 (no TB medium), at pH 5.7 and at pH 7.1. Three panels: fresh weight in g, chlorophyll content in µg per plant, and relative chlorophyll content as a ratio. Read off the panel: at both pH values fresh weight and chlorophyll "
+}
 ]
 },
 {
@@ -2603,6 +3113,18 @@ var REGISTRY = {
 "flags":[
 "brackets",
 "hub"
+],
+"figs":[
+{
+"file":"43e883f568b3.avif",
+"slot":"experiment",
+"cap":"Figure 1. Colony PCR of pSTK-1A-PtagC+RBS-Ho1-pcyA-L3S2P21. All colonies gave a band at the expected size ([1721 bp])."
+},
+{
+"file":"e300abd83e05.avif",
+"slot":"experiment",
+"cap":"Figure 2. Clone 1 was sequence-verified and used for downstream experiments."
+}
 ]
 },
 {
@@ -2643,6 +3165,28 @@ var REGISTRY = {
 "brackets":1,
 "flags":[
 "brackets"
+],
+"figs":[
+{
+"file":"c0ae657fc1d1.avif",
+"slot":"design",
+"cap":"Figure 1. Where 15–23 sits in the truncation ladder. Every N-terminal truncation of BoPep4 from 1–23 to 17–23 docked against the PEPR1 ectodomain by two independent methods: AlphaFold3 interface confidence (ipTM, green, left axis) and HADDOCK score (grey, right axis; more negative is better). 15–23 is circled in red: HADDOCK -97.8 kcal/mol and ipTM 0.63, against -197.8 and 0.82 for the wild type. "
+},
+{
+"file":"a1dda76e26ac.avif",
+"slot":"design",
+"cap":"Figure 2. 15–23 keeps every checklist contact and gives up half the interface. (a) Total contact occupancy contributed by each BoPep4 residue, summed over all receptor residues, measured on the 30 ns wild-type trajectory. Residues 1–14, lost in this construct, are red; residues 15–23, retained, are teal. (b) The ledger. 15–23 retains 49.8 % of total contact occupancy and all eight of the crystallo"
+},
+{
+"file":"c8817e5e189a.avif",
+"slot":"design",
+"cap":"Figure 3. The negative control behaves like the wild type. Four systems over 30 ns, 1,500 frames each, smoothed with a 500 ps rolling average for legibility. (a) Receptor backbone movement. (b) Peptide movement measured in the receptor's frame, so the trace reports displacement within the groove rather than the peptide's own flexibility. (c) Shortest heavy-atom distance across the Asn23–Arg487 sal"
+},
+{
+"file":"6f90097d0ba9.avif",
+"slot":"design",
+"cap":"Figure 4. What we predicted against what we measured. The four acceptance criteria were written down before the simulation ran, together with the explicit prediction that this construct would fail all of them. It passed all four: receptor Cα RMSD 2.10 Å, peptide backbone RMSD 1.83 Å, Asn23–Arg487 within 4 Å for 99.9 % of frames, and clamp integrity at or above 3 of 4 for 100.0 %. We report this as"
+}
 ]
 },
 {
@@ -2717,6 +3261,28 @@ var REGISTRY = {
 "brackets":3,
 "flags":[
 "brackets"
+],
+"figs":[
+{
+"file":"c0ae657fc1d1.avif",
+"slot":"design",
+"cap":"Figure 1. Where 15–23 sits in the truncation ladder. Every N-terminal truncation of BoPep4 from 1–23 to 17–23 docked against the PEPR1 ectodomain by two independent methods: AlphaFold3 interface confidence (ipTM, green, left axis) and HADDOCK score (grey, right axis; more negative is better). 15–23 is circled in red: HADDOCK -97.8 kcal/mol and ipTM 0.63, against -197.8 and 0.82 for the wild type. "
+},
+{
+"file":"a1dda76e26ac.avif",
+"slot":"design",
+"cap":"Figure 2. 15–23 keeps every checklist contact and gives up half the interface. (a) Total contact occupancy contributed by each BoPep4 residue, summed over all receptor residues, measured on the 30 ns wild-type trajectory. Residues 1–14, lost in this construct, are red; residues 15–23, retained, are teal. (b) The ledger. 15–23 retains 49.8 % of total contact occupancy and all eight of the crystallo"
+},
+{
+"file":"c8817e5e189a.avif",
+"slot":"design",
+"cap":"Figure 3. The negative control behaves like the wild type. Four systems over 30 ns, 1,500 frames each, smoothed with a 500 ps rolling average for legibility. (a) Receptor backbone movement. (b) Peptide movement measured in the receptor's frame, so the trace reports displacement within the groove rather than the peptide's own flexibility. (c) Shortest heavy-atom distance across the Asn23–Arg487 sal"
+},
+{
+"file":"6f90097d0ba9.avif",
+"slot":"design",
+"cap":"Figure 4. What we predicted against what we measured. The four acceptance criteria were written down before the simulation ran, together with the explicit prediction that this construct would fail all of them. It passed all four: receptor Cα RMSD 2.10 Å, peptide backbone RMSD 1.83 Å, Asn23–Arg487 within 4 Å for 99.9 % of frames, and clamp integrity at or above 3 of 4 for 100.0 %. We report this as"
+}
 ]
 },
 {
@@ -2772,6 +3338,18 @@ var REGISTRY = {
 "brackets":5,
 "flags":[
 "brackets"
+],
+"figs":[
+{
+"file":"2438a0dda56a.avif",
+"slot":"experiment",
+"cap":"Figure 1. Colony PCR of pSTK-0C-Csn-LEA14-Histag. The figure indicates that 16 of 16 colonies gave a band at the expected size ([811 bp])"
+},
+{
+"file":"f3cde1565dbc.avif",
+"slot":"experiment",
+"cap":"Figure 2. Clone 16 was sequence-verified and used for downstream experiments."
+}
 ]
 }
 ],
@@ -3324,7 +3902,8 @@ var REGISTRY = {
 "say_en":"The bands run at 63 to 75 kDa against a 35 kDa predicted monomer. ACC deaminase forms a homodimer at about 70, so that is our reading, but we have not tested it and the caption says so. The part we have to be straight about is the red lane: on the next page over we write that the red 100 percent reference also peaked at 8 hours, which is why we moved to the codon-optimised construct.",
 "say_zh":"帶跑在 63 到 75 kDa，而預測的單體是 35 kDa。ACC deaminase 會形成大約 70 kDa 的同源二聚體，那是我們的解讀，但我們沒有驗證過，圖說裡也這樣寫。必須講清楚的是紅光那一道：在隔壁那一頁我們自己寫了，紅光 100% 這個參考組在 8 小時也達到最強，這就是我們換成密碼子最佳化構築的原因。",
 "miss_en":"If pushed on why the control failed: spectral leakage is one explanation and the ABDI strain could not be recovered from glycerol stock, so every repeat needed a fresh electroporation. We have not tested either explanation directly.",
-"miss_zh":"如果被追問對照組為什麼失效：光譜外溢是一個解釋，另一個是 ABDI 菌株無法從甘油管復甦，所以每一次重複都要重新電穿孔。這兩個解釋我們都沒有直接驗證過。"
+"miss_zh":"如果被追問對照組為什麼失效：光譜外溢是一個解釋，另一個是 ABDI 菌株無法從甘油管復甦，所以每一次重複都要重新電穿孔。這兩個解釋我們都沒有直接驗證過。",
+"img":"f858b4d704db.avif"
 },
 {
 "part":"BBa_26RF0X2E",
@@ -3360,7 +3939,8 @@ var REGISTRY = {
 "say_en":"Three lanes, all green, no control of any kind on the film. The band sits just under 100 kDa for a protein we call 37 elsewhere, and we cannot tell you from this blot that the band is ours rather than a WB800 protein that cross-reacts. The missing lane is the one we name in our own summary.",
 "say_zh":"三道，全部是綠光，底片上沒有任何對照。那條帶落在 100 kDa 下面一點，而我們在別處說這個蛋白是 37 kDa；光看這張圖，我們沒辦法告訴你那條帶是我們的，而不是 WB800 自己交叉反應的蛋白。少掉的那一道，就是我們自己在 Summary 裡點名的那一道。",
 "miss_en":"The same experiment appears on BBa_26U8UTMH as Fig.2 with a different image and the opposite reading, \"similar levels throughout\". Both captions are ours. We read the conservative one.",
-"miss_zh":"同一個實驗在 BBa_26U8UTMH 上是 Fig.2，用的是不同影像、結論相反：「全程水準相近」。兩段圖說都是我們寫的。我們採信保守的那一個。"
+"miss_zh":"同一個實驗在 BBa_26U8UTMH 上是 Fig.2，用的是不同影像、結論相反：「全程水準相近」。兩段圖說都是我們寫的。我們採信保守的那一個。",
+"img":"59fdb2dd4530.avif"
 },
 {
 "part":"BBa_26CXI09X",
@@ -3396,7 +3976,8 @@ var REGISTRY = {
 "say_en":"This is the only purification we have anywhere. Everything else on our Registry is crude supernatant or lysate. The panel shows which imidazole buffers recovered protein and nothing more: the fractions were loaded 25, 10, 150, 250 and the caption on the live page still has the concentration list in brackets, which is an error we own.",
 "say_zh":"這是我們唯一的一次純化，Registry 上其他全部是粗萃上清或裂解液。這一格只顯示哪些 imidazole 緩衝液有回收到蛋白，沒有更多：分液的上樣順序是 25、10、150、250，而線上頁面的圖說裡那串濃度還夾在方括號裡，這是我們自己的錯。",
 "miss_en":"If asked for a purified yield: we do not have one. The purification and dialysis sheet produced no result on our wiki, so no purified concentration, gel or yield exists.",
-"miss_zh":"如果被問純化後的產量：我們沒有。純化與透析那一張實驗表在我們 wiki 上沒有產出結果，所以沒有任何純化後的濃度、膠或產量。"
+"miss_zh":"如果被問純化後的產量：我們沒有。純化與透析那一張實驗表在我們 wiki 上沒有產出結果，所以沒有任何純化後的濃度、膠或產量。",
+"img":"cf26d4e64d66.avif"
 },
 {
 "part":"BBa_26XVQ3FS",
@@ -3426,7 +4007,8 @@ var REGISTRY = {
 "say_en":"One lane of culture supernatant with a band at about 37 kDa, which is where we predicted the secreted enzyme. This is the cleanest size agreement we have. It is also one lane with no control beside it, so it shows secretion at the expected size and not that the band is the only thing the antibody saw.",
 "say_zh":"一道培養上清，帶在大約 37 kDa，正是我們預測分泌型酵素的位置。這是我們最乾淨的一次大小吻合。它同時也只有一道、旁邊沒有對照，所以它顯示的是「在期望大小有分泌」，而不是「抗體只看到這一條」。",
 "miss_en":"The sibling Csn construct gives the same 37 kDa on BBa_26CXI09X panel A. The Csn-against-SamyQ comparison those matched pairs were built for cannot be read off these two single lanes.",
-"miss_zh":"姊妹的 Csn 構築在 BBa_26CXI09X 的 A 格也是 37 kDa。這兩對構築本來是為了比較 Csn 和 SamyQ 而做的，但光靠這兩道單獨的樣品道讀不出那個比較。"
+"miss_zh":"姊妹的 Csn 構築在 BBa_26CXI09X 的 A 格也是 37 kDa。這兩對構築本來是為了比較 Csn 和 SamyQ 而做的，但光靠這兩道單獨的樣品道讀不出那個比較。",
+"img":"bd3754cc481d.avif"
 },
 {
 "part":"BBa_260MVA1K",
@@ -3461,7 +4043,8 @@ var REGISTRY = {
 "say_en":"This is the one figure on our Registry where we called an extra band in our own caption instead of waiting to be asked. The 632 bp band is the ccaS-to-ccaR junction; the bright 250 bp band and the faint high-molecular-weight ones are non-specific amplification from a colony template, which is normal for colony PCR and is why we went on to sequence-verify the clone.",
 "say_zh":"這是我們 Registry 上唯一一張「自己在圖說裡先把多出來的帶講出來」的圖，而不是等人問。632 bp 那條是 ccaS 到 ccaR 的接點；亮的 250 bp 和微弱的高分子量帶是菌落模板的非專一性擴增，菌落 PCR 本來就常見，這也是我們後面還要做定序確認的原因。",
 "miss_en":"Fig. 2 on the same page screens all four modules in two clones and reports correct bands across all four. Nine correct junctions say the modules are in the right order; they say nothing about the sequence between the junctions.",
-"miss_zh":"同一頁的 Fig. 2 在兩個 clone 上篩了全部四個模組，四個都有正確的帶。九個正確的接點說明模組的順序是對的；它們沒有說接點之間的序列是對的。"
+"miss_zh":"同一頁的 Fig. 2 在兩個 clone 上篩了全部四個模組，四個都有正確的帶。九個正確的接點說明模組的順序是對的；它們沒有說接點之間的序列是對的。",
+"img":"ba762e02cb85.avif"
 },
 {
 "part":"BBa_26CXI09X",
@@ -3497,7 +4080,8 @@ var REGISTRY = {
 "say_en":"Neither number on the page is right and they contradict each other, which is ours to own. Working from the deposited sequence, Csn F anneals at 401 and ACCD R at 1540, so with the primer tails the product is 1195 bp. 1145 is a band size that belongs to a different part's gel; 7767 is plasmid scale and cannot be this amplicon.",
 "say_zh":"頁面上兩個數字都不對，而且彼此矛盾，這是我們要認的。用上傳的序列算，Csn F 黏在 401、ACCD R 黏在 1540，加上引子尾巴，產物是 1195 bp。1145 是另一個 part 的膠上的帶大小；7767 是質體等級，不可能是這個產物。",
 "miss_en":"The sibling SamyQ cassette, BBa_26XVQ3FS, states 1984 bp for what the page describes as the same backbone-primer screen. The three numbers cannot all be right and we have not reconciled them on the live pages.",
-"miss_zh":"姊妹的 SamyQ 卡匣 BBa_26XVQ3FS，對頁面描述為同一種骨架引子篩選寫的是 1984 bp。三個數字不可能都對，而我們還沒有在線上頁面把它們對起來。"
+"miss_zh":"姊妹的 SamyQ 卡匣 BBa_26XVQ3FS，對頁面描述為同一種骨架引子篩選寫的是 1984 bp。三個數字不可能都對，而我們還沒有在線上頁面把它們對起來。",
+"img":"ec8e3cdacc85.avif"
 },
 {
 "part":"BBa_26ERHWWI",
@@ -3533,7 +4117,8 @@ var REGISTRY = {
 "say_en":"Our own simulation says a C-terminal tag abolishes the Asn23 to Arg487 salt bridge, and all three of our SamyQ-BoPep4 deposits are C-terminally tagged. One of our legends records a decision to move the tag to the N terminus for constructs ordered after 16 August. The deposits contradict that sentence, so either they predate the decision or it was not applied, and we do not have the ordering record to say which.",
 "say_zh":"我們自己的模擬說 C 端標籤會消掉 Asn23 到 Arg487 的鹽橋，而我們三個 SamyQ-BoPep4 的上傳都是 C 端加標籤。我們有一段圖說記錄了一個決定：8 月 16 日之後訂的構築把標籤移到 N 端。上傳的序列和那句話矛盾，所以不是它們早於那個決定，就是那個決定沒有被執行，而我們沒有訂購紀錄可以判斷。",
 "miss_en":"The point the figure makes that is worth repeating: the tagged system passed all four pre-registered criteria anyway, because a backbone carbonyl keeps a minimum-distance measure looking healthy. The criteria were measuring something other than binding.",
-"miss_zh":"這張圖裡最值得複述的一點：有標籤的系統還是通過了全部四項事先登記的標準，因為主鏈的羰基讓「最短距離」這個指標看起來很正常。那些標準量到的不是結合。"
+"miss_zh":"這張圖裡最值得複述的一點：有標籤的系統還是通過了全部四項事先登記的標準，因為主鏈的羰基讓「最短距離」這個指標看起來很正常。那些標準量到的不是結合。",
+"img":"3da62e90de50.avif"
 },
 {
 "part":"BBa_26O00QVC",
@@ -3568,7 +4153,8 @@ var REGISTRY = {
 "say_en":"We wrote down before the run that 15 to 23 was our negative control and would fail all four gates. It passed all four. We published that instead of moving the goalposts, and the honest reading is in our own caption: the criteria were not wrong about the chemistry, they were measuring something other than binding.",
 "say_zh":"我們在跑之前就寫下來，15 到 23 是我們的陰性對照，應該四項全部失敗。結果四項全部通過。我們照樣發表，沒有事後改標準；誠實的解讀就在我們自己的圖說裡：那些標準對化學的判斷沒有錯，它們量到的不是結合。",
 "miss_en":"This is the strongest honesty card on our Registry. If a judge asks what you learned from modelling, this is the answer: a pre-registered prediction we lost, kept in public.",
-"miss_zh":"這是我們 Registry 上最強的一張誠實牌。如果評審問你從模擬裡學到什麼，答案就是這個：一個事先登記、我們輸掉、而且公開留著的預測。"
+"miss_zh":"這是我們 Registry 上最強的一張誠實牌。如果評審問你從模擬裡學到什麼，答案就是這個：一個事先登記、我們輸掉、而且公開留著的預測。",
+"img":"6f90097d0ba9.avif"
 },
 {
 "part":"BBa_26XVQ3FS",
@@ -3603,7 +4189,8 @@ var REGISTRY = {
 "say_en":"Our own caption says it: no panel here shows a statistically tested advantage over the untreated heat-stressed control, and that control plate is one of the three marked contaminated. The stars compare everything to the unstressed control, which is the wrong comparison for the claim. We left both facts on the public page rather than cropping them.",
 "say_zh":"我們自己的圖說就寫了：這裡沒有任何一格顯示出相對於「未處理的熱逆境對照」有經統計檢定的優勢，而那個對照盤正是三個被標記污染的盤之一。那些星號比的是無逆境對照，對這個主張來說是錯的比較。我們把這兩件事留在公開頁面上，沒有裁掉。",
 "miss_en":"The companion hydroponic figure has chlorophyll and fresh weight pointing opposite ways, and the vehicle figure shows the TB medium alone suppressing growth from 0.065 g to 0.006 g. That is why every protectant run is read against a matched 1/40 WB800 vehicle control and not against medium alone.",
-"miss_zh":"搭配的水耕圖裡，葉綠素和鮮重指向相反方向；而載體對照圖顯示光是 TB 培養液就把生長從 0.065 g 壓到 0.006 g。這就是為什麼每一次保護蛋白試驗都要對 1/40 WB800 載體對照讀，而不是對純培養基讀。"
+"miss_zh":"搭配的水耕圖裡，葉綠素和鮮重指向相反方向；而載體對照圖顯示光是 TB 培養液就把生長從 0.065 g 壓到 0.006 g。這就是為什麼每一次保護蛋白試驗都要對 1/40 WB800 載體對照讀，而不是對純培養基讀。",
+"img":"857f2439d39f.avif"
 },
 {
 "part":"BBa_26RF0X2E",
@@ -3638,7 +4225,8 @@ var REGISTRY = {
 "say_en":"At 13 hours green beats red fourteen to one, which is the best light response this assay has given us. At 16 hours it inverts. Neither point is repeated, the error bar on the 13 hour green point runs from about 5 to 16 on the activity scale, and across both times colour comes out at p = 0.72. So we have a promising single observation and not a demonstrated switch.",
 "say_zh":"在 13 小時，綠光以十四比一勝過紅光，那是這個檢測給過我們最好的光反應。到 16 小時就反轉了。兩個時間點都沒有重複，13 小時綠光那一點的誤差棒在活性尺度上從大約 5 延伸到 16，而兩個時間合起來看，顏色的 p 值是 0.72。所以我們有一個值得追的單次觀察，不是一個被證實的開關。",
 "miss_en":"The experiment that would settle it is the obvious one and is not in our record: the same culture, one maturation time, both colours, repeated.",
-"miss_zh":"能定案的實驗很明顯，而我們的紀錄裡沒有：同一批培養、固定一個成熟時間、兩種顏色、做重複。"
+"miss_zh":"能定案的實驗很明顯，而我們的紀錄裡沒有：同一批培養、固定一個成熟時間、兩種顏色、做重複。",
+"img":"eb9f556de867.avif"
 },
 {
 "part":"BBa_26Q3LKZU",
@@ -3673,7 +4261,8 @@ var REGISTRY = {
 "say_en":"The same gel and the same caption appear on BBa_26PGPSGK, which is the corrected deposit. We ran the screen once, on the construct as it was then, and when we found the 868 bp sfGFP dropout in the sequence we re-deposited rather than re-shoot the gel. A judge should know the figure belongs to the older deposit.",
 "say_zh":"同一張膠、同一段圖說也出現在 BBa_26PGPSGK 上，那是修正後的版本。這個篩選我們只跑過一次，跑的是當時那個構築；後來在序列裡發現 868 bp 的 sfGFP dropout，我們選擇重新上傳，而不是重拍一張膠。評審應該知道這張圖屬於比較舊的那一筆。",
 "miss_en":"The 1588 bp number is also stated on BBa_26DE5E2Q for a different insert screened with a different primer pair. The same total for two different constructs cannot both be right.",
-"miss_zh":"1588 bp 這個數字在 BBa_26DE5E2Q 上也出現，但那是不同的插入片段、用不同的引子對篩選。同一個總長度對兩個不同構築，不可能都對。"
+"miss_zh":"1588 bp 這個數字在 BBa_26DE5E2Q 上也出現，但那是不同的插入片段、用不同的引子對篩選。同一個總長度對兩個不同構築，不可能都對。",
+"img":"007541e6fe24.avif"
 }
 ],
 "numbers":[

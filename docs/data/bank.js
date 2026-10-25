@@ -12194,6 +12194,1495 @@ var QUESTIONS = [
 "id":"q400"
 },
 {
+"q_en":"How many parts did you put on the Registry, and how are they organised?",
+"q_zh":"你們在 Registry 上放了幾個 parts？怎麼組織的？",
+"type":"fact",
+"tier":"A",
+"pages":[
+"parts"
+],
+"seat":"wet1",
+"backup":"wet2",
+"kw_en":[
+"41 parts, four levels",
+"12 / 12 / 13 / 4",
+"14 borrowed"
+],
+"kw_zh":[
+"41 個 parts、四層",
+"12 / 12 / 13 / 4",
+"借用 14 個"
+],
+"a_en":"Forty-one, in four assembly levels. Twelve basic parts, twelve transcriptional units, thirteen cassettes and four whole four-unit systems, built on fourteen parts from earlier teams. Our wiki presents thirty-five of the forty-one, because four were withheld and the last corrected re-deposits landed after that page was written. If you are counting from the Registry you will get forty-one, and that is the number I would use.",
+"a_zh":"四十一個，分成四個組裝層級。十二個基本元件、十二個轉錄單元、十三個表現卡匣，以及四個完整的四單元系統，建立在十四個過去隊伍的 parts 上。我們的 wiki 介紹其中三十五個，因為有四個保留，而最後幾筆修正後的重新上傳是在那一頁寫完之後才上去的。如果你是從 Registry 數，會得到四十一，那也是我會用的數字。",
+"trap_en":"Saying thirty-five because that is the number on the wiki, when the judge is looking at the Registry listing.",
+"trap_zh":"因為 wiki 上寫三十五就說三十五，而評審看的是 Registry 的清單。",
+"basis":"the first thing a judge checks against the organisation page",
+"dom":"registry",
+"deep":0,
+"id":"q401"
+},
+{
+"q_en":"Which of your parts are you proudest of, and why that one?",
+"q_zh":"你們最得意的是哪一個 part？為什麼是它？",
+"type":"design",
+"tier":"A",
+"pages":[
+"parts",
+"engineering"
+],
+"seat":"wet1",
+"backup":"wet2",
+"kw_en":[
+"BBa_26GJIT8W, 177 bp",
+"exists because of a mistake",
+"re-deposited four"
+],
+"kw_zh":[
+"BBa_26GJIT8W、177 bp",
+"因為一個錯誤而存在",
+"重新上傳四個"
+],
+"a_en":"PcpcG2-veg, 177 base pairs, the smallest thing we deposited. It exists because we caught a mistake: our first green-light cassettes carried a 1045 bp third-party part that includes an sfGFP dropout cassette where the promoter should be. We isolated the promoter, deposited it ourselves, and re-deposited four corrected constructs around it. A part that exists because of a failure is worth more to the next team than a part that happened to work.",
+"a_zh":"PcpcG2-veg，177 個鹼基對，是我們上傳過最小的東西。它存在的原因是我們抓到一個錯誤：最早的綠光卡匣在啟動子的位置上帶著一個 1045 bp 的第三方 part，裡面包含 sfGFP dropout 卡匣。我們把啟動子單獨切出來、自己上傳，再用它重新上傳四個修正後的構築。一個因為失敗而存在的 part，對下一隊的價值高於一個剛好能用的 part。",
+"trap_en":"Naming the Level 2 system because it is the biggest. It is also the one still carrying the uncorrected deposit.",
+"trap_zh":"因為最大就說 Level 2 系統。那正好也是還帶著未修正版本的那一個。",
+"basis":"standard opener; the answer decides whether the next ten minutes are yours",
+"dom":"registry",
+"deep":0,
+"id":"q402"
+},
+{
+"q_en":"Two of your parts have exactly the same title. Did you upload the same thing twice?",
+"q_zh":"你們有兩個 parts 標題一模一樣。是同一個東西上傳了兩次嗎？",
+"type":"gap",
+"tier":"A",
+"pages":[
+"parts"
+],
+"seat":"wet1",
+"backup":"wet2",
+"kw_en":[
+"not the same, 868 bp apart",
+"old carries sfGFP dropout",
+"kept both, gels ran on the old"
+],
+"kw_zh":[
+"不一樣，差 868 bp",
+"舊的帶 sfGFP dropout",
+"兩個都留，膠跑的是舊的"
+],
+"a_en":"No. They are different sequences, 868 base pairs apart. The first carries a third-party promoter part that includes an sfGFP dropout cassette; the second carries the 177 bp promoter we deposited ourselves. Four pairs do this. We kept both of each because our gels were run on the first one, so deleting it would orphan the evidence that is already published.",
+"a_zh":"不是。它們是不同的序列，差 868 個鹼基對。第一個帶著一個包含 sfGFP dropout 卡匣的第三方啟動子 part；第二個帶的是我們自己上傳的 177 bp 啟動子。像這樣的有四對。每一對我們都留著，因為膠是在第一個上面跑的，刪掉它會讓已經發表的證據變成孤兒。",
+"trap_en":"Saying 'that was a mistake' and stopping. The second half, what you did about it, is the part that scores.",
+"trap_zh":"只說「那是個錯誤」就停住。真正得分的是後半段：你們為此做了什麼。",
+"basis":"visible from the organisation listing without opening anything",
+"dom":"registry",
+"deep":0,
+"id":"q403"
+},
+{
+"q_en":"Five of your published parts have no documentation at all. Why those five?",
+"q_zh":"你們有五個已發布的 parts 完全沒有文件。為什麼是那五個？",
+"type":"gap",
+"tier":"A",
+"pages":[
+"parts"
+],
+"seat":"wet1",
+"backup":"ihp",
+"kw_en":[
+"EEBD-RBS0 in thirteen",
+"PcpcG2-veg is the fix",
+"empty are not unimportant"
+],
+"kw_zh":[
+"EEBD-RBS0 在十三個裡",
+"PcpcG2-veg 是那個修正",
+"空的不是不重要的"
+],
+"a_en":"No good reason, and the empty ones are not the unimportant ones. EEBD-RBS0 sits inside thirteen of our constructs and is the constant that makes the Csn against SamyQ comparison fair. PcpcG2-veg is the promoter we deposited to fix the sfGFP problem, and its page says only 'light induced promoter'. Those are the two I would write first and I can tell you now what each would say.",
+"a_zh":"沒有好理由，而且空白的那幾個不是不重要的。EEBD-RBS0 在我們十三個構築裡面，是讓 Csn 和 SamyQ 能公平比較的那個常數。PcpcG2-veg 是我們為了修正 sfGFP 問題而上傳的啟動子，而它的頁面只寫了「light induced promoter」。那兩個我會最先補，而且我現在就可以告訴你每一頁會寫什麼。",
+"trap_en":"Promising to write them later. Say which two matter and what they would contain, in the room.",
+"trap_zh":"承諾以後再補。要在現場說出哪兩個最重要，以及它們會寫什麼。",
+"basis":"one click from the organisation listing",
+"dom":"registry",
+"deep":0,
+"id":"q404"
+},
+{
+"q_en":"Walk me up your assembly levels. What is the difference between a Level 1 cassette and a Level 2 system?",
+"q_zh":"帶我走一遍你們的組裝層級。Level 1 卡匣和 Level 2 系統差在哪裡？",
+"type":"fact",
+"tier":"A",
+"pages":[
+"parts",
+"engineering"
+],
+"seat":"wet1",
+"backup":"wet2",
+"kw_en":[
+"L0 basic, L1 unit, L2 cassette",
+"L3 is four units",
+"BsaI then BsmBI"
+],
+"kw_zh":[
+"L0 基本、L1 單元、L2 卡匣",
+"L3 是四個單元",
+"先 BsaI 再 BsmBI"
+],
+"a_en":"A Level 0 part is one element: a promoter, an RBS or a coding sequence. A Level 1 part fuses a signal peptide to a cargo, or puts a promoter in front of one gene. A Level 2 cassette is promoter, RBS, fusion and terminator on one transformable plasmid, assembled with BsaI. The whole system puts four of those transcriptional units on a single plasmid with BsmBI: the chromophore module, the sensor, the response regulator and the output.",
+"a_zh":"Level 0 是單一元件：一個啟動子、一個 RBS 或一段編碼序列。Level 1 把訊號肽接到 cargo 上，或把一個啟動子放到一個基因前面。Level 2 卡匣是啟動子、RBS、融合和終止子組在一個可轉形的質體上，用 BsaI 組裝。完整系統再用 BsmBI 把四個這樣的轉錄單元放到同一個質體上：色素基團模組、感測器、反應調節子，以及輸出。",
+"trap_en":"Describing the biology instead of the assembly. The question is about how the parts nest.",
+"trap_zh":"講生物學而不是組裝。這題問的是 parts 怎麼層層包起來。",
+"basis":"the structure question that sets up everything after it",
+"dom":"registry",
+"deep":0,
+"id":"q405"
+},
+{
+"q_en":"Fourteen of the parts in your constructs are not yours. What did you actually add?",
+"q_zh":"你們構築裡有十四個 parts 不是你們的。那你們到底加了什麼？",
+"type":"history",
+"tier":"A",
+"pages":[
+"parts",
+"contribution"
+],
+"seat":"wet1",
+"backup":"biz",
+"kw_en":[
+"CcaSR and Pveg are borrowed",
+"we added the fusions and cassettes",
+"and our own PcpcG2-veg"
+],
+"kw_zh":[
+"CcaSR 和 Pveg 是借的",
+"我們加的是融合與卡匣",
+"以及自己的 PcpcG2-veg"
+],
+"a_en":"The light-sensing machinery is borrowed: CcaS, CcaR, the Ho1-pcyA fusion, Pveg, PliaG, the terminators. What we added is everything between a secretion signal and a plant: eight signal-peptide fusions, thirteen cassettes, four whole systems, our own PcpcG2-veg deposit, and codon-recoded versions of three cargoes. Nobody had put a plant protectant behind a green-light switch in Bacillus subtilis and deposited the whole chain.",
+"a_zh":"光感測的機制是借的：CcaS、CcaR、Ho1-pcyA 融合、Pveg、PliaG、終止子。我們加的是從分泌訊號到植物之間的一切：八個訊號肽融合、十三個卡匣、四個完整系統、我們自己的 PcpcG2-veg，以及三個 cargo 的密碼子重編碼版本。在枯草桿菌裡把植物保護蛋白放在綠光開關後面、並且把整條鏈上傳，這是沒有人做過的。",
+"trap_en":"Listing what you built without naming what was borrowed. A judge who has read the composition already knows.",
+"trap_zh":"只列你們做了什麼，卻不說哪些是借的。讀過組成的評審早就知道了。",
+"basis":"positioning question; the composition tab makes it unavoidable",
+"dom":"registry",
+"deep":0,
+"id":"q406"
+},
+{
+"q_en":"Who wrote your part documentation?",
+"q_zh":"你們的 part 文件是誰寫的？",
+"type":"fact",
+"tier":"B",
+"pages":[
+"parts",
+"team"
+],
+"seat":"wet1",
+"backup":"ihp",
+"kw_en":[
+"one author",
+"17 and 18 October",
+"visible in the edit record"
+],
+"kw_zh":[
+"一位作者",
+"10 月 17、18 日",
+"編輯紀錄上看得到"
+],
+"a_en":"I did, all forty-one pages, mostly across the seventeenth and eighteenth of October. That is in the Registry's own edit record so there is no point saying otherwise, and it is also the honest answer to why five pages are empty. The science on them is the whole team's; the writing was two days and one person.",
+"a_zh":"我寫的，四十一頁全部，主要集中在十月十七和十八日。這在 Registry 自己的編輯紀錄上就看得到，沒有必要講別的；這也誠實地回答了為什麼有五頁是空的。頁面上的科學是整個團隊的，但寫作是兩天、一個人。",
+"trap_en":"Spreading the credit vaguely. The record is public and checking it takes one click.",
+"trap_zh":"含糊地把功勞分給大家。紀錄是公開的，點一下就查得到。",
+"basis":"asked when a collection looks uneven",
+"dom":"registry",
+"deep":0,
+"id":"q407"
+},
+{
+"q_en":"If another team wanted to build on your work tomorrow, which part would you tell them to take?",
+"q_zh":"如果別的隊伍明天想接著你們做，你會叫他們拿哪一個 part？",
+"type":"impact",
+"tier":"A",
+"pages":[
+"parts",
+"contribution"
+],
+"seat":"wet1",
+"backup":"biz",
+"kw_en":[
+"the replaceable-CDS cassette",
+"swap cargo, keep the circuit",
+"its page is Design only"
+],
+"kw_zh":[
+"可換 CDS 的卡匣",
+"換 cargo、留線路",
+"它的頁面只有 Design"
+],
+"a_en":"The CDS-replaceable cassette, with mScarlet-I in the slot. It lets you swap your own cargo into our green-light system without rebuilding the circuit, and the reporter is there so you can see the swap worked before you commit anything expensive. I should say the page is Design only at the moment, so what I have just described is a claim rather than a demonstration.",
+"a_zh":"可換 CDS 的卡匣，槽位上放著 mScarlet-I。它讓你把自己的 cargo 換進我們的綠光系統，不用重建線路，而報導基因放在那裡，是讓你在投入昂貴的東西之前先確認換得起來。我得說，它的頁面目前只有 Design，所以我剛剛描述的是一個主張，不是一次展示。",
+"trap_en":"Over-selling it. The last sentence is what keeps the rest credible.",
+"trap_zh":"講得太滿。最後那一句才是讓前面可信的東西。",
+"basis":"the contribution question, asked through the parts",
+"dom":"registry",
+"deep":0,
+"id":"q408"
+},
+{
+"q_en":"Your cassette page says the insert is 906 base pairs. The deposited sequence is 712. Which is right?",
+"q_zh":"你們卡匣頁面寫插入片段是 906 個鹼基對，上傳的序列是 712。哪個對？",
+"type":"validate",
+"tier":"A",
+"deep":1,
+"pages":[
+"parts",
+"engineering"
+],
+"seat":"wet1",
+"backup":"wet2",
+"kw_en":[
+"the sequence is right",
+"Pveg is 97, not 290",
+"one fault, seven pages"
+],
+"kw_zh":[
+"序列是對的",
+"Pveg 是 97，不是 290",
+"一個錯誤、七個頁面"
+],
+"a_en":"The sequence. The stated number is wrong and it is wrong the same way on seven of our cassettes: the promoter length we carried into the insert arithmetic was about 290 base pairs, and Pveg is 97. You can see it without arithmetic on three of them, because three architecturally identical cassettes are all 712 bp and state 910, 906 and 906. The gels are not affected; those band sizes match our wiki captions.",
+"a_zh":"序列。寫下來的數字是錯的，而且在我們七個卡匣上錯法一樣：帶進插入長度計算的啟動子長度大約是 290 個鹼基對，而 Pveg 是 97。其中三個根本不用算就看得出來，因為三個結構完全相同的卡匣都是 712 bp，卻分別寫了 910、906、906。膠沒有受影響，那些帶大小和我們 wiki 上的圖說一致。",
+"trap_en":"Defending the stated number. It cannot be right; the sequence is on the same page.",
+"trap_zh":"替寫下來的數字辯護。它不可能對，序列就在同一頁上。",
+"basis":"arithmetic a judge can do from the Sequence tab",
+"dom":"registry",
+"id":"q409"
+},
+{
+"q_en":"This page says the expected band is 1145 base pairs, and the caption underneath says 7767. Same gel.",
+"q_zh":"這一頁說期望帶是 1145 個鹼基對，下面的圖說寫 7767。同一張膠。",
+"type":"gap",
+"tier":"A",
+"pages":[
+"parts",
+"engineering"
+],
+"seat":"wet1",
+"backup":"wet2",
+"kw_en":[
+"neither is right",
+"1195 from the sequence",
+"1145 is another part's number"
+],
+"kw_zh":[
+"兩個都不對",
+"依序列算是 1195",
+"1145 是另一個 part 的數字"
+],
+"a_en":"That is a mistake on a live page and it is ours. Neither number is right. Working from the deposited sequence and the two primers the page names, the product is 1195 base pairs. The 1145 figure belongs to a different part's gel caption, and 7767 is plasmid scale and cannot be this amplicon. The gel itself is fine: one colony, one band, sequence-verified afterwards.",
+"a_zh":"那是線上頁面上的錯誤，是我們的錯。兩個數字都不對。用上傳的序列和頁面寫的那兩支引子算，產物是 1195 個鹼基對。1145 是另一個 part 的膠說明上的數字，7767 是質體等級，不可能是這個產物。膠本身沒有問題：一個菌落、一條帶，之後有定序確認。",
+"trap_en":"Picking one of the two printed numbers to defend. Compute the third and say so.",
+"trap_zh":"從印出來的兩個數字裡挑一個來辯護。要算出第三個並且說出來。",
+"basis":"a page that contradicts itself eight lines apart",
+"dom":"registry",
+"deep":0,
+"id":"q410"
+},
+{
+"q_en":"Two of your parts state the same insert length, 1122 base pairs, but they carry different signal peptides. How can both be right?",
+"q_zh":"你們兩個 parts 寫了同樣的插入長度 1122 個鹼基對，但它們帶的是不同的訊號肽。怎麼可能兩個都對？",
+"type":"reason",
+"tier":"A",
+"deep":1,
+"pages":[
+"parts"
+],
+"seat":"wet1",
+"backup":"wet2",
+"kw_en":[
+"they cannot both be right",
+"SamyQ 93, Csn 108",
+"the Csn one should be 1137"
+],
+"kw_zh":[
+"兩個不可能都對",
+"SamyQ 93、Csn 108",
+"Csn 那個應該是 1137"
+],
+"a_en":"They cannot both be right. SamyQ is 93 base pairs and Csn is 108, so the two fusions differ by fifteen even with the same cargo and the same tag. The number is correct for the SamyQ fusion. The Csn one should read 1137 and it was copied across. It is the same copy-paste event that put a wrong cross-reference on a sibling page, so I treat the two as one error.",
+"a_zh":"兩個不可能都對。SamyQ 是 93 個鹼基對，Csn 是 108，所以即使 cargo 和標籤相同，兩個融合也差十五。那個數字對 SamyQ 的融合是對的。Csn 那個應該是 1137，是被複製過去的。這和把錯誤交叉連結貼到姊妹頁面上的是同一次複製貼上，所以我把兩者當成同一個錯誤。",
+"trap_en":"Not knowing the two signal peptide lengths. Fifteen base pairs is the whole answer.",
+"trap_zh":"不知道兩個訊號肽的長度。十五個鹼基對就是整個答案。",
+"basis":"two sibling tabs open side by side",
+"dom":"registry",
+"id":"q411"
+},
+{
+"q_en":"I pulled the sequence of this cassette. There is an sfGFP coding sequence in the middle of it. Why?",
+"q_zh":"我把這個卡匣的序列拉出來看，中間有一段 sfGFP 編碼序列。為什麼？",
+"type":"validate",
+"tier":"A",
+"deep":1,
+"pages":[
+"parts",
+"engineering"
+],
+"seat":"wet1",
+"backup":"wet2",
+"kw_en":[
+"dropout cassette, not replaced",
+"pre-assembly map",
+"fixed by re-depositing"
+],
+"kw_zh":[
+"dropout 卡匣，沒被換掉",
+"組裝前的圖譜",
+"靠重新上傳修正"
+],
+"a_en":"Because that deposit is the pre-assembly map, not the finished construct. The SubtiToolKit vectors carry an sfGFP dropout between Type IIS sites, so a white colony means the insert replaced it. What we deposited there still shows the dropout, and worse, it puts a terminator between the promoter and the ribosome binding site. Editing text cannot fix that, so we deposited the promoter on its own and re-deposited the corrected construct.",
+"a_zh":"因為那一筆上傳的是組裝前的圖譜，不是完成的構築。SubtiToolKit 載體在 Type IIS 位點之間帶著 sfGFP dropout，所以白色菌落代表插入片段把它換掉了。我們上傳的那一筆上面還留著 dropout，更糟的是，它把一個終止子放在啟動子和核醣體結合位之間。這不是改文字能修的，所以我們把啟動子單獨上傳，再重新上傳修正後的構築。",
+"trap_en":"Calling it a naming convention. The suffix on the vector name is; 868 bases inside the deposited sequence are not.",
+"trap_zh":"說那是命名慣例。載體名稱上的後綴是，但上傳序列裡面那 868 個鹼基不是。",
+"basis":"the worst thing in the collection, and visible to anyone who opens the sequence",
+"dom":"registry",
+"id":"q412"
+},
+{
+"q_en":"This is registered as a coding sequence and it has neither a start nor a stop codon. Explain.",
+"q_zh":"這個登記成編碼序列，卻沒有起始也沒有終止密碼子。解釋一下。",
+"type":"design",
+"tier":"A",
+"pages":[
+"parts"
+],
+"seat":"wet1",
+"backup":"wet2",
+"kw_en":[
+"deliberate",
+"start lives in the signal peptide",
+"stop after the His tag"
+],
+"kw_zh":[
+"刻意的",
+"起始在訊號肽裡",
+"終止在 His 標籤後"
+],
+"a_en":"Deliberately. The native start and stop were removed so the cargo can be fused behind a signal peptide and in front of a His tag: the start codon lives in SamyQ or Csn and the stop sits after the tag. All eight of our cargo parts are like that. We explain it in a draft that is not published, which is why the live page does not say it, and that is a fair thing to catch us on.",
+"a_zh":"這是刻意的。原生的起始與終止被拿掉，好讓 cargo 可以接在訊號肽後面、His 標籤前面：起始密碼子在 SamyQ 或 Csn 裡，終止密碼子在標籤之後。我們八個 cargo parts 都是這樣。我們在一份還沒發布的草稿裡有說明，所以線上頁面上看不到，這一點被抓到是合理的。",
+"trap_en":"Treating it as an error. It is correct for a fusion library and the page simply fails to say so.",
+"trap_zh":"把它當成錯誤。對一個融合元件庫來說這是正確的，只是頁面沒有寫出來。",
+"basis":"a role-versus-sequence mismatch any curator notices",
+"dom":"registry",
+"deep":0,
+"id":"q413"
+},
+{
+"q_en":"SamyQ is a registered part on your pages. Csn is not. Where is Csn?",
+"q_zh":"SamyQ 在你們頁面上是一個註冊的 part，Csn 不是。Csn 在哪裡？",
+"type":"boundary",
+"tier":"B",
+"pages":[
+"parts"
+],
+"seat":"wet1",
+"backup":"wet2",
+"kw_en":[
+"only inside the fusions",
+"108 bp in one, 111 in another",
+"should be its own part"
+],
+"kw_zh":[
+"只存在於融合裡",
+"一個 108 bp、另一個 111",
+"應該自己成為一個 part"
+],
+"a_en":"Only inside the fusions. SamyQ is cited properly as an earlier team's part, and the chitosanase signal is not registered anywhere, so a judge clicking for it finds nothing. Worse, our two Csn fusions imply different lengths for it, 108 bases in one and 111 in the other, because one carries an extra upstream ATG. If I deposit one more part it is Csn, with that discrepancy resolved.",
+"a_zh":"只存在於融合裡面。SamyQ 有好好引用成過去隊伍的 part，而 chitosanase 訊號肽沒有在任何地方註冊，所以評審想點進去會找不到。更糟的是，我們兩個 Csn 融合暗示它有不同長度，一個 108 個鹼基、另一個 111，因為其中一個多了一個上游的 ATG。如果我再上傳一個 part，那就是 Csn，並且把這個差異解決掉。",
+"trap_en":"Saying it is in the fusion and leaving it there. The two different lengths are the real finding.",
+"trap_zh":"只說「它在融合裡」就結束。兩個不同長度才是真正的發現。",
+"basis":"a dead end a judge hits while comparing the two signal peptides",
+"dom":"registry",
+"deep":0,
+"id":"q414"
+},
+{
+"q_en":"One of your Csn fusions starts ATG-ATG. Why are there two start codons?",
+"q_zh":"你們其中一個 Csn 融合是 ATG-ATG 開頭。為什麼有兩個起始密碼子？",
+"type":"reason",
+"tier":"B",
+"deep":1,
+"pages":[
+"parts"
+],
+"seat":"wet1",
+"backup":"wet2",
+"kw_en":[
+"an extra upstream ATG",
+"582 not 579",
+"the AcdS sibling does not have it"
+],
+"kw_zh":[
+"多一個上游 ATG",
+"582 而不是 579",
+"AcdS 的姊妹沒有"
+],
+"a_en":"There is an extra upstream ATG on the LEA14 fusion that the AcdS fusion does not carry, which is why that part is 582 base pairs rather than 579 and why its Csn segment runs from position four. I cannot tell you from the Registry whether that was designed in or came in with the synthesis order. It is a three-base difference that would shift a reading frame if anything downstream depended on it, and nothing does, but it should be documented.",
+"a_zh":"LEA14 的融合上多了一個上游的 ATG，而 AcdS 的融合沒有，這就是為什麼那個 part 是 582 個鹼基對而不是 579，也是為什麼它的 Csn 片段從第四位開始。光看 Registry 我沒辦法告訴你那是設計進去的，還是隨著合成訂單進來的。那是三個鹼基的差異，如果下游有東西依賴它就會移碼，而目前沒有，但這應該被記錄下來。",
+"trap_en":"Claiming it is a Kozak-like element. Bacillus does not use one and the page says nothing.",
+"trap_zh":"說那是類似 Kozak 的元件。枯草桿菌沒有這種東西，而頁面上什麼都沒寫。",
+"basis":"base-by-base comparison of two sibling fusions",
+"dom":"registry",
+"id":"q415"
+},
+{
+"q_en":"How do you know your Level 2 assembly is actually correct?",
+"q_zh":"你們怎麼知道 Level 2 的組裝真的是對的？",
+"type":"validate",
+"tier":"A",
+"pages":[
+"parts",
+"engineering"
+],
+"seat":"wet1",
+"backup":"wet2",
+"kw_en":[
+"three junctions, three clones",
+"632, 375, 441 bp",
+"no end-to-end sequencing"
+],
+"kw_zh":[
+"三個接點、三個 clone",
+"632、375、441 bp",
+"沒有端到端定序"
+],
+"a_en":"At the junctions, not end to end. We screened every module boundary rather than one, because one module being right does not verify the others: the cross-module products come out at 632, 375 and 441 base pairs and we got all three in three separate clones. That says the four units are joined in the right order. It says nothing about the sequence between the junctions, and no Level 2 construct of ours has been sequenced end to end.",
+"a_zh":"在接點上，不是端到端。我們篩的是每一個模組的邊界，而不是只篩一個，因為一個模組對不代表其他也對：跨模組的產物落在 632、375 和 441 個鹼基對，三個獨立的 clone 我們三個都拿到了。這說明四個單元接的順序是對的，但它沒有說接點之間的序列是對的，而我們沒有任何一個 Level 2 構築做過端到端定序。",
+"trap_en":"Saying 'it was sequenced'. The build record's Level 2 sequencing cell is empty and the page says so.",
+"trap_zh":"說「有定序」。組裝紀錄裡 Level 2 的定序欄是空的，頁面上也寫了。",
+"basis":"the obvious follow-up to any assembly claim",
+"dom":"registry",
+"deep":0,
+"id":"q416"
+},
+{
+"q_en":"If I gave you an hour before this session, what would you fix on the Registry first?",
+"q_zh":"如果在這場會談前給你一小時，你會先修 Registry 上的什麼？",
+"type":"impact",
+"tier":"A",
+"pages":[
+"parts"
+],
+"seat":"wet1",
+"backup":"ihp",
+"kw_en":[
+"the wrong-part paragraph",
+"the self-contradicting gel",
+"then EEBD-RBS0's page"
+],
+"kw_zh":[
+"貼錯 part 的那一段",
+"自相矛盾的那張膠",
+"再來是 EEBD-RBS0 的頁面"
+],
+"a_en":"Three things in order. Delete the paragraph on our chromophore module that describes cloning a completely different construct, because it is plainly wrong and deletion needs no new data. Fix the page that states two different expected band sizes for the same gel. Then write EEBD-RBS0's page, because it sits in thirteen constructs and is currently blank. The band sizes across the seven Pveg cassettes need recomputing too, and that is more than an hour.",
+"a_zh":"三件事，照順序。刪掉色素基團模組上那一段描述完全不同構築選殖過程的文字，因為它明顯是錯的，而刪除不需要新資料。修掉那一頁對同一張膠寫了兩個期望帶大小的問題。接著寫 EEBD-RBS0 的頁面，因為它在十三個構築裡，現在卻是空白。七個 Pveg 卡匣的帶大小也要重算，而那超過一小時。",
+"trap_en":"Answering with a wish list. Name three, in order, with a reason each, and admit what will not fit.",
+"trap_zh":"用一串願望清單回答。要說出三件、排好順序、各給一個理由，並承認什麼做不完。",
+"basis":"asked to see whether you know your own weak points by rank",
+"dom":"registry",
+"deep":0,
+"id":"q417"
+},
+{
+"q_en":"Your own simulation says a C-terminal His tag abolishes the contact BoPep4 works through. Every BoPep4 part you registered has one.",
+"q_zh":"你們自己的模擬說 C 端 His 標籤會消掉 BoPep4 賴以作用的接觸。而你們註冊的每一個 BoPep4 part 都有。",
+"type":"reason",
+"tier":"A",
+"deep":1,
+"pages":[
+"protein-design",
+"parts"
+],
+"seat":"dry",
+"backup":"wet1",
+"kw_en":[
+"bidentate 100% to 0%",
+"4.0 to 20.1 angstrom",
+"no ordering record"
+],
+"kw_zh":[
+"雙齒 100% 到 0%",
+"4.0 到 20.1 埃",
+"沒有訂購紀錄"
+],
+"a_en":"That is right, and the figure is on our own pages: bidentate engagement with Arg487 falls from a hundred percent of frames to zero and the charge centres separate from four to twenty point one angstroms. One of our legends records a decision to move the tag to the N terminus for constructs ordered after the sixteenth of August. All three SamyQ-BoPep4 deposits are C-terminal, so either they predate that decision or it was never applied, and I do not have the ordering record to tell you which.",
+"a_zh":"沒錯，而且那張圖就在我們自己的頁面上：與 Arg487 的雙齒結合從 100% 的影格掉到 0，電荷中心從四埃拉開到二十點一埃。我們有一段圖說記錄了一個決定：八月十六日之後訂的構築要把標籤移到 N 端。三筆 SamyQ-BoPep4 的上傳都是 C 端，所以不是它們早於那個決定，就是那個決定沒有被執行，而我沒有訂購紀錄可以告訴你是哪一個。",
+"trap_en":"Claiming the plant effect proves the tag is fine. One unreplicated dilution cannot overturn your own model.",
+"trap_zh":"說植物有效果就證明標籤沒問題。一個沒有重複的稀釋倍數推翻不了你們自己的模型。",
+"basis":"the sharpest juxtaposition in the collection",
+"dom":"registry",
+"id":"q418"
+},
+{
+"q_en":"Your page says the His tag is fused N-terminally and the description says C-terminus. Which is it?",
+"q_zh":"你們頁面寫 His 標籤融合在 N 端，簡述卻說在 C 端。到底是哪一個？",
+"type":"fact",
+"tier":"A",
+"pages":[
+"parts"
+],
+"seat":"wet1",
+"backup":"dry",
+"kw_en":[
+"C-terminal, the sequence settles it",
+"six His codons before the stop",
+"template error on seven pages"
+],
+"kw_zh":[
+"C 端，序列可以定案",
+"終止前六個組胺酸密碼子",
+"七頁的模板錯誤"
+],
+"a_en":"C-terminal. The deposited sequence ends in six histidine codons before the stop on all three SamyQ-BoPep4 parts, so there is no ambiguity in the DNA. The element-list line saying N-terminal is a template error that propagated onto seven pages, and the short description on those same pages has it right. I would rather tell you what comes next: our own simulation says that position costs the Asn23 contact.",
+"a_zh":"C 端。三個 SamyQ-BoPep4 的 part，上傳的序列都在終止密碼子前以六個組胺酸密碼子結尾，所以 DNA 上沒有模糊空間。元件列表裡寫「N 端」那一行是模板錯誤，擴散到七頁，而同樣這些頁面的簡述寫的是對的。我寧可主動告訴你下一件事：我們自己的模擬說那個位置會犧牲 Asn23 的接觸。",
+"trap_en":"Hedging. The sequence is public and it settles it in one direction.",
+"trap_zh":"含糊其詞。序列是公開的，而且只指向一個方向。",
+"basis":"a page that contradicts itself in two adjacent fields",
+"dom":"registry",
+"deep":0,
+"id":"q419"
+},
+{
+"q_en":"You built a negative control that was supposed to fail. What happened?",
+"q_zh":"你們做了一個應該要失敗的陰性對照。結果呢？",
+"type":"design",
+"tier":"A",
+"deep":1,
+"pages":[
+"protein-design",
+"parts"
+],
+"seat":"dry",
+"backup":"wet1",
+"kw_en":[
+"pre-registered to fail all four",
+"passed all four",
+"criteria measured the wrong thing"
+],
+"kw_zh":[
+"事先登記會四項全敗",
+"四項全過",
+"標準量錯了東西"
+],
+"a_en":"It passed. We wrote down four acceptance criteria before the run, together with an explicit prediction that the fifteen-to-twenty-three fragment would fail all four, because it loses half the contact surface. It passed all four: receptor RMSD 2.10 angstroms, peptide 1.83, the salt bridge held for 99.9 percent of frames. We published that as the result rather than moving the criteria, and the reading in our own caption is that the criteria were measuring something other than binding.",
+"a_zh":"它通過了。我們在跑之前就寫下四項接受標準，以及一個明確的預測：15 到 23 這個片段會四項全部失敗，因為它少掉一半的接觸面。結果四項全部通過：受體 RMSD 2.10 埃、胜肽 1.83，鹽橋在 99.9% 的影格裡維持。我們照樣把它當成結果發表，沒有事後改標準；我們自己的圖說裡的解讀是：那些標準量到的不是結合。",
+"trap_en":"Presenting it as a success. The value is that it is a loss you kept in public.",
+"trap_zh":"把它講成一次成功。它的價值在於那是一次你們公開留著的失敗。",
+"basis":"the strongest honesty card on the collection",
+"dom":"registry",
+"id":"q420"
+},
+{
+"q_en":"Your codon figure stars a sequence. Is that the sequence you actually ordered?",
+"q_zh":"你們的密碼子圖標了一個候選。那是你們真正訂的序列嗎？",
+"type":"gap",
+"tier":"A",
+"deep":1,
+"pages":[
+"protein-design",
+"parts"
+],
+"seat":"dry",
+"backup":"wet1",
+"kw_en":[
+"not for AcdS and LEA14",
+"SamyQ unchanged in all four",
+"BoPep4 matches base for base"
+],
+"kw_zh":[
+"AcdS 和 LEA14 不是",
+"四個融合裡 SamyQ 都沒改",
+"BoPep4 逐鹼基相同"
+],
+"a_en":"For BoPep4, yes: the starred candidate's first forty-five nucleotides are the deposit base for base. For AcdS and LEA14, no, and that is a real inconsistency. Those two figures star a candidate that recodes the SamyQ segment by nineteen to twenty-one bases, and the ninety-three base pair SamyQ segment is identical to wild type in all four of our SamyQ fusions. The cargo recoding is real, fifteen bases of a thousand and eleven for AcdS, but the starred row is from a different search run than the sequence we ordered.",
+"a_zh":"BoPep4 是：標星候選的前四十五個核苷酸和上傳的序列逐鹼基相同。AcdS 和 LEA14 不是，而這是一個真的不一致。那兩張圖標星的候選把 SamyQ 區段重新編碼了十九到二十一個鹼基，而在我們四個 SamyQ 融合裡，那段九十三個鹼基對的 SamyQ 和野生型完全相同。cargo 的重新編碼是真的，AcdS 是一千零十一中的十五個，但標星的那一列來自和我們實際訂購序列不同的搜尋。",
+"trap_en":"Saying the figure is illustrative. It is on the part page, so a reader takes it as that part's own recoding.",
+"trap_zh":"說那張圖只是示意。它就放在 part 頁面上，讀者會當成那個 part 自己的重編碼。",
+"basis":"a figure and a sequence that do not match, on one page",
+"dom":"registry",
+"id":"q421"
+},
+{
+"q_en":"Your design page says this recoding ranks one out of forty-three thousand. Is that a result?",
+"q_zh":"你們的設計頁面說這個重編碼在四萬三千多個裡排第一。那算結果嗎？",
+"type":"boundary",
+"tier":"A",
+"deep":1,
+"pages":[
+"protein-design",
+"parts"
+],
+"seat":"dry",
+"backup":"wet1",
+"kw_en":[
+"it is a score from a folding model",
+"translation never measured",
+"pages say so"
+],
+"kw_zh":[
+"那是摺疊模型的分數",
+"轉譯從未量過",
+"頁面上有寫"
+],
+"a_en":"No, it is a ranking inside a folding model's own scoring, and our pages say so in writing: these scores are predictions, and translation initiation from the recoded cassette has not been measured. What is real is the change in the DNA: six to twelve synonymous codon changes, the protein and the SamyQ cleavage site unchanged. Whether that buys us more protein is untested, so the ordering of wild type, 2.1 and 2.2 is a prediction to be tested rather than a ranking we earned.",
+"a_zh":"不算，那是摺疊模型自己評分裡的排名，而我們的頁面白紙黑字寫著：這些分數是預測，而重編碼卡匣的轉譯起始沒有被量過。真實的是 DNA 上的改變：六到十二個同義密碼子改動，蛋白和 SamyQ 切位不變。那是否真的換來更多蛋白並未驗證，所以野生型、2.1、2.2 的排序是一個待驗證的預測，不是我們掙到的排名。",
+"trap_en":"Quoting the percentile as if it were a yield. The top 0.002 percent of a simulated pool is not protein.",
+"trap_zh":"把百分位數當產量引用。模擬池裡的前 0.002% 不是蛋白。",
+"basis":"a number that looks like a measurement and is not",
+"dom":"registry",
+"id":"q422"
+},
+{
+"q_en":"Did any of your modelling change what you actually built?",
+"q_zh":"你們的模擬有改變任何你們真正做出來的東西嗎？",
+"type":"integrate",
+"tier":"A",
+"pages":[
+"protein-design",
+"parts",
+"engineering"
+],
+"seat":"dry",
+"backup":"wet1",
+"kw_en":[
+"chose where to truncate",
+"chose the recodings ordered",
+"did not move the tag"
+],
+"kw_zh":[
+"決定在哪裡截短",
+"決定訂哪個重編碼",
+"沒有移動標籤"
+],
+"a_en":"In two places yes and in one place no. The docking ladder is why we sampled the truncations where we did, and the codon searches are why we ordered 2.1 and 2.2 rather than a naive low-GC recoding. Where it did not change what we built is the His tag: the simulation says the C-terminal position costs the binding contact, a legend records a decision to move it, and the deposits are still C-terminal. That is the honest edge of the integration.",
+"a_zh":"兩個地方有，一個地方沒有。docking 的階梯圖決定了我們在哪些位置取截短樣本，密碼子搜尋決定了我們訂 2.1 和 2.2 而不是一個簡單的低 GC 重編碼。沒有改變的是 His 標籤：模擬說 C 端的位置會犧牲結合接觸，有一段圖說記錄了要移動它的決定，而上傳的序列仍然是 C 端。那就是這個整合誠實的邊界。",
+"trap_en":"Claiming the modelling drove everything. Naming the one place it did not is what makes the other two believable.",
+"trap_zh":"說模擬主導了一切。說出它沒有生效的那一處，才讓另外兩處可信。",
+"basis":"the dry-lab-to-wet-lab question, asked through the deposits",
+"dom":"registry",
+"deep":0,
+"id":"q423"
+},
+{
+"q_en":"There are unfilled square brackets on your pages. What are those?",
+"q_zh":"你們頁面上有沒填的方括號。那些是什麼？",
+"type":"gap",
+"tier":"A",
+"pages":[
+"parts"
+],
+"seat":"wet1",
+"backup":"ihp",
+"kw_en":[
+"126 on 35 of 41 pages",
+"drafting template went public",
+"deliberately not guessed"
+],
+"kw_zh":[
+"41 頁中 35 頁、共 126 個",
+"草稿模板上線了",
+"刻意不用猜的填"
+],
+"a_en":"Unfilled placeholders from our drafting template that went public. There are a hundred and twenty-six of them across thirty-five of the forty-one pages, twenty inside figure captions. We know where every one is and what each resolves to. The ones that cannot be resolved from our own records are staying bracketed rather than being guessed at, because a plausible wrong number is worse on a public page than a visible gap.",
+"a_zh":"那是我們草稿模板裡沒填的佔位符，跟著上線了。四十一頁裡有三十五頁帶著，總共一百二十六個，其中二十個在圖說裡。我們知道每一個在哪裡、各自該填什麼。那些從我們自己的紀錄裡無法確定的，我們寧可讓它保持方括號，也不要用猜的，因為在公開頁面上，一個看起來合理的錯誤數字比一個看得見的空缺更糟。",
+"trap_en":"Calling it a rendering bug. It is an unfinished page and saying so costs less.",
+"trap_zh":"說那是顯示錯誤。那就是一頁沒寫完的頁面，直接承認代價比較小。",
+"basis":"visible on most pages without scrolling",
+"dom":"registry",
+"deep":0,
+"id":"q424"
+},
+{
+"q_en":"Your strain is written in square brackets on twenty-four pages. Do you know which strain you used?",
+"q_zh":"你們的菌株在二十四頁上是寫在方括號裡的。你們知道自己用的是哪一株嗎？",
+"type":"gap",
+"tier":"A",
+"pages":[
+"parts",
+"engineering"
+],
+"seat":"wet1",
+"backup":"wet2",
+"kw_en":[
+"WB800, settled 7 October",
+"168 for the early reactor run",
+"the bracket is a template leftover"
+],
+"kw_zh":[
+"WB800，10 月 7 日定案",
+"早期反應器跑的是 168",
+"方括號是模板殘留"
+],
+"a_en":"Yes. Everything with a blot or an assay behind it is WB800, the eight-protease-knockout strain, and that was settled on the seventh of October. The bracket is a template leftover from when both 168 and WB800 were in play: the early bioreactor run was in 168, which barely made detectable enzyme, probably because its secreted proteases degrade the product, and that is why we moved. The pages should say WB800 and they will.",
+"a_zh":"知道。所有背後有墨點圖或檢測的都是 WB800，那個敲掉八個蛋白酶的菌株，這在十月七日就定案了。方括號是當時 168 和 WB800 都還在考慮時留下的模板殘留：早期的生物反應器跑的是 168，幾乎測不到酵素，可能是因為它分泌的蛋白酶把產物降解掉，這就是我們換掉它的原因。那些頁面應該寫 WB800，之後也會。",
+"trap_en":"Saying 'both'. One produced the data; say which and why you switched.",
+"trap_zh":"回答「兩個都是」。產出數據的只有一個，說出是哪一個、以及為什麼換。",
+"basis":"a bracket on the most basic fact in the collection",
+"dom":"registry",
+"deep":0,
+"id":"q425"
+},
+{
+"q_en":"Three of your reference links end in a chatgpt tracking tag. Do you want to explain that?",
+"q_zh":"你們有三個參考文獻連結結尾帶著 chatgpt 的追蹤標記。要解釋一下嗎？",
+"type":"gap",
+"tier":"A",
+"pages":[
+"parts",
+"attributions"
+],
+"seat":"wet1",
+"backup":"ihp",
+"kw_en":[
+"a copied URL",
+"the references themselves are right",
+"we can give the citation"
+],
+"kw_zh":[
+"複製網址帶進來的",
+"文獻本身是對的",
+"引用資訊我們給得出來"
+],
+"a_en":"It is a copied URL and it should not be there. The underlying references are the right ones, they are UniProt and NCBI entries, and I can give you the accession and the paper for each. We used language models the way we used search, to find sources, and then read the sources; what went wrong here is hygiene, not provenance. I would rather you saw it and asked than found it and did not.",
+"a_zh":"那是複製網址帶進來的，不該在那裡。底下的文獻本身是對的，是 UniProt 和 NCBI 的條目，每一個的編號和論文我都給得出來。我們用語言模型的方式和用搜尋一樣，是拿來找來源，然後去讀來源；這裡出問題的是整潔，不是來源本身。我寧可你看到並問出來，也不要你發現了卻不問。",
+"trap_en":"Getting defensive about having used a model. The defensible position is that you read the source.",
+"trap_zh":"因為用過模型就變得防衛。站得住腳的立場是：你們讀過原始來源。",
+"basis":"the kind of detail a careful reader notices and remembers",
+"dom":"registry",
+"deep":0,
+"id":"q426"
+},
+{
+"q_en":"You use codenames like ABDI and ABDQ in your figure captions. What are they?",
+"q_zh":"你們圖說裡用了 ABDI、ABDQ 這些代號。那是什麼？",
+"type":"fact",
+"tier":"B",
+"pages":[
+"parts",
+"results"
+],
+"seat":"wet1",
+"backup":"wet2",
+"kw_en":[
+"internal strain shorthand",
+"ABDI Csn wild type, ABDQ SamyQ 2.1",
+"never defined on a page"
+],
+"kw_zh":[
+"內部菌株簡稱",
+"ABDI 是 Csn 野生型、ABDQ 是 SamyQ 2.1",
+"頁面上從未定義"
+],
+"a_en":"Internal strain shorthand. ABDI is the Level 2 system with the wild-type cargo behind the Csn signal peptide; ABDQ is the one with the codon-optimised AcdS 2.1 behind SamyQ. They appear in captions on six part pages and are defined on none of them, which is a fair catch. The same is true of the PL codes in our plant captions, which are wiki figure identifiers that should not have travelled to the Registry.",
+"a_zh":"內部的菌株簡稱。ABDI 是 Level 2 系統，帶著 Csn 訊號肽後面的野生型 cargo；ABDQ 是 SamyQ 後面接密碼子最佳化 AcdS 2.1 的那一個。它們出現在六個 part 頁面的圖說裡，卻沒有任何一頁定義過，這一點被抓到是合理的。植物圖說裡的 PL 代號也一樣，那是 wiki 的圖片編號，本來不該跟著到 Registry 上。",
+"trap_en":"Explaining the names without conceding the pages never define them.",
+"trap_zh":"解釋了名字，卻不承認頁面上從來沒有定義過它們。",
+"basis":"undefined shorthand in public figure captions",
+"dom":"registry",
+"deep":0,
+"id":"q427"
+},
+{
+"q_en":"Could another team reproduce your assembly from the Registry alone?",
+"q_zh":"別的隊伍光靠 Registry 能重現你們的組裝嗎？",
+"type":"compare",
+"tier":"A",
+"deep":1,
+"pages":[
+"parts",
+"engineering",
+"experiments"
+],
+"seat":"wet1",
+"backup":"biz",
+"kw_en":[
+"the cloning yes, the culture no",
+"no media, no OD, no volumes",
+"band sizes need recomputing"
+],
+"kw_zh":[
+"選殖可以、培養不行",
+"沒有培養基、OD、體積",
+"帶大小需要重算"
+],
+"a_en":"The cloning, mostly yes: the vectors, the enzymes, the overhangs, the thermal cycles and the primer tables are all there, and the sequences are deposited. The culture work, no. The pages never state a growth medium for expression, an induction OD, a culture volume or a shaking speed, and the light intensities are given as percentages with no irradiance behind them. They would also have to recompute seven of our stated band sizes, and I would tell them that rather than let them find it.",
+"a_zh":"選殖部分大致可以：載體、酵素、黏端、溫度循環和引子表都在，序列也上傳了。培養的部分不行。那些頁面從來沒有寫表現用的培養基、誘導時的 OD、培養體積或轉速，而光照強度是用百分比給的，背後沒有照度。他們還得重算我們寫的七個帶大小，而我會先告訴他們，而不是讓他們自己撞上。",
+"trap_en":"Answering yes. The reproducibility question rewards the person who names the missing half.",
+"trap_zh":"直接回答可以。可重現性這題，獎勵的是說得出缺了哪一半的人。",
+"basis":"the real test of a parts collection",
+"dom":"registry",
+"id":"q428"
+},
+{
+"q_en":"You wrote two collection documents and never created them on the Registry. Why not?",
+"q_zh":"你們寫了兩份 collection 文件，卻沒有在 Registry 上建立。為什麼？",
+"type":"boundary",
+"tier":"B",
+"pages":[
+"parts",
+"contribution"
+],
+"seat":"wet1",
+"backup":"ihp",
+"kw_en":[
+"ran out of time",
+"shared prose duplicated instead",
+"that is how errors spread"
+],
+"kw_zh":[
+"時間不夠",
+"共用文字只能重複貼",
+"錯誤就是這樣擴散的"
+],
+"a_en":"Time. They are written and they would move about eighteen thousand words of shared prose out of the individual pages. Because they do not exist, the shared cloning block is duplicated across the composites instead, and that duplication is exactly how a wrong cross-reference and an unsupported salinity claim ended up on several sibling pages at once. So the missing collections are not a cosmetic gap; they are the mechanism behind two of our defects.",
+"a_zh":"時間。它們已經寫好了，而且會把大約一萬八千字的共用文字從個別頁面移出去。因為它們不存在，共用的選殖段落只能在各個複合元件上重複貼，而那個重複正是一個錯誤的交叉引用和一個沒有證據的鹽逆境主張，同時出現在好幾個姊妹頁面上的原因。所以缺少 collection 不只是外觀問題，它是我們兩個缺陷背後的機制。",
+"trap_en":"Treating it as a tidiness issue. Say what the duplication caused.",
+"trap_zh":"把它當成整潔問題。要說出重複造成了什麼。",
+"basis":"asked when a collection reads repetitive",
+"dom":"registry",
+"deep":0,
+"id":"q429"
+},
+{
+"q_en":"What does your Registry entry give the community that your wiki does not?",
+"q_zh":"你們的 Registry 條目給社群什麼是 wiki 給不了的？",
+"type":"history",
+"tier":"A",
+"pages":[
+"parts",
+"contribution"
+],
+"seat":"wet1",
+"backup":"biz",
+"kw_en":[
+"sequences, not narrative",
+"composition is machine-readable",
+"the wiki freezes, parts do not"
+],
+"kw_zh":[
+"序列，不是敘事",
+"組成是機器可讀的",
+"wiki 會凍結，parts 不會"
+],
+"a_en":"Sequence and structure that a machine can read. The wiki is our narrative and it freezes; the part pages carry the deposited DNA, the composition tree and the documentation, and they stay editable, which is why four corrected constructs went up after the freeze. A team wanting our green-light output cassette does not need our story, they need the overhangs and the sequence, and those are only on the Registry.",
+"a_zh":"機器可以讀的序列與結構。wiki 是我們的敘事，而且會凍結；part 頁面帶著上傳的 DNA、組成樹和文件，而且仍然可以編輯，這就是為什麼有四個修正後的構築是在凍結之後才上去的。想要我們綠光輸出卡匣的隊伍不需要我們的故事，他們需要的是黏端和序列，而那些只在 Registry 上。",
+"trap_en":"Describing the wiki again. The question is what the Registry adds, and the answer is reusability.",
+"trap_zh":"又把 wiki 講一次。這題問的是 Registry 多給了什麼，答案是可重用性。",
+"basis":"the contribution question, in its positioning form",
+"dom":"registry",
+"deep":0,
+"id":"q430"
+},
+{
+"q_en":"Your part pages carry claims with no figure, no citation and no cross-reference. Which ones?",
+"q_zh":"你們的 part 頁面上有一些主張，沒有圖、沒有引用、也沒有交叉連結。是哪些？",
+"type":"gap",
+"tier":"A",
+"deep":1,
+"pages":[
+"parts"
+],
+"seat":"wet1",
+"backup":"wet2",
+"kw_en":[
+"BoPep4 secretion by ELISA",
+"LEA14 expressed and secreted",
+"RBS0 high-strength"
+],
+"kw_zh":[
+"BoPep4 分泌靠 ELISA",
+"LEA14 有表現並分泌",
+"RBS0 高強度"
+],
+"a_en":"I can name three. Our BoPep4 cassettes say secretion was assessed by ELISA, and no BoPep4 ELISA data appears on any of the forty-one pages. Our LEA14 cassettes say the protein is expressed and secreted, and neither page has a characterisation section or a blot. And RBS0's one-line description calls it high-strength and optimised for Bacillus, with no measurement anywhere. Those three should either get their data or lose the sentence.",
+"a_zh":"我可以點出三個。我們的 BoPep4 卡匣說分泌是用 ELISA 評估的，而四十一頁裡沒有任何 BoPep4 的 ELISA 數據。我們的 LEA14 卡匣說蛋白有表現並分泌，而那兩頁都沒有 characterisation 區段，也沒有墨點圖。還有 RBS0 那一行簡述說它是高強度、為枯草桿菌最佳化的，而任何地方都沒有量測。這三個要嘛補上數據，要嘛把那句話拿掉。",
+"trap_en":"Saying you cannot think of any. Naming three unprompted is worth more than defending forty-one.",
+"trap_zh":"說想不出來。主動點出三個，價值高於替四十一個辯護。",
+"basis":"the honesty question, aimed at the collection",
+"dom":"registry",
+"id":"q431"
+},
+{
+"q_en":"You say the output cassette is replaceable. Have you ever replaced it?",
+"q_zh":"你們說輸出卡匣是可替換的。你們換過嗎？",
+"type":"boundary",
+"tier":"A",
+"pages":[
+"parts",
+"contribution"
+],
+"seat":"wet1",
+"backup":"dry",
+"kw_en":[
+"designed, not demonstrated",
+"page is Design only",
+"only AcdS was ever behind it"
+],
+"kw_zh":[
+"設計過、沒有展示",
+"頁面只有 Design",
+"後面只放過 AcdS"
+],
+"a_en":"Not yet, and the page says Design only. The architecture supports it: the cassette sits behind our own PcpcG2-veg with BsaI sites, and we put mScarlet-I in the slot so a user can see the swap worked. But only ACC deaminase has ever actually been placed behind the green-light promoter in a finished system, so 'any protectant can be swapped in' is a design claim we have not cashed. The swap overhangs are also not written on the page, which is the one thing a reusing team needs.",
+"a_zh":"還沒有，而且那一頁只有 Design。架構上支援：卡匣放在我們自己的 PcpcG2-veg 後面、帶著 BsaI 位點，而我們在槽位上放了 mScarlet-I，讓使用者看得到換成功了。但實際上只有 ACC deaminase 真正被放在綠光啟動子後面做成完整系統，所以「任何保護蛋白都可以換進來」是一個我們還沒兌現的設計主張。而且替換用的黏端沒有寫在頁面上，那正是要重用的隊伍唯一需要的東西。",
+"trap_en":"Describing the mechanism as though describing it were doing it.",
+"trap_zh":"把機制描述一遍，彷彿描述過就等於做過。",
+"basis":"the reuse claim, tested",
+"dom":"registry",
+"deep":0,
+"id":"q432"
+},
+{
+"q_en":"A judge tells you your Registry upload is very impressive. What do you say next?",
+"q_zh":"評審說你們的 Registry 上傳非常厲害。你接下來要說什麼？",
+"type":"integrate",
+"tier":"A",
+"pages":[
+"parts"
+],
+"seat":"wet1",
+"backup":"ihp",
+"kw_en":[
+"thank you, then offer the limit",
+"name a weak page first",
+"the compliment precedes the question"
+],
+"kw_zh":[
+"先謝謝，再主動講限制",
+"先點出一個薄弱頁面",
+"稱讚是問題的前半句"
+],
+"a_en":"Thank them in four words and then go first. A compliment about the upload is usually the first half of a question about one line inside it, so the useful move is to name a limit before it is found: five of the forty-one pages are empty, the band sizes on seven cassettes need recomputing, and no blot carries a plasmid-free lane. Offering those buys you the right to be believed about everything else on the collection.",
+"a_zh":"用四個字謝過，然後自己先講。對上傳的稱讚通常是某一行問題的上半句，所以有用的動作是在被找到之前先說出限制：四十一頁裡有五頁是空的、七個卡匣的帶大小需要重算、沒有任何一張墨點圖有無質體對照道。主動交出這些，才換得到「其他部分被相信」的權利。",
+"trap_en":"Saying thank you and waiting. The pause after a compliment is where the real question lands.",
+"trap_zh":"說完謝謝就等著。稱讚之後的那個停頓，正是真正的問題落下來的地方。",
+"basis":"the move that decides what the next five minutes are about",
+"dom":"registry",
+"deep":0,
+"id":"q433"
+},
+{
+"q_en":"You can very clearly see a double band on your Western blots against the His tag. Could you comment on that?",
+"q_zh":"你們用 His-tag 抗體做的 Western blot 上可以很清楚看到雙帶。可以說明一下嗎？",
+"type":"validate",
+"tier":"A",
+"deep":1,
+"pages":[
+"results",
+"measurement",
+"experiments"
+],
+"seat":"wet2",
+"backup":"wet1",
+"kw_en":[
+"we never purified",
+"crude supernatant or lysate",
+"no plasmid-free lane"
+],
+"kw_zh":[
+"我們沒有純化",
+"粗萃上清或裂解液",
+"沒有無質體對照道"
+],
+"a_en":"First, there is no purification step behind our blots to produce a degradation product. We have one imidazole elution panel and nothing else; every other blot is crude culture supernatant, cell lysate or shell permeate. Second, what we do have is a size shift we cannot explain: the Csn construct runs lower than the SamyQ 2.1 construct though they encode the same mature enzyme. We wrote that on the Engineering page as unexplained, with oligomer formation as an untested hypothesis. And we have no plasmid-free WB800 lane on any blot, which is the control that would settle whether a band is ours.",
+"a_zh":"第一，我們的墨點圖背後沒有純化步驟可以產生降解產物。我們只有一張 imidazole 沖提的圖，其他全部是粗萃培養上清、細胞裂解液或殼側透過液。第二，我們真正有的是一個無法解釋的大小位移：Csn 構築跑得比 SamyQ 2.1 構築低，雖然兩者編碼同一個成熟酵素。我們在 Engineering 頁面上把它寫成「未解釋」，並把寡聚體形成列為未驗證的假說。而且我們沒有任何一張墨點圖有無質體的 WB800 對照道，那正是能定案「某條帶是不是我們的」的那一道。",
+"trap_en":"Agreeing that it is a degradation product. A judge who says 'I guess' is guessing, and agreeing with a guess you cannot support is worse than correcting it.",
+"trap_zh":"順著回答「那是降解產物」。說「我猜」的評審就是在猜，順著一個你撐不起來的猜測，比直接更正還糟。",
+"basis":"asked verbatim of another team at a 2025 judging session",
+"dom":"registry",
+"id":"q434"
+},
+{
+"q_en":"Your blot says the band is at seventy-five kilodaltons and your other pages say this protein is thirty-seven. Explain.",
+"q_zh":"你們的墨點圖說帶在 75 kDa，其他頁面說這個蛋白是 37。解釋一下。",
+"type":"validate",
+"tier":"A",
+"deep":1,
+"pages":[
+"results",
+"measurement"
+],
+"seat":"wet2",
+"backup":"dry",
+"kw_en":[
+"37 on constitutive, 63-75 on Level 2",
+"homodimer about 70, untested",
+"41 is the untagged literature enzyme"
+],
+"kw_zh":[
+"組成型 37、Level 2 63-75",
+"約 70 的二聚體，未驗證",
+"41 是文獻上無標籤的酵素"
+],
+"a_en":"Both are on our pages and we have not reconciled them. On the constitutive supernatant blots the band is at about 37 kilodaltons, which is where we predicted the secreted enzyme against a 35 kilodalton monomer, and those agree. On the Level 2 light blots it runs at 63 to 75 and once just under 100. ACC deaminase forms a homodimer at about 70, which is our reading, and our own caption calls it a possibility we plan to test. The 41 kilodalton figure from the literature is the untagged, signal-peptide-free purified enzyme, so it is not directly comparable.",
+"a_zh":"兩個都寫在我們的頁面上，而且我們還沒有把它們對起來。組成型上清的墨點圖上，帶在大約 37 kDa，正是我們對分泌型酵素的預測，對上 35 kDa 的單體是吻合的。Level 2 的光控圖上它跑在 63 到 75，有一次在 100 下面一點。ACC deaminase 會形成大約 70 kDa 的同源二聚體，那是我們的解讀，而我們自己的圖說就說那是一個打算驗證的可能。文獻上的 41 kDa 是無標籤、沒有訊號肽的純化酵素，不能直接比較。",
+"trap_en":"Asserting the dimer as fact. No cross-linking, no native gel, no plasmid-free lane; it stays a hypothesis.",
+"trap_zh":"把二聚體當事實講。沒有交聯、沒有原生膠、沒有無質體對照道，它只能是假說。",
+"basis":"five molecular weights across the part pages, none reconciled",
+"dom":"registry",
+"id":"q435"
+},
+{
+"q_en":"How do you know the band on that blot is your protein and not something the host makes?",
+"q_zh":"你們怎麼知道那張膠上的帶是你們的蛋白，而不是宿主本來就有的東西？",
+"type":"gap",
+"tier":"A",
+"deep":1,
+"pages":[
+"results",
+"measurement"
+],
+"seat":"wet2",
+"backup":"wet1",
+"kw_en":[
+"we cannot, from the blot",
+"no untransformed lane anywhere",
+"the ELISA host read 4.6 to 5.5"
+],
+"kw_zh":[
+"光看圖不能",
+"任何圖都沒有未轉形道",
+"ELISA 宿主讀到 4.6 到 5.5"
+],
+"a_en":"From the blot alone we cannot. Nine blot figures across six part pages and not one carries an untransformed WB800, empty-vector or dark lane; red light is the only negative control on the light blots. We name that gap in our own summary. Where we did run the untransformed host, on the ELISA, it read 4.562 to 5.452 micrograms per millilitre, the same range as four of our six constructs, so we reported that plate as defeated by its own control.",
+"a_zh":"光看墨點圖沒辦法。六個 part 頁面上的九張圖，沒有一張有未轉形的 WB800、空載體或暗處對照道；在光控的圖上，紅光是唯一的陰性對照。這個缺口是我們自己在 Summary 裡點名的。真正有跑未轉形宿主的是 ELISA，讀到 4.562 到 5.452 微克每毫升，和我們六個構築裡的四個同一個範圍，所以我們把那一盤報告成被自己的對照打敗。",
+"trap_en":"Saying the His tag proves specificity. An anti-His antibody can cross-react, which is exactly what the missing lane would test.",
+"trap_zh":"說 His 標籤就證明了專一性。抗 His 抗體可能交叉反應，而那正是少掉的那一道要檢驗的事。",
+"basis":"the control question, asked of any blot",
+"dom":"registry",
+"id":"q436"
+},
+{
+"q_en":"Two of your part pages describe the same two blots and reach opposite conclusions. Which caption do I believe?",
+"q_zh":"你們兩個 part 頁面描述同樣兩張墨點圖，卻得到相反的結論。我該相信哪一段圖說？",
+"type":"gap",
+"tier":"A",
+"pages":[
+"parts",
+"results"
+],
+"seat":"wet2",
+"backup":"wet1",
+"kw_en":[
+"the conservative one",
+"green and red not distinguishable",
+"ELISA 12.9 against 11.8"
+],
+"kw_zh":[
+"保守的那一段",
+"綠紅分不出來",
+"ELISA 12.9 對 11.8"
+],
+"a_en":"The conservative one. One page says intensities were similar across all lanes and the other says the green lanes looked somewhat stronger; both captions are ours and they disagree, so we take the reading that claims less. On those blots green and red are not distinguishable, the ELISA on the same four samples reads 12.9 against 11.8 micrograms per millilitre, and we have never measured our dark-state background, so we do not claim a fold change for the SamyQ system.",
+"a_zh":"保守的那一段。一頁說各道強度相近，另一頁說綠光那幾道看起來稍強；兩段圖說都是我們寫的，而且互相矛盾，所以我們採主張較小的那個讀法。在那些圖上綠光和紅光分不出來，同樣四個樣品的 ELISA 是 12.9 對 11.8 微克每毫升，而且我們從來沒有量過暗態背景，所以 SamyQ 系統我們不主張任何倍率。",
+"trap_en":"Defending the stronger caption because it is the better result. The judge has both tabs open.",
+"trap_zh":"因為結論比較好就替比較強的那段圖說辯護。評審兩個分頁都開著。",
+"basis":"two sibling part pages for the same Level 2 construct",
+"dom":"registry",
+"deep":0,
+"id":"q437"
+},
+{
+"q_en":"You have one purification panel. What did it actually tell you?",
+"q_zh":"你們只有一張純化的圖。它到底告訴了你們什麼？",
+"type":"boundary",
+"tier":"A",
+"pages":[
+"measurement",
+"experiments"
+],
+"seat":"wet2",
+"backup":"wet1",
+"kw_en":[
+"which buffers recovered protein",
+"no quantitation",
+"concentration list still bracketed"
+],
+"kw_zh":[
+"哪些緩衝液回收到蛋白",
+"沒有定量",
+"濃度還夾在方括號裡"
+],
+"a_en":"Which imidazole buffers recovered protein, and nothing more. The fractions were loaded 25, 10, 150 and 250 millimolar in that order, bands appear in the last three and the strongest is at 250, so there is no quantitative relationship between concentration and yield to read off it. We have no purified yield, no purified gel and no concentration: the purification and dialysis sheet produced no result on our wiki. And the concentration list in that caption is still an unfilled placeholder.",
+"a_zh":"哪些 imidazole 緩衝液回收到蛋白，就這樣。分液的上樣順序是 25、10、150、250 毫莫耳，後三個有帶，最強的是 250，所以從這張圖讀不出濃度和產量之間的定量關係。我們沒有純化後的產量、沒有純化後的膠、也沒有濃度：純化與透析那一張實驗表在我們 wiki 上沒有產出結果。而且那段圖說裡的濃度清單到現在還是沒填的佔位符。",
+"trap_en":"Implying you have purified protein in hand. You have one panel and no yield.",
+"trap_zh":"暗示你們手上有純化好的蛋白。你們只有一張圖，沒有產量。",
+"basis":"follows any mention of a His tag",
+"dom":"registry",
+"deep":0,
+"id":"q438"
+},
+{
+"q_en":"Your colony PCR has an extra bright band at 250 base pairs. What is it?",
+"q_zh":"你們的菌落 PCR 在 250 個鹼基對有一條多出來的亮帶。那是什麼？",
+"type":"validate",
+"tier":"A",
+"pages":[
+"parts",
+"engineering"
+],
+"seat":"wet1",
+"backup":"wet2",
+"kw_en":[
+"non-specific, we said so",
+"colony template",
+"that is why we sequenced"
+],
+"kw_zh":[
+"非專一性，我們自己寫了",
+"菌落模板",
+"所以才要定序"
+],
+"a_en":"Non-specific amplification, and that is written in our own caption rather than waiting to be asked. The 632 base pair band is the junction we were screening; the bright 250 and the faint high-molecular-weight bands come off a colony template, which carries genomic DNA as well as plasmid. It is ordinary for colony PCR and it is exactly why a positive colony still has to be sequence-verified before it goes anywhere.",
+"a_zh":"非專一性擴增，而且這是我們自己在圖說裡寫出來的，不是等人問。632 個鹼基對那條是我們要篩的接點；亮的 250 和微弱的高分子量帶來自菌落模板，裡面除了質體還有基因體 DNA。菌落 PCR 本來就會這樣，這也正是陽性菌落還是要先定序確認才能往下用的原因。",
+"trap_en":"Apologising for it. It is the one figure where you called an extra band before anyone asked; say that.",
+"trap_zh":"為它道歉。那是你們唯一一張在被問之前就自己點出多餘帶的圖；要把這件事說出來。",
+"basis":"the easiest figure-level question on the collection",
+"dom":"registry",
+"deep":0,
+"id":"q439"
+},
+{
+"q_en":"Your fractionation blot has two lanes both labelled S. What is the difference between them?",
+"q_zh":"你們的分層墨點圖上有兩道都標著 S。它們差在哪裡？",
+"type":"gap",
+"tier":"A",
+"pages":[
+"biomanufacturing",
+"results"
+],
+"seat":"wet2",
+"backup":"hw",
+"kw_en":[
+"not recorded",
+"P1, P2, S, S",
+"no loading control either"
+],
+"kw_zh":[
+"沒有紀錄",
+"P1、P2、S、S",
+"也沒有上樣對照"
+],
+"a_en":"We do not know, and the caption says so. The lanes are P1, P2, S and S; signal appears only in the two supernatant lanes, which is the result, but what distinguishes the duplicates was never written down. The same caption also records that there is no loading control and that the ladders are unlabelled on the original. If those two S lanes are the Csn and SamyQ constructs, that blot would serve two part pages, and I cannot tell you which is which.",
+"a_zh":"我們不知道，圖說上也這樣寫。那四道是 P1、P2、S、S；訊號只出現在兩道上清，那就是結果，但兩道重複之間的差別從來沒有被記下來。同一段圖說也記錄了沒有上樣對照，以及原始底片上的標準品沒有標示。如果那兩道 S 是 Csn 和 SamyQ 的構築，這張圖就能服務兩個 part 頁面，而我沒辦法告訴你哪一道是哪一個。",
+"trap_en":"Guessing that one is a replicate. The caption says the distinction is unrecorded; say that instead.",
+"trap_zh":"猜其中一道是重複。圖說寫的是「沒有紀錄」，要照這個說。",
+"basis":"four lanes, two of them identically labelled",
+"dom":"registry",
+"deep":0,
+"id":"q440"
+},
+{
+"q_en":"On your flagship light blot, what did the red control lane do at eight hours?",
+"q_zh":"在你們招牌的那張光控墨點圖上，紅光對照道在八小時做了什麼？",
+"type":"gap",
+"tier":"A",
+"deep":1,
+"pages":[
+"results",
+"parts"
+],
+"seat":"wet2",
+"backup":"wet1",
+"kw_en":[
+"it peaked too",
+"caption never reports it",
+"why we moved to ABDQ"
+],
+"kw_zh":[
+"它也達到最強",
+"圖說從未交代",
+"所以才換成 ABDQ"
+],
+"a_en":"It showed its strongest band, the same as the green. That is the honest answer and the caption on that figure does not report it; the sentence is on a different part page, where we write that the original construct gave an unclear result because the red reference also peaked at eight hours, which is why we moved to the codon-optimised one. Spectral leakage is one explanation, our red LEDs emit at 640 nanometres where CcaSR wants about 672 to switch off, and we have not tested either directly.",
+"a_zh":"它也出現最強的帶，和綠光一樣。那是誠實的答案，而那張圖的圖說沒有交代；那句話在另一個 part 頁面上，我們在那裡寫著：原本的構築結果不清楚，因為紅光參考組在八小時也達到最強，這就是我們換成密碼子最佳化版本的原因。光譜外溢是一個解釋，我們的紅光 LED 發射在 640 奈米，而 CcaSR 需要大約 672 才會關閉，兩個解釋我們都沒有直接驗證。",
+"trap_en":"Narrating the green lanes, which is what the caption does. The question is about the lane the caption skips.",
+"trap_zh":"照著圖說講綠光那幾道。這題問的是圖說跳過的那一道。",
+"basis":"the control the flagship caption goes silent on",
+"dom":"registry",
+"id":"q441"
+},
+{
+"q_en":"This gel screened ten colonies and your next figure says clone fourteen. Where did clone fourteen come from?",
+"q_zh":"這張膠篩了十個菌落，下一張圖卻說 clone 14。clone 14 是哪裡來的？",
+"type":"gap",
+"tier":"A",
+"pages":[
+"parts"
+],
+"seat":"wet1",
+"backup":"wet2",
+"kw_en":[
+"cannot reconcile from the page",
+"plate had more than the gel shows",
+"notebook question"
+],
+"kw_zh":[
+"光看頁面對不起來",
+"盤上的菌落比膠多",
+"要翻記錄本"
+],
+"a_en":"I cannot reconcile that from the page. The gel reads one of ten at the stated size and the clone taken forward is numbered fourteen, which means the plate had more colonies than that gel shows. I would want to check the notebook rather than guess at it here. The sibling cassette has the same shape of problem: five colonies screened and clone five taken forward with four of five positive.",
+"a_zh":"光看頁面我對不起來。膠上是十個裡一個落在寫的大小，而往下做的 clone 編號是十四，表示那盤的菌落比那張膠顯示的多。我寧可回去翻實驗記錄本，也不想在這裡用猜的。姊妹卡匣有同樣形狀的問題：篩了五個菌落、四個陽性，而往下做的是 clone 5。",
+"trap_en":"Inventing a second plate on the spot. Not knowing is a fine answer; being caught making one up is not.",
+"trap_zh":"當場編出第二盤。不知道是可以接受的答案，被抓到現編不是。",
+"basis":"two numbers on adjacent figures of one page",
+"dom":"registry",
+"deep":0,
+"id":"q442"
+},
+{
+"q_en":"Which construct's supernatant actually went on the plants?",
+"q_zh":"真正噴到植物上的是哪一個構築的上清液？",
+"type":"gap",
+"tier":"A",
+"pages":[
+"plant",
+"parts"
+],
+"seat":"plant",
+"backup":"wet1",
+"kw_en":[
+"the Csn construct",
+"figure legend names it",
+"the cross-reference is wrong"
+],
+"kw_zh":[
+"Csn 的構築",
+"圖說上寫著",
+"交叉引用是錯的"
+],
+"a_en":"The Csn ACC deaminase construct. I say that because the figure legend on the plant panel names it, and a legend written at the bench beats an Application sentence written afterwards. The Application paragraph on the Csn page points at the SamyQ page for the same result, which makes a loop, and that sentence is wrong. So we have a plant result for one construct's supernatant, and not a Csn against SamyQ comparison.",
+"a_zh":"Csn 的 ACC deaminase 構築。我這樣說，是因為植物那一格的圖說寫的就是它，而在實驗台旁寫下的圖說勝過事後補上的 Application 句子。Csn 頁面上的 Application 段落把同一個結果指向 SamyQ 頁面，造成一個迴圈，而那句話是錯的。所以我們有一個構築上清液的植物結果，但沒有 Csn 對 SamyQ 的比較。",
+"trap_en":"Saying 'both'. Only one supernatant was sprayed, and claiming two gives away a comparison you never ran.",
+"trap_zh":"回答「兩個都有」。只噴過一種上清液，講兩個等於送出一個你們從沒做過的比較。",
+"basis":"two pages that point at each other",
+"dom":"registry",
+"deep":0,
+"id":"q443"
+},
+{
+"q_en":"Your Application section says this part helped plants under salinity. Did you put this part on a plant?",
+"q_zh":"你們的 Application 說這個 part 在鹽逆境下幫助了植物。你們把這個 part 放到植物上了嗎？",
+"type":"boundary",
+"tier":"A",
+"pages":[
+"plant",
+"parts"
+],
+"seat":"plant",
+"backup":"wet1",
+"kw_en":[
+"no part touched a plant",
+"filtered WB800 supernatant",
+"evidence stops at the cargo"
+],
+"kw_zh":[
+"沒有 part 碰過植物",
+"過濾的 WB800 上清",
+"證據只到 cargo"
+],
+"a_en":"No. Every trial applied a 0.22 micron filtered culture supernatant from WB800 carrying one of the cassettes, so the evidence reaches the cargo and stops there. We cannot tell you from any plant figure whether a 2.1 coding variant outperforms its wild type, because that comparison was never run on a plant. The sentence should read 'the supernatant from this construct', and where it says 'this part' that is us overreaching.",
+"a_zh":"沒有。每一次試驗施用的都是帶著某個卡匣的 WB800、經 0.22 微米過濾的培養上清，所以證據到 cargo 這一層就停了。任何一張植物圖都無法告訴你某個 2.1 編碼變體是否優於它的野生型，因為那個比較從來沒有在植物上做過。那句話應該寫「這個構築的上清液」，寫成「這個 part」就是我們講過頭了。",
+"trap_en":"Defending the sentence. Correcting your own wording in the room costs less than having it corrected for you.",
+"trap_zh":"替那句話辯護。在現場自己更正用字，代價小於被別人更正。",
+"basis":"the claim that sits on twenty Application sections",
+"dom":"registry",
+"deep":0,
+"id":"q444"
+},
+{
+"q_en":"Your vehicle control suppresses plant growth by a factor of ten. What does that do to your protectant results?",
+"q_zh":"你們的載體對照把植物生長壓了十倍。這對你們的保護蛋白結果有什麼影響？",
+"type":"validate",
+"tier":"A",
+"deep":1,
+"pages":[
+"plant"
+],
+"seat":"plant",
+"backup":"biz",
+"kw_en":[
+"0.065 g against 0.006 g",
+"read against matched vehicle",
+"not against medium alone"
+],
+"kw_zh":[
+"0.065 g 對 0.006 g",
+"對比配對的載體",
+"不是對純培養基"
+],
+"a_en":"It means every protectant result has to be read against a matched vehicle control and not against medium alone, which is what we did. Undiluted TB medium carrying WB800 drops fresh weight from about 0.065 grams to about 0.006, and even one in sixteen stays well below the no-medium group. So the comparison that counts is one-in-forty protectant against one-in-forty WB800, both carrying the same suppressive vehicle. It also means we cannot quote an absolute effect size against an untreated plant.",
+"a_zh":"這表示每一個保護蛋白的結果都必須對照配對的載體對照來讀，而不是對照純培養基，而我們就是這樣做的。未稀釋、帶著 WB800 的 TB 培養液把鮮重從大約 0.065 公克壓到大約 0.006，就算稀釋到十六分之一，還是遠低於完全沒有培養液的組。所以真正算數的比較是 1/40 的保護蛋白對 1/40 的 WB800，兩邊帶著同樣會抑制生長的載體。這也表示我們沒辦法引用一個相對於未處理植物的絕對效果量。",
+"trap_en":"Treating the vehicle figure as a problem to explain away. It is the control that makes the rest readable.",
+"trap_zh":"把載體那張圖當成要辯解掉的問題。它正是讓其他結果可讀的那個對照。",
+"basis":"a figure the team published themselves, and should lead with",
+"dom":"registry",
+"id":"q445"
+},
+{
+"q_en":"Your heat-stressed untreated plate is marked contaminated on the figure itself. What is the claim then?",
+"q_zh":"你們熱逆境的未處理對照盤，在圖上就被標記為污染。那你們的主張是什麼？",
+"type":"gap",
+"tier":"A",
+"pages":[
+"plant",
+"results"
+],
+"seat":"plant",
+"backup":"wet1",
+"kw_en":[
+"three of eight contaminated",
+"stars compare the wrong pair",
+"no tested advantage"
+],
+"kw_zh":[
+"八盤中三盤污染",
+"星號比錯了對象",
+"沒有經檢定的優勢"
+],
+"a_en":"The claim is weaker than the panel looks, and our own caption says so. Three of the eight plates are marked contaminated, including the untreated heat-stressed control, which is the one the treatment would have to beat. The significance brackets run from the unstressed control to everything else, so they do not compare a treated group with its own stressed control. No panel there shows a statistically tested advantage of ACC deaminase. We left both facts on the public page rather than cropping them out.",
+"a_zh":"主張比那張圖看起來弱，而我們自己的圖說就這樣寫。八個盤裡有三個被標記污染，包括未處理的熱逆境對照，而那正是處理組必須勝過的對象。顯著性的括號是從無逆境對照連到其他所有組，所以它們並沒有拿處理組和它自己的逆境對照相比。那裡沒有任何一格顯示 ACC deaminase 有經統計檢定的優勢。我們把這兩件事都留在公開頁面上，沒有裁掉。",
+"trap_en":"Reading the panel as a positive result. The honest version is stronger here than the optimistic one.",
+"trap_zh":"把那張圖讀成正面結果。在這裡誠實的版本比樂觀的版本更有力。",
+"basis":"the team's own legend writes the judge's question for them",
+"dom":"registry",
+"deep":0,
+"id":"q446"
+},
+{
+"q_en":"Your BoPep4 helped plants at one dilution out of four. Is that a result?",
+"q_zh":"你們的 BoPep4 在四個稀釋倍數裡只有一個對植物有幫助。那算結果嗎？",
+"type":"validate",
+"tier":"A",
+"pages":[
+"plant",
+"parts"
+],
+"seat":"plant",
+"backup":"wet2",
+"kw_en":[
+"one dilution, one run, no repeat",
+"two of three readouts",
+"third panel reverses"
+],
+"kw_zh":[
+"一個稀釋、一次、沒重複",
+"三個指標裡的兩個",
+"第三格反過來"
+],
+"a_en":"It is an observation, not a result. One in forty improved fresh weight and chlorophyll per plant against both controls in one unreplicated hydroponic run, and one in sixty, eighty and a hundred gave nothing. On the third panel, relative chlorophyll, the medium-only control is actually the highest salt-stressed group, above one in forty. So the honest sentence is that a filtered supernatant improved two of three readouts at a single dilution in one run, and we say that rather than calling it salinity rescue.",
+"a_zh":"那是一個觀察，不是一個結果。在一次沒有重複的水耕試驗裡，1/40 在鮮重和每株葉綠素上都勝過兩個對照，而 1/60、1/80、1/100 完全沒有效果。在第三格的相對葉綠素上，純培養基對照其實是鹽逆境組裡最高的，高過 1/40。所以誠實的說法是：一次試驗、單一稀釋倍數下，過濾上清改善了三個指標裡的兩個；我們這樣說，而不是說它拯救了鹽逆境。",
+"trap_en":"Quoting the strongest panel and skipping the third. The judge has the figure open.",
+"trap_zh":"只引用最強的那一格、跳過第三格。評審圖就開著。",
+"basis":"dose-response with one responder and no repeat",
+"dom":"registry",
+"deep":0,
+"id":"q447"
+},
+{
+"q_en":"Only six of your forty-one parts have a characterisation section. Why so few?",
+"q_zh":"你們四十一個 parts 裡只有六個有 characterisation 區段。為什麼這麼少？",
+"type":"fact",
+"tier":"A",
+"pages":[
+"parts",
+"measurement"
+],
+"seat":"wet1",
+"backup":"wet2",
+"kw_en":[
+"only ACC deaminase was measured",
+"BoPep4 too small to blot",
+"no LEA14 blot exists"
+],
+"kw_zh":[
+"只有 ACC deaminase 被量過",
+"BoPep4 太小跑不出來",
+"LEA14 沒有墨點圖"
+],
+"a_en":"Because characterisation means measured behaviour and we only have it for ACC deaminase. All six are ACCD. BoPep4 is twenty-three residues and does not resolve on a standard blot, which is why ELISA is its detection method, and we never ran a blot for LEA14 at all. Writing a characterisation section for the other thirty-five would mean writing up something we did not measure, and I would rather have an empty slot than that.",
+"a_zh":"因為 characterisation 指的是量到的行為，而我們只有 ACC deaminase 有。六個全部是 ACCD。BoPep4 只有二十三個胺基酸，標準墨點圖解析不出來，所以它的偵測方法是 ELISA；LEA14 我們則完全沒有跑過墨點圖。替其他三十五個寫 characterisation，就等於寫我們沒有量過的東西，我寧可留白。",
+"trap_en":"Promising they are coming. Say what exists, say why the rest does not, and stop.",
+"trap_zh":"承諾之後會補。講清楚現在有什麼、其他為什麼沒有，然後停住。",
+"basis":"a coverage gap visible from the collection index",
+"dom":"registry",
+"deep":0,
+"id":"q448"
+},
+{
+"q_en":"Your DNPH assay shows a fourteen-fold light response at thirteen hours and the opposite at sixteen. What happened?",
+"q_zh":"你們的 DNPH 在十三小時顯示十四倍的光反應，十六小時卻反過來。發生了什麼事？",
+"type":"validate",
+"tier":"A",
+"deep":1,
+"pages":[
+"results",
+"measurement"
+],
+"seat":"wet2",
+"backup":"dry",
+"kw_en":[
+"neither point repeated",
+"error bar 5 to 16",
+"colour p = 0.72"
+],
+"kw_zh":[
+"兩點都沒重複",
+"誤差棒 5 到 16",
+"顏色 p = 0.72"
+],
+"a_en":"We do not know, and the shape of the data says we should not read much into either point. Thirteen hours gives green over red fourteen to one, the cleanest light response this assay has produced. Sixteen hours inverts it. Neither point is repeated, the error bar on the thirteen hour green point runs from about five to sixteen on the activity scale, and across both times colour comes out at p equals 0.72. The experiment that would settle it is one culture, one maturation time, both colours, repeated, and it is not in our record.",
+"a_zh":"我們不知道，而且數據的形狀告訴我們兩個點都不該讀太多。十三小時綠光以十四比一勝過紅光，是這個檢測給過我們最乾淨的光反應。十六小時反轉。兩個點都沒有重複，十三小時綠光那一點的誤差棒在活性尺度上從大約五延伸到十六，而兩個時間合起來看，顏色的 p 值是 0.72。能定案的實驗是同一批培養、固定一個成熟時間、兩種顏色、做重複，而我們的紀錄裡沒有。",
+"trap_en":"Leading with the fourteen-fold number. It is the one a judge will ask you to defend.",
+"trap_zh":"用十四倍這個數字開場。那正是評審會要你辯護的那一個。",
+"basis":"a single-well result with a reversal three hours later",
+"dom":"registry",
+"id":"q449"
+},
+{
+"q_en":"What is the single piece of evidence on your Registry you would stake the project on?",
+"q_zh":"你們 Registry 上，哪一個證據是你敢拿整個專題去賭的？",
+"type":"impact",
+"tier":"A",
+"pages":[
+"results",
+"biomanufacturing"
+],
+"seat":"wet2",
+"backup":"hw",
+"kw_en":[
+"the shell permeate",
+"above 2 ug/mL through 72 h",
+"active from 18 h, 6.3 U/mg"
+],
+"kw_zh":[
+"殼側透過液",
+"72 小時維持 2 µg/mL 以上",
+"18 小時起有活性、6.3 U/mg"
+],
+"a_en":"The permeate. ACC deaminase in shell permeate above two micrograms per millilitre through a seventy-two hour run, and catalytically active from eighteen hours, with specific activity reaching 6.3 units per milligram and holding between five and eight through to seventy-two. It is the one place where protein identity, protein quantity and enzyme function are measured on the same material coming out of the rig, and the lag between the protein appearing and the activity appearing is itself informative.",
+"a_zh":"透過液。殼側透過液裡的 ACC deaminase 在七十二小時的運轉中維持在兩微克每毫升以上，而且從十八小時起具有催化活性，比活性達到 6.3 單位每毫克，一路到七十二小時維持在五到八之間。那是唯一一個地方：蛋白的身分、蛋白的量和酵素的功能，量的是同一份從機器裡出來的材料；而且蛋白先出現、活性後出現的那個時間差本身就有意義。",
+"trap_en":"Reaching for the ELISA construct panel or a DNPH plate. Those did not clear their controls.",
+"trap_zh":"去拿 ELISA 的構築面板或某一盤 DNPH。那些沒有通過自己的對照。",
+"basis":"asked when a panel wants your strongest card",
+"dom":"registry",
+"deep":0,
+"id":"q450"
+},
+{
 "q_en":"What is the virtual model in your digital twin? If I unplug the sensors, what does it still know?",
 "q_zh":"你們 digital twin 裡的虛擬模型到底是什麼？如果把感測器拔掉，它還知道什麼？",
 "type":"fact",
@@ -12221,7 +13710,7 @@ var QUESTIONS = [
 "basis":"team's own question, Bioreactors sheet (Timmy); answer assembled from software, no direct wiki statement",
 "dom":"drylab",
 "deep":0,
-"id":"q401"
+"id":"q451"
 },
 {
 "q_en":"What does your fault-detection autoencoder do, and how early did it catch a problem?",
@@ -12251,7 +13740,7 @@ var QUESTIONS = [
 "basis":"like INSA Lyon 2022: how do hardware and software work together",
 "dom":"drylab",
 "deep":0,
-"id":"q402"
+"id":"q452"
 },
 {
 "q_en":"How do you know your forecast is better than just assuming nothing changes?",
@@ -12281,7 +13770,7 @@ var QUESTIONS = [
 "basis":"like TAU-Israel 2025: how do you validate predictive accuracy",
 "dom":"drylab",
 "deep":0,
-"id":"q403"
+"id":"q453"
 },
 {
 "q_en":"You say you pre-registered a prediction. What exactly did you register, and did it pass?",
@@ -12311,7 +13800,7 @@ var QUESTIONS = [
 "basis":"like TAU-Israel 2025: pre-registered; partial blind test",
 "dom":"drylab",
 "deep":0,
-"id":"q404"
+"id":"q454"
 },
 {
 "q_en":"Why does your autoencoder have two separate axes?",
@@ -12340,7 +13829,7 @@ var QUESTIONS = [
 "basis":"design check",
 "dom":"drylab",
 "deep":0,
-"id":"q405"
+"id":"q455"
 },
 {
 "q_en":"Why did you choose a Kalman filter instead of a simple fitted curve or a bigger model?",
@@ -12369,7 +13858,7 @@ var QUESTIONS = [
 "basis":"like SUSTech 2025: could a simpler model have done it",
 "dom":"drylab",
 "deep":0,
-"id":"q406"
+"id":"q456"
 },
 {
 "q_en":"Why build your own twin instead of using commercial bioprocess software?",
@@ -12398,7 +13887,7 @@ var QUESTIONS = [
 "basis":"like INSA Lyon 2022: software and hardware together",
 "dom":"drylab",
 "deep":0,
-"id":"q407"
+"id":"q457"
 },
 {
 "q_en":"Would your digital twin work on a different organism or a bigger reactor?",
@@ -12428,7 +13917,7 @@ var QUESTIONS = [
 "basis":"like Estonia/XJTLU: why this organism; scale-up probe",
 "dom":"drylab",
 "deep":0,
-"id":"q408"
+"id":"q458"
 },
 {
 "q_en":"How did the light plate experiment change what your twin does?",
@@ -12458,7 +13947,7 @@ var QUESTIONS = [
 "basis":"like Heidelberg 2025: both directions, lab changes model",
 "dom":"drylab",
 "deep":0,
-"id":"q409"
+"id":"q459"
 },
 {
 "q_en":"What can your twin not do yet?",
@@ -12488,7 +13977,7 @@ var QUESTIONS = [
 "basis":"honesty probe",
 "dom":"drylab",
 "deep":0,
-"id":"q410"
+"id":"q460"
 },
 {
 "q_en":"How accurate is your leaf sensor?",
@@ -12518,7 +14007,7 @@ var QUESTIONS = [
 "basis":"like Munich 2025: replicates / calibration",
 "dom":"drylab",
 "deep":0,
-"id":"q411"
+"id":"q461"
 },
 {
 "q_en":"Could another team actually run your software?",
@@ -12547,7 +14036,7 @@ var QUESTIONS = [
 "basis":"like Peking 2025: did you publish the code; NJU: has anyone used it",
 "dom":"drylab",
 "deep":0,
-"id":"q412"
+"id":"q462"
 },
 {
 "q_en":"How did you build your stress index, and how do you know it works?",
@@ -12576,7 +14065,7 @@ var QUESTIONS = [
 "basis":"like TAU-Israel 2025: trend baseline; 32 percent reduction",
 "dom":"drylab",
 "deep":0,
-"id":"q413"
+"id":"q463"
 },
 {
 "q_en":"Your Math Model and Geospatial Analysis disagree on payback. Which one is right?",
@@ -12606,7 +14095,7 @@ var QUESTIONS = [
 "basis":"honesty probe; model vs geospatial tension",
 "dom":"drylab",
 "deep":0,
-"id":"q414"
+"id":"q464"
 },
 {
 "q_en":"What is your climate volatility index and how was it built?",
@@ -12635,7 +14124,7 @@ var QUESTIONS = [
 "basis":"design check",
 "dom":"drylab",
 "deep":0,
-"id":"q415"
+"id":"q465"
 },
 {
 "q_en":"How did the geospatial work change your project?",
@@ -12666,7 +14155,7 @@ var QUESTIONS = [
 "basis":"like Heidelberg 2025: HP and model in both directions",
 "dom":"drylab",
 "deep":0,
-"id":"q416"
+"id":"q466"
 },
 {
 "q_en":"Where would you deploy ReLEAF first?",
@@ -12696,7 +14185,7 @@ var QUESTIONS = [
 "basis":"scale / next step",
 "dom":"drylab",
 "deep":0,
-"id":"q417"
+"id":"q467"
 },
 {
 "q_en":"Does the night-time heat finding, 10 percent yield loss per degree, apply to Taiwan?",
@@ -12725,7 +14214,7 @@ var QUESTIONS = [
 "basis":"like IZJU 2025: literature values from a different system",
 "dom":"drylab",
 "deep":0,
-"id":"q418"
+"id":"q468"
 },
 {
 "q_en":"How much protectant does one hectare need, and what does the equipment cost?",
@@ -12754,7 +14243,7 @@ var QUESTIONS = [
 "basis":"like Peking 2025: how much of your product is needed",
 "dom":"drylab",
 "deep":0,
-"id":"q419"
+"id":"q469"
 },
 {
 "q_en":"Why did you anchor the dose on the experiment that worked rather than the smallest effective dose?",
@@ -12783,7 +14272,7 @@ var QUESTIONS = [
 "basis":"like Munich 2025: minimum production; never varied dose",
 "dom":"drylab",
 "deep":0,
-"id":"q420"
+"id":"q470"
 },
 {
 "q_en":"How long does the enzyme last after the reactor makes it?",
@@ -12812,7 +14301,7 @@ var QUESTIONS = [
 "basis":"honesty probe",
 "dom":"drylab",
 "deep":0,
-"id":"q421"
+"id":"q471"
 },
 {
 "q_en":"How did wet lab data change the math model?",
@@ -12842,7 +14331,7 @@ var QUESTIONS = [
 "basis":"like DTU 2025: model changed lab; lab changed model",
 "dom":"drylab",
 "deep":0,
-"id":"q422"
+"id":"q472"
 },
 {
 "q_en":"Can a single farm own a ReLEAF reactor?",
@@ -12872,7 +14361,7 @@ var QUESTIONS = [
 "basis":"scale / real world",
 "dom":"drylab",
 "deep":0,
-"id":"q423"
+"id":"q473"
 },
 {
 "q_en":"What happens if the forecast only gives you three days notice?",
@@ -12901,7 +14390,7 @@ var QUESTIONS = [
 "basis":"like Heidelberg 2025: forecast not reactive",
 "dom":"drylab",
 "deep":0,
-"id":"q424"
+"id":"q474"
 },
 {
 "q_en":"What did molecular dynamics tell you about your purification tag?",
@@ -12931,7 +14420,7 @@ var QUESTIONS = [
 "basis":"like Peng 2025 style: concrete example of dry lab changing the build",
 "dom":"drylab",
 "deep":0,
-"id":"q425"
+"id":"q475"
 },
 {
 "q_en":"How reliable is your molecular dynamics? Did you run replicates?",
@@ -12961,7 +14450,7 @@ var QUESTIONS = [
 "basis":"like PekingHSC 2025: verification vs validation",
 "dom":"drylab",
 "deep":0,
-"id":"q426"
+"id":"q476"
 },
 {
 "q_en":"Why did you pick the 9-23 version of BoPEP4 as the production peptide?",
@@ -12992,7 +14481,7 @@ var QUESTIONS = [
 "basis":"design check",
 "dom":"drylab",
 "deep":0,
-"id":"q427"
+"id":"q477"
 },
 {
 "q_en":"Why didn't you just rank your peptide designs by docking score?",
@@ -13022,7 +14511,7 @@ var QUESTIONS = [
 "basis":"like Toronto 2025: other modelling approaches",
 "dom":"drylab",
 "deep":0,
-"id":"q428"
+"id":"q478"
 },
 {
 "q_en":"Why didn't you engineer a better ACC deaminase?",
@@ -13052,7 +14541,7 @@ var QUESTIONS = [
 "basis":"like Great Bay 2025: why structural modeling of the protein",
 "dom":"drylab",
 "deep":0,
-"id":"q429"
+"id":"q479"
 },
 {
 "q_en":"What failed in your protein design work?",
@@ -13082,7 +14571,7 @@ var QUESTIONS = [
 "basis":"honesty probe",
 "dom":"drylab",
 "deep":0,
-"id":"q430"
+"id":"q480"
 },
 {
 "q_en":"Does a good docking score mean the peptide will protect the plant?",
@@ -13112,7 +14601,7 @@ var QUESTIONS = [
 "basis":"like Great Bay 2025: correlation between predictions and testing",
 "dom":"drylab",
 "deep":0,
-"id":"q431"
+"id":"q481"
 },
 {
 "q_en":"What from your protein design was actually validated in the lab, and what only in silico?",
@@ -13144,7 +14633,7 @@ var QUESTIONS = [
 "basis":"like Great Bay 2025: correlation between modeling predictions and real testing",
 "dom":"drylab",
 "deep":0,
-"id":"q432"
+"id":"q482"
 },
 {
 "q_en":"How did the dry lab change which protectant constructs the wet lab built?",
@@ -13175,7 +14664,7 @@ var QUESTIONS = [
 "basis":"like Heidelberg 2025: both directions",
 "dom":"drylab",
 "deep":0,
-"id":"q433"
+"id":"q483"
 },
 {
 "q_en":"What are the next experiments for your protein design?",
@@ -13205,7 +14694,7 @@ var QUESTIONS = [
 "basis":"next step; stated on wiki",
 "dom":"drylab",
 "deep":0,
-"id":"q434"
+"id":"q484"
 },
 {
 "q_en":"Can your protein design pipeline be applied to other proteins?",
@@ -13235,7 +14724,7 @@ var QUESTIONS = [
 "basis":"boundary probe",
 "dom":"drylab",
 "deep":0,
-"id":"q435"
+"id":"q485"
 },
 {
 "q_en":"In one sentence, how does your protein design pipeline work?",
@@ -13265,7 +14754,7 @@ var QUESTIONS = [
 "basis":"orientation question",
 "dom":"drylab",
 "deep":0,
-"id":"q436"
+"id":"q486"
 },
 {
 "q_en":"Your truncation series was ranked on HADDOCK score. Take me inside that number: what is it a sum of, and what does it leave out that matters for a flexible peptide?",
@@ -13295,7 +14784,7 @@ var QUESTIONS = [
 "trap_zh":"替兩個階梯之間的分數差辯護。鏈越長埋藏面積越大，光是這一點就讓分數變好。",
 "basis":"judge pattern: make them define the metric their own figure is drawn on",
 "dom":"drylab",
-"id":"q437"
+"id":"q487"
 },
 {
 "q_en":"Your methodology page says nine two-body docking runs on BoPEP4 produced nothing usable. What went wrong, and what did you do instead?",
@@ -13325,7 +14814,7 @@ var QUESTIONS = [
 "trap_zh":"把 docking 說成成功的預測。它沒有重現晶體，頁面上也這樣寫。",
 "basis":"the negative result the team published about its own main tool",
 "dom":"drylab",
-"id":"q438"
+"id":"q488"
 },
 {
 "q_en":"Your cross-run table reports backbone RMSD. What is that actually tracking, and why do you refuse to rank constructs on it?",
@@ -13355,7 +14844,7 @@ var QUESTIONS = [
 "trap_zh":"把低 RMSD 當成複合體穩定。在我們這一套裡，看起來最穩的那個 run 就是壞掉的構築。",
 "basis":"the metric a judge will see on the figure and read as stability",
 "dom":"drylab",
-"id":"q439"
+"id":"q489"
 },
 {
 "q_en":"Thirty nanoseconds, one seed per system. Put a number on the gap between that and the process you care about, and tell me what the single seed costs you.",
@@ -13385,7 +14874,7 @@ var QUESTIONS = [
 "trap_zh":"把 30 奈秒說成穩定性的量測，或把兩個單種子 run 之間的差異當成結果。",
 "basis":"judge pattern: how long, how many, and what does that buy",
 "dom":"drylab",
-"id":"q440"
+"id":"q490"
 },
 {
 "q_en":"You report AlphaFold confidence for these complexes. What did the 0.73 against 0.74 result tell you, and what did you change because of it?",
@@ -13415,7 +14904,7 @@ var QUESTIONS = [
 "trap_zh":"拿信心值當作肽會結合的證據。文獻的 benchmark 也把受體—肽—共受體這類組裝列為較難的案例。",
 "basis":"confidence scores read as activity is the commonest in-silico overclaim",
 "dom":"drylab",
-"id":"q441"
+"id":"q491"
 },
 {
 "q_en":"You cut eight residues off the front for the 9-23 candidate. Tell me what each part of that segment was doing, and what your own MD says about cutting at nine.",
@@ -13446,7 +14935,7 @@ var QUESTIONS = [
 "trap_zh":"說 1 到 8 什麼都沒做。Lys7 跟 Lys8 不一樣，而我們自己的頁面對 7-23 有沒有訂也說法不一。",
 "basis":"the production molecule's boundary is the one design choice the bench inherits",
 "dom":"drylab",
-"id":"q442"
+"id":"q492"
 },
 {
 "q_en":"Suppose I grant you the structural work. Design me the bench experiment that decides whether that short motif is sufficient, and name what makes it interpretable.",
@@ -13477,7 +14966,7 @@ var QUESTIONS = [
 "trap_zh":"描述一個沒有定量分母的墨點。每毫升上清液的蛋白量不等於每毫克酵素的活性。",
 "basis":"judge pattern: turn an in-silico claim into a falsifiable experiment",
 "dom":"drylab",
-"id":"q443"
+"id":"q493"
 },
 {
 "q_en":"Six histidines on a peptide this short. Beyond the anchor contact you have told me about, what is that tag doing?",
@@ -13508,7 +14997,7 @@ var QUESTIONS = [
 "trap_zh":"說所有構築都是 N 端。Engineering 的設計文字寫 C 端、構築表寫 N 端，而且兩個方向的 primer 都有。",
 "basis":"the project's own caught-in-time mistake, pushed one step further",
 "dom":"drylab",
-"id":"q444"
+"id":"q494"
 },
 {
 "q_en":"Of everything on your protein design pages, what has an experimental counterpart?",
@@ -13540,7 +15029,7 @@ var QUESTIONS = [
 "trap_zh":"說什麼都還沒測。ACC deaminase 現在有定量的 ELISA 和植物結果，講得太低反而低估了真正做過的工作。",
 "basis":"team's own gap: two of three designed protectants have no bench counterpart",
 "dom":"drylab",
-"id":"q445"
+"id":"q495"
 },
 {
 "q_en":"AlphaFold and HADDOCK are free, and every team in your village can run them. What in this work is yours?",
@@ -13570,7 +15059,7 @@ var QUESTIONS = [
 "trap_zh":"說這個流程很新。流程是標準的；現在一支隊伍能加上的，是對照、抓到的錯誤，以及我們拒絕使用的那個工具。",
 "basis":"positioning: everyone runs the same tools, so what counts is the control",
 "dom":"drylab",
-"id":"q446"
+"id":"q496"
 },
 {
 "q_en":"Write down the state vector of your Kalman filter for me, and tell me what the process noise term and the measurement noise term mean physically in your bioreactor.",
@@ -13600,7 +15089,7 @@ var QUESTIONS = [
 "trap_zh":"把 state 說成「生物量和生長速率」，其實是光學讀值；或把 covariance 數值講得好像頁面上有寫。",
 "basis":"a filter is only as defensible as its state and noise model",
 "dom":"drylab",
-"id":"q447"
+"id":"q497"
 },
 {
 "q_en":"Bacterial growth is exponential and then saturates, which is not linear, and your noise is not obviously Gaussian. Why is a linear filter defensible here at all, and what happens when your covariance settings are wrong for a run?",
@@ -13629,7 +15118,7 @@ var QUESTIONS = [
 "trap_zh":"把 41% 講成兩次實驗都成立；同樣設定下 run 7 的兩小時優勢是零。",
 "basis":"model misspecification is the first thing a modeller is examined on",
 "dom":"drylab",
-"id":"q448"
+"id":"q498"
 },
 {
 "q_en":"Given the sensors you actually have working on the bioreactor, which states are genuinely inferable and which are not? And when a reading fails its own checks mid-run, what does the filter actually receive?",
@@ -13659,7 +15148,7 @@ var QUESTIONS = [
 "trap_zh":"說 twin 知道生物量，或說壞掉的讀值會留空；gate 是沿用上一筆好值，反而把資訊損失藏起來。",
 "basis":"observability decides what the twin may legitimately claim",
 "dom":"drylab",
-"id":"q449"
+"id":"q499"
 },
 {
 "q_en":"Your forecast beats persistence, which is a very low bar. What was it tested on that it had not seen, how is the error measured, and did you ever compare it against a fitted growth curve?",
@@ -13688,7 +15177,7 @@ var QUESTIONS = [
 "trap_zh":"只講 41% 這個標題數字、不講 run 7 那一欄；還把 persistence 當成足夠的對照基準。",
 "basis":"a baseline that is too weak makes a real result look bigger than it is",
 "dom":"drylab",
-"id":"q450"
+"id":"q500"
 },
 {
 "q_en":"You registered a growth forecast before the run instead of fitting it afterwards. What did that commit you to, and what exactly passed?",
@@ -13717,7 +15206,7 @@ var QUESTIONS = [
 "trap_zh":"說整份登記都通過了。只有速率有計分，而那個速率是擬合在五個小時上，那段期間直線跟指數一樣貼合讀值。",
 "basis":"pre-registration is only worth something if you report the unscored endpoints too",
 "dom":"drylab",
-"id":"q451"
+"id":"q501"
 },
 {
 "q_en":"Your autoencoder learns what a healthy run looks like and flags departures. So what does it do on a fault it has never seen, what is your false positive rate, and how much of that 26.7 hours did the network actually buy you?",
@@ -13747,7 +15236,7 @@ var QUESTIONS = [
 "trap_zh":"把 26.7 小時歸功於 autoencoder。線性方法也做得到；真正的設計巧思是參考通道，不是網路。",
 "basis":"anomaly detection on one healthy stretch cannot report a detection rate",
 "dom":"drylab",
-"id":"q452"
+"id":"q502"
 },
 {
 "q_en":"Take me from a milliunit per millilitre on a plate assay to litres per hectare in a field, step by step, and tell me which step carries the most uncertainty.",
@@ -13778,7 +15267,7 @@ var QUESTIONS = [
 "trap_zh":"把 5,188 公升說成驗證過的劑量；或忘了 2,126 是「有效的劑量」，不是「最小有效劑量」。",
 "basis":"the headline litres per hectare is the number a judge will pull apart",
 "dom":"drylab",
-"id":"q453"
+"id":"q503"
 },
 {
 "q_en":"You give me a payback period as a single number. Why is a point estimate the wrong way to report that, and if you ran a sensitivity analysis, what would it put first?",
@@ -13809,7 +15298,7 @@ var QUESTIONS = [
 "trap_zh":"替某一個回收期數字辯護；或引用 2.0 年卻不說它建立在 Math Model 並不採信的 Geospatial 效益上。",
 "basis":"a decision number without its spread is not a model output",
 "dom":"drylab",
-"id":"q454"
+"id":"q504"
 },
 {
 "q_en":"What is the spatial resolution of your input layers against the size of a real Taiwanese farm, and how does an index built from that relate to what one plant in one field actually experiences?",
@@ -13840,7 +15329,7 @@ var QUESTIONS = [
 "trap_zh":"因為地塊數字很大就講得好像地圖是地塊級解析；279 萬筆地塊最後還是縮成 346 個節點。",
 "basis":"township and county layers cannot support farm-level claims",
 "dom":"drylab",
-"id":"q455"
+"id":"q505"
 },
 {
 "q_en":"Neighbouring counties share the same typhoon and the same light deficit. How many independent observations does your stress index really have, and would your deployment picture survive a different weighting?",
@@ -13870,7 +15359,7 @@ var QUESTIONS = [
 "trap_zh":"替波動指數的權重辯護，頁面只列了項目、沒公布權重；或把四個縣市的盲測當成已驗證。",
 "basis":"spatial and temporal correlation inflate apparent confidence",
 "dom":"drylab",
-"id":"q456"
+"id":"q506"
 },
 {
 "q_en":"Your Math Model and your Geospatial Analysis put a completely different price on a stressed hectare. How far apart are they, and which number do you stand behind?",
@@ -13900,7 +15389,7 @@ var QUESTIONS = [
 "trap_zh":"同時替兩個數字辯護或取平均。它們不是對同一公頃的兩個估計，而 US$1,931 這個數字在 Geospatial 頁上根本沒有出現。",
 "basis":"two pages of the same wiki giving incompatible economics",
 "dom":"drylab",
-"id":"q457"
+"id":"q507"
 },
 {
 "q_en":"Somebody on your team has quoted holding 86.3 percent and 25.3 percent of unstressed performance at two salt levels. Show me the measurement those came from.",
@@ -13931,7 +15420,7 @@ var QUESTIONS = [
 "trap_zh":"試著用文獻曲線把這兩個數字湊出來，或說「大致上對」；兩者都追不到我們自己的任何量測。",
 "basis":"an untraceable headline percentage is the fastest way to lose a judge's trust",
 "dom":"drylab",
-"id":"q458"
+"id":"q508"
 },
 {
 "q_en":"Digital twins, Kalman filters and reconstruction-error fault detection are routine in industrial bioprocess. What in your implementation is actually new, and what is honestly just a re-implementation?",
@@ -13962,7 +15451,7 @@ var QUESTIONS = [
 "trap_zh":"說 twin 本身是創新，或說迴路已經閉合；頁面寫的是每個決定還是由人做。",
 "basis":"positioning a student build honestly against standard industrial practice",
 "dom":"drylab",
-"id":"q459"
+"id":"q509"
 },
 {
 "q_en":"Suppose next year's second crop is hit by a record heat wave rather than by wind or badly timed water. What does your chain predict happens, and why?",
@@ -13993,6 +15482,6 @@ var QUESTIONS = [
 "trap_zh":"替指數編一個對高溫的反應；或假設鹽害的 0.58 效能可以套用到高溫。",
 "basis":"a scenario the index was selected against exposes whether the chain is understood",
 "dom":"drylab",
-"id":"q460"
+"id":"q510"
 }
 ];

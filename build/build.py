@@ -20,6 +20,7 @@ DOMAINS = [
     ('entrepreneurship', 'Entrepreneurship',   '創業與商業',   'A', 'biz',  'a'),
     ('plant',            'Plants',             '植物',       'A', 'plant', 'a'),
     ('wetlab',           'Cloning & Protein',  '選殖與蛋白',   'A', 'wet1', 'b'),
+    ('registry',         'Registry',           'Registry',   'A', 'wet1', 'b'),
     ('drylab',           'Software & Models',  '軟體與模型',   'B', 'dry',  'b'),
 ]
 DOM_INFO = {d[0]: dict(en=d[1], zh=d[2], tier=d[3], seat=d[4], tone=d[5]) for d in DOMAINS}

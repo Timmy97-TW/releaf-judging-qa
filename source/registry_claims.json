@@ -1,0 +1,444 @@
+{
+ "domain": "registry",
+ "facts": [],
+ "terms": [],
+ "gaps": [],
+ "questions": [
+  {
+   "q_en": "Your own simulation says a C-terminal His tag abolishes the contact BoPep4 works through. Every BoPep4 part you registered has one.",
+   "q_zh": "你們自己的模擬說 C 端 His 標籤會消掉 BoPep4 賴以作用的接觸。而你們註冊的每一個 BoPep4 part 都有。",
+   "type": "reason",
+   "tier": "A",
+   "deep": 1,
+   "pages": [
+    "protein-design",
+    "parts"
+   ],
+   "seat": "dry",
+   "backup": "wet1",
+   "kw_en": [
+    "bidentate 100% to 0%",
+    "4.0 to 20.1 angstrom",
+    "no ordering record"
+   ],
+   "kw_zh": [
+    "雙齒 100% 到 0%",
+    "4.0 到 20.1 埃",
+    "沒有訂購紀錄"
+   ],
+   "a_en": "That is right, and the figure is on our own pages: bidentate engagement with Arg487 falls from a hundred percent of frames to zero and the charge centres separate from four to twenty point one angstroms. One of our legends records a decision to move the tag to the N terminus for constructs ordered after the sixteenth of August. All three SamyQ-BoPep4 deposits are C-terminal, so either they predate that decision or it was never applied, and I do not have the ordering record to tell you which.",
+   "a_zh": "沒錯，而且那張圖就在我們自己的頁面上：與 Arg487 的雙齒結合從 100% 的影格掉到 0，電荷中心從四埃拉開到二十點一埃。我們有一段圖說記錄了一個決定：八月十六日之後訂的構築要把標籤移到 N 端。三筆 SamyQ-BoPep4 的上傳都是 C 端，所以不是它們早於那個決定，就是那個決定沒有被執行，而我沒有訂購紀錄可以告訴你是哪一個。",
+   "trap_en": "Claiming the plant effect proves the tag is fine. One unreplicated dilution cannot overturn your own model.",
+   "trap_zh": "說植物有效果就證明標籤沒問題。一個沒有重複的稀釋倍數推翻不了你們自己的模型。",
+   "basis": "the sharpest juxtaposition in the collection"
+  },
+  {
+   "q_en": "Your page says the His tag is fused N-terminally and the description says C-terminus. Which is it?",
+   "q_zh": "你們頁面寫 His 標籤融合在 N 端，簡述卻說在 C 端。到底是哪一個？",
+   "type": "fact",
+   "tier": "A",
+   "pages": [
+    "parts"
+   ],
+   "seat": "wet1",
+   "backup": "dry",
+   "kw_en": [
+    "C-terminal, the sequence settles it",
+    "six His codons before the stop",
+    "template error on seven pages"
+   ],
+   "kw_zh": [
+    "C 端，序列可以定案",
+    "終止前六個組胺酸密碼子",
+    "七頁的模板錯誤"
+   ],
+   "a_en": "C-terminal. The deposited sequence ends in six histidine codons before the stop on all three SamyQ-BoPep4 parts, so there is no ambiguity in the DNA. The element-list line saying N-terminal is a template error that propagated onto seven pages, and the short description on those same pages has it right. I would rather tell you what comes next: our own simulation says that position costs the Asn23 contact.",
+   "a_zh": "C 端。三個 SamyQ-BoPep4 的 part，上傳的序列都在終止密碼子前以六個組胺酸密碼子結尾，所以 DNA 上沒有模糊空間。元件列表裡寫「N 端」那一行是模板錯誤，擴散到七頁，而同樣這些頁面的簡述寫的是對的。我寧可主動告訴你下一件事：我們自己的模擬說那個位置會犧牲 Asn23 的接觸。",
+   "trap_en": "Hedging. The sequence is public and it settles it in one direction.",
+   "trap_zh": "含糊其詞。序列是公開的，而且只指向一個方向。",
+   "basis": "a page that contradicts itself in two adjacent fields"
+  },
+  {
+   "q_en": "You built a negative control that was supposed to fail. What happened?",
+   "q_zh": "你們做了一個應該要失敗的陰性對照。結果呢？",
+   "type": "design",
+   "tier": "A",
+   "deep": 1,
+   "pages": [
+    "protein-design",
+    "parts"
+   ],
+   "seat": "dry",
+   "backup": "wet1",
+   "kw_en": [
+    "pre-registered to fail all four",
+    "passed all four",
+    "criteria measured the wrong thing"
+   ],
+   "kw_zh": [
+    "事先登記會四項全敗",
+    "四項全過",
+    "標準量錯了東西"
+   ],
+   "a_en": "It passed. We wrote down four acceptance criteria before the run, together with an explicit prediction that the fifteen-to-twenty-three fragment would fail all four, because it loses half the contact surface. It passed all four: receptor RMSD 2.10 angstroms, peptide 1.83, the salt bridge held for 99.9 percent of frames. We published that as the result rather than moving the criteria, and the reading in our own caption is that the criteria were measuring something other than binding.",
+   "a_zh": "它通過了。我們在跑之前就寫下四項接受標準，以及一個明確的預測：15 到 23 這個片段會四項全部失敗，因為它少掉一半的接觸面。結果四項全部通過：受體 RMSD 2.10 埃、胜肽 1.83，鹽橋在 99.9% 的影格裡維持。我們照樣把它當成結果發表，沒有事後改標準；我們自己的圖說裡的解讀是：那些標準量到的不是結合。",
+   "trap_en": "Presenting it as a success. The value is that it is a loss you kept in public.",
+   "trap_zh": "把它講成一次成功。它的價值在於那是一次你們公開留著的失敗。",
+   "basis": "the strongest honesty card on the collection"
+  },
+  {
+   "q_en": "Your codon figure stars a sequence. Is that the sequence you actually ordered?",
+   "q_zh": "你們的密碼子圖標了一個候選。那是你們真正訂的序列嗎？",
+   "type": "gap",
+   "tier": "A",
+   "deep": 1,
+   "pages": [
+    "protein-design",
+    "parts"
+   ],
+   "seat": "dry",
+   "backup": "wet1",
+   "kw_en": [
+    "not for AcdS and LEA14",
+    "SamyQ unchanged in all four",
+    "BoPep4 matches base for base"
+   ],
+   "kw_zh": [
+    "AcdS 和 LEA14 不是",
+    "四個融合裡 SamyQ 都沒改",
+    "BoPep4 逐鹼基相同"
+   ],
+   "a_en": "For BoPep4, yes: the starred candidate's first forty-five nucleotides are the deposit base for base. For AcdS and LEA14, no, and that is a real inconsistency. Those two figures star a candidate that recodes the SamyQ segment by nineteen to twenty-one bases, and the ninety-three base pair SamyQ segment is identical to wild type in all four of our SamyQ fusions. The cargo recoding is real, fifteen bases of a thousand and eleven for AcdS, but the starred row is from a different search run than the sequence we ordered.",
+   "a_zh": "BoPep4 是：標星候選的前四十五個核苷酸和上傳的序列逐鹼基相同。AcdS 和 LEA14 不是，而這是一個真的不一致。那兩張圖標星的候選把 SamyQ 區段重新編碼了十九到二十一個鹼基，而在我們四個 SamyQ 融合裡，那段九十三個鹼基對的 SamyQ 和野生型完全相同。cargo 的重新編碼是真的，AcdS 是一千零十一中的十五個，但標星的那一列來自和我們實際訂購序列不同的搜尋。",
+   "trap_en": "Saying the figure is illustrative. It is on the part page, so a reader takes it as that part's own recoding.",
+   "trap_zh": "說那張圖只是示意。它就放在 part 頁面上，讀者會當成那個 part 自己的重編碼。",
+   "basis": "a figure and a sequence that do not match, on one page"
+  },
+  {
+   "q_en": "Your design page says this recoding ranks one out of forty-three thousand. Is that a result?",
+   "q_zh": "你們的設計頁面說這個重編碼在四萬三千多個裡排第一。那算結果嗎？",
+   "type": "boundary",
+   "tier": "A",
+   "deep": 1,
+   "pages": [
+    "protein-design",
+    "parts"
+   ],
+   "seat": "dry",
+   "backup": "wet1",
+   "kw_en": [
+    "it is a score from a folding model",
+    "translation never measured",
+    "pages say so"
+   ],
+   "kw_zh": [
+    "那是摺疊模型的分數",
+    "轉譯從未量過",
+    "頁面上有寫"
+   ],
+   "a_en": "No, it is a ranking inside a folding model's own scoring, and our pages say so in writing: these scores are predictions, and translation initiation from the recoded cassette has not been measured. What is real is the change in the DNA: six to twelve synonymous codon changes, the protein and the SamyQ cleavage site unchanged. Whether that buys us more protein is untested, so the ordering of wild type, 2.1 and 2.2 is a prediction to be tested rather than a ranking we earned.",
+   "a_zh": "不算，那是摺疊模型自己評分裡的排名，而我們的頁面白紙黑字寫著：這些分數是預測，而重編碼卡匣的轉譯起始沒有被量過。真實的是 DNA 上的改變：六到十二個同義密碼子改動，蛋白和 SamyQ 切位不變。那是否真的換來更多蛋白並未驗證，所以野生型、2.1、2.2 的排序是一個待驗證的預測，不是我們掙到的排名。",
+   "trap_en": "Quoting the percentile as if it were a yield. The top 0.002 percent of a simulated pool is not protein.",
+   "trap_zh": "把百分位數當產量引用。模擬池裡的前 0.002% 不是蛋白。",
+   "basis": "a number that looks like a measurement and is not"
+  },
+  {
+   "q_en": "Did any of your modelling change what you actually built?",
+   "q_zh": "你們的模擬有改變任何你們真正做出來的東西嗎？",
+   "type": "integrate",
+   "tier": "A",
+   "pages": [
+    "protein-design",
+    "parts",
+    "engineering"
+   ],
+   "seat": "dry",
+   "backup": "wet1",
+   "kw_en": [
+    "chose where to truncate",
+    "chose the recodings ordered",
+    "did not move the tag"
+   ],
+   "kw_zh": [
+    "決定在哪裡截短",
+    "決定訂哪個重編碼",
+    "沒有移動標籤"
+   ],
+   "a_en": "In two places yes and in one place no. The docking ladder is why we sampled the truncations where we did, and the codon searches are why we ordered 2.1 and 2.2 rather than a naive low-GC recoding. Where it did not change what we built is the His tag: the simulation says the C-terminal position costs the binding contact, a legend records a decision to move it, and the deposits are still C-terminal. That is the honest edge of the integration.",
+   "a_zh": "兩個地方有，一個地方沒有。docking 的階梯圖決定了我們在哪些位置取截短樣本，密碼子搜尋決定了我們訂 2.1 和 2.2 而不是一個簡單的低 GC 重編碼。沒有改變的是 His 標籤：模擬說 C 端的位置會犧牲結合接觸，有一段圖說記錄了要移動它的決定，而上傳的序列仍然是 C 端。那就是這個整合誠實的邊界。",
+   "trap_en": "Claiming the modelling drove everything. Naming the one place it did not is what makes the other two believable.",
+   "trap_zh": "說模擬主導了一切。說出它沒有生效的那一處，才讓另外兩處可信。",
+   "basis": "the dry-lab-to-wet-lab question, asked through the deposits"
+  },
+  {
+   "q_en": "There are unfilled square brackets on your pages. What are those?",
+   "q_zh": "你們頁面上有沒填的方括號。那些是什麼？",
+   "type": "gap",
+   "tier": "A",
+   "pages": [
+    "parts"
+   ],
+   "seat": "wet1",
+   "backup": "ihp",
+   "kw_en": [
+    "126 on 35 of 41 pages",
+    "drafting template went public",
+    "deliberately not guessed"
+   ],
+   "kw_zh": [
+    "41 頁中 35 頁、共 126 個",
+    "草稿模板上線了",
+    "刻意不用猜的填"
+   ],
+   "a_en": "Unfilled placeholders from our drafting template that went public. There are a hundred and twenty-six of them across thirty-five of the forty-one pages, twenty inside figure captions. We know where every one is and what each resolves to. The ones that cannot be resolved from our own records are staying bracketed rather than being guessed at, because a plausible wrong number is worse on a public page than a visible gap.",
+   "a_zh": "那是我們草稿模板裡沒填的佔位符，跟著上線了。四十一頁裡有三十五頁帶著，總共一百二十六個，其中二十個在圖說裡。我們知道每一個在哪裡、各自該填什麼。那些從我們自己的紀錄裡無法確定的，我們寧可讓它保持方括號，也不要用猜的，因為在公開頁面上，一個看起來合理的錯誤數字比一個看得見的空缺更糟。",
+   "trap_en": "Calling it a rendering bug. It is an unfinished page and saying so costs less.",
+   "trap_zh": "說那是顯示錯誤。那就是一頁沒寫完的頁面，直接承認代價比較小。",
+   "basis": "visible on most pages without scrolling"
+  },
+  {
+   "q_en": "Your strain is written in square brackets on twenty-four pages. Do you know which strain you used?",
+   "q_zh": "你們的菌株在二十四頁上是寫在方括號裡的。你們知道自己用的是哪一株嗎？",
+   "type": "gap",
+   "tier": "A",
+   "pages": [
+    "parts",
+    "engineering"
+   ],
+   "seat": "wet1",
+   "backup": "wet2",
+   "kw_en": [
+    "WB800, settled 7 October",
+    "168 for the early reactor run",
+    "the bracket is a template leftover"
+   ],
+   "kw_zh": [
+    "WB800，10 月 7 日定案",
+    "早期反應器跑的是 168",
+    "方括號是模板殘留"
+   ],
+   "a_en": "Yes. Everything with a blot or an assay behind it is WB800, the eight-protease-knockout strain, and that was settled on the seventh of October. The bracket is a template leftover from when both 168 and WB800 were in play: the early bioreactor run was in 168, which barely made detectable enzyme, probably because its secreted proteases degrade the product, and that is why we moved. The pages should say WB800 and they will.",
+   "a_zh": "知道。所有背後有墨點圖或檢測的都是 WB800，那個敲掉八個蛋白酶的菌株，這在十月七日就定案了。方括號是當時 168 和 WB800 都還在考慮時留下的模板殘留：早期的生物反應器跑的是 168，幾乎測不到酵素，可能是因為它分泌的蛋白酶把產物降解掉，這就是我們換掉它的原因。那些頁面應該寫 WB800，之後也會。",
+   "trap_en": "Saying 'both'. One produced the data; say which and why you switched.",
+   "trap_zh": "回答「兩個都是」。產出數據的只有一個，說出是哪一個、以及為什麼換。",
+   "basis": "a bracket on the most basic fact in the collection"
+  },
+  {
+   "q_en": "Three of your reference links end in a chatgpt tracking tag. Do you want to explain that?",
+   "q_zh": "你們有三個參考文獻連結結尾帶著 chatgpt 的追蹤標記。要解釋一下嗎？",
+   "type": "gap",
+   "tier": "A",
+   "pages": [
+    "parts",
+    "attributions"
+   ],
+   "seat": "wet1",
+   "backup": "ihp",
+   "kw_en": [
+    "a copied URL",
+    "the references themselves are right",
+    "we can give the citation"
+   ],
+   "kw_zh": [
+    "複製網址帶進來的",
+    "文獻本身是對的",
+    "引用資訊我們給得出來"
+   ],
+   "a_en": "It is a copied URL and it should not be there. The underlying references are the right ones, they are UniProt and NCBI entries, and I can give you the accession and the paper for each. We used language models the way we used search, to find sources, and then read the sources; what went wrong here is hygiene, not provenance. I would rather you saw it and asked than found it and did not.",
+   "a_zh": "那是複製網址帶進來的，不該在那裡。底下的文獻本身是對的，是 UniProt 和 NCBI 的條目，每一個的編號和論文我都給得出來。我們用語言模型的方式和用搜尋一樣，是拿來找來源，然後去讀來源；這裡出問題的是整潔，不是來源本身。我寧可你看到並問出來，也不要你發現了卻不問。",
+   "trap_en": "Getting defensive about having used a model. The defensible position is that you read the source.",
+   "trap_zh": "因為用過模型就變得防衛。站得住腳的立場是：你們讀過原始來源。",
+   "basis": "the kind of detail a careful reader notices and remembers"
+  },
+  {
+   "q_en": "You use codenames like ABDI and ABDQ in your figure captions. What are they?",
+   "q_zh": "你們圖說裡用了 ABDI、ABDQ 這些代號。那是什麼？",
+   "type": "fact",
+   "tier": "B",
+   "pages": [
+    "parts",
+    "results"
+   ],
+   "seat": "wet1",
+   "backup": "wet2",
+   "kw_en": [
+    "internal strain shorthand",
+    "ABDI Csn wild type, ABDQ SamyQ 2.1",
+    "never defined on a page"
+   ],
+   "kw_zh": [
+    "內部菌株簡稱",
+    "ABDI 是 Csn 野生型、ABDQ 是 SamyQ 2.1",
+    "頁面上從未定義"
+   ],
+   "a_en": "Internal strain shorthand. ABDI is the Level 2 system with the wild-type cargo behind the Csn signal peptide; ABDQ is the one with the codon-optimised AcdS 2.1 behind SamyQ. They appear in captions on six part pages and are defined on none of them, which is a fair catch. The same is true of the PL codes in our plant captions, which are wiki figure identifiers that should not have travelled to the Registry.",
+   "a_zh": "內部的菌株簡稱。ABDI 是 Level 2 系統，帶著 Csn 訊號肽後面的野生型 cargo；ABDQ 是 SamyQ 後面接密碼子最佳化 AcdS 2.1 的那一個。它們出現在六個 part 頁面的圖說裡，卻沒有任何一頁定義過，這一點被抓到是合理的。植物圖說裡的 PL 代號也一樣，那是 wiki 的圖片編號，本來不該跟著到 Registry 上。",
+   "trap_en": "Explaining the names without conceding the pages never define them.",
+   "trap_zh": "解釋了名字，卻不承認頁面上從來沒有定義過它們。",
+   "basis": "undefined shorthand in public figure captions"
+  },
+  {
+   "q_en": "Could another team reproduce your assembly from the Registry alone?",
+   "q_zh": "別的隊伍光靠 Registry 能重現你們的組裝嗎？",
+   "type": "compare",
+   "tier": "A",
+   "deep": 1,
+   "pages": [
+    "parts",
+    "engineering",
+    "experiments"
+   ],
+   "seat": "wet1",
+   "backup": "biz",
+   "kw_en": [
+    "the cloning yes, the culture no",
+    "no media, no OD, no volumes",
+    "band sizes need recomputing"
+   ],
+   "kw_zh": [
+    "選殖可以、培養不行",
+    "沒有培養基、OD、體積",
+    "帶大小需要重算"
+   ],
+   "a_en": "The cloning, mostly yes: the vectors, the enzymes, the overhangs, the thermal cycles and the primer tables are all there, and the sequences are deposited. The culture work, no. The pages never state a growth medium for expression, an induction OD, a culture volume or a shaking speed, and the light intensities are given as percentages with no irradiance behind them. They would also have to recompute seven of our stated band sizes, and I would tell them that rather than let them find it.",
+   "a_zh": "選殖部分大致可以：載體、酵素、黏端、溫度循環和引子表都在，序列也上傳了。培養的部分不行。那些頁面從來沒有寫表現用的培養基、誘導時的 OD、培養體積或轉速，而光照強度是用百分比給的，背後沒有照度。他們還得重算我們寫的七個帶大小，而我會先告訴他們，而不是讓他們自己撞上。",
+   "trap_en": "Answering yes. The reproducibility question rewards the person who names the missing half.",
+   "trap_zh": "直接回答可以。可重現性這題，獎勵的是說得出缺了哪一半的人。",
+   "basis": "the real test of a parts collection"
+  },
+  {
+   "q_en": "You wrote two collection documents and never created them on the Registry. Why not?",
+   "q_zh": "你們寫了兩份 collection 文件，卻沒有在 Registry 上建立。為什麼？",
+   "type": "boundary",
+   "tier": "B",
+   "pages": [
+    "parts",
+    "contribution"
+   ],
+   "seat": "wet1",
+   "backup": "ihp",
+   "kw_en": [
+    "ran out of time",
+    "shared prose duplicated instead",
+    "that is how errors spread"
+   ],
+   "kw_zh": [
+    "時間不夠",
+    "共用文字只能重複貼",
+    "錯誤就是這樣擴散的"
+   ],
+   "a_en": "Time. They are written and they would move about eighteen thousand words of shared prose out of the individual pages. Because they do not exist, the shared cloning block is duplicated across the composites instead, and that duplication is exactly how a wrong cross-reference and an unsupported salinity claim ended up on several sibling pages at once. So the missing collections are not a cosmetic gap; they are the mechanism behind two of our defects.",
+   "a_zh": "時間。它們已經寫好了，而且會把大約一萬八千字的共用文字從個別頁面移出去。因為它們不存在，共用的選殖段落只能在各個複合元件上重複貼，而那個重複正是一個錯誤的交叉引用和一個沒有證據的鹽逆境主張，同時出現在好幾個姊妹頁面上的原因。所以缺少 collection 不只是外觀問題，它是我們兩個缺陷背後的機制。",
+   "trap_en": "Treating it as a tidiness issue. Say what the duplication caused.",
+   "trap_zh": "把它當成整潔問題。要說出重複造成了什麼。",
+   "basis": "asked when a collection reads repetitive"
+  },
+  {
+   "q_en": "What does your Registry entry give the community that your wiki does not?",
+   "q_zh": "你們的 Registry 條目給社群什麼是 wiki 給不了的？",
+   "type": "history",
+   "tier": "A",
+   "pages": [
+    "parts",
+    "contribution"
+   ],
+   "seat": "wet1",
+   "backup": "biz",
+   "kw_en": [
+    "sequences, not narrative",
+    "composition is machine-readable",
+    "the wiki freezes, parts do not"
+   ],
+   "kw_zh": [
+    "序列，不是敘事",
+    "組成是機器可讀的",
+    "wiki 會凍結，parts 不會"
+   ],
+   "a_en": "Sequence and structure that a machine can read. The wiki is our narrative and it freezes; the part pages carry the deposited DNA, the composition tree and the documentation, and they stay editable, which is why four corrected constructs went up after the freeze. A team wanting our green-light output cassette does not need our story, they need the overhangs and the sequence, and those are only on the Registry.",
+   "a_zh": "機器可以讀的序列與結構。wiki 是我們的敘事，而且會凍結；part 頁面帶著上傳的 DNA、組成樹和文件，而且仍然可以編輯，這就是為什麼有四個修正後的構築是在凍結之後才上去的。想要我們綠光輸出卡匣的隊伍不需要我們的故事，他們需要的是黏端和序列，而那些只在 Registry 上。",
+   "trap_en": "Describing the wiki again. The question is what the Registry adds, and the answer is reusability.",
+   "trap_zh": "又把 wiki 講一次。這題問的是 Registry 多給了什麼，答案是可重用性。",
+   "basis": "the contribution question, in its positioning form"
+  },
+  {
+   "q_en": "Your part pages carry claims with no figure, no citation and no cross-reference. Which ones?",
+   "q_zh": "你們的 part 頁面上有一些主張，沒有圖、沒有引用、也沒有交叉連結。是哪些？",
+   "type": "gap",
+   "tier": "A",
+   "deep": 1,
+   "pages": [
+    "parts"
+   ],
+   "seat": "wet1",
+   "backup": "wet2",
+   "kw_en": [
+    "BoPep4 secretion by ELISA",
+    "LEA14 expressed and secreted",
+    "RBS0 high-strength"
+   ],
+   "kw_zh": [
+    "BoPep4 分泌靠 ELISA",
+    "LEA14 有表現並分泌",
+    "RBS0 高強度"
+   ],
+   "a_en": "I can name three. Our BoPep4 cassettes say secretion was assessed by ELISA, and no BoPep4 ELISA data appears on any of the forty-one pages. Our LEA14 cassettes say the protein is expressed and secreted, and neither page has a characterisation section or a blot. And RBS0's one-line description calls it high-strength and optimised for Bacillus, with no measurement anywhere. Those three should either get their data or lose the sentence.",
+   "a_zh": "我可以點出三個。我們的 BoPep4 卡匣說分泌是用 ELISA 評估的，而四十一頁裡沒有任何 BoPep4 的 ELISA 數據。我們的 LEA14 卡匣說蛋白有表現並分泌，而那兩頁都沒有 characterisation 區段，也沒有墨點圖。還有 RBS0 那一行簡述說它是高強度、為枯草桿菌最佳化的，而任何地方都沒有量測。這三個要嘛補上數據，要嘛把那句話拿掉。",
+   "trap_en": "Saying you cannot think of any. Naming three unprompted is worth more than defending forty-one.",
+   "trap_zh": "說想不出來。主動點出三個，價值高於替四十一個辯護。",
+   "basis": "the honesty question, aimed at the collection"
+  },
+  {
+   "q_en": "You say the output cassette is replaceable. Have you ever replaced it?",
+   "q_zh": "你們說輸出卡匣是可替換的。你們換過嗎？",
+   "type": "boundary",
+   "tier": "A",
+   "pages": [
+    "parts",
+    "contribution"
+   ],
+   "seat": "wet1",
+   "backup": "dry",
+   "kw_en": [
+    "designed, not demonstrated",
+    "page is Design only",
+    "only AcdS was ever behind it"
+   ],
+   "kw_zh": [
+    "設計過、沒有展示",
+    "頁面只有 Design",
+    "後面只放過 AcdS"
+   ],
+   "a_en": "Not yet, and the page says Design only. The architecture supports it: the cassette sits behind our own PcpcG2-veg with BsaI sites, and we put mScarlet-I in the slot so a user can see the swap worked. But only ACC deaminase has ever actually been placed behind the green-light promoter in a finished system, so 'any protectant can be swapped in' is a design claim we have not cashed. The swap overhangs are also not written on the page, which is the one thing a reusing team needs.",
+   "a_zh": "還沒有，而且那一頁只有 Design。架構上支援：卡匣放在我們自己的 PcpcG2-veg 後面、帶著 BsaI 位點，而我們在槽位上放了 mScarlet-I，讓使用者看得到換成功了。但實際上只有 ACC deaminase 真正被放在綠光啟動子後面做成完整系統，所以「任何保護蛋白都可以換進來」是一個我們還沒兌現的設計主張。而且替換用的黏端沒有寫在頁面上，那正是要重用的隊伍唯一需要的東西。",
+   "trap_en": "Describing the mechanism as though describing it were doing it.",
+   "trap_zh": "把機制描述一遍，彷彿描述過就等於做過。",
+   "basis": "the reuse claim, tested"
+  },
+  {
+   "q_en": "A judge tells you your Registry upload is very impressive. What do you say next?",
+   "q_zh": "評審說你們的 Registry 上傳非常厲害。你接下來要說什麼？",
+   "type": "integrate",
+   "tier": "A",
+   "pages": [
+    "parts"
+   ],
+   "seat": "wet1",
+   "backup": "ihp",
+   "kw_en": [
+    "thank you, then offer the limit",
+    "name a weak page first",
+    "the compliment precedes the question"
+   ],
+   "kw_zh": [
+    "先謝謝，再主動講限制",
+    "先點出一個薄弱頁面",
+    "稱讚是問題的前半句"
+   ],
+   "a_en": "Thank them in four words and then go first. A compliment about the upload is usually the first half of a question about one line inside it, so the useful move is to name a limit before it is found: five of the forty-one pages are empty, the band sizes on seven cassettes need recomputing, and no blot carries a plasmid-free lane. Offering those buys you the right to be believed about everything else on the collection.",
+   "a_zh": "用四個字謝過，然後自己先講。對上傳的稱讚通常是某一行問題的上半句，所以有用的動作是在被找到之前先說出限制：四十一頁裡有五頁是空的、七個卡匣的帶大小需要重算、沒有任何一張墨點圖有無質體對照道。主動交出這些，才換得到「其他部分被相信」的權利。",
+   "trap_en": "Saying thank you and waiting. The pause after a compliment is where the real question lands.",
+   "trap_zh": "說完謝謝就等著。稱讚之後的那個停頓，正是真正的問題落下來的地方。",
+   "basis": "the move that decides what the next five minutes are about"
+  }
+ ]
+}

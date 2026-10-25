@@ -50,6 +50,13 @@ var META = {
 "seat":"wet1"
 },
 {
+"id":"registry",
+"en":"Registry",
+"zh":"Registry",
+"tier":"A",
+"seat":"wet1"
+},
+{
 "id":"drylab",
 "en":"Software & Models",
 "zh":"軟體與模型",
@@ -198,6 +205,12 @@ var META = {
 "terms":42,
 "questions":90,
 "gaps":8
+},
+"registry":{
+"facts":0,
+"terms":0,
+"questions":50,
+"gaps":0
 },
 "drylab":{
 "facts":36,

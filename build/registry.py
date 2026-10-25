@@ -9,7 +9,7 @@ Reads
                                   bodies (raw Markdown), composition rows.
   source/registry/_external.json  the non-ReLEAF parts our composites are built from,
                                   resolved to title / role / length.
-  source/registry_notes.json      everything a person wrote: the anatomy of a part page,
+  source/registry-notes.json      everything a person wrote: the anatomy of a part page,
                                   the soft spots, the figure readings, the drills.
 
 Writes
@@ -22,8 +22,9 @@ import json, os, re, sys, collections
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC = os.path.join(ROOT, 'source', 'registry')
-NOTES = os.path.join(ROOT, 'source', 'registry_notes.json')
+NOTES = os.path.join(ROOT, 'source', 'registry-notes.json')
 OUT = os.path.join(ROOT, 'docs', 'data', 'registry.js')
+IMGDIR = os.path.join(ROOT, 'docs', 'assets', 'img', 'reg')
 
 DOC_ORDER = ['design', 'experiment', 'characterisation', 'application', 'discussion']
 
@@ -72,13 +73,32 @@ def count_images(text):
     return len(re.findall(r'!\[', text or ''))
 
 
+def figures_in(text, slot):
+    """Every image embedded in one documentation section, in page order, with the caption
+    that follows it. The file is the first twelve characters of the Registry's own content
+    hash, which is what build/registry_images.py saves them as."""
+    out = []
+    t = text or ''
+    for m in re.finditer(r'!\[[^\]]*\]\((\S+?)\s*\)', t):
+        url = m.group(1)
+        base = url.rsplit('/', 1)[-1].split('?')[0]
+        stem, ext = os.path.splitext(base)
+        # the caption is the block after the image: same line if there is one, else the
+        # next non-empty block, stopping at a blank line or the next image.
+        tail = t[m.end():]
+        tail = re.split(r'!\[|\n\s*\n', tail.lstrip('\n'), 1)[0]
+        out.append(dict(file=stem[:12] + ext, slot=slot,
+                        cap=plain(tail)[:400]))
+    return out
+
+
 def plain(text):
     """Registry descriptions are Markdown. The map shows them as a sentence, so the links
     keep their label and lose their URL, and the editor's backslash escapes come off."""
     t = re.sub(r'\[([^\]]+)\]\([^)]*\)', r'\1', text or '')
     t = re.sub(r'\(\s*\)', '', t)
     t = re.sub(r'<[^>]+>', '', t)
-    t = t.replace('\\_', '_').replace('\\*', '*').replace('\\[', '[').replace('\\]', ']')
+    t = re.sub(r'\\([_*\[\]()=#.|-])', r'\1', t)
     t = re.sub(r'\*{1,3}(\S(?:[^*]*\S)?)\*{1,3}', r'\1', t)   # bold and italic runs
     t = t.replace('*', '')
     return re.sub(r'\s+', ' ', t).strip()
@@ -154,6 +174,15 @@ def derive(parts, external):
         imgs = count_images(body)
         brackets = count_brackets(body)
 
+        figs = []
+        for t in DOC_ORDER:
+            if t in docs:
+                figs += figures_in(docs[t].get('value'), t)
+        for f in figs:
+            if not os.path.exists(os.path.join(IMGDIR, f['file'])):
+                sys.exit('  ! %s: image not in docs/assets/img/reg: %s\n'
+                         '    run build/registry_images.py' % (k, f['file']))
+
         flags = []
         if not d['documentation']:
             flags.append('nodoc')
@@ -187,7 +216,7 @@ def derive(parts, external):
                        brackets=count_brackets(docs[t].get('value')),
                        updated=(docs[t].get('updated') or docs[t].get('created') or '')[:10])
                   for t in DOC_ORDER if t in docs],
-            words=words, imgs=imgs, brackets=brackets, flags=flags,
+            words=words, imgs=imgs, brackets=brackets, flags=flags, figs=figs,
         ))
     return rows, graph_parents
 
