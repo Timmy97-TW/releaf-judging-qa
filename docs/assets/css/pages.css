@@ -266,12 +266,14 @@ mark { background: #fff2a8; color: inherit; border-radius: 3px; padding: 0 1px; 
 .year .bars i { width: 3px; background: var(--rule-2, #b9b9c0); border-radius: 1px; display: block; }
 .year a:hover .bars i { background: var(--accent); }
 
-.rail { position: relative; margin-top: 2.5rem; }
-.rail::before {
+/* The timeline's own rail, scoped to its element: the mock and figure rooms
+   use .rail too, and were drawing this hairline down their left column. */
+#rail { position: relative; margin-top: 2.5rem; }
+#rail::before {
   content: ""; position: absolute; left: 6.5rem; top: 0; bottom: 0; width: 1px;
   background: var(--rule-soft);
 }
-@media (max-width: 760px) { .rail::before { left: 1.5rem; } }
+@media (max-width: 760px) { #rail::before { left: 1.5rem; } }
 
 .month {
   position: sticky; top: calc(var(--nav-h) + 0px); z-index: 20;
@@ -519,29 +521,131 @@ table.board .dt { color: var(--muted); font-size: .8125rem; text-align: right; }
 
 /* ════ The room, laid out ═══════════════════════════════════════════════ */
 
+/* Three columns on a wide screen: who and what kind of run on the left, the
+   bench and the question in the middle, and the deck filters out in the right
+   margin, where they stay in view instead of pushing the run down the page.
+   Below 1140px the two rails stack above the stage, so every control the room
+   has is still in one place before the questions start. */
 .room { display: grid; grid-template-columns: 216px minmax(0, 1fr); gap: 2rem; align-items: start; padding-bottom: 3rem; }
 @media (max-width: 900px) { .room { grid-template-columns: 1fr; gap: 1.25rem; } }
 
-.rail { position: sticky; top: calc(var(--nav-h) + 18px); display: grid; gap: 1.4rem; }
-@media (max-width: 900px) { .rail { position: static; gap: 1rem; } }
+/* The mock room runs three wide: the page itself opens out to make space. */
+.mock-page { --page: 1280px; }
+.mock-page .room { grid-template-columns: 206px minmax(0, 1fr) 236px; }
+@media (max-width: 1140px) {
+  .mock-page .room { grid-template-columns: 1fr; gap: 1.25rem; }
+  .rail-l { order: 1; }
+  .rail-r { order: 2; }
+  .stage { order: 3; }
+}
+.mock-page .hero .lede { max-width: 58ch; }
+
+.room .rail { position: sticky; top: calc(var(--nav-h) + 18px); display: grid; gap: 1.4rem; align-content: start; margin-top: 0; }
+.rail-r {
+  max-height: calc(100vh - var(--nav-h) - 44px);
+  overflow: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  padding: 0 .1rem .5rem;
+}
+@media (max-width: 900px) { .room .rail { position: static; gap: 1rem; } }
+@media (max-width: 1140px) {
+  .mock-page .room .rail { position: static; gap: 1rem; }
+  .rail-r { max-height: none; overflow: visible; }
+}
+
 .rail-group h4 {
+  display: flex; align-items: center; gap: .4rem;
   font-size: .6875rem; text-transform: uppercase; letter-spacing: .07em;
   color: var(--faint); font-weight: 600; margin-bottom: .5rem;
+}
+/* the rails read as a sequence: pick a name, set the run, pick the deck,
+   then narrow it. The number says so without a sentence. */
+.rail-step {
+  flex: none; display: grid; place-items: center;
+  width: 1.05rem; height: 1.05rem; border-radius: 50%;
+  background: var(--ink); color: #fff;
+  font-family: var(--font-mono); font-size: .5625rem; font-weight: 700;
+  letter-spacing: 0;
 }
 .chips-col { flex-direction: column; align-items: stretch; gap: .3rem; }
 .chips-col .chip { justify-content: flex-start; text-align: left; }
 @media (max-width: 900px) { .chips-col { flex-direction: row; align-items: center; } }
+@media (max-width: 1140px) { .mock-page .chips-col { flex-direction: row; align-items: center; } }
 .rail-card { padding-bottom: 1rem; border-bottom: 1px solid var(--rule-soft); }
+
 .rail-more > summary {
+  display: flex; align-items: center; gap: .4rem;
   cursor: pointer; list-style: none; font-size: .6875rem; text-transform: uppercase;
   letter-spacing: .07em; color: var(--muted); font-weight: 600; padding: .3rem 0;
 }
 .rail-more > summary::-webkit-details-marker { display: none; }
-.rail-more > summary::before { content: '+ '; color: var(--faint); }
-.rail-more[open] > summary::before { content: '– '; }
-.rail-more[open] { display: grid; gap: 1.1rem; }
+.rail-more > summary::after {
+  content: '+'; margin-left: auto; color: var(--faint);
+  font-family: var(--font-mono); font-size: .875rem; line-height: 1;
+}
+.rail-more[open] > summary::after { content: '\2013'; }
+.rail-more[open] { display: grid; gap: 1rem; }
+.rail-more-in { display: grid; gap: 1.1rem; }
 .rail-more .chip { font-size: .75rem; }
-.rail-count { font-size: .75rem; color: var(--faint); margin: 0; }
+.rail-count {
+  font-size: .75rem; color: var(--ink-2); margin: 0;
+  padding: .4rem .6rem; border-radius: var(--r-sm); background: var(--paper-2);
+}
+.rail-count b { font-family: var(--font-display); font-size: .9375rem; }
+.rail-reset {
+  justify-self: start; font: inherit; font-family: var(--font-text);
+  font-size: .75rem; font-weight: 600; color: var(--muted);
+  background: none; border: 1px solid var(--rule); border-radius: 999px;
+  padding: .25rem .7rem; cursor: pointer;
+}
+.rail-reset:hover { color: var(--ink); border-color: var(--ink); }
+
+/* ── a domain wears its task colour from the team page ────────────────────
+   One hue per domain, --c, set on the chip by mock.js from the palette in
+   base.css. At rest the hue is a dot; pressed, it fills the chip. */
+.chip-dom { display: inline-flex; align-items: center; gap: .45rem; }
+.chip-dom::before {
+  content: ''; flex: none; width: .48rem; height: .48rem; border-radius: 50%;
+  background: var(--c, var(--faint));
+}
+.chip-dom[aria-pressed="true"] {
+  background: var(--c, var(--ink)); border-color: var(--c, var(--ink)); color: #fff;
+}
+.chip-dom[aria-pressed="true"]::before { background: rgba(255,255,255,.85); }
+.chip-dom[aria-pressed="true"] .c { color: rgba(255,255,255,.65); }
+/* the same dot on the question's own domain pill, so the colour means one
+   thing wherever it turns up on this page */
+.pill-domc { display: inline-flex; align-items: center; gap: .35rem; }
+.pill-domc::before {
+  content: ''; flex: none; width: .45rem; height: .45rem; border-radius: 50%;
+  background: var(--c, var(--faint));
+}
+
+/* ── what you are practising, said once, above the bench ──────────────────
+   The rails hold the switches; this strip holds the answer, so you never have
+   to read a rail to know what the deck is. Each tag clears its own filter. */
+.runstrip {
+  display: flex; align-items: center; flex-wrap: wrap; gap: .4rem;
+  margin: 0 0 .85rem; padding: 0 .25rem;
+}
+.runstrip .rs-lab {
+  font-size: .6875rem; text-transform: uppercase; letter-spacing: .07em;
+  color: var(--faint); font-weight: 600;
+}
+.runstrip .rs-n { font-family: var(--font-display); font-weight: 600; font-size: .9375rem; letter-spacing: -.01em; }
+.runstrip .rs-tag {
+  font: inherit; font-family: var(--font-text); font-size: .75rem; font-weight: 600;
+  display: inline-flex; align-items: center; gap: .35rem;
+  border: 1px solid var(--rule-soft); background: var(--paper-2); color: var(--ink-2);
+  border-radius: 999px; padding: .17rem .62rem;
+}
+.runstrip button.rs-tag { cursor: pointer; }
+.runstrip button.rs-tag::after { content: '\00d7'; color: var(--faint); font-size: .875rem; line-height: 1; }
+.runstrip button.rs-tag:hover { border-color: var(--ink); color: var(--ink); }
+.runstrip .rs-tag .rs-dot { width: .45rem; height: .45rem; border-radius: 50%; background: var(--c, var(--faint)); flex: none; }
+.runstrip .rs-none { font-size: .75rem; color: var(--faint); }
+@media (max-width: 1140px) { .runstrip { margin-top: .25rem; } }
 
 .stage .panel { padding: 1.25rem 1.25rem 2rem; }
 .stage .bubble { margin-top: -1rem; }

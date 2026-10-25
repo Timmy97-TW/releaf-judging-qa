@@ -64,6 +64,11 @@
     guestgo:{ en: 'Use this', zh: '就用這個' },
     pickme: { en: 'Pick your name', zh: '選擇你的名字' },
     lrun:   { en: 'Run', zh: '一局' },
+    resetf: { en: 'Clear the filters', zh: '清除篩選' },
+    rslab:  { en: 'Practising', zh: '正在練' },
+    rsq:    { en: 'questions', zh: '題' },
+    rsall:  { en: 'the whole bank, nothing filtered out', zh: '整個題庫，沒有篩掉任何題' },
+    deckn:  { en: 'in this deck', zh: '題在這組' },
     ldeck:  { en: 'Deck', zh: '題庫' },
     lnarrow:{ en: 'Narrow it down', zh: '再縮小範圍' },
     ldom:   { en: 'Domain', zh: '領域' },
@@ -76,6 +81,21 @@
     imghint:{ en: 'If copying is blocked, download it — or right-click the card and copy the image.',
               zh: '如果不能複製，就用下載——或是在卡片上按右鍵複製圖片。' }
   };
+
+  /* One colour per domain, read out of base.css, where it was lifted from the
+     team page's task palette. Read it from the stylesheet rather than repeat
+     the hexes here, so the two never drift apart. */
+  var DOM_C = {};
+  (function () {
+    var cs = getComputedStyle(document.documentElement);
+    var ids = ['measurement', 'wetlab', 'registry', 'plant', 'hardware',
+               'biomanufacturing', 'drylab', 'ihp', 'entrepreneurship'];
+    for (var i = 0; i < ids.length; i++) {
+      var v = (cs.getPropertyValue('--dom-' + ids[i]) || '').trim();
+      if (v) DOM_C[ids[i]] = v;
+    }
+  })();
+  function domColor(id) { return DOM_C[id] || '#6e6e73'; }
 
   var SEATS = {
     plant: { en: 'Plants', zh: '植物', n: 1 },
@@ -284,7 +304,11 @@
     if (state.len && pool.length > state.len) pool = pool.slice(0, state.len);
     state.deck = pool;
     state.i = -1;
-    el('deckn').textContent = pool.length + ' ' + S.p(L.deck);
+    el('deckn').innerHTML = '<b>' + pool.length + '</b> ' + S.esc(S.p(L.deckn));
+    drawRunStrip();
+    /* the counter above the question follows the new deck straight away, so it
+       never contradicts the strip that has just been redrawn */
+    el('sc-n').textContent = (state.i + 1) + '/' + pool.length;
     drawProg();
   }
 
@@ -416,7 +440,7 @@
     el('meta').innerHTML =
       '<span class="pill ' + (q.tier === 'A' ? 'pill-a' : 'pill-b') + '">' + q.tier + '</span>' +
       '<span class="pill">' + S.esc(typeName(q.type)) + '</span>' +
-      '<span class="pill">' + S.esc(domName(q.dom)) + '</span>' +
+      '<span class="pill pill-domc" style="--c:' + domColor(q.dom) + '">' + S.esc(domName(q.dom)) + '</span>' +
       (q.deep ? '<span class="pill pill-deep">' + (S.lang === 'zh' ? '深水區' : 'Deep end') + '</span>' : '') +
       (q.author ? '<span class="pill pill-author">' + S.esc(S.lang === 'zh' && q.author_zh ? q.author_zh : q.author) +
         (S.lang === 'zh' ? '' : ' asks') + '</span>' : '');
@@ -886,9 +910,12 @@
   function chips(elid, items, cur, attr) {
     var h = '';
     for (var i = 0; i < items.length; i++) {
-      h += '<button class="chip" ' + attr + '="' + items[i].id + '" aria-pressed="' + (cur === items[i].id) + '">' +
-        S.esc(S.p({ en: items[i].en, zh: items[i].zh }).replace(/&amp;/g, '&')) +
-        (items[i].c !== undefined ? '<span class="c">' + items[i].c + '</span>' : '') + '</button>';
+      var it = items[i];
+      h += '<button class="chip' + (it.k ? ' ' + it.k : '') + '" ' + attr + '="' + it.id + '"' +
+        (it.col ? ' style="--c:' + it.col + '"' : '') +
+        ' aria-pressed="' + (cur === it.id) + '">' +
+        S.esc(S.p({ en: it.en, zh: it.zh }).replace(/&amp;/g, '&')) +
+        (it.c !== undefined ? '<span class="c">' + it.c + '</span>' : '') + '</button>';
     }
     el(elid).innerHTML = h;
   }
@@ -901,7 +928,7 @@
     var ds = [{ id: 'all', en: 'All domains', zh: '全部領域' }];
     for (i = 0; i < META.domains.length; i++) {
       var d = META.domains[i];
-      if (dc[d.id]) ds.push({ id: d.id, en: d.en, zh: d.zh, c: dc[d.id] });
+      if (dc[d.id]) ds.push({ id: d.id, en: d.en, zh: d.zh, c: dc[d.id], k: 'chip-dom', col: domColor(d.id) });
     }
     chips('doms', ds, state.dom, 'data-d');
     var tc = {};
@@ -912,6 +939,33 @@
       if (tc[t.id]) ts.push({ id: t.id, en: t.en, zh: t.zh, c: tc[t.id] });
     }
     chips('types', ts, state.type, 'data-t');
+    el('resetf').hidden = (state.dom === 'all' && state.type === 'all');
+  }
+
+  /* What the deck is, said once above the bench, so the answer never lives
+     only in a rail. Each tag drops its own filter. */
+  function drawRunStrip() {
+    var lenName = '', i;
+    for (i = 0; i < LENS.length; i++) if (LENS[i].id === state.len) lenName = S.p({ en: LENS[i].en, zh: LENS[i].zh });
+    var modeName = '';
+    for (i = 0; i < MODES.length; i++) if (MODES[i].id === state.mode) modeName = S.p({ en: MODES[i].en, zh: MODES[i].zh });
+
+    var h = '<span class="rs-lab">' + S.p(L.rslab) + '</span>' +
+            '<span class="rs-n">' + state.deck.length + '</span>' +
+            '<span class="rs-lab">' + S.p(L.rsq) + '</span>' +
+            '<span class="rs-tag">' + S.esc(modeName) + '</span>' +
+            '<span class="rs-tag">' + S.esc(lenName) + '</span>';
+    if (state.dom !== 'all') {
+      h += '<button class="rs-tag" type="button" data-drop="dom" style="--c:' + domColor(state.dom) + '">' +
+           '<i class="rs-dot"></i>' + S.esc(domName(state.dom)) + '</button>';
+    }
+    if (state.type !== 'all') {
+      h += '<button class="rs-tag" type="button" data-drop="type">' + S.esc(typeName(state.type)) + '</button>';
+    }
+    if (state.dom === 'all' && state.type === 'all') {
+      h += '<span class="rs-none">' + S.p(L.rsall) + '</span>';
+    }
+    el('runstrip').innerHTML = h;
   }
 
   function drawShaky() {
@@ -1039,6 +1093,25 @@
     var b = e.target.closest('.chip'); if (!b) return;
     state.type = b.getAttribute('data-t'); drawChips(); buildDeck();
   });
+  el('resetf').addEventListener('click', function () {
+    state.dom = 'all'; state.type = 'all'; drawChips(); buildDeck();
+  });
+  el('runstrip').addEventListener('click', function (e) {
+    var b = e.target.closest('[data-drop]'); if (!b) return;
+    state[b.getAttribute('data-drop')] = 'all';
+    drawChips(); buildDeck();
+  });
+
+  /* The filters live in the right margin on a wide screen, where there is room
+     to leave them open; stacked above the stage on a narrow one, they fold
+     away so the bench is not twenty chips down the page. */
+  (function () {
+    var wide = window.matchMedia('(min-width: 1141px)');
+    function sync() { el('moref').open = wide.matches; }
+    if (wide.addEventListener) wide.addEventListener('change', sync);
+    else if (wide.addListener) wide.addListener(sync);
+    sync();
+  })();
   el('shaky').addEventListener('click', function (e) {
     var b = e.target.closest('[data-clear]'); if (!b) return;
     var at = state.shaky.indexOf(b.getAttribute('data-clear'));
@@ -1069,6 +1142,7 @@
     el('l-narrow').textContent = S.p(L.lnarrow);
     el('l-dom').textContent = S.p(L.ldom);
     el('l-type').textContent = S.p(L.ltype);
+    el('resetf').textContent = S.p(L.resetf);
     el('againbtn').textContent = S.p(L.again);
     el('copyimg').textContent = S.p(L.copyimg);
     el('dlimg').textContent = S.p(L.dlimg);

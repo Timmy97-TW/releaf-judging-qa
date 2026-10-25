@@ -42,6 +42,20 @@
   --jam-orange: #e35a1b;
   --jam-ink: #0b1a3a;
 
+  /* Domain colours, taken straight off the team page's task palette
+     (LABELS in the wiki's assets/data/roster.js, team/#member-list), so a
+     domain in this trainer wears the colour its task wears on the member
+     list. The comment after each line is the task it was lifted from. */
+  --dom-measurement:      #3b2f8f;   /* Lab */
+  --dom-wetlab:           #7b1e3a;   /* Cloning */
+  --dom-registry:         #3f9d86;   /* Peptide Design */
+  --dom-plant:            #4a7c3f;   /* Plant */
+  --dom-hardware:         #a5673c;   /* Hardware */
+  --dom-biomanufacturing: #0e6b78;   /* Bioreactor */
+  --dom-drylab:           #4a6fa5;   /* Model */
+  --dom-ihp:              #e0703f;   /* Outreach */
+  --dom-entrepreneurship: #a85a8a;   /* Entrepreneurship */
+
   --r-sm: 10px;
   --r: 14px;
   --r-lg: 20px;
