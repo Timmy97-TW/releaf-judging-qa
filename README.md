@@ -32,25 +32,38 @@ Static HTML and vanilla JavaScript: no build step to view it, no server, works o
 All of it is drawn from the frozen wiki at [2026.igem.wiki/gems-taiwan](https://2026.igem.wiki/gems-taiwan/).
 Nothing is invented. Where the wiki is silent, the answer says so.
 
-## The nine pages
+Students add questions through the team's shared
+[online question bank](https://docs.google.com/spreadsheets/d/1_35O9ugtBM8QZ_fXBo7MaY0TEIIgdYkDs_kvEkT5soo/edit?gid=1264413978#gid=1264413978)
+— a question they were asked in practice, or one on their own page they would hate to be asked. That
+sheet is where `source/bank.json` came from, and the Question Bank page links to it at the top.
+
+## The ten pages
 
 1. **Start** — the session facts, the countdown, and five rules that decide the twenty minutes.
 2. **Facts** — searchable fact base, plus the ten numbers to know by heart, plus the honest list.
 3. **Terms** — big search, and a quiz box that keeps rotating. Space reveals, right arrow moves on.
-4. **Registry Room** — the forty-one parts we deposited, mapped across the four levels they were built
+4. **Question Bank** — all 510 questions in one searchable place, tagged by area, by kind of question,
+   and by tier, deep end or adviser. The three keywords are set larger than anything else on the card
+   because at this stage nobody says a model answer back from memory; the full answer, the likely
+   mistake and the wiki sources fold away underneath. Each question also shows the figures published on
+   the pages its answer comes from, so you can see what a judge might be pointing at while asking, and
+   any figure opens full size with its own reading. *Quiz me* hides the keywords until you have said
+   them out loud. The page links to the team's shared Google Sheet, which is where students add
+   questions they were asked or cannot answer; the 181 recorded questions came out of that sheet.
+5. **Registry Room** — the forty-one parts we deposited, mapped across the four levels they were built
    in. Click a part and the map lights its lineage while a panel shows everything on its page. Then the
    five documentation slots and a filing drill, the figures a judge can point at with every band read
    off them, the numbers that are public under the team's name, seventeen soft spots ranked by how
    little work they take to find, and a drill in the genre. Built from a live API pull, not from the wiki.
-5. **Mock Room** — a panel generated for the session, a question whose domain stays hidden until you
+6. **Mock Room** — a panel generated for the session, a question whose domain stays hidden until you
    call a seat, points, streaks, twenty-second follow-ups, and a card to post when the run ends.
-6. **Figure Room** — the same four judges, but they point at a picture. 162 figures, ten to a run,
+7. **Figure Room** — the same four judges, but they point at a picture. 162 figures, ten to a run,
    filterable by wave and by domain: two waves off the wiki and a third, 76 strong, off our own
    Registry part pages. Two modes: say what it is out loud and mark
    yourself, or pick one of four. Wrong answers go on a shaky list, and the run ends in a card.
-7. **Mic Map** — seven seats, what each one owns, ten double-dip rules, and an assignment drill.
-8. **Delivery** — the shape of a good answer, sentences worth memorising, and eleven habits that cost points.
-9. **Timeline** — the year in evidence: every dated result in the order it happened, with the gel, plate,
+8. **Mic Map** — seven seats, what each one owns, ten double-dip rules, and an assignment drill.
+9. **Delivery** — the shape of a good answer, sentences worth memorising, and eleven habits that cost points.
+10. **Timeline** — the year in evidence: every dated result in the order it happened, with the gel, plate,
    plot or dashboard it produced, filterable by track. Figures are copied into the repo so it works offline.
    Nine entries carry a date worked out from context rather than stated on the wiki; they are marked with a
    tilde, an amber dot and a note saying what the date was inferred from.

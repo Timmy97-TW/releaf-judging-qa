@@ -6,6 +6,7 @@
     { href: 'index.html',    en: 'Start',        zh: '開始' },
     { href: 'facts.html',    en: 'Facts',        zh: '事實庫' },
     { href: 'terms.html',    en: 'Terms',        zh: '術語' },
+    { href: 'bank.html',     en: 'Question Bank', zh: '題庫' },
     { href: 'registry.html', en: 'Registry',     zh: 'Registry' },
     { href: 'mock.html',     en: 'Mock Room',    zh: '模擬會場', hot: true },
     { href: 'figures.html',  en: 'Figure Room',  zh: '看圖會場', hot: true },

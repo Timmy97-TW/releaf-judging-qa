@@ -1186,3 +1186,138 @@ a.reg-mini.is-ext { cursor: pointer; }
   .reg-lb { padding: 3.5rem .75rem 1.5rem; }
   .reg-strip { grid-template-columns: repeat(auto-fill, minmax(118px, 1fr)); }
 }
+
+/* ════ Question Bank ══════════════════════════════════════════════════════
+   The keywords are the point of this page. At this stage nobody holds a
+   paragraph in their head under question, so the three keywords are set
+   larger than the prose and the full answer sits behind a fold. */
+
+/* bringing your own question in */
+.qb-bring {
+  display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 1.25rem 2rem;
+  align-items: center; background: var(--accent-wash); border-radius: var(--r-lg);
+  padding: 1.5rem 1.6rem;
+}
+@media (max-width: 720px) { .qb-bring { grid-template-columns: 1fr; } }
+.qb-bring h3 { color: #0f5b31; margin-bottom: .4rem; }
+.qb-bring p { margin: 0; color: #19603a; font-size: .9375rem; max-width: 62ch; }
+.qb-bring p + p { margin-top: .5rem; }
+.qb-bring .btn-accent { white-space: nowrap; }
+
+/* the tag wall */
+.qb-tags { display: grid; gap: 1.1rem; padding-bottom: .5rem; }
+.qb-tagrow > h4 {
+  font-size: .6875rem; text-transform: uppercase; letter-spacing: .07em;
+  color: var(--faint); margin-bottom: .5rem;
+}
+.qb-tagrow .chip .c { font-family: var(--font-mono); }
+.qb-reset { margin-left: auto; }
+
+/* the mode switch: how much of the answer you want on screen */
+.qb-mode { display: flex; gap: .4rem; align-items: center; flex-wrap: wrap; }
+.qb-mode .chip[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); }
+
+/* one question */
+.qb-list { display: grid; gap: .7rem; }
+.qb {
+  background: var(--paper-3); border: 1px solid var(--rule-soft);
+  border-radius: var(--r-lg); padding: 1.15rem 1.25rem;
+  scroll-margin-top: calc(var(--nav-h) + 90px);
+}
+.qb.lit { background: #fff; border-color: var(--accent); box-shadow: var(--shadow-1); }
+.qb-top { display: flex; gap: .4rem; flex-wrap: wrap; align-items: center; margin-bottom: .55rem; }
+.qb-top .qid { font-family: var(--font-mono); font-size: .6875rem; color: var(--faint); margin-left: auto; }
+.qb-q {
+  font-family: var(--font-display); font-weight: 600; letter-spacing: -.018em;
+  font-size: 1.125rem; line-height: 1.3; margin: 0;
+}
+
+/* the three keywords, set as the largest thing in the card */
+.qb-kw { list-style: none; margin: .9rem 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: .45rem; }
+.qb-kw li {
+  display: inline-flex; align-items: baseline; gap: .45rem;
+  background: var(--accent-wash); color: var(--accent-deep);
+  border-radius: 10px; padding: .4rem .75rem;
+  font-size: 1.0625rem; font-weight: 600; letter-spacing: -.012em; line-height: 1.3;
+}
+.qb-kw li b { font-family: var(--font-mono); font-size: .75rem; font-weight: 500; opacity: .5; }
+html:lang(zh) .qb-kw li { font-size: 1.0625rem; }
+
+/* quiz mode: say them out loud before you look */
+.qb-mask {
+  font: inherit; font-family: var(--font-text); font-size: .875rem; font-weight: 500;
+  margin-top: .9rem; width: 100%; text-align: left; cursor: pointer; color: var(--muted);
+  background: repeating-linear-gradient(135deg, var(--paper-2) 0 10px, #fff 10px 20px);
+  border: 1px dashed var(--rule); border-radius: 10px; padding: .75rem .85rem;
+}
+.qb-mask:hover { border-color: var(--accent); color: var(--accent-deep); }
+
+/* the full answer, folded away by default */
+.qb-more { margin-top: .85rem; }
+.qb-more > summary {
+  cursor: pointer; list-style: none; font-size: .8125rem; font-weight: 600;
+  color: var(--muted); display: inline-flex; gap: .35rem; align-items: center;
+}
+.qb-more > summary::-webkit-details-marker { display: none; }
+.qb-more > summary::before { content: '+'; font-family: var(--font-mono); color: var(--faint); }
+.qb-more[open] > summary::before { content: '−'; }
+.qb-more > summary:hover { color: var(--ink); }
+.qb-body { border-top: 1px solid var(--rule-soft); margin-top: .75rem; padding-top: .9rem; }
+.qb-body .lab {
+  font-size: .6875rem; text-transform: uppercase; letter-spacing: .06em;
+  color: var(--faint); font-weight: 600; margin-bottom: .35rem;
+}
+.qb-body .a-text { font-size: 1rem; line-height: 1.6; margin: 0; color: var(--ink-2); }
+.qb-body .trap {
+  background: var(--red-wash); color: #8e2a23; border-radius: var(--r-sm);
+  padding: .65rem .85rem; font-size: .875rem; margin-top: .9rem;
+}
+.qb-body .trap b {
+  font-size: .6875rem; text-transform: uppercase; letter-spacing: .05em;
+  display: block; margin-bottom: .15rem;
+}
+.qb-srcs { display: flex; gap: .5rem; flex-wrap: wrap; align-items: center; margin-top: .9rem; }
+
+/* the figures a judge could point at while asking this */
+.qb-figs { margin-top: 1.1rem; }
+.qb-figgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(132px, 1fr)); gap: .6rem; }
+.qb-figbtn {
+  border: 0; padding: 0; background: none; cursor: pointer; display: grid; gap: .35rem; text-align: left;
+}
+.qb-figbtn img {
+  display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: contain;
+  background: #fff; border: 1px solid var(--rule-soft); border-radius: var(--r-sm); padding: 4px;
+}
+.qb-figbtn:hover img { border-color: var(--accent); }
+.qb-figbtn span { font-size: .75rem; color: var(--muted); line-height: 1.35; }
+.qb-figmore { margin-top: .6rem; }
+
+/* the lightbox, with the figure's own reading beside it */
+.qb-light { max-width: min(96vw, 1200px); padding: 1.2rem; }
+.qb-light img {
+  display: block; width: 100%; height: auto; max-height: 68vh; object-fit: contain;
+  background: #fff; border: 1px solid var(--rule-soft); border-radius: var(--r-sm);
+}
+.qb-light h3 { font-size: 1.0625rem; margin: 1rem 0 .5rem; }
+.qb-light .a-text { font-size: .9375rem; line-height: 1.6; color: var(--ink-2); margin: 0; }
+
+/* recorded questions, the ones judges actually asked */
+#recorded { scroll-margin-top: calc(var(--nav-h) + 90px); }
+.qb-rec { display: grid; gap: .5rem; }
+.rrow {
+  background: var(--paper-3); border: 1px solid var(--rule-soft);
+  border-radius: var(--r); padding: .85rem 1rem;
+}
+.rrow .rq { font-size: 1rem; line-height: 1.45; }
+.rrow .rb { display: flex; gap: .5rem; flex-wrap: wrap; align-items: center; margin-top: .55rem; }
+
+/* The same domain colour as .pill-domc above, but as an element of its own, for
+   the places a pill's ::before cannot reach: a filter chip and a group heading. */
+.dot-dom {
+  width: .5rem; height: .5rem; border-radius: 50%; flex: none; display: inline-block;
+  background: var(--c, var(--faint));
+}
+.chip .dot-dom { margin-right: .35rem; vertical-align: 0; }
+.chip[aria-pressed="true"] .dot-dom { box-shadow: 0 0 0 1.5px rgba(255,255,255,.55); }
+.qb-list { border-left: 2px solid var(--c, var(--rule-soft)); padding-left: .85rem; }
+.fact-group > h3 .dot-dom { width: .6rem; height: .6rem; }

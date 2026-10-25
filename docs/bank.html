@@ -1,0 +1,527 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Question Bank · ReLEAF Judging Trainer</title>
+<meta name="description" content="Every question written for the GEMS Taiwan judging session: three keywords first, then the full answer, then the figures a judge could point at while asking it.">
+<link rel="stylesheet" href="assets/css/base.css?v=202610251205">
+<link rel="stylesheet" href="assets/css/pages.css?v=202610251205">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M4 20c0-8 5.5-14.5 16-15.5C19.5 14 14 20 4 20Z' fill='%231a7f45'/%3E%3C/svg%3E">
+</head>
+<body>
+
+<header class="hero wrap">
+  <p class="eyebrow" data-en="09 · Question Bank" data-zh="09 · 題庫"></p>
+  <h1 data-en="Three keywords, not a paragraph" data-zh="三個關鍵字，不是一整段"></h1>
+  <p class="lede" style="max-width:60ch"
+     data-en="Nobody memorises a model answer and says it back under question. What you can carry into the room is three keywords per question — the number, the method, the limit. Hit those three out loud and the answer builds itself around them."
+     data-zh="沒有人能把一段示範答案背下來，然後在被問的時候原封不動講出來。你真正能帶進會場的，是每題三個關鍵字——數字、方法、限制。把那三個講出口，答案就會自己長出來。"></p>
+</header>
+
+<section class="wrap">
+  <div class="qb-bring">
+    <div>
+      <h3 data-en="Bring your own questions in" data-zh="把你自己的問題帶進來"></h3>
+      <p data-en="Asked something in practice that nobody could answer? Found a question in your own page that you would hate to be asked? Put it in the shared sheet. Rows there get written up with keywords and an answer and come back into this bank."
+         data-zh="練習時被問到一題沒人答得出來？在自己的頁面上看到一個你最怕被問的問題？把它寫進共用表單。表單裡的題目會被整理成關鍵字和答案，再回到這個題庫裡。"></p>
+      <p data-en="The 181 recorded questions at the bottom of this page came out of that same sheet."
+         data-zh="這一頁最下面那 181 題實錄題目，就是從同一份表單整理出來的。"></p>
+    </div>
+    <a class="btn btn-accent" target="_blank" rel="noopener"
+       href="https://docs.google.com/spreadsheets/d/1_35O9ugtBM8QZ_fXBo7MaY0TEIIgdYkDs_kvEkT5soo/edit?gid=1264413978#gid=1264413978"
+       data-en="Open the online question bank ↗" data-zh="開啟線上題庫 ↗"></a>
+  </div>
+</section>
+
+<div class="bar">
+  <div class="wrap">
+    <input class="search" id="q" type="search" autocomplete="off"
+           data-ph-en="Search questions, keywords and answers: membrane, replicate, 6.3 U/mg, ethylene…"
+           data-ph-zh="搜尋題目、關鍵字與答案：薄膜、重複數、6.3 U/mg、乙烯……">
+    <div class="bar-row">
+      <div class="qb-mode" id="modes"></div>
+      <span class="count-l" id="count"></span>
+    </div>
+  </div>
+</div>
+
+<section class="wrap" style="padding:1.5rem 0 0">
+  <div class="qb-tags">
+    <div class="qb-tagrow">
+      <h4 data-en="Area" data-zh="領域"></h4>
+      <div class="chips" id="doms"></div>
+    </div>
+    <div class="qb-tagrow">
+      <h4 data-en="Kind of question" data-zh="題型"></h4>
+      <div class="chips" id="types"></div>
+    </div>
+    <div class="qb-tagrow">
+      <h4 data-en="Narrow it further" data-zh="再篩一層"></h4>
+      <div class="chips" id="flags"></div>
+    </div>
+  </div>
+</section>
+
+<section class="wrap" style="padding-top:1.75rem;border-top:0">
+  <div id="out"></div>
+  <p class="note" id="empty" hidden
+     data-en="Nothing matches. Try a shorter word, clear a tag, or search the recorded bank at the bottom of the page."
+     data-zh="沒有符合的題目。試試更短的詞、取消一個標籤，或改搜尋頁面最下面的實錄題庫。"></p>
+</section>
+
+<section class="wrap" id="recorded">
+  <div class="sec-head">
+    <h2 data-en="What judges actually asked other teams" data-zh="評審真正問過其他隊伍的問題"></h2>
+    <p data-en="181 questions the team wrote down from judging sessions between 2021 and 2025, kept in the words they were asked in. No keywords on these — they are here so you can hear the shape of a real question, and so you can see what a row in the sheet turns into."
+       data-zh="181 題，是隊伍從 2021 到 2025 年的評審會談中抄下來的，保留當時被問的原話。這些沒有關鍵字——放在這裡是為了讓你聽見真實問題的形狀，也讓你看到表單裡的一列會變成什麼。"></p>
+  </div>
+  <input class="search" id="rq" type="search" autocomplete="off" style="margin-bottom:1rem"
+         data-ph-en="Search the recorded bank: scale, replicates, validate, cost…"
+         data-ph-zh="搜尋實錄題庫：scale、replicates、validate、cost……">
+  <div class="bar-row" style="margin-bottom:1.25rem">
+    <div class="chips" id="rsheets"></div>
+    <span class="count-l" id="rcount"></span>
+  </div>
+  <div class="qb-rec" id="rec"></div>
+</section>
+
+<div class="modal" id="light" hidden>
+  <div class="modal-in qb-light" role="dialog" aria-modal="true">
+    <button class="modal-x" id="lightx" type="button" aria-label="Close">&times;</button>
+    <img id="limg" alt="">
+    <h3 id="lask"></h3>
+    <div class="qb-kw" id="lkw" style="margin:.6rem 0"></div>
+    <p class="a-text" id="la"></p>
+    <div class="meta" id="lsrc" style="margin-top:.9rem"></div>
+  </div>
+</div>
+
+<script src="assets/js/site.js?v=202610251205"></script>
+<script src="data/meta.js?v=202610251205"></script>
+<script src="data/bank.js?v=202610251205"></script>
+<script src="data/figures.js?v=202610251205"></script>
+<script src="data/recorded.js?v=202610251205"></script>
+<script>
+(function () {
+  'use strict';
+  var S = window.Site;
+
+  /* ── which figures belong to a question ───────────────────────────────────
+     A question names the wiki pages its answer comes from; a figure names the
+     page it is published on. Same page is a real link, so that is tier one,
+     with the figures from the question's own subject area sorted to the front.
+     Only when a question's pages carry no figure at all do we fall back to the
+     area, which is all the Registry part figures have in common with the parts
+     questions. The two cases are labelled differently on the card. */
+  var FAM = {
+    measurement:      ['measurement', 'protein'],
+    hardware:         ['hardware', 'measurement'],
+    ihp:              ['ihp', 'education', 'dataphys', 'sustainability'],
+    biomanufacturing: ['biomanufacturing', 'hardware'],
+    entrepreneurship: ['business', 'law', 'sustainability'],
+    plant:            ['plant', 'geo'],
+    wetlab:           ['cloning', 'protein', 'measurement'],
+    registry:         ['registry', 'cloning', 'protein'],
+    drylab:           ['software', 'model', 'geo', 'dataphys']
+  };
+  var FIGS = (window.FIGURES && FIGURES.items) || [];
+  var byId = {}, byPage = {}, byDom = {}, i;
+  for (i = 0; i < FIGS.length; i++) {
+    var f = FIGS[i];
+    byId[f.id] = f;
+    var pg = String(f.page || '').split('#')[0].trim();
+    if (pg) (byPage[pg] = byPage[pg] || []).push(f);
+    (byDom[f.dom] = byDom[f.dom] || []).push(f);
+  }
+
+  function figsFor(q) {
+    var fam = FAM[q.dom] || [], seen = {}, hit = [], j, k;
+    for (j = 0; j < q.pages.length; j++) {
+      var list = byPage[String(q.pages[j]).split('#')[0].trim()] || [];
+      for (k = 0; k < list.length; k++) {
+        if (!seen[list[k].id]) { seen[list[k].id] = 1; hit.push(list[k]); }
+      }
+    }
+    if (hit.length) {
+      hit.sort(function (a, b) {
+        var da = fam.indexOf(a.dom), db = fam.indexOf(b.dom);
+        if (da < 0) da = 99;
+        if (db < 0) db = 99;
+        return da - db || (a.id < b.id ? -1 : 1);
+      });
+      return { kind: 'page', items: hit };
+    }
+    for (j = 0; j < fam.length; j++) {
+      var dl = byDom[fam[j]] || [];
+      for (k = 0; k < dl.length; k++) if (!seen[dl[k].id]) { seen[dl[k].id] = 1; hit.push(dl[k]); }
+    }
+    return { kind: 'area', items: hit };
+  }
+
+  /* ── state ───────────────────────────────────────────────────────────── */
+  function param(n) { return (location.search.match(new RegExp('[?&]' + n + '=([^&]+)')) || [])[1] || ''; }
+
+  var state = {
+    q: decodeURIComponent(param('q') || ''),
+    doms: {}, types: {},
+    tierA: false, deep: false, kyle: false,
+    mode: S.load('bank-mode', 'kw'),
+    rq: '', rsheet: 'all'
+  };
+  if (param('dom')) state.doms[param('dom')] = 1;
+  if (param('type')) state.types[param('type')] = 1;
+  if (param('deep')) state.deep = true;
+  if (['kw', 'quiz', 'all'].indexOf(state.mode) < 0) state.mode = 'kw';
+
+  var revealed = {};                 // question ids whose keywords are showing in quiz mode
+  var figShown = {};                 // question ids whose figure strip has been built
+  var qEl = document.getElementById('q');
+  qEl.value = state.q;
+
+  function domName(id) {
+    for (var n = 0; n < META.domains.length; n++) if (META.domains[n].id === id) return S.p(META.domains[n]);
+    return id;
+  }
+  function typeName(id) {
+    for (var n = 0; n < META.types.length; n++) if (META.types[n].id === id) return S.p(META.types[n]);
+    return id;
+  }
+  function anyKey(o) { for (var k in o) if (o[k]) return true; return false; }
+
+  function hay(q) {
+    return [q.q_en, q.q_zh, q.a_en, q.a_zh, (q.kw_en || []).join(' '), (q.kw_zh || []).join(' '),
+            q.trap_en, q.trap_zh, q.pages.join(' '), q.dom, q.type, q.author || ''].join(' ').toLowerCase();
+  }
+  function mark(text, needle) {
+    var t = S.esc(text);
+    if (!needle) return t;
+    try {
+      return t.replace(new RegExp('(' + needle.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'ig'), '<mark>$1</mark>');
+    } catch (e) { return t; }
+  }
+
+  function pass(q) {
+    if (anyKey(state.doms) && !state.doms[q.dom]) return false;
+    if (anyKey(state.types) && !state.types[q.type]) return false;
+    if (state.tierA && q.tier !== 'A') return false;
+    if (state.deep && !q.deep) return false;
+    if (state.kyle && !q.author) return false;
+    var needle = state.q.toLowerCase().trim();
+    if (needle && hay(q).indexOf(needle) < 0) return false;
+    return true;
+  }
+
+  /* ── the card ────────────────────────────────────────────────────────── */
+  function kwHtml(list, needle) {
+    var h = '', n;
+    for (n = 0; n < list.length; n++) {
+      h += '<li><b>' + (n + 1) + '</b>' + mark(list[n], needle) + '</li>';
+    }
+    return h;
+  }
+
+  function card(q) {
+    var zh = S.lang === 'zh', needle = state.q.toLowerCase().trim();
+    var tags = '<span class="pill pill-domc" style="--c:var(--dom-' + q.dom + ')">' +
+                 S.esc(domName(q.dom)) + '</span>' +
+               '<span class="pill">' + S.esc(typeName(q.type)) + '</span>';
+    if (q.tier === 'A') tags += '<span class="pill pill-line">' + (zh ? 'A 級' : 'tier A') + '</span>';
+    if (q.deep) tags += '<span class="pill pill-deep">' + (zh ? '深水區' : 'deep end') + '</span>';
+    if (q.author) tags += '<span class="pill pill-author">' + S.esc(zh ? (q.author_zh || q.author) : q.author) + '</span>';
+
+    var kws = S.t(q, 'kw') || [];
+    var body = '';
+    if (state.mode === 'quiz' && !revealed[q.id]) {
+      body = '<button class="qb-mask" type="button" data-rev="' + q.id + '">' +
+        (zh ? '先出聲說出三個關鍵字，再點開對答案' : 'Say your three keywords out loud, then tap to check') + '</button>';
+    } else {
+      body = '<ol class="qb-kw">' + kwHtml(kws, needle) + '</ol>';
+    }
+
+    var open = state.mode === 'all' ? ' open' : '';
+    return '<article class="qb" id="' + q.id + '">' +
+      '<div class="qb-top">' + tags + '<span class="qid">' + q.id + '</span></div>' +
+      '<p class="qb-q">' + mark(S.t(q, 'q'), needle) + '</p>' +
+      body +
+      '<details class="qb-more" data-q="' + q.id + '"' + open + '>' +
+        '<summary>' + (zh ? '完整答案、容易犯的錯、相關圖' : 'Full answer, the likely mistake, the figures') + '</summary>' +
+        '<div class="qb-body" data-body="' + q.id + '">' +
+          '<p class="lab">' + (zh ? '完整答案' : 'The full answer') + '</p>' +
+          '<p class="a-text">' + mark(S.t(q, 'a'), needle) + '</p>' +
+          (S.t(q, 'trap') ? '<div class="trap"><b>' + (zh ? '容易犯的錯' : 'Likely mistake') + '</b>' +
+            S.esc(S.t(q, 'trap')) + '</div>' : '') +
+          '<div class="qb-figs" data-figs="' + q.id + '"></div>' +
+          '<div class="qb-srcs">' + S.srcLink(q.pages.join('; ')) + '</div>' +
+        '</div>' +
+      '</details>' +
+      '</article>';
+  }
+
+  var FIGCAP = 4;
+  function figStrip(q, all) {
+    var r = figsFor(q), zh = S.lang === 'zh';
+    if (!r.items.length) return '';
+    var show = all ? r.items : r.items.slice(0, FIGCAP);
+    var lab = r.kind === 'page'
+      ? (zh ? '同一頁上的圖' : 'Figures on the pages this answer comes from')
+      : (zh ? '同一領域的圖' : 'Figures from the same area');
+    var h = '<p class="lab">' + lab + ' <span class="src">' + show.length + ' / ' + r.items.length + '</span></p>' +
+      '<div class="qb-figgrid">';
+    for (var n = 0; n < show.length; n++) {
+      var f = show[n];
+      h += '<button class="qb-figbtn" type="button" data-fig="' + f.id + '">' +
+        '<img loading="lazy" decoding="async" src="assets/img/' + (f.dir || 'fq') + '/' + f.img + '" alt="">' +
+        '<span>' + S.esc(S.t(f, 'ask')) + '</span></button>';
+    }
+    h += '</div>';
+    if (!all && r.items.length > FIGCAP) {
+      h += '<div class="qb-figmore"><button class="btn btn-ghost btn-sm" type="button" data-more="' + q.id + '">' +
+        (zh ? '顯示全部 ' + r.items.length + ' 張' : 'Show all ' + r.items.length) + '</button></div>';
+    }
+    return h;
+  }
+
+  /* ── chips ───────────────────────────────────────────────────────────── */
+  function drawChips() {
+    var zh = S.lang === 'zh', h, n, d, t, c = {}, ct = {};
+    for (n = 0; n < QUESTIONS.length; n++) {
+      c[QUESTIONS[n].dom] = (c[QUESTIONS[n].dom] || 0) + 1;
+      ct[QUESTIONS[n].type] = (ct[QUESTIONS[n].type] || 0) + 1;
+    }
+
+    h = '<button class="chip" data-d="all" aria-pressed="' + !anyKey(state.doms) + '">' +
+        (zh ? '全部' : 'All') + '<span class="c">' + QUESTIONS.length + '</span></button>';
+    for (n = 0; n < META.domains.length; n++) {
+      d = META.domains[n];
+      if (!c[d.id]) continue;
+      h += '<button class="chip" data-d="' + d.id + '" aria-pressed="' + !!state.doms[d.id] + '"' +
+        ' style="--c:var(--dom-' + d.id + ')"><i class="dot-dom"></i>' +
+        S.esc(S.p(d)) + '<span class="c">' + c[d.id] + '</span></button>';
+    }
+    document.getElementById('doms').innerHTML = h;
+
+    h = '<button class="chip" data-t="all" aria-pressed="' + !anyKey(state.types) + '">' +
+        (zh ? '全部' : 'All') + '<span class="c">' + QUESTIONS.length + '</span></button>';
+    for (n = 0; n < META.types.length; n++) {
+      t = META.types[n];
+      if (!ct[t.id]) continue;
+      h += '<button class="chip" data-t="' + t.id + '" aria-pressed="' + !!state.types[t.id] + '">' +
+        S.esc(S.p(t)) + '<span class="c">' + ct[t.id] + '</span></button>';
+    }
+    document.getElementById('types').innerHTML = h;
+
+    var nA = 0, nD = 0, nK = 0;
+    for (n = 0; n < QUESTIONS.length; n++) {
+      if (QUESTIONS[n].tier === 'A') nA++;
+      if (QUESTIONS[n].deep) nD++;
+      if (QUESTIONS[n].author) nK++;
+    }
+    document.getElementById('flags').innerHTML =
+      '<button class="chip" data-f="tierA" aria-pressed="' + state.tierA + '">' +
+        (zh ? '提名與最常問的領域' : 'Nominated and most-asked areas') + '<span class="c">' + nA + '</span></button>' +
+      '<button class="chip" data-f="deep" aria-pressed="' + state.deep + '">' +
+        (zh ? '深水區' : 'Deep end') + '<span class="c">' + nD + '</span></button>' +
+      '<button class="chip" data-f="kyle" aria-pressed="' + state.kyle + '">' +
+        (zh ? '顧問出的題' : "The adviser's set") + '<span class="c">' + nK + '</span></button>' +
+      '<button class="chip qb-reset" data-f="reset">' + (zh ? '清除全部標籤' : 'Clear every tag') + '</button>';
+
+    document.getElementById('modes').innerHTML =
+      '<button class="chip" data-m="kw" aria-pressed="' + (state.mode === 'kw') + '">' +
+        (zh ? '只看關鍵字' : 'Keywords only') + '</button>' +
+      '<button class="chip" data-m="quiz" aria-pressed="' + (state.mode === 'quiz') + '">' +
+        (zh ? '考我' : 'Quiz me') + '</button>' +
+      '<button class="chip" data-m="all" aria-pressed="' + (state.mode === 'all') + '">' +
+        (zh ? '全部攤開' : 'Everything open') + '</button>';
+  }
+
+  /* ── list ────────────────────────────────────────────────────────────── */
+  function drawList() {
+    var groups = {}, order = [], shown = 0, n;
+    for (n = 0; n < QUESTIONS.length; n++) {
+      var q = QUESTIONS[n];
+      if (!pass(q)) continue;
+      if (!groups[q.dom]) { groups[q.dom] = []; order.push(q.dom); }
+      groups[q.dom].push(q); shown++;
+    }
+    order.sort(function (a, b) {
+      var ia = 99, ib = 99, m;
+      for (m = 0; m < META.domains.length; m++) {
+        if (META.domains[m].id === a) ia = m;
+        if (META.domains[m].id === b) ib = m;
+      }
+      return ia - ib;
+    });
+
+    var h = '';
+    for (n = 0; n < order.length; n++) {
+      var g = groups[order[n]];
+      var col = 'var(--dom-' + order[n] + ')';
+      h += '<div class="fact-group"><h3><i class="dot-dom" style="--c:' + col + '"></i>' +
+           S.esc(domName(order[n])) +
+           ' <span class="c">' + g.length + '</span></h3>' +
+           '<div class="qb-list" style="--c:' + col + '">';
+      for (var j = 0; j < g.length; j++) h += card(g[j]);
+      h += '</div></div>';
+    }
+    figShown = {};
+    document.getElementById('out').innerHTML = h;
+    document.getElementById('empty').hidden = shown > 0;
+    document.getElementById('count').textContent = S.lang === 'zh'
+      ? shown + ' / ' + QUESTIONS.length + ' 題'
+      : shown + ' of ' + QUESTIONS.length + ' questions';
+    if (state.mode === 'all') {
+      var bodies = document.querySelectorAll('.qb-more[open]');
+      for (n = 0; n < bodies.length; n++) fillFigs(bodies[n].getAttribute('data-q'));
+    }
+  }
+
+  var QBYID = {};
+  for (i = 0; i < QUESTIONS.length; i++) QBYID[QUESTIONS[i].id] = QUESTIONS[i];
+
+  function fillFigs(id, all) {
+    if (!id || (figShown[id] && !all)) return;
+    var host = document.querySelector('[data-figs="' + id + '"]');
+    if (!host) return;
+    host.innerHTML = figStrip(QBYID[id], !!all);
+    figShown[id] = 1;
+  }
+
+  /* ── recorded bank ───────────────────────────────────────────────────── */
+  function drawRecorded() {
+    var zh = S.lang === 'zh', R = window.RECORDED || [], n, counts = {};
+    for (n = 0; n < R.length; n++) counts[R[n].sheet || '—'] = (counts[R[n].sheet || '—'] || 0) + 1;
+    var sheets = Object.keys(counts).sort(function (a, b) { return counts[b] - counts[a]; });
+    var h = '<button class="chip" data-s="all" aria-pressed="' + (state.rsheet === 'all') + '">' +
+      (zh ? '全部' : 'All') + '<span class="c">' + R.length + '</span></button>';
+    for (n = 0; n < sheets.length; n++) {
+      h += '<button class="chip" data-s="' + S.esc(sheets[n]) + '" aria-pressed="' + (state.rsheet === sheets[n]) + '">' +
+        S.esc(sheets[n]) + '<span class="c">' + counts[sheets[n]] + '</span></button>';
+    }
+    document.getElementById('rsheets').innerHTML = h;
+
+    var needle = state.rq.toLowerCase().trim(), out = '', shown = 0;
+    for (n = 0; n < R.length; n++) {
+      var r = R[n];
+      if (state.rsheet !== 'all' && (r.sheet || '—') !== state.rsheet) continue;
+      if (needle && [r.q, r.team, r.sheet, r.level, r.note].join(' ').toLowerCase().indexOf(needle) < 0) continue;
+      shown++;
+      var bits = '';
+      if (r.sheet) bits += '<span class="pill">' + S.esc(r.sheet) + '</span>';
+      if (r.level) bits += '<span class="pill pill-line">' + S.esc(r.level) + '</span>';
+      if (r.year) bits += '<span class="src">' + r.year + '</span>';
+      if (r.team) bits += '<span class="src">' + S.esc(r.team) + '</span>';
+      out += '<div class="rrow"><div class="rq">' + mark(r.q, needle) + '</div>' +
+        (r.note ? '<p class="a-text" style="font-size:.9375rem;margin:.5rem 0 0;color:var(--muted)">' +
+          S.esc(r.note) + '</p>' : '') +
+        '<div class="rb">' + bits + '</div></div>';
+    }
+    document.getElementById('rec').innerHTML = out;
+    document.getElementById('rcount').textContent = zh
+      ? shown + ' / ' + R.length + ' 題' : shown + ' of ' + R.length;
+  }
+
+  /* ── lightbox ────────────────────────────────────────────────────────── */
+  var light = document.getElementById('light');
+  function openFig(id) {
+    var f = byId[id];
+    if (!f) return;
+    document.getElementById('limg').src = 'assets/img/' + (f.dir || 'fq') + '/' + f.img;
+    document.getElementById('lask').textContent = S.t(f, 'ask');
+    document.getElementById('lkw').innerHTML = '<ol class="qb-kw" style="margin:0">' +
+      kwHtml(S.t(f, 'kw') || [], '') + '</ol>';
+    document.getElementById('la').textContent = S.t(f, 'a');
+    document.getElementById('lsrc').innerHTML = f.page
+      ? S.srcLink(f.page)
+      : (f.part ? '<span class="src">Registry · ' + S.esc(f.part) + '</span>' : '');
+    light.hidden = false;
+  }
+  function closeFig() { light.hidden = true; }
+  document.getElementById('lightx').addEventListener('click', closeFig);
+  light.addEventListener('click', function (e) { if (e.target === light) closeFig(); });
+
+  /* ── events ──────────────────────────────────────────────────────────── */
+  qEl.addEventListener('input', function () { state.q = qEl.value; drawList(); });
+  document.getElementById('rq').addEventListener('input', function () {
+    state.rq = this.value; drawRecorded();
+  });
+
+  document.getElementById('doms').addEventListener('click', function (e) {
+    var b = e.target.closest('.chip'); if (!b) return;
+    var d = b.getAttribute('data-d');
+    if (d === 'all') state.doms = {}; else state.doms[d] = !state.doms[d];
+    drawChips(); drawList();
+  });
+  document.getElementById('types').addEventListener('click', function (e) {
+    var b = e.target.closest('.chip'); if (!b) return;
+    var t = b.getAttribute('data-t');
+    if (t === 'all') state.types = {}; else state.types[t] = !state.types[t];
+    drawChips(); drawList();
+  });
+  document.getElementById('flags').addEventListener('click', function (e) {
+    var b = e.target.closest('.chip'); if (!b) return;
+    var f = b.getAttribute('data-f');
+    if (f === 'reset') { state.doms = {}; state.types = {}; state.tierA = state.deep = state.kyle = false; }
+    else state[f] = !state[f];
+    drawChips(); drawList();
+  });
+  document.getElementById('modes').addEventListener('click', function (e) {
+    var b = e.target.closest('.chip'); if (!b) return;
+    state.mode = b.getAttribute('data-m');
+    S.save('bank-mode', state.mode);
+    revealed = {};
+    drawChips(); drawList();
+  });
+  document.getElementById('rsheets').addEventListener('click', function (e) {
+    var b = e.target.closest('.chip'); if (!b) return;
+    state.rsheet = b.getAttribute('data-s'); drawRecorded();
+  });
+
+  document.getElementById('out').addEventListener('click', function (e) {
+    var rev = e.target.closest('[data-rev]');
+    if (rev) {
+      var rid = rev.getAttribute('data-rev');
+      revealed[rid] = 1;
+      rev.outerHTML = '<ol class="qb-kw">' + kwHtml(S.t(QBYID[rid], 'kw') || [], '') + '</ol>';
+      return;
+    }
+    var more = e.target.closest('[data-more]');
+    if (more) { fillFigs(more.getAttribute('data-more'), true); return; }
+    var fig = e.target.closest('[data-fig]');
+    if (fig) { openFig(fig.getAttribute('data-fig')); }
+  });
+  document.getElementById('out').addEventListener('toggle', function (e) {
+    var d = e.target;
+    if (d && d.tagName === 'DETAILS' && d.open) fillFigs(d.getAttribute('data-q'));
+  }, true);
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && !light.hidden) { closeFig(); return; }
+    if (e.key === '/' && document.activeElement !== qEl && document.activeElement.tagName !== 'INPUT') {
+      e.preventDefault(); qEl.focus(); qEl.select();
+    }
+  });
+
+  function draw() { drawChips(); drawList(); drawRecorded(); }
+  S.onLang(draw);
+
+  /* a link straight to one card: open it, light it up, scroll to it. The list
+     is built after the browser has already tried the hash, so we redo the jump. */
+  window.addEventListener('load', function () {
+    var id = (location.hash || '').replace('#', '');
+    if (!id) return;
+    var el = document.getElementById(id);
+    if (!el) return;
+    if (QBYID[id]) {
+      el.classList.add('lit');
+      var d = el.querySelector('.qb-more');
+      if (d) { d.open = true; fillFigs(id); }
+      el.scrollIntoView({ block: 'center' });
+    } else {
+      el.scrollIntoView();
+    }
+  });
+})();
+</script>
+</body>
+</html>
