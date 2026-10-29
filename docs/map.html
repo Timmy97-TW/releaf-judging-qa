@@ -111,6 +111,53 @@ body > .foot, body > footer { display: none; }
                 border-radius: 999px; padding: 4px 10px; cursor: pointer; color: var(--ink-2); }
 .trail button:hover { background: var(--navy); color: #fff; }
 
+
+/* practice ------------------------------------------------------------ */
+.modes { display: flex; gap: 2px; background: var(--paper-2); border-radius: 999px; padding: 2px; flex: none; }
+.modes button { font: inherit; font-size: 12px; font-weight: 600; border: 0; background: none; color: var(--muted);
+                border-radius: 999px; padding: 5px 13px; cursor: pointer; white-space: nowrap; transition: background .18s, color .18s; }
+.modes button.on { background: var(--navy); color: #fff; }
+.modes button:hover:not(.on) { color: var(--ink); }
+
+.drill { background: #fff; border: 1px solid var(--rule); border-radius: 16px; padding: 14px 15px; margin-bottom: 9px; }
+.drill .ask { font-size: 10px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: var(--faint); margin: 0 0 6px; }
+.drill .say { font-size: 14.5px; font-weight: 600; line-height: 1.5; margin: 0 0 10px; }
+.drill .mask { background: var(--paper-2); border-radius: 11px; padding: 11px 12px; color: var(--faint);
+               font-size: 13px; text-align: center; letter-spacing: .14em; }
+.drill .shown { font-size: 13.5px; font-weight: 600; line-height: 1.55; font-variant-numeric: tabular-nums; margin: 0; }
+.drill.hold { border-left: 3px solid var(--jb-green); }
+.drill.fail { border-left: 3px solid var(--jb-amber); }
+.drill.done { background: var(--paper-3); }
+.drow { display: flex; gap: 7px; margin-top: 10px; }
+.dbtn { font: inherit; font-size: 12.5px; font-weight: 600; border: 1px solid var(--rule); background: #fff;
+        color: var(--ink-2); border-radius: 999px; padding: 6px 13px; cursor: pointer; }
+.dbtn:hover { border-color: var(--navy); }
+.dbtn.go { background: var(--navy); border-color: var(--navy); color: #fff; }
+.dbtn.yes { border-color: #9FE1CB; color: #006B49; }
+.dbtn.yes:hover { background: var(--jb-mint); }
+.dbtn.no { border-color: #F7C1C1; color: #A32D2D; }
+.dbtn.no:hover { background: #FDECEA; }
+
+.opt { display: block; width: 100%; text-align: left; font: inherit; font-size: 14px; line-height: 1.5;
+       background: #fff; border: 1px solid var(--rule); border-radius: 14px; padding: 12px 14px;
+       margin-bottom: 8px; cursor: pointer; color: var(--ink); transition: border-color .18s, background .18s; }
+.opt:hover { border-color: var(--navy); }
+.opt.right { border-color: var(--jb-green); background: var(--jb-mint); }
+.opt.wrong { border-color: var(--jb-red); background: #FDECEA; }
+.opt small { display: block; font-size: 12.5px; color: var(--muted); margin-top: 4px; }
+.pwhy { font-size: 13.5px; line-height: 1.6; color: var(--ink-2); background: var(--paper-2);
+        border-radius: 14px; padding: 12px 14px; margin: 2px 0 10px; }
+.pwhy b { display: block; font-size: 12px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: var(--faint); margin-bottom: 4px; }
+.pbar { display: flex; gap: 4px; margin: 0 0 12px; }
+.pbar span { flex: 1; height: 4px; border-radius: 3px; background: var(--rule); }
+.pbar span.on { background: var(--navy); }
+.pbar span.miss { background: var(--jb-amber); }
+.pscore { display: flex; gap: 16px; align-items: baseline; margin: 0 0 12px; }
+.pscore b { font-size: 22px; font-weight: 700; font-variant-numeric: tabular-nums; letter-spacing: -.02em; }
+.pscore span { font-size: 12.5px; color: var(--muted); }
+.pnode { font-size: 12px; color: var(--muted); margin: 0 0 10px; }
+.pnode b { color: var(--ink); font-weight: 600; }
+
 #lb { position: fixed; inset: 0; z-index: 200; background: rgba(0, 6, 28, .93); display: none; align-items: center; justify-content: center; padding: 28px; cursor: zoom-out; }
 #lb.on { display: flex; }
 #lb img { max-width: 92vw; max-height: 82vh; border-radius: 14px; display: block; }
@@ -139,6 +186,7 @@ body > .foot, body > footer { display: none; }
 <div class="full">
   <div class="hdr">
     <h1 data-en="Knowledge map" data-zh="知識地圖"></h1>
+    <div class="modes" id="modes"></div>
     <div class="fsets">
       <div class="frow">
         <span class="lab" data-en="Domain" data-zh="領域"></span>
@@ -216,7 +264,7 @@ body > .foot, body > footer { display: none; }
   function zh() { return S.lang === 'zh'; }
 
   /* ---------------------------------------------------------- filters */
-  var F = { dom: {}, aw: {}, st: {}, risk: false };
+  var F = { dom: {}, aw: {}, st: {}, risk: false, weak: false };
   function anyOn(g) { for (var k in g) if (g[k]) return true; return false; }
   function pass(nd) {
     if (nd.k !== 'ev') return true;
@@ -229,6 +277,7 @@ body > .foot, body > footer { display: none; }
     }
     if (anyOn(F.st) && !F.st[fx.st]) return false;
     if (F.risk && !fx.rk) return false;
+    if (F.weak && defended(nd.id) === 4) return false;
     return true;
   }
 
@@ -255,10 +304,13 @@ body > .foot, body > footer { display: none; }
     document.getElementById('f-st').innerHTML = h;
     document.getElementById('f-lens').innerHTML =
       '<button class="fc' + (F.risk ? ' on' : '') + '" data-g="risk" data-v="1">' +
-      S.esc(zh() ? '評審一挖就會找到的' : 'A judge who digs lands here') + '</button>';
+      S.esc(zh() ? '評審一挖就會找到的' : 'A judge who digs lands here') + '</button>' +
+      '<button class="fc' + (F.weak ? ' on' : '') + '" data-g="weak" data-v="1">' +
+      S.esc(zh() ? '我還守不住的' : 'I cannot defend this yet') + '</button>';
     var more = 0;
     for (j in F.st) if (F.st[j]) more++;
     if (F.risk) more++;
+    if (F.weak) more++;
     document.getElementById('morecount').textContent = more;
     document.getElementById('morecount').style.display = more ? '' : 'none';
     summary(); paint();
@@ -273,12 +325,14 @@ body > .foot, body > footer { display: none; }
   document.querySelector('.hdr').addEventListener('click', function (ev) {
     var b = ev.target.closest('[data-g]'); if (!b) return;
     var g = b.getAttribute('data-g'), v = b.getAttribute('data-v');
-    if (g === 'risk') F.risk = !F.risk; else F[g][v] = !F[g][v];
+    if (g === 'risk') F.risk = !F.risk;
+    else if (g === 'weak') F.weak = !F.weak;
+    else F[g][v] = !F[g][v];
     chips();
     if (sel && !pass(sel)) select(null);
   });
   document.getElementById('fclear').addEventListener('click', function () {
-    F = { dom: {}, aw: {}, st: {}, risk: false }; chips();
+    F = { dom: {}, aw: {}, st: {}, risk: false, weak: false }; chips();
   });
 
   /* ------------------------------------------- the board takes a colour */
@@ -592,8 +646,7 @@ body > .foot, body > footer { display: none; }
       pitchT = Math.max(-1.0, Math.min(1.0, Math.atan2(p[1], zr || 0.001)));
     }
     document.getElementById('back').classList.toggle('on', !!sel);
-    leftColumn(sel);
-    panel.innerHTML = sel ? card(sel) : empty();
+    render();
     paint();
     try { history.replaceState(null, '', sel ? '?n=' + sel.id : location.pathname); } catch (err) {}
   }
@@ -625,11 +678,355 @@ body > .foot, body > footer { display: none; }
     S.applyStatic(sb.parentNode);
   });
 
-  S.onLang(function () { chips(); leftColumn(sel); panel.innerHTML = sel ? card(sel) : empty(); });
+
+  /* ================================================================== */
+  /* practice: three drills the Mock Room cannot run, because they need  */
+  /* the graph. Defend trains one claim four fields deep; Bridge trains  */
+  /* the concept that joins two domains; Trace walks a whole path.       */
+  /* ================================================================== */
+  var MODE = 'explore';
+  var FIELDS = [
+    { k: 'num', en: 'the number', zh: '數字' },
+    { k: 'n', en: 'n', zh: 'n' },
+    { k: 'ctl', en: 'the control', zh: '對照' },
+    { k: 'bnd', en: 'the boundary', zh: '邊界' }
+  ];
+  var MKEY = 'rqa-map-mastery', M = {};
+  try { M = JSON.parse(localStorage.getItem(MKEY) || '{}') || {}; } catch (err) { M = {}; }
+  function saveM() { try { localStorage.setItem(MKEY, JSON.stringify(M)); } catch (err) {} }
+  function defended(id) {
+    var m = M[id], c = 0, j;
+    if (!m) return 0;
+    for (j = 0; j < FIELDS.length; j++) if (m[FIELDS[j].k] === 1) c++;
+    return c;
+  }
+  function mark(id, k, ok) { (M[id] = M[id] || {})[k] = ok ? 1 : 0; saveM(); }
+
+  var MODELIST = [
+    { id: 'explore', en: 'Explore', zh: '瀏覽' },
+    { id: 'defend', en: 'Defend', zh: '守一題' },
+    { id: 'bridge', en: 'Bridge', zh: '找橋' },
+    { id: 'trace', en: 'Trace', zh: '走一條' }
+  ];
+  function modes() {
+    var h = '', j;
+    for (j = 0; j < MODELIST.length; j++) {
+      h += '<button data-m="' + MODELIST[j].id + '"' + (MODE === MODELIST[j].id ? ' class="on"' : '') + '>' +
+        S.esc(zh() ? MODELIST[j].zh : MODELIST[j].en) + '</button>';
+    }
+    document.getElementById('modes').innerHTML = h;
+  }
+  document.getElementById('modes').addEventListener('click', function (e) {
+    var b = e.target.closest('[data-m]'); if (!b) return;
+    setMode(b.getAttribute('data-m'));
+  });
+  function setMode(m) {
+    MODE = m; modes();
+    if (m === 'explore') { select(sel); return; }
+    if (m === 'defend') startDefend();
+    if (m === 'bridge') startBridge();
+    if (m === 'trace') startTrace();
+  }
+
+  function pool() {
+    var out = [], j;
+    for (j = 0; j < NODES.length; j++) if (NODES[j].k === 'ev' && pass(NODES[j])) out.push(NODES[j]);
+    return out;
+  }
+  function pick1(a) { return a[Math.floor(Math.random() * a.length)]; }
+  function shuffle(a) {
+    for (var j = a.length - 1; j > 0; j--) { var k = Math.floor(Math.random() * (j + 1)), t = a[j]; a[j] = a[k]; a[k] = t; }
+    return a;
+  }
+  function scoreLine(done, total, label) {
+    return '<div class="pscore"><b>' + done + ' / ' + total + '</b><span>' + S.esc(label) + '</span></div>';
+  }
+  function coverage() {
+    var p = pool(), full = 0, j;
+    for (j = 0; j < p.length; j++) if (defended(p[j].id) === 4) full++;
+    return [full, p.length];
+  }
+  function exportRow() {
+    return '<div class="pnode"><button class="dbtn" data-act="export">' +
+      (zh() ? '匯出進度' : 'Export progress') + '</button></div>';
+  }
+
+  /* ------------------------------------------------------------ defend */
+  var D = null;
+  function startDefend() {
+    var p = pool();
+    if (!p.length) { panel.innerHTML = '<p class="mhint">' + (zh() ? '篩選之後沒有節點了。' : 'No nodes left under these filters.') + '</p>'; figs.innerHTML = ''; return; }
+    var weak = p.filter(function (x) { return defended(x.id) < 4; });
+    var node = pick1(weak.length ? weak : p);
+    D = { node: node, step: 0, marks: [] };
+    select(node);
+  }
+  function defendLeft() {
+    var nd = D.node, h = '<p class="chead">' + (zh() ? '這個節點的圖' : 'Figures for this node') + '</p>', j;
+    var im = (nd.img || []).slice(0, 4);
+    for (j = 0; j < im.length; j++) h += '<div class="shot"><img loading="lazy" src="assets/img/' + im[j] + '" alt="" data-full="assets/img/' + im[j] + '"></div>';
+    for (j = 0; j < FIELDS.length; j++) {
+      var f = FIELDS[j], state = j < D.step ? 'done' : j === D.step ? 'now' : 'later';
+      h += '<div class="drill' + (state === 'done' ? ' done' : '') + '">' +
+        '<p class="ask">' + S.esc(zh() ? f.zh : f.en) + '</p>';
+      if (state === 'later') {
+        h += '<div class="mask">· · · · ·</div>';
+      } else {
+        h += fieldHtml(nd, f.k);
+        if (state === 'now') {
+          if (!D.revealed) {
+            h += '<div class="drow"><button class="dbtn go" data-act="reveal">' +
+              (zh() ? '我說完了，翻開' : 'Said it — reveal') + '</button></div>';
+          } else {
+            h += '<div class="drow"><button class="dbtn yes" data-act="hit">' + (zh() ? '說得出' : 'I had it') + '</button>' +
+              '<button class="dbtn no" data-act="miss">' + (zh() ? '說不出' : 'I did not') + '</button></div>';
+          }
+        }
+      }
+      h += '</div>';
+    }
+    figs.innerHTML = h; figs.scrollTop = 0;
+  }
+  function fieldHtml(nd, k) {
+    if (k === 'bnd') {
+      return '<p class="shown" style="margin-bottom:7px"><b style="color:#006B49">' + (zh() ? '成立 · ' : 'Holds · ') + '</b>' + S.esc(L(nd, 'hold')) + '</p>' +
+        '<p class="shown"><b style="color:#A85B00">' + (zh() ? '失敗 · ' : 'Fails · ') + '</b>' + S.esc(L(nd, 'fail')) + '</p>';
+    }
+    return '<p class="shown">' + S.esc(L(nd, k === 'ctl' ? 'ctl' : k)) + '</p>';
+  }
+  function defendPanel() {
+    var nd = D.node, cov = coverage(), j;
+    var h = '<span class="mtag" style="background:' + DOM[nd.dom].c + '1f;color:' + DOM[nd.dom].c + '">' +
+      (zh() ? '守一題' : 'Defend') + '</span><h2>' + S.esc(title(nd)) + '</h2>';
+    h += '<div class="pbar">';
+    for (j = 0; j < FIELDS.length; j++) {
+      var cls = j < D.step ? (D.marks[j] ? 'on' : 'miss') : '';
+      h += '<span class="' + cls + '"></span>';
+    }
+    h += '</div>';
+    h += '<p class="pnode">' + (zh()
+      ? '依序說出它的數字、n、對照與邊界。說完才翻開。'
+      : 'Say its number, its n, its control and its boundary, in that order. Reveal only after you have said it.') + '</p>';
+    if (D.step >= FIELDS.length) {
+      var got = 0;
+      for (j = 0; j < D.marks.length; j++) if (D.marks[j]) got++;
+      h += scoreLine(got, FIELDS.length, zh() ? '這個節點' : 'on this node');
+      h += '<div class="drow" style="margin-bottom:12px"><button class="dbtn go" data-act="next">' +
+        (zh() ? '下一個節點' : 'Next node') + '</button>' +
+        '<button class="dbtn" data-act="seecard">' + (zh() ? '看完整卡片' : 'See the full card') + '</button></div>';
+    }
+    h += scoreLine(cov[0], cov[1], zh() ? '守得住的節點' : 'nodes you can defend');
+    h += exportRow();
+    panel.innerHTML = h;
+  }
+
+  /* ------------------------------------------------------------ bridge */
+  var B = null;
+  function bridgeSet() {
+    var out = [], j, k;
+    for (j = 0; j < NODES.length; j++) {
+      var c = NODES[j]; if (c.k !== 'con') continue;
+      var byDom = {};
+      for (k = 0; k < c.nb.length; k++) {
+        var o = c.nb[k].a === c ? c.nb[k].b : c.nb[k].a;
+        if (o.k === 'ev' && pass(o)) (byDom[o.dom] = byDom[o.dom] || []).push(o);
+      }
+      var doms = Object.keys(byDom);
+      if (doms.length >= 2) out.push({ c: c, doms: doms, byDom: byDom });
+    }
+    return out;
+  }
+  function startBridge() {
+    var set = bridgeSet();
+    if (!set.length) { panel.innerHTML = '<p class="mhint">' + (zh() ? '篩選之後湊不出跨領域的配對。' : 'No cross-domain pair survives these filters.') + '</p>'; figs.innerHTML = ''; return; }
+    var pickSet = pick1(set), ds = shuffle(pickSet.doms.slice()).slice(0, 2);
+    var a = pick1(pickSet.byDom[ds[0]]), b = pick1(pickSet.byDom[ds[1]]);
+    var others = NODES.filter(function (x) { return x.k === 'con' && x !== pickSet.c; });
+    var opts = shuffle([pickSet.c].concat(shuffle(others).slice(0, 2)));
+    B = { a: a, b: b, c: pickSet.c, opts: opts, picked: null, score: B ? B.score : 0, runs: B ? B.runs : 0 };
+    select(null);
+    render();
+  }
+  function bridgeLeft() {
+    var h = '', j, two = [B.a, B.b];
+    for (j = 0; j < two.length; j++) {
+      h += '<p class="chead">' + S.esc(zh() ? DOM[two[j].dom].zh : DOM[two[j].dom].en) + '</p>';
+      if (two[j].img && two[j].img[0]) h += '<div class="shot"><img loading="lazy" src="assets/img/' + two[j].img[0] + '" alt="" data-full="assets/img/' + two[j].img[0] + '"></div>';
+      h += '<div class="lcard"><b>' + S.esc(title(two[j])) + '</b></div>';
+    }
+    figs.innerHTML = h; figs.scrollTop = 0;
+  }
+  function edgeText(x, y) {
+    for (var j = 0; j < x.nb.length; j++) {
+      var e = x.nb[j], o = e.a === x ? e.b : e.a;
+      if (o === y) return zh() ? (e.zh || e.en) : e.en;
+    }
+    return '';
+  }
+  function bridgePanel() {
+    var h = '<span class="mtag" style="background:#0A14331f;color:#0A1433">' + (zh() ? '找橋' : 'Bridge') + '</span>';
+    h += '<h2>' + (zh() ? '哪一個概念把這兩件事連起來？' : 'Which concept joins these two?') + '</h2>';
+    h += '<p class="pnode"><b>' + S.esc(title(B.a)) + '</b><br>' + S.esc(zh() ? DOM[B.a.dom].zh : DOM[B.a.dom].en) +
+      ' &nbsp;→&nbsp; ' + S.esc(zh() ? DOM[B.b.dom].zh : DOM[B.b.dom].en) + '<br><b>' + S.esc(title(B.b)) + '</b></p>';
+    for (var j = 0; j < B.opts.length; j++) {
+      var o = B.opts[j], cls = '';
+      if (B.picked) cls = o === B.c ? ' right' : (o === B.picked ? ' wrong' : '');
+      h += '<button class="opt' + cls + '" data-opt="' + o.id + '">' + S.esc(title(o)) + '</button>';
+    }
+    if (B.picked) {
+      h += '<div class="pwhy"><b>' + (zh() ? '這條橋怎麼走' : 'How the bridge runs') + '</b>' +
+        S.esc(edgeText(B.a, B.c)) + '<br><br>' + S.esc(edgeText(B.b, B.c)) + '</div>';
+      h += '<div class="drow" style="margin-bottom:12px"><button class="dbtn go" data-act="nextbridge">' +
+        (zh() ? '下一題' : 'Next') + '</button>' +
+        '<button class="dbtn" data-act="openconcept">' + (zh() ? '打開這個概念' : 'Open the concept') + '</button></div>';
+    }
+    h += scoreLine(B.score, B.runs, zh() ? '找對的橋' : 'bridges found');
+    panel.innerHTML = h;
+  }
+
+  /* ------------------------------------------------------------- trace */
+  var T = null;
+  function pathTo(from, to) {
+    var q = [[from]], seen = {}, j;
+    seen[from.id] = 1;
+    while (q.length) {
+      var p = q.shift(), last = p[p.length - 1];
+      if (last === to) return p;
+      if (p.length > 5) continue;
+      for (j = 0; j < last.nb.length; j++) {
+        var o = last.nb[j].a === last ? last.nb[j].b : last.nb[j].a;
+        if (seen[o.id] || !pass(o)) continue;
+        seen[o.id] = 1; q.push(p.concat([o]));
+      }
+    }
+    return null;
+  }
+  function startTrace() {
+    var evs = pool(), imps = NODES.filter(function (x) { return x.k === 'imp'; });
+    var path = null, tries = 0;
+    while (!path && tries < 40) {
+      tries++;
+      var p = pathTo(pick1(evs), pick1(imps));
+      if (p && p.length >= 3) path = p;
+    }
+    if (!path) { panel.innerHTML = '<p class="mhint">' + (zh() ? '篩選之後走不出一條路。' : 'No path survives these filters.') + '</p>'; figs.innerHTML = ''; return; }
+    T = { path: path, i: 0, picked: null, score: T ? T.score : 0, runs: T ? T.runs : 0, opts: null };
+    traceOpts();
+    select(path[0]);
+  }
+  function traceOpts() {
+    var cur = T.path[T.i], right = T.path[T.i + 1];
+    var wrong = NODES.filter(function (x) {
+      if (x === right || x === cur || !pass(x)) return false;
+      for (var j = 0; j < cur.nb.length; j++) { var o = cur.nb[j].a === cur ? cur.nb[j].b : cur.nb[j].a; if (o === x) return false; }
+      return true;
+    });
+    T.opts = shuffle([right].concat(shuffle(wrong).slice(0, 2)));
+  }
+  function traceLeft() {
+    var nd = T.path[T.i], h = '<p class="chead">' + (zh() ? '你現在站的位置' : 'Where you are standing') + '</p>', j;
+    var im = (nd.img || []).slice(0, 2);
+    for (j = 0; j < im.length; j++) h += '<div class="shot"><img loading="lazy" src="assets/img/' + im[j] + '" alt="" data-full="assets/img/' + im[j] + '"></div>';
+    h += '<div class="lcard"><i>' + S.esc(zh() ? '節點' : 'node') + '</i><b>' + S.esc(title(nd)) + '</b></div>';
+    h += '<p class="chead" style="padding-top:5px">' + (zh() ? '這條路' : 'The path') + '</p>';
+    for (j = 0; j < T.path.length; j++) {
+      h += '<div class="lcard' + (j <= T.i ? '' : ' done') + '"><b>' +
+        (j <= T.i ? S.esc(shortOf(T.path[j])) : '· · · · ·') + '</b></div>';
+    }
+    figs.innerHTML = h; figs.scrollTop = 0;
+  }
+  function tracePanel() {
+    var done = T.i >= T.path.length - 1;
+    var h = '<span class="mtag" style="background:#00061C1f;color:#00061C">' + (zh() ? '走一條' : 'Trace') + '</span>';
+    h += '<h2>' + S.esc(title(T.path[T.path.length - 1])) + '</h2>';
+    h += '<p class="pnode">' + (zh() ? '從 ' : 'From ') + '<b>' + S.esc(shortOf(T.path[0])) + '</b>' +
+      (zh() ? ' 走到這裡，一次一跳。' : ' to here, one hop at a time.') + '</p>';
+    if (done) {
+      h += '<div class="pwhy"><b>' + (zh() ? '走完了' : 'Path complete') + '</b>' +
+        (zh() ? '這條路跨了 ' : 'It crossed ') + countDoms(T.path) + (zh() ? ' 個領域。' : ' domains.') + '</div>';
+      h += '<div class="drow" style="margin-bottom:12px"><button class="dbtn go" data-act="nexttrace">' +
+        (zh() ? '再走一條' : 'Another path') + '</button></div>';
+    } else {
+      h += '<p class="say" style="font-size:15px;font-weight:600;margin:0 0 10px">' +
+        (zh() ? '下一跳是哪一個？' : 'Which is the next hop?') + '</p>';
+      for (var j = 0; j < T.opts.length; j++) {
+        var o = T.opts[j], cls = '';
+        if (T.picked) cls = o === T.path[T.i + 1] ? ' right' : (o === T.picked ? ' wrong' : '');
+        h += '<button class="opt' + cls + '" data-topt="' + o.id + '">' + S.esc(title(o)) + '</button>';
+      }
+      if (T.picked) {
+        var good = T.picked === T.path[T.i + 1];
+        h += '<div class="pwhy"><b>' + (good ? (zh() ? '這條邊寫著' : 'That edge reads') : (zh() ? '那條邊不存在' : 'That edge does not exist')) + '</b>' +
+          (good ? S.esc(edgeText(T.path[T.i], T.path[T.i + 1]))
+            : (zh() ? '沒有人寫下「' + title(T.path[T.i]) + '」和「' + title(T.picked) + '」之間的句子。'
+              : 'Nobody has written a sentence between “' + title(T.path[T.i]) + '” and “' + title(T.picked) + '”.')) + '</div>';
+        if (good) h += '<div class="drow" style="margin-bottom:12px"><button class="dbtn go" data-act="hop">' +
+          (zh() ? '走過去' : 'Take the hop') + '</button></div>';
+        else h += '<div class="drow" style="margin-bottom:12px"><button class="dbtn go" data-act="retry">' +
+          (zh() ? '再試一次' : 'Try again') + '</button></div>';
+      }
+    }
+    h += scoreLine(T.score, T.runs, zh() ? '一次就走對的跳' : 'hops taken first time');
+    panel.innerHTML = h;
+  }
+  function countDoms(p) {
+    var d = {}, c = 0, j;
+    for (j = 0; j < p.length; j++) if (p[j].k === 'ev' && !d[p[j].dom]) { d[p[j].dom] = 1; c++; }
+    return c;
+  }
+
+  /* --------------------------------------------------------- dispatch */
+  function render() {
+    if (MODE === 'explore') { leftColumn(sel); panel.innerHTML = sel ? card(sel) : empty(); return; }
+    if (MODE === 'defend' && D) { defendLeft(); defendPanel(); return; }
+    if (MODE === 'bridge' && B) { bridgeLeft(); bridgePanel(); return; }
+    if (MODE === 'trace' && T) { traceLeft(); tracePanel(); return; }
+  }
+
+  function practiceClick(e) {
+    var a = e.target.closest('[data-act]'), o = e.target.closest('[data-opt]'), t = e.target.closest('[data-topt]');
+    if (o && B && !B.picked) {
+      B.picked = byId[o.getAttribute('data-opt')];
+      B.runs++; if (B.picked === B.c) B.score++;
+      bridgePanel(); select(B.c); return;
+    }
+    if (t && T && !T.picked) {
+      T.picked = byId[t.getAttribute('data-topt')];
+      T.runs++; if (T.picked === T.path[T.i + 1]) T.score++;
+      tracePanel(); return;
+    }
+    if (!a) return;
+    var act = a.getAttribute('data-act');
+    if (act === 'reveal') { D.revealed = true; defendLeft(); }
+    else if (act === 'hit' || act === 'miss') {
+      var ok = act === 'hit';
+      D.marks[D.step] = ok ? 1 : 0;
+      mark(D.node.id, FIELDS[D.step].k, ok);
+      D.step++; D.revealed = false;
+      defendLeft(); defendPanel();
+    }
+    else if (act === 'next') startDefend();
+    else if (act === 'seecard') { MODE = 'explore'; modes(); select(D.node); }
+    else if (act === 'nextbridge') startBridge();
+    else if (act === 'openconcept') { MODE = 'explore'; modes(); select(B.c); }
+    else if (act === 'hop') { T.i++; T.picked = null; if (T.i < T.path.length - 1) traceOpts(); select(T.path[T.i]); }
+    else if (act === 'retry') { T.picked = null; tracePanel(); }
+    else if (act === 'nexttrace') startTrace();
+    else if (act === 'export') {
+      var code = '';
+      try { code = btoa(unescape(encodeURIComponent(JSON.stringify(M)))); } catch (err) { code = ''; }
+      a.outerHTML = '<input readonly value="' + S.esc(code) + '" style="width:100%;font-size:12px" ' +
+        'onclick="this.select()">';
+    }
+  }
+  panel.addEventListener('click', practiceClick);
+  figs.addEventListener('click', practiceClick);
+
+  S.onLang(function () { chips(); modes(); render(); });
   window.addEventListener('resize', size);
   if (window.ResizeObserver) new ResizeObserver(size).observe(board);
 
-  size(); chips();
+  size(); chips(); modes();
   var q = (location.search.match(/[?&]n=([^&]+)/) || [])[1];
   select(q && byId[q] ? byId[q] : null);
   tick();

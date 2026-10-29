@@ -69,6 +69,16 @@ sheet is where `source/bank.json` came from, and the Question Bank page links to
    Nine entries carry a date worked out from context rather than stated on the wiki; they are marked with a
    tilde, an amber dot and a note saying what the date was inferred from.
 
+   It also carries three practice modes the Mock Room cannot run, because they need the
+   graph rather than a question list. **Defend** puts one node in front of you with its number,
+   its n, its control and its boundary masked, and asks for them in that order — reveal only
+   after you have said it, then mark yourself; what you can and cannot defend is remembered per
+   node and shows up as a filter ("I cannot defend this yet"). **Bridge** gives you two results
+   from different domains and asks which concept joins them, then prints the two sentences that
+   make the join. **Trace** gives you a start and an end and makes you pick each hop; a wrong
+   pick is answered with why that edge does not exist. Mock Room scores a run; these score
+   coverage, and the progress exports as one code.
+
 11. **Knowledge Map** — three shells in 3D, turned by dragging. Sixty nodes: every piece of
    evidence on the rim, the concepts that let one domain reach another in the middle, and what the
    project is for at the core. A cross-domain hop always passes through a concept, which is where the
