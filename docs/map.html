@@ -4,184 +4,179 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Knowledge Map · ReLEAF Judging Trainer</title>
-<meta name="description" content="Three shells in 3D: evidence on the rim, the concepts that connect domains, impact at the core. Select a node and its figures and numbers come out onto the ring.">
-<link rel="stylesheet" href="assets/css/base.css?v=202610291900">
-<link rel="stylesheet" href="assets/css/pages.css?v=202610291900">
-<link rel="stylesheet" href="assets/css/theme.css?v=202610291900">
+<meta name="description" content="Three shells in 3D: evidence on the rim, the concepts that connect domains, impact at the core. Figures on the left, the map in the middle, the card on the right.">
+<link rel="stylesheet" href="assets/css/base.css?v=202610292100">
+<link rel="stylesheet" href="assets/css/pages.css?v=202610292100">
+<link rel="stylesheet" href="assets/css/theme.css?v=202610292100">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M4 20c0-8 5.5-14.5 16-15.5C19.5 14 14 20 4 20Z' fill='%2300B87A'/%3E%3C/svg%3E">
 <style>
-.mapwrap { max-width: 1200px; margin: 0 auto; padding: 0 20px 3rem; }
-.maphead { padding: 2rem 0 1.25rem; }
-.maphead h1 { font-size: clamp(26px, 3.2vw, 40px); font-weight: 700; margin-bottom: .5rem; }
-.maphead p { color: var(--muted); max-width: 64ch; margin: 0; }
-.mapgrid { display: grid; grid-template-columns: minmax(0, 1fr) 372px; gap: 18px; align-items: start; }
+body { overflow-x: hidden; }
+.full { width: 100%; padding: 0 16px 16px; }
 
-/* the ring stage ---------------------------------------------------- */
-.orbit { position: relative; width: min(100%, 680px); aspect-ratio: 1 / 1; margin: 0 auto; }
-.disc {
-  position: absolute; left: 50%; top: 50%; width: 60%; height: 60%;
-  transform: translate(-50%, -50%); border-radius: 50%; overflow: hidden;
-  background: var(--navy); box-shadow: 0 18px 50px rgba(0, 6, 28, .22), inset 0 0 0 1px rgba(255, 255, 255, .09);
-}
-.disc::before, .disc::after { content: ""; position: absolute; border-radius: 50%; filter: blur(70px); opacity: .5; pointer-events: none; }
-.disc::before { width: 70%; height: 70%; left: -18%; top: -22%; background: radial-gradient(circle, #0167EF 0%, transparent 65%); }
-.disc::after { width: 66%; height: 66%; right: -16%; bottom: -24%; background: radial-gradient(circle, #00B87A 0%, transparent 65%); }
-#cv { position: absolute; inset: 0; width: 100%; height: 100%; cursor: grab; touch-action: none; }
-#cv.drag { cursor: grabbing; }
-.hub {
-  position: absolute; left: 50%; bottom: 7%; transform: translateX(-50%); z-index: 3;
-  font-size: 11.5px; color: rgba(255, 255, 255, .42); text-align: center; pointer-events: none; line-height: 1.5;
-}
-.spin {
-  position: absolute; left: 50%; top: 5.5%; transform: translateX(-50%); z-index: 3;
-  font: inherit; font-size: 11.5px; font-weight: 600; background: rgba(255, 255, 255, .1);
-  border: 1px solid rgba(255, 255, 255, .16); color: #fff; border-radius: 999px; padding: 4px 12px; cursor: pointer;
-}
+.top { display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; padding: 14px 4px 10px; }
+.top h1 { font-size: 21px; font-weight: 700; margin: 0; }
+.top p { font-size: 13.5px; color: var(--muted); margin: 0; }
 
-.ring { position: absolute; inset: 0; pointer-events: none; }
-.sat {
-  position: absolute; transform: translate(-50%, -50%) scale(.84); opacity: 0;
-  transition: opacity .42s cubic-bezier(.2,.8,.2,1), transform .42s cubic-bezier(.2,.8,.2,1);
-  pointer-events: auto; will-change: transform, opacity;
+/* filter bar: a thin strip that opens on hover ------------------------ */
+.fbar { position: relative; z-index: 30; height: 34px; margin: 0 4px 10px; }
+.fbar-head {
+  display: flex; align-items: center; gap: 10px; height: 34px; padding: 0 14px;
+  background: #fff; border: 1px solid var(--rule); border-radius: 999px;
+  font-size: 12.5px; color: var(--muted); cursor: default; width: fit-content;
+  transition: border-color .18s, box-shadow .18s;
 }
-.sat.on { transform: translate(-50%, -50%) scale(1); opacity: 1; }
-.sat-fig { width: 104px; }
-.sat-fig img {
-  width: 104px; height: 78px; object-fit: cover; display: block; border-radius: 14px;
-  background: #fff; border: 1px solid var(--rule); cursor: zoom-in;
-  box-shadow: 0 6px 18px rgba(0, 6, 28, .12);
+.fbar:hover .fbar-head, .fbar.pin .fbar-head { border-color: var(--navy); box-shadow: 0 2px 10px rgba(0, 6, 28, .08); }
+.fbar-head b { font-weight: 700; color: var(--ink); letter-spacing: .04em; text-transform: uppercase; font-size: 11px; }
+.fbar-head .tally { font-variant-numeric: tabular-nums; }
+.fbar-head .live { display: flex; gap: 5px; flex-wrap: wrap; }
+.fbar-head .live span { background: var(--navy); color: #fff; border-radius: 999px; padding: 2px 9px; font-size: 11.5px; font-weight: 600; }
+.fbar-head .caret { margin-left: 2px; color: var(--faint); font-size: 11px; }
+.fbar-body {
+  position: absolute; top: 38px; left: 0; right: 0;
+  background: #fff; border: 1px solid var(--rule); border-radius: 18px; padding: 10px 16px;
+  box-shadow: 0 16px 40px rgba(0, 6, 28, .13);
+  opacity: 0; visibility: hidden; transform: translateY(-6px);
+  transition: opacity .2s, transform .2s, visibility .2s;
 }
-.sat-fig img:hover { border-color: var(--navy); }
-.sat-num {
-  width: 158px; background: #fff; border: 1px solid var(--rule); border-radius: 14px;
-  padding: 10px 12px; box-shadow: 0 6px 18px rgba(0, 6, 28, .10);
-}
-.sat-num i { font-style: normal; display: block; font-size: 10.5px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: var(--faint); margin-bottom: 3px; }
-.sat-num b { display: block; font-size: 13.5px; font-weight: 600; line-height: 1.4; font-variant-numeric: tabular-nums; }
-.sat-num.hold { border-left: 3px solid var(--jb-green); }
-.sat-num.fail { border-left: 3px solid var(--jb-amber); }
-
-/* filters ------------------------------------------------------------ */
-.filters { background: #fff; border: 1px solid var(--rule); border-radius: var(--r-lg); padding: 14px 16px; margin-top: 14px; }
-.frow { display: flex; align-items: flex-start; gap: 10px; padding: 7px 0; flex-wrap: wrap; }
+.fbar:hover .fbar-body, .fbar:focus-within .fbar-body, .fbar.pin .fbar-body { opacity: 1; visibility: visible; transform: none; }
+.frow { display: flex; align-items: center; gap: 10px; padding: 7px 0; flex-wrap: wrap; }
 .frow + .frow { border-top: 1px solid var(--rule-soft); }
-.frow > span.lab {
-  font-size: 11px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase;
-  color: var(--faint); width: 86px; flex: none; padding-top: 7px;
-}
+.frow > span.lab { font-size: 10.5px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: var(--faint); width: 108px; flex: none; }
 .fchips { display: flex; gap: 6px; flex-wrap: wrap; flex: 1; }
-.fc {
-  font: inherit; font-size: 12.5px; font-weight: 600; cursor: pointer; background: #fff;
-  border: 1px solid var(--rule); color: var(--ink-2); border-radius: 999px; padding: 6px 12px;
-  display: inline-flex; align-items: center; gap: 7px; transition: background .18s, border-color .18s, color .18s;
-}
+.fc { font: inherit; font-size: 12.5px; font-weight: 600; cursor: pointer; background: #fff;
+      border: 1px solid var(--rule); color: var(--ink-2); border-radius: 999px; padding: 5px 11px;
+      display: inline-flex; align-items: center; gap: 6px; transition: background .18s, border-color .18s, color .18s; }
 .fc i { width: 8px; height: 8px; border-radius: 50%; background: currentColor; display: block; }
 .fc:hover { border-color: rgba(0, 0, 0, .25); }
 .fc.on { background: var(--navy); border-color: var(--navy); color: #fff; }
 .fc.on.tint { background: var(--t); border-color: var(--t); color: #fff; }
-.fcount { font-size: 12.5px; color: var(--muted); font-variant-numeric: tabular-nums; padding-top: 7px; }
-.fclear { font: inherit; font-size: 12.5px; font-weight: 600; background: none; border: 0; color: var(--jb-blue); cursor: pointer; padding: 7px 0 0; }
+.fclear { font: inherit; font-size: 12.5px; font-weight: 600; background: none; border: 0; color: var(--jb-blue); cursor: pointer; }
 
-/* panel --------------------------------------------------------------- */
+/* three columns ------------------------------------------------------- */
+.stage { display: grid; grid-template-columns: 290px minmax(0, 1fr) 380px; gap: 14px;
+         height: calc(100dvh - var(--nav-h, 60px) - 118px); min-height: 520px; }
+.col { min-width: 0; min-height: 0; }
+.scroller { height: 100%; overflow-y: auto; overscroll-behavior: contain; padding-right: 2px; }
+.scroller::-webkit-scrollbar { width: 8px; }
+.scroller::-webkit-scrollbar-thumb { background: rgba(0, 0, 0, .14); border-radius: 8px; }
+
+.chead { font-size: 10.5px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+         color: var(--faint); padding: 0 2px 8px; }
+.shot { margin-bottom: 10px; }
+.shot img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block; border-radius: 16px;
+            background: #fff; border: 1px solid var(--rule); cursor: zoom-in; transition: border-color .2s, transform .2s; }
+.shot img:hover { border-color: var(--navy); transform: translateY(-2px); }
+.shot p { font-size: 12px; color: var(--muted); margin: 6px 2px 0; line-height: 1.45; }
+.lcard { background: #fff; border: 1px solid var(--rule); border-radius: 16px; padding: 12px 14px; margin-bottom: 10px; }
+.lcard i { font-style: normal; display: block; font-size: 10.5px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: var(--faint); margin-bottom: 4px; }
+.lcard b { display: block; font-size: 14px; font-weight: 600; line-height: 1.45; font-variant-numeric: tabular-nums; }
+.lcard.hold { border-left: 3px solid var(--jb-green); }
+.lcard.fail { border-left: 3px solid var(--jb-amber); }
+.lhint { font-size: 13.5px; color: var(--muted); line-height: 1.6; padding: 0 2px; }
+
+.board { position: relative; height: 100%; border-radius: var(--r-lg); overflow: hidden;
+         background: var(--navy); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .09); }
+.board::before, .board::after { content: ""; position: absolute; border-radius: 50%; filter: blur(90px); opacity: .45; pointer-events: none; }
+.board::before { width: 44%; height: 62%; left: -10%; top: -18%; background: radial-gradient(circle, #0167EF 0%, transparent 65%); }
+.board::after { width: 42%; height: 60%; right: -9%; bottom: -20%; background: radial-gradient(circle, #00B87A 0%, transparent 65%); }
+#cv { position: absolute; inset: 0; width: 100%; height: 100%; cursor: grab; touch-action: none; }
+#cv.drag { cursor: grabbing; }
+.hub { position: absolute; left: 16px; bottom: 12px; z-index: 3; font-size: 11.5px; color: rgba(255, 255, 255, .4); pointer-events: none; margin: 0; }
+.spin { position: absolute; right: 14px; top: 12px; z-index: 3; font: inherit; font-size: 11.5px; font-weight: 600;
+        background: rgba(255, 255, 255, .1); border: 1px solid rgba(255, 255, 255, .17); color: #fff;
+        border-radius: 999px; padding: 5px 13px; cursor: pointer; }
+
 .mpanel { background: #fff; border: 1px solid var(--rule); border-radius: var(--r-lg); padding: 18px; }
-.mtag { display: inline-block; font-size: 11.5px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; padding: 4px 11px; border-radius: 999px; margin-bottom: 10px; }
-.mpanel h2 { font-size: 20px; font-weight: 700; line-height: 1.3; margin: 0 0 12px; }
-.pshots { display: none; grid-template-columns: 1fr 1fr; gap: 6px; margin-bottom: 14px; }
-.pshots img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 12px; border: 1px solid var(--rule-soft); cursor: zoom-in; }
-.mnum { background: var(--paper-2); border-radius: 14px; padding: 12px 14px; margin-bottom: 12px; font-variant-numeric: tabular-nums; }
-.mnum b { display: block; font-size: 15.5px; font-weight: 600; line-height: 1.45; }
-.mnum span { display: block; font-size: 13px; color: var(--muted); margin-top: 5px; }
-.bandx { border-top: 1px solid var(--rule); padding: 11px 0; font-size: 14.5px; line-height: 1.6; }
-.bandx i { font-style: normal; font-weight: 700; font-size: 11px; letter-spacing: .06em; text-transform: uppercase; display: block; margin-bottom: 3px; }
-.bandx.h i { color: var(--accent); }
-.bandx.f i { color: var(--amber); }
-.links { border-top: 1px solid var(--rule); margin-top: 6px; padding-top: 10px; }
-.links h3 { font-size: 11px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--faint); margin: 0 0 8px; }
-.lk { display: block; width: 100%; text-align: left; font: inherit; background: none; border: 0; border-radius: 12px; padding: 9px 10px; cursor: pointer; color: var(--ink-2); font-size: 14px; line-height: 1.55; }
-.lk:hover { background: var(--paper-2); }
-.lk b { display: block; color: var(--ink); font-weight: 600; font-size: 14.5px; margin-bottom: 2px; }
-.lk b::before { content: "→ "; color: var(--faint); }
+.mtag { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; padding: 4px 11px; border-radius: 999px; margin-bottom: 10px; }
+.mpanel h2 { font-size: 19px; font-weight: 700; line-height: 1.32; margin: 0 0 12px; }
 .spans { display: flex; gap: 6px; flex-wrap: wrap; margin: 0 0 12px; }
 .spans span { font-size: 12px; font-weight: 600; border-radius: 999px; padding: 4px 10px; background: var(--paper-2); color: var(--faint); }
+.mnum { background: var(--paper-2); border-radius: 14px; padding: 12px 14px; margin-bottom: 12px; font-variant-numeric: tabular-nums; }
+.mnum b { display: block; font-size: 15px; font-weight: 600; line-height: 1.45; }
+.mnum span { display: block; font-size: 13px; color: var(--muted); margin-top: 5px; }
+.links { border-top: 1px solid var(--rule); margin-top: 6px; padding-top: 10px; }
+.links h3 { font-size: 10.5px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: var(--faint); margin: 0 0 8px; }
+.lk { display: block; width: 100%; text-align: left; font: inherit; background: none; border: 0; border-radius: 12px; padding: 9px 10px; cursor: pointer; color: var(--ink-2); font-size: 13.5px; line-height: 1.55; }
+.lk:hover { background: var(--paper-2); }
+.lk b { display: block; color: var(--ink); font-weight: 600; font-size: 14px; margin-bottom: 2px; }
+.lk b::before { content: "→ "; color: var(--faint); }
 .wk { display: inline-block; margin-top: 10px; font-size: 13.5px; font-weight: 600; }
-.mhint { color: var(--muted); font-size: 14.5px; line-height: 1.6; }
+.mhint { color: var(--muted); font-size: 14px; line-height: 1.6; margin: 0; }
 
 #lb { position: fixed; inset: 0; z-index: 200; background: rgba(0, 6, 28, .93); display: none; align-items: center; justify-content: center; padding: 28px; cursor: zoom-out; }
 #lb.on { display: flex; }
 #lb img { max-width: 92vw; max-height: 82vh; border-radius: 14px; display: block; }
 #lb p { position: absolute; left: 0; right: 0; bottom: 20px; text-align: center; color: rgba(255, 255, 255, .72); font-size: 14px; padding: 0 24px; margin: 0; }
 
-@media (min-width: 1041px) {
-  /* the ring already carries the number, the n, the control and both bands */
-  .mpanel .mnum, .mpanel .bandx { display: none; }
-  .mpanel h2 { margin-bottom: 10px; }
-}
-@media (max-width: 1040px) {
-  .mapgrid { grid-template-columns: 1fr; }
-  .ring { display: none; }
-  .orbit { width: 100%; aspect-ratio: auto; height: 460px; }
-  .disc { width: 100%; height: 100%; border-radius: var(--r-lg); }
-  .pshots { display: grid; }
-  .frow > span.lab { width: 100%; padding-top: 0; }
+@media (max-width: 1180px) { .stage { grid-template-columns: 240px minmax(0, 1fr) 330px; } }
+@media (max-width: 980px) {
+  .stage { grid-template-columns: 1fr; height: auto; }
+  .board { height: 440px; }
+  .scroller { height: auto; overflow: visible; }
+  .col-figs { order: 3; }
+  .col-card { order: 2; }
+  .frow > span.lab { width: 100%; }
+  .fbar-body { position: static; opacity: 1; visibility: visible; transform: none; box-shadow: none; margin-top: 8px; }
+  .fbar { height: auto; }
 }
 </style>
 </head>
 <body>
 
-<div class="mapwrap">
-  <header class="maphead">
-    <h1 data-en="Evidence on the rim. Impact at the core."
-        data-zh="證據在外圈，影響在中心。"></h1>
-    <p data-en="Sixty nodes on three shells. Drag to turn it. Pick a node and the rest of the map moves out of the way while its figures and numbers come out onto the ring."
-       data-zh="三層殼、六十個節點。拖曳可以轉動。選一個節點，其餘節點會讓開，而它的圖與數字會浮到外圈上。"></p>
-  </header>
+<div class="full">
+  <div class="top">
+    <h1 data-en="Knowledge map" data-zh="知識地圖"></h1>
+    <p data-en="Sixty nodes on three shells. Drag to turn it. Figures on the left, the card on the right."
+       data-zh="三層殼、六十個節點。拖曳可以轉動。圖在左邊，卡片在右邊。"></p>
+  </div>
 
-  <div class="mapgrid">
-    <div>
-      <div class="orbit" id="orbit">
-        <div class="ring" id="ring"></div>
-        <div class="disc">
-          <canvas id="cv"></canvas>
-          <button class="spin" id="spin" data-en="Pause" data-zh="暫停"></button>
-          <p class="hub" id="hub"></p>
-        </div>
+  <div class="fbar" id="fbar">
+    <div class="fbar-head">
+      <b data-en="Filter" data-zh="篩選"></b>
+      <span class="tally" id="fcount"></span>
+      <span class="live" id="flive"></span>
+      <span class="caret">▾</span>
+    </div>
+    <div class="fbar-body">
+      <div class="frow"><span class="lab" data-en="Domain" data-zh="領域"></span><div class="fchips" id="f-dom"></div></div>
+      <div class="frow"><span class="lab" data-en="Evidence for" data-zh="支持哪個獎"></span><div class="fchips" id="f-aw"></div></div>
+      <div class="frow"><span class="lab" data-en="How strong" data-zh="證據強度"></span><div class="fchips" id="f-st"></div></div>
+      <div class="frow">
+        <span class="lab" data-en="Lens" data-zh="鏡頭"></span>
+        <div class="fchips" id="f-lens"></div>
+        <button class="fclear" id="fclear" data-en="Clear all" data-zh="全部清除"></button>
       </div>
+    </div>
+  </div>
 
-      <div class="filters">
-        <div class="frow">
-          <span class="lab" data-en="Domain" data-zh="領域"></span>
-          <div class="fchips" id="f-dom"></div>
-        </div>
-        <div class="frow">
-          <span class="lab" data-en="Evidence for" data-zh="支持哪個獎"></span>
-          <div class="fchips" id="f-aw"></div>
-        </div>
-        <div class="frow">
-          <span class="lab" data-en="How strong" data-zh="證據強度"></span>
-          <div class="fchips" id="f-st"></div>
-        </div>
-        <div class="frow">
-          <span class="lab" data-en="Lens" data-zh="鏡頭"></span>
-          <div class="fchips" id="f-lens"></div>
-          <span class="fcount" id="fcount"></span>
-          <button class="fclear" id="fclear" data-en="Clear" data-zh="清除"></button>
-        </div>
+  <div class="stage">
+    <div class="col col-figs">
+      <div class="scroller" id="figs"></div>
+    </div>
+
+    <div class="col">
+      <div class="board" id="board">
+        <canvas id="cv"></canvas>
+        <button class="spin" id="spin" data-en="Pause" data-zh="暫停"></button>
+        <p class="hub" id="hub"></p>
       </div>
     </div>
 
-    <aside class="mpanel" id="panel"></aside>
+    <div class="col col-card">
+      <div class="scroller"><aside class="mpanel" id="panel"></aside></div>
+    </div>
   </div>
 </div>
 
 <div id="lb" role="dialog" aria-modal="true"><img alt=""><p></p></div>
 
-<script src="assets/js/site.js?v=202610291900"></script>
-<script src="data/map.js?v=202610291900"></script>
+<script src="assets/js/site.js?v=202610292100"></script>
+<script src="data/map.js?v=202610292100"></script>
 <script>
 (function () {
   var S = window.Site;
   var cv = document.getElementById('cv'), ctx = cv.getContext('2d');
-  var ring = document.getElementById('ring'), orbit = document.getElementById('orbit');
+  var board = document.getElementById('board'), figs = document.getElementById('figs');
   var panel = document.getElementById('panel'), lb = document.getElementById('lb');
   var R = { ev: 1, con: .56, imp: .2 };
   var NODES = MAP_NODES, byId = {}, DOM = {}, i, n;
@@ -230,46 +225,52 @@
     for (j = 0; j < MAP_DOMS.length; j++) {
       d = MAP_DOMS[j];
       h += '<button class="fc tint' + (F.dom[d.id] ? ' on' : '') + '" style="--t:' + d.c + ';color:' +
-        (F.dom[d.id] ? '#fff' : d.c) + '" data-g="dom" data-v="' + d.id + '"><i></i>' +
-        S.esc(zh() ? d.zh : d.en) + '</button>';
+        (F.dom[d.id] ? '#fff' : d.c) + '" data-g="dom" data-v="' + d.id + '"><i></i>' + S.esc(zh() ? d.zh : d.en) + '</button>';
     }
     document.getElementById('f-dom').innerHTML = h;
-
     h = '';
     for (j = 0; j < MAP_AWARDS.length; j++) {
       d = MAP_AWARDS[j];
-      h += '<button class="fc' + (F.aw[d.id] ? ' on' : '') + '" data-g="aw" data-v="' + d.id + '">' +
-        S.esc(zh() ? d.zh : d.en) + '</button>';
+      h += '<button class="fc' + (F.aw[d.id] ? ' on' : '') + '" data-g="aw" data-v="' + d.id + '">' + S.esc(zh() ? d.zh : d.en) + '</button>';
     }
     document.getElementById('f-aw').innerHTML = h;
-
     h = '';
     for (j = 0; j < MAP_STRENGTH.length; j++) {
       d = MAP_STRENGTH[j];
-      h += '<button class="fc' + (F.st[d.id] ? ' on' : '') + '" data-g="st" data-v="' + d.id + '">' +
-        S.esc(zh() ? d.zh : d.en) + '</button>';
+      h += '<button class="fc' + (F.st[d.id] ? ' on' : '') + '" data-g="st" data-v="' + d.id + '">' + S.esc(zh() ? d.zh : d.en) + '</button>';
     }
     document.getElementById('f-st').innerHTML = h;
-
     document.getElementById('f-lens').innerHTML =
       '<button class="fc' + (F.risk ? ' on' : '') + '" data-g="risk" data-v="1">' +
       S.esc(zh() ? '評審一挖就會找到的' : 'A judge who digs lands here') + '</button>';
-    count();
+    summary();
   }
-  function count() {
-    var tot = 0, vis = 0;
-    for (var j = 0; j < NODES.length; j++) if (NODES[j].k === 'ev') { tot++; if (pass(NODES[j])) vis++; }
+
+  function summary() {
+    var tot = 0, vis = 0, j;
+    for (j = 0; j < NODES.length; j++) if (NODES[j].k === 'ev') { tot++; if (pass(NODES[j])) vis++; }
     document.getElementById('fcount').textContent = (zh() ? '顯示 ' : 'showing ') + vis + ' / ' + tot;
+    var live = [];
+    for (j = 0; j < MAP_DOMS.length; j++) if (F.dom[MAP_DOMS[j].id]) live.push(zh() ? MAP_DOMS[j].zh : MAP_DOMS[j].en);
+    for (j = 0; j < MAP_AWARDS.length; j++) if (F.aw[MAP_AWARDS[j].id]) live.push(zh() ? MAP_AWARDS[j].zh : MAP_AWARDS[j].en);
+    for (j = 0; j < MAP_STRENGTH.length; j++) if (F.st[MAP_STRENGTH[j].id]) live.push(zh() ? MAP_STRENGTH[j].zh : MAP_STRENGTH[j].en);
+    if (F.risk) live.push(zh() ? '一挖就找到' : 'judges land here');
+    var h = '';
+    for (j = 0; j < live.length; j++) h += '<span>' + S.esc(live[j]) + '</span>';
+    document.getElementById('flive').innerHTML = h;
   }
-  document.querySelector('.filters').addEventListener('click', function (ev) {
-    var b = ev.target.closest('[data-g]'); if (!b) return;
+
+  var fbar = document.getElementById('fbar');
+  fbar.addEventListener('click', function (ev) {
+    var b = ev.target.closest('[data-g]');
+    if (!b) { if (ev.target.closest('.fbar-head')) fbar.classList.toggle('pin'); return; }
     var g = b.getAttribute('data-g'), v = b.getAttribute('data-v');
     if (g === 'risk') F.risk = !F.risk; else F[g][v] = !F[g][v];
     chips();
     if (sel && !pass(sel)) select(null);
   });
-  document.getElementById('fclear').addEventListener('click', function () {
-    F = { dom: {}, aw: {}, st: {}, risk: false }; chips();
+  document.getElementById('fclear').addEventListener('click', function (ev) {
+    ev.stopPropagation(); F = { dom: {}, aw: {}, st: {}, risk: false }; chips();
   });
 
   /* ---------------------------------------------------------- 3D */
@@ -283,7 +284,8 @@
     if (!W || !H) return;
     cv.width = W * dpr; cv.height = H * dpr;
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    cxp = W / 2; cyp = H / 2; unit = Math.min(W, H) * 0.36;
+    cxp = W / 2; cyp = H / 2;
+    unit = Math.min(W * 0.40, H * 0.42);
   }
 
   function project(p) {
@@ -293,28 +295,30 @@
     var f = 3.1, s = f / (f - z2);
     return [cxp + x * unit * s, cyp - y2 * unit * s, z2, s];
   }
-
   function visible(nd) { return pass(nd); }
 
   function step() {
-    var j, nd, t, k;
+    var j, k, t;
     for (j = 0; j < NODES.length; j++) {
-      nd = NODES[j];
-      var push = 1;
-      if (sel && !near[nd.id]) push = 1.42;
-      else if (sel && nd !== sel) push = .88;
-      for (k = 0; k < 3; k++) {
-        t = nd.p0[k] * push;
-        nd.cur[k] += (t - nd.cur[k]) * 0.085;
-      }
+      var nd = NODES[j], push = 1;
+      if (sel && !near[nd.id]) push = 1.45;
+      else if (sel && nd !== sel) push = .9;
+      for (k = 0; k < 3; k++) { t = nd.p0[k] * push; nd.cur[k] += (t - nd.cur[k]) * 0.085; }
     }
     if (sel) {
       var d = yawT - yaw;
       while (d > Math.PI) d -= 2 * Math.PI;
       while (d < -Math.PI) d += 2 * Math.PI;
-      yaw += d * 0.07;
-      pitch += (pitchT - pitch) * 0.07;
+      yaw += d * 0.07; pitch += (pitchT - pitch) * 0.07;
     } else if (spin && !drag) { yaw += 0.0013; }
+  }
+
+  function overlaps(r, list) {
+    for (var j = 0; j < list.length; j++) {
+      var o = list[j];
+      if (r.x < o.x + o.w && r.x + r.w > o.x && r.y < o.y + o.h && r.y + r.h > o.y) return true;
+    }
+    return false;
   }
 
   function draw() {
@@ -328,7 +332,7 @@
       if (!visible(A) || !visible(B)) continue;
       var on = sel && (A === sel || B === sel);
       var zz = (A.pr[2] + B.pr[2]) / 2;
-      var al = (0.10 + 0.14 * (zz + 1) / 2) * (sel ? (on ? 6 : .22) : 1);
+      var al = (0.10 + 0.14 * (zz + 1) / 2) * (sel ? (on ? 6 : .2) : 1);
       ctx.strokeStyle = 'rgba(255,255,255,' + Math.min(al, .85) + ')';
       ctx.lineWidth = on ? 1.7 : 0.8;
       ctx.beginPath(); ctx.moveTo(A.pr[0], A.pr[1]); ctx.lineTo(B.pr[0], B.pr[1]); ctx.stroke();
@@ -339,42 +343,54 @@
       nd = ord[j]; pr = nd.pr;
       if (!visible(nd)) continue;
       var base = nd.k === 'ev' ? 5 : (nd.k === 'con' ? 8.5 : 7);
-      var r = base * pr[3];
+      var rr = base * pr[3];
       var depth = 0.45 + 0.55 * (pr[2] + 1) / 2;
-      var a = depth * (sel ? (near[nd.id] ? 1 : .16) : 1);
+      var a = depth * (sel ? (near[nd.id] ? 1 : .15) : 1);
       if (nd === hov) a = 1;
       ctx.globalAlpha = a;
       if (nd === sel) {
-        ctx.beginPath(); ctx.arc(pr[0], pr[1], r + 7, 0, 6.2832);
+        ctx.beginPath(); ctx.arc(pr[0], pr[1], rr + 7, 0, 6.2832);
         ctx.strokeStyle = nd.col; ctx.lineWidth = 1.4; ctx.stroke();
       }
-      ctx.beginPath(); ctx.arc(pr[0], pr[1], r, 0, 6.2832);
+      ctx.beginPath(); ctx.arc(pr[0], pr[1], rr, 0, 6.2832);
       ctx.fillStyle = nd.col; ctx.fill();
       ctx.lineWidth = 1.5; ctx.strokeStyle = 'rgba(0,6,28,.75)'; ctx.stroke();
       ctx.globalAlpha = 1;
+    }
 
-      var lab = null;
-      if (nd.k !== 'ev' && (pr[2] > -0.1 || nd === sel || near[nd.id])) lab = title(nd);
-      if (lab) {
-        ctx.font = (nd.k === 'imp' ? '600 ' : '500 ') + Math.max(10.5, 12 * pr[3]) + 'px -apple-system, "PingFang TC", sans-serif';
-        ctx.globalAlpha = depth * (sel ? (near[nd.id] ? 1 : .18) : .92);
-        ctx.fillStyle = nd.k === 'imp' ? '#FFFFFF' : 'rgba(220,245,255,.95)';
-        ctx.textAlign = 'center';
-        ctx.fillText(lab, pr[0], pr[1] - r - 7);
-        ctx.globalAlpha = 1;
-      }
+    /* labels last, front first, and never on top of one another */
+    var placed = [];
+    var lab = NODES.filter(function (x) { return x.k !== 'ev' && visible(x); })
+      .sort(function (a, b) { return b.pr[2] - a.pr[2]; });
+    for (j = 0; j < lab.length; j++) {
+      nd = lab[j]; pr = nd.pr;
+      if (pr[2] < -0.12 && nd !== sel && !near[nd.id]) continue;
+      var txt = title(nd);
+      var fs = Math.max(11, (nd.k === 'imp' ? 13 : 12.5) * pr[3]);
+      ctx.font = (nd.k === 'imp' ? '600 ' : '500 ') + fs + 'px -apple-system, "PingFang TC", sans-serif';
+      var w = ctx.measureText(txt).width;
+      var yy = pr[1] - (nd.k === 'ev' ? 5 : nd.k === 'con' ? 8.5 : 7) * pr[3] - 8;
+      var box = { x: pr[0] - w / 2 - 4, y: yy - fs, w: w + 8, h: fs + 6 };
+      if (box.x < 2 || box.x + box.w > W - 2) continue;
+      if (overlaps(box, placed) && nd !== sel) continue;
+      placed.push(box);
+      ctx.globalAlpha = (0.45 + 0.55 * (pr[2] + 1) / 2) * (sel ? (near[nd.id] ? 1 : .2) : .95);
+      ctx.fillStyle = nd.k === 'imp' ? '#FFFFFF' : 'rgba(216,244,255,.96)';
+      ctx.textAlign = 'center';
+      ctx.fillText(txt, pr[0], yy);
+      ctx.globalAlpha = 1;
     }
 
     if (hov && hov.k === 'ev' && visible(hov) && hov !== sel) {
       var t2 = title(hov), x = hov.pr[0], y = hov.pr[1];
       ctx.font = '500 12.5px -apple-system, "PingFang TC", sans-serif';
-      var w = Math.min(ctx.measureText(t2).width + 20, W - 24);
+      var tw = Math.min(ctx.measureText(t2).width + 20, W - 24);
       var bx = x + 13, by = y - 14;
-      if (bx + w > W - 6) bx = Math.max(6, x - 13 - w);
+      if (bx + tw > W - 6) bx = Math.max(6, x - 13 - tw);
       ctx.fillStyle = 'rgba(0,6,28,.94)';
-      ctx.beginPath(); ctx.roundRect(bx, by, w, 27, 8); ctx.fill();
+      ctx.beginPath(); ctx.roundRect(bx, by, tw, 27, 8); ctx.fill();
       ctx.fillStyle = '#fff'; ctx.textAlign = 'left';
-      ctx.fillText(t2, bx + 10, by + 18, w - 20);
+      ctx.fillText(t2, bx + 10, by + 18, tw - 20);
     }
   }
 
@@ -392,19 +408,14 @@
       var dx = e.clientX - lx, dy = e.clientY - ly;
       moved += Math.abs(dx) + Math.abs(dy);
       yaw += dx * 0.006; pitch = Math.max(-1.1, Math.min(1.1, pitch + dy * 0.005));
-      yawT = yaw; pitchT = pitch;
-      lx = e.clientX; ly = e.clientY;
-      return;
+      yawT = yaw; pitchT = pitch; lx = e.clientX; ly = e.clientY; return;
     }
     hov = pick(e.clientX - rc.left, e.clientY - rc.top);
     cv.style.cursor = hov ? 'pointer' : 'grab';
   });
   cv.addEventListener('pointerup', function (e) {
     drag = false; cv.classList.remove('drag');
-    if (moved < 6) {
-      var rc = cv.getBoundingClientRect();
-      select(pick(e.clientX - rc.left, e.clientY - rc.top));
-    }
+    if (moved < 6) { var rc = cv.getBoundingClientRect(); select(pick(e.clientX - rc.left, e.clientY - rc.top)); }
   });
   cv.addEventListener('pointerleave', function () { hov = null; });
 
@@ -420,108 +431,61 @@
     return best;
   }
 
-  /* ---------------------------------------------------------- the ring */
-  var ringTimer = null;
-  function satellites(nd) {
-    var items = [], j;
+  /* ---------------------------------------------------------- left column */
+  var TEASE = ['C_MEM', 'M_SIO2', 'P_LADDER', 'I_BROPHY', 'H_LOOP', 'D_TWIN', 'B_GEO', 'W_L2'];
+
+  function leftColumn(nd) {
+    var h = '', j;
+    if (!nd) {
+      h = '<p class="chead">' + (zh() ? '從這裡開始' : 'Start anywhere') + '</p>' +
+        '<p class="lhint">' + (zh()
+          ? '點地圖上任一個節點：它的圖會排在這一欄，數字與邊界在右邊。或直接點下面任何一張圖。'
+          : 'Tap any node on the map: its figures stack here and its numbers sit on the right. Or just tap a picture below.') + '</p>';
+      for (j = 0; j < TEASE.length; j++) {
+        var t = byId[TEASE[j]];
+        if (!t || !t.img || !t.img.length || !pass(t)) continue;
+        h += '<div class="shot"><img loading="lazy" src="assets/img/' + t.img[0] + '" alt="" data-go="' + t.id + '">' +
+          '<p>' + S.esc(title(t)) + '</p></div>';
+      }
+      figs.innerHTML = h;
+      return;
+    }
+    h = '<p class="chead">' + (zh() ? '這個節點的圖' : 'Figures for this node') + '</p>';
     var im = (nd.img || []).slice(0, 4);
-    for (j = 0; j < im.length; j++) items.push({ t: 'fig', src: 'assets/img/' + im[j] });
+    for (j = 0; j < im.length; j++) {
+      h += '<div class="shot"><img loading="lazy" src="assets/img/' + im[j] + '" alt="" data-full="assets/img/' + im[j] + '"></div>';
+    }
     if (nd.k === 'ev') {
-      items.push({ t: 'num', i: zh() ? '數字' : 'the number', b: L(nd, 'num') });
-      items.push({ t: 'num', i: 'n', b: L(nd, 'n') });
-      items.push({ t: 'num', i: zh() ? '對照' : 'control', b: L(nd, 'ctl') });
-      items.push({ t: 'num', c: 'hold', i: zh() ? '成立' : 'holds', b: L(nd, 'hold') });
-      items.push({ t: 'num', c: 'fail', i: zh() ? '失敗在哪' : 'fails', b: L(nd, 'fail') });
+      h += '<p class="chead" style="padding-top:6px">' + (zh() ? '這個節點的數字' : 'The numbers') + '</p>';
+      h += '<div class="lcard"><i>' + (zh() ? '數字' : 'the number') + '</i><b>' + S.esc(L(nd, 'num')) + '</b></div>';
+      h += '<div class="lcard"><i>n</i><b>' + S.esc(L(nd, 'n')) + '</b></div>';
+      h += '<div class="lcard"><i>' + (zh() ? '對照' : 'control') + '</i><b>' + S.esc(L(nd, 'ctl')) + '</b></div>';
+      h += '<div class="lcard hold"><i>' + (zh() ? '成立' : 'holds') + '</i><b>' + S.esc(L(nd, 'hold')) + '</b></div>';
+      h += '<div class="lcard fail"><i>' + (zh() ? '失敗在哪' : 'fails') + '</i><b>' + S.esc(L(nd, 'fail')) + '</b></div>';
     } else {
-      var ds = {}, cnt = 0;
-      for (j = 0; j < nd.nb.length; j++) {
-        var o = nd.nb[j].a === nd ? nd.nb[j].b : nd.nb[j].a;
-        if (o.k === 'ev' && !ds[o.dom]) { ds[o.dom] = 1; cnt++; }
-      }
-      if (nd.k === 'con') items.push({ t: 'num', i: zh() ? '橫跨' : 'spans', b: cnt + (zh() ? ' 個領域' : ' domains') });
-      items.push({ t: 'num', i: nd.k === 'imp' ? (zh() ? '影響' : 'impact') : (zh() ? '為什麼重要' : 'why it matters'), b: L(nd, 'note') });
+      h += '<div class="lcard"><i>' + (zh() ? '為什麼重要' : 'why it matters') + '</i><b>' + S.esc(L(nd, 'note')) + '</b></div>';
     }
-    return items;
+    figs.innerHTML = h;
+    figs.scrollTop = 0;
   }
 
-  function buildRing(nd) {
-    ring.innerHTML = '';
-    if (!nd) return;
-    var items = satellites(nd), N = items.length;
-    var start = -100, sweep = 360;
-    for (var j = 0; j < N; j++) {
-      var ang = (start + sweep * j / N) * Math.PI / 180;
-      var rr = items[j].t === 'fig' ? 41.5 : 40.5;
-      var el = document.createElement('div');
-      el.className = 'sat ' + (items[j].t === 'fig' ? 'sat-fig' : 'sat-num ' + (items[j].c || ''));
-      el.style.left = (50 + rr * Math.cos(ang)) + '%';
-      el.style.top = (50 + rr * Math.sin(ang)) + '%';
-      el.style.transitionDelay = (j * 42) + 'ms';
-      if (items[j].t === 'fig') {
-        el.innerHTML = '<img loading="lazy" src="' + items[j].src + '" alt="" data-full="' + items[j].src + '">';
-      } else {
-        el.innerHTML = '<i>' + S.esc(items[j].i) + '</i><b>' + S.esc(items[j].b) + '</b>';
-      }
-      ring.appendChild(el);
-    }
-    setTimeout(function () {
-      var kids = ring.children;
-      for (var k = 0; k < kids.length; k++) kids[k].classList.add('on');
-    }, 20);
-  }
-
-  function swapRing(nd) {
-    var kids = ring.children, j;
-    for (j = 0; j < kids.length; j++) { kids[j].classList.remove('on'); kids[j].style.transitionDelay = '0ms'; }
-    if (ringTimer) clearTimeout(ringTimer);
-    ringTimer = setTimeout(function () { buildRing(nd); }, kids.length ? 200 : 0);
-  }
-
-  /* ---------------------------------------------------------- panel */
-  function select(nd) {
-    sel = nd && pass(nd) ? nd : null;
-    near = {};
-    if (sel) {
-      near[sel.id] = 1;
-      for (var j = 0; j < sel.nb.length; j++) { near[sel.nb[j].a.id] = 1; near[sel.nb[j].b.id] = 1; }
-      var p = sel.p0;
-      yawT = Math.atan2(p[0], p[2]);
-      var zr = Math.sqrt(p[0] * p[0] + p[2] * p[2]);
-      pitchT = Math.max(-1.0, Math.min(1.0, Math.atan2(p[1], zr || 0.001)));
-    }
-    swapRing(sel);
-    panel.innerHTML = sel ? card(sel) : empty();
-    try { history.replaceState(null, '', sel ? '?n=' + sel.id : location.pathname); } catch (err) {}
-  }
-
+  /* ---------------------------------------------------------- right column */
   function card(nd) {
-    var isEv = nd.k === 'ev';
+    var isEv = nd.k === 'ev', j;
     var col = isEv ? DOM[nd.dom].c : (nd.k === 'con' ? '#0A1433' : '#00061C');
     var kind = isEv ? (zh() ? DOM[nd.dom].zh : DOM[nd.dom].en)
       : nd.k === 'con' ? (zh() ? '概念' : 'Concept') : (zh() ? '影響' : 'Impact');
     var h = '<span class="mtag" style="background:' + col + '1f;color:' + col + '">' + S.esc(kind) + '</span>';
     h += '<h2>' + S.esc(title(nd)) + '</h2>';
 
-    var im = (nd.img || []).slice(0, 4), j;
-    if (im.length) {
-      h += '<div class="pshots">';
-      for (j = 0; j < im.length; j++) h += '<img loading="lazy" src="assets/img/' + im[j] + '" alt="" data-full="assets/img/' + im[j] + '">';
-      h += '</div>';
-    }
-
     if (isEv) {
       var fx = nd.fx || {}, st = '';
       for (j = 0; j < MAP_STRENGTH.length; j++) if (MAP_STRENGTH[j].id === fx.st) st = zh() ? MAP_STRENGTH[j].zh : MAP_STRENGTH[j].en;
-      var aws = [];
-      for (j = 0; j < MAP_AWARDS.length; j++) if ((fx.aw || []).indexOf(MAP_AWARDS[j].id) >= 0) aws.push(zh() ? MAP_AWARDS[j].zh : MAP_AWARDS[j].en);
       h += '<div class="spans"><span style="background:' + col + ';color:#fff">' + S.esc(st) + '</span>';
-      for (j = 0; j < aws.length; j++) h += '<span>' + S.esc(aws[j]) + '</span>';
+      for (j = 0; j < MAP_AWARDS.length; j++) if ((fx.aw || []).indexOf(MAP_AWARDS[j].id) >= 0)
+        h += '<span>' + S.esc(zh() ? MAP_AWARDS[j].zh : MAP_AWARDS[j].en) + '</span>';
       if (fx.rk) h += '<span style="background:#FDF1E0;color:#A85B00">' + (zh() ? '一挖就會找到' : 'judges land here') + '</span>';
       h += '</div>';
-      h += '<div class="mnum"><b>' + S.esc(L(nd, 'num')) + '</b><span>n · ' + S.esc(L(nd, 'n')) +
-        '<br>' + (zh() ? '對照' : 'control') + ' · ' + S.esc(L(nd, 'ctl')) + '</span></div>';
-      h += '<div class="bandx h"><i>' + (zh() ? '成立' : 'Holds') + '</i>' + S.esc(L(nd, 'hold')) + '</div>';
-      h += '<div class="bandx f"><i>' + (zh() ? '失敗在哪' : 'Fails') + '</i>' + S.esc(L(nd, 'fail')) + '</div>';
     } else {
       if (nd.k === 'con') {
         var ds = {}, cnt = 0;
@@ -535,8 +499,10 @@
           sp += '<span' + (on ? ' style="background:' + d.c + ';color:#fff"' : '') + '>' + S.esc(zh() ? d.zh : d.en) + '</span>';
         }
         h += sp + '</div>';
+        h += '<div class="mnum"><b>' + (zh() ? '橫跨 ' + cnt + ' 個領域' : 'Spans ' + cnt + ' domains') + '</b><span>' + S.esc(L(nd, 'note')) + '</span></div>';
+      } else {
+        h += '<div class="mnum"><b>' + S.esc(L(nd, 'note')) + '</b></div>';
       }
-      h += '<div class="mnum"><b>' + S.esc(L(nd, 'note')) + '</b></div>';
     }
 
     var ls = nd.nb.filter(function (k) { return (k.en || k.zh) && pass(k.a) && pass(k.b); });
@@ -557,8 +523,24 @@
 
   function empty() {
     return '<p class="mhint">' + (zh()
-      ? '點任一個節點：不相關的節點會讓開，它的圖與數字會浮到外圈上。概念節點還會告訴你它橫跨哪幾個領域。'
-      : 'Tap any node: the unrelated ones move out of the way and its figures and numbers come out onto the ring. A concept node also tells you which domains it spans.') + '</p>';
+      ? '點任一個節點：不相關的節點會讓開，地圖會把它轉到正面，它的圖與數字排到左邊，連結列在這裡。'
+      : 'Tap any node: the unrelated ones move out of the way, the map turns it to the front, its figures and numbers stack on the left, and its links land here.') + '</p>';
+  }
+
+  function select(nd) {
+    sel = nd && pass(nd) ? nd : null;
+    near = {};
+    if (sel) {
+      near[sel.id] = 1;
+      for (var j = 0; j < sel.nb.length; j++) { near[sel.nb[j].a.id] = 1; near[sel.nb[j].b.id] = 1; }
+      var p = sel.p0;
+      yawT = Math.atan2(p[0], p[2]);
+      var zr = Math.sqrt(p[0] * p[0] + p[2] * p[2]);
+      pitchT = Math.max(-1.0, Math.min(1.0, Math.atan2(p[1], zr || 0.001)));
+    }
+    leftColumn(sel);
+    panel.innerHTML = sel ? card(sel) : empty();
+    try { history.replaceState(null, '', sel ? '?n=' + sel.id : location.pathname); } catch (err) {}
   }
 
   function openLb(src) {
@@ -566,13 +548,13 @@
     lb.querySelector('p').textContent = sel ? title(sel) : '';
     lb.classList.add('on');
   }
-  ring.addEventListener('click', function (e) {
+  figs.addEventListener('click', function (e) {
+    var go = e.target.closest('[data-go]');
+    if (go) { select(byId[go.getAttribute('data-go')]); return; }
     var im = e.target.closest('img[data-full]'); if (im) openLb(im.getAttribute('data-full'));
   });
   panel.addEventListener('click', function (e) {
-    var b = e.target.closest('[data-go]');
-    if (b) { select(byId[b.getAttribute('data-go')]); return; }
-    var im = e.target.closest('img[data-full]'); if (im) openLb(im.getAttribute('data-full'));
+    var b = e.target.closest('[data-go]'); if (b) select(byId[b.getAttribute('data-go')]);
   });
   lb.addEventListener('click', function () { lb.classList.remove('on'); });
   document.addEventListener('keydown', function (e) {
@@ -593,9 +575,9 @@
       : 'outer · evidence &nbsp;·&nbsp; middle · concepts &nbsp;·&nbsp; core · impact';
   }
 
-  S.onLang(function () { chips(); hub(); if (sel) { panel.innerHTML = card(sel); swapRing(sel); } else panel.innerHTML = empty(); });
+  S.onLang(function () { chips(); hub(); leftColumn(sel); panel.innerHTML = sel ? card(sel) : empty(); });
   window.addEventListener('resize', size);
-  if (window.ResizeObserver) new ResizeObserver(size).observe(orbit);
+  if (window.ResizeObserver) new ResizeObserver(size).observe(board);
 
   size(); chips(); hub();
   var q = (location.search.match(/[?&]n=([^&]+)/) || [])[1];
