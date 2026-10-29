@@ -4,10 +4,53 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Fact Foundation · ReLEAF Judging Trainer</title>
-<link rel="stylesheet" href="assets/css/base.css?v=202610292300">
-<link rel="stylesheet" href="assets/css/pages.css?v=202610292300">
-<link rel="stylesheet" href="assets/css/theme.css?v=202610292300">
+<link rel="stylesheet" href="assets/css/base.css?v=202610300100">
+<link rel="stylesheet" href="assets/css/pages.css?v=202610300100">
+<link rel="stylesheet" href="assets/css/theme.css?v=202610300100">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M4 20c0-8 5.5-14.5 16-15.5C19.5 14 14 20 4 20Z' fill='%231a7f45'/%3E%3C/svg%3E">
+<style>
+/* the fact list reads as a spec sheet: label left, number right, detail folded */
+.flist { border-top: 1px solid var(--rule-soft); }
+.fitem { border-bottom: 1px solid var(--rule-soft); }
+.fact {
+  display: grid; grid-template-columns: 236px minmax(0, 1fr) 18px; gap: 18px; align-items: baseline;
+  width: 100%; text-align: left; font: inherit; background: none; border: 0;
+  padding: 13px 10px; cursor: pointer; border-radius: 12px; transition: background .15s;
+}
+.fact:hover { background: var(--paper-3); }
+.fact[aria-expanded="true"] { background: var(--paper-3); }
+.f-lab { font-size: 13.5px; color: var(--muted); line-height: 1.5; }
+.f-val { font-size: 15.5px; font-weight: 600; letter-spacing: -.01em; line-height: 1.5; font-variant-numeric: tabular-nums; }
+.f-more { font-size: 15px; color: var(--faint); justify-self: end; transition: transform .2s, color .2s; }
+.fact[aria-expanded="true"] .f-more { transform: rotate(45deg); color: var(--ink); }
+.f-det { padding: 0 10px 15px 264px; font-size: 14px; line-height: 1.65; color: var(--ink-2); }
+.f-det .foot { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin-top: 9px; }
+.fitem.star .f-val { color: var(--accent-deep); }
+.fitem.star .fact::before { content: "★"; position: absolute; margin-left: -18px; color: var(--jb-green); font-size: 11px; }
+.fitem.star .fact { position: relative; }
+.fitem.conflict .f-val { color: var(--amber); }
+.fact-group { margin-bottom: 2rem; }
+.fact-group h3 {
+  position: sticky; top: calc(var(--nav-h, 60px) + 2px); z-index: 5;
+  background: var(--paper-2); padding: 9px 10px; margin: 0;
+  font-size: 11.5px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--faint);
+}
+.fact-group h3 .c { color: var(--rule); font-weight: 600; }
+.ftools { display: flex; gap: 8px; align-items: center; margin: 0 0 6px; }
+.ftool { font: inherit; font-size: 12.5px; font-weight: 600; background: #fff; border: 1px solid var(--rule);
+         color: var(--ink-2); border-radius: 999px; padding: 5px 12px; cursor: pointer; }
+.ftool:hover { border-color: var(--navy); }
+.top10 .fitem { border: 0; background: var(--accent-wash); border-radius: 14px; margin-bottom: 7px; }
+.top10 .f-det { padding-left: 264px; }
+@media (max-width: 760px) {
+  .fact { grid-template-columns: minmax(0, 1fr) 18px; gap: 4px 12px; }
+  .f-lab { grid-column: 1 / 2; }
+  .f-val { grid-column: 1 / 2; }
+  .f-more { grid-row: 1 / 3; grid-column: 2; }
+  .f-det { padding-left: 10px; }
+  .top10 .f-det { padding-left: 10px; }
+}
+</style>
 </head>
 <body>
 
@@ -36,6 +79,7 @@
     <div class="bar-row">
       <div class="chips" id="doms"></div>
       <span class="count-l" id="count"></span>
+      <div class="ftools"><button class="ftool" id="openall" data-en="Open all" data-zh="全部展開"></button><button class="ftool" id="shutall" data-en="Close all" data-zh="全部收合"></button></div>
     </div>
   </div>
 </div>
@@ -57,11 +101,11 @@
   <div class="grid" id="glist" style="gap:.75rem"></div>
 </section>
 
-<script src="assets/js/site.js?v=202610292300"></script>
-<script src="data/meta.js?v=202610292300"></script>
-<script src="data/facts.js?v=202610292300"></script>
-<script src="data/gaps.js?v=202610292300"></script>
-<script src="data/ten.js?v=202610292300"></script>
+<script src="assets/js/site.js?v=202610300100"></script>
+<script src="data/meta.js?v=202610300100"></script>
+<script src="data/facts.js?v=202610300100"></script>
+<script src="data/gaps.js?v=202610300100"></script>
+<script src="data/ten.js?v=202610300100"></script>
 <script>
 (function () {
   var S = window.Site;
@@ -86,15 +130,29 @@
   }
 
   function row(f, cls) {
-    var conf = f.confidence === 'conflict' ? '<span class="pill pill-w" data-en="pages disagree" data-zh="頁面不一致">' +
+    var conf = f.confidence === 'conflict' ? '<span class="pill pill-w">' +
       (S.lang === 'zh' ? '頁面不一致' : 'pages disagree') + '</span>' : '';
-    return '<div class="frow ' + (cls || '') + (f.confidence === 'conflict' ? ' conflict' : '') + '">' +
-      '<div class="lab">' + mark(S.t(f, 'label'), state.q) + '</div>' +
-      '<div class="val">' + mark(f.value, state.q) + '</div>' +
-      (S.t(f, 'detail') ? '<div class="det">' + mark(S.t(f, 'detail'), state.q) + '</div>' : '') +
-      '<div class="bot"><span class="pill">' + S.esc(domName(f.dom)) + '</span>' + conf + S.srcLink(f.src) + '</div>' +
-      '</div>';
+    var det = S.t(f, 'detail');
+    var open = !!state.q;
+    return '<div class="fitem ' + (cls || '') + (f.confidence === 'conflict' ? ' conflict' : '') + '">' +
+      '<button class="fact" type="button" aria-expanded="' + open + '">' +
+        '<span class="f-lab">' + mark(S.t(f, 'label'), state.q) + '</span>' +
+        '<span class="f-val">' + mark(f.value, state.q) + '</span>' +
+        '<span class="f-more" aria-hidden="true">+</span>' +
+      '</button>' +
+      '<div class="f-det"' + (open ? '' : ' hidden') + '>' +
+        (det ? mark(det, state.q) : '') +
+        '<div class="foot"><span class="pill">' + S.esc(domName(f.dom)) + '</span>' + conf + S.srcLink(f.src) + '</div>' +
+      '</div></div>';
   }
+
+  document.addEventListener('click', function (e) {
+    var b = e.target.closest('.fact'); if (!b) return;
+    var open = b.getAttribute('aria-expanded') === 'true';
+    b.setAttribute('aria-expanded', String(!open));
+    var d = b.nextElementSibling;
+    if (d) d.hidden = open;
+  });
 
   function drawTen() {
     var ids = (window.TEN || []);
@@ -146,6 +204,16 @@
     document.getElementById('count').textContent = S.lang === 'zh'
       ? shown + ' / ' + FACTS.length + ' 條' : shown + ' of ' + FACTS.length;
   }
+
+  function toggleAll(open) {
+    var bs = document.querySelectorAll('#out .fact'), i;
+    for (i = 0; i < bs.length; i++) {
+      bs[i].setAttribute('aria-expanded', String(open));
+      if (bs[i].nextElementSibling) bs[i].nextElementSibling.hidden = !open;
+    }
+  }
+  document.getElementById('openall').addEventListener('click', function () { toggleAll(true); });
+  document.getElementById('shutall').addEventListener('click', function () { toggleAll(false); });
 
   function drawGaps() {
     var counts = {}, i;

@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Knowledge Map · ReLEAF Judging Trainer</title>
 <meta name="description" content="Evidence, the concepts that join domains, and impact — three shells in 3D, with every node's figures, numbers and boundary one tap away.">
-<link rel="stylesheet" href="assets/css/base.css?v=202610292300">
-<link rel="stylesheet" href="assets/css/pages.css?v=202610292300">
-<link rel="stylesheet" href="assets/css/theme.css?v=202610292300">
+<link rel="stylesheet" href="assets/css/base.css?v=202610300100">
+<link rel="stylesheet" href="assets/css/pages.css?v=202610300100">
+<link rel="stylesheet" href="assets/css/theme.css?v=202610300100">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M4 20c0-8 5.5-14.5 16-15.5C19.5 14 14 20 4 20Z' fill='%2300B87A'/%3E%3C/svg%3E">
 <style>
 html, body { height: 100%; }
@@ -18,8 +18,7 @@ body > .foot, body > footer { display: none; }
         padding: 0 16px 14px; gap: 10px; }
 
 /* header + the filters that never hide ------------------------------- */
-.hdr { display: flex; align-items: center; gap: 16px; padding: 12px 4px 0; flex: none; }
-.hdr h1 { font-size: 19px; font-weight: 700; margin: 0; flex: none; }
+.hdr { display: flex; align-items: center; gap: 16px; padding: 10px 4px 0; flex: none; }
 .fsets { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 6px; }
 .frow { display: flex; align-items: center; gap: 10px; min-width: 0; }
 .frow > .lab { font-size: 10px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
@@ -113,11 +112,28 @@ body > .foot, body > footer { display: none; }
 
 
 /* practice ------------------------------------------------------------ */
-.modes { display: flex; gap: 2px; background: var(--paper-2); border-radius: 999px; padding: 2px; flex: none; }
-.modes button { font: inherit; font-size: 12px; font-weight: 600; border: 0; background: none; color: var(--muted);
-                border-radius: 999px; padding: 5px 13px; cursor: pointer; white-space: nowrap; transition: background .18s, color .18s; }
-.modes button.on { background: var(--navy); color: #fff; }
-.modes button:hover:not(.on) { color: var(--ink); }
+/* practice sits on the board, out of the way until wanted */
+.prac { position: absolute; left: 13px; bottom: 12px; z-index: 4; }
+.prac-h { display: inline-block; font-size: 11.5px; font-weight: 600; color: rgba(255, 255, 255, .62);
+          background: rgba(255, 255, 255, .08); border: 1px solid rgba(255, 255, 255, .14);
+          border-radius: 999px; padding: 5px 13px; cursor: default; transition: color .2s, background .2s; }
+.prac:hover .prac-h, .prac:focus-within .prac-h, .prac.live .prac-h { color: #fff; background: rgba(255, 255, 255, .16); }
+.prac-b { position: absolute; left: 0; bottom: 32px; display: flex; gap: 4px; padding: 4px;
+          background: rgba(0, 6, 28, .9); border: 1px solid rgba(255, 255, 255, .14); border-radius: 999px;
+          opacity: 0; visibility: hidden; transform: translateY(5px); transition: opacity .18s, transform .18s, visibility .18s; }
+.prac:hover .prac-b, .prac:focus-within .prac-b, .prac.live .prac-b { opacity: 1; visibility: visible; transform: none; }
+.prac-b button { font: inherit; font-size: 11.5px; font-weight: 600; border: 0; background: none;
+                 color: rgba(255, 255, 255, .66); border-radius: 999px; padding: 5px 12px; cursor: pointer; white-space: nowrap; }
+.prac-b button.on { background: #fff; color: var(--navy); }
+.prac-b button:hover:not(.on) { color: #fff; }
+
+/* the box that says how to say it */
+.saybox { background: var(--navy); color: #fff; border-radius: 18px; padding: 15px 16px; margin-bottom: 10px; }
+.saybox .sk { font-size: 10px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: rgba(255, 255, 255, .45); margin: 0; }
+.saybox .kws { display: flex; gap: 6px; flex-wrap: wrap; margin: 9px 0 12px; }
+.saybox .kws span { background: rgba(255, 255, 255, .13); border-radius: 999px; padding: 5px 11px;
+                    font-size: 13px; font-weight: 600; font-variant-numeric: tabular-nums; }
+.saybox p.script { font-size: 14.5px; line-height: 1.62; margin: 0; color: rgba(255, 255, 255, .9); }
 
 .drill { background: #fff; border: 1px solid var(--rule); border-radius: 16px; padding: 14px 15px; margin-bottom: 9px; }
 .drill .ask { font-size: 10px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: var(--faint); margin: 0 0 6px; }
@@ -185,8 +201,6 @@ body > .foot, body > footer { display: none; }
 
 <div class="full">
   <div class="hdr">
-    <h1 data-en="Knowledge map" data-zh="知識地圖"></h1>
-    <div class="modes" id="modes"></div>
     <div class="fsets">
       <div class="frow">
         <span class="lab" data-en="Domain" data-zh="領域"></span>
@@ -214,6 +228,10 @@ body > .foot, body > footer { display: none; }
       <div class="board" id="board">
         <span class="glow g1" id="g1"></span><span class="glow g2" id="g2"></span>
         <canvas id="cv"></canvas>
+        <div class="prac" id="prac" tabindex="0">
+          <span class="prac-h" data-en="Practice" data-zh="練習"></span>
+          <div class="prac-b" id="modes"></div>
+        </div>
         <button class="back" id="back" data-en="Clear selection" data-zh="取消選取"></button>
         <button class="spin" id="spin" data-en="Pause" data-zh="暫停"></button>
       </div>
@@ -224,8 +242,8 @@ body > .foot, body > footer { display: none; }
 
 <div id="lb" role="dialog" aria-modal="true"><img alt=""><p></p></div>
 
-<script src="assets/js/site.js?v=202610292300"></script>
-<script src="data/map.js?v=202610292300"></script>
+<script src="assets/js/site.js?v=202610300100"></script>
+<script src="data/map.js?v=202610300100"></script>
 <script>
 (function () {
   var S = window.Site;
@@ -535,6 +553,20 @@ body > .foot, body > footer { display: none; }
   var TEASE = ['C_MEM', 'M_SIO2', 'P_LADDER', 'I_BROPHY', 'H_LOOP', 'D_TWIN', 'B_GEO', 'W_L2'];
   var trail = [];
 
+  function sayBox(nd) {
+    var r = (typeof MAP_SAY !== 'undefined') ? MAP_SAY[nd.id] : null;
+    if (!r) return '';
+    var kw = (zh() && r.kw_zh) ? r.kw_zh : r.kw, h = '', j;
+    h += '<div class="saybox"><p class="sk">' + (zh() ? '這一題怎麼講' : 'Say it like this') + '</p>';
+    if (kw && kw.length) {
+      h += '<div class="kws">';
+      for (j = 0; j < kw.length; j++) h += '<span>' + S.esc(kw[j]) + '</span>';
+      h += '</div>';
+    }
+    h += '<p class="script">' + S.esc(zh() ? (r.say_zh || r.say) : r.say) + '</p></div>';
+    return h;
+  }
+
   function leftColumn(nd) {
     var h = '', j;
     if (!nd) {
@@ -550,7 +582,8 @@ body > .foot, body > footer { display: none; }
       }
       figs.innerHTML = h; return;
     }
-    h = '<p class="chead">' + (zh() ? '這個節點的圖' : 'Figures for this node') + '</p>';
+    h = sayBox(nd);
+    h += '<p class="chead">' + (zh() ? '這個節點的圖' : 'Figures for this node') + '</p>';
     var im = (nd.img || []).slice(0, 4);
     for (j = 0; j < im.length; j++) {
       h += '<div class="shot"><img loading="lazy" src="assets/img/' + im[j] + '" alt="" data-full="assets/img/' + im[j] + '"></div>';
@@ -703,7 +736,7 @@ body > .foot, body > footer { display: none; }
   function mark(id, k, ok) { (M[id] = M[id] || {})[k] = ok ? 1 : 0; saveM(); }
 
   var MODELIST = [
-    { id: 'explore', en: 'Explore', zh: '瀏覽' },
+    { id: 'explore', en: 'Off', zh: '關閉' },
     { id: 'defend', en: 'Defend', zh: '守一題' },
     { id: 'bridge', en: 'Bridge', zh: '找橋' },
     { id: 'trace', en: 'Trace', zh: '走一條' }
@@ -722,6 +755,7 @@ body > .foot, body > footer { display: none; }
   });
   function setMode(m) {
     MODE = m; modes();
+    document.getElementById('prac').classList.toggle('live', m !== 'explore');
     if (m === 'explore') { select(sel); return; }
     if (m === 'defend') startDefend();
     if (m === 'bridge') startBridge();
