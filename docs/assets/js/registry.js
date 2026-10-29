@@ -189,8 +189,7 @@
     var shown = R.parts.filter(visible).length;
     document.getElementById('maphint').textContent = sel
       ? (sel + ' — ' + L('sel'))
-      : (shown === R.parts.length ? L('hint')
-         : shown + ' / ' + R.parts.length + ' · ' + L('hint'));
+      : (shown === R.parts.length ? '' : shown + ' / ' + R.parts.length);
     drawDetail();
   }
 

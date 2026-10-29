@@ -27,6 +27,7 @@ Static HTML and vanilla JavaScript: no build step to view it, no server, works o
 | **58 milestones** | The year as a vertical timeline, with 47 of the team's own result figures |
 | **162 figures** | Key figures off the wiki and every figure on the Registry part pages, each one a question in two modes: name it out loud, or pick it out of four |
 | **41 parts** | The whole Registry collection, pulled live from the API: four assembly levels, 101 figures copied into the repo, and seventeen places a judge who digs will land |
+| **60 map nodes** | A 3D knowledge map: evidence on the outer shell, the nine concepts that join domains in the middle, impact at the core. 77 written links, 116 figures in the cards |
 | **50 registry** | A question bank for the part pages alone — the band a judge points at, the twin deposits, the missing control lane |
 
 All of it is drawn from the frozen wiki at [2026.igem.wiki/gems-taiwan](https://2026.igem.wiki/gems-taiwan/).
@@ -37,7 +38,7 @@ Students add questions through the team's shared
 — a question they were asked in practice, or one on their own page they would hate to be asked. That
 sheet is where `source/bank.json` came from, and the Question Bank page links to it at the top.
 
-## The ten pages
+## The eleven pages
 
 1. **Start** — the session facts, the countdown, and five rules that decide the twenty minutes.
 2. **Facts** — searchable fact base, plus the ten numbers to know by heart, plus the honest list.
@@ -67,6 +68,13 @@ sheet is where `source/bank.json` came from, and the Question Bank page links to
    plot or dashboard it produced, filterable by track. Figures are copied into the repo so it works offline.
    Nine entries carry a date worked out from context rather than stated on the wiki; they are marked with a
    tilde, an amber dot and a note saying what the date was inferred from.
+
+11. **Knowledge Map** — three shells in 3D, turned by dragging. Sixty nodes: every piece of
+   evidence on the rim, the concepts that let one domain reach another in the middle, and what the
+   project is for at the core. A cross-domain hop always passes through a concept, which is where the
+   connections nobody had noticed turn up. Each card carries one to four of the team's own figures,
+   the number to say out loud with its n and its control, what the claim holds and where it fails,
+   every written link to its neighbours, and a link to the wiki page it came from.
 
 ## The seven seats
 

@@ -1321,3 +1321,166 @@ html:lang(zh) .qb-kw li { font-size: 1.0625rem; }
 .chip[aria-pressed="true"] .dot-dom { box-shadow: 0 0 0 1.5px rgba(255,255,255,.55); }
 .qb-list { border-left: 2px solid var(--c, var(--rule-soft)); padding-left: .85rem; }
 .fact-group > h3 .dot-dom { width: .6rem; height: .6rem; }
+
+/* ════════════════════════════════════════════════════════════════════════
+   Jamboree theme repair
+   ════════════════════════════════════════════════════════════════════════
+   theme.css is loaded last and retunes the palette and the surfaces. These
+   rules put the page pieces back on top of it: the parts that were drawn for
+   white paper, a 52px nav, the old green accent or a 14px radius, and which
+   the theme could not reach from where it sits. Nothing here weakens the
+   theme — it re-states the pieces the theme does not know about. Delete this
+   whole block to return to the pre-theme pages.
+   ──────────────────────────────────────────────────────────────────────── */
+
+/* The nav is 60px under the theme (56 on a phone) while base.css still said
+   52, so the bottom of the nav sat outside its own navy bar and every sticky
+   top — tool bars, month headings, both mock rails — was 8px too high.
+   One number fixes all of them.  --r-md was never declared anywhere, which
+   left the figure-room frames and option buttons with square corners. */
+:root { --nav-h: 60px; --r-md: 16px; }
+@media (max-width: 760px) { :root { --nav-h: 56px; } }
+
+/* ── surfaces ─────────────────────────────────────────────────────────────
+   The page is #F5F5F7 now. Everything that used to be a pale card on white
+   paper (--paper-3) or a grey block on it (--paper-2) ended up the same
+   colour as the page behind it, with a hairline too faint to save it. Cards
+   go white; the three containers that hold white chips of their own stay a
+   shade darker than the page instead, so what is inside them still reads. */
+.frow, .trow, .seatcard, .qb, .rrow, .note, .year a, .rail-count, .whobtn,
+.reg-move, .reg-fig, .reg-slot, .reg-num, .reg-spot, .reg-q, .reg-card li,
+.xscript, .reg-quote blockquote {
+  background: var(--paper);
+}
+.frow, .trow, .seatcard, .qb, .rrow, .note, .rail-count, .xscript,
+.reg-fig, .reg-num, .reg-spot, .reg-q, .reg-card li {
+  border: 1px solid var(--rule);
+}
+.reg-quote blockquote { border: 1px solid var(--rule); border-left: 3px solid var(--amber); }
+.whobtn { border-color: var(--rule); }
+.whobtn:hover { background: var(--paper-2); border-color: var(--jb-blue); }
+.note-w { background: var(--amber-wash); border-color: #f0dcc0; }
+.note-a { background: var(--accent-wash); border-color: #c6ebda; }
+.gap-card .pill-w { background: #fff; }
+
+/* trays: a container whose contents are white */
+.reg-level, .reg-detail { background: #E9EBF2; }
+.panel { background: linear-gradient(180deg, #E7EDF8 0%, #F1F4FB 100%); }
+.bubble { border: 1px solid var(--rule); box-shadow: 0 10px 30px rgba(0, 6, 28, .07); }
+
+/* the sticky tool bar is translucent page, not translucent white paper */
+.bar { background: rgba(245, 245, 247, .86); border-bottom: 1px solid var(--rule); }
+.month { background: linear-gradient(to bottom, var(--paper-2) 72%, rgba(245, 245, 247, 0)); }
+
+/* ── chips, pills, dark panels ────────────────────────────────────────────
+   A chip was grey on white paper; on the grey page it had nothing to stand
+   on, so chips become the theme's white pill controls. Pressed, a chip takes
+   the navy rather than the old near-black — except a domain chip, which
+   fills with its own hue, and a chip on one of the dark panels. */
+.chip { background: var(--paper); border-color: rgba(0, 0, 0, .12); }
+.chip:hover { background: var(--paper-2); }
+.chip[aria-pressed="true"]:not(.chip-dom) { background: var(--navy); border-color: var(--navy); color: #fff; }
+/* only the neutral pill: the coloured variants keep their own wash and ink,
+   so the list below has to name every one of them */
+.pill:not(.pill-a):not(.pill-b):not(.pill-w):not(.pill-r):not(.pill-v):not(.pill-line):not(.pill-deep):not(.pill-author) { background: #ECECF1; color: #55555c; }
+.pill-line { background: none; border-color: rgba(0, 0, 0, .18); }
+
+.quiz, .reg-sort, .fubox, .toast, .seat-badge, .rail-step, .prog i.now { background: var(--navy); }
+.reg-chip.is-sel { background: var(--navy); border-color: var(--navy); }
+.reg-sort .chip { background: rgba(255, 255, 255, .1); border-color: rgba(255, 255, 255, .18); color: #fff; }
+.reg-sort .chip:hover { background: rgba(255, 255, 255, .2); }
+.reg-sort .chip[aria-pressed="true"]:not(.chip-dom) {
+  background: var(--jb-green-2); border-color: var(--jb-green-2); color: #04281b;
+}
+.modal { background: rgba(0, 6, 28, .55); }
+.reg-lb { background: rgba(0, 6, 28, .92); }
+.qb.lit { box-shadow: 0 0 0 3px rgba(0, 135, 92, .14); }
+.reg-link { text-decoration-color: rgba(0, 135, 92, .4); }
+.reg-link:hover { text-decoration-color: var(--accent); }
+
+/* ── buttons ──────────────────────────────────────────────────────────────
+   The theme's .btn-line is white-on-transparent, which is right in the navy
+   hero and invisible everywhere else; .btn-accent is navy, which is right on
+   the page and invisible in the hero. Each one gets its other half back. */
+.btn.btn-line { background: transparent; color: var(--navy); border: 1px solid var(--rule); }
+.btn.btn-line:hover { background: var(--paper-2); opacity: 1; }
+.hero .btn.btn-line { color: #fff; border-color: rgba(255, 255, 255, .3); }
+.hero .btn.btn-line:hover { background: rgba(255, 255, 255, .12); }
+.hero .btn.btn-accent { background: var(--grad); color: #fff; }
+.hero .btn.btn-accent:hover { opacity: .9; }
+
+/* a ghost button on one of the dark panels keeps its white text on hover */
+.quiz .btn-ghost, .fubox .btn-ghost, .reg-sort .btn-ghost {
+  background: rgba(255, 255, 255, .16); color: #fff; border-color: rgba(255, 255, 255, .22);
+}
+.quiz .btn-ghost:hover, .fubox .btn-ghost:hover, .reg-sort .btn-ghost:hover {
+  background: rgba(255, 255, 255, .28); color: #fff;
+}
+
+/* ── search fields ────────────────────────────────────────────────────────
+   The theme sets `background: #fff` on input[type=search]; the shorthand
+   dropped the magnifier with it, while the text kept the indent that made
+   room for the icon. Both come back, with the focus ring on the new blue. */
+.search[type="search"], .search[type="text"] {
+  padding: .8rem 1rem .8rem 2.6rem; font-size: 1.0625rem;
+  background-color: #fff; background-repeat: no-repeat; background-position: .95rem 50%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='17' viewBox='0 0 24 24' fill='none' stroke='%236e6e73' stroke-width='2.2' stroke-linecap='round'%3E%3Ccircle cx='11' cy='11' r='7'/%3E%3Cpath d='M16.5 16.5 21 21'/%3E%3C/svg%3E");
+}
+.search[type="search"]:focus, .search[type="text"]:focus {
+  border-color: var(--jb-blue-2); outline: none; box-shadow: 0 0 0 4px rgba(1, 103, 239, .14);
+}
+.reg-find[type="search"] { padding: .55rem .9rem .55rem 2.4rem; font-size: .9375rem; background-position: .8rem 50%; }
+.codebox .search[type="text"], .codebox .search[type="search"] { font-family: var(--font-mono); font-size: .75rem; }
+
+/* ── on the navy ──────────────────────────────────────────────────────────
+   Hero furniture and the footer were coloured for white paper: grey on grey
+   once the theme put navy behind them. */
+.hero .src, .hero .src a, .hero .reg-stat span, .hero .lede-sm { color: rgba(255, 255, 255, .62); }
+.hero .pill { background: rgba(255, 255, 255, .13); color: rgba(255, 255, 255, .86); }
+.foot { color: rgba(255, 255, 255, .55); border-top: 0; padding: 2.25rem 0 2.5rem; }
+.foot a { color: rgba(255, 255, 255, .8); }
+
+/* a blue focus ring is unreadable on the navy surfaces */
+.nav :focus-visible, .hero :focus-visible, .quiz :focus-visible,
+.reg-sort :focus-visible, .fubox :focus-visible, .reg-lb :focus-visible { outline-color: #fff; }
+
+/* The theme centres every direct child of the hero to hold it to the page
+   column. A child with a max-width of its own — every page's lede — was then
+   centred on its own narrower width and no longer began where the headline
+   begins. Give them all the column's left edge instead. */
+.hero.wrap > * { margin-left: max(0px, (100% - var(--page)) / 2); margin-right: auto; }
+
+/* The mock room's two after-the-run folds never had a style of their own, so
+   they were drawing the browser's default triangle beside themed controls.
+   Same fold as the figure room's. */
+details.fold { border-top: 1px solid var(--rule); padding: 1.1rem 0; }
+details.fold > summary {
+  cursor: pointer; list-style: none;
+  font-family: var(--font-display); font-weight: 600; font-size: 1.0625rem; letter-spacing: -.01em;
+}
+details.fold > summary::-webkit-details-marker { display: none; }
+details.fold > summary::before { content: '+ '; color: var(--faint); }
+details.fold[open] > summary::before { content: '\2013 '; }
+
+/* .wrap zeroes the vertical padding base.css gives a section, which never
+   showed while the page was white paper. Now the first block after the hero
+   butts straight into the navy — the terms quiz and the bank's green panel
+   read as part of it. Give that block the air the section was meant to have. */
+.hero + * { margin-top: 2.25rem; }
+
+/* the band rows sit inside a figure card that is now white itself */
+.reg-bands li { background: var(--paper-2); }
+
+/* On a phone the fact row's value column takes its own minimum and the label
+   column collapses to nothing, so the two overlap. Stack them instead. */
+@media (max-width: 560px) {
+  .frow { grid-template-columns: minmax(0, 1fr); }
+  .frow .val { grid-column: 1 / -1; }
+  .top10 .frow { grid-template-columns: 2rem minmax(0, 1fr); }
+  .top10 .frow .val { grid-column: 2 / -1; }
+}
+
+/* Stacked, the room's single column was sized by its widest unbreakable
+   child, which pushed the mock and figure rooms 13px wider than a phone. */
+@media (max-width: 1140px) { .mock-page .room { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 900px)  { .room { grid-template-columns: minmax(0, 1fr); } }

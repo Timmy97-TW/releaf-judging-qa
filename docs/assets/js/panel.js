@@ -211,13 +211,14 @@
         h += body(j, x, 70, on);
         h += face(j, x, 70, on);
         if (on) {
-          h += '<circle cx="' + (x + 40) + '" cy="36" r="7" fill="#1a7f45"/>' +
-            '<circle cx="' + (x + 40) + '" cy="36" r="13" fill="none" stroke="#1a7f45" stroke-width="2" opacity=".35"/>';
+          /* the speaking judge's marker: the jamboree green, not the old accent */
+          h += '<circle cx="' + (x + 40) + '" cy="36" r="7" fill="#00B87A"/>' +
+            '<circle cx="' + (x + 40) + '" cy="36" r="13" fill="none" stroke="#00B87A" stroke-width="2" opacity=".35"/>';
         }
         h += '</g>';
       }
       /* the bench itself */
-      h += '<path d="M20 148 h880 a12 12 0 0 1 12 12 v30 a12 12 0 0 1 -12 12 h-880 a12 12 0 0 1 -12 -12 v-30 a12 12 0 0 1 12 -12z" fill="#fff" stroke="#dcdce1" stroke-width="1.5"/>';
+      h += '<path d="M20 148 h880 a12 12 0 0 1 12 12 v30 a12 12 0 0 1 -12 12 h-880 a12 12 0 0 1 -12 -12 v-30 a12 12 0 0 1 12 -12z" fill="#fff" stroke="#d3d8e2" stroke-width="1.5"/>';
       for (i = 0; i < 4; i++) {
         var p = panel[i], nm = (p.title[lang] ? p.title[lang] + ' ' : '') + p.given + ' ' + p.family;
         h += '<text x="' + xs[i] + '" y="178" text-anchor="middle" font-size="13.5" ' +

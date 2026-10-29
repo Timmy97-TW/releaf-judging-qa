@@ -13,6 +13,7 @@
     { href: 'seats.html',    en: 'Mic Map',      zh: '麥克風地圖' },
     { href: 'delivery.html', en: 'Delivery',     zh: '答題技巧' },
     { href: 'timeline.html', en: 'Timeline',     zh: '時間軸' }
+    ,{ href: 'map.html',      en: 'Map',          zh: '知識地圖', hot: true }
   ];
 
   var LEAF = '<svg class="leaf" viewBox="0 0 24 24" fill="none" aria-hidden="true">' +

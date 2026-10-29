@@ -5,147 +5,211 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ReLEAF Judging Trainer · GEMS Taiwan iGEM 2026</title>
 <meta name="description" content="Twenty minutes of questions, seven students, one wiki. Preparation for the GEMS Taiwan judging session at the iGEM 2026 Grand Jamboree.">
-<link rel="stylesheet" href="assets/css/base.css?v=202610251205">
-<link rel="stylesheet" href="assets/css/pages.css?v=202610251205">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M4 20c0-8 5.5-14.5 16-15.5C19.5 14 14 20 4 20Z' fill='%231a7f45'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/css/base.css?v=202610291900">
+<link rel="stylesheet" href="assets/css/pages.css?v=202610291900">
+<link rel="stylesheet" href="assets/css/theme.css?v=202610291900">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M4 20c0-8 5.5-14.5 16-15.5C19.5 14 14 20 4 20Z' fill='%2300B87A'/%3E%3C/svg%3E">
+<style>
+.sheet { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+.hero .btn-row { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 1.75rem; }
+
+.facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1px;
+         background: var(--rule); border-radius: var(--r-lg); overflow: hidden; margin: -34px 0 0; position: relative; z-index: 2;
+         box-shadow: 0 10px 30px rgba(0, 6, 28, .10); }
+.facts div { background: #fff; padding: 16px 18px; }
+.facts dt { font-size: 11.5px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: var(--faint); margin: 0 0 5px; }
+.facts dd { margin: 0; font-size: 15.5px; font-weight: 600; line-height: 1.35; font-variant-numeric: tabular-nums; }
+.facts dd small { display: block; font-weight: 400; font-size: 13px; color: var(--muted); margin-top: 2px; }
+
+.band { padding: 3rem 0 0; }
+.band h2 { font-size: clamp(22px, 2.4vw, 30px); font-weight: 700; margin: 0 0 .4rem; }
+.band .sub { color: var(--muted); margin: 0 0 1.4rem; max-width: 62ch; }
+
+.feature { position: relative; overflow: hidden; background: var(--navy); color: #fff;
+           border-radius: var(--r-lg); padding: 30px; display: grid; grid-template-columns: 1.15fr 1fr; gap: 28px; align-items: center; }
+.feature::after { content: ""; position: absolute; width: 460px; height: 460px; right: -170px; top: -210px;
+                  border-radius: 50%; filter: blur(85px); opacity: .5; pointer-events: none;
+                  background: radial-gradient(circle, #0167EF 0%, transparent 65%); }
+.feature > * { position: relative; z-index: 1; }
+.feature h3 { font-size: clamp(22px, 2.3vw, 30px); font-weight: 700; line-height: 1.2; margin: 10px 0 10px; }
+.feature h3 em { font-style: normal; background: var(--grad); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+.feature p { color: rgba(255, 255, 255, .72); margin: 0 0 18px; }
+.feature .kick { font-size: 13px; font-weight: 600; color: var(--jb-green-2); }
+.fstats { display: flex; gap: 22px; margin: 0 0 20px; }
+.fstats b { display: block; font-size: 26px; font-weight: 700; font-variant-numeric: tabular-nums; line-height: 1; }
+.fstats span { font-size: 12.5px; color: rgba(255, 255, 255, .55); }
+.fshots { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.fshots img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 14px; display: block; border: 1px solid rgba(255, 255, 255, .12); }
+
+.rooms { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px; }
+.room { background: #fff; border: 1px solid var(--rule); border-radius: var(--r-lg); padding: 18px 20px;
+        text-decoration: none; color: inherit; display: block; transition: border-color .2s, transform .2s; }
+.room:hover { border-color: rgba(0, 0, 0, .22); transform: translateY(-2px); text-decoration: none; }
+.room .n { font-size: 12px; font-weight: 700; color: var(--faint); font-variant-numeric: tabular-nums; }
+.room h3 { font-size: 17px; font-weight: 600; margin: 6px 0 5px; }
+.room p { font-size: 14px; color: var(--muted); line-height: 1.55; margin: 0; }
+
+.drills { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 12px; }
+.drill { background: #fff; border: 1px solid var(--rule); border-left: 3px solid var(--c, var(--jb-blue));
+         border-radius: 0 var(--r) var(--r) 0; padding: 15px 17px; text-decoration: none; color: inherit; display: block; }
+.drill:hover { background: var(--paper-3); text-decoration: none; }
+.drill b { display: block; font-size: 24px; font-weight: 700; font-variant-numeric: tabular-nums; color: var(--c); line-height: 1; }
+.drill h4 { font-size: 15px; font-weight: 600; margin: 7px 0 4px; }
+.drill p { font-size: 13.5px; color: var(--muted); margin: 0; line-height: 1.5; }
+
+.rules { list-style: none; padding: 0; margin: 0; counter-reset: r;
+         display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 14px; }
+.rules li { counter-increment: r; background: #fff; border: 1px solid var(--rule); border-radius: var(--r-lg); padding: 18px 20px; }
+.rules li::before { content: counter(r); display: block; font-size: 12px; font-weight: 700; color: var(--jb-green); font-variant-numeric: tabular-nums; }
+.rules h4 { font-size: 16px; font-weight: 600; margin: 6px 0 6px; line-height: 1.4; }
+.rules p { font-size: 14px; color: var(--muted); line-height: 1.6; margin: 0; }
+
+.counts { display: grid; grid-template-columns: repeat(auto-fit, minmax(110px, 1fr)); gap: 1px;
+          background: var(--rule); border-radius: var(--r-lg); overflow: hidden; }
+.counts div { background: #fff; padding: 16px 14px; text-align: center; }
+.counts b { display: block; font-size: 26px; font-weight: 700; font-variant-numeric: tabular-nums; }
+.counts span { font-size: 12.5px; color: var(--muted); }
+
+@media (max-width: 860px) { .feature { grid-template-columns: 1fr; } .facts { margin-top: -20px; } }
+</style>
 </head>
 <body>
 
-<header class="hero wrap hero-jam">
-  <span class="blob b1" aria-hidden="true"></span>
-  <span class="blob b2" aria-hidden="true"></span>
-  <span class="blob b3" aria-hidden="true"></span>
+<header class="hero">
   <p class="ticket">
     <span class="dot" aria-hidden="true"></span>
     <span data-en="Grand Jamboree · Paris · 13–16 Nov 2026" data-zh="Grand Jamboree · 巴黎 · 2026 年 11 月 13–16 日"></span>
     <span class="stub">J03</span>
   </p>
-  <p class="eyebrow" data-en="GEMS Taiwan · iGEM 2026 · Biomanufacturing Village" data-zh="GEMS Taiwan · iGEM 2026 · 生物製造村"></p>
+  <p class="eyebrow" style="margin-top:1.25rem" data-en="GEMS Taiwan · iGEM 2026 · Biomanufacturing Village" data-zh="GEMS Taiwan · iGEM 2026 · 生物製造村"></p>
   <h1 data-en="Twenty minutes of questions." data-zh="二十分鐘的提問。"></h1>
   <h1 class="h1-muted" data-en="Seven of you at the microphone." data-zh="七個人站在麥克風前。"></h1>
-  <p class="lede" style="max-width:58ch;margin-top:1.25rem"
-     data-en="The judges have already watched your video and read your wiki. They are not there to hear the project again. They are there to find out whether you understand it. This site is where you get ready for that."
-     data-zh="評審已經看過你們的影片、讀過你們的 wiki。他們不是來再聽一次專題介紹，而是來確認你們是不是真的懂自己的專題。這個網站就是為那二十分鐘做準備的地方。"></p>
-  <div class="btn-row" style="margin-top:1.75rem">
-    <a class="btn btn-accent" href="mock.html" data-en="Enter the mock room" data-zh="進入模擬會場"></a>
-    <a class="btn btn-ghost" href="seats.html" data-en="Find your seat" data-zh="找到你的位置"></a>
-    <a class="btn btn-line" href="mock.html?mode=deep" data-en="Go straight to the deep end" data-zh="直接跳進深水區"></a>
+  <p class="lede" style="max-width:52ch;margin-top:1.1rem"
+     data-en="The judges have read your wiki. They are there to find out whether you understand it."
+     data-zh="評審已經讀過你們的 wiki。他們來，是要確認你們是不是真的懂它。"></p>
+  <div class="btn-row">
+    <a class="btn btn-ghost" href="map.html" data-en="Open the knowledge map" data-zh="打開知識地圖"></a>
+    <a class="btn btn-line" href="mock.html" data-en="Enter the mock room" data-zh="進入模擬會場"></a>
+    <a class="btn btn-line" href="seats.html" data-en="Find your seat" data-zh="找到你的位置"></a>
   </div>
-  <div class="villages" aria-hidden="true">
-    <span class="on">Biomanufacturing</span><span>Environment</span><span>Food &amp; Agriculture</span>
-    <span>Health &amp; Medicine</span><span>Foundational Advance</span><span>Software</span>
-  </div>
-  <div class="jam-rule" aria-hidden="true"></div>
 </header>
 
-<section class="wrap" id="session">
-  <div class="sess">
-    <div class="sess-when">
-      <p class="pill pill-r" data-en="First shift of the Jamboree" data-zh="全場第一輪"></p>
-      <div class="sess-date">
-        <strong data-en="Fri 13 Nov" data-zh="11 月 13 日（五）"></strong>
-        <span data-en="12:00 – 12:25 Paris · 19:00 – 19:25 Taipei" data-zh="巴黎 12:00 – 12:25 · 台北 19:00 – 19:25"></span>
+<main class="sheet">
+
+  <dl class="facts">
+    <div><dt data-en="When" data-zh="時間"></dt><dd>Fri 13 Nov<small data-en="12:00–12:25 Paris · 19:00–19:25 Taipei" data-zh="巴黎 12:00–12:25 · 台北 19:00–19:25"></small></dd></div>
+    <div><dt data-en="Room" data-zh="會場"></dt><dd>J03<small data-en="first shift of the day" data-zh="當天第一場"></small></dd></div>
+    <div><dt data-en="Arrive" data-zh="報到"></dt><dd>11:30–11:50<small data-en="Judging Zone" data-zh="評審區"></small></dd></div>
+    <div><dt data-en="Shape" data-zh="形式"></dt><dd data-en="5 min + 20 min" data-zh="5 分鐘 + 20 分鐘"><small data-en="update, then questions" data-zh="先報告，再提問"></small></dd></div>
+    <div><dt data-en="Judges" data-zh="評審"></dt><dd>4<small data-en="all in the room" data-zh="全部在現場"></small></dd></div>
+    <div><dt data-en="Nominated" data-zh="提名"></dt><dd data-en="3 awards" data-zh="三個獎項"><small data-en="Measurement · Hardware · Integrated HP" data-zh="量測 · 硬體 · 整合人文實踐"></small></dd></div>
+  </dl>
+
+  <section class="band">
+    <div class="feature">
+      <div>
+        <span class="kick" data-en="New" data-zh="新"></span>
+        <h3><span data-en="Evidence on the rim." data-zh="證據在外圈。"></span>
+            <em data-en="Impact at the core." data-zh="影響在中心。"></em></h3>
+        <p data-en="Sixty nodes on three shells, turned by hand. Every cross-domain hop passes through a concept, and every card carries its number, its n, its control, and the boundary where it fails."
+           data-zh="三層殼、六十個節點，可以用手轉動。每一次跨領域的跳躍都要穿過一個概念；每張卡片都帶著它的數字、n、對照，以及它失敗的邊界。"></p>
+        <div class="fstats">
+          <div><b class="tw">60</b><span data-en="nodes" data-zh="節點"></span></div>
+          <div><b class="tw">77</b><span data-en="written links" data-zh="寫下的連結"></span></div>
+          <div><b class="tw">116</b><span data-en="figures in the cards" data-zh="卡片裡的圖"></span></div>
+        </div>
+        <a class="btn btn-grad" href="map.html" data-en="Turn the map" data-zh="轉動地圖"></a>
       </div>
-      <p class="cd" id="countdown" aria-live="polite"></p>
+      <div class="fshots">
+        <img loading="lazy" src="assets/img/fq/h03.webp" alt="">
+        <img loading="lazy" src="assets/img/tl/r17-set6-plates-plant.webp" alt="">
+        <img loading="lazy" src="assets/img/fq/m01.svg" alt="">
+        <img loading="lazy" src="assets/img/fq/i01.webp" alt="">
+      </div>
     </div>
-    <dl class="sess-facts">
-      <div><dt data-en="Room" data-zh="會談室"></dt><dd>J03</dd></div>
-      <div><dt data-en="Arrive" data-zh="到場"></dt><dd data-en="11:30 – 11:50, Judging Zone" data-zh="11:30 – 11:50，Judging Zone"></dd></div>
-      <div><dt data-en="Shape" data-zh="流程"></dt><dd data-en="5 min update + 20 min Q&amp;A" data-zh="5 分鐘更新 + 20 分鐘問答"></dd></div>
-      <div><dt data-en="Judges" data-zh="評審"></dt><dd data-en="4, all in the room" data-zh="4 位，全部在現場"></dd></div>
-      <div><dt data-en="Nominated" data-zh="提名"></dt><dd data-en="Measurement · Hardware · Integrated HP" data-zh="最佳量測 · 最佳硬體 · 整合人文實踐"></dd></div>
-      <div><dt data-en="Language" data-zh="語言"></dt><dd data-en="English. Asking for a repeat is allowed." data-zh="英文。可以請評審重說一次。"></dd></div>
-    </dl>
-  </div>
-  <p class="note note-w" style="margin-top:1.25rem"
-     data-en="No online judges this year, and you are the first team of the day. Nobody will be warmed up, including the panel. Your first answer sets the tone for the whole twenty minutes, so rehearse the first two minutes until they are boring."
-     data-zh="今年沒有線上評審，而你們是當天第一組。包括評審在內，沒有人是熱機完成的狀態。第一個回答會決定接下來二十分鐘的氣氛，所以把開場兩分鐘練到無聊為止。"></p>
-</section>
+  </section>
 
-<section class="wrap narrow" id="round2">
-  <div class="round">
-    <div class="round-head">
-      <h3 data-en="Round two: the bank got harder" data-zh="第二輪：題庫變難了"></h3>
-      <span class="when" data-en="25 Oct training" data-zh="10/25 訓練"></span>
-    </div>
-    <p data-en="You ran the first version and said the cloning questions were too easy. They are gone. What replaced them is pitched the way a professor questions a graduate student: mechanism, trade-offs, and numbers with their uncertainty. Some of the new questions have no answer anywhere on your wiki — that is deliberate. You work those out standing up, in the room."
-       data-zh="你們練完第一版，說選殖的題目太簡單。那些題目已經換掉了。新題目的高度是教授問研究生的高度：機制、取捨，以及帶著誤差的數字。其中有些題目在 wiki 上完全找不到答案——這是故意的。那些題目要你們站在現場自己推出來。"></p>
-    <div class="new-grid" id="newgrid"></div>
-    <div class="adviser">
-      <b data-en="New: the adviser's own questions" data-zh="新增：顧問親自出的題"></b>
-      <p data-en="Kyle Peng, who advised the plant team all year, typed up a set of research highlights and open scientific questions for you on 24 October. Every question he raised is in the bank, marked with his name, answered against what your wiki can actually support — and where it cannot, the honest answer says so."
-         data-zh="整年指導植物組的 Kyle Peng，在 10 月 24 日為你們整理了一份研究亮點與科學問題。他提出的每一個問題都進了題庫，標上他的名字，並且只用 wiki 真的撐得起來的內容作答——撐不起來的地方，答案就直接承認。"></p>
-    </div>
-  </div>
-</section>
+  <section class="band">
+    <h2 data-en="Four ways to be tested" data-zh="四種被考的方式"></h2>
+    <p class="sub" data-en="Each one opens the mock room already filtered." data-zh="每一個都會直接打開已經篩選好的模擬會場。"></p>
+    <div class="drills" id="drills"></div>
+  </section>
 
-<section class="wrap">
-  <div class="sec-head">
-    <h2 data-en="You have been here before" data-zh="你們來過這裡"></h2>
-    <p data-en="Last year, in the same building. The room on the right is what twenty minutes looks like from the inside, and the morning on the left is what decides it."
-       data-zh="去年，同一棟建築裡。右邊那張是二十分鐘在裡面的樣子，左邊那個早上，則決定了那二十分鐘。"></p>
-  </div>
-  <div class="grid g2 shots">
-    <figure>
-      <img src="assets/img/judging-prep-2025.jpg" width="1500" height="1130" loading="lazy" decoding="async"
-           alt="Six GEMS Taiwan students sitting on a hotel bed, talking through answers before their judging session.">
-      <figcaption data-en="The hotel room, 2025. The work that shows in the session was done before anyone got to the building."
-                  data-zh="2025 年的旅館房間。會談中展現出來的東西，都是在進到會場之前就完成的。"></figcaption>
-    </figure>
-    <figure>
-      <img src="assets/img/judging-room-2025.jpg" width="1500" height="1129" loading="lazy" decoding="async"
-           alt="The 2025 GEMS Taiwan team standing in a row in judging room J7 while the judges sit at a table facing them.">
-      <figcaption data-en="Judging room J7, 2025. Count the row: the students at the back cannot reach the microphone, which is why the Mic Map has seven seats."
-                  data-zh="2025 年 J7 會談室。數一數那一排：站在後面的同學走不到麥克風前，這就是麥克風地圖只有七個位置的原因。"></figcaption>
-    </figure>
-  </div>
-</section>
+  <section class="band">
+    <h2 data-en="The rooms" data-zh="各個房間"></h2>
+    <p class="sub" data-en="Left to right: build what you know, then test it, then decide who says it."
+       data-zh="由左到右：先建立你知道的，再測試它，最後決定由誰來說。"></p>
+    <div class="rooms" id="rooms"></div>
+  </section>
 
-<section class="wrap">
-  <div class="sec-head">
-    <h2 data-en="Ten rooms to work through" data-zh="十個練習房間"></h2>
-    <p data-en="Work left to right. The first three build what you know — the numbers, the words, and every question with its three keywords. The fourth is the one public record a judge can read while you talk. The next two test whether you know it under question and by sight, the two after that decide who says it and how it lands, and the last two are the record you are answering from."
-       data-zh="由左至右使用。前三個建立你知道的內容——數字、用詞，以及每一題和它的三個關鍵字。第四個是評審在你說話的同時就能讀的那份公開紀錄。接下來兩個檢驗你被問的時候、看圖的時候還認不認得，再兩個決定由誰回答、怎麼回答，最後兩個是你回答時依據的紀錄。"></p>
-  </div>
-  <div class="grid g2" id="tiles"></div>
-</section>
+  <section class="band">
+    <h2 data-en="Five things that decide this session" data-zh="決定這二十分鐘的五件事"></h2>
+    <p class="sub" data-en="Read these once a day until you fly." data-zh="每天讀一次，讀到出發為止。"></p>
+    <ol class="rules" id="rules"></ol>
+  </section>
 
-<section class="wrap narrow">
-  <div class="sec-head">
-    <h2 data-en="Five things that decide this session" data-zh="決定這場會談的五件事"></h2>
-    <p data-en="Read these once a day until you fly."
-       data-zh="在出發前每天讀一次。"></p>
-  </div>
-  <ol class="rules" id="rules"></ol>
-</section>
-
-<section class="wrap narrow">
-  <div class="sec-head">
+  <section class="band" style="padding-bottom:3rem">
     <h2 data-en="What is in here" data-zh="這裡有什麼"></h2>
-  </div>
-  <div class="grid g4" id="counts"></div>
-  <p class="lede-sm" style="margin-top:1.25rem"
-     data-en="Everything is drawn from your own wiki as it stands frozen, plus the questions judges actually asked teams in 2025. Where your pages disagree with each other, this site says so instead of hiding it, because the judges will find those places too."
-     data-zh="所有內容都取自凍結後的 wiki，加上 2025 年評審實際問過各隊的問題。當你們的頁面彼此矛盾時，這個網站會直接指出來，因為評審也會找到那些地方。"></p>
-</section>
+    <p class="sub" data-en="All of it off your own frozen wiki. Where your pages disagree, this site says so."
+       data-zh="全部取自你們自己凍結的 wiki。頁面互相矛盾的地方，這個網站會直接講出來。"></p>
+    <div class="counts" id="counts"></div>
+  </section>
 
-<script src="assets/js/site.js?v=202610251205"></script>
-<script src="data/content.js?v=202610251205"></script>
-<script src="data/index.js?v=202610251205"></script>
+</main>
+
+<script src="assets/js/site.js?v=202610291900"></script>
+<script src="data/content.js?v=202610291900"></script>
+<script src="data/index.js?v=202610291900"></script>
 <script>
 (function () {
   var S = window.Site;
 
-  function tiles() {
-    var h = '';
-    for (var i = 0; i < CONTENT.tiles.length; i++) {
-      var t = CONTENT.tiles[i];
-      h += '<a class="tile" href="' + t.href + '">' +
-        '<span class="n">' + ('0' + (i + 1)) + '</span>' +
+  var MAPTILE = {
+    href: 'map.html', title_en: 'Knowledge Map', title_zh: '知識地圖',
+    blurb_en: 'Three shells in 3D. Evidence, the concepts that join domains, and impact at the core — each card with its figures, its n and its boundary.',
+    blurb_zh: '三層殼的 3D 地圖。證據、連接領域的概念，以及中心的影響——每張卡片都附上它的圖、它的 n 與它的邊界。'
+  };
+
+  function rooms() {
+    var list = [MAPTILE].concat(CONTENT.tiles), h = '';
+    for (var i = 0; i < list.length; i++) {
+      var t = list[i];
+      h += '<a class="room" href="' + t.href + '">' +
+        '<span class="n">' + ('0' + (i + 1)).slice(-2) + '</span>' +
         '<h3>' + S.esc(S.t(t, 'title')) + '</h3>' +
         '<p>' + S.esc(S.t(t, 'blurb')) + '</p></a>';
     }
-    document.getElementById('tiles').innerHTML = h;
+    document.getElementById('rooms').innerHTML = h;
+  }
+
+  function drills() {
+    var c = window.INDEX_COUNTS || {}, zh = S.lang === 'zh';
+    var rows = [
+      { n: c.deep || 0, href: 'mock.html?mode=deep', col: '#00B87A',
+        en: 'Deep end', zh: '深水區',
+        pen: 'Mechanism, trade-offs, numbers with their uncertainty.',
+        pzh: '機制、取捨，以及帶著不確定性的數字。' },
+      { n: c.reason || 0, href: 'mock.html?type=reason', col: '#0167EF',
+        en: 'Reasoning, not recall', zh: '推理題，不是背題',
+        pen: 'No answer on the wiki. You work it out standing up.',
+        pzh: 'Wiki 上沒有答案。你要站著把它推出來。' },
+      { n: c.history || 0, href: 'mock.html?type=history', col: '#00A3C4',
+        en: 'Where we stand', zh: '我們站在哪裡',
+        pen: 'Hollow fibre is old news. What did we actually add?',
+        pzh: '中空纖維不是新東西。那我們到底加了什麼？' },
+      { n: c.authored || 0, href: 'mock.html?mode=kyle', col: '#F08C00',
+        en: "The adviser's set", zh: '顧問出的題',
+        pen: 'Kyle Peng’s scientific inquiries, answered honestly.',
+        pzh: 'Kyle Peng 的科學問題，誠實作答。' }
+    ];
+    var h = '';
+    for (var i = 0; i < rows.length; i++) {
+      var r = rows[i];
+      h += '<a class="drill" style="--c:' + r.col + '" href="' + r.href + '">' +
+        '<b>' + r.n + '</b><h4>' + S.esc(zh ? r.zh : r.en) + '</h4>' +
+        '<p>' + S.esc(zh ? r.pzh : r.pen) + '</p></a>';
+    }
+    document.getElementById('drills').innerHTML = h;
   }
 
   function rules() {
@@ -157,72 +221,22 @@
     document.getElementById('rules').innerHTML = h;
   }
 
-  function newGrid() {
-    var c = window.INDEX_COUNTS || {};
-    var rows = [
-      { n: c.deep || 0, href: 'mock.html?mode=deep', col: 'var(--jam-green)',
-        en: 'Deep end', zh: '深水區',
-        pen: 'Graduate-level questions across cloning, plants, reactor, photometer, model.',
-        pzh: '研究生等級的題目，涵蓋選殖、植物、反應器、光度計、模型。',
-        gen: 'Drill them →', gzh: '開始練 →' },
-      { n: c.reason || 0, href: 'mock.html?type=reason', col: 'var(--jam-blue)',
-        en: 'Reasoning, not recall', zh: '推理題，不是背題',
-        pen: 'No answer on the wiki. You are given a premise and have to get to the end of it.',
-        pzh: 'Wiki 上沒有答案。給你一個前提，你要自己推到結論。',
-        gen: 'Think one through →', gzh: '推一題看看 →' },
-      { n: c.history || 0, href: 'mock.html?type=history', col: 'var(--jam-teal)',
-        en: 'Where we stand', zh: '我們站在哪裡',
-        pen: 'Hollow fibre and DIY OD meters are old news. What did we actually add?',
-        pzh: '中空纖維和自製 OD 計都不是新東西。那我們到底加了什麼？',
-        gen: 'Place the work →', gzh: '說清楚定位 →' },
-      { n: c.authored || 0, href: 'mock.html?mode=kyle', col: 'var(--jam-orange)',
-        en: "Kyle Peng's set", zh: 'Kyle Peng 出的題',
-        pen: 'The adviser\'s five scientific inquiries, turned into questions with model answers.',
-        pzh: '顧問提出的五個科學問題，轉成題目與示範答案。',
-        gen: 'Take his questions →', gzh: '接下他的題 →' }
-    ];
-    var h = '';
-    for (var i = 0; i < rows.length; i++) {
-      var r = rows[i], zh = S.lang === 'zh';
-      h += '<a class="new-card" style="--c:' + r.col + '" href="' + r.href + '">' +
-        '<span class="n">' + r.n + '</span>' +
-        '<h4>' + S.esc(zh ? r.zh : r.en) + '</h4>' +
-        '<p>' + S.esc(zh ? r.pzh : r.pen) + '</p>' +
-        '<span class="go">' + S.esc(zh ? r.gzh : r.gen) + '</span></a>';
-    }
-    document.getElementById('newgrid').innerHTML = h;
-  }
-
   function counts() {
-    var c = window.INDEX_COUNTS || {};
+    var c = window.INDEX_COUNTS || {}, zh = S.lang === 'zh';
     var rows = [
-      { n: c.facts || 0, en: 'facts with a wiki source', zh: '條有 wiki 來源的事實' },
-      { n: c.terms || 0, en: 'terms, three keywords each', zh: '個術語，每個三個關鍵字' },
-      { n: c.questions || 0, en: 'questions written for your project', zh: '題為你們專題量身出的問題' },
-      { n: c.gaps || 0, en: 'weak points to answer honestly', zh: '個要誠實面對的弱點' }
+      [c.facts, 'facts', '事實'], [c.terms, 'terms', '術語'], [c.questions, 'questions', '題目'],
+      [c.figures, 'figures', '圖'], [41, 'Registry parts', 'Registry parts'], [c.gaps, 'honest gaps', '誠實的缺口']
     ];
     var h = '';
     for (var i = 0; i < rows.length; i++) {
-      h += '<div class="card card-soft"><p class="stat">' + rows[i].n + '</p>' +
-           '<p class="stat-l">' + S.esc(S.lang === 'zh' ? rows[i].zh : rows[i].en) + '</p></div>';
+      h += '<div><b>' + (rows[i][0] || 0) + '</b><span>' + S.esc(zh ? rows[i][2] : rows[i][1]) + '</span></div>';
     }
     document.getElementById('counts').innerHTML = h;
   }
 
-  var TARGET = Date.UTC(2026, 10, 13, 11, 0, 0); // 12:00 Paris = 11:00 UTC
-  function countdown() {
-    var el = document.getElementById('countdown');
-    var ms = TARGET - Date.now();
-    if (ms <= 0) { el.textContent = S.lang === 'zh' ? '就是現在。' : 'This is it.'; return; }
-    var d = Math.floor(ms / 864e5), h = Math.floor(ms / 36e5) % 24, m = Math.floor(ms / 6e4) % 60;
-    el.textContent = S.lang === 'zh'
-      ? '距離開場 ' + d + ' 天 ' + h + ' 小時 ' + m + ' 分'
-      : d + ' days, ' + h + ' hours, ' + m + ' minutes to go';
-  }
-
-  function draw() { tiles(); rules(); newGrid(); counts(); countdown(); }
-  S.onLang(draw);
-  setInterval(countdown, 30000);
+  function all() { rooms(); drills(); rules(); counts(); }
+  S.onLang(all);
+  all();
 })();
 </script>
 </body>

@@ -5,7 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Mic Map · ReLEAF Judging Trainer</title>
 <link rel="stylesheet" href="assets/css/base.css?v=202610251205">
-<link rel="stylesheet" href="assets/css/pages.css?v=202610251205">
+<link rel="stylesheet" href="assets/css/pages.css?v=202610291900">
+<link rel="stylesheet" href="assets/css/theme.css?v=202610291700">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M4 20c0-8 5.5-14.5 16-15.5C19.5 14 14 20 4 20Z' fill='%231a7f45'/%3E%3C/svg%3E">
 </head>
 <body>
@@ -55,8 +56,8 @@
 <section class="wrap" id="drill">
   <div class="sec-head">
     <h2 data-en="Assignment drill" data-zh="分派演練"></h2>
-    <p data-en="One person reads the question out loud. The seven of you say the seat number together, in under two seconds. Then reveal. This is the only drill that fixes the silent-look-around problem."
-       data-zh="由一個人把題目唸出來，七個人在兩秒內一起喊出位置編號，然後翻開答案。只有這個演練能解決「互看一圈沒人回答」的問題。"></p>
+    <p data-en="One person reads the question out loud. The seven of you say the seat number together, in under two seconds. Then reveal."
+       data-zh="由一個人把題目唸出來，七個人在兩秒內一起喊出位置編號，然後翻開答案。"></p>
   </div>
 
   <div class="card-2">
@@ -199,8 +200,7 @@
     di++;
     answered = false;
     var q = deck[di];
-    document.getElementById('dcount').textContent = (S.lang === 'zh' ? '題目 ' : 'Question ') + (di + 1) +
-      ' · ' + S.p(L.pick);
+    document.getElementById('dcount').textContent = (S.lang === 'zh' ? '題目 ' : 'Question ') + (di + 1);
     document.getElementById('dq').textContent = S.t(q, 'q');
     document.getElementById('dans').hidden = true;
     document.getElementById('dstart').hidden = true;
