@@ -19,13 +19,15 @@ body > .foot, body > footer { display: none; }
 
 /* header + the filters that never hide ------------------------------- */
 .hdr { display: flex; align-items: center; gap: 16px; padding: 10px 4px 0; flex: none; }
-.fsets { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 6px; }
-.frow { display: flex; align-items: center; gap: 10px; min-width: 0; }
-.frow > .lab { font-size: 10px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
-               color: var(--faint); width: 84px; flex: none; }
+/* one line when it fits: domain chips (they are also the colour key), then the award chips */
+.fsets { flex: 1; min-width: 0; display: flex; flex-wrap: wrap; align-items: center; gap: 6px 22px; }
+.mrow { display: flex; align-items: center; gap: 9px; min-width: 0; }
+.mrow > .lab { font-size: 10px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+               color: var(--faint); flex: none; white-space: nowrap; }
+.fsets > .mrow + .mrow { padding-left: 22px; border-left: 1px solid var(--rule-soft); }
 .fchips { display: flex; gap: 5px; flex-wrap: wrap; min-width: 0; }
 .fc { font: inherit; font-size: 12px; font-weight: 600; cursor: pointer; background: #fff;
-      border: 1px solid var(--rule); color: var(--ink-2); border-radius: 999px; padding: 4px 10px;
+      border: 1px solid var(--rule); color: var(--ink-2); border-radius: 999px; padding: 4px 9px;
       display: inline-flex; align-items: center; gap: 6px; white-space: nowrap;
       transition: background .18s, border-color .18s, color .18s; }
 .fc i { width: 7px; height: 7px; border-radius: 50%; background: currentColor; display: block; }
@@ -48,29 +50,68 @@ body > .foot, body > footer { display: none; }
           opacity: 0; visibility: hidden; transform: translateY(-6px);
           transition: opacity .18s, transform .18s, visibility .18s; }
 .more:hover .more-b, .more:focus-within .more-b { opacity: 1; visibility: visible; transform: none; }
-.more-b .frow + .frow { margin-top: 8px; padding-top: 8px; border-top: 1px solid var(--rule-soft); }
+.more-b .mrow + .mrow { margin-top: 8px; padding-top: 8px; border-top: 1px solid var(--rule-soft); }
 .tally { font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; flex: none; }
 .fclear { font: inherit; font-size: 12px; font-weight: 600; background: none; border: 0; color: var(--jb-blue); cursor: pointer; flex: none; padding: 0; }
 
 /* three columns ------------------------------------------------------- */
-.stage { flex: 1; min-height: 0; display: grid; grid-template-columns: 286px minmax(0, 1fr) 374px; gap: 13px; }
+/* the side columns grow with the screen, so a wide monitor gets more text, not only a bigger sphere */
+.stage { flex: 1; min-height: 0; display: grid; gap: 13px;
+         grid-template-columns: clamp(270px, 22vw, 420px) minmax(0, 1fr) clamp(310px, 25vw, 460px); }
 .col { min-width: 0; min-height: 0; }
+/* the map on top, the node's figures in a strip under it */
+.col-mid { display: flex; flex-direction: column; gap: 10px; }
+.col-mid .board { flex: 1; min-height: 0; height: auto; }
+.strip { flex: none; height: clamp(104px, 18vh, 220px); display: flex; gap: 8px; }
+.strip:empty { display: none; }
+.strip figure { flex: 1 1 0; min-width: 0; margin: 0; position: relative; overflow: hidden; cursor: zoom-in;
+                background: #fff; border: 1px solid var(--rule); border-radius: 14px; transition: border-color .2s, transform .2s; }
+.strip figure:hover { border-color: var(--navy); transform: translateY(-2px); }
+.strip figure[data-go] { cursor: pointer; }
+.strip img { width: 100%; height: 100%; object-fit: contain; display: block; padding: 6px; }
+.strip figcaption { position: absolute; left: 0; right: 0; bottom: 0; padding: 14px 10px 7px; font-size: 11.5px; font-weight: 600;
+                    line-height: 1.35; color: var(--ink); background: linear-gradient(rgba(255, 255, 255, 0), #fff 45%);
+                    white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .scroller { height: 100%; overflow-y: auto; overscroll-behavior: contain; padding-right: 3px; }
 .scroller::-webkit-scrollbar { width: 7px; }
 .scroller::-webkit-scrollbar-thumb { background: rgba(0, 0, 0, .13); border-radius: 8px; }
 
 .chead { font-size: 10px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--faint); padding: 0 2px 7px; }
-.shot { margin-bottom: 9px; }
-.shot img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block; border-radius: 16px;
-            background: #fff; border: 1px solid var(--rule); cursor: zoom-in; transition: border-color .2s, transform .2s; }
-.shot img:hover { border-color: var(--navy); transform: translateY(-2px); }
-.shot p { font-size: 12px; color: var(--muted); margin: 6px 2px 0; line-height: 1.45; }
 .lcard { background: #fff; border: 1px solid var(--rule); border-radius: 15px; padding: 11px 13px; margin-bottom: 9px; }
 .lcard i { font-style: normal; display: block; font-size: 10px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: var(--faint); margin-bottom: 4px; }
 .lcard b { display: block; font-size: 13.5px; font-weight: 600; line-height: 1.5; font-variant-numeric: tabular-nums; }
 .lcard.hold { border-left: 3px solid var(--jb-green); }
 .lcard.fail { border-left: 3px solid var(--jb-amber); }
-.lhint { font-size: 13px; color: var(--muted); line-height: 1.6; padding: 0 2px 10px; margin: 0; }
+/* the five numbers of an evidence node in one card, hairlines between */
+.nums { background: #fff; border: 1px solid var(--rule); border-radius: 15px; padding: 2px 13px; margin-bottom: 9px; }
+.nums > div { padding: 9px 0; border-top: 1px solid var(--rule-soft); }
+.nums > div:first-child { border-top: 0; }
+.nums .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.nums i { font-style: normal; display: block; font-size: 10px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: var(--faint); margin-bottom: 3px; }
+.nums b { display: block; font-size: 13.5px; font-weight: 600; line-height: 1.5; font-variant-numeric: tabular-nums; }
+.nums .big b { font-size: 15px; }
+.nums .hold i { color: #006B49; } .nums .fail i { color: #A85B00; }
+.nums .hold, .nums .fail { margin: 0 -13px; padding: 9px 13px; }
+.nums .hold { box-shadow: inset 3px 0 0 var(--jb-green); } .nums .fail { box-shadow: inset 3px 0 0 var(--jb-amber); }
+
+/* with nothing selected the two side columns index the three shells */
+.ix { margin: 0 0 14px; }
+.ix-h { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; font-size: 10px; font-weight: 700;
+        letter-spacing: .08em; text-transform: uppercase; color: var(--faint); padding: 0 2px 7px; }
+.ix-h u { text-decoration: none; font-variant-numeric: tabular-nums; }
+.ix-row { display: block; width: 100%; text-align: left; font: inherit; background: #fff; border: 1px solid var(--rule);
+          border-radius: 14px; padding: 10px 12px; margin-bottom: 7px; cursor: pointer; color: var(--ink-2);
+          font-size: 12.5px; line-height: 1.5; transition: border-color .18s; }
+.ix-row:hover { border-color: var(--navy); }
+.ix-row b { display: block; color: var(--ink); font-size: 13.5px; font-weight: 600; margin-bottom: 2px; }
+.ix-chips { display: flex; flex-wrap: wrap; gap: 4px; }
+.ix-chips button { font: inherit; font-size: 11.5px; font-weight: 600; line-height: 1.35; text-align: left; cursor: pointer;
+                   background: #fff; border: 1px solid var(--rule); color: var(--ink-2); border-radius: 999px; padding: 3px 9px;
+                   display: inline-flex; align-items: center; gap: 6px; transition: border-color .18s, background .18s, color .18s; }
+.ix-chips button i { width: 7px; height: 7px; border-radius: 50%; flex: none; display: block; }
+.ix-chips button:hover { background: var(--navy); border-color: var(--navy); color: #fff; }
+.ix-dom { font-size: 11px; font-weight: 700; margin: 7px 2px 4px; }
+.ix-dom:first-of-type { margin-top: 0; }
 
 .board { position: relative; height: 100%; border-radius: var(--r-lg); overflow: hidden;
          background: var(--navy); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .09); }
@@ -89,6 +130,9 @@ body > .foot, body > footer { display: none; }
 .back.on { display: inline-block; }
 
 .mpanel { background: #fff; border: 1px solid var(--rule); border-radius: var(--r-lg); padding: 17px; }
+/* the index needs no card around it: its chips are the cards */
+.mpanel.bare { background: none; border: 0; padding: 0; }
+.mpanel.bare .trail { margin-top: 4px; }
 .mtag { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; padding: 4px 11px; border-radius: 999px; margin-bottom: 9px; }
 .mpanel h2 { font-size: 19px; font-weight: 700; line-height: 1.32; margin: 0 0 11px; }
 .spans { display: flex; gap: 5px; flex-wrap: wrap; margin: 0 0 11px; }
@@ -98,7 +142,7 @@ body > .foot, body > footer { display: none; }
 .mnum span { display: block; font-size: 12.5px; color: var(--muted); margin-top: 5px; }
 .links { border-top: 1px solid var(--rule); margin-top: 5px; padding-top: 9px; }
 .links h3 { font-size: 10px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: var(--faint); margin: 0 0 7px; }
-.lk { display: block; width: 100%; text-align: left; font: inherit; background: none; border: 0; border-radius: 12px; padding: 8px 9px; cursor: pointer; color: var(--ink-2); font-size: 13px; line-height: 1.55; }
+.lk { display: block; width: 100%; text-align: left; font: inherit; background: none; border: 0; border-radius: 12px; padding: 6px 9px; cursor: pointer; color: var(--ink-2); font-size: 12.5px; line-height: 1.5; }
 .lk:hover { background: var(--paper-2); }
 .lk b { display: block; color: var(--ink); font-weight: 600; font-size: 13.5px; margin-bottom: 2px; }
 .lk b::before { content: "→ "; color: var(--faint); }
@@ -179,20 +223,27 @@ body > .foot, body > footer { display: none; }
 #lb img { max-width: 92vw; max-height: 82vh; border-radius: 14px; display: block; }
 #lb p { position: absolute; left: 0; right: 0; bottom: 20px; text-align: center; color: rgba(255, 255, 255, .72); font-size: 14px; padding: 0 24px; margin: 0; }
 
-@media (max-width: 1280px) { .stage { grid-template-columns: 250px minmax(0, 1fr) 330px; } .frow > .lab { width: 70px; } }
 @media (max-width: 1040px) {
   body { overflow: auto; }
   body > .foot, body > footer { display: block; }
   .full { height: auto; }
   .hdr { flex-direction: column; align-items: stretch; gap: 8px; }
   .stage { grid-template-columns: 1fr; }
-  .board { height: 420px; }
+  .col-mid .board { flex: none; height: 420px; }
+  .strip { height: 132px; overflow-x: auto; }
+  .strip figure { flex: 0 0 176px; }
   .scroller { height: auto; overflow: visible; }
   .col-figs { order: 3; } .col-card { order: 2; }
-  .frow { flex-wrap: wrap; } .frow > .lab { width: 100%; }
+  .fsets { flex-direction: column; flex-wrap: nowrap; align-items: stretch; }
+  .fsets > .mrow + .mrow { padding-left: 0; border-left: 0; }
+  .mrow { flex-wrap: wrap; gap: 5px 10px; } .mrow > .lab { width: 100%; }
+  /* one row per group that slides sideways, so the map is not four screens of chips down */
+  .fchips { width: 100%; flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; padding-bottom: 2px; }
+  .fchips::-webkit-scrollbar { display: none; }
   .more { display: contents; }
-  .more-b { position: static; opacity: 1; visibility: visible; transform: none; box-shadow: none;
-            max-width: none; width: auto; margin-top: 8px; border: 0; padding: 0; }
+  .more-b { position: static; opacity: 1; visibility: visible; transform: none; box-shadow: none; background: none;
+            max-width: none; width: 100%; margin-top: 2px; border: 0; padding: 0; border-radius: 0; }
+  .more-b .mrow + .mrow { margin-top: 6px; padding-top: 0; border-top: 0; }
   .more-h { display: none; }
 }
 </style>
@@ -202,18 +253,18 @@ body > .foot, body > footer { display: none; }
 <div class="full">
   <div class="hdr">
     <div class="fsets">
-      <div class="frow">
+      <div class="mrow">
         <span class="lab" data-en="Domain" data-zh="領域"></span>
         <div class="fchips" id="f-dom"></div>
       </div>
-      <div class="frow">
+      <div class="mrow">
         <span class="lab" data-en="Evidence for" data-zh="支持哪個獎"></span>
         <div class="fchips" id="f-aw"></div>
         <div class="more" id="more" tabindex="0">
           <span class="more-h"><span data-en="More" data-zh="更多"></span><b id="morecount">0</b>▾</span>
           <div class="more-b">
-            <div class="frow"><span class="lab" data-en="How strong" data-zh="證據強度"></span><div class="fchips" id="f-st"></div></div>
-            <div class="frow"><span class="lab" data-en="Lens" data-zh="鏡頭"></span><div class="fchips" id="f-lens"></div></div>
+            <div class="mrow"><span class="lab" data-en="How strong" data-zh="證據強度"></span><div class="fchips" id="f-st"></div></div>
+            <div class="mrow"><span class="lab" data-en="Lens" data-zh="鏡頭"></span><div class="fchips" id="f-lens"></div></div>
           </div>
         </div>
         <span class="tally" id="fcount"></span>
@@ -224,7 +275,7 @@ body > .foot, body > footer { display: none; }
 
   <div class="stage">
     <div class="col col-figs"><div class="scroller" id="figs"></div></div>
-    <div class="col">
+    <div class="col col-mid">
       <div class="board" id="board">
         <span class="glow g1" id="g1"></span><span class="glow g2" id="g2"></span>
         <canvas id="cv"></canvas>
@@ -235,6 +286,7 @@ body > .foot, body > footer { display: none; }
         <button class="back" id="back" data-en="Clear selection" data-zh="取消選取"></button>
         <button class="spin" id="spin" data-en="Pause" data-zh="暫停"></button>
       </div>
+      <div class="strip" id="strip"></div>
     </div>
     <div class="col col-card"><div class="scroller"><aside class="mpanel" id="panel"></aside></div></div>
   </div>
@@ -250,6 +302,7 @@ body > .foot, body > footer { display: none; }
   var cv = document.getElementById('cv'), ctx = cv.getContext('2d');
   var board = document.getElementById('board'), figs = document.getElementById('figs');
   var panel = document.getElementById('panel'), lb = document.getElementById('lb');
+  var strip = document.getElementById('strip');
   var g1 = document.getElementById('g1'), g2 = document.getElementById('g2');
   var R = { ev: 1, con: .56, imp: .2 };
   var NODES = MAP_NODES, byId = {}, DOM = {}, i, n;
@@ -567,38 +620,103 @@ body > .foot, body > footer { display: none; }
     return h;
   }
 
-  function leftColumn(nd) {
-    var h = '', j;
-    if (!nd) {
-      h = '<p class="chead">' + (zh() ? '從這裡開始' : 'Start anywhere') + '</p>' +
-        '<p class="lhint">' + (zh()
-          ? '點地圖上任一個節點，它的圖會排在這一欄。或直接點下面任何一張圖。'
-          : 'Tap any node on the map and its figures stack here. Or just tap a picture below.') + '</p>';
-      for (j = 0; j < TEASE.length; j++) {
-        var t = byId[TEASE[j]];
-        if (!t || !t.img || !t.img.length || !pass(t)) continue;
-        h += '<div class="shot"><img loading="lazy" src="assets/img/' + t.img[0] + '" alt="" data-go="' + t.id + '">' +
-          '<p>' + S.esc(title(t)) + '</p></div>';
+  /* the strip under the board: a node's figures, or a few doors in */
+  function showStrip(items) {
+    var h = '', j, it;
+    for (j = 0; j < items.length; j++) {
+      it = items[j];
+      if (!it.src) continue;
+      h += '<figure' + (it.go ? ' data-go="' + it.go + '"' : ' data-full="assets/img/' + it.src + '"') +
+        (it.cap ? ' data-cap="' + S.esc(it.cap) + '"' : '') + '><img src="assets/img/' + it.src + '" alt="">' +
+        (it.cap ? '<figcaption>' + S.esc(it.cap) + '</figcaption>' : '') + '</figure>';
+    }
+    strip.innerHTML = h;
+  }
+  function figsOf(nd) {
+    return (nd.img || []).slice(0, 4).map(function (src) { return { src: src }; });
+  }
+  function teasers() {
+    var out = [], j, t;
+    for (j = 0; j < TEASE.length && out.length < 4; j++) {
+      t = byId[TEASE[j]];
+      if (t && t.img && t.img.length && pass(t)) out.push({ src: t.img[0], cap: title(t), go: t.id });
+    }
+    return out;
+  }
+
+  /* nothing selected: impact and the concepts on the left, every evidence node on the right */
+  function coreIndex() {
+    var h = '', j, nd, imp = [], con = [];
+    for (j = 0; j < NODES.length; j++) {
+      if (NODES[j].k === 'imp') imp.push(NODES[j]);
+      if (NODES[j].k === 'con') con.push(NODES[j]);
+    }
+    h += '<div class="ix"><p class="ix-h"><span>' + (zh() ? '影響 · 核心' : 'Impact · the core') + '</span><u>' + imp.length + '</u></p>';
+    for (j = 0; j < imp.length; j++) {
+      nd = imp[j];
+      h += '<button class="ix-row" data-go="' + nd.id + '"><b>' + S.esc(title(nd)) + '</b>' + S.esc(L(nd, 'note')) + '</button>';
+    }
+    h += '</div><div class="ix"><p class="ix-h"><span>' + (zh() ? '概念 · 中間層' : 'Concepts · the middle shell') + '</span><u>' + con.length + '</u></p><div class="ix-chips">';
+    for (j = 0; j < con.length; j++) {
+      h += '<button data-go="' + con[j].id + '"><i style="background:#00A3C4"></i>' + S.esc(shortOf(con[j])) + '</button>';
+    }
+    return h + '</div></div>';
+  }
+  function evIndex() {
+    var h = '', j, k, d, tot = 0, body = '';
+    for (j = 0; j < MAP_DOMS.length; j++) {
+      d = MAP_DOMS[j];
+      var row = '';
+      for (k = 0; k < NODES.length; k++) {
+        var nd = NODES[k];
+        if (nd.k !== 'ev' || nd.dom !== d.id || !pass(nd)) continue;
+        tot++;
+        row += '<button data-go="' + nd.id + '">' + S.esc(shortOf(nd)) + '</button>';
       }
-      figs.innerHTML = h; return;
+      if (row) body += '<p class="ix-dom" style="color:' + d.c + '">' + S.esc(zh() ? d.zh : d.en) + '</p><div class="ix-chips">' + row + '</div>';
     }
-    h = sayBox(nd);
-    h += '<p class="chead">' + (zh() ? '這個節點的圖' : 'Figures for this node') + '</p>';
-    var im = (nd.img || []).slice(0, 4);
-    for (j = 0; j < im.length; j++) {
-      h += '<div class="shot"><img loading="lazy" src="assets/img/' + im[j] + '" alt="" data-full="assets/img/' + im[j] + '"></div>';
-    }
-    if (nd.k === 'ev') {
-      h += '<p class="chead" style="padding-top:5px">' + (zh() ? '這個節點的數字' : 'The numbers') + '</p>';
-      h += '<div class="lcard"><i>' + (zh() ? '數字' : 'the number') + '</i><b>' + S.esc(L(nd, 'num')) + '</b></div>';
-      h += '<div class="lcard"><i>n</i><b>' + S.esc(L(nd, 'n')) + '</b></div>';
-      h += '<div class="lcard"><i>' + (zh() ? '對照' : 'control') + '</i><b>' + S.esc(L(nd, 'ctl')) + '</b></div>';
-      h += '<div class="lcard hold"><i>' + (zh() ? '成立' : 'holds') + '</i><b>' + S.esc(L(nd, 'hold')) + '</b></div>';
-      h += '<div class="lcard fail"><i>' + (zh() ? '失敗在哪' : 'fails') + '</i><b>' + S.esc(L(nd, 'fail')) + '</b></div>';
+    h += '<div class="ix"><p class="ix-h"><span>' + (zh() ? '證據 · 外層' : 'Evidence · the outer shell') + '</span><u>' + tot + '</u></p>';
+    return h + (body || '<p class="mhint">' + (zh() ? '篩選之後沒有節點了。' : 'No nodes left under these filters.') + '</p>') + '</div>';
+  }
+
+  /* a concept: which domains it joins; impact: why it matters */
+  function reach(nd) {
+    var h = '', j;
+    if (nd.k === 'con') {
+      var ds = {}, cnt = 0;
+      for (j = 0; j < nd.nb.length; j++) {
+        var o = nd.nb[j].a === nd ? nd.nb[j].b : nd.nb[j].a;
+        if (o.k === 'ev' && !ds[o.dom]) { ds[o.dom] = 1; cnt++; }
+      }
+      var sp = '<div class="spans">';
+      for (j = 0; j < MAP_DOMS.length; j++) {
+        var d = MAP_DOMS[j], on = !!ds[d.id];
+        sp += '<span' + (on ? ' style="background:' + d.c + ';color:#fff"' : '') + '>' + S.esc(zh() ? d.zh : d.en) + '</span>';
+      }
+      h += '<p class="chead">' + (zh() ? '橫跨 ' + cnt + ' 個領域' : 'Spans ' + cnt + ' domains') + '</p>' +
+        '<div class="nums"><div>' + sp.replace('class="spans"', 'class="spans" style="margin:0"') + '</div></div></div>' +
+        '<div class="nums"><div><i>' + (zh() ? '為什麼重要' : 'why it matters') + '</i><b>' + S.esc(L(nd, 'note')) + '</b></div></div>';
     } else {
-      h += '<div class="lcard"><i>' + (zh() ? '為什麼重要' : 'why it matters') + '</i><b>' + S.esc(L(nd, 'note')) + '</b></div>';
+      h += '<div class="nums"><div><i>' + (zh() ? '為什麼重要' : 'why it matters') + '</i><b>' + S.esc(L(nd, 'note')) + '</b></div></div>';
+    }
+    return h;
+  }
+
+  function leftColumn(nd) {
+    if (!nd) { figs.innerHTML = coreIndex(); showStrip(teasers()); return; }
+    var h = sayBox(nd);
+    if (nd.k === 'ev') {
+      h += '<p class="chead">' + (zh() ? '這個節點的數字' : 'The numbers') + '</p><div class="nums">' +
+        '<div class="big"><i>' + (zh() ? '數字' : 'the number') + '</i><b>' + S.esc(L(nd, 'num')) + '</b></div>' +
+        '<div class="pair"><div><i>n</i><b>' + S.esc(L(nd, 'n')) + '</b></div>' +
+        '<div><i>' + (zh() ? '對照' : 'control') + '</i><b>' + S.esc(L(nd, 'ctl')) + '</b></div></div>' +
+        '<div class="hold"><i>' + (zh() ? '成立' : 'holds') + '</i><b>' + S.esc(L(nd, 'hold')) + '</b></div>' +
+        '<div class="fail"><i>' + (zh() ? '失敗在哪' : 'fails') + '</i><b>' + S.esc(L(nd, 'fail')) + '</b></div></div>';
+    } else {
+      h += reach(nd);
     }
     figs.innerHTML = h; figs.scrollTop = 0;
+    showStrip(figsOf(nd));
   }
 
   function trailHtml() {
@@ -626,21 +744,6 @@ body > .foot, body > footer { display: none; }
         h += '<span>' + S.esc(zh() ? MAP_AWARDS[j].zh : MAP_AWARDS[j].en) + '</span>';
       if (fx.rk) h += '<span style="background:#FDF1E0;color:#A85B00">' + (zh() ? '一挖就會找到' : 'judges land here') + '</span>';
       h += '</div>';
-    } else if (nd.k === 'con') {
-      var ds = {}, cnt = 0;
-      for (j = 0; j < nd.nb.length; j++) {
-        var o = nd.nb[j].a === nd ? nd.nb[j].b : nd.nb[j].a;
-        if (o.k === 'ev' && !ds[o.dom]) { ds[o.dom] = 1; cnt++; }
-      }
-      var sp = '<div class="spans">';
-      for (j = 0; j < MAP_DOMS.length; j++) {
-        var d = MAP_DOMS[j], on = !!ds[d.id];
-        sp += '<span' + (on ? ' style="background:' + d.c + ';color:#fff"' : '') + '>' + S.esc(zh() ? d.zh : d.en) + '</span>';
-      }
-      h += sp + '</div>';
-      h += '<div class="mnum"><b>' + (zh() ? '橫跨 ' + cnt + ' 個領域' : 'Spans ' + cnt + ' domains') + '</b><span>' + S.esc(L(nd, 'note')) + '</span></div>';
-    } else {
-      h += '<div class="mnum"><b>' + S.esc(L(nd, 'note')) + '</b></div>';
     }
 
     var ls = nd.nb.filter(function (k) { return (k.en || k.zh) && pass(k.a) && pass(k.b); });
@@ -659,11 +762,7 @@ body > .foot, body > footer { display: none; }
     return h + trailHtml();
   }
 
-  function empty() {
-    return '<p class="mhint">' + (zh()
-      ? '點任一個節點：不相關的節點會讓開，地圖把它轉到正面並放大它與相鄰節點的名字，圖與數字排到左邊。'
-      : 'Tap any node: the unrelated ones move out of the way, the map turns it to the front and enlarges it and its neighbours, and its figures and numbers stack on the left.') + '</p>' + trailHtml();
-  }
+  function empty() { return evIndex() + trailHtml(); }
 
   function select(nd) {
     sel = nd && pass(nd) ? nd : null;
@@ -684,9 +783,9 @@ body > .foot, body > footer { display: none; }
     try { history.replaceState(null, '', sel ? '?n=' + sel.id : location.pathname); } catch (err) {}
   }
 
-  function openLb(src) {
+  function openLb(src, cap) {
     lb.querySelector('img').src = src;
-    lb.querySelector('p').textContent = sel ? title(sel) : '';
+    lb.querySelector('p').textContent = cap || (sel ? title(sel) : '');
     lb.classList.add('on');
   }
   figs.addEventListener('click', function (e) {
@@ -697,6 +796,19 @@ body > .foot, body > footer { display: none; }
   panel.addEventListener('click', function (e) {
     var b = e.target.closest('[data-go]'); if (b) select(byId[b.getAttribute('data-go')]);
   });
+  strip.addEventListener('click', function (e) {
+    var f = e.target.closest('figure'); if (!f) return;
+    if (f.hasAttribute('data-go')) select(byId[f.getAttribute('data-go')]);
+    else openLb(f.getAttribute('data-full'), f.getAttribute('data-cap'));
+  });
+  /* pointing at a name in either index lights the node on the board */
+  function lightFrom(e) {
+    var b = e.target.closest('[data-go]');
+    hov = b && !sel ? byId[b.getAttribute('data-go')] || null : hov;
+  }
+  figs.addEventListener('mouseover', lightFrom); panel.addEventListener('mouseover', lightFrom);
+  figs.addEventListener('mouseleave', function () { if (!sel) hov = null; });
+  panel.addEventListener('mouseleave', function () { if (!sel) hov = null; });
   lb.addEventListener('click', function () { lb.classList.remove('on'); });
   document.getElementById('back').addEventListener('click', function () { select(null); });
   document.addEventListener('keydown', function (e) {
@@ -789,16 +901,15 @@ body > .foot, body > footer { display: none; }
   var D = null;
   function startDefend() {
     var p = pool();
-    if (!p.length) { panel.innerHTML = '<p class="mhint">' + (zh() ? '篩選之後沒有節點了。' : 'No nodes left under these filters.') + '</p>'; figs.innerHTML = ''; return; }
+    if (!p.length) { panel.innerHTML = '<p class="mhint">' + (zh() ? '篩選之後沒有節點了。' : 'No nodes left under these filters.') + '</p>'; figs.innerHTML = ''; strip.innerHTML = ''; return; }
     var weak = p.filter(function (x) { return defended(x.id) < 4; });
     var node = pick1(weak.length ? weak : p);
     D = { node: node, step: 0, marks: [] };
     select(node);
   }
   function defendLeft() {
-    var nd = D.node, h = '<p class="chead">' + (zh() ? '這個節點的圖' : 'Figures for this node') + '</p>', j;
-    var im = (nd.img || []).slice(0, 4);
-    for (j = 0; j < im.length; j++) h += '<div class="shot"><img loading="lazy" src="assets/img/' + im[j] + '" alt="" data-full="assets/img/' + im[j] + '"></div>';
+    var nd = D.node, h = '', j;
+    showStrip(figsOf(nd));
     for (j = 0; j < FIELDS.length; j++) {
       var f = FIELDS[j], state = j < D.step ? 'done' : j === D.step ? 'now' : 'later';
       h += '<div class="drill' + (state === 'done' ? ' done' : '') + '">' +
@@ -872,7 +983,7 @@ body > .foot, body > footer { display: none; }
   }
   function startBridge() {
     var set = bridgeSet();
-    if (!set.length) { panel.innerHTML = '<p class="mhint">' + (zh() ? '篩選之後湊不出跨領域的配對。' : 'No cross-domain pair survives these filters.') + '</p>'; figs.innerHTML = ''; return; }
+    if (!set.length) { panel.innerHTML = '<p class="mhint">' + (zh() ? '篩選之後湊不出跨領域的配對。' : 'No cross-domain pair survives these filters.') + '</p>'; figs.innerHTML = ''; strip.innerHTML = ''; return; }
     var pickSet = pick1(set), ds = shuffle(pickSet.doms.slice()).slice(0, 2);
     var a = pick1(pickSet.byDom[ds[0]]), b = pick1(pickSet.byDom[ds[1]]);
     var others = NODES.filter(function (x) { return x.k === 'con' && x !== pickSet.c; });
@@ -882,12 +993,13 @@ body > .foot, body > footer { display: none; }
     render();
   }
   function bridgeLeft() {
-    var h = '', j, two = [B.a, B.b];
+    var h = '', j, two = [B.a, B.b], shots = [];
     for (j = 0; j < two.length; j++) {
       h += '<p class="chead">' + S.esc(zh() ? DOM[two[j].dom].zh : DOM[two[j].dom].en) + '</p>';
-      if (two[j].img && two[j].img[0]) h += '<div class="shot"><img loading="lazy" src="assets/img/' + two[j].img[0] + '" alt="" data-full="assets/img/' + two[j].img[0] + '"></div>';
       h += '<div class="lcard"><b>' + S.esc(title(two[j])) + '</b></div>';
+      shots.push({ src: (two[j].img || [])[0], cap: title(two[j]) });
     }
+    showStrip(shots);
     figs.innerHTML = h; figs.scrollTop = 0;
   }
   function edgeText(x, y) {
@@ -943,7 +1055,7 @@ body > .foot, body > footer { display: none; }
       var p = pathTo(pick1(evs), pick1(imps));
       if (p && p.length >= 3) path = p;
     }
-    if (!path) { panel.innerHTML = '<p class="mhint">' + (zh() ? '篩選之後走不出一條路。' : 'No path survives these filters.') + '</p>'; figs.innerHTML = ''; return; }
+    if (!path) { panel.innerHTML = '<p class="mhint">' + (zh() ? '篩選之後走不出一條路。' : 'No path survives these filters.') + '</p>'; figs.innerHTML = ''; strip.innerHTML = ''; return; }
     T = { path: path, i: 0, picked: null, score: T ? T.score : 0, runs: T ? T.runs : 0, opts: null };
     traceOpts();
     select(path[0]);
@@ -959,8 +1071,7 @@ body > .foot, body > footer { display: none; }
   }
   function traceLeft() {
     var nd = T.path[T.i], h = '<p class="chead">' + (zh() ? '你現在站的位置' : 'Where you are standing') + '</p>', j;
-    var im = (nd.img || []).slice(0, 2);
-    for (j = 0; j < im.length; j++) h += '<div class="shot"><img loading="lazy" src="assets/img/' + im[j] + '" alt="" data-full="assets/img/' + im[j] + '"></div>';
+    showStrip(figsOf(nd));
     h += '<div class="lcard"><i>' + S.esc(zh() ? '節點' : 'node') + '</i><b>' + S.esc(title(nd)) + '</b></div>';
     h += '<p class="chead" style="padding-top:5px">' + (zh() ? '這條路' : 'The path') + '</p>';
     for (j = 0; j < T.path.length; j++) {
@@ -1011,6 +1122,7 @@ body > .foot, body > footer { display: none; }
 
   /* --------------------------------------------------------- dispatch */
   function render() {
+    panel.classList.toggle('bare', MODE === 'explore' && !sel);
     if (MODE === 'explore') { leftColumn(sel); panel.innerHTML = sel ? card(sel) : empty(); return; }
     if (MODE === 'defend' && D) { defendLeft(); defendPanel(); return; }
     if (MODE === 'bridge' && B) { bridgeLeft(); bridgePanel(); return; }
