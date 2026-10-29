@@ -5,72 +5,89 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ReLEAF Judging Trainer · GEMS Taiwan iGEM 2026</title>
 <meta name="description" content="Twenty minutes of questions, seven students, one wiki. Preparation for the GEMS Taiwan judging session at the iGEM 2026 Grand Jamboree.">
-<link rel="stylesheet" href="assets/css/base.css?v=202610291900">
-<link rel="stylesheet" href="assets/css/pages.css?v=202610291900">
-<link rel="stylesheet" href="assets/css/theme.css?v=202610291900">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M4 20c0-8 5.5-14.5 16-15.5C19.5 14 14 20 4 20Z' fill='%2300B87A'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/css/base.css?v=202610292300">
+<link rel="stylesheet" href="assets/css/pages.css?v=202610292300">
+<link rel="stylesheet" href="assets/css/theme.css?v=202610292300">
+<link rel="icon" href="assets/img/releaf-logo.png">
 <style>
-.sheet { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
-.hero .btn-row { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 1.75rem; }
+.sheet { max-width: 1060px; margin: 0 auto; padding: 0 24px; }
+.hero { padding: 78px 24px 70px; }
+.hero .lede { font-size: 18px; }
+.hero .btn-row { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 2rem; }
 
-.facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1px;
-         background: var(--rule); border-radius: var(--r-lg); overflow: hidden; margin: -34px 0 0; position: relative; z-index: 2;
-         box-shadow: 0 10px 30px rgba(0, 6, 28, .10); }
-.facts div { background: #fff; padding: 16px 18px; }
-.facts dt { font-size: 11.5px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: var(--faint); margin: 0 0 5px; }
-.facts dd { margin: 0; font-size: 15.5px; font-weight: 600; line-height: 1.35; font-variant-numeric: tabular-nums; }
-.facts dd small { display: block; font-weight: 400; font-size: 13px; color: var(--muted); margin-top: 2px; }
+section { padding: 0; }
+.band { padding: 92px 0 0; }
+.band:last-of-type { padding-bottom: 96px; }
+.kick { font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--faint); margin: 0 0 12px; }
+.band h2 { font-size: clamp(25px, 2.5vw, 33px); font-weight: 700; letter-spacing: -.02em; margin: 0 0 10px; }
+.band .sub { color: var(--muted); max-width: 56ch; margin: 0; font-size: 16px; }
 
-.band { padding: 3rem 0 0; }
-.band h2 { font-size: clamp(22px, 2.4vw, 30px); font-weight: 700; margin: 0 0 .4rem; }
-.band .sub { color: var(--muted); margin: 0 0 1.4rem; max-width: 62ch; }
+/* session: photo and the facts beside it ------------------------------ */
+.session { display: grid; grid-template-columns: 1.08fr 1fr; gap: 44px; align-items: center; margin-top: 34px; }
+.frame { margin: 0; }
+.frame img { width: 100%; display: block; border-radius: 20px; background: var(--paper-2); }
+.frame figcaption { font-size: 12.5px; color: var(--faint); line-height: 1.55; margin-top: 11px; }
+.facts { list-style: none; margin: 0; padding: 0; }
+.facts li { display: flex; align-items: baseline; gap: 18px; padding: 15px 2px; border-top: 1px solid var(--rule-soft); }
+.facts li:first-child { border-top: 0; padding-top: 0; }
+.facts dt, .facts .k { font-size: 12px; font-weight: 600; color: var(--faint); width: 92px; flex: none; }
+.facts .v { font-size: 16.5px; font-weight: 600; font-variant-numeric: tabular-nums; letter-spacing: -.01em; }
+.facts .v small { display: block; font-weight: 400; font-size: 13.5px; color: var(--muted); margin-top: 3px; letter-spacing: 0; }
 
+/* the map feature ----------------------------------------------------- */
 .feature { position: relative; overflow: hidden; background: var(--navy); color: #fff;
-           border-radius: var(--r-lg); padding: 30px; display: grid; grid-template-columns: 1.15fr 1fr; gap: 28px; align-items: center; }
-.feature::after { content: ""; position: absolute; width: 460px; height: 460px; right: -170px; top: -210px;
-                  border-radius: 50%; filter: blur(85px); opacity: .5; pointer-events: none;
+           border-radius: 26px; padding: 40px; display: grid; grid-template-columns: 1fr 1fr;
+           gap: 34px; align-items: center; margin-top: 34px; }
+.feature::after { content: ""; position: absolute; width: 440px; height: 440px; right: -150px; top: -190px;
+                  border-radius: 50%; filter: blur(85px); opacity: .45; pointer-events: none;
                   background: radial-gradient(circle, #0167EF 0%, transparent 65%); }
 .feature > * { position: relative; z-index: 1; }
-.feature h3 { font-size: clamp(22px, 2.3vw, 30px); font-weight: 700; line-height: 1.2; margin: 10px 0 10px; }
+.feature .kick { color: var(--jb-green-2); }
+.feature h3 { font-size: clamp(23px, 2.3vw, 31px); font-weight: 700; line-height: 1.22; letter-spacing: -.02em; margin: 0 0 12px; }
 .feature h3 em { font-style: normal; background: var(--grad); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
-.feature p { color: rgba(255, 255, 255, .72); margin: 0 0 18px; }
-.feature .kick { font-size: 13px; font-weight: 600; color: var(--jb-green-2); }
-.fstats { display: flex; gap: 22px; margin: 0 0 20px; }
-.fstats b { display: block; font-size: 26px; font-weight: 700; font-variant-numeric: tabular-nums; line-height: 1; }
-.fstats span { font-size: 12.5px; color: rgba(255, 255, 255, .55); }
-.fshots { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
-.fshots img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 14px; display: block; border: 1px solid rgba(255, 255, 255, .12); }
+.feature p { color: rgba(255, 255, 255, .7); margin: 0 0 22px; font-size: 15.5px; }
+.fstats { display: flex; gap: 26px; margin: 0 0 24px; }
+.fstats b { display: block; font-size: 25px; font-weight: 700; font-variant-numeric: tabular-nums; line-height: 1; letter-spacing: -.02em; }
+.fstats span { font-size: 12px; color: rgba(255, 255, 255, .5); }
+.mini { position: relative; aspect-ratio: 1 / 1; border-radius: 20px; overflow: hidden; cursor: pointer;
+        background: rgba(255, 255, 255, .03); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .09); }
+.mini canvas { position: absolute; inset: 0; width: 100%; height: 100%; }
+.mini .peek { position: absolute; left: 0; right: 0; bottom: 13px; text-align: center; font-size: 11.5px;
+              color: rgba(255, 255, 255, .5); transition: color .25s; }
+.mini:hover .peek { color: rgba(255, 255, 255, .85); }
 
-.rooms { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px; }
-.room { background: #fff; border: 1px solid var(--rule); border-radius: var(--r-lg); padding: 18px 20px;
-        text-decoration: none; color: inherit; display: block; transition: border-color .2s, transform .2s; }
-.room:hover { border-color: rgba(0, 0, 0, .22); transform: translateY(-2px); text-decoration: none; }
-.room .n { font-size: 12px; font-weight: 700; color: var(--faint); font-variant-numeric: tabular-nums; }
-.room h3 { font-size: 17px; font-weight: 600; margin: 6px 0 5px; }
-.room p { font-size: 14px; color: var(--muted); line-height: 1.55; margin: 0; }
+/* rooms ---------------------------------------------------------------- */
+.drills { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 22px; }
+.drills a { display: inline-flex; align-items: baseline; gap: 7px; background: #fff; border: 1px solid var(--rule);
+            border-radius: 999px; padding: 7px 15px; font-size: 13.5px; font-weight: 600; color: var(--ink-2); text-decoration: none; }
+.drills a:hover { border-color: var(--navy); color: var(--ink); text-decoration: none; }
+.drills a b { font-variant-numeric: tabular-nums; color: var(--c, var(--jb-blue)); }
 
-.drills { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 12px; }
-.drill { background: #fff; border: 1px solid var(--rule); border-left: 3px solid var(--c, var(--jb-blue));
-         border-radius: 0 var(--r) var(--r) 0; padding: 15px 17px; text-decoration: none; color: inherit; display: block; }
-.drill:hover { background: var(--paper-3); text-decoration: none; }
-.drill b { display: block; font-size: 24px; font-weight: 700; font-variant-numeric: tabular-nums; color: var(--c); line-height: 1; }
-.drill h4 { font-size: 15px; font-weight: 600; margin: 7px 0 4px; }
-.drill p { font-size: 13.5px; color: var(--muted); margin: 0; line-height: 1.5; }
+.rooms { display: grid; grid-template-columns: repeat(auto-fit, minmax(236px, 1fr)); gap: 1px;
+         background: var(--rule-soft); border: 1px solid var(--rule-soft); border-radius: 22px; overflow: hidden; margin-top: 30px; }
+.room { background: #fff; padding: 22px 22px 24px; text-decoration: none; color: inherit; display: block; transition: background .2s; }
+.room:hover { background: var(--paper-3); text-decoration: none; }
+.room .n { font-size: 11px; font-weight: 700; color: var(--faint); font-variant-numeric: tabular-nums; }
+.room h3 { font-size: 16.5px; font-weight: 600; margin: 7px 0 6px; letter-spacing: -.01em; }
+.room p { font-size: 13.5px; color: var(--muted); line-height: 1.58; margin: 0; }
 
-.rules { list-style: none; padding: 0; margin: 0; counter-reset: r;
-         display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 14px; }
-.rules li { counter-increment: r; background: #fff; border: 1px solid var(--rule); border-radius: var(--r-lg); padding: 18px 20px; }
-.rules li::before { content: counter(r); display: block; font-size: 12px; font-weight: 700; color: var(--jb-green); font-variant-numeric: tabular-nums; }
-.rules h4 { font-size: 16px; font-weight: 600; margin: 6px 0 6px; line-height: 1.4; }
-.rules p { font-size: 14px; color: var(--muted); line-height: 1.6; margin: 0; }
+.rules { list-style: none; padding: 0; margin: 30px 0 0; counter-reset: r;
+         display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 26px 40px; }
+.rules li { counter-increment: r; }
+.rules li::before { content: counter(r); display: block; font-size: 12px; font-weight: 700; color: var(--jb-green); font-variant-numeric: tabular-nums; margin-bottom: 7px; }
+.rules h4 { font-size: 16px; font-weight: 600; margin: 0 0 7px; line-height: 1.45; letter-spacing: -.01em; }
+.rules p { font-size: 14px; color: var(--muted); line-height: 1.65; margin: 0; }
 
-.counts { display: grid; grid-template-columns: repeat(auto-fit, minmax(110px, 1fr)); gap: 1px;
-          background: var(--rule); border-radius: var(--r-lg); overflow: hidden; }
-.counts div { background: #fff; padding: 16px 14px; text-align: center; }
-.counts b { display: block; font-size: 26px; font-weight: 700; font-variant-numeric: tabular-nums; }
+.counts { display: grid; grid-template-columns: repeat(auto-fit, minmax(104px, 1fr)); gap: 30px 20px; margin-top: 30px; }
+.counts div { text-align: left; }
+.counts b { display: block; font-size: 30px; font-weight: 700; font-variant-numeric: tabular-nums; letter-spacing: -.03em; }
 .counts span { font-size: 12.5px; color: var(--muted); }
 
-@media (max-width: 860px) { .feature { grid-template-columns: 1fr; } .facts { margin-top: -20px; } }
+@media (max-width: 860px) {
+  .session, .feature { grid-template-columns: 1fr; }
+  .band { padding-top: 64px; }
+  .hero { padding: 56px 20px 48px; }
+}
 </style>
 </head>
 <body>
@@ -81,93 +98,100 @@
     <span data-en="Grand Jamboree · Paris · 13–16 Nov 2026" data-zh="Grand Jamboree · 巴黎 · 2026 年 11 月 13–16 日"></span>
     <span class="stub">J03</span>
   </p>
-  <p class="eyebrow" style="margin-top:1.25rem" data-en="GEMS Taiwan · iGEM 2026 · Biomanufacturing Village" data-zh="GEMS Taiwan · iGEM 2026 · 生物製造村"></p>
+  <p class="eyebrow" style="margin-top:1.4rem" data-en="GEMS Taiwan · iGEM 2026 · Biomanufacturing Village" data-zh="GEMS Taiwan · iGEM 2026 · 生物製造村"></p>
   <h1 data-en="Twenty minutes of questions." data-zh="二十分鐘的提問。"></h1>
   <h1 class="h1-muted" data-en="Seven of you at the microphone." data-zh="七個人站在麥克風前。"></h1>
-  <p class="lede" style="max-width:52ch;margin-top:1.1rem"
+  <p class="lede" style="max-width:48ch;margin-top:1.2rem"
      data-en="The judges have read your wiki. They are there to find out whether you understand it."
      data-zh="評審已經讀過你們的 wiki。他們來，是要確認你們是不是真的懂它。"></p>
   <div class="btn-row">
     <a class="btn btn-ghost" href="map.html" data-en="Open the knowledge map" data-zh="打開知識地圖"></a>
     <a class="btn btn-line" href="mock.html" data-en="Enter the mock room" data-zh="進入模擬會場"></a>
-    <a class="btn btn-line" href="seats.html" data-en="Find your seat" data-zh="找到你的位置"></a>
   </div>
 </header>
 
 <main class="sheet">
 
-  <dl class="facts">
-    <div><dt data-en="When" data-zh="時間"></dt><dd>Fri 13 Nov<small data-en="12:00–12:25 Paris · 19:00–19:25 Taipei" data-zh="巴黎 12:00–12:25 · 台北 19:00–19:25"></small></dd></div>
-    <div><dt data-en="Room" data-zh="會場"></dt><dd>J03<small data-en="first shift of the day" data-zh="當天第一場"></small></dd></div>
-    <div><dt data-en="Arrive" data-zh="報到"></dt><dd>11:30–11:50<small data-en="Judging Zone" data-zh="評審區"></small></dd></div>
-    <div><dt data-en="Shape" data-zh="形式"></dt><dd data-en="5 min + 20 min" data-zh="5 分鐘 + 20 分鐘"><small data-en="update, then questions" data-zh="先報告，再提問"></small></dd></div>
-    <div><dt data-en="Judges" data-zh="評審"></dt><dd>4<small data-en="all in the room" data-zh="全部在現場"></small></dd></div>
-    <div><dt data-en="Nominated" data-zh="提名"></dt><dd data-en="3 awards" data-zh="三個獎項"><small data-en="Measurement · Hardware · Integrated HP" data-zh="量測 · 硬體 · 整合人文實踐"></small></dd></div>
-  </dl>
-
   <section class="band">
-    <div class="feature">
-      <div>
-        <span class="kick" data-en="New" data-zh="新"></span>
-        <h3><span data-en="Evidence on the rim." data-zh="證據在外圈。"></span>
-            <em data-en="Impact at the core." data-zh="影響在中心。"></em></h3>
-        <p data-en="Sixty nodes on three shells, turned by hand. Every cross-domain hop passes through a concept, and every card carries its number, its n, its control, and the boundary where it fails."
-           data-zh="三層殼、六十個節點，可以用手轉動。每一次跨領域的跳躍都要穿過一個概念；每張卡片都帶著它的數字、n、對照，以及它失敗的邊界。"></p>
-        <div class="fstats">
-          <div><b class="tw">60</b><span data-en="nodes" data-zh="節點"></span></div>
-          <div><b class="tw">77</b><span data-en="written links" data-zh="寫下的連結"></span></div>
-          <div><b class="tw">116</b><span data-en="figures in the cards" data-zh="卡片裡的圖"></span></div>
-        </div>
-        <a class="btn btn-grad" href="map.html" data-en="Turn the map" data-zh="轉動地圖"></a>
-      </div>
-      <div class="fshots">
-        <img loading="lazy" src="assets/img/fq/h03.webp" alt="">
-        <img loading="lazy" src="assets/img/tl/r17-set6-plates-plant.webp" alt="">
-        <img loading="lazy" src="assets/img/fq/m01.svg" alt="">
-        <img loading="lazy" src="assets/img/fq/i01.webp" alt="">
-      </div>
+    <p class="kick" data-en="The session" data-zh="這一場"></p>
+    <h2 data-en="Room J03, first shift of the day." data-zh="J03 會場，當天第一場。"></h2>
+    <p class="sub" data-en="Nobody will be warmed up, including the panel. The first answer sets the tone for the whole twenty minutes."
+       data-zh="沒有人會是熱的，包括評審。第一個回答就決定了這二十分鐘的調性。"></p>
+    <div class="session">
+      <figure class="frame">
+        <img src="assets/img/judging-room-2025.jpg" alt="" loading="lazy">
+        <figcaption data-en="Judging room J7, 2025. Count the row: the students at the back cannot reach the microphone, which is why the Mic Map has seven seats."
+                    data-zh="2025 年的 J7 評審室。數一下那一排：後面的人搆不到麥克風，這就是麥克風地圖要有七個位置的原因。"></figcaption>
+      </figure>
+      <ul class="facts">
+        <li><span class="k" data-en="When" data-zh="時間"></span><span class="v">Fri 13 Nov<small data-en="12:00–12:25 Paris · 19:00–19:25 Taipei" data-zh="巴黎 12:00–12:25 · 台北 19:00–19:25"></small></span></li>
+        <li><span class="k" data-en="Arrive" data-zh="報到"></span><span class="v">11:30–11:50<small data-en="Judging Zone" data-zh="評審區"></small></span></li>
+        <li><span class="k" data-en="Shape" data-zh="形式"></span><span class="v"><span data-en="5 min + 20 min" data-zh="5 分鐘 + 20 分鐘"></span><small data-en="update, then questions" data-zh="先報告，再提問"></small></span></li>
+        <li><span class="k" data-en="Judges" data-zh="評審"></span><span class="v">4<small data-en="all in the room, in English" data-zh="全部在現場，英文進行"></small></span></li>
+        <li><span class="k" data-en="Nominated" data-zh="提名"></span><span class="v"><span data-en="3 awards" data-zh="三個獎項"></span><small data-en="Measurement · Hardware · Integrated HP" data-zh="量測 · 硬體 · 整合人文實踐"></small></span></li>
+      </ul>
     </div>
   </section>
 
   <section class="band">
-    <h2 data-en="Four ways to be tested" data-zh="四種被考的方式"></h2>
-    <p class="sub" data-en="Each one opens the mock room already filtered." data-zh="每一個都會直接打開已經篩選好的模擬會場。"></p>
-    <div class="drills" id="drills"></div>
+    <div class="feature">
+      <div>
+        <p class="kick" data-en="Knowledge map" data-zh="知識地圖"></p>
+        <h3><span data-en="Evidence on the rim." data-zh="證據在外圈。"></span>
+            <em data-en="Impact at the core." data-zh="影響在中心。"></em></h3>
+        <p data-en="Sixty nodes on three shells. Every cross-domain hop passes through a concept, and every card carries its number, its n, its control, and the boundary where it fails."
+           data-zh="三層殼、六十個節點。每一次跨領域的跳躍都要穿過一個概念；每張卡片都帶著它的數字、n、對照，以及它失敗的邊界。"></p>
+        <div class="fstats">
+          <div><b class="tw">60</b><span data-en="nodes" data-zh="節點"></span></div>
+          <div><b class="tw">77</b><span data-en="written links" data-zh="寫下的連結"></span></div>
+          <div><b class="tw">116</b><span data-en="figures" data-zh="圖"></span></div>
+        </div>
+        <a class="btn btn-grad" href="map.html" data-en="Turn the map" data-zh="轉動地圖"></a>
+      </div>
+      <a class="mini" href="map.html" aria-label="Open the knowledge map">
+        <canvas id="mini"></canvas>
+        <span class="peek" data-en="Live — tap to open" data-zh="即時 — 點一下打開"></span>
+      </a>
+    </div>
   </section>
 
   <section class="band">
-    <h2 data-en="The rooms" data-zh="各個房間"></h2>
-    <p class="sub" data-en="Left to right: build what you know, then test it, then decide who says it."
-       data-zh="由左到右：先建立你知道的，再測試它，最後決定由誰來說。"></p>
+    <p class="kick" data-en="Where to work" data-zh="在哪裡練"></p>
+    <h2 data-en="Eleven rooms." data-zh="十一個房間。"></h2>
+    <p class="sub" data-en="Build what you know, test it under question, then decide who says it."
+       data-zh="先建立你知道的，再在被問的狀態下測試它，最後決定由誰來說。"></p>
+    <div class="drills" id="drills"></div>
     <div class="rooms" id="rooms"></div>
   </section>
 
   <section class="band">
-    <h2 data-en="Five things that decide this session" data-zh="決定這二十分鐘的五件事"></h2>
-    <p class="sub" data-en="Read these once a day until you fly." data-zh="每天讀一次，讀到出發為止。"></p>
+    <p class="kick" data-en="Before you fly" data-zh="出發之前"></p>
+    <h2 data-en="Five things that decide this session." data-zh="決定這二十分鐘的五件事。"></h2>
     <ol class="rules" id="rules"></ol>
   </section>
 
-  <section class="band" style="padding-bottom:3rem">
-    <h2 data-en="What is in here" data-zh="這裡有什麼"></h2>
-    <p class="sub" data-en="All of it off your own frozen wiki. Where your pages disagree, this site says so."
-       data-zh="全部取自你們自己凍結的 wiki。頁面互相矛盾的地方，這個網站會直接講出來。"></p>
+  <section class="band">
+    <p class="kick" data-en="What is in here" data-zh="這裡有什麼"></p>
+    <h2 data-en="All of it off your own frozen wiki." data-zh="全部取自你們自己凍結的 wiki。"></h2>
+    <p class="sub" data-en="Where your pages disagree with each other, this site says so."
+       data-zh="頁面互相矛盾的地方，這個網站會直接講出來。"></p>
     <div class="counts" id="counts"></div>
   </section>
 
 </main>
 
-<script src="assets/js/site.js?v=202610291900"></script>
-<script src="data/content.js?v=202610291900"></script>
-<script src="data/index.js?v=202610291900"></script>
+<script src="assets/js/site.js?v=202610292300"></script>
+<script src="data/content.js?v=202610292300"></script>
+<script src="data/index.js?v=202610292300"></script>
+<script src="data/map.js?v=202610292300"></script>
 <script>
 (function () {
   var S = window.Site;
 
   var MAPTILE = {
     href: 'map.html', title_en: 'Knowledge Map', title_zh: '知識地圖',
-    blurb_en: 'Three shells in 3D. Evidence, the concepts that join domains, and impact at the core — each card with its figures, its n and its boundary.',
-    blurb_zh: '三層殼的 3D 地圖。證據、連接領域的概念，以及中心的影響——每張卡片都附上它的圖、它的 n 與它的邊界。'
+    blurb_en: 'Three shells in 3D. Evidence, the concepts that join domains, and impact at the core — each node with its figures, its n and its boundary.',
+    blurb_zh: '三層殼的 3D 地圖。證據、連接領域的概念，以及中心的影響——每個節點都附上它的圖、它的 n 與它的邊界。'
   };
 
   function rooms() {
@@ -185,29 +209,15 @@
   function drills() {
     var c = window.INDEX_COUNTS || {}, zh = S.lang === 'zh';
     var rows = [
-      { n: c.deep || 0, href: 'mock.html?mode=deep', col: '#00B87A',
-        en: 'Deep end', zh: '深水區',
-        pen: 'Mechanism, trade-offs, numbers with their uncertainty.',
-        pzh: '機制、取捨，以及帶著不確定性的數字。' },
-      { n: c.reason || 0, href: 'mock.html?type=reason', col: '#0167EF',
-        en: 'Reasoning, not recall', zh: '推理題，不是背題',
-        pen: 'No answer on the wiki. You work it out standing up.',
-        pzh: 'Wiki 上沒有答案。你要站著把它推出來。' },
-      { n: c.history || 0, href: 'mock.html?type=history', col: '#00A3C4',
-        en: 'Where we stand', zh: '我們站在哪裡',
-        pen: 'Hollow fibre is old news. What did we actually add?',
-        pzh: '中空纖維不是新東西。那我們到底加了什麼？' },
-      { n: c.authored || 0, href: 'mock.html?mode=kyle', col: '#F08C00',
-        en: "The adviser's set", zh: '顧問出的題',
-        pen: 'Kyle Peng’s scientific inquiries, answered honestly.',
-        pzh: 'Kyle Peng 的科學問題，誠實作答。' }
+      { n: c.deep || 0, href: 'mock.html?mode=deep', col: '#00B87A', en: 'Deep end', zh: '深水區' },
+      { n: c.reason || 0, href: 'mock.html?type=reason', col: '#0167EF', en: 'Reasoning, not recall', zh: '推理題' },
+      { n: c.history || 0, href: 'mock.html?type=history', col: '#00A3C4', en: 'Where we stand', zh: '我們站在哪裡' },
+      { n: c.authored || 0, href: 'mock.html?mode=kyle', col: '#F08C00', en: "The adviser's set", zh: '顧問出的題' }
     ];
     var h = '';
     for (var i = 0; i < rows.length; i++) {
-      var r = rows[i];
-      h += '<a class="drill" style="--c:' + r.col + '" href="' + r.href + '">' +
-        '<b>' + r.n + '</b><h4>' + S.esc(zh ? r.zh : r.en) + '</h4>' +
-        '<p>' + S.esc(zh ? r.pzh : r.pen) + '</p></a>';
+      h += '<a href="' + rows[i].href + '" style="--c:' + rows[i].col + '"><b>' + rows[i].n + '</b>' +
+        S.esc(zh ? rows[i].zh : rows[i].en) + '</a>';
     }
     document.getElementById('drills').innerHTML = h;
   }
@@ -228,15 +238,80 @@
       [c.figures, 'figures', '圖'], [41, 'Registry parts', 'Registry parts'], [c.gaps, 'honest gaps', '誠實的缺口']
     ];
     var h = '';
-    for (var i = 0; i < rows.length; i++) {
-      h += '<div><b>' + (rows[i][0] || 0) + '</b><span>' + S.esc(zh ? rows[i][2] : rows[i][1]) + '</span></div>';
-    }
+    for (var i = 0; i < rows.length; i++) h += '<div><b>' + (rows[i][0] || 0) + '</b><span>' + S.esc(zh ? rows[i][2] : rows[i][1]) + '</span></div>';
     document.getElementById('counts').innerHTML = h;
   }
 
   function all() { rooms(); drills(); rules(); counts(); }
-  S.onLang(all);
-  all();
+  S.onLang(all); all();
+
+  /* the live map, drawn small ------------------------------------------ */
+  (function miniMap() {
+    var cv = document.getElementById('mini');
+    if (!cv || typeof MAP_NODES === 'undefined') return;
+    var ctx = cv.getContext('2d'), DOM = {}, i, n, W = 0, H = 0, dpr = 1, unit = 1, yaw = -0.5, pitch = -0.2;
+    var R = { ev: 1, con: .56, imp: .2 };
+    for (i = 0; i < MAP_DOMS.length; i++) DOM[MAP_DOMS[i].id] = MAP_DOMS[i];
+    var pts = [];
+    for (i = 0; i < MAP_NODES.length; i++) {
+      n = MAP_NODES[i];
+      var lon = (n.lon !== undefined ? n.lon : (DOM[n.dom] ? DOM[n.dom].lon : 0)) * Math.PI / 180;
+      var lat = (n.lat || 0) * Math.PI / 180, r = R[n.k];
+      pts.push({
+        p: [r * Math.cos(lat) * Math.sin(lon), r * Math.sin(lat), r * Math.cos(lat) * Math.cos(lon)],
+        k: n.k, id: n.id,
+        c: n.k === 'ev' ? (DOM[n.dom] ? DOM[n.dom].c : '#fff') : (n.k === 'con' ? '#9FE8FF' : '#FFFFFF')
+      });
+    }
+    var byIdx = {};
+    for (i = 0; i < pts.length; i++) byIdx[pts[i].id] = pts[i];
+    var ed = [];
+    for (i = 0; i < MAP_EDGES.length; i++) {
+      var a = byIdx[MAP_EDGES[i][0]], b = byIdx[MAP_EDGES[i][1]];
+      if (a && b) ed.push([a, b]);
+    }
+    function size() {
+      dpr = Math.min(window.devicePixelRatio || 1, 2);
+      W = cv.clientWidth; H = cv.clientHeight;
+      if (!W || !H) return;
+      cv.width = W * dpr; cv.height = H * dpr;
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      unit = Math.min(W, H) * 0.38;
+    }
+    function proj(p) {
+      var cy = Math.cos(yaw), sy = Math.sin(yaw), cp = Math.cos(pitch), sp = Math.sin(pitch);
+      var x = p[0] * cy - p[2] * sy, z = p[0] * sy + p[2] * cy, y = p[1];
+      var y2 = y * cp - z * sp, z2 = y * sp + z * cp;
+      var f = 3.1, s = f / (f - z2);
+      return [W / 2 + x * unit * s, H / 2 - y2 * unit * s, z2, s];
+    }
+    function frame() {
+      if (W) {
+        yaw += 0.0016;
+        ctx.clearRect(0, 0, W, H);
+        for (i = 0; i < pts.length; i++) pts[i].pr = proj(pts[i].p);
+        for (i = 0; i < ed.length; i++) {
+          var A = ed[i][0].pr, B = ed[i][1].pr;
+          ctx.strokeStyle = 'rgba(255,255,255,' + (0.06 + 0.1 * ((A[2] + B[2]) / 2 + 1) / 2) + ')';
+          ctx.lineWidth = 0.7;
+          ctx.beginPath(); ctx.moveTo(A[0], A[1]); ctx.lineTo(B[0], B[1]); ctx.stroke();
+        }
+        var ord = pts.slice().sort(function (a, b) { return a.pr[2] - b.pr[2]; });
+        for (i = 0; i < ord.length; i++) {
+          var q = ord[i], rr = (q.k === 'ev' ? 3.1 : q.k === 'con' ? 5.4 : 4.4) * q.pr[3];
+          ctx.globalAlpha = 0.4 + 0.6 * (q.pr[2] + 1) / 2;
+          ctx.beginPath(); ctx.arc(q.pr[0], q.pr[1], rr, 0, 6.2832);
+          ctx.fillStyle = q.c; ctx.fill();
+          ctx.globalAlpha = 1;
+        }
+      }
+      requestAnimationFrame(frame);
+    }
+    size();
+    window.addEventListener('resize', size);
+    if (window.ResizeObserver) new ResizeObserver(size).observe(cv.parentNode);
+    frame();
+  })();
 })();
 </script>
 </body>

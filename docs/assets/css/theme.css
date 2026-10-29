@@ -186,3 +186,25 @@ footer a, .site-foot a { color: rgba(255, 255, 255, .78); }
   .nav-in { height: 56px; gap: 10px; }
   .hero { padding: 48px 18px 40px; }
 }
+
+/* brand mark and the three rooms ------------------------------------- */
+.nav-brand .leaf {
+  width: 26px; height: 26px; border-radius: 50%; filter: none;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, .2); flex: none;
+}
+.nav-links a.hot {
+  background: linear-gradient(180deg, rgba(0, 212, 146, .17), rgba(1, 103, 239, .13));
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, .13), 0 0 16px rgba(0, 212, 146, .26);
+  color: rgba(255, 255, 255, .92);
+}
+.nav-links a.hot::before { display: none; }
+.nav-links a.hot:hover {
+  background: linear-gradient(180deg, rgba(0, 212, 146, .26), rgba(1, 103, 239, .2));
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, .2), 0 0 22px rgba(0, 212, 146, .36);
+  color: #fff;
+}
+.nav-links a.hot[aria-current="page"] {
+  background: linear-gradient(180deg, rgba(0, 212, 146, .3), rgba(1, 103, 239, .24));
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, .28), 0 0 24px rgba(0, 212, 146, .4);
+  color: #fff;
+}

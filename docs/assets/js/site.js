@@ -8,17 +8,15 @@
     { href: 'terms.html',    en: 'Terms',        zh: '術語' },
     { href: 'bank.html',     en: 'Question Bank', zh: '題庫' },
     { href: 'registry.html', en: 'Registry',     zh: 'Registry' },
+    { href: 'map.html',      en: 'Map',          zh: '知識地圖', hot: true },
     { href: 'mock.html',     en: 'Mock Room',    zh: '模擬會場', hot: true },
     { href: 'figures.html',  en: 'Figure Room',  zh: '看圖會場', hot: true },
     { href: 'seats.html',    en: 'Mic Map',      zh: '麥克風地圖' },
     { href: 'delivery.html', en: 'Delivery',     zh: '答題技巧' },
     { href: 'timeline.html', en: 'Timeline',     zh: '時間軸' }
-    ,{ href: 'map.html',      en: 'Map',          zh: '知識地圖', hot: true }
   ];
 
-  var LEAF = '<svg class="leaf" viewBox="0 0 24 24" fill="none" aria-hidden="true">' +
-    '<path d="M4 20c0-8 5.5-14.5 16-15.5C19.5 14 14 20 4 20Z" fill="#1a7f45"/>' +
-    '<path d="M4 20C8 14 12.5 10.5 17 8.5" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg>';
+  var LEAF = '<img class="leaf" src="assets/img/releaf-logo.png" alt="" width="26" height="26">';
 
   var lang = 'en';
   try { lang = localStorage.getItem('rqa-lang') || 'en'; } catch (e) {}
