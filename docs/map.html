@@ -4,184 +4,191 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Knowledge Map · ReLEAF Judging Trainer</title>
-<meta name="description" content="Three shells in 3D: evidence on the rim, the concepts that connect domains, impact at the core. Figures on the left, the map in the middle, the card on the right.">
-<link rel="stylesheet" href="assets/css/base.css?v=202610292100">
-<link rel="stylesheet" href="assets/css/pages.css?v=202610292100">
-<link rel="stylesheet" href="assets/css/theme.css?v=202610292100">
+<meta name="description" content="Evidence, the concepts that join domains, and impact — three shells in 3D, with every node's figures, numbers and boundary one tap away.">
+<link rel="stylesheet" href="assets/css/base.css?v=202610292300">
+<link rel="stylesheet" href="assets/css/pages.css?v=202610292300">
+<link rel="stylesheet" href="assets/css/theme.css?v=202610292300">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M4 20c0-8 5.5-14.5 16-15.5C19.5 14 14 20 4 20Z' fill='%2300B87A'/%3E%3C/svg%3E">
 <style>
-body { overflow-x: hidden; }
-.full { width: 100%; padding: 0 16px 16px; }
+html, body { height: 100%; }
+body { overflow: hidden; }
+/* this page is an app view: the shared footer would push the columns off-screen */
+body > .foot, body > footer { display: none; }
+.full { height: calc(100dvh - var(--nav-h, 60px)); display: flex; flex-direction: column;
+        padding: 0 16px 14px; gap: 10px; }
 
-.top { display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; padding: 14px 4px 10px; }
-.top h1 { font-size: 21px; font-weight: 700; margin: 0; }
-.top p { font-size: 13.5px; color: var(--muted); margin: 0; }
-
-/* filter bar: a thin strip that opens on hover ------------------------ */
-.fbar { position: relative; z-index: 30; height: 34px; margin: 0 4px 10px; }
-.fbar-head {
-  display: flex; align-items: center; gap: 10px; height: 34px; padding: 0 14px;
-  background: #fff; border: 1px solid var(--rule); border-radius: 999px;
-  font-size: 12.5px; color: var(--muted); cursor: default; width: fit-content;
-  transition: border-color .18s, box-shadow .18s;
-}
-.fbar:hover .fbar-head, .fbar.pin .fbar-head { border-color: var(--navy); box-shadow: 0 2px 10px rgba(0, 6, 28, .08); }
-.fbar-head b { font-weight: 700; color: var(--ink); letter-spacing: .04em; text-transform: uppercase; font-size: 11px; }
-.fbar-head .tally { font-variant-numeric: tabular-nums; }
-.fbar-head .live { display: flex; gap: 5px; flex-wrap: wrap; }
-.fbar-head .live span { background: var(--navy); color: #fff; border-radius: 999px; padding: 2px 9px; font-size: 11.5px; font-weight: 600; }
-.fbar-head .caret { margin-left: 2px; color: var(--faint); font-size: 11px; }
-.fbar-body {
-  position: absolute; top: 38px; left: 0; right: 0;
-  background: #fff; border: 1px solid var(--rule); border-radius: 18px; padding: 10px 16px;
-  box-shadow: 0 16px 40px rgba(0, 6, 28, .13);
-  opacity: 0; visibility: hidden; transform: translateY(-6px);
-  transition: opacity .2s, transform .2s, visibility .2s;
-}
-.fbar:hover .fbar-body, .fbar:focus-within .fbar-body, .fbar.pin .fbar-body { opacity: 1; visibility: visible; transform: none; }
-.frow { display: flex; align-items: center; gap: 10px; padding: 7px 0; flex-wrap: wrap; }
-.frow + .frow { border-top: 1px solid var(--rule-soft); }
-.frow > span.lab { font-size: 10.5px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: var(--faint); width: 108px; flex: none; }
-.fchips { display: flex; gap: 6px; flex-wrap: wrap; flex: 1; }
-.fc { font: inherit; font-size: 12.5px; font-weight: 600; cursor: pointer; background: #fff;
-      border: 1px solid var(--rule); color: var(--ink-2); border-radius: 999px; padding: 5px 11px;
-      display: inline-flex; align-items: center; gap: 6px; transition: background .18s, border-color .18s, color .18s; }
-.fc i { width: 8px; height: 8px; border-radius: 50%; background: currentColor; display: block; }
+/* header + the filters that never hide ------------------------------- */
+.hdr { display: flex; align-items: center; gap: 16px; padding: 12px 4px 0; flex: none; }
+.hdr h1 { font-size: 19px; font-weight: 700; margin: 0; flex: none; }
+.fsets { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 6px; }
+.frow { display: flex; align-items: center; gap: 10px; min-width: 0; }
+.frow > .lab { font-size: 10px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+               color: var(--faint); width: 84px; flex: none; }
+.fchips { display: flex; gap: 5px; flex-wrap: wrap; min-width: 0; }
+.fc { font: inherit; font-size: 12px; font-weight: 600; cursor: pointer; background: #fff;
+      border: 1px solid var(--rule); color: var(--ink-2); border-radius: 999px; padding: 4px 10px;
+      display: inline-flex; align-items: center; gap: 6px; white-space: nowrap;
+      transition: background .18s, border-color .18s, color .18s; }
+.fc i { width: 7px; height: 7px; border-radius: 50%; background: currentColor; display: block; }
+.fc u { text-decoration: none; opacity: .5; font-variant-numeric: tabular-nums; margin-left: 2px;
+        font-size: 10.5px; font-weight: 700; }
 .fc:hover { border-color: rgba(0, 0, 0, .25); }
 .fc.on { background: var(--navy); border-color: var(--navy); color: #fff; }
 .fc.on.tint { background: var(--t); border-color: var(--t); color: #fff; }
-.fclear { font: inherit; font-size: 12.5px; font-weight: 600; background: none; border: 0; color: var(--jb-blue); cursor: pointer; }
+.fc.on u { opacity: .7; }
+
+.more { position: relative; flex: none; }
+.more-h { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600;
+          color: var(--ink-2); background: #fff; border: 1px solid var(--rule); border-radius: 999px;
+          padding: 4px 11px; cursor: default; white-space: nowrap; }
+.more:hover .more-h, .more:focus-within .more-h { border-color: var(--navy); }
+.more-h b { background: var(--navy); color: #fff; border-radius: 999px; padding: 1px 7px; font-size: 11px; }
+.more-b { position: absolute; top: 30px; right: 0; z-index: 40; width: max-content; max-width: 70vw;
+          background: #fff; border: 1px solid var(--rule); border-radius: 16px; padding: 10px 14px;
+          box-shadow: 0 16px 40px rgba(0, 6, 28, .14);
+          opacity: 0; visibility: hidden; transform: translateY(-6px);
+          transition: opacity .18s, transform .18s, visibility .18s; }
+.more:hover .more-b, .more:focus-within .more-b { opacity: 1; visibility: visible; transform: none; }
+.more-b .frow + .frow { margin-top: 8px; padding-top: 8px; border-top: 1px solid var(--rule-soft); }
+.tally { font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; flex: none; }
+.fclear { font: inherit; font-size: 12px; font-weight: 600; background: none; border: 0; color: var(--jb-blue); cursor: pointer; flex: none; padding: 0; }
 
 /* three columns ------------------------------------------------------- */
-.stage { display: grid; grid-template-columns: 290px minmax(0, 1fr) 380px; gap: 14px;
-         height: calc(100dvh - var(--nav-h, 60px) - 118px); min-height: 520px; }
+.stage { flex: 1; min-height: 0; display: grid; grid-template-columns: 286px minmax(0, 1fr) 374px; gap: 13px; }
 .col { min-width: 0; min-height: 0; }
-.scroller { height: 100%; overflow-y: auto; overscroll-behavior: contain; padding-right: 2px; }
-.scroller::-webkit-scrollbar { width: 8px; }
-.scroller::-webkit-scrollbar-thumb { background: rgba(0, 0, 0, .14); border-radius: 8px; }
+.scroller { height: 100%; overflow-y: auto; overscroll-behavior: contain; padding-right: 3px; }
+.scroller::-webkit-scrollbar { width: 7px; }
+.scroller::-webkit-scrollbar-thumb { background: rgba(0, 0, 0, .13); border-radius: 8px; }
 
-.chead { font-size: 10.5px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
-         color: var(--faint); padding: 0 2px 8px; }
-.shot { margin-bottom: 10px; }
+.chead { font-size: 10px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--faint); padding: 0 2px 7px; }
+.shot { margin-bottom: 9px; }
 .shot img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block; border-radius: 16px;
             background: #fff; border: 1px solid var(--rule); cursor: zoom-in; transition: border-color .2s, transform .2s; }
 .shot img:hover { border-color: var(--navy); transform: translateY(-2px); }
 .shot p { font-size: 12px; color: var(--muted); margin: 6px 2px 0; line-height: 1.45; }
-.lcard { background: #fff; border: 1px solid var(--rule); border-radius: 16px; padding: 12px 14px; margin-bottom: 10px; }
-.lcard i { font-style: normal; display: block; font-size: 10.5px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: var(--faint); margin-bottom: 4px; }
-.lcard b { display: block; font-size: 14px; font-weight: 600; line-height: 1.45; font-variant-numeric: tabular-nums; }
+.lcard { background: #fff; border: 1px solid var(--rule); border-radius: 15px; padding: 11px 13px; margin-bottom: 9px; }
+.lcard i { font-style: normal; display: block; font-size: 10px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: var(--faint); margin-bottom: 4px; }
+.lcard b { display: block; font-size: 13.5px; font-weight: 600; line-height: 1.5; font-variant-numeric: tabular-nums; }
 .lcard.hold { border-left: 3px solid var(--jb-green); }
 .lcard.fail { border-left: 3px solid var(--jb-amber); }
-.lhint { font-size: 13.5px; color: var(--muted); line-height: 1.6; padding: 0 2px; }
+.lhint { font-size: 13px; color: var(--muted); line-height: 1.6; padding: 0 2px 10px; margin: 0; }
 
 .board { position: relative; height: 100%; border-radius: var(--r-lg); overflow: hidden;
          background: var(--navy); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .09); }
-.board::before, .board::after { content: ""; position: absolute; border-radius: 50%; filter: blur(90px); opacity: .45; pointer-events: none; }
-.board::before { width: 44%; height: 62%; left: -10%; top: -18%; background: radial-gradient(circle, #0167EF 0%, transparent 65%); }
-.board::after { width: 42%; height: 60%; right: -9%; bottom: -20%; background: radial-gradient(circle, #00B87A 0%, transparent 65%); }
+.glow { position: absolute; border-radius: 50%; filter: blur(92px); opacity: .46; pointer-events: none;
+        transition: background-color .75s ease, opacity .75s ease; }
+.g1 { width: 46%; height: 64%; left: -11%; top: -19%; background: #0167EF; }
+.g2 { width: 44%; height: 62%; right: -10%; bottom: -21%; background: #00B87A; }
 #cv { position: absolute; inset: 0; width: 100%; height: 100%; cursor: grab; touch-action: none; }
 #cv.drag { cursor: grabbing; }
-.hub { position: absolute; left: 16px; bottom: 12px; z-index: 3; font-size: 11.5px; color: rgba(255, 255, 255, .4); pointer-events: none; margin: 0; }
-.spin { position: absolute; right: 14px; top: 12px; z-index: 3; font: inherit; font-size: 11.5px; font-weight: 600;
+.spin { position: absolute; right: 13px; top: 11px; z-index: 3; font: inherit; font-size: 11.5px; font-weight: 600;
         background: rgba(255, 255, 255, .1); border: 1px solid rgba(255, 255, 255, .17); color: #fff;
         border-radius: 999px; padding: 5px 13px; cursor: pointer; }
+.back { position: absolute; left: 13px; top: 11px; z-index: 3; font: inherit; font-size: 11.5px; font-weight: 600;
+        background: rgba(255, 255, 255, .1); border: 1px solid rgba(255, 255, 255, .17); color: #fff;
+        border-radius: 999px; padding: 5px 13px; cursor: pointer; display: none; }
+.back.on { display: inline-block; }
 
-.mpanel { background: #fff; border: 1px solid var(--rule); border-radius: var(--r-lg); padding: 18px; }
-.mtag { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; padding: 4px 11px; border-radius: 999px; margin-bottom: 10px; }
-.mpanel h2 { font-size: 19px; font-weight: 700; line-height: 1.32; margin: 0 0 12px; }
-.spans { display: flex; gap: 6px; flex-wrap: wrap; margin: 0 0 12px; }
-.spans span { font-size: 12px; font-weight: 600; border-radius: 999px; padding: 4px 10px; background: var(--paper-2); color: var(--faint); }
-.mnum { background: var(--paper-2); border-radius: 14px; padding: 12px 14px; margin-bottom: 12px; font-variant-numeric: tabular-nums; }
-.mnum b { display: block; font-size: 15px; font-weight: 600; line-height: 1.45; }
-.mnum span { display: block; font-size: 13px; color: var(--muted); margin-top: 5px; }
-.links { border-top: 1px solid var(--rule); margin-top: 6px; padding-top: 10px; }
-.links h3 { font-size: 10.5px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: var(--faint); margin: 0 0 8px; }
-.lk { display: block; width: 100%; text-align: left; font: inherit; background: none; border: 0; border-radius: 12px; padding: 9px 10px; cursor: pointer; color: var(--ink-2); font-size: 13.5px; line-height: 1.55; }
+.mpanel { background: #fff; border: 1px solid var(--rule); border-radius: var(--r-lg); padding: 17px; }
+.mtag { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; padding: 4px 11px; border-radius: 999px; margin-bottom: 9px; }
+.mpanel h2 { font-size: 19px; font-weight: 700; line-height: 1.32; margin: 0 0 11px; }
+.spans { display: flex; gap: 5px; flex-wrap: wrap; margin: 0 0 11px; }
+.spans span { font-size: 11.5px; font-weight: 600; border-radius: 999px; padding: 4px 10px; background: var(--paper-2); color: var(--faint); }
+.mnum { background: var(--paper-2); border-radius: 14px; padding: 11px 13px; margin-bottom: 11px; font-variant-numeric: tabular-nums; }
+.mnum b { display: block; font-size: 14.5px; font-weight: 600; line-height: 1.5; }
+.mnum span { display: block; font-size: 12.5px; color: var(--muted); margin-top: 5px; }
+.links { border-top: 1px solid var(--rule); margin-top: 5px; padding-top: 9px; }
+.links h3 { font-size: 10px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: var(--faint); margin: 0 0 7px; }
+.lk { display: block; width: 100%; text-align: left; font: inherit; background: none; border: 0; border-radius: 12px; padding: 8px 9px; cursor: pointer; color: var(--ink-2); font-size: 13px; line-height: 1.55; }
 .lk:hover { background: var(--paper-2); }
-.lk b { display: block; color: var(--ink); font-weight: 600; font-size: 14px; margin-bottom: 2px; }
+.lk b { display: block; color: var(--ink); font-weight: 600; font-size: 13.5px; margin-bottom: 2px; }
 .lk b::before { content: "→ "; color: var(--faint); }
-.wk { display: inline-block; margin-top: 10px; font-size: 13.5px; font-weight: 600; }
-.mhint { color: var(--muted); font-size: 14px; line-height: 1.6; margin: 0; }
+.wk { display: inline-block; margin-top: 9px; font-size: 13px; font-weight: 600; }
+.mhint { color: var(--muted); font-size: 13.5px; line-height: 1.6; margin: 0; }
+.trail { border-top: 1px solid var(--rule); margin-top: 11px; padding-top: 9px; display: flex; gap: 5px; flex-wrap: wrap; align-items: center; }
+.trail span.lab { font-size: 10px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: var(--faint); }
+.trail button { font: inherit; font-size: 11.5px; font-weight: 600; background: var(--paper-2); border: 0;
+                border-radius: 999px; padding: 4px 10px; cursor: pointer; color: var(--ink-2); }
+.trail button:hover { background: var(--navy); color: #fff; }
 
 #lb { position: fixed; inset: 0; z-index: 200; background: rgba(0, 6, 28, .93); display: none; align-items: center; justify-content: center; padding: 28px; cursor: zoom-out; }
 #lb.on { display: flex; }
 #lb img { max-width: 92vw; max-height: 82vh; border-radius: 14px; display: block; }
 #lb p { position: absolute; left: 0; right: 0; bottom: 20px; text-align: center; color: rgba(255, 255, 255, .72); font-size: 14px; padding: 0 24px; margin: 0; }
 
-@media (max-width: 1180px) { .stage { grid-template-columns: 240px minmax(0, 1fr) 330px; } }
-@media (max-width: 980px) {
-  .stage { grid-template-columns: 1fr; height: auto; }
-  .board { height: 440px; }
+@media (max-width: 1280px) { .stage { grid-template-columns: 250px minmax(0, 1fr) 330px; } .frow > .lab { width: 70px; } }
+@media (max-width: 1040px) {
+  body { overflow: auto; }
+  body > .foot, body > footer { display: block; }
+  .full { height: auto; }
+  .hdr { flex-direction: column; align-items: stretch; gap: 8px; }
+  .stage { grid-template-columns: 1fr; }
+  .board { height: 420px; }
   .scroller { height: auto; overflow: visible; }
-  .col-figs { order: 3; }
-  .col-card { order: 2; }
-  .frow > span.lab { width: 100%; }
-  .fbar-body { position: static; opacity: 1; visibility: visible; transform: none; box-shadow: none; margin-top: 8px; }
-  .fbar { height: auto; }
+  .col-figs { order: 3; } .col-card { order: 2; }
+  .frow { flex-wrap: wrap; } .frow > .lab { width: 100%; }
+  .more { display: contents; }
+  .more-b { position: static; opacity: 1; visibility: visible; transform: none; box-shadow: none;
+            max-width: none; width: auto; margin-top: 8px; border: 0; padding: 0; }
+  .more-h { display: none; }
 }
 </style>
 </head>
 <body>
 
 <div class="full">
-  <div class="top">
+  <div class="hdr">
     <h1 data-en="Knowledge map" data-zh="知識地圖"></h1>
-    <p data-en="Sixty nodes on three shells. Drag to turn it. Figures on the left, the card on the right."
-       data-zh="三層殼、六十個節點。拖曳可以轉動。圖在左邊，卡片在右邊。"></p>
-  </div>
-
-  <div class="fbar" id="fbar">
-    <div class="fbar-head">
-      <b data-en="Filter" data-zh="篩選"></b>
-      <span class="tally" id="fcount"></span>
-      <span class="live" id="flive"></span>
-      <span class="caret">▾</span>
-    </div>
-    <div class="fbar-body">
-      <div class="frow"><span class="lab" data-en="Domain" data-zh="領域"></span><div class="fchips" id="f-dom"></div></div>
-      <div class="frow"><span class="lab" data-en="Evidence for" data-zh="支持哪個獎"></span><div class="fchips" id="f-aw"></div></div>
-      <div class="frow"><span class="lab" data-en="How strong" data-zh="證據強度"></span><div class="fchips" id="f-st"></div></div>
+    <div class="fsets">
       <div class="frow">
-        <span class="lab" data-en="Lens" data-zh="鏡頭"></span>
-        <div class="fchips" id="f-lens"></div>
-        <button class="fclear" id="fclear" data-en="Clear all" data-zh="全部清除"></button>
+        <span class="lab" data-en="Domain" data-zh="領域"></span>
+        <div class="fchips" id="f-dom"></div>
+      </div>
+      <div class="frow">
+        <span class="lab" data-en="Evidence for" data-zh="支持哪個獎"></span>
+        <div class="fchips" id="f-aw"></div>
+        <div class="more" id="more" tabindex="0">
+          <span class="more-h"><span data-en="More" data-zh="更多"></span><b id="morecount">0</b>▾</span>
+          <div class="more-b">
+            <div class="frow"><span class="lab" data-en="How strong" data-zh="證據強度"></span><div class="fchips" id="f-st"></div></div>
+            <div class="frow"><span class="lab" data-en="Lens" data-zh="鏡頭"></span><div class="fchips" id="f-lens"></div></div>
+          </div>
+        </div>
+        <span class="tally" id="fcount"></span>
+        <button class="fclear" id="fclear" data-en="Clear" data-zh="清除"></button>
       </div>
     </div>
   </div>
 
   <div class="stage">
-    <div class="col col-figs">
-      <div class="scroller" id="figs"></div>
-    </div>
-
+    <div class="col col-figs"><div class="scroller" id="figs"></div></div>
     <div class="col">
       <div class="board" id="board">
+        <span class="glow g1" id="g1"></span><span class="glow g2" id="g2"></span>
         <canvas id="cv"></canvas>
+        <button class="back" id="back" data-en="Clear selection" data-zh="取消選取"></button>
         <button class="spin" id="spin" data-en="Pause" data-zh="暫停"></button>
-        <p class="hub" id="hub"></p>
       </div>
     </div>
-
-    <div class="col col-card">
-      <div class="scroller"><aside class="mpanel" id="panel"></aside></div>
-    </div>
+    <div class="col col-card"><div class="scroller"><aside class="mpanel" id="panel"></aside></div></div>
   </div>
 </div>
 
 <div id="lb" role="dialog" aria-modal="true"><img alt=""><p></p></div>
 
-<script src="assets/js/site.js?v=202610292100"></script>
-<script src="data/map.js?v=202610292100"></script>
+<script src="assets/js/site.js?v=202610292300"></script>
+<script src="data/map.js?v=202610292300"></script>
 <script>
 (function () {
   var S = window.Site;
   var cv = document.getElementById('cv'), ctx = cv.getContext('2d');
   var board = document.getElementById('board'), figs = document.getElementById('figs');
   var panel = document.getElementById('panel'), lb = document.getElementById('lb');
+  var g1 = document.getElementById('g1'), g2 = document.getElementById('g2');
   var R = { ev: 1, con: .56, imp: .2 };
   var NODES = MAP_NODES, byId = {}, DOM = {}, i, n;
 
-  for (i = 0; i < MAP_DOMS.length; i++) DOM[MAP_DOMS[i].id] = MAP_DOMS[i];
+  for (i = 0; i < MAP_DOMS.length; i++) { DOM[MAP_DOMS[i].id] = MAP_DOMS[i]; MAP_DOMS[i].n = 0; }
   for (i = 0; i < NODES.length; i++) {
     n = NODES[i]; byId[n.id] = n;
     var lon = (n.lon !== undefined ? n.lon : (DOM[n.dom] ? DOM[n.dom].lon : 0)) * Math.PI / 180;
@@ -190,6 +197,7 @@ body { overflow-x: hidden; }
     n.cur = n.p0.slice();
     n.col = n.k === 'ev' ? (DOM[n.dom] ? DOM[n.dom].c : '#fff') : (n.k === 'con' ? '#9FE8FF' : '#FFFFFF');
     n.nb = []; n.fx = (n.k === 'ev' ? MAP_FACETS[n.id] : null) || null;
+    if (n.k === 'ev' && DOM[n.dom]) DOM[n.dom].n++;
   }
   var LINKS = [];
   for (i = 0; i < MAP_EDGES.length; i++) {
@@ -201,6 +209,10 @@ body { overflow-x: hidden; }
 
   function L(o, k) { return (S.lang === 'zh' && o[k + '_zh']) ? o[k + '_zh'] : (o[k] || ''); }
   function title(o) { return S.lang === 'zh' ? (o.zh || o.en) : o.en; }
+  function shortOf(o) {
+    var s = MAP_SHORT[o.id];
+    return s ? (S.lang === 'zh' ? s[1] : s[0]) : title(o);
+  }
   function zh() { return S.lang === 'zh'; }
 
   /* ---------------------------------------------------------- filters */
@@ -225,7 +237,8 @@ body { overflow-x: hidden; }
     for (j = 0; j < MAP_DOMS.length; j++) {
       d = MAP_DOMS[j];
       h += '<button class="fc tint' + (F.dom[d.id] ? ' on' : '') + '" style="--t:' + d.c + ';color:' +
-        (F.dom[d.id] ? '#fff' : d.c) + '" data-g="dom" data-v="' + d.id + '"><i></i>' + S.esc(zh() ? d.zh : d.en) + '</button>';
+        (F.dom[d.id] ? '#fff' : d.c) + '" data-g="dom" data-v="' + d.id + '"><i></i>' +
+        S.esc(zh() ? d.zh : d.en) + '<u>' + d.n + '</u></button>';
     }
     document.getElementById('f-dom').innerHTML = h;
     h = '';
@@ -243,39 +256,51 @@ body { overflow-x: hidden; }
     document.getElementById('f-lens').innerHTML =
       '<button class="fc' + (F.risk ? ' on' : '') + '" data-g="risk" data-v="1">' +
       S.esc(zh() ? '評審一挖就會找到的' : 'A judge who digs lands here') + '</button>';
-    summary();
+    var more = 0;
+    for (j in F.st) if (F.st[j]) more++;
+    if (F.risk) more++;
+    document.getElementById('morecount').textContent = more;
+    document.getElementById('morecount').style.display = more ? '' : 'none';
+    summary(); paint();
   }
 
   function summary() {
     var tot = 0, vis = 0, j;
     for (j = 0; j < NODES.length; j++) if (NODES[j].k === 'ev') { tot++; if (pass(NODES[j])) vis++; }
-    document.getElementById('fcount').textContent = (zh() ? '顯示 ' : 'showing ') + vis + ' / ' + tot;
-    var live = [];
-    for (j = 0; j < MAP_DOMS.length; j++) if (F.dom[MAP_DOMS[j].id]) live.push(zh() ? MAP_DOMS[j].zh : MAP_DOMS[j].en);
-    for (j = 0; j < MAP_AWARDS.length; j++) if (F.aw[MAP_AWARDS[j].id]) live.push(zh() ? MAP_AWARDS[j].zh : MAP_AWARDS[j].en);
-    for (j = 0; j < MAP_STRENGTH.length; j++) if (F.st[MAP_STRENGTH[j].id]) live.push(zh() ? MAP_STRENGTH[j].zh : MAP_STRENGTH[j].en);
-    if (F.risk) live.push(zh() ? '一挖就找到' : 'judges land here');
-    var h = '';
-    for (j = 0; j < live.length; j++) h += '<span>' + S.esc(live[j]) + '</span>';
-    document.getElementById('flive').innerHTML = h;
+    document.getElementById('fcount').textContent = vis + ' / ' + tot;
   }
 
-  var fbar = document.getElementById('fbar');
-  fbar.addEventListener('click', function (ev) {
-    var b = ev.target.closest('[data-g]');
-    if (!b) { if (ev.target.closest('.fbar-head')) fbar.classList.toggle('pin'); return; }
+  document.querySelector('.hdr').addEventListener('click', function (ev) {
+    var b = ev.target.closest('[data-g]'); if (!b) return;
     var g = b.getAttribute('data-g'), v = b.getAttribute('data-v');
     if (g === 'risk') F.risk = !F.risk; else F[g][v] = !F[g][v];
     chips();
     if (sel && !pass(sel)) select(null);
   });
-  document.getElementById('fclear').addEventListener('click', function (ev) {
-    ev.stopPropagation(); F = { dom: {}, aw: {}, st: {}, risk: false }; chips();
+  document.getElementById('fclear').addEventListener('click', function () {
+    F = { dom: {}, aw: {}, st: {}, risk: false }; chips();
   });
+
+  /* ------------------------------------------- the board takes a colour */
+  function paint() {
+    var a = '#0167EF', b = '#00B87A';
+    if (sel) {
+      if (sel.k === 'ev') { a = DOM[sel.dom].c; b = a === '#0167EF' ? '#00B87A' : '#0167EF'; }
+      else if (sel.k === 'con') { a = '#00A3C4'; b = '#0167EF'; }
+      else { a = '#00B87A'; b = '#00A3C4'; }
+    } else {
+      var on = [];
+      for (var j = 0; j < MAP_DOMS.length; j++) if (F.dom[MAP_DOMS[j].id]) on.push(MAP_DOMS[j].c);
+      if (on.length === 1) { a = on[0]; b = on[0]; }
+      else if (on.length > 1) { a = on[0]; b = on[on.length - 1]; }
+    }
+    g1.style.background = a; g2.style.background = b;
+    g1.style.opacity = sel ? .58 : .46; g2.style.opacity = sel ? .5 : .46;
+  }
 
   /* ---------------------------------------------------------- 3D */
   var yaw = -0.5, pitch = -0.22, yawT = yaw, pitchT = pitch;
-  var spin = true, sel = null, hov = null, near = {};
+  var spin = true, sel = null, hov = null, near = {}, grow = {};
   var W = 0, H = 0, dpr = 1, cxp = 0, cyp = 0, unit = 1;
 
   function size() {
@@ -304,6 +329,8 @@ body { overflow-x: hidden; }
       if (sel && !near[nd.id]) push = 1.45;
       else if (sel && nd !== sel) push = .9;
       for (k = 0; k < 3; k++) { t = nd.p0[k] * push; nd.cur[k] += (t - nd.cur[k]) * 0.085; }
+      var want = nd === sel ? 1.75 : (sel && near[nd.id] ? 1.3 : 1);
+      grow[nd.id] = (grow[nd.id] || 1) + (want - (grow[nd.id] || 1)) * 0.12;
     }
     if (sel) {
       var d = yawT - yaw;
@@ -313,7 +340,7 @@ body { overflow-x: hidden; }
     } else if (spin && !drag) { yaw += 0.0013; }
   }
 
-  function overlaps(r, list) {
+  function hits(r, list) {
     for (var j = 0; j < list.length; j++) {
       var o = list[j];
       if (r.x < o.x + o.w && r.x + r.w > o.x && r.y < o.y + o.h && r.y + r.h > o.y) return true;
@@ -332,9 +359,9 @@ body { overflow-x: hidden; }
       if (!visible(A) || !visible(B)) continue;
       var on = sel && (A === sel || B === sel);
       var zz = (A.pr[2] + B.pr[2]) / 2;
-      var al = (0.10 + 0.14 * (zz + 1) / 2) * (sel ? (on ? 6 : .2) : 1);
+      var al = (0.10 + 0.14 * (zz + 1) / 2) * (sel ? (on ? 6 : .18) : 1);
       ctx.strokeStyle = 'rgba(255,255,255,' + Math.min(al, .85) + ')';
-      ctx.lineWidth = on ? 1.7 : 0.8;
+      ctx.lineWidth = on ? 1.8 : 0.8;
       ctx.beginPath(); ctx.moveTo(A.pr[0], A.pr[1]); ctx.lineTo(B.pr[0], B.pr[1]); ctx.stroke();
     }
 
@@ -343,14 +370,17 @@ body { overflow-x: hidden; }
       nd = ord[j]; pr = nd.pr;
       if (!visible(nd)) continue;
       var base = nd.k === 'ev' ? 5 : (nd.k === 'con' ? 8.5 : 7);
-      var rr = base * pr[3];
+      var rr = base * pr[3] * (grow[nd.id] || 1);
       var depth = 0.45 + 0.55 * (pr[2] + 1) / 2;
-      var a = depth * (sel ? (near[nd.id] ? 1 : .15) : 1);
+      var a = depth * (sel ? (near[nd.id] ? 1 : .14) : 1);
       if (nd === hov) a = 1;
       ctx.globalAlpha = a;
       if (nd === sel) {
-        ctx.beginPath(); ctx.arc(pr[0], pr[1], rr + 7, 0, 6.2832);
-        ctx.strokeStyle = nd.col; ctx.lineWidth = 1.4; ctx.stroke();
+        ctx.beginPath(); ctx.arc(pr[0], pr[1], rr + 10, 0, 6.2832);
+        ctx.strokeStyle = nd.col; ctx.lineWidth = 1.2; ctx.globalAlpha = a * .45; ctx.stroke();
+        ctx.globalAlpha = a;
+        ctx.beginPath(); ctx.arc(pr[0], pr[1], rr + 5, 0, 6.2832);
+        ctx.strokeStyle = nd.col; ctx.lineWidth = 1.6; ctx.stroke();
       }
       ctx.beginPath(); ctx.arc(pr[0], pr[1], rr, 0, 6.2832);
       ctx.fillStyle = nd.col; ctx.fill();
@@ -358,30 +388,46 @@ body { overflow-x: hidden; }
       ctx.globalAlpha = 1;
     }
 
-    /* labels last, front first, and never on top of one another */
+    /* labels last: selected biggest, its neighbours next, nothing on top of anything */
     var placed = [];
-    var lab = NODES.filter(function (x) { return x.k !== 'ev' && visible(x); })
-      .sort(function (a, b) { return b.pr[2] - a.pr[2]; });
-    for (j = 0; j < lab.length; j++) {
-      nd = lab[j]; pr = nd.pr;
-      if (pr[2] < -0.12 && nd !== sel && !near[nd.id]) continue;
-      var txt = title(nd);
-      var fs = Math.max(11, (nd.k === 'imp' ? 13 : 12.5) * pr[3]);
-      ctx.font = (nd.k === 'imp' ? '600 ' : '500 ') + fs + 'px -apple-system, "PingFang TC", sans-serif';
+    var pool = NODES.filter(function (x) {
+      if (!visible(x)) return false;
+      if (sel) return near[x.id];
+      return x.k !== 'ev';
+    }).sort(function (a, b) {
+      if (a === sel) return 1; if (b === sel) return -1;
+      return a.pr[2] - b.pr[2];
+    }).reverse();
+
+    for (j = 0; j < pool.length; j++) {
+      nd = pool[j]; pr = nd.pr;
+      if (!sel && pr[2] < -0.12) continue;
+      var isSel = nd === sel;
+      var txt = sel ? shortOf(nd) : title(nd);
+      var fs = isSel ? Math.max(16, 19 * pr[3])
+        : sel ? Math.max(12, 14 * pr[3])
+          : Math.max(11, (nd.k === 'imp' ? 13 : 12.5) * pr[3]);
+      ctx.font = (isSel ? '700 ' : sel ? '600 ' : nd.k === 'imp' ? '600 ' : '500 ') + fs +
+        'px -apple-system, "PingFang TC", sans-serif';
       var w = ctx.measureText(txt).width;
-      var yy = pr[1] - (nd.k === 'ev' ? 5 : nd.k === 'con' ? 8.5 : 7) * pr[3] - 8;
-      var box = { x: pr[0] - w / 2 - 4, y: yy - fs, w: w + 8, h: fs + 6 };
+      var base2 = nd.k === 'ev' ? 5 : (nd.k === 'con' ? 8.5 : 7);
+      var yy = pr[1] - base2 * pr[3] * (grow[nd.id] || 1) - 10;
+      var box = { x: pr[0] - w / 2 - 5, y: yy - fs, w: w + 10, h: fs + 7 };
       if (box.x < 2 || box.x + box.w > W - 2) continue;
-      if (overlaps(box, placed) && nd !== sel) continue;
+      if (hits(box, placed) && !isSel) continue;
       placed.push(box);
-      ctx.globalAlpha = (0.45 + 0.55 * (pr[2] + 1) / 2) * (sel ? (near[nd.id] ? 1 : .2) : .95);
-      ctx.fillStyle = nd.k === 'imp' ? '#FFFFFF' : 'rgba(216,244,255,.96)';
+      ctx.globalAlpha = isSel ? 1 : (0.5 + 0.5 * (pr[2] + 1) / 2) * (sel ? .95 : .92);
       ctx.textAlign = 'center';
+      if (isSel) {
+        ctx.fillStyle = 'rgba(0,6,28,.55)';
+        ctx.beginPath(); ctx.roundRect(box.x - 4, box.y - 2, box.w + 8, box.h + 4, 9); ctx.fill();
+      }
+      ctx.fillStyle = isSel ? '#FFFFFF' : (nd.k === 'imp' ? '#FFFFFF' : 'rgba(216,244,255,.96)');
       ctx.fillText(txt, pr[0], yy);
       ctx.globalAlpha = 1;
     }
 
-    if (hov && hov.k === 'ev' && visible(hov) && hov !== sel) {
+    if (hov && visible(hov) && hov !== sel && (hov.k === 'ev' || sel)) {
       var t2 = title(hov), x = hov.pr[0], y = hov.pr[1];
       ctx.font = '500 12.5px -apple-system, "PingFang TC", sans-serif';
       var tw = Math.min(ctx.measureText(t2).width + 20, W - 24);
@@ -420,35 +466,35 @@ body { overflow-x: hidden; }
   cv.addEventListener('pointerleave', function () { hov = null; });
 
   function pick(mx, my) {
-    var best = null, bd = 20;
+    var best = null, bd = 22;
     for (var j = 0; j < NODES.length; j++) {
       var nd = NODES[j];
       if (!nd.pr || !visible(nd)) continue;
       var d = Math.hypot(nd.pr[0] - mx, nd.pr[1] - my);
-      var lim = Math.max((nd.k === 'ev' ? 12 : 15) * nd.pr[3], 10);
+      var lim = Math.max((nd.k === 'ev' ? 12 : 15) * nd.pr[3] * (grow[nd.id] || 1), 10);
       if (d < lim && d < bd) { bd = d; best = nd; }
     }
     return best;
   }
 
-  /* ---------------------------------------------------------- left column */
+  /* ---------------------------------------------------------- columns */
   var TEASE = ['C_MEM', 'M_SIO2', 'P_LADDER', 'I_BROPHY', 'H_LOOP', 'D_TWIN', 'B_GEO', 'W_L2'];
+  var trail = [];
 
   function leftColumn(nd) {
     var h = '', j;
     if (!nd) {
       h = '<p class="chead">' + (zh() ? '從這裡開始' : 'Start anywhere') + '</p>' +
         '<p class="lhint">' + (zh()
-          ? '點地圖上任一個節點：它的圖會排在這一欄，數字與邊界在右邊。或直接點下面任何一張圖。'
-          : 'Tap any node on the map: its figures stack here and its numbers sit on the right. Or just tap a picture below.') + '</p>';
+          ? '點地圖上任一個節點，它的圖會排在這一欄。或直接點下面任何一張圖。'
+          : 'Tap any node on the map and its figures stack here. Or just tap a picture below.') + '</p>';
       for (j = 0; j < TEASE.length; j++) {
         var t = byId[TEASE[j]];
         if (!t || !t.img || !t.img.length || !pass(t)) continue;
         h += '<div class="shot"><img loading="lazy" src="assets/img/' + t.img[0] + '" alt="" data-go="' + t.id + '">' +
           '<p>' + S.esc(title(t)) + '</p></div>';
       }
-      figs.innerHTML = h;
-      return;
+      figs.innerHTML = h; return;
     }
     h = '<p class="chead">' + (zh() ? '這個節點的圖' : 'Figures for this node') + '</p>';
     var im = (nd.img || []).slice(0, 4);
@@ -456,7 +502,7 @@ body { overflow-x: hidden; }
       h += '<div class="shot"><img loading="lazy" src="assets/img/' + im[j] + '" alt="" data-full="assets/img/' + im[j] + '"></div>';
     }
     if (nd.k === 'ev') {
-      h += '<p class="chead" style="padding-top:6px">' + (zh() ? '這個節點的數字' : 'The numbers') + '</p>';
+      h += '<p class="chead" style="padding-top:5px">' + (zh() ? '這個節點的數字' : 'The numbers') + '</p>';
       h += '<div class="lcard"><i>' + (zh() ? '數字' : 'the number') + '</i><b>' + S.esc(L(nd, 'num')) + '</b></div>';
       h += '<div class="lcard"><i>n</i><b>' + S.esc(L(nd, 'n')) + '</b></div>';
       h += '<div class="lcard"><i>' + (zh() ? '對照' : 'control') + '</i><b>' + S.esc(L(nd, 'ctl')) + '</b></div>';
@@ -465,11 +511,18 @@ body { overflow-x: hidden; }
     } else {
       h += '<div class="lcard"><i>' + (zh() ? '為什麼重要' : 'why it matters') + '</i><b>' + S.esc(L(nd, 'note')) + '</b></div>';
     }
-    figs.innerHTML = h;
-    figs.scrollTop = 0;
+    figs.innerHTML = h; figs.scrollTop = 0;
   }
 
-  /* ---------------------------------------------------------- right column */
+  function trailHtml() {
+    if (trail.length < 2) return '';
+    var h = '<div class="trail"><span class="lab">' + (zh() ? '剛看過' : 'Just seen') + '</span>';
+    for (var j = trail.length - 2; j >= 0 && j > trail.length - 7; j--) {
+      h += '<button data-go="' + trail[j] + '">' + S.esc(shortOf(byId[trail[j]])) + '</button>';
+    }
+    return h + '</div>';
+  }
+
   function card(nd) {
     var isEv = nd.k === 'ev', j;
     var col = isEv ? DOM[nd.dom].c : (nd.k === 'con' ? '#0A1433' : '#00061C');
@@ -486,23 +539,21 @@ body { overflow-x: hidden; }
         h += '<span>' + S.esc(zh() ? MAP_AWARDS[j].zh : MAP_AWARDS[j].en) + '</span>';
       if (fx.rk) h += '<span style="background:#FDF1E0;color:#A85B00">' + (zh() ? '一挖就會找到' : 'judges land here') + '</span>';
       h += '</div>';
-    } else {
-      if (nd.k === 'con') {
-        var ds = {}, cnt = 0;
-        for (j = 0; j < nd.nb.length; j++) {
-          var o = nd.nb[j].a === nd ? nd.nb[j].b : nd.nb[j].a;
-          if (o.k === 'ev' && !ds[o.dom]) { ds[o.dom] = 1; cnt++; }
-        }
-        var sp = '<div class="spans">';
-        for (j = 0; j < MAP_DOMS.length; j++) {
-          var d = MAP_DOMS[j], on = !!ds[d.id];
-          sp += '<span' + (on ? ' style="background:' + d.c + ';color:#fff"' : '') + '>' + S.esc(zh() ? d.zh : d.en) + '</span>';
-        }
-        h += sp + '</div>';
-        h += '<div class="mnum"><b>' + (zh() ? '橫跨 ' + cnt + ' 個領域' : 'Spans ' + cnt + ' domains') + '</b><span>' + S.esc(L(nd, 'note')) + '</span></div>';
-      } else {
-        h += '<div class="mnum"><b>' + S.esc(L(nd, 'note')) + '</b></div>';
+    } else if (nd.k === 'con') {
+      var ds = {}, cnt = 0;
+      for (j = 0; j < nd.nb.length; j++) {
+        var o = nd.nb[j].a === nd ? nd.nb[j].b : nd.nb[j].a;
+        if (o.k === 'ev' && !ds[o.dom]) { ds[o.dom] = 1; cnt++; }
       }
+      var sp = '<div class="spans">';
+      for (j = 0; j < MAP_DOMS.length; j++) {
+        var d = MAP_DOMS[j], on = !!ds[d.id];
+        sp += '<span' + (on ? ' style="background:' + d.c + ';color:#fff"' : '') + '>' + S.esc(zh() ? d.zh : d.en) + '</span>';
+      }
+      h += sp + '</div>';
+      h += '<div class="mnum"><b>' + (zh() ? '橫跨 ' + cnt + ' 個領域' : 'Spans ' + cnt + ' domains') + '</b><span>' + S.esc(L(nd, 'note')) + '</span></div>';
+    } else {
+      h += '<div class="mnum"><b>' + S.esc(L(nd, 'note')) + '</b></div>';
     }
 
     var ls = nd.nb.filter(function (k) { return (k.en || k.zh) && pass(k.a) && pass(k.b); });
@@ -518,19 +569,21 @@ body { overflow-x: hidden; }
     }
     if (nd.pg) h += '<a class="wk" href="' + S.wiki(nd.pg) + '" target="_blank" rel="noopener">' +
       (zh() ? '到 wiki 看這一頁 ↗' : 'Open this wiki page ↗') + '</a>';
-    return h;
+    return h + trailHtml();
   }
 
   function empty() {
     return '<p class="mhint">' + (zh()
-      ? '點任一個節點：不相關的節點會讓開，地圖會把它轉到正面，它的圖與數字排到左邊，連結列在這裡。'
-      : 'Tap any node: the unrelated ones move out of the way, the map turns it to the front, its figures and numbers stack on the left, and its links land here.') + '</p>';
+      ? '點任一個節點：不相關的節點會讓開，地圖把它轉到正面並放大它與相鄰節點的名字，圖與數字排到左邊。'
+      : 'Tap any node: the unrelated ones move out of the way, the map turns it to the front and enlarges it and its neighbours, and its figures and numbers stack on the left.') + '</p>' + trailHtml();
   }
 
   function select(nd) {
     sel = nd && pass(nd) ? nd : null;
     near = {};
     if (sel) {
+      if (trail[trail.length - 1] !== sel.id) trail.push(sel.id);
+      if (trail.length > 12) trail.shift();
       near[sel.id] = 1;
       for (var j = 0; j < sel.nb.length; j++) { near[sel.nb[j].a.id] = 1; near[sel.nb[j].b.id] = 1; }
       var p = sel.p0;
@@ -538,8 +591,10 @@ body { overflow-x: hidden; }
       var zr = Math.sqrt(p[0] * p[0] + p[2] * p[2]);
       pitchT = Math.max(-1.0, Math.min(1.0, Math.atan2(p[1], zr || 0.001)));
     }
+    document.getElementById('back').classList.toggle('on', !!sel);
     leftColumn(sel);
     panel.innerHTML = sel ? card(sel) : empty();
+    paint();
     try { history.replaceState(null, '', sel ? '?n=' + sel.id : location.pathname); } catch (err) {}
   }
 
@@ -557,6 +612,7 @@ body { overflow-x: hidden; }
     var b = e.target.closest('[data-go]'); if (b) select(byId[b.getAttribute('data-go')]);
   });
   lb.addEventListener('click', function () { lb.classList.remove('on'); });
+  document.getElementById('back').addEventListener('click', function () { select(null); });
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape') { if (lb.classList.contains('on')) lb.classList.remove('on'); else select(null); }
   });
@@ -569,17 +625,11 @@ body { overflow-x: hidden; }
     S.applyStatic(sb.parentNode);
   });
 
-  function hub() {
-    document.getElementById('hub').innerHTML = zh()
-      ? '外層 · 證據 &nbsp;·&nbsp; 中層 · 概念 &nbsp;·&nbsp; 核心 · 影響'
-      : 'outer · evidence &nbsp;·&nbsp; middle · concepts &nbsp;·&nbsp; core · impact';
-  }
-
-  S.onLang(function () { chips(); hub(); leftColumn(sel); panel.innerHTML = sel ? card(sel) : empty(); });
+  S.onLang(function () { chips(); leftColumn(sel); panel.innerHTML = sel ? card(sel) : empty(); });
   window.addEventListener('resize', size);
   if (window.ResizeObserver) new ResizeObserver(size).observe(board);
 
-  size(); chips(); hub();
+  size(); chips();
   var q = (location.search.match(/[?&]n=([^&]+)/) || [])[1];
   select(q && byId[q] ? byId[q] : null);
   tick();

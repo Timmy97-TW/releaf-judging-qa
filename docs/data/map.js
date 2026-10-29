@@ -840,3 +840,61 @@ var MAP_STRENGTH = [
   { id: 'designed', en: 'Designed',       zh: '只到設計' },
   { id: 'not',      en: 'Not shown',      zh: '沒有做出來' }
 ];
+
+/* Short labels. The full titles are sentences and do not fit on a node, so the
+ * map draws these instead when a node is selected or next to the selection. */
+var MAP_SHORT = {
+  W_L2: ['Level 2 device', 'Level 2 裝置'],
+  W_SEC: ['Secretion blot', '分泌 blot'],
+  W_LIGHT: ['Green against red', '綠光對紅光'],
+  W_THREE: ['Three cargos out', '三種貨物都分泌'],
+  W_CODON: ['Codon optimisation', '密碼子最佳化'],
+  W_TRANS: ['Electroporation', '電穿孔'],
+  W_PLP: ['The PLP cofactor', 'PLP 輔因子'],
+
+  M_SIO2: ['Silica calibration', '矽球校正'],
+  M_BUBBLE: ['Bubble gates', '氣泡閘門'],
+  M_434: ['434 hours in line', '434 小時線上'],
+  M_CURVE: ['The ELISA curve', 'ELISA 標準曲線'],
+  M_PREREG: ['Pre-registration', '預先登錄'],
+  M_ACT: ['Activity after protein', '活性晚於蛋白'],
+
+  H_LOOP: ['The loop', '循環迴路'],
+  H_PLATE: ['Shell-side plate', '殼側平盤'],
+  H_TMP: ['Fouling and TMP', '阻塞與 TMP'],
+  H_PINCH: ['The pinch valve', '夾管閥'],
+  H_PHOT: ['Two photometers', '兩台光度計'],
+  H_LPA: ['The light plate', '光照盤'],
+  H_PLANTRIG: ['The float plate', '浮板'],
+
+  D_INDEX: ['Stress index', '逆境指數'],
+  D_FROZEN: ['Frozen forecast', '凍結的預測'],
+  D_TWIN: ['Digital twin', '數位孿生'],
+  D_RUNS: ['Seven runs', '七次運轉'],
+  D_LEAF: ['Leaf sensor', '葉片感測器'],
+  D_TIMING: ['5.4 days against 3', '5.4 天對 3 天'],
+  D_GRAFT: ['GRAFT pipeline', 'GRAFT 流程'],
+  D_TAG: ['The His tag', 'His 標籤'],
+  D_MD: ['MD noise floor', 'MD 雜訊底線'],
+
+  P_LADDER: ['The salt ladder', '鹽梯度'],
+  P_ACCD: ['ACCD on agar', '洋菜上的 ACCD'],
+  P_BOPEP: ['BoPep4', 'BoPep4'],
+  P_SOIL: ['Soil, and timing', '土壤與時機'],
+  P_HYDRO: ['Hydroponics', '水耕'],
+  P_TREH: ['Trehalose', '海藻糖'],
+
+  I_MAP: ['Thirty-one voices', '三十一個聲音'],
+  I_BROPHY: ['Brophy, 18 April', 'Brophy，4 月 18 日'],
+  I_CHANG: ['Prof. Chang', '張教授'],
+  I_CHEN: ['Prof. Chen', '陳教授'],
+  I_FARMER: ['Farmers and the forum', '農民與論壇'],
+  I_EDU: ['140 students', '140 位學生'],
+  I_BOOTH: ['The booth', '攤位'],
+
+  B_MVP: ['The unit we sell', '要賣的那台'],
+  B_BREAK: ['226 hectares', '226 公頃'],
+  B_GEO: ['Where the farms are', '農場在哪裡'],
+  B_ROUTE: ['The 30-day route', '三十天的路'],
+  B_ORG: ['The organic exclusion', '有機被排除']
+};
