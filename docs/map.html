@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Knowledge Map · ReLEAF Judging Trainer</title>
 <meta name="description" content="Evidence, the concepts that join domains, and impact — three shells in 3D, with every node's figures, numbers and boundary one tap away.">
-<link rel="stylesheet" href="assets/css/base.css?v=202610300100">
-<link rel="stylesheet" href="assets/css/pages.css?v=202610300100">
-<link rel="stylesheet" href="assets/css/theme.css?v=202610300100">
+<link rel="stylesheet" href="assets/css/base.css?v=202610301821">
+<link rel="stylesheet" href="assets/css/pages.css?v=202610301821">
+<link rel="stylesheet" href="assets/css/theme.css?v=202610301821">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M4 20c0-8 5.5-14.5 16-15.5C19.5 14 14 20 4 20Z' fill='%2300B87A'/%3E%3C/svg%3E">
 <style>
 html, body { height: 100%; }
@@ -294,8 +294,9 @@ body > .foot, body > footer { display: none; }
 
 <div id="lb" role="dialog" aria-modal="true"><img alt=""><p></p></div>
 
-<script src="assets/js/site.js?v=202610300100"></script>
-<script src="data/map.js?v=202610300100"></script>
+<script src="assets/js/site.js?v=202610301821"></script>
+<script src="data/map.js?v=202610301821"></script>
+<script src="data/bank.js?v=202610301821"></script>
 <script>
 (function () {
   var S = window.Site;
@@ -318,6 +319,18 @@ body > .foot, body > footer { display: none; }
     n.nb = []; n.fx = (n.k === 'ev' ? MAP_FACETS[n.id] : null) || null;
     if (n.k === 'ev' && DOM[n.dom]) DOM[n.dom].n++;
   }
+  /* the must-drill set lands on the board: a priority question names the nodes
+     it is asked about, so the node carries the question and glows for it */
+  var QSTAR = (window.QUESTIONS || []).filter(function (q) { return q.star; });
+  for (i = 0; i < QSTAR.length; i++) {
+    var qn = QSTAR[i].nodes || [];
+    for (var qj = 0; qj < qn.length; qj++) {
+      var tgt = byId[qn[qj]];
+      if (!tgt) continue;
+      (tgt.star = tgt.star || []).push(QSTAR[i]);
+    }
+  }
+
   var LINKS = [];
   for (i = 0; i < MAP_EDGES.length; i++) {
     var e = MAP_EDGES[i], a = byId[e[0]], b = byId[e[1]];
@@ -335,9 +348,10 @@ body > .foot, body > footer { display: none; }
   function zh() { return S.lang === 'zh'; }
 
   /* ---------------------------------------------------------- filters */
-  var F = { dom: {}, aw: {}, st: {}, risk: false, weak: false };
+  var F = { dom: {}, aw: {}, st: {}, risk: false, weak: false, star: false };
   function anyOn(g) { for (var k in g) if (g[k]) return true; return false; }
   function pass(nd) {
+    if (F.star && !nd.star) return false;
     if (nd.k !== 'ev') return true;
     if (anyOn(F.dom) && !F.dom[nd.dom]) return false;
     var fx = nd.fx || {};
@@ -374,6 +388,9 @@ body > .foot, body > footer { display: none; }
     }
     document.getElementById('f-st').innerHTML = h;
     document.getElementById('f-lens').innerHTML =
+      '<button class="fc' + (F.star ? ' on' : '') + '" data-g="star" data-v="1" ' +
+      'style="--t:#F0A800;border-color:rgba(240,168,0,.55)">' +
+      S.esc(zh() ? '★ 必練題問到的' : '★ The must-drill set asks about this') + '</button>' +
       '<button class="fc' + (F.risk ? ' on' : '') + '" data-g="risk" data-v="1">' +
       S.esc(zh() ? '評審一挖就會找到的' : 'A judge who digs lands here') + '</button>' +
       '<button class="fc' + (F.weak ? ' on' : '') + '" data-g="weak" data-v="1">' +
@@ -382,6 +399,7 @@ body > .foot, body > footer { display: none; }
     for (j in F.st) if (F.st[j]) more++;
     if (F.risk) more++;
     if (F.weak) more++;
+    if (F.star) more++;
     document.getElementById('morecount').textContent = more;
     document.getElementById('morecount').style.display = more ? '' : 'none';
     summary(); paint();
@@ -398,12 +416,13 @@ body > .foot, body > footer { display: none; }
     var g = b.getAttribute('data-g'), v = b.getAttribute('data-v');
     if (g === 'risk') F.risk = !F.risk;
     else if (g === 'weak') F.weak = !F.weak;
+    else if (g === 'star') F.star = !F.star;
     else F[g][v] = !F[g][v];
     chips();
     if (sel && !pass(sel)) select(null);
   });
   document.getElementById('fclear').addEventListener('click', function () {
-    F = { dom: {}, aw: {}, st: {}, risk: false, weak: false }; chips();
+    F = { dom: {}, aw: {}, st: {}, risk: false, weak: false, star: false }; chips();
   });
 
   /* ------------------------------------------- the board takes a colour */
@@ -500,6 +519,16 @@ body > .foot, body > footer { display: none; }
       var a = depth * (sel ? (near[nd.id] ? 1 : .14) : 1);
       if (nd === hov) a = 1;
       ctx.globalAlpha = a;
+      /* a node a priority question is asked about wears a gold halo that
+         breathes, so the must-drill parts of the project are findable from
+         across the board */
+      if (nd.star) {
+        var pulse = 0.5 + 0.5 * Math.sin(Date.now() / 620 + nd.pr[0] * 0.01);
+        ctx.beginPath(); ctx.arc(pr[0], pr[1], rr + 5 + 3 * pulse, 0, 6.2832);
+        ctx.strokeStyle = '#F0A800'; ctx.lineWidth = 1.4;
+        ctx.globalAlpha = a * (0.35 + 0.45 * pulse); ctx.stroke();
+        ctx.globalAlpha = a;
+      }
       if (nd === sel) {
         ctx.beginPath(); ctx.arc(pr[0], pr[1], rr + 10, 0, 6.2832);
         ctx.strokeStyle = nd.col; ctx.lineWidth = 1.2; ctx.globalAlpha = a * .45; ctx.stroke();
@@ -658,7 +687,9 @@ body > .foot, body > footer { display: none; }
     }
     h += '</div><div class="ix"><p class="ix-h"><span>' + (zh() ? '概念 · 中間層' : 'Concepts · the middle shell') + '</span><u>' + con.length + '</u></p><div class="ix-chips">';
     for (j = 0; j < con.length; j++) {
-      h += '<button data-go="' + con[j].id + '"><i style="background:#00A3C4"></i>' + S.esc(shortOf(con[j])) + '</button>';
+      h += '<button data-go="' + con[j].id + '"' +
+        (con[j].star ? ' style="border-color:rgba(240,168,0,.6)"' : '') +
+        '><i style="background:#00A3C4"></i>' + (con[j].star ? '★ ' : '') + S.esc(shortOf(con[j])) + '</button>';
     }
     return h + '</div></div>';
   }
@@ -671,7 +702,9 @@ body > .foot, body > footer { display: none; }
         var nd = NODES[k];
         if (nd.k !== 'ev' || nd.dom !== d.id || !pass(nd)) continue;
         tot++;
-        row += '<button data-go="' + nd.id + '">' + S.esc(shortOf(nd)) + '</button>';
+        row += '<button data-go="' + nd.id + '"' +
+          (nd.star ? ' style="border-color:rgba(240,168,0,.6);color:#9A6B00"' : '') + '>' +
+          (nd.star ? '★ ' : '') + S.esc(shortOf(nd)) + '</button>';
       }
       if (row) body += '<p class="ix-dom" style="color:' + d.c + '">' + S.esc(zh() ? d.zh : d.en) + '</p><div class="ix-chips">' + row + '</div>';
     }
@@ -728,6 +761,20 @@ body > .foot, body > footer { display: none; }
     return h + '</div>';
   }
 
+  /* the questions from the must-drill set that are asked about this node, with
+     the three keywords underneath each one and a link into the bank */
+  function starHtml(nd) {
+    var h = '<div class="mstar"><h3>★ ' +
+      (zh() ? '必練題會從這裡問' : 'The must-drill set asks about this') + '</h3>', j, q, kw;
+    for (j = 0; j < nd.star.length; j++) {
+      q = nd.star[j];
+      kw = (zh() ? (q.kw_zh || q.kw_en) : q.kw_en) || [];
+      h += '<a href="bank.html?star=1#' + q.id + '"><b>' + S.esc(zh() ? (q.q_zh || q.q_en) : q.q_en) +
+        '</b><span>' + S.esc(kw.join(' · ')) + '</span></a>';
+    }
+    return h + '</div>';
+  }
+
   function card(nd) {
     var isEv = nd.k === 'ev', j;
     var col = isEv ? DOM[nd.dom].c : (nd.k === 'con' ? '#0A1433' : '#00061C');
@@ -757,6 +804,7 @@ body > .foot, body > footer { display: none; }
       }
       h += '</div>';
     }
+    if (nd.star) h += starHtml(nd);
     if (nd.pg) h += '<a class="wk" href="' + S.wiki(nd.pg) + '" target="_blank" rel="noopener">' +
       (zh() ? '到 wiki 看這一頁 ↗' : 'Open this wiki page ↗') + '</a>';
     return h + trailHtml();

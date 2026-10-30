@@ -132,6 +132,19 @@ def read_figures():
     return out
 
 
+def read_map_nodes():
+    """Node ids off the hand-written knowledge map, so a question cannot name
+    a node that is not on the board."""
+    p = os.path.join(ROOT, 'docs', 'data', 'map.js')
+    if not os.path.exists(p):
+        return None
+    with open(p, encoding='utf-8') as fh:
+        return set(re.findall(r"\{\s*id:\s*'([A-Za-z0-9_]+)',\s*k:\s*'", fh.read()))
+
+
+MAPNODES = read_map_nodes()
+
+
 def norm_q(q, dom):
     info = DOM_INFO[dom]
     q['dom'] = dom
@@ -142,6 +155,15 @@ def norm_q(q, dom):
         q['backup'] = ''
     q['pages'] = [p for p in (q.get('pages') or []) if p]
     q['deep'] = 1 if q.get('deep') else 0
+    # the priority set: questions the instructor marked must-drill. They glow on
+    # every page that shows them and they are woven into every drill deck.
+    q['star'] = 1 if q.get('star') else 0
+    q['nodes'] = [str(x) for x in (q.get('nodes') or [])]
+    q['figs'] = [str(x) for x in (q.get('figs') or [])]
+    if MAPNODES:
+        for nid in q['nodes']:
+            if nid not in MAPNODES:
+                sys.exit('  ! %s names a map node that is not on the board: %s' % (q.get('id') or dom, nid))
     for f in ('kw_en', 'kw_zh'):
         v = q.get(f) or []
         q[f] = [str(x) for x in v][:3]
@@ -244,6 +266,24 @@ def main():
                 cats=[dict(id=c[0], en=c[1], zh=c[2]) for c in CATS],
                 perDomain=per_dom)
 
+    figures = read_figures()
+
+    # the priority set reaches the figure wall: a figure a starred question
+    # names is itself marked, so the Figure Room can glow it and draw it more
+    # often. The ids are checked, because a typo would silently mark nothing.
+    figbyid = dict((f['id'], f) for f in figures)
+    starred = [q for q in questions if q.get('star')]
+    for q in starred:
+        for fid in q['figs']:
+            if fid not in figbyid:
+                sys.exit('  ! %s names a figure that is not in the bank: %s' % (q['id'], fid))
+            figbyid[fid]['prio'] = 1
+    nprio = sum(1 for f in figures if f.get('prio'))
+    if starred:
+        print('  * priority set     %3d questions, %3d figures marked, %3d map nodes touched'
+              % (len(starred), nprio,
+                 len(set(n for q in starred for n in q['nodes']))))
+
     dump('facts.js', 'FACTS', facts)
     dump('gaps.js', 'GAPS', gaps)
     dump('terms.js', 'TERMS', terms)
@@ -251,15 +291,16 @@ def main():
     dump('recorded.js', 'RECORDED', recorded)
     dump('meta.js', 'META', meta)
 
-    figures = read_figures()
     figmeta = dict(doms=[dict(id=f[0], en=f[1], zh=f[2], tier=f[3]) for f in FIGDOMS],
                    n=len(figures),
                    t1=sum(1 for f in figures if f['tier'] == 1),
                    t2=sum(1 for f in figures if f['tier'] == 2),
-                   t3=sum(1 for f in figures if f['tier'] == 3))
+                   t3=sum(1 for f in figures if f['tier'] == 3),
+                   prio=nprio)
     dump('figures.js', 'FIGURES', dict(meta=figmeta, items=figures))
 
     counts = dict(facts=len(facts), terms=len(terms), questions=len(questions), gaps=len(gaps),
+                  star=len(starred), starfigs=nprio,
                   deep=sum(1 for q in questions if q.get('deep')),
                   reason=sum(1 for q in questions if q.get('type') == 'reason'),
                   history=sum(1 for q in questions if q.get('type') == 'history'),

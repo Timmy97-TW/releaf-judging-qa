@@ -5,6 +5,7 @@
   var S = window.Site;
 
   var MODES = [
+    { id: 'star', en: '★ Must drill',  zh: '★ 必練題' },
     { id: 'all',  en: 'Everything',   zh: '全部題庫' },
     { id: 'a',    en: 'A-tier only',  zh: '只練 A 級' },
     { id: 'sess', en: 'Full session', zh: '完整一場' },
@@ -122,7 +123,7 @@
   ];
 
   var urlMode = (location.search.match(/[?&]mode=([a-z]+)/) || [])[1];
-  if (urlMode && !/^(all|a|sess|hard|deep|kyle|shaky)$/.test(urlMode)) urlMode = null;
+  if (urlMode && !/^(star|all|a|sess|hard|deep|kyle|shaky)$/.test(urlMode)) urlMode = null;
   var urlType = (location.search.match(/[?&]type=([a-z]+)/) || [])[1] || 'all';
   if (!/^(all|fact|design|validate|compare|boundary|integrate|gap|impact|reason|history)$/.test(urlType)) urlType = 'all';
   var urlDom = (location.search.match(/[?&]dom=([a-z]+)/) || [])[1] || 'all';
@@ -271,6 +272,26 @@
         '<span class="pill pill-line">' + S.esc(S.p(j.manner)) + '</span>';
   }
 
+  /* The must-drill set is woven into every deck instead of being left to
+     chance: one question in three is drawn from it, against the one in thirteen
+     a straight shuffle of the bank would give. In the star mode the deck is
+     nothing else, and on the shaky list the student's own choices win. */
+  var STAR_SHARE = 0.4;
+
+  function weaveStars(pool) {
+    var hot = [], cold = [], i;
+    for (i = 0; i < pool.length; i++) (pool[i].star ? hot : cold).push(pool[i]);
+    if (!hot.length || !cold.length) return pool;
+    var want = Math.min(hot.length, Math.max(1, Math.round(pool.length * STAR_SHARE)));
+    var out = [], hi = 0, ci = 0, every = Math.max(2, Math.round(1 / STAR_SHARE));
+    while (hi < want || ci < cold.length) {
+      if (hi < want && (out.length % every === 1 || ci >= cold.length)) out.push(hot[hi++]);
+      else if (ci < cold.length) out.push(cold[ci++]);
+      else out.push(hot[hi++]);
+    }
+    return out;
+  }
+
   /* ── deck ── */
   function buildDeck() {
     var pool = [], i, q;
@@ -282,6 +303,7 @@
       if (state.mode === 'hard' && q.type !== 'gap' && q.type !== 'validate') continue;
       if (state.mode === 'deep' && !q.deep) continue;
       if (state.mode === 'kyle' && !q.author) continue;
+      if (state.mode === 'star' && !q.star) continue;
       if (state.mode === 'shaky' && state.shaky.indexOf(q.id) < 0) continue;
       pool.push(q);
     }
@@ -301,6 +323,7 @@
       }
       pool = S.shuffle(picked).slice(0, 14);
     }
+    if (state.mode !== 'star' && state.mode !== 'shaky') pool = weaveStars(pool);
     if (state.len && pool.length > state.len) pool = pool.slice(0, state.len);
     state.deck = pool;
     state.i = -1;
@@ -372,6 +395,13 @@
     startTimer(90);
   }
 
+  function markStar(on) {
+    var b = document.querySelector('.bubble');
+    if (!b) return;
+    b.classList.toggle('is-star', !!on);
+    b.setAttribute('data-star', S.lang === 'zh' ? '★ 必練題' : '★ must drill');
+  }
+
   function paint() {
     var q = state.deck[state.i];
     if (!q) return;
@@ -382,6 +412,9 @@
       S.esc((j.title[S.lang] ? j.title[S.lang] + ' ' : '') + j.given + ' ' + j.family) + '</span>' +
       '<span class="pill pill-line">' + S.esc(S.p(j.field)) + '</span>';
     el('qq').textContent = S.t(q, 'q');
+    /* the must-drill mark goes up with the question, before the seat is called:
+       it says pay attention without saying whose question it is */
+    markStar(q.star);
 
     /* nothing about the question is revealed until the seat is called */
     el('meta').innerHTML = '';
@@ -438,6 +471,7 @@
 
     /* only now does the room tell you what kind of question it was */
     el('meta').innerHTML =
+      (q.star ? '<span class="pill pill-star"><i>★</i>' + (S.lang === 'zh' ? '必練' : 'must drill') + '</span>' : '') +
       '<span class="pill ' + (q.tier === 'A' ? 'pill-a' : 'pill-b') + '">' + q.tier + '</span>' +
       '<span class="pill">' + S.esc(typeName(q.type)) + '</span>' +
       '<span class="pill pill-domc" style="--c:' + domColor(q.dom) + '">' + S.esc(domName(q.dom)) + '</span>' +
@@ -648,6 +682,7 @@
     el('qq').textContent = S.p(L.done);
     el('who').innerHTML = '';
     el('meta').innerHTML = '';
+    markStar(0);
     drawBench(null);
     openCard();
   }
@@ -950,11 +985,15 @@
     var modeName = '';
     for (i = 0; i < MODES.length; i++) if (MODES[i].id === state.mode) modeName = S.p({ en: MODES[i].en, zh: MODES[i].zh });
 
+    var nstar = 0;
+    for (i = 0; i < state.deck.length; i++) if (state.deck[i].star) nstar++;
     var h = '<span class="rs-lab">' + S.p(L.rslab) + '</span>' +
             '<span class="rs-n">' + state.deck.length + '</span>' +
             '<span class="rs-lab">' + S.p(L.rsq) + '</span>' +
             '<span class="rs-tag">' + S.esc(modeName) + '</span>' +
-            '<span class="rs-tag">' + S.esc(lenName) + '</span>';
+            '<span class="rs-tag">' + S.esc(lenName) + '</span>' +
+            (nstar ? '<span class="rs-tag fq-star">★ ' + nstar + ' ' +
+              (S.lang === 'zh' ? '題必練' : 'must drill') + '</span>' : '');
     if (state.dom !== 'all') {
       h += '<button class="rs-tag" type="button" data-drop="dom" style="--c:' + domColor(state.dom) + '">' +
            '<i class="rs-dot"></i>' + S.esc(domName(state.dom)) + '</button>';

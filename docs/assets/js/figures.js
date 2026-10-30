@@ -32,12 +32,32 @@
   ];
 
   var TIERS = [
+    { id: 'prio',  en: '★ Must drill',  zh: '★ 必練圖' },
     { id: 't1',    en: 'First wave',   zh: '第一梯次' },
     { id: 't2',    en: 'Second wave',  zh: '第二梯次' },
     { id: 't3',    en: 'Registry wave', zh: 'Registry 梯次' },
     { id: 'all',   en: 'Everything',   zh: '全部' },
     { id: 'shaky', en: 'My shaky list', zh: '我的不熟清單' }
   ];
+
+  /* A figure is must-drill when one of the instructor's priority questions
+     names it as the thing a judge would be pointing at. Those are woven into
+     every run at this share rather than left to chance. */
+  var STAR_SHARE = 0.4;
+
+  function weaveStars(list) {
+    var hot = [], cold = [], i;
+    for (i = 0; i < list.length; i++) (list[i].prio ? hot : cold).push(list[i]);
+    if (!hot.length || !cold.length) return list;
+    var want = Math.min(hot.length, Math.max(1, Math.round(list.length * STAR_SHARE)));
+    var out = [], hi = 0, ci = 0, every = Math.max(2, Math.round(1 / STAR_SHARE));
+    while (hi < want || ci < cold.length) {
+      if (hi < want && (out.length % every === 1 || ci >= cold.length)) out.push(hot[hi++]);
+      else if (ci < cold.length) out.push(cold[ci++]);
+      else out.push(hot[hi++]);
+    }
+    return out;
+  }
 
   var L = {
     start:  { en: 'Show me the first figure', zh: '給我第一張圖' },
@@ -98,10 +118,13 @@
     return { id: id, en: id, zh: id, tier: 1 };
   }
 
+  var urlTier = (location.search.match(/[?&]tier=([a-z0-9]+)/) || [])[1];
+  if (urlTier && !/^(prio|t1|t2|t3|all|shaky)$/.test(urlTier)) urlTier = null;
+
   var state = {
     mode: S.load('fq-mode', 'choice'),
     len: S.load('fq-len', 10),
-    tier: S.load('fq-tier', 't1'),
+    tier: urlTier || S.load('fq-tier', 't1'),
     dom: 'all',
     deck: [],
     i: -1,
@@ -226,6 +249,7 @@
       if (state.tier === 't1' && f.tier !== 1) continue;
       if (state.tier === 't2' && f.tier !== 2) continue;
       if (state.tier === 't3' && f.tier !== 3) continue;
+      if (state.tier === 'prio' && !f.prio) continue;
       if (state.tier === 'shaky' && state.shaky.indexOf(f.id) < 0) continue;
       if (state.dom !== 'all' && f.dom !== state.dom) continue;
       out.push(f);
@@ -235,6 +259,7 @@
 
   function buildDeck() {
     var p = S.shuffle(pool());
+    if (state.tier !== 'prio' && state.tier !== 'shaky') p = weaveStars(p);
     state.deck = state.len > 0 ? p.slice(0, state.len) : p;
     state.i = -1;
     state.score = 0; state.streak = 0; state.best = 0;
@@ -243,19 +268,22 @@
 
   /* ── rail ── */
   function chip(c, on) {
-    return '<button class="chip" type="button" aria-pressed="' + (on ? 'true' : 'false') +
+    return '<button class="chip' + (c.id === 'prio' ? ' chip-star' : '') +
+           '" type="button" aria-pressed="' + (on ? 'true' : 'false') +
            '" data-v="' + S.esc(c.id) + '">' + S.esc(S.p(c)) + '</button>';
   }
   function drawRail() {
     el('modes').innerHTML = MODES.map(function (m) { return chip(m, m.id === state.mode); }).join('');
     el('lens').innerHTML = LENS.map(function (m) { return chip(m, m.id === state.len); }).join('');
     el('tiers').innerHTML = TIERS.map(function (m) { return chip(m, m.id === state.tier); }).join('');
-    var ds = [{ id: 'all', en: 'All', zh: '全部' }];
+    var ds = [{ id: 'all', en: 'All', zh: '全部' }], prioDoms = {};
+    for (var p = 0; p < BANK.length; p++) if (BANK[p].prio) prioDoms[BANK[p].dom] = 1;
     for (var i = 0; i < DOMS.length; i++) {
       var d = DOMS[i];
       if (state.tier === 't1' && d.tier !== 1) continue;
       if (state.tier === 't2' && d.tier !== 2) continue;
       if (state.tier === 't3' && d.tier !== 3) continue;
+      if (state.tier === 'prio' && !prioDoms[d.id]) continue;
       ds.push(d);
     }
     if (state.dom !== 'all') {
@@ -333,6 +361,8 @@
     el('start').textContent = S.p(L.start);
     el('who').textContent = '';
     el('meta').innerHTML = '';
+    var bub0 = document.querySelector('.bubble');
+    if (bub0) bub0.classList.remove('is-star');
     el('qq').textContent = S.lang === 'zh' ? '準備好就開始。' : 'Ready when you are.';
     el('prog').innerHTML = '';
     state.phase = 'idle';
@@ -374,8 +404,14 @@
 
     var d = domInfo(f.dom);
     el('meta').innerHTML =
+      (f.prio ? '<span class="pill pill-star"><i>★</i>' + (S.lang === 'zh' ? '必練' : 'must drill') + '</span>' : '') +
       '<span class="pill pill-' + (f.tier === 1 ? 'a' : f.tier === 3 ? 'v' : 'b') + '">' + S.esc(S.p(d)) + '</span>' +
       '<span class="pill pill-line">' + (S.lang === 'zh' ? '第 ' + f.tier + ' 梯次' : 'wave ' + f.tier) + '</span>';
+    var bub = document.querySelector('.bubble');
+    if (bub) {
+      bub.classList.toggle('is-star', !!f.prio);
+      bub.setAttribute('data-star', S.lang === 'zh' ? '★ 必練圖' : '★ must drill');
+    }
 
     el('start').hidden = true;
     el('ans').hidden = true;

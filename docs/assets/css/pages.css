@@ -1382,7 +1382,7 @@ html:lang(zh) .qb-kw li { font-size: 1.0625rem; }
 .chip[aria-pressed="true"]:not(.chip-dom) { background: var(--navy); border-color: var(--navy); color: #fff; }
 /* only the neutral pill: the coloured variants keep their own wash and ink,
    so the list below has to name every one of them */
-.pill:not(.pill-a):not(.pill-b):not(.pill-w):not(.pill-r):not(.pill-v):not(.pill-line):not(.pill-deep):not(.pill-author) { background: #ECECF1; color: #55555c; }
+.pill:not(.pill-a):not(.pill-b):not(.pill-w):not(.pill-r):not(.pill-v):not(.pill-line):not(.pill-deep):not(.pill-author):not(.pill-star) { background: #ECECF1; color: #55555c; }
 .pill-line { background: none; border-color: rgba(0, 0, 0, .18); }
 
 .quiz, .reg-sort, .fubox, .toast, .seat-badge, .rail-step, .prog i.now { background: var(--navy); }

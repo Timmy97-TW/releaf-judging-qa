@@ -27,6 +27,9 @@ var QUESTIONS = [
 "basis":"like KU Leuven-style 'how does it work' openers; Hardware 2021 UPenn: validate against commercial instrument",
 "dom":"measurement",
 "deep":0,
+"star":0,
+"nodes":[],
+"figs":[],
 "id":"q001"
 },
 {
@@ -57,6 +60,9 @@ var QUESTIONS = [
 "basis":"Hardware 2021 UPenn: biggest source of noise and how reduced",
 "dom":"measurement",
 "deep":0,
+"star":0,
+"nodes":[],
+"figs":[],
 "id":"q002"
 },
 {
@@ -87,6 +93,9 @@ var QUESTIONS = [
 "basis":"Munich 2025 style: what exactly is measured",
 "dom":"measurement",
 "deep":0,
+"star":0,
+"nodes":[],
+"figs":[],
 "id":"q003"
 },
 {
@@ -116,6 +125,9 @@ var QUESTIONS = [
 "basis":"Munich 2025: LOD and LOQ, assay range",
 "dom":"measurement",
 "deep":0,
+"star":0,
+"nodes":[],
+"figs":[],
 "id":"q004"
 },
 {
@@ -146,6 +158,9 @@ var QUESTIONS = [
 "basis":"Hardware 2021 UPenn: biggest source of error; Munich 2025: honest gap",
 "dom":"measurement",
 "deep":0,
+"star":0,
+"nodes":[],
+"figs":[],
 "id":"q005"
 },
 {
@@ -176,6 +191,9 @@ var QUESTIONS = [
 "basis":"like INSA Lyon 2022: why that sensor over alternatives",
 "dom":"measurement",
 "deep":0,
+"star":0,
+"nodes":[],
+"figs":[],
 "id":"q006"
 },
 {
@@ -206,6 +224,9 @@ var QUESTIONS = [
 "basis":"Hardware 2021 NUS: why build, what was given up",
 "dom":"measurement",
 "deep":0,
+"star":0,
+"nodes":[],
+"figs":[],
 "id":"q007"
 },
 {
@@ -236,6 +257,9 @@ var QUESTIONS = [
 "basis":"Hardware 2021 UPenn: sensor drift",
 "dom":"measurement",
 "deep":0,
+"star":0,
+"nodes":[],
+"figs":[],
 "id":"q008"
 },
 {
@@ -266,6 +290,9 @@ var QUESTIONS = [
 "basis":"Hardware 2021 UPenn: how did you validate against a commercial instrument and how close",
 "dom":"measurement",
 "deep":0,
+"star":0,
+"nodes":[],
+"figs":[],
 "id":"q009"
 },
 {
@@ -296,6 +323,9 @@ var QUESTIONS = [
 "basis":"like Munich 2025: what is the reference",
 "dom":"measurement",
 "deep":0,
+"star":0,
+"nodes":[],
+"figs":[],
 "id":"q010"
 },
 {
@@ -325,6 +355,9 @@ var QUESTIONS = [
 "basis":"Munich 2025: honest gap; TAU-Israel 2025: pre-registered",
 "dom":"measurement",
 "deep":0,
+"star":0,
+"nodes":[],
+"figs":[],
 "id":"q011"
 },
 {
@@ -355,6 +388,9 @@ var QUESTIONS = [
 "basis":"Munich 2025: Do you do any replicates? (n equals one)",
 "dom":"measurement",
 "deep":0,
+"star":0,
+"nodes":[],
+"figs":[],
 "id":"q012"
 },
 {
@@ -384,6 +420,9 @@ var QUESTIONS = [
 "basis":"Munich 2025: controls and range",
 "dom":"measurement",
 "deep":0,
+"star":0,
+"nodes":[],
+"figs":[],
 "id":"q013"
 },
 {
@@ -414,6 +453,9 @@ var QUESTIONS = [
 "basis":"Munich 2025: replicates; TAU-Israel 2025: stated weaknesses",
 "dom":"measurement",
 "deep":0,
+"star":0,
+"nodes":[],
+"figs":[],
 "id":"q014"
 },
 {
@@ -443,6 +485,9 @@ var QUESTIONS = [
 "basis":"like Munich 2025: controls",
 "dom":"measurement",
 "deep":0,
+"star":0,
+"nodes":[],
+"figs":[],
 "id":"q015"
 },
 {
@@ -473,6 +518,9 @@ var QUESTIONS = [
 "basis":"Hardware 2021 UPenn: what could commercial equipment not do",
 "dom":"measurement",
 "deep":0,
+"star":0,
+"nodes":[],
+"figs":[],
 "id":"q016"
 },
 {
@@ -502,6 +550,9 @@ var QUESTIONS = [
 "basis":"Munich 2025: why this assay",
 "dom":"measurement",
 "deep":0,
+"star":0,
+"nodes":[],
+"figs":[],
 "id":"q017"
 },
 {
@@ -531,6 +582,9 @@ var QUESTIONS = [
 "basis":"Hardware 2021 NUS: choice of sensor/assay",
 "dom":"measurement",
 "deep":0,
+"star":0,
+"nodes":[],
+"figs":[],
 "id":"q018"
 },
 {
@@ -562,6 +616,9 @@ var QUESTIONS = [
 "basis":"like INSA Lyon 2022: dynamic range",
 "dom":"measurement",
 "deep":0,
+"star":0,
+"nodes":[],
+"figs":[],
 "id":"q019"
 },
 {
@@ -592,6 +649,9 @@ var QUESTIONS = [
 "basis":"Munich 2025: what the number actually means",
 "dom":"measurement",
 "deep":0,
+"star":0,
+"nodes":[],
+"figs":[],
 "id":"q020"
 },
 {
@@ -621,6 +681,9 @@ var QUESTIONS = [
 "basis":"like Munich 2025: reuse by other teams",
 "dom":"measurement",
 "deep":0,
+"star":0,
+"nodes":[],
+"figs":[],
 "id":"q021"
 },
 {
@@ -651,6 +714,9 @@ var QUESTIONS = [
 "basis":"TAU-Israel 2025: pre-registered, stated weaknesses; Peking HSC 2025: model validation",
 "dom":"measurement",
 "deep":0,
+"star":0,
+"nodes":[],
+"figs":[],
 "id":"q022"
 },
 {
@@ -681,6 +747,9 @@ var QUESTIONS = [
 "basis":"like Hardware 2021 UPenn: iterations after real samples",
 "dom":"measurement",
 "deep":0,
+"star":0,
+"nodes":[],
+"figs":[],
 "id":"q023"
 },
 {
@@ -711,6 +780,9 @@ var QUESTIONS = [
 "basis":"like Hardware 2021 UPenn: could a team with no engineering background rebuild it",
 "dom":"measurement",
 "deep":0,
+"star":0,
+"nodes":[],
+"figs":[],
 "id":"q024"
 },
 {
@@ -741,6 +813,9 @@ var QUESTIONS = [
 "basis":"Munich 2025 style: assay logic",
 "dom":"measurement",
 "deep":0,
+"star":0,
+"nodes":[],
+"figs":[],
 "id":"q025"
 },
 {
@@ -771,6 +846,9 @@ var QUESTIONS = [
 "basis":"Munich 2025: honest gap, never varied dose",
 "dom":"measurement",
 "deep":0,
+"star":0,
+"nodes":[],
+"figs":[],
 "id":"q026"
 },
 {
@@ -801,6 +879,9 @@ var QUESTIONS = [
 "basis":"Munich 2025: LOD and LOQ",
 "dom":"measurement",
 "deep":0,
+"star":0,
+"nodes":[],
+"figs":[],
 "id":"q027"
 },
 {
@@ -831,6 +912,9 @@ var QUESTIONS = [
 "basis":"Peking HSC 2025 / Munich 2025: honest gap",
 "dom":"measurement",
 "deep":0,
+"star":0,
+"nodes":[],
+"figs":[],
 "id":"q028"
 },
 {
@@ -862,6 +946,9 @@ var QUESTIONS = [
 "basis":"Hardware 2021 UPenn: biggest source of noise",
 "dom":"measurement",
 "deep":0,
+"star":0,
+"nodes":[],
+"figs":[],
 "id":"q029"
 },
 {
@@ -892,6 +979,9 @@ var QUESTIONS = [
 "basis":"TAU-Israel 2025: stated weaknesses",
 "dom":"measurement",
 "deep":0,
+"star":0,
+"nodes":[],
+"figs":[],
 "id":"q030"
 },
 {
@@ -923,6 +1013,9 @@ var QUESTIONS = [
 "basis":"Munich 2025: honest gap",
 "dom":"measurement",
 "deep":0,
+"star":0,
+"nodes":[],
+"figs":[],
 "id":"q031"
 },
 {
@@ -953,6 +1046,9 @@ var QUESTIONS = [
 "basis":"Hardware 2021 UPenn: could a team rebuild from documentation",
 "dom":"measurement",
 "deep":0,
+"star":0,
+"nodes":[],
+"figs":[],
 "id":"q032"
 },
 {
@@ -983,6 +1079,9 @@ var QUESTIONS = [
 "basis":"DTU 2025: which experiment first; Munich 2025: one plate fixes it",
 "dom":"measurement",
 "deep":0,
+"star":0,
+"nodes":[],
+"figs":[],
 "id":"q033"
 },
 {
@@ -1013,6 +1112,9 @@ var QUESTIONS = [
 "basis":"like Peking HSC 2025: validation of simulations; real world next step",
 "dom":"measurement",
 "deep":0,
+"star":0,
+"nodes":[],
+"figs":[],
 "id":"q034"
 },
 {
@@ -1044,6 +1146,9 @@ var QUESTIONS = [
 "trap_zh":"把它講成吸光度，還引 Beer's law，好像細胞有一個莫耳吸收係數一樣。",
 "basis":"Measurement nomination: judges test whether the physics behind OD600 is understood",
 "dom":"measurement",
+"star":0,
+"nodes":[],
+"figs":[],
 "id":"q035"
 },
 {
@@ -1075,6 +1180,9 @@ var QUESTIONS = [
 "trap_zh":"說參考儀器在 OD 2.5 飽和；我們頁面寫的是它 OD 1 以上就不準，所以改用稀釋來讀。",
 "basis":"Hardware judges ask why a short-path in-line sensor compresses at high density",
 "dom":"measurement",
+"star":0,
+"nodes":[],
+"figs":[],
 "id":"q036"
 },
 {
@@ -1106,6 +1214,9 @@ var QUESTIONS = [
 "trap_zh":"說有參考通道就萬無一失；7 月 19 日比色管裡什麼都沒變，參考通道卻動了 6.4%。",
 "basis":"A reference channel is the design's main claim, so its limits get probed",
 "dom":"measurement",
+"star":0,
+"nodes":[],
+"figs":[],
 "id":"q037"
 },
 {
@@ -1137,6 +1248,9 @@ var QUESTIONS = [
 "trap_zh":"把剔除百分比當成氣泡率；在量化的數據上它數的是量化抖動。",
 "basis":"Robust statistics are the software claim; judges ask what they cost",
 "dom":"measurement",
+"star":0,
+"nodes":[],
+"figs":[],
 "id":"q038"
 },
 {
@@ -1168,6 +1282,9 @@ var QUESTIONS = [
 "trap_zh":"把 0.0039 OD 的估計量差距當成準確度；那只說明流道乾淨時各估計量彼此一致。",
 "basis":"Metrology question: a monitoring instrument needs stated detection limits",
 "dom":"measurement",
+"star":0,
+"nodes":[],
+"figs":[],
 "id":"q039"
 },
 {
@@ -1199,6 +1316,9 @@ var QUESTIONS = [
 "trap_zh":"說 silica 那次校正把儀器對菌液也校好了；它校的是儀器，不是生物。",
 "basis":"The calibration standard is not the analyte, and the wiki admits it",
 "dom":"measurement",
+"star":0,
+"nodes":[],
+"figs":[],
 "id":"q040"
 },
 {
@@ -1230,6 +1350,9 @@ var QUESTIONS = [
 "trap_zh":"說 OD 1 就等於教科書上的某個細胞數；我們自己的頁面就否決了這一步。",
 "basis":"Measurement committee position on calibrated absolute units",
 "dom":"measurement",
+"star":0,
+"nodes":[],
+"figs":[],
 "id":"q041"
 },
 {
@@ -1261,6 +1384,9 @@ var QUESTIONS = [
 "trap_zh":"把 13.5 到 19.1 µg/mL 當成定量值；我們自己的頁面寫它只代表「比 LEA14 和 BoPep4 高」。",
 "basis":"Competitive-format ELISA is easy to over-read, and the control failed",
 "dom":"measurement",
+"star":0,
+"nodes":[],
+"figs":[],
 "id":"q042"
 },
 {
@@ -1292,6 +1418,9 @@ var QUESTIONS = [
 "trap_zh":"說那條帶就在構築預測的分子量上就不講了；我們自己的頁面對那個預測值有三種說法。",
 "basis":"Antibody specificity is the weak joint in both protein assays",
 "dom":"measurement",
+"star":0,
+"nodes":[],
+"figs":[],
 "id":"q043"
 },
 {
@@ -1323,6 +1452,9 @@ var QUESTIONS = [
 "trap_zh":"報一個 U/mg 的比活性；已發表的 wiki 上沒有這個數字，因為兩個活性數值都還不算速率。",
 "basis":"Endpoint colorimetry over-read as kinetics, on the page's own unreconciled numbers",
 "dom":"measurement",
+"star":0,
+"nodes":[],
+"figs":[],
 "id":"q044"
 },
 {
@@ -1354,6 +1486,9 @@ var QUESTIONS = [
 "trap_zh":"說這是 iGEM 第一個線上 OD600；我們的 wiki 沒有任何東西能支持首創的說法。",
 "basis":"DIY photometers are a worn iGEM genre; judges test positioning honesty",
 "dom":"measurement",
+"star":0,
+"nodes":[],
+"figs":[],
 "id":"q045"
 },
 {
@@ -1385,6 +1520,9 @@ var QUESTIONS = [
 "trap_zh":"一開口就講省錢；真正的貢獻是有文件的校正和公開的原始資料。",
 "basis":"Nomination needs a crisp statement of what is genuinely new",
 "dom":"measurement",
+"star":0,
+"nodes":[],
+"figs":[],
 "id":"q046"
 },
 {
@@ -1416,6 +1554,9 @@ var QUESTIONS = [
 "trap_zh":"照抄 Contribution 頁的一萬五千美元；零件表寫參考儀器是 NT$15,000，大約 470 美元。",
 "basis":"The obvious sceptical question, and our own cost claim is wrong on some pages",
 "dom":"measurement",
+"star":0,
+"nodes":[],
+"figs":[],
 "id":"q047"
 },
 {
@@ -1447,6 +1588,9 @@ var QUESTIONS = [
 "trap_zh":"當場挑一個體積講；在迴路重新量過之前，後面的算術兩種都是錯的。",
 "basis":"A concentration axis the pages give two ways is the weakest link in the calibration",
 "dom":"measurement",
+"star":0,
+"nodes":[],
+"figs":[],
 "id":"q048"
 },
 {
@@ -1478,6 +1622,9 @@ var QUESTIONS = [
 "trap_zh":"把斜率 1.001 當成精確值；區間顯示八個點只能把它定到約 11% 之內。",
 "basis":"The headline claim is assembled from two runs and drops its offset",
 "dom":"measurement",
+"star":0,
+"nodes":[],
+"figs":[],
 "id":"q049"
 },
 {
@@ -1509,7 +1656,477 @@ var QUESTIONS = [
 "trap_zh":"預測 silica 的數字可以原封不動搬過來；5.57 這個係數和 OD 2.5 的上限描述的是儀器本身。",
 "basis":"The experiment the wiki says is still owed, so the answer must be derived",
 "dom":"measurement",
+"star":0,
+"nodes":[],
+"figs":[],
 "id":"q050"
+},
+{
+"q_en":"In your light-plate assay the bacteria should respond differently to red and to green. What did you actually observe — do they stop producing under red and start under green?",
+"q_zh":"你們的光板實驗裡，細菌對紅光和綠光應該有不同反應。你們實際觀察到什麼？紅光下停止生產、綠光下開始生產嗎？",
+"type":"validate",
+"tier":"A",
+"deep":1,
+"star":1,
+"pages":[
+"results#Short-term light response",
+"results#Long-term light response",
+"results#What it settles"
+],
+"seat":"wet2",
+"backup":"dry",
+"kw_en":[
+"modulation, not switching",
+"ELISA flat, DNPH moves",
+"14-fold at 13 hours"
+],
+"kw_zh":[
+"是調節，不是開關",
+"ELISA 平的、DNPH 會動",
+"13 小時 14 倍"
+],
+"a_en":"Modulation rather than switching, and the two assays say different things. The ELISA is flat: about 3 micrograms per millilitre before illumination and 2.6 to 3.2 at every time point under both colours in the short-term set, and 12 to 13 in all four conditions of the long-term set. The DNPH activity does move — green above red at every short-term point, 8 against 6 at three hours, 12 against 9 at six and 18 against 16 at eight, and strongly at thirteen hours in the long-term set, 0.1249 against 0.0089 millimolar alpha-ketobutyrate, a fourteen-fold induction ratio. So no, they do not stop under red: green raises activity, red does not switch it off, and with n = 2 and overlapping error bars the honest sentence is supported at thirteen hours and unresolved at sixteen.",
+"a_zh":"是調節而不是開關，而兩個 assay 講的不是同一件事。ELISA 是平的：短期組照光前大約 3 微克每毫升，兩種顏色的每個時間點都是 2.6 到 3.2；長期組四個條件全部都是 12 到 13。DNPH 的活性確實會動——短期組每個時間點綠光都高於紅光，3 小時 8 對 6、6 小時 12 對 9、8 小時 18 對 16；長期組在 13 小時差距很大，0.1249 對 0.0089 毫莫耳 α-ketobutyrate，誘導比 14 倍。所以答案是「不會」：綠光會提高活性，紅光沒有把它關掉，而在 n = 2、誤差棒重疊的情況下，誠實的說法是 13 小時支持、16 小時未定。",
+"trap_en":"Quoting our own Results key-result line, green light switches ACCD on. If a judge reads it out, correct it to green raises activity and red is not a clean off.",
+"trap_zh":"照著我們 Results 頁上的 key result「Green light switches ACCD on」講。如果評審念出來，要主動修正成「綠光提高活性，紅光不是乾淨的 off」。",
+"nodes":[
+"W_LIGHT",
+"C_GATE",
+"M_ACT"
+],
+"figs":[
+"h07",
+"m07"
+],
+"basis":"instructor's priority set, 30 Oct read-through of Results, Hardware and Plants",
+"dom":"measurement",
+"id":"q051"
+},
+{
+"q_en":"After thirteen hours we see a rise in production under the red light. How would you explain that rise?",
+"q_zh":"13 小時之後，紅光組的生產量反而上升。你們怎麼解釋這個上升？",
+"type":"reason",
+"tier":"A",
+"deep":1,
+"star":1,
+"pages":[
+"results#Long-term light response",
+"results#Culture duration, 16 hr against 13 hr"
+],
+"seat":"wet2",
+"backup":"dry",
+"kw_en":[
+"green falls more than red rises",
+"640 is not 672 nanometres",
+"alpha-ketobutyrate turnover"
+],
+"kw_zh":[
+"綠光掉得比紅光升得多",
+"640 不是 672 奈米",
+"α-ketobutyrate 被代謝掉"
+],
+"a_en":"The crossover is as much green falling as red rising: green went from 0.1249 to 0.0130 millimolar while red went from 0.0089 to 0.0923. For red not being a clean off state the explanation is hardware — CcaSR needs about 672 nanometres to switch off and our red LEDs emit at 640, and in the earlier wild-type blots the red reference was as strong as the brightest green, which looks like leakage from the green channel. For the fall under green we have two candidates we have not separated: the protein losing activity over extended incubation, and metabolic turnover of alpha-ketobutyrate, since DNPH measures an accumulated product and not a rate. Since the freeze we have built a 670 nanometre red plate specifically to get a clean off state, and that is the experiment that settles it.",
+"a_zh":"這個交叉與其說是紅光升上去，不如說是綠光掉下來：綠光從 0.1249 掉到 0.0130 毫莫耳，紅光從 0.0089 升到 0.0923。紅光不是乾淨的 off，解釋在硬體：CcaSR 需要大約 672 奈米才關得掉，我們的紅光 LED 是 640 奈米；而早期野生型的 blot 裡紅光參考組和最亮的綠光一樣強，那看起來像是綠光通道的光譜外洩。綠光掉下來這邊，我們有兩個還沒分開的候選解釋：蛋白在長時間培養後失去活性，以及 α-ketobutyrate 被代謝掉——因為 DNPH 量的是累積的產物，不是速率。凍結之後我們做了 670 奈米的紅光板，就是為了拿到乾淨的 off 狀態，那就是收掉這題的實驗。",
+"trap_en":"Explaining only the red rise. Most of the gap at sixteen hours is the green group collapsing from 0.1249 to 0.0130, and that needs its own explanation.",
+"trap_zh":"只解釋紅光為什麼升。16 小時的差距大部分來自綠光組從 0.1249 崩到 0.0130，那需要自己的解釋。",
+"nodes":[
+"W_LIGHT",
+"C_GATE"
+],
+"figs":[
+"m07",
+"h07"
+],
+"basis":"instructor's priority set, 30 Oct read-through of Results, Hardware and Plants",
+"dom":"measurement",
+"id":"q052"
+},
+{
+"q_en":"In your Western blot data the signal sits close to 100 kilodaltons, when ACC deaminase should be near 35 to 40. How do you explain that?",
+"q_zh":"你們 Western blot 的訊號落在接近 100 kDa，但 ACC 去胺酶應該在 35 到 40 附近。這個數據怎麼解釋？",
+"type":"validate",
+"tier":"A",
+"deep":1,
+"star":1,
+"pages":[
+"results#Protein over time",
+"results#Containment and release",
+"measurement"
+],
+"seat":"wet2",
+"backup":"wet1",
+"kw_en":[
+"two blot sets disagree",
+"reactor blot 35 to 48 kilodaltons",
+"no loading control on the plate blots"
+],
+"kw_zh":[
+"兩組 blot 互相矛盾",
+"反應器那組 35 到 48 kDa",
+"光板那組沒有 loading control"
+],
+"a_en":"Our two blot sets disagree, and the one with the predicted size is the reactor run: anti-His on cell lysate, lumen and shell medium between fourteen and forty-four hours gave bands between 35 and 48 kilodaltons, consistent with the roughly 41 kilodalton recombinant enzyme. The light-plate blots put the band just below or between the 75 and 100 kilodalton markers, and the same construct cannot have two masses, so something in those gels is wrong — the likeliest candidates are an incompletely denatured dimer, since ACC deaminase is only active as a multimer, or a marker and lane assignment error. We cannot choose between them from the images we have, because those blots carry no loading control and no plasmid-free WB800 lane. The fix is specified and cheap: re-run with a fresh ladder, a loading control and a WB800 lane, and quantify against it.",
+"a_zh":"我們兩組 blot 互相矛盾，而符合預測大小的是反應器那組：14 到 44 小時之間，anti-His 測細胞裂解液、lumen 和 shell 培養液，帶落在 35 到 48 kDa，跟大約 41 kDa 的重組酵素一致。光板那組的帶落在 75 到 100 kDa 標記之間或略低，而同一個構築不可能有兩個分子量，所以那幾片膠裡有東西錯了——最可能的是沒有完全變性的二聚體（ACC 去胺酶本來就只有多聚體有活性），或是標記與 lane 對應錯誤。從我們手上的影像沒辦法二選一，因為那組 blot 既沒有 loading control 也沒有無質體 WB800 lane。補救方法很明確也很便宜：換新的 ladder、加 loading control、加一條 WB800，重跑一次並據此定量。",
+"trap_en":"Defending the high-molecular-weight band as if it were the right answer. The correct posture is that this blot set has a problem and the reactor set is the one we quote.",
+"trap_zh":"替那條高分子量的帶辯護，好像它就是對的。正確的姿態是「這組 blot 有問題，我們引用的是反應器那組」。",
+"nodes":[
+"W_SEC",
+"C_CTRL"
+],
+"figs":[
+"m08"
+],
+"basis":"instructor's priority set, 30 Oct read-through of Results, Hardware and Plants",
+"dom":"measurement",
+"id":"q053"
+},
+{
+"q_en":"Crucial: your ELISA shows no difference between green and red light, but your DNPH assay does. How do you explain that?",
+"q_zh":"關鍵問題：你們的 ELISA 在綠光和紅光之間看不出差別，但 DNPH 看得出來。這個現象怎麼解釋？",
+"type":"reason",
+"tier":"A",
+"deep":1,
+"star":1,
+"pages":[
+"results#ELISA and DNPH assay",
+"results#Bioreactor test",
+"results#ELISA"
+],
+"seat":"wet2",
+"backup":"wet1",
+"kw_en":[
+"amount against activity",
+"PLP and multimer maturation",
+"plasmid-free control gives signal"
+],
+"kw_zh":[
+"量 vs 活性",
+"PLP 與多聚體成熟",
+"無質體對照也有訊號"
+],
+"a_en":"They measure different things: competitive anti-His ELISA counts the protein whether or not it works, while DNPH only detects enzyme that actually turns ACC into alpha-ketobutyrate. The same gap appears in the reactor, where ELISA peaked at twelve hours and activity only at eighteen, with specific activity under 1 unit per milligram before rising to 6.3, so our reading is post-secretory maturation: ACC deaminase has to assemble as a multimer and load pyridoxal-5-phosphate, and neither happens the instant it crosses into the medium. Two things weaken the ELISA side specifically — the plasmid-free WB800 control gave 4.5 to 5.5 micrograms per millilitre on the same assay, and several wells sat above the top of the standard curve, so those are extrapolated comparisons and not certified concentrations. We have not tested the maturation explanation directly, and we also suspect light crosstalk between neighbouring light-plate wells flattened the ELISA further; both are named on the page as untested.",
+"a_zh":"它們量的是不同的東西：競爭型 anti-His ELISA 不管蛋白有沒有在工作都會算進去，而 DNPH 只偵測真正能把 ACC 轉成 α-ketobutyrate 的酵素。同樣的落差在反應器裡也出現：ELISA 在 12 小時達峰，活性要到 18 小時，比活性在 18 小時之前低於 1 U/mg，之後升到 6.3——所以我們的解讀是分泌後成熟：ACC 去胺酶必須組成多聚體並裝上 pyridoxal-5-phosphate，這兩件事都不會在它一跨進培養液的瞬間完成。有兩件事特別削弱 ELISA 這一側——無質體的 WB800 對照在同一個 assay 上讀到 4.5 到 5.5 微克每毫升，而且有幾個孔超出標準曲線上緣，所以那些是外推的比較、不是確定的濃度。成熟這個解釋我們沒有直接測過，我們也懷疑光板鄰孔之間的光外洩讓 ELISA 更平；這兩點頁面上都標示為未經驗證。",
+"trap_en":"Going straight to the maturation story. This question tests whether you know your assay floor: admit the plasmid-free control signal and the out-of-range wells first.",
+"trap_zh":"直接跳到成熟那套解釋。這題考的是你知不知道自己 assay 的地板：先承認無質體對照有訊號、有幾個孔超出曲線範圍。",
+"nodes":[
+"M_ACT",
+"C_CTRL",
+"W_PLP"
+],
+"figs":[
+"m06",
+"m07"
+],
+"basis":"instructor's priority set, 30 Oct read-through of Results, Hardware and Plants",
+"dom":"measurement",
+"id":"q054"
+},
+{
+"q_en":"You built two photometers, and one ran a twenty-day record. On the measurement page you tried different algorithms for the final OD value. What did you find after running all the algorithm tests?",
+"q_zh":"你們做了兩台光度計，其中一台跑了二十天的紀錄。量測頁上你們試了不同演算法來算最終 OD 值。全部跑完之後發現了什麼？",
+"type":"validate",
+"tier":"A",
+"deep":1,
+"star":1,
+"pages":[
+"measurement#Software algorithm calibration",
+"hardware-photometer#8.1",
+"measurement#od600-calibration"
+],
+"seat":"dry",
+"backup":"hw",
+"kw_en":[
+"the estimator is not the lever",
+"H6 failed",
+"2.44 down to 0.016 OD"
+],
+"kw_zh":[
+"估計量不是槓桿",
+"H6 失敗",
+"2.44 降到 0.016 OD"
+],
+"a_en":"That the estimator is not the lever and the gate after it is. We replayed eleven algorithms on the same logged raw bursts, so the only difference is the algorithm, and in clean flow the largest gap between any two of eight was 0.0039 OD, less than a fifth of our own calibration scatter. Our sharpest pre-registered prediction failed: H6 said the upper estimator, which trusts the brighter half of each burst, would scatter at most half as much as the symmetric MAD; it scattered 0.77 against 0.78, because a bubble brightens the Pro at high OD and darkens the fibre-coupled Slim, so any one-sided estimator is betting on the geometry it happens to sit in. What fixed it was two acceptance gates — a spread gate catching 97 percent of bubble readings while rejecting none of the clean ones, and a jump gate that cut the worst bubble error from 2.44 OD to 0.016. Five of the eight predictions were not supported and we report all eight.",
+"a_zh":"結論是：估計量不是槓桿，估計量之後的那道 gate 才是。我們把十一種演算法在同一批已記錄的原始 burst 上重跑，所以唯一的差異就是演算法本身；在乾淨流動下，八種之間最大的差距是 0.0039 OD，不到我們自己校正散度的五分之一。我們最鋒利的預先登記預測失敗了：H6 說 upper（只信每個 burst 較亮的那一半）的散度最多只有對稱 MAD 的一半；結果是 0.77 對 0.78，因為氣泡在高 OD 下讓 Pro 變亮、卻讓光纖耦合的 Slim 變暗——所以任何單邊估計量都是在賭它剛好坐在哪一種幾何上。真正解決問題的是兩道接受 gate：spread gate 抓到 97% 的氣泡讀值而且沒有誤殺任何乾淨讀值，jump gate 把最糟的氣泡誤差從 2.44 OD 降到 0.016。八個預測有五個不被支持，而我們八個全部報出來。",
+"trap_en":"Listing the algorithms. The result is a negative one about the premise behind the shipped estimator, plus the gate that replaced it; and the same study explained the 434-hour curve's false steps as quantisation.",
+"trap_zh":"把演算法一個一個列出來。真正的結果是「出貨版估計量背後的前提被推翻」加上取代它的那道 gate；同一個研究也解釋了 434 小時那條曲線的假階梯其實是量化假影。",
+"nodes":[
+"M_BUBBLE",
+"M_434",
+"C_CTRL"
+],
+"figs":[
+"m02",
+"m03"
+],
+"basis":"instructor's priority set, 30 Oct read-through of Results, Hardware and Plants",
+"dom":"measurement",
+"id":"q055"
+},
+{
+"q_en":"Your plasmid-free WB800 control reads 4.5 to 5.5 micrograms per millilitre on the same ELISA, and several samples sit above the top of the standard curve. What is your limit of quantification, and which conclusions survive it?",
+"q_zh":"你們無質體的 WB800 對照在同一個 ELISA 上讀到 4.5 到 5.5 微克每毫升，而且有幾個樣品超出標準曲線上緣。你們的定量極限是多少？哪些結論還站得住？",
+"type":"boundary",
+"tier":"A",
+"deep":1,
+"star":1,
+"pages":[
+"results#ELISA",
+"results#DNPH assay"
+],
+"seat":"wet2",
+"backup":"dry",
+"kw_en":[
+"0.093 to 3 micrograms per millilitre",
+"host background, not zero",
+"relative claims survive"
+],
+"kw_zh":[
+"0.093 到 3 微克每毫升",
+"宿主背景不是零",
+"相對比較還站得住"
+],
+"a_en":"The standard curve runs from 0.093 to 3 micrograms per millilitre in duplicate with an R-squared of 0.9967, so anything above 3 is extrapolation and we should call it that rather than a concentration. The plasmid-free WB800 control reading 4.5 to 5.5 means the assay also carries a host background in this matrix, so our numbers are apparent His-tagged protein and not recombinant-specific yield. What survives is the comparisons where both arms sit in the same matrix on the same plate — lumen against shell at 10.7 and 10.5, the shell permeate staying above the plasmid-free control through seventy-two hours, and the rank order of ACC deaminase against LEA14 and BoPep4 at roughly three to one. What does not survive is any absolute titre, and the fix is a dilution series that brings the samples inside the curve plus a matched medium blank.",
+"a_zh":"標準曲線是 0.093 到 3 微克每毫升、每點兩重複、R² 0.9967，所以超過 3 的都是外推，我們應該這樣稱呼它而不是叫它濃度。無質體 WB800 對照讀到 4.5 到 5.5，意思是這個 assay 在這個基質裡本來就帶宿主背景，所以我們的數字是「表觀 His-tag 蛋白」，不是重組蛋白專一的產量。還站得住的是兩邊在同一塊盤、同一個基質裡的比較——lumen 對 shell 的 10.7 對 10.5、shell 透過液 72 小時都高於無質體對照、以及 ACC 去胺酶大約是 LEA14 和 BoPep4 三倍的排序。站不住的是任何絕對效價；補救方法是把樣品稀釋到曲線範圍內，再加一個相同基質的空白對照。",
+"trap_en":"Quoting 16 micrograms per millilitre as a titre. It is above the validated range of the curve, and the control on the same plate was not zero.",
+"trap_zh":"把 16 微克每毫升當效價報出來。它超出曲線的有效範圍，而且同一塊盤上的對照組不是零。",
+"nodes":[
+"C_CTRL",
+"M_CURVE"
+],
+"figs":[
+"m06"
+],
+"basis":"instructor's follow-up set, 30 Oct",
+"dom":"measurement",
+"id":"q056"
+},
+{
+"q_en":"In your PLP experiment the csn arm without PLP gives about 21 and the WB800 control gives about 32. The control is higher than the sample, yet your page says they are nearly identical. Which is it?",
+"q_zh":"你們 PLP 那個實驗裡，csn 不加 PLP 大約 21，而 WB800 對照大約 32。對照組比樣品還高，但你們頁面上寫「幾乎相同」。到底是哪一個？",
+"type":"gap",
+"tier":"A",
+"deep":1,
+"star":1,
+"pages":[
+"results#DNPH assay: ACCD activity and the PLP requirement",
+"results#DNPH assay"
+],
+"seat":"wet2",
+"backup":"wet1",
+"kw_en":[
+"the page overstates it",
+"indistinguishable, not equal",
+"PLP claim still holds"
+],
+"kw_zh":[
+"頁面講過頭了",
+"是不可分辨，不是相等",
+"PLP 的結論仍成立"
+],
+"a_en":"The page overstates it and the right word is indistinguishable, not identical: the control sits above the csn arm, which at a single well per point and at the low end of the assay's range means the two cannot be separated, not that they are equal. What we can still claim is the comparison the experiment was built for — adding PLP raised csn by 13.7 nanomoles of product above the WB800 baseline and SamyQ with PLP by 30.0, so the cofactor requirement holds on both arms. What we cannot claim from this figure is that csn without PLP has no activity, because the host background in this matrix is at least as large. The honest sentence is that PLP is required for us to measure activity at all, and that this particular comparison needs replicates before it says anything about the arm without it.",
+"a_zh":"頁面講過頭了，正確的字是「不可分辨」而不是「相同」：對照組比 csn 那一組還高，而在每點只有一個孔、而且落在 assay 範圍低端的情況下，這意思是兩者分不開，不是兩者相等。還能主張的是這個實驗原本要做的比較——加了 PLP 之後 csn 比 WB800 基線高出 13.7 奈莫耳產物，SamyQ 加 PLP 高出 30.0，所以兩組都支持輔因子需求。不能從這張圖主張的是「csn 不加 PLP 就沒有活性」，因為這個基質裡的宿主背景至少一樣大。誠實的講法是：PLP 是我們量得到活性的前提，而這個特定比較在講不加 PLP 那一組之前，需要先有重複數。",
+"trap_en":"Reading the sentence off the page. Naming the inconsistency yourself and saying which claim still stands is worth more than defending the wording.",
+"trap_zh":"照頁面上那句念。自己先點出不一致、再說哪一個主張仍然成立，比替用詞辯護有價值得多。",
+"nodes":[
+"W_PLP",
+"C_CTRL"
+],
+"figs":[
+"m07"
+],
+"basis":"instructor's follow-up set, 30 Oct",
+"dom":"measurement",
+"id":"q057"
+},
+{
+"q_en":"ELISA peaks at twelve hours and activity at eighteen, and you call it post-secretory maturation. Give me one experiment that separates maturation from a protease clipping the His tag, and one that separates it from an assay artefact.",
+"q_zh":"ELISA 在 12 小時達峰、活性在 18 小時，你們說那是分泌後成熟。請給我一個實驗分開「成熟」和「蛋白酶把 His-tag 切掉」，再給一個分開「成熟」和「assay 假影」。",
+"type":"reason",
+"tier":"A",
+"deep":1,
+"star":1,
+"pages":[
+"results#Bioreactor test: ELISA and DNPH over time",
+"results#Product in the permeate"
+],
+"seat":"wet2",
+"backup":"dry",
+"kw_en":[
+"bench-hold a 12-hour sample",
+"blot for size, not amount",
+"spiked recovery"
+],
+"kw_zh":[
+"把 12 小時樣品放著",
+"blot 看大小不是看量",
+"加標回收"
+],
+"a_en":"For maturation against proteolysis, take the twelve-hour permeate, split it, and hold one half at assay temperature with PLP while the other goes straight to the freezer: if activity climbs in the held half with no new protein present, that is maturation, because nothing was being made. Proteolysis predicts the opposite signature and is read on a blot rather than an ELISA — a clipped His tag loses ELISA signal while the band shifts down a few kilodaltons, so the discriminator is size, not amount. For the assay artefact, run a spiked recovery: add a known amount of active enzyme into early permeate and into late permeate and see whether both return the same percentage, because matrix interference at six hours would show up as low recovery there and nowhere else. None of those three has been run, which is why the page says we have not tested this directly.",
+"a_zh":"要分開成熟和蛋白分解：取 12 小時的透過液，分成兩半，一半在 assay 溫度下加 PLP 放著、另一半直接冷凍；如果放著那一半活性自己爬上來、而且沒有新的蛋白被製造出來，那就是成熟，因為那段時間什麼都沒在做。蛋白分解預測的是相反的特徵，而且要用 blot 看而不是 ELISA——His-tag 被切掉會讓 ELISA 訊號下降、同時帶往下移幾個 kDa，所以判準是大小不是量。要排除 assay 假影就做加標回收：把已知量的活性酵素分別加進早期和晚期的透過液，看兩者回收率是否相同，因為 6 小時那個基質如果有干擾，就只會在那裡出現低回收。這三個實驗我們都還沒做，這也是頁面上寫「我們沒有直接測過」的原因。",
+"trap_en":"Restating the mechanism in more detail. The question asks for discriminating experiments, so answer with the three designs and then say none has been run.",
+"trap_zh":"把機制講得更詳細一點。這題要的是能分辨的實驗設計，所以要回答三個設計，然後說我們都還沒做。",
+"nodes":[
+"M_ACT"
+],
+"figs":[
+"m07",
+"m08"
+],
+"basis":"instructor's follow-up set, 30 Oct",
+"dom":"measurement",
+"id":"q058"
+},
+{
+"q_en":"91.5 percent of your reference readings in the 434-hour run fell on an exact integer count, and 26 of the OD jumps came from the pipeline rather than the culture. Everything before October was read through that pipeline. Which published numbers change?",
+"q_zh":"434 小時那次實驗裡，91.5% 的參考通道讀值落在整數上，而 26 次 OD 跳動來自訊號處理而不是培養本身。十月之前的所有東西都是經過那條管線讀出來的。哪些已發表的數字會因此改變？",
+"type":"reason",
+"tier":"A",
+"deep":1,
+"star":1,
+"pages":[
+"measurement#Software algorithm calibration",
+"measurement#What the instrument had already recorded"
+],
+"seat":"dry",
+"backup":"hw",
+"kw_en":[
+"shape survives, steps do not",
+"calibrations are independent",
+"run 6 is the gated record"
+],
+"kw_zh":[
+"形狀還能用，階梯不能",
+"校正是獨立的",
+"run 6 才是上了 gate 的紀錄"
+],
+"a_en":"The shape of the 434-hour curve survives and the small steps inside it do not. The outlier gate keeps samples within three median absolute deviations of the median, and when more than half of sixteen samples share one integer the deviation is zero, so the fence has no width and the filter collapses into taking the most common count: at 32 counts with a path-length factor of 5, one count is 0.067 OD. So the endurance claim, the fault-detection result and the 26.7 hours of lead all stand, because they rest on the reference channel stepping and on the run lasting, not on the OD value between steps; what cannot be read is any small OD change in that window, and the rejection percentage we had been calling bubbles was counting quantisation flicker in that regime. The TiO2 and SiO2 calibrations are unaffected, because they are paired readings against a benchtop instrument at each concentration. Run 6 is the first record taken with the gate fitted, which is why we point at it for growth numbers.",
+"a_zh":"434 小時那條曲線的形狀還能用，裡面那些小階梯不能。離群值 gate 保留中位數上下三個 MAD 內的樣本，而當十六個樣本有超過一半落在同一個整數上，MAD 就是零、圍籬寬度歸零，整個濾波器塌縮成「取最常見的那個整數」：在 32 counts、光程因子 5 的情況下，一個 count 就是 0.067 OD。所以耐久性的主張、故障偵測的結果、26.7 小時的提前量都站得住，因為它們靠的是參考通道在跳、以及這次實驗撐了多久，不是階梯之間的 OD 值；不能讀的是那段時間裡任何小幅度的 OD 變化，而我們原本當成「氣泡」在報的拒絕率，在那個狀態下算的是量化抖動。TiO₂ 和 SiO₂ 校正不受影響，因為那是每個濃度都和桌上型儀器配對讀值。run 6 是第一份裝了 gate 之後的紀錄，所以講生長數字時我們指的是它。",
+"trap_en":"Saying the 434-hour run is invalid. It is the run that produced the fault-detection result; what is invalid is reading small OD steps inside it.",
+"trap_zh":"說 434 小時那次實驗作廢。那次實驗正是故障偵測結果的來源；作廢的是「讀它裡面的小幅 OD 階梯」。",
+"nodes":[
+"M_434",
+"M_BUBBLE"
+],
+"figs":[
+"m03",
+"m04"
+],
+"basis":"instructor's follow-up set, 30 Oct",
+"dom":"measurement",
+"id":"q059"
+},
+{
+"q_en":"Your photometer's working limit is about OD 2.5 and the 5.57 scaling factor comes from one silica run. Your reactor runs report 2.71 and 3.77. What is the 3.77 worth?",
+"q_zh":"你們光度計的工作上限大約是 OD 2.5，而 5.57 的換算係數來自一次二氧化矽實驗。但反應器的紀錄報了 2.71 和 3.77。那個 3.77 值多少？",
+"type":"boundary",
+"tier":"A",
+"deep":1,
+"star":1,
+"pages":[
+"hardware-photometer#7.4",
+"measurement#October 10",
+"results#Six runs"
+],
+"seat":"hw",
+"backup":"dry",
+"kw_en":[
+"above the limit it is extrapolation",
+"sample beam a tenth of reference",
+"silica calibrates the instrument, not the cell"
+],
+"kw_zh":[
+"超過上限就是外推",
+"樣品光束剩參考的十分之一",
+"二氧化矽校的是儀器不是細胞"
+],
+"a_en":"Above the working limit it is a turbidity extrapolation and not a density we would defend. Beyond about 2.7 the sample signal falls to a tenth of the reference, which trips the low-signal warning, and that is exactly what ended run 6 at thirty-seven hours: the beam died, the reported value stepped to about 9.9, and the gate marked the stretch rather than publishing it. The deeper limit applies to every number on that axis — silica calibrates the instrument, not the organism, because a one-micrometre bead is a sphere of refractive index 1.46 at 2.3 grams per cubic centimetre while a vegetative Bacillus subtilis cell is a rod, often in chains, nearer 1.33 to 1.41 and 1.1. So the ladder converts a reading into equivalent particle counts, and a dilution series of washed cells is still owed before any of it becomes cell mass.",
+"a_zh":"超過工作上限之後那是濁度的外推，不是我們會替它辯護的密度。大約 2.7 之上，樣品訊號會掉到參考的十分之一、觸發低訊號警示，而這正是 run 6 在 37 小時結束的原因：光束掛了、報出來的值跳到大約 9.9，而 gate 把那一段標記起來而不是發布它。更深一層的限制適用於那個軸上的每一個數字——二氧化矽校的是儀器不是生物，因為 1 微米的球是折射率 1.46、密度 2.3 克每立方公分的圓球，而營養期的 B. subtilis 是桿狀、常常成鏈，折射率約 1.33 到 1.41、密度 1.1。所以這條梯子把讀值換成「等效顆粒數」，而在它變成細胞質量之前，我們還欠一條洗過的細胞稀釋系列。",
+"trap_en":"Quoting 3.77 as a cell density. Say it is a turbidity reading above the characterised range, and that the conversion to cell count has not been done.",
+"trap_zh":"把 3.77 當細胞密度報出來。要說那是超出已表徵範圍的濁度讀值，而且換算成細胞數這件事還沒做。",
+"nodes":[
+"M_SIO2",
+"M_CURVE"
+],
+"figs":[
+"m01"
+],
+"basis":"instructor's follow-up set, 30 Oct",
+"dom":"measurement",
+"id":"q060"
+},
+{
+"q_en":"Two things changed between run 5 and run 6 — the acceptance gate went on and the permeate draw was halved. How do you separate them?",
+"q_zh":"run 5 和 run 6 之間變了兩件事——接受 gate 上線，同時透過液抽取率減半。你們怎麼把這兩件事分開？",
+"type":"gap",
+"tier":"A",
+"deep":1,
+"star":1,
+"pages":[
+"measurement#The next run was the test",
+"results#Six runs"
+],
+"seat":"dry",
+"backup":"hw",
+"kw_en":[
+"we cannot, and the page says so",
+"31 readings held back",
+"the end of the run called correctly"
+],
+"kw_zh":[
+"分不開，頁面也這樣寫",
+"31 筆被攔下來",
+"run 的結尾判對了"
+],
+"a_en":"We cannot, and the page says so rather than claiming the clean record for the gate. A slower draw pulls in fewer bubbles, so the fact that no window in run 6 exceeded twenty percent bubbles cannot be credited to the gate alone. What belongs to the gate by itself is narrower and we state it that way: thirty-one of 1083 readings held back instead of published, and the end of the run called correctly when the sample beam fell to a tenth of the reference and the reported value stepped to about 9.9 with nothing abnormal inside the bursts. Separating them properly is one run at the same draw rate with the gate off, which is a day of reactor time and the experiment we would run next on this axis.",
+"a_zh":"分不開，而頁面上寫的是這句話，不是把乾淨的紀錄記在 gate 頭上。抽得慢本來就會帶進比較少的氣泡，所以 run 6 沒有任何一個視窗超過 20% 氣泡，不能全算是 gate 的功勞。單獨屬於 gate 的部分比較窄，我們也是這樣講：1083 筆裡有 31 筆被攔下來而沒有發布，以及當樣品光束掉到參考的十分之一、報值跳到大約 9.9、而 burst 內部看起來完全正常時，run 的結尾被正確判定。要真正分開，就是在同樣抽取率下把 gate 關掉再跑一次，那是一天的反應器時間，也是我們在這條線上接下來要做的實驗。",
+"trap_en":"Crediting the clean bubble record to the gate. Two variables moved together; name the narrow claim that is the gate's alone.",
+"trap_zh":"把乾淨的氣泡紀錄算成 gate 的功勞。兩個變數一起動了；要講出單獨屬於 gate 的那個窄主張。",
+"nodes":[
+"M_BUBBLE"
+],
+"figs":[
+"m05"
+],
+"basis":"instructor's follow-up set, 30 Oct",
+"dom":"measurement",
+"id":"q061"
+},
+{
+"q_en":"Your jump gate accepts a new level once three readings agree. An air slug lasting longer than ninety seconds therefore gets accepted. What is the fix?",
+"q_zh":"你們的 jump gate 只要三筆讀值一致就接受新的水準。那麼超過 90 秒的氣柱還是會被接受。怎麼解決？",
+"type":"boundary",
+"tier":"A",
+"deep":1,
+"star":1,
+"pages":[
+"measurement#What this calibration does not establish",
+"hardware-photometer#8.1"
+],
+"seat":"dry",
+"backup":"hw",
+"kw_en":[
+"the page states this limit",
+"alarm, not silent correction",
+"fix it in the plumbing"
+],
+"kw_zh":[
+"頁面自己寫了這個限制",
+"發警報而不是默默修正",
+"要在管路上解決"
+],
+"a_en":"That limit is stated on the page, and it is why the gate raises an alarm instead of silently correcting: a growing culture does not move 0.05 OD in thirty seconds, so any accepted step that large deserves a human look. Software cannot do better than that, because when the flow cell fills completely with air all fourteen samples in a burst agree perfectly and are all wrong together — on 10 October the Pro read 0.74 to 0.91 against a true 3.18 and nothing inside those bursts looks abnormal. So the real fix is in the plumbing: fix the inlet below the surface, keep it clear of the stirring vortex, and add a bubble trap, because a gate can reject a bad reading but cannot replace it. On the day it happened the cause was an inlet tube that had fallen out of the beaker, and one alarm would have had someone put it back inside the first minute.",
+"a_zh":"這個限制頁面上就寫了，也正是 gate 選擇發警報而不是默默修正的原因：一個在生長的培養不會在 30 秒內移動 0.05 OD，所以任何被接受的這麼大的階梯都值得人去看一眼。軟體做不到更好，因為當流通池完全充滿空氣時，一個 burst 裡的十四個樣本會完全一致、而且一起錯——10 月 10 日那次 Pro 讀 0.74 到 0.91，真值是 3.18，而那些 burst 裡面沒有任何異常。所以真正的解法在管路：把進水口固定在液面下、遠離攪拌漩渦，並加裝氣泡收集器，因為 gate 可以拒絕一筆壞讀值，但沒辦法生出一筆好的來替代。那天真正的原因是進水管掉出燒杯，而一個警報就能讓人在第一分鐘內把它放回去。",
+"trap_en":"Proposing a cleverer filter. No estimator rescues a reading taken through air; the answer is an alarm plus hardware.",
+"trap_zh":"提出一個更聰明的濾波器。沒有任何估計量能救回一筆穿過空氣量到的讀值；答案是警報加硬體。",
+"nodes":[
+"M_BUBBLE"
+],
+"figs":[
+"m02"
+],
+"basis":"instructor's follow-up set, 30 Oct",
+"dom":"measurement",
+"id":"q062"
 },
 {
 "q_en":"What membrane do you use in the bioreactor, and what exactly does it do?",
@@ -1538,7 +2155,10 @@ var QUESTIONS = [
 "basis":"like UPenn 2021: what exactly is the device",
 "dom":"hardware",
 "deep":0,
-"id":"q051"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q063"
 },
 {
 "q_en":"What does your bioreactor cost to build?",
@@ -1568,7 +2188,10 @@ var QUESTIONS = [
 "basis":"like Bank 38: may I ask about the cost",
 "dom":"hardware",
 "deep":0,
-"id":"q052"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q064"
 },
 {
 "q_en":"How big is the commercial unit, and has it been built?",
@@ -1598,7 +2221,10 @@ var QUESTIONS = [
 "basis":"like NUS 2021: does it scale beyond a flask",
 "dom":"hardware",
 "deep":0,
-"id":"q053"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q065"
 },
 {
 "q_en":"What wavelength does your photometer use, and why that one?",
@@ -1627,7 +2253,10 @@ var QUESTIONS = [
 "basis":"like INSA 2022: why that sensor",
 "dom":"hardware",
 "deep":0,
-"id":"q054"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q066"
 },
 {
 "q_en":"How many bioreactor runs have you done, and what was the longest?",
@@ -1658,7 +2287,10 @@ var QUESTIONS = [
 "basis":"like Bank 36: how could you scale this (numbers must match)",
 "dom":"hardware",
 "deep":0,
-"id":"q055"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q067"
 },
 {
 "q_en":"Why did you move from releasing bacteria on the roots to a bioreactor?",
@@ -1688,7 +2320,10 @@ var QUESTIONS = [
 "basis":"like NUS 2021: why build your own instead",
 "dom":"hardware",
 "deep":0,
-"id":"q056"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q068"
 },
 {
 "q_en":"Why did you add a pinch valve to the bioreactor?",
@@ -1717,7 +2352,10 @@ var QUESTIONS = [
 "basis":"like LCG 2024: expert changed a hardware requirement",
 "dom":"hardware",
 "deep":0,
-"id":"q057"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q069"
 },
 {
 "q_en":"Why did you build an in-line photometer with a reference channel and a 2 mm path?",
@@ -1746,7 +2384,10 @@ var QUESTIONS = [
 "basis":"like UPenn 2021: biggest source of noise and how reduced",
 "dom":"hardware",
 "deep":0,
-"id":"q058"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q070"
 },
 {
 "q_en":"How did you deal with bubbles in the photometer?",
@@ -1776,7 +2417,10 @@ var QUESTIONS = [
 "basis":"like UPenn 2021: biggest noise source",
 "dom":"hardware",
 "deep":0,
-"id":"q059"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q071"
 },
 {
 "q_en":"Why do you use PWM and LED matching in the light plate?",
@@ -1805,7 +2449,10 @@ var QUESTIONS = [
 "basis":"like NUS 2021: same dose to every culture",
 "dom":"hardware",
 "deep":0,
-"id":"q060"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q072"
 },
 {
 "q_en":"Why did you design a floating plate for hydroponics?",
@@ -1834,7 +2481,10 @@ var QUESTIONS = [
 "basis":"like NUS 2021: how did iterations change",
 "dom":"hardware",
 "deep":0,
-"id":"q061"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q073"
 },
 {
 "q_en":"What safety did you build into the hardware?",
@@ -1865,7 +2515,10 @@ var QUESTIONS = [
 "basis":"like UPenn 2021: safety near live cultures and electronics",
 "dom":"hardware",
 "deep":0,
-"id":"q062"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q074"
 },
 {
 "q_en":"How do you know the membrane really keeps the bacteria in?",
@@ -1895,7 +2548,10 @@ var QUESTIONS = [
 "basis":"like Munich 2025: replicates?",
 "dom":"hardware",
 "deep":0,
-"id":"q063"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q075"
 },
 {
 "q_en":"How do you know your pressure and flow readings can be trusted?",
@@ -1925,7 +2581,10 @@ var QUESTIONS = [
 "basis":"like UPenn 2021: single biggest source of error",
 "dom":"hardware",
 "deep":0,
-"id":"q064"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q076"
 },
 {
 "q_en":"How do you know the loop is sterile after cleaning without an autoclave?",
@@ -1955,7 +2614,10 @@ var QUESTIONS = [
 "basis":"like NUS 2021: how keep low-cost hardware sterile",
 "dom":"hardware",
 "deep":0,
-"id":"q065"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q077"
 },
 {
 "q_en":"How do you know the protectant actually crosses the membrane?",
@@ -1985,7 +2647,10 @@ var QUESTIONS = [
 "basis":"like Munich 2025: replicates?",
 "dom":"hardware",
 "deep":0,
-"id":"q066"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q078"
 },
 {
 "q_en":"Why not just buy a commercial spectrophotometer instead of building a photometer?",
@@ -2015,7 +2680,10 @@ var QUESTIONS = [
 "basis":"like INSA 2022 / UPenn 2021: what could commercial equipment not do",
 "dom":"hardware",
 "deep":0,
-"id":"q067"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q079"
 },
 {
 "q_en":"Which photometer should someone use, the Pro or the Slim?",
@@ -2044,7 +2712,10 @@ var QUESTIONS = [
 "basis":"like INSA 2022: sensor choice and alternatives",
 "dom":"hardware",
 "deep":0,
-"id":"q068"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q080"
 },
 {
 "q_en":"Your light plate follows an existing open design. What did you add, and is it better than a commercial plate?",
@@ -2074,7 +2745,10 @@ var QUESTIONS = [
 "basis":"like UPenn 2021: what could commercial equipment not do",
 "dom":"hardware",
 "deep":0,
-"id":"q069"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q081"
 },
 {
 "q_en":"Why use a peristaltic pump? Did you try anything else?",
@@ -2103,7 +2777,10 @@ var QUESTIONS = [
 "basis":"like NUS 2021: what did you give up",
 "dom":"hardware",
 "deep":0,
-"id":"q070"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q082"
 },
 {
 "q_en":"What happens if a fiber breaks or a tube leaks?",
@@ -2134,7 +2811,10 @@ var QUESTIONS = [
 "basis":"like UPenn 2021: safety near live cultures",
 "dom":"hardware",
 "deep":0,
-"id":"q071"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q083"
 },
 {
 "q_en":"Your photometer was calibrated on silica beads. Does that hold for real bacteria at high density?",
@@ -2164,7 +2844,10 @@ var QUESTIONS = [
 "basis":"like Cambridge 2024: how do you know it holds in the real condition",
 "dom":"hardware",
 "deep":0,
-"id":"q072"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q084"
 },
 {
 "q_en":"Can your leaf sensor tell that a plant in the field is stressed?",
@@ -2195,7 +2878,10 @@ var QUESTIONS = [
 "basis":"like Cambridge 2024: how do you know the real signal",
 "dom":"hardware",
 "deep":0,
-"id":"q073"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q085"
 },
 {
 "q_en":"Would the bioreactor work at the temperature of a real farm?",
@@ -2226,7 +2912,10 @@ var QUESTIONS = [
 "basis":"like Cambridge 2024: separate effects from heat",
 "dom":"hardware",
 "deep":0,
-"id":"q074"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q086"
 },
 {
 "q_en":"How did outside experts change your hardware?",
@@ -2255,7 +2944,10 @@ var QUESTIONS = [
 "basis":"like LCG 2024 / Cambridge 2024: expert changed a requirement",
 "dom":"hardware",
 "deep":0,
-"id":"q075"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q087"
 },
 {
 "q_en":"How did what you learned in the bioreactor change the photometer?",
@@ -2285,7 +2977,10 @@ var QUESTIONS = [
 "basis":"like UPenn 2021: iterations after real samples",
 "dom":"hardware",
 "deep":0,
-"id":"q076"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q088"
 },
 {
 "q_en":"How did the light plate results feed into your digital twin?",
@@ -2315,7 +3010,10 @@ var QUESTIONS = [
 "basis":"like Munich 2025: model and lab link",
 "dom":"hardware",
 "deep":0,
-"id":"q077"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q089"
 },
 {
 "q_en":"How did farmer and expert feedback shape the design of the commercial unit?",
@@ -2344,7 +3042,10 @@ var QUESTIONS = [
 "basis":"like Peking 2025: trial or real application",
 "dom":"hardware",
 "deep":0,
-"id":"q078"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q090"
 },
 {
 "q_en":"What was the most serious thing that went wrong with the bioreactor?",
@@ -2374,7 +3075,10 @@ var QUESTIONS = [
 "basis":"like LCG 2024: hardest engineering problem",
 "dom":"hardware",
 "deep":0,
-"id":"q079"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q091"
 },
 {
 "q_en":"What does your light plate not show?",
@@ -2404,7 +3108,10 @@ var QUESTIONS = [
 "basis":"like Munich 2025: minimum production and change in output",
 "dom":"hardware",
 "deep":0,
-"id":"q080"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q092"
 },
 {
 "q_en":"Which of your sensors or monitoring channels do not work or were never tested?",
@@ -2435,7 +3142,10 @@ var QUESTIONS = [
 "basis":"like Munich 2025: what is not shown",
 "dom":"hardware",
 "deep":0,
-"id":"q081"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q093"
 },
 {
 "q_en":"Your Safety page lists leak detection and pressure alerts. Are they actually built?",
@@ -2466,7 +3176,10 @@ var QUESTIONS = [
 "basis":"like Munich 2025: what is not shown",
 "dom":"hardware",
 "deep":0,
-"id":"q082"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q094"
 },
 {
 "q_en":"You recommend 263 mL/min at 0.30 bar TMP. Did you actually measure that TMP in a run?",
@@ -2497,7 +3210,10 @@ var QUESTIONS = [
 "basis":"like Munich 2025: how did you quantify",
 "dom":"hardware",
 "deep":0,
-"id":"q083"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q095"
 },
 {
 "q_en":"How would you scale this up, and what limits you?",
@@ -2527,7 +3243,10 @@ var QUESTIONS = [
 "basis":"like Bank 36 and NUS 2021: does it scale",
 "dom":"hardware",
 "deep":0,
-"id":"q084"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q096"
 },
 {
 "q_en":"Could another team rebuild your hardware from your documentation?",
@@ -2559,7 +3278,10 @@ var QUESTIONS = [
 "basis":"like UPenn 2021: could another team rebuild it",
 "dom":"hardware",
 "deep":0,
-"id":"q085"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q097"
 },
 {
 "q_en":"Before we go deep: what physically drives liquid across the fibre wall, and what sets how much permeate you actually get?",
@@ -2590,7 +3312,10 @@ var QUESTIONS = [
 "basis":"a judge checks whether the headline flux is measured, assumed, or simply a pump setting",
 "dom":"hardware",
 "deep":0,
-"id":"q086"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q098"
 },
 {
 "q_en":"You report the fouling trend as permeability halving from 2,520 to 1,210, and you also say no fouling threshold was reached, with the alarm set at seventy per cent of steady state. Reconcile those two for me.",
@@ -2621,7 +3346,10 @@ var QUESTIONS = [
 "trap_zh":"說壓力升幅很小、所以膜沒問題。絕對的 kPa 數字確實小，但警報判準寫的就是通透率，而通透率掉了一半；而且比較用的基線只有單一模組的單次掃描。",
 "basis":"the project's own fouling datum and its own alarm threshold disagree in print",
 "dom":"hardware",
-"id":"q087"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q099"
 },
 {
 "q_en":"Your pages name the duty-cycled recirculation pump as the next experiment and say you have not run it. Predict for me what happens inside the fibres during the off phase.",
@@ -2652,7 +3380,10 @@ var QUESTIONS = [
 "trap_zh":"回答「生物反應是以小時為尺度，所以停機沒差」。那是「值得一試」的理由；真正未知的是纖維裡的沉降與結垢，沒有人量過。",
 "basis":"the highest-value unrun hardware experiment the team has named itself",
 "dom":"hardware",
-"id":"q088"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q100"
 },
 {
 "q_en":"A 0.2 micron pore and a protein running at about forty kilodaltons. Explain why the protein goes through and a cell does not, and then tell me what else goes through.",
@@ -2684,7 +3415,10 @@ var QUESTIONS = [
 "trap_zh":"把某一個細胞尺寸講成定論。Safety、Bioreactor 頁和 Contribution 寫 0.25 到 1.0 微米；Results 和污垢模型寫 1 到 2 微米的桿狀、還有 0.8 乘 3 微米，而且都沒有引用。要說清楚你引的是哪一頁。",
 "basis":"the withdrawn molecular-weight cut-off is the team's best honesty story and a judge will test whether they understand it",
 "dom":"hardware",
-"id":"q089"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q101"
 },
 {
 "q_en":"Your bioreactor page headlines that the lumen and shell sides read the same, 10.7 against 10.5 by ELISA. Your Results page says the port each sample came from was never recorded. Which is it, and what sieving coefficient do you have?",
@@ -2716,7 +3450,10 @@ var QUESTIONS = [
 "trap_zh":"拿 10.7 對 10.5 當成蛋白自由通過的證明。接口沒記錄、數值是超出最高標準品的外推值，而 Results 還寫著過膜尚未確證——這麼接近的兩個數字守不住。",
 "basis":"the project's central product claim rests on numbers its own Results page will not assign to a side",
 "dom":"hardware",
-"id":"q090"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q102"
 },
 {
 "q_en":"What is the pinch valve really for? Convince me it is not just a tap.",
@@ -2747,7 +3484,10 @@ var QUESTIONS = [
 "trap_zh":"只把它講成壓力調節。答案的一半是「這個缺口是外部審查者指出來的」，另一半是「斷電時能保持位置」才是選伺服的理由——因為迴路裡是活的菌液。",
 "basis":"user feedback driving a specific hardware change is a Hardware judging criterion",
 "dom":"hardware",
-"id":"q091"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q103"
 },
 {
 "q_en":"Where does your culture see the most shear, in the pump head or in the fibre lumen, and how do you know it is tolerable?",
@@ -2778,7 +3518,10 @@ var QUESTIONS = [
 "trap_zh":"拿哺乳動物灌流的 3 到 5 Pa 上限來套。那對有細胞壁的細菌不適用；而且我們自己的剪切表是用八根纖維算的，所以那些數字是偏保守、偏高的那一組。",
 "basis":"wall shear is the master variable in their own scale-out argument and the divide-by-N error is in their own record",
 "dom":"hardware",
-"id":"q092"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q104"
 },
 {
 "q_en":"Distinguish for me your recirculation rate from the residence time that actually matters to the biology, and tell me which one limits your control loop.",
@@ -2809,7 +3552,10 @@ var QUESTIONS = [
 "trap_zh":"把快速循環說成反應時間短。這個迴路是被光開關的死區時間主導的，幫浦打更快不會讓系統反應更快。",
 "basis":"the dead-time-to-time-constant ratio is what fixes what the device can be used for",
 "dom":"hardware",
-"id":"q093"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q105"
 },
 {
 "q_en":"Tell me how oxygen and carbon dioxide get into and out of a closed recirculating loop, and what you measured.",
@@ -2841,7 +3587,10 @@ var QUESTIONS = [
 "trap_zh":"說把體積降下來就解決了缺氧。那只是在沒有溶氧讀數的情況下照假設行動，pH 漂移的原因到現在還沒證實。另外張教授建議過機械破泡裝置，實際機器裡並沒有。",
 "basis":"oxygen caps density before anything else and the sensor that would show it is the one they could not get working",
 "dom":"hardware",
-"id":"q094"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q106"
 },
 {
 "q_en":"Why is a Bacillus culture in your recirculating loop not the same organism it is in a shake flask?",
@@ -2872,7 +3621,10 @@ var QUESTIONS = [
 "trap_zh":"說迴路贏過搖瓶。37 度那個比較（2 小時對 4.5 小時到平台）各只有一次，而且一次改了三個變數；22 度那個比較連溫度都沒有對齊。",
 "basis":"the loop-versus-flask claim is the project's most-quoted reactor result and its weakest controlled comparison",
 "dom":"hardware",
-"id":"q095"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q107"
 },
 {
 "q_en":"Is this a chemostat? Tell me the washout condition for your reactor, what a steady state would look like in your own data, and what your longest run actually demonstrated.",
@@ -2903,7 +3655,10 @@ var QUESTIONS = [
 "trap_zh":"把那幾次長時間運轉說成灌流穩態。九月的 116 小時和十月的 77 小時真正證明的是「迴路可以帶著儀器自己記錄、好幾天不用管」，不是密度被維持住了。",
 "basis":"perfusion versus chemostat is the single most likely conceptual question in the Biomanufacturing village",
 "dom":"hardware",
-"id":"q096"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q108"
 },
 {
 "q_en":"Your Safety page says automated alerts trigger containment protocols on transmembrane pressure and that droplet leakage is detected. Your bioreactor page calls both of those planned. Which is true, and what does containment rest on today?",
@@ -2935,7 +3690,10 @@ var QUESTIONS = [
 "trap_zh":"替 Safety 頁的寫法辯護。也不要說斷纖維會在壓力曲線上看出來：手冊寫正常運轉只有幾個 kPa，而感測器精度大約是 10 kPa；手冊自己也明訂壓力監測不能取代用眼睛檢查。",
 "basis":"two pages of the same wiki disagree about whether the containment alarms exist",
 "dom":"hardware",
-"id":"q097"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q109"
 },
 {
 "q_en":"You scale out rather than up. Name the quantity that does not come along for free, and tell me where the first wall is.",
@@ -2966,7 +3724,10 @@ var QUESTIONS = [
 "trap_zh":"拿膜面積或滲透速率來回答。那兩個正好是會跟著放大的；真正會卡住的是培養基、幫浦電力、氧氣和能源。",
 "basis":"Biomanufacturing is a nominated area and the scale-out table is the page's core argument",
 "dom":"hardware",
-"id":"q098"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q110"
 },
 {
 "q_en":"Hollow-fibre perfusion is a mature industrial technology. Tell me honestly what is not novel about your reactor.",
@@ -2997,7 +3758,10 @@ var QUESTIONS = [
 "trap_zh":"把膜圍阻說成團隊的發明。Brophy 博士四月就告訴我們要以物理圍阻為主、不要靠自殺開關，陳教授四月也說把細菌留在容器裡。這個想法是審查者給的。",
 "basis":"a judge who knows bioprocessing will test whether the team knows the field it sits in",
 "dom":"hardware",
-"id":"q099"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q111"
 },
 {
 "q_en":"What previous iGEM work and open hardware does this build on, and what did you add on top of it?",
@@ -3029,7 +3793,10 @@ var QUESTIONS = [
 "trap_zh":"把光板或光遺傳開關說成原創。我們自己的 LPA 頁就寫了型式和生物學都來自文獻，只有欄位配置、配對過的 LED 和外殼是我們的。",
 "basis":"positioning against prior art, where the team's own pages are unusually explicit",
 "dom":"hardware",
-"id":"q100"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q112"
 },
 {
 "q_en":"Last question. Why should I be impressed by this rig rather than by a bought one?",
@@ -3061,7 +3828,10 @@ var QUESTIONS = [
 "trap_zh":"說光度計取代了一台一萬五千美元的儀器。我們自己的頁面寫 BioDrop 是新台幣 15,000 元、大約 470 美元，而 Pro 是 371.78 美元，所以真正的論點是在線連續量測，不是價格。",
 "basis":"the question a hardware judge actually decides the nomination on",
 "dom":"hardware",
-"id":"q101"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q113"
 },
 {
 "q_en":"In one minute, how does your bioreactor keep the bacteria in but let the protein out?",
@@ -3091,7 +3861,10 @@ var QUESTIONS = [
 "basis":"judge pattern: explain the core device in your own words",
 "dom":"hardware",
 "deep":0,
-"id":"q102"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q114"
 },
 {
 "q_en":"Why a hollow-fiber perfusion bioreactor, instead of releasing the bacteria on the roots or using a normal stirred tank?",
@@ -3121,7 +3894,10 @@ var QUESTIONS = [
 "basis":"judge pattern: why this design over the obvious alternative",
 "dom":"hardware",
 "deep":0,
-"id":"q103"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q115"
 },
 {
 "q_en":"How did you arrive at 263 mL/min and a TMP of 0.30 bar as the operating point?",
@@ -3150,7 +3926,10 @@ var QUESTIONS = [
 "basis":"judge pattern: how was the key parameter chosen",
 "dom":"hardware",
 "deep":0,
-"id":"q104"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q116"
 },
 {
 "q_en":"Did you ever actually run the bioreactor at your recommended operating point?",
@@ -3180,7 +3959,10 @@ var QUESTIONS = [
 "basis":"honesty probe: spec versus what was run",
 "dom":"hardware",
 "deep":0,
-"id":"q105"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q117"
 },
 {
 "q_en":"Your design flux is 2 LMH but your runs drew 36 to 72 LMH. Is that above your own fouling limit?",
@@ -3211,7 +3993,10 @@ var QUESTIONS = [
 "basis":"validate: design numbers versus run numbers",
 "dom":"hardware",
 "deep":0,
-"id":"q106"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q118"
 },
 {
 "q_en":"Your pages give two different pressure drops at 263 mL/min. Which one is right?",
@@ -3243,7 +4028,10 @@ var QUESTIONS = [
 "basis":"cross-page conflict on the same measurement",
 "dom":"hardware",
 "deep":0,
-"id":"q107"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q119"
 },
 {
 "q_en":"The bioreactor page reports DNPH activity of 0.037 mU/mL, but Results says about 30 nmol per mL per hour. Which is it?",
@@ -3274,7 +4062,10 @@ var QUESTIONS = [
 "basis":"unit conflict; checked by dividing by ELISA concentration",
 "dom":"hardware",
 "deep":0,
-"id":"q108"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q120"
 },
 {
 "q_en":"How strong is your containment evidence, and how big are B. subtilis cells compared with your 0.2 µm pores?",
@@ -3306,7 +4097,10 @@ var QUESTIONS = [
 "basis":"like Munich 2025: replicates and controls?",
 "dom":"hardware",
 "deep":0,
-"id":"q109"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q121"
 },
 {
 "q_en":"Your Safety page says you have automated TMP alerts and droplet leak detection. Do you?",
@@ -3338,7 +4132,10 @@ var QUESTIONS = [
 "basis":"honesty probe: what is built versus what is described",
 "dom":"hardware",
 "deep":0,
-"id":"q110"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q122"
 },
 {
 "q_en":"What else can cross a 0.2 µm membrane besides your protein, and what happens if a fiber breaks?",
@@ -3369,7 +4166,10 @@ var QUESTIONS = [
 "basis":"boundary probe: what does the barrier not stop",
 "dom":"hardware",
 "deep":0,
-"id":"q111"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q123"
 },
 {
 "q_en":"How did expert feedback change your hardware?",
@@ -3398,7 +4198,10 @@ var QUESTIONS = [
 "basis":"like Munich 2025: HP to design",
 "dom":"hardware",
 "deep":0,
-"id":"q112"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q124"
 },
 {
 "q_en":"Why build your own instead of buying a commercial system, and did you compare against one?",
@@ -3430,7 +4233,10 @@ var QUESTIONS = [
 "basis":"judge pattern: why not buy it",
 "dom":"hardware",
 "deep":0,
-"id":"q113"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q125"
 },
 {
 "q_en":"How does your photometer read OD600 without taking a sample?",
@@ -3460,7 +4266,10 @@ var QUESTIONS = [
 "basis":"judge pattern: how does the instrument work",
 "dom":"hardware",
 "deep":0,
-"id":"q114"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q126"
 },
 {
 "q_en":"Why 600 nm, and why do you need a reference beam?",
@@ -3489,7 +4298,10 @@ var QUESTIONS = [
 "basis":"judge pattern: why this wavelength and sensor",
 "dom":"hardware",
 "deep":0,
-"id":"q115"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q127"
 },
 {
 "q_en":"How do you know your photometer is accurate, and against what?",
@@ -3520,7 +4332,10 @@ var QUESTIONS = [
 "basis":"like Munich 2025: calibration and controls",
 "dom":"hardware",
 "deep":0,
-"id":"q116"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q128"
 },
 {
 "q_en":"How does your Slim photometer compare with the Pro and with a commercial spectrophotometer?",
@@ -3550,7 +4365,10 @@ var QUESTIONS = [
 "basis":"judge pattern: cheaper build versus commercial",
 "dom":"hardware",
 "deep":0,
-"id":"q117"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q129"
 },
 {
 "q_en":"You say the leaf sensor reads 1.2 to 1.9 °C warm. How was that tested, and can a farmer trust it?",
@@ -3581,7 +4399,10 @@ var QUESTIONS = [
 "basis":"validate: bench test versus field claim",
 "dom":"hardware",
 "deep":0,
-"id":"q118"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q130"
 },
 {
 "q_en":"Have you shown that your LPA light intensities give different gene expression, and what light dose is it?",
@@ -3612,7 +4433,10 @@ var QUESTIONS = [
 "basis":"validate: claim versus the page's own caveat",
 "dom":"hardware",
 "deep":0,
-"id":"q119"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q131"
 },
 {
 "q_en":"What wavelengths are your green and red LEDs, exactly?",
@@ -3645,7 +4469,10 @@ var QUESTIONS = [
 "basis":"cross-page conflict on a basic specification",
 "dom":"hardware",
 "deep":0,
-"id":"q120"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q132"
 },
 {
 "q_en":"Is your green-light control actually running in the bioreactor?",
@@ -3677,7 +4504,10 @@ var QUESTIONS = [
 "basis":"honesty probe: pipeline versus what is joined up",
 "dom":"hardware",
 "deep":0,
-"id":"q121"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q133"
 },
 {
 "q_en":"How did the LPA connect to your digital twin?",
@@ -3708,7 +4538,10 @@ var QUESTIONS = [
 "basis":"integrate: model and lab, like Munich 2025",
 "dom":"hardware",
 "deep":0,
-"id":"q122"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q134"
 },
 {
 "q_en":"How does your floating hydroponic plate work?",
@@ -3737,7 +4570,10 @@ var QUESTIONS = [
 "basis":"judge pattern: how does the hardware work",
 "dom":"hardware",
 "deep":0,
-"id":"q123"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q135"
 },
 {
 "q_en":"How do you know the plate floats at the height you calculated, and did your plant experiments use it?",
@@ -3768,7 +4604,10 @@ var QUESTIONS = [
 "basis":"validate: design prediction versus a measurement",
 "dom":"hardware",
 "deep":0,
-"id":"q124"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q136"
 },
 {
 "q_en":"Which sensors does your bioreactor really have, and which ones are missing?",
@@ -3799,7 +4638,10 @@ var QUESTIONS = [
 "basis":"like Munich 2025: what sensors and control loops exist",
 "dom":"hardware",
 "deep":0,
-"id":"q125"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q137"
 },
 {
 "q_en":"Your pages disagree about some runs: the pH in run 2, the volume in run 1, and the first Western blot. What actually happened?",
@@ -3831,7 +4673,10 @@ var QUESTIONS = [
 "basis":"cross-page conflicts on run records",
 "dom":"hardware",
 "deep":0,
-"id":"q126"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q138"
 },
 {
 "q_en":"A valve broke at 38 hours and leaked into the incubator. What broke it, and do you actually know?",
@@ -3862,7 +4707,10 @@ var QUESTIONS = [
 "basis":"honesty probe: what failed and how sure are you",
 "dom":"hardware",
 "deep":0,
-"id":"q127"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q139"
 },
 {
 "q_en":"How reliable are your pressure readings? Do you have three transducers or four?",
@@ -3894,7 +4742,10 @@ var QUESTIONS = [
 "basis":"validate: instrument resolution versus the signal",
 "dom":"hardware",
 "deep":0,
-"id":"q128"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q140"
 },
 {
 "q_en":"Is US$1022.67 really what your bioreactor costs?",
@@ -3926,7 +4777,10 @@ var QUESTIONS = [
 "basis":"judge pattern: what does it cost, honestly",
 "dom":"hardware",
 "deep":0,
-"id":"q129"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q141"
 },
 {
 "q_en":"Could this scale to a real farm? What limits it?",
@@ -3956,7 +4810,10 @@ var QUESTIONS = [
 "basis":"like Munich 2025: does it scale",
 "dom":"hardware",
 "deep":0,
-"id":"q130"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q142"
 },
 {
 "q_en":"What is the next step before a farmer could actually use it?",
@@ -3987,7 +4844,10 @@ var QUESTIONS = [
 "basis":"judge pattern: what is the next step and what is the evidence it can work",
 "dom":"hardware",
 "deep":0,
-"id":"q131"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q143"
 },
 {
 "q_en":"Would your system work for a different or larger protein, or another organism?",
@@ -4018,7 +4878,10 @@ var QUESTIONS = [
 "basis":"boundary probe: can it apply to something else",
 "dom":"hardware",
 "deep":0,
-"id":"q132"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q144"
 },
 {
 "q_en":"What is the upper limit of your photometer, and what happens in a denser culture?",
@@ -4050,7 +4913,10 @@ var QUESTIONS = [
 "basis":"boundary probe: limits of the instrument",
 "dom":"hardware",
 "deep":0,
-"id":"q133"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q145"
 },
 {
 "q_en":"How do your hardware sensors feed the digital twin?",
@@ -4081,7 +4947,10 @@ var QUESTIONS = [
 "basis":"integrate: hardware to model, like Munich 2025",
 "dom":"hardware",
 "deep":0,
-"id":"q134"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q146"
 },
 {
 "q_en":"Why a peristaltic pump, and which pump model do you actually use?",
@@ -4112,7 +4981,10 @@ var QUESTIONS = [
 "basis":"design check plus an unreconciled specification",
 "dom":"hardware",
 "deep":0,
-"id":"q135"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q147"
 },
 {
 "q_en":"How do you sterilize the loop, and how do you handle the waste?",
@@ -4143,7 +5015,285 @@ var QUESTIONS = [
 "basis":"judge pattern: safety and sterility of the device",
 "dom":"hardware",
 "deep":0,
-"id":"q136"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q148"
+},
+{
+"q_en":"What is special about your bioreactor?",
+"q_zh":"你們的生物反應器特別在哪裡？",
+"type":"history",
+"tier":"A",
+"deep":1,
+"star":1,
+"pages":[
+"hardware-bioreactor#3.4",
+"hardware-bioreactor#Pressure and sampling",
+"hardware-bioreactor#10.1"
+],
+"seat":"hw",
+"backup":"biz",
+"kw_en":[
+"closed loop, open harvest",
+"harvest on demand at 0.16 bar",
+"US$1,022 of parts, all files public"
+],
+"kw_zh":[
+"閉迴路加開放採收",
+"0.16 bar 隨需採收",
+"US$1,022 的料、檔案全公開"
+],
+"a_en":"Two circuits that touch only at the fibre wall: a culture loop closed for the whole run, and a shell-side harvest path that is the only thing leaving the machine. Harvest is on demand rather than a continuous bleed — closing the pinch valve and opening the shell valve for sixty seconds lifts mean transmembrane pressure from 0.03 to 0.16 bar and yields twenty to thirty millilitres without interrupting the culture. We read OD600, pH, flow and three pressures in line through a 116-hour run without opening the vessel, and the pH loop taught us something the vessel alone could not: holding pH and resupplying erythromycin together removed the spurious second exponential phase. Every build file, STL and parts list is published, and the known materials come to US$1,022.67.",
+"a_zh":"兩個迴路只在纖維壁這一處相接：一個整場密閉的培養迴路，以及殼側那條唯一會離開機器的採收路徑。採收是隨需而不是持續排放——關上夾管閥、打開殼側閥六十秒，平均跨膜壓從 0.03 升到 0.16 bar，可以在不中斷培養的情況下取得二十到三十毫升。我們在一次 116 小時的實驗裡全程線上讀 OD600、pH、流量和三個壓力，而且沒有打開容器；pH 這個迴路教了我們一件單看容器學不到的事：同時維持 pH 和補充紅黴素，才讓那個假的第二指數期消失。所有組裝檔、STL 和零件清單都公開，已知的材料成本是 US$1,022.67。",
+"trap_en":"Calling it novel. Hollow-fibre perfusion is not new; what is ours is production, recovery and containment as one unit operation at 1 L with instruments we had to build.",
+"trap_zh":"說它很新穎。中空纖維灌流不是新東西；屬於我們的是「在 1 L 尺度上，生產、回收和圍阻是同一個單元操作，而儀器是我們自己做的」。",
+"nodes":[
+"H_LOOP",
+"H_PINCH",
+"C_MEM"
+],
+"figs":[
+"h02",
+"h06"
+],
+"basis":"instructor's priority set, 30 Oct read-through of Results, Hardware and Plants",
+"dom":"hardware",
+"id":"q149"
+},
+{
+"q_en":"You integrated a pH sensor. What have you learned from it, and what does it bring to your results on top of the OD?",
+"q_zh":"你們裝了 pH 感測器。從它身上學到什麼？除了 OD 之外它給了你們什麼？",
+"type":"validate",
+"tier":"A",
+"deep":1,
+"star":1,
+"pages":[
+"results#pH and antibiotic resupply",
+"hardware-bioreactor#4.2",
+"results#Growth in the reactor"
+],
+"seat":"hw",
+"backup":"wet2",
+"kw_en":[
+"the inflection sits at pH 6.5",
+"a control variable, not a monitor",
+"antibiotic resupply, not only base"
+],
+"kw_zh":[
+"轉折點就在 pH 6.5",
+"是控制變數不是監看值",
+"要補的不只是鹼，還有抗生素"
+],
+"a_en":"It turned pH from something we watched into something we hold. With all sensors working in cycle 3, pH fell monotonically from about 6.9 to 6.4, and superimposing the growth curve showed the OD600 inflection sitting exactly where pH crossed 6.5 — below which both Bacillus subtilis growth and the enzyme's stability suffer — so automated correction became a design requirement. The loop then taught us two more things: 1 molar potassium hydroxide corroded the feeding valve after one night, so dosing went back to a human, and because the daily feed carried erythromycin alongside base, the spurious second exponential phase disappeared, which is what identified it as plasmid loss rather than a metabolic transition. pH also cross-checks the OD: when the pump ran partly dry the OD600 climbed while flow and pressure did not follow, so a rise without its partners is now read as a hydraulic fault and not as growth.",
+"a_zh":"它把 pH 從「我們在看的東西」變成「我們在維持的東西」。第三個循環所有感測器都正常時，pH 從大約 6.9 單調下降到 6.4，而把生長曲線疊上去之後，OD600 的轉折點正好落在 pH 跨過 6.5 的地方——在那之下 B. subtilis 的生長和酵素的結構穩定性都會受損——所以自動校正成為設計要求。接著這個迴路又教了我們兩件事：1 M 氫氧化鉀一個晚上就把進料閥腐蝕了，所以加鹼又回到人工；而因為每天的補料同時帶了紅黴素，那個假的第二指數期消失了，這才確認它是質體流失而不是代謝轉換。pH 也用來交叉檢查 OD：當泵半乾運轉時 OD600 會往上爬，但流量和壓力沒有跟著動，所以現在「上升但夥伴訊號沒跟上」被讀成水力故障，不是生長。",
+"trap_en":"Saying it keeps the culture healthy. The specific findings are the 6.5 inflection, the corroded valve that ended automated dosing, and that antibiotic resupply was the real requirement.",
+"trap_zh":"只說「它讓培養保持健康」。具體發現是 6.5 的轉折點、被腐蝕而導致自動加藥停止的閥，以及真正的要求其實是補抗生素。",
+"nodes":[
+"H_LOOP",
+"H_TMP"
+],
+"figs":[
+"h04",
+"s02"
+],
+"basis":"instructor's priority set, 30 Oct read-through of Results, Hardware and Plants",
+"dom":"hardware",
+"id":"q150"
+},
+{
+"q_en":"What would you do if the bacteria leaked?",
+"q_zh":"如果細菌洩漏了，你們會怎麼做？",
+"type":"boundary",
+"tier":"A",
+"deep":1,
+"star":1,
+"pages":[
+"hardware-bioreactor#Containment & Safety",
+"safety-and-security#Bioreactor safety",
+"hardware-bioreactor#9.2"
+],
+"seat":"hw",
+"backup":"ihp",
+"kw_en":[
+"it happened at 38 hours",
+"the membrane did not fail",
+"traced to the peroxide line"
+],
+"kw_zh":[
+"38 小時那次真的發生過",
+"膜沒有失效",
+"追到過氧化氫那條管"
+],
+"a_en":"It has already happened, and the useful part is that we traced it. In integrated prototype 3 a Luer valve at the start of the lumen loop broke in half at the thirty-eight-hour mark and culture medium leaked into the incubator; the membrane did not fail, and we traced the break to the clean-in-place step, where 35 percent hydrogen peroxide reaches the valves before it is diluted in the reservoir. The response is BSL-1 standard: contain inside the incubator with the spill kit, disinfect with ten percent bleach, autoclave the solid waste at 121 degrees for fifteen to thirty minutes, and plate the shell side to confirm the barrier. The design answers are specified — an oxidiser-resistant valve body, a droplet sensor under the loop, and a pressure trip that stops the pump and opens the pinch valve — and I should be clear that our containment evidence is two single platings with no replicate and no recorded detection limit, so we claim retention demonstrated and not a log reduction.",
+"a_zh":"這件事已經發生過了，而有價值的部分是我們把原因追出來。在整合第三代原型，lumen 迴路起點的一個 Luer 閥在 38 小時斷成兩半，培養液漏進培養箱裡；膜沒有失效，而我們把斷裂追到清洗（CIP）步驟——35% 過氧化氫在被反應槽稀釋之前就會先經過那些閥。處置是 BSL-1 標準：用溢漏處理包在培養箱內圍堵、用 10% 漂白水消毒、固體廢棄物 121 度高壓滅菌 15 到 30 分鐘，並且塗盤殼側來確認屏障。設計上的答案也都寫明了——耐氧化劑的閥體、迴路下方的液滴感測器，以及會停泵並打開夾管閥的壓力跳脫——而我必須講清楚：我們的圍阻證據是兩次單一塗盤，沒有重複、也沒有記錄偵測極限，所以我們主張的是「已展示滯留」，不是 log reduction。",
+"trap_en":"Answering only with a procedure. Lead with the leak that actually happened and what it was traced to; a judge rates the diagnosis above the SOP.",
+"trap_zh":"只回答一套流程。要先講真正發生過的那次洩漏以及追到的原因；評審看重診斷能力勝過 SOP。",
+"nodes":[
+"H_PLATE",
+"C_MEM"
+],
+"figs":[
+"f01",
+"h09"
+],
+"basis":"instructor's priority set, 30 Oct read-through of Results, Hardware and Plants",
+"dom":"hardware",
+"id":"q151"
+},
+{
+"q_en":"You say the similar ELISA values may come from light leaking between neighbouring light-plate wells. The whole selling point of that plate is independently programmable wells. Which claim do you drop?",
+"q_zh":"你們說 ELISA 值相近可能是因為光板相鄰孔之間的光外洩。但那塊板子的賣點就是每個孔可以獨立程控。你們要放棄哪一個主張？",
+"type":"gap",
+"tier":"A",
+"deep":1,
+"star":1,
+"pages":[
+"results#What it settles",
+"hardware-diopal"
+],
+"seat":"hw",
+"backup":"wet1",
+"kw_en":[
+"neither, they are different claims",
+"per-well drive against per-well optics",
+"measurable with an empty well"
+],
+"kw_zh":[
+"兩個都不用放棄",
+"獨立驅動 vs 光學隔離",
+"放空孔就量得出來"
+],
+"a_en":"Neither, because they are different claims: every well has its own LED and its own duty cycle, which is the electronics, while whether a lit well spills photons into its neighbour is mechanical shielding. Both can be true at once, and ours is an open rack of tubes rather than a sealed microplate, so spill between positions is exactly the failure mode you would predict from the geometry. It is also measurable in an afternoon — put an empty tube next to a well at 100 percent and read the irradiance in it, which is the test we have not run. Until we do, the honest version is that we offer light crosstalk as an untested explanation, and the page says so.",
+"a_zh":"兩個都不用放棄，因為它們是不同的主張：每個孔有自己的 LED 和自己的工作週期，那是電子部分；而一個亮著的孔會不會把光子灑到鄰孔，那是機構遮光。兩件事可以同時成立，而我們的是開放式的試管架、不是密封的微孔盤，所以位置之間的外洩正是從幾何上就會預期到的失效模式。這件事一個下午就能量——在一個開到 100% 的孔旁邊放一支空管，讀裡面的輻照度，而這個測試我們還沒做。在做之前，誠實的版本是「我們把光外洩當成一個未經驗證的解釋提出來」，頁面上也是這樣寫的。",
+"trap_en":"Defending the plate by dropping the crosstalk explanation, or vice versa. Separating independent drive from optical isolation is the answer.",
+"trap_zh":"為了保住板子而放棄光外洩的解釋，或反過來。把「獨立驅動」和「光學隔離」分開講才是答案。",
+"nodes":[
+"H_LPA",
+"C_GATE"
+],
+"figs":[
+"h07"
+],
+"basis":"instructor's follow-up set, 30 Oct",
+"dom":"hardware",
+"id":"q152"
+},
+{
+"q_en":"Your bioreactor page gives 0.037 milliunits per millilitre at eighteen hours and your Results page gives about 30 nanomoles per millilitre per hour for the same sample. Those differ by a factor of roughly a thousand. Which is right?",
+"q_zh":"你們生物反應器頁寫 18 小時 0.037 mU/mL，Results 頁對同一個樣品寫大約 30 nmol/mL/h。這兩個差了大約一千倍。哪一個才對？",
+"type":"gap",
+"tier":"A",
+"deep":1,
+"star":1,
+"pages":[
+"hardware-bioreactor#5.2",
+"results#Bioreactor v2.1 accumulation time-course"
+],
+"seat":"hw",
+"backup":"wet2",
+"kw_en":[
+"the bioreactor panel is wrong",
+"specific activity only works with the larger value",
+"Results is the authority"
+],
+"kw_zh":[
+"反應器那張圖的單位錯了",
+"比活性只有用大的那個才算得通",
+"以 Results 頁為準"
+],
+"a_en":"The larger value is right and the bioreactor page's activity panel is wrong by three orders of magnitude; thank you for finding it, because we would rather name it than be caught by it. The arithmetic settles it: specific activity on that same figure is 6.3 units per milligram at eighteen hours, and that only comes out if the volumetric activity is about 30 nanomoles per millilitre per hour against roughly 6 micrograms per millilitre of protein, not 0.037 milliunits. Results is the authority for the assay numbers, because it carries the standard curves and the full nine-point series. The page needs a correction and it is on our list; nothing downstream depends on the smaller number, because the claim we make from that run is that functional enzyme appears at eighteen hours and holds between 5 and 8.4 units per milligram to seventy-two.",
+"a_zh":"大的那個才對，生物反應器頁的活性面板錯了三個數量級；謝謝你找出來，因為我們寧願自己講出來，也不要被抓到。用算術就能定案：同一張圖上 18 小時的比活性是 6.3 U/mg，而這個數字只有在體積活性約 30 nmol/mL/h、蛋白約 6 微克每毫升的情況下才算得出來，不可能是 0.037 mU/mL。assay 的數字以 Results 頁為準，因為標準曲線和完整的九點系列都在那裡。那一頁需要更正，已經在我們的清單上；下游沒有任何東西依賴那個小數字，因為我們從那次實驗做出的主張是「有功能的酵素在 18 小時出現，並且維持在 5 到 8.4 U/mg 直到 72 小時」。",
+"trap_en":"Trying to reconcile the two numbers. One is a typo; say which page is the authority and move on.",
+"trap_zh":"試著把兩個數字湊起來解釋。其中一個就是寫錯了；說清楚哪一頁是準的，然後往前走。",
+"nodes":[
+"M_ACT",
+"H_LOOP"
+],
+"figs":[
+"m07"
+],
+"basis":"instructor's follow-up set, 30 Oct",
+"dom":"hardware",
+"id":"q153"
+},
+{
+"q_en":"Your leak happened at the lowest-pressure point in the loop, and the lumen pressure rose instead of falling. If pressure cannot see a leak, what is your planned pressure layer actually protecting you from?",
+"q_zh":"你們的洩漏發生在迴路壓力最低的地方，而且 lumen 壓力是上升而不是下降。如果壓力看不到洩漏，那你們規劃的壓力那一層到底在防什麼？",
+"type":"reason",
+"tier":"A",
+"deep":1,
+"star":1,
+"pages":[
+"hardware-bioreactor#Pressure and sampling",
+"hardware-bioreactor#9.2.2",
+"hardware-bioreactor#9.2.3"
+],
+"seat":"hw",
+"backup":"dry",
+"kw_en":[
+"it prevents, not detects",
+"feed 0.19 to 0.37 bar, TMP unchanged",
+"droplet sensor is the detector"
+],
+"kw_zh":[
+"它是預防不是偵測",
+"進料 0.19 到 0.37 bar，TMP 不變",
+"偵測靠液滴感測器"
+],
+"a_en":"The pressure layer prevents a breach rather than detecting one, and the leak is why we can state that precisely. When the feeding valve failed, feed pressure climbed from about 0.19 to 0.37 bar while transmembrane pressure showed no significant change, so the pressure signature is diagnostic only in combination with flow and the other channels, never on its own. What over-pressure does protect against is the condition most likely to force cells through a damaged fibre or burst a fitting: past a threshold the controller sounds an alarm, stops the culture pump and opens the pinch valve, before anything escapes. Detecting liquid that has already escaped is the droplet sensor's job, which is layer two and is one new part, and a fault neither layer can see is still caught the way it is caught today, by plating the shell side.",
+"a_zh":"壓力這一層是在預防破口，不是在偵測破口，而正因為發生過那次洩漏，我們才能把這件事講精確。進料閥失效時，進料壓力從大約 0.19 升到 0.37 bar，而跨膜壓沒有明顯變化，所以壓力特徵只有在和流量及其他通道一起看時才有診斷力，單獨看沒有。過壓真正防的是「最可能把細胞推過受損纖維、或讓接頭爆開」的那個狀況：超過閾值時控制器會發警報、停下培養泵、打開夾管閥——在任何東西逸出之前。偵測已經逸出的液體是液滴感測器的工作，那是第二層、只需要一個新零件；而兩層都看不到的故障，仍然用今天的方法抓：塗盤殼側。",
+"trap_en":"Claiming pressure monitoring detects loss of containment. The run shows the opposite, and the page says a dedicated leak detector is required.",
+"trap_zh":"說壓力監測可以偵測圍阻失效。那次實驗顯示的正好相反，頁面也寫了需要專門的洩漏偵測裝置。",
+"nodes":[
+"H_TMP",
+"C_MEM"
+],
+"figs":[
+"h09",
+"m09"
+],
+"basis":"instructor's follow-up set, 30 Oct",
+"dom":"hardware",
+"id":"q154"
+},
+{
+"q_en":"Your refill plan ships a spore cartridge at room temperature. Have you shown WB800 sporulates, germinates, and keeps a 10 kilobase plasmid through that?",
+"q_zh":"你們的補充卡匣計畫是常溫運送孢子。你們證明過 WB800 會形成孢子、能發芽，而且在這個過程中保住 10 kb 的質體嗎？",
+"type":"boundary",
+"tier":"A",
+"deep":1,
+"star":1,
+"pages":[
+"hardware-bioreactor#9.2.5",
+"results#Electroporation"
+],
+"seat":"hw",
+"backup":"biz",
+"kw_en":[
+"no, it is declared future work",
+"the printed parts were not watertight",
+"plasmid retention untested"
+],
+"kw_zh":[
+"沒有，是列出來的未來工作",
+"印出來的件不防水",
+"質體保留沒測過"
+],
+"a_en":"No, and the page lists it as future work rather than as a result. Three things are owed before a cartridge exists: a reliable seal, because the printed parts were not watertight and it needs moulded parts or O-ring glands; sterility across repeated changeovers; and confirmation that the strain sporulates and germinates reliably from stored spores. Plasmid retention through sporulation is the one you are pointing at and it is the hardest, because our device plasmid is about 10 kilobases and we already know what that size costs us at the wall — electroporation had to be worked out per construct, down to 1.1 kilovolts for some of them. A genomic integration would remove the problem entirely and that is the direction we would take it, which also means the cartridge is a design, not a demonstration.",
+"a_zh":"沒有，頁面上把它列為未來工作而不是結果。在卡匣真的存在之前還欠三件事：可靠的密封，因為印出來的件不防水，需要射出成型的件或 O 形環槽；多次更換之間的無菌性；以及確認這株菌能從儲存的孢子穩定地形成並發芽。你指的「質體保留」是最難的那一項，因為我們的裝置質體大約 10 kb，而我們已經知道這個大小在細胞壁上的代價——電穿孔必須一個構築一個構築去調，有些甚至要降到 1.1 kV。把基因整合到基因體上可以完全移除這個問題，那也是我們會走的方向；這同時意味著卡匣目前是一個設計，不是一個展示。",
+"trap_en":"Describing how the cartridge would work as if it had been built. Say it is a design, then name the three things owed.",
+"trap_zh":"把卡匣的運作方式講得像已經做出來。要說它是一個設計，然後講出還欠的三件事。",
+"nodes":[
+"C_SCALE",
+"Z_FARMER"
+],
+"figs":[
+"n03"
+],
+"basis":"instructor's follow-up set, 30 Oct",
+"dom":"hardware",
+"id":"q155"
 },
 {
 "q_en":"Give us one example where an expert's advice changed your design, not just your plan.",
@@ -4174,7 +5324,10 @@ var QUESTIONS = [
 "basis":"like Lambert 2025: best feedback that changed the project",
 "dom":"ihp",
 "deep":0,
-"id":"q137"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q156"
 },
 {
 "q_en":"You met Prof. Chen Wen-Liang three times. What did each meeting change?",
@@ -4204,7 +5357,10 @@ var QUESTIONS = [
 "basis":"like Lambert 2025: feedback that changed direction",
 "dom":"ihp",
 "deep":0,
-"id":"q138"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q157"
 },
 {
 "q_en":"Why did you move away from hydroponics as your main plant system?",
@@ -4234,7 +5390,10 @@ var QUESTIONS = [
 "basis":"wiki-derived",
 "dom":"ihp",
 "deep":0,
-"id":"q139"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q158"
 },
 {
 "q_en":"Dr. Sattely told you your proof of concept might not work. What did you do about it?",
@@ -4264,7 +5423,10 @@ var QUESTIONS = [
 "basis":"wiki-derived",
 "dom":"ihp",
 "deep":0,
-"id":"q140"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q159"
 },
 {
 "q_en":"How did the farmers you interviewed change who you are building for?",
@@ -4294,7 +5456,10 @@ var QUESTIONS = [
 "basis":"like Lambert 2025: feedback that changed direction",
 "dom":"ihp",
 "deep":0,
-"id":"q141"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q160"
 },
 {
 "q_en":"Your homepage quotes a farmer in Tamsui. How did she shape ReLEAF?",
@@ -4325,7 +5490,10 @@ var QUESTIONS = [
 "basis":"wiki-derived",
 "dom":"ihp",
 "deep":0,
-"id":"q142"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q161"
 },
 {
 "q_en":"What business changes came directly from your interviews?",
@@ -4356,7 +5524,10 @@ var QUESTIONS = [
 "basis":"wiki-derived",
 "dom":"ihp",
 "deep":0,
-"id":"q143"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q162"
 },
 {
 "q_en":"What hardware changes came from outside reviewers?",
@@ -4386,7 +5557,10 @@ var QUESTIONS = [
 "basis":"wiki-derived",
 "dom":"ihp",
 "deep":0,
-"id":"q144"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q163"
 },
 {
 "q_en":"Where did your hay-based culture medium idea come from?",
@@ -4417,7 +5591,10 @@ var QUESTIONS = [
 "basis":"wiki-derived",
 "dom":"ihp",
 "deep":0,
-"id":"q145"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q164"
 },
 {
 "q_en":"How did feedback from your school lessons change the next lesson?",
@@ -4446,7 +5623,10 @@ var QUESTIONS = [
 "basis":"like Great Bay 2025: two-way dialogue back into the work",
 "dom":"ihp",
 "deep":0,
-"id":"q146"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q165"
 },
 {
 "q_en":"Could ReLEAF be used on organic farms?",
@@ -4477,7 +5657,10 @@ var QUESTIONS = [
 "basis":"wiki-derived",
 "dom":"ihp",
 "deep":0,
-"id":"q147"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q166"
 },
 {
 "q_en":"What if a typhoon or an animal destroys the bioreactor?",
@@ -4507,7 +5690,10 @@ var QUESTIONS = [
 "basis":"wiki-derived",
 "dom":"ihp",
 "deep":0,
-"id":"q148"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q167"
 },
 {
 "q_en":"Would this work on crops other than Arabidopsis, for example rice?",
@@ -4538,7 +5724,10 @@ var QUESTIONS = [
 "basis":"wiki-derived",
 "dom":"ihp",
 "deep":0,
-"id":"q149"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q168"
 },
 {
 "q_en":"Farmers told you pests and diseases were their biggest problem. Does ReLEAF deal with them?",
@@ -4569,7 +5758,10 @@ var QUESTIONS = [
 "basis":"wiki-derived",
 "dom":"ihp",
 "deep":0,
-"id":"q150"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q169"
 },
 {
 "q_en":"What if farmers are not comfortable with technology?",
@@ -4598,7 +5790,10 @@ var QUESTIONS = [
 "basis":"wiki-derived",
 "dom":"ihp",
 "deep":0,
-"id":"q151"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q170"
 },
 {
 "q_en":"Which country do you go to first outside Taiwan?",
@@ -4629,7 +5824,10 @@ var QUESTIONS = [
 "basis":"wiki-derived",
 "dom":"ihp",
 "deep":0,
-"id":"q152"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q171"
 },
 {
 "q_en":"How strong is your evidence that the bacteria cannot escape?",
@@ -4660,7 +5858,10 @@ var QUESTIONS = [
 "basis":"wiki-derived",
 "dom":"ihp",
 "deep":0,
-"id":"q153"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q172"
 },
 {
 "q_en":"Which expert advice did you not follow, or not manage to follow?",
@@ -4691,7 +5892,10 @@ var QUESTIONS = [
 "basis":"wiki-derived",
 "dom":"ihp",
 "deep":0,
-"id":"q154"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q173"
 },
 {
 "q_en":"Your booth survey says 95% agreed it helped. Why should we trust that?",
@@ -4721,7 +5925,10 @@ var QUESTIONS = [
 "basis":"wiki-derived",
 "dom":"ihp",
 "deep":0,
-"id":"q155"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q174"
 },
 {
 "q_en":"Only 30% of students got DNA base pairing right. Did the lesson fail?",
@@ -4750,7 +5957,10 @@ var QUESTIONS = [
 "basis":"like Great Bay 2025: two-way dialogue",
 "dom":"ihp",
 "deep":0,
-"id":"q156"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q175"
 },
 {
 "q_en":"How do you know farmers actually want ReLEAF?",
@@ -4780,7 +5990,10 @@ var QUESTIONS = [
 "basis":"like HPi-Potsdam 2025: stakeholder validation",
 "dom":"ihp",
 "deep":0,
-"id":"q157"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q176"
 },
 {
 "q_en":"How do you know your lessons actually worked?",
@@ -4809,7 +6022,10 @@ var QUESTIONS = [
 "basis":"like HG Tokyo 2025: outcomes of educational projects",
 "dom":"ihp",
 "deep":0,
-"id":"q158"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q177"
 },
 {
 "q_en":"How do you know plants really make sounds?",
@@ -4839,7 +6055,10 @@ var QUESTIONS = [
 "basis":"wiki-derived",
 "dom":"ihp",
 "deep":0,
-"id":"q159"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q178"
 },
 {
 "q_en":"Which ideas were yours and which came from your advisors?",
@@ -4870,7 +6089,10 @@ var QUESTIONS = [
 "basis":"like AIS-China 2025: parts yours vs advisors",
 "dom":"ihp",
 "deep":0,
-"id":"q160"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q179"
 },
 {
 "q_en":"Why not rely on a kill switch, as many iGEM teams do?",
@@ -4901,7 +6123,10 @@ var QUESTIONS = [
 "basis":"wiki-derived",
 "dom":"ihp",
 "deep":0,
-"id":"q161"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q180"
 },
 {
 "q_en":"Automated systems like Agriweather do everything for the farmer. Why would a farmer pick yours?",
@@ -4931,7 +6156,10 @@ var QUESTIONS = [
 "basis":"wiki-derived",
 "dom":"ihp",
 "deep":0,
-"id":"q162"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q181"
 },
 {
 "q_en":"What is your next step after the Jamboree?",
@@ -4963,7 +6191,10 @@ var QUESTIONS = [
 "basis":"like Peking 2025: ranked next steps",
 "dom":"ihp",
 "deep":0,
-"id":"q163"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q182"
 },
 {
 "q_en":"How will your education work last beyond this year?",
@@ -4994,7 +6225,10 @@ var QUESTIONS = [
 "basis":"like Great Bay 2025: two-way dialogue and reuse",
 "dom":"ihp",
 "deep":0,
-"id":"q164"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q183"
 },
 {
 "q_en":"Small farmers cannot afford new technology. How does ReLEAF avoid widening that gap?",
@@ -5025,7 +6259,10 @@ var QUESTIONS = [
 "basis":"wiki-derived",
 "dom":"ihp",
 "deep":0,
-"id":"q165"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q184"
 },
 {
 "q_en":"You work in Taiwan. Why did your project start with Ghana?",
@@ -5055,7 +6292,10 @@ var QUESTIONS = [
 "basis":"wiki-derived",
 "dom":"ihp",
 "deep":0,
-"id":"q166"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q185"
 },
 {
 "q_en":"Why did you choose SDGs 2, 4, 10, 12 and 15, and not 13?",
@@ -5084,7 +6324,10 @@ var QUESTIONS = [
 "basis":"wiki-derived",
 "dom":"ihp",
 "deep":0,
-"id":"q167"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q186"
 },
 {
 "q_en":"Why build a map and a sound exhibit instead of a poster?",
@@ -5114,7 +6357,10 @@ var QUESTIONS = [
 "basis":"like HG Tokyo 2025: educational design choices",
 "dom":"ihp",
 "deep":0,
-"id":"q168"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q187"
 },
 {
 "q_en":"What biosafety level do you work at, and how are students trained?",
@@ -5143,7 +6389,10 @@ var QUESTIONS = [
 "basis":"wiki-derived",
 "dom":"ihp",
 "deep":0,
-"id":"q169"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q188"
 },
 {
 "q_en":"Who is the 'Farmer Chen' on your homepage?",
@@ -5173,7 +6422,10 @@ var QUESTIONS = [
 "basis":"wiki-derived",
 "dom":"ihp",
 "deep":0,
-"id":"q170"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q189"
 },
 {
 "q_en":"In one minute: what is ReLEAF, and what did Human Practices do for it?",
@@ -5203,7 +6455,10 @@ var QUESTIONS = [
 "basis":"wiki-derived",
 "dom":"ihp",
 "deep":0,
-"id":"q171"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q190"
 },
 {
 "q_en":"You list 47 team members but only seven of you are here. Who did what?",
@@ -5234,7 +6489,92 @@ var QUESTIONS = [
 "basis":"like AIS-China 2025: parts yours vs advisors",
 "dom":"ihp",
 "deep":0,
-"id":"q172"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q191"
+},
+{
+"q_en":"I see you only have physical biosafety and no engineered containment method. Why?",
+"q_zh":"我看到你們只有物理性的生物安全，沒有任何基因層面的圍阻機制。為什麼？",
+"type":"design",
+"tier":"A",
+"deep":1,
+"star":1,
+"pages":[
+"safety-and-security#Bioreactor safety",
+"hardware-bioreactor#Containment & Safety",
+"human-practices"
+],
+"seat":"ihp",
+"backup":"hw",
+"kw_en":[
+"Brophy: switches mutate and fail",
+"a pore does not depend on genotype",
+"layers are planned, not present"
+],
+"kw_zh":[
+"Brophy：開關會突變、會失效",
+"孔徑不依賴基因型",
+"多層是規劃中，不是現在就有"
+],
+"a_en":"Because Dr. Jennifer Brophy told us to make physical containment the primary mechanism rather than relying on a kill switch, and we took it: a biological switch is a piece of DNA under selection, so it mutates and fails, while a 0.2 micrometre pore does not depend on the organism's genotype at all. In our architecture the barrier is also the product path, so monitoring the membrane is monitoring containment — which is why transmembrane pressure, flow and leak detection are on the instrument list, and why a plate is required after every module change. A kill step sitting on that path would also have to be kept away from the protein we are trying to harvest. I will not claim this is finished: the planned layers are a pressure trip that stops the pump and opens the pinch valve, and a droplet sensor under the loop, and genetic containment sits on the 2027 roadmap.",
+"a_zh":"因為 Jennifer Brophy 博士建議我們把物理圍阻當成主要機制，而不是依賴自殺開關，而我們接受了：生物性的開關是一段處在選擇壓力下的 DNA，所以它會突變、會失效，而 0.2 微米的孔徑完全不依賴生物體的基因型。在我們的架構裡，那道屏障同時也是產品路徑，所以監看膜就等於監看圍阻——這也是為什麼跨膜壓、流量和洩漏偵測都在儀器清單上，以及為什麼每次換模組之後都必須塗一次盤。而一個放在那條路徑上的滅殺步驟，還得想辦法不要碰到我們正要採收的蛋白。我不會說這件事已經完成：規劃中的層次是「會停泵並打開夾管閥的壓力跳脫」和「迴路下方的液滴感測器」，而基因層面的圍阻在 2027 年的路線圖上。",
+"trap_en":"Present tense on the layers. Entrepreneurship says redundancy with genetic and membrane containment and schedules kill switches for 2027; if a judge quotes it, say the present tense on that page is wrong and the future plan is fine.",
+"trap_zh":"把多層講成現在就有。Entrepreneurship 頁寫「genetic 與 membrane 的冗餘」並把自殺開關排在 2027；如果評審引用，就說那一頁的現在式寫錯了，未來計畫本身沒問題。",
+"nodes":[
+"C_MEM",
+"I_BROPHY",
+"Z_CONTAIN"
+],
+"figs":[
+"i06",
+"f01"
+],
+"basis":"instructor's priority set, 30 Oct read-through of Results, Hardware and Plants",
+"dom":"ihp",
+"id":"q192"
+},
+{
+"q_en":"Through the whole project, which experts gave you the most valuable feedback, and how did they reshape the project?",
+"q_zh":"整個專案走下來，哪些專家給了你們最有價值的回饋？他們怎麼改變了這個專案？",
+"type":"integrate",
+"tier":"A",
+"deep":1,
+"star":1,
+"pages":[
+"human-practices",
+"hardware-bioreactor#6.1",
+"hardware-bioreactor#6.3"
+],
+"seat":"ihp",
+"backup":"hw",
+"kw_en":[
+"Chen: keep it in a vessel, sell the consumable",
+"Brophy: no kill switch",
+"Chang: nothing drove the product across"
+],
+"kw_zh":[
+"陳：留在容器裡、賣消耗品",
+"Brophy：不要自殺開關",
+"張：沒有東西推產品過膜"
+],
+"a_en":"Professor Chen Wen-liang in April: he told us engineered bacteria released into open soil are hard to defend, so keep them in a vessel and sell the consumable rather than the device — that killed our transgenic rhizobacterium plan and is the reason a bioreactor exists at all. Dr. Jennifer Brophy then removed our kill switch, which made the membrane the containment and changed what the hardware has to monitor. Professor Chang Jo-Shu found the gap that would have sunk the first build: nothing in our design pushed the protectant from the lumen to the shell, because a higher flow rate only recirculates — hence the pinch valve, a smaller membrane, and the pressure and flow instruments that show fouling. And two reviewers changed things we had not asked about: Teacher He of Owl Lab replaced our two-board plan with one mainboard, which also ended the unstable pressure readings, and Dr. Peng voided one of our own hydroponic runs because culture volume was not standardised across arms.",
+"a_zh":"四月的陳文亮教授：他告訴我們「放到開放土壤裡的基改菌很難辯護，所以把它留在容器裡，賣消耗品而不是賣機器」——這句話殺掉了我們的轉基因根圈菌計畫，也正是為什麼今天會有一台生物反應器。接著 Jennifer Brophy 博士拿掉了我們的自殺開關，這讓膜成為圍阻本身，也改變了硬體需要監看什麼。張嘉修教授找出了會讓第一版報廢的缺口：我們的設計裡沒有任何東西把保護蛋白從 lumen 推到 shell，因為提高流速只是讓液體循環——於是有了夾管閥、更小的膜，以及顯示結垢的壓力與流量儀器。還有兩位審閱者改掉了我們根本沒問的東西：貓頭鷹實驗室的何老師把我們的雙板設計換成一塊主板，順手終結了壓力讀值不穩的問題；而彭博士因為各組培養液體積沒有統一，判定我們自己一次水耕實驗作廢。",
+"trap_en":"Listing names without the before and after. Pair every expert with one concrete change, and include Dr. Peng voiding our own run — a judge rates that higher than praise.",
+"trap_zh":"只列名字而沒有前後對照。每一位專家都要配一個具體的改變，而且要包含彭博士判定我們自己的實驗作廢——評審看重這個勝過讚美。",
+"nodes":[
+"I_BROPHY",
+"I_CHEN",
+"I_CHANG"
+],
+"figs":[
+"i05",
+"i06"
+],
+"basis":"instructor's priority set, 30 Oct read-through of Results, Hardware and Plants",
+"dom":"ihp",
+"id":"q193"
 },
 {
 "type":"fact",
@@ -5265,7 +6605,10 @@ var QUESTIONS = [
 "basis":"like GEMS-Taiwan 2025 hardware: 'how scalable / when available' follow-up; strain provenance conflicts on the wiki (see gaps)",
 "dom":"biomanufacturing",
 "deep":0,
-"id":"q173"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q194"
 },
 {
 "type":"fact",
@@ -5295,7 +6638,10 @@ var QUESTIONS = [
 "basis":"like Hardware bank 2025 'Where do you see your product in the greater market?'; pathway-not-approval finding on laws-and-regulations",
 "dom":"biomanufacturing",
 "deep":0,
-"id":"q174"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q195"
 },
 {
 "type":"fact",
@@ -5324,7 +6670,10 @@ var QUESTIONS = [
 "basis":"like Hardware bank 'May I ask about the cost?' style number checks; calculation sheet of 23 Sept",
 "dom":"biomanufacturing",
 "deep":0,
-"id":"q175"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q196"
 },
 {
 "type":"fact",
@@ -5354,7 +6703,10 @@ var QUESTIONS = [
 "basis":"like Bioreactors bank (Timmy): 'what does the digital twin still know if sensors are unplugged?'; INSA Lyon 2022 hardware-software link",
 "dom":"biomanufacturing",
 "deep":0,
-"id":"q176"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q197"
 },
 {
 "type":"fact",
@@ -5384,7 +6736,10 @@ var QUESTIONS = [
 "basis":"like GEMS-Taiwan 2024 hardware: 'May I ask about the cost?'",
 "dom":"biomanufacturing",
 "deep":0,
-"id":"q177"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q198"
 },
 {
 "type":"design",
@@ -5415,7 +6770,10 @@ var QUESTIONS = [
 "basis":"like Leiden 2022 biomanufacturing: 'what made E. coli the right chassis?'",
 "dom":"biomanufacturing",
 "deep":0,
-"id":"q178"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q199"
 },
 {
 "type":"design",
@@ -5446,7 +6804,10 @@ var QUESTIONS = [
 "basis":"like NUS 2021 biomanufacturing: 'why light control was worth the extra engineering' (design-justification pattern)",
 "dom":"biomanufacturing",
 "deep":0,
-"id":"q179"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q200"
 },
 {
 "type":"design",
@@ -5476,7 +6837,10 @@ var QUESTIONS = [
 "basis":"like NUS 2021 hardware: 'why build your own bioreactor instead of buying a benchtop fermenter, and what did you give up?'",
 "dom":"biomanufacturing",
 "deep":0,
-"id":"q180"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q201"
 },
 {
 "type":"design",
@@ -5506,7 +6870,10 @@ var QUESTIONS = [
 "basis":"regulation-as-design pattern on laws-and-regulations (function, claim, classification, requirement, market access)",
 "dom":"biomanufacturing",
 "deep":0,
-"id":"q181"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q202"
 },
 {
 "type":"design",
@@ -5535,7 +6902,10 @@ var QUESTIONS = [
 "basis":"like GEMS-Taiwan 2024 hardware: 'How could you scale this?'; BNUZH/BWYA 2025 scale-up questions",
 "dom":"biomanufacturing",
 "deep":0,
-"id":"q182"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q203"
 },
 {
 "type":"validate",
@@ -5566,7 +6936,10 @@ var QUESTIONS = [
 "basis":"like Munich 2025: replicates?; CH Biotech warning on 'undeniable proof'",
 "dom":"biomanufacturing",
 "deep":0,
-"id":"q183"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q204"
 },
 {
 "type":"validate",
@@ -5595,7 +6968,10 @@ var QUESTIONS = [
 "basis":"like Great Bay 2025 model: enzyme activity and production levels; Munich 2025 measurement",
 "dom":"biomanufacturing",
 "deep":0,
-"id":"q184"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q205"
 },
 {
 "type":"validate",
@@ -5626,7 +7002,10 @@ var QUESTIONS = [
 "basis":"like Hardware bank: 'how did you validate against a commercial instrument?' pattern",
 "dom":"biomanufacturing",
 "deep":0,
-"id":"q185"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q206"
 },
 {
 "type":"validate",
@@ -5656,7 +7035,10 @@ var QUESTIONS = [
 "basis":"like Munich 2025: replicates / held-out test; registered-prediction pattern on software",
 "dom":"biomanufacturing",
 "deep":0,
-"id":"q186"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q207"
 },
 {
 "type":"compare",
@@ -5688,7 +7070,10 @@ var QUESTIONS = [
 "basis":"like Hardware bank 2025: 'What is your cost advantage?' and Toulouse 2021 biomanufacturing: 'cheap synthetic alternatives already exist'",
 "dom":"biomanufacturing",
 "deep":0,
-"id":"q187"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q208"
 },
 {
 "type":"compare",
@@ -5718,7 +7103,10 @@ var QUESTIONS = [
 "basis":"like NUS 2021 biomanufacturing: field validation before farmer use; design-history from hardware-bioreactor 2.1",
 "dom":"biomanufacturing",
 "deep":0,
-"id":"q188"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q209"
 },
 {
 "type":"compare",
@@ -5748,7 +7136,10 @@ var QUESTIONS = [
 "basis":"Table 6 and Table 10 comparison on laws-and-regulations; like Hardware bank 'market' questions",
 "dom":"biomanufacturing",
 "deep":0,
-"id":"q189"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q210"
 },
 {
 "type":"compare",
@@ -5777,7 +7168,10 @@ var QUESTIONS = [
 "basis":"like NUS 2021 hardware: 'what did you give up?'",
 "dom":"biomanufacturing",
 "deep":0,
-"id":"q190"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q211"
 },
 {
 "type":"compare",
@@ -5806,7 +7200,10 @@ var QUESTIONS = [
 "basis":"like Hardware bank 2025: 'What is your go-to-market strategy?'; Table 7 on laws-and-regulations",
 "dom":"biomanufacturing",
 "deep":0,
-"id":"q191"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q212"
 },
 {
 "type":"boundary",
@@ -5837,7 +7234,10 @@ var QUESTIONS = [
 "basis":"conflict between biomanufacturing#Regulation and biosafety and laws-and-regulations#Organic Farming; like Science-Tokyo 2025 'farmer adoption'",
 "dom":"biomanufacturing",
 "deep":0,
-"id":"q192"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q213"
 },
 {
 "type":"boundary",
@@ -5868,7 +7268,10 @@ var QUESTIONS = [
 "basis":"like NUS 2021 hardware: contamination / failure handling; Results 'Pressure and sampling'",
 "dom":"biomanufacturing",
 "deep":0,
-"id":"q193"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q214"
 },
 {
 "type":"boundary",
@@ -5897,7 +7300,10 @@ var QUESTIONS = [
 "basis":"like BNUZH/BWYA 2025 hardware: 'do you plan to upscale / when available?'; NUS 2021 'what to validate before farm use'",
 "dom":"biomanufacturing",
 "deep":0,
-"id":"q194"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q215"
 },
 {
 "type":"boundary",
@@ -5928,7 +7334,10 @@ var QUESTIONS = [
 "basis":"like Bioreactors bank (Timmy): 'what does the digital twin still know?'; INSA Lyon 2022 hardware-software integration",
 "dom":"biomanufacturing",
 "deep":0,
-"id":"q195"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q216"
 },
 {
 "type":"boundary",
@@ -5957,7 +7366,10 @@ var QUESTIONS = [
 "basis":"Dual-track strategy on laws-and-regulations; like Science-Tokyo 2025 farmer adoption / regulation probes",
 "dom":"biomanufacturing",
 "deep":0,
-"id":"q196"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q217"
 },
 {
 "type":"integrate",
@@ -5987,7 +7399,10 @@ var QUESTIONS = [
 "basis":"like INSA Lyon 2022 hardware: 'how do hardware and software work together?'; Munich 2025 model-lab loop",
 "dom":"biomanufacturing",
 "deep":0,
-"id":"q197"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q218"
 },
 {
 "type":"integrate",
@@ -6017,7 +7432,10 @@ var QUESTIONS = [
 "basis":"Table 18 'Requirements ReLEAF has yet to conquer' on laws-and-regulations; Safety page",
 "dom":"biomanufacturing",
 "deep":0,
-"id":"q198"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q219"
 },
 {
 "type":"integrate",
@@ -6048,7 +7466,10 @@ var QUESTIONS = [
 "basis":"entrepreneurship#Pricing model and model#Links to the bench; like Great Bay 2025 model-to-lab",
 "dom":"biomanufacturing",
 "deep":0,
-"id":"q199"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q220"
 },
 {
 "type":"gap",
@@ -6079,7 +7500,10 @@ var QUESTIONS = [
 "basis":"CH Biotech 5 Sept 2026 quote; like Munich 2025 measurement limits",
 "dom":"biomanufacturing",
 "deep":0,
-"id":"q200"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q221"
 },
 {
 "type":"gap",
@@ -6109,7 +7533,10 @@ var QUESTIONS = [
 "basis":"internal inconsistency: biomanufacturing#Critical flux vs software run table (72, 36, 51 LMH)",
 "dom":"biomanufacturing",
 "deep":0,
-"id":"q201"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q222"
 },
 {
 "type":"gap",
@@ -6140,7 +7567,10 @@ var QUESTIONS = [
 "basis":"like Munich 2025: what failed; Results 'pH and antibiotic resupply'",
 "dom":"biomanufacturing",
 "deep":0,
-"id":"q202"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q223"
 },
 {
 "type":"gap",
@@ -6171,7 +7601,10 @@ var QUESTIONS = [
 "basis":"like Hardware bank 2025 'What is your cost advantage?'; Leiden 2023 'what specifically reduces the cost?'",
 "dom":"biomanufacturing",
 "deep":0,
-"id":"q203"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q224"
 },
 {
 "type":"impact",
@@ -6202,7 +7635,10 @@ var QUESTIONS = [
 "basis":"like Hardware bank 2025: 'go-to-market' and 'funding / de-risk'; NUS 2021 'validate before a farmer could use it'",
 "dom":"biomanufacturing",
 "deep":0,
-"id":"q204"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q225"
 },
 {
 "type":"impact",
@@ -6233,7 +7669,10 @@ var QUESTIONS = [
 "basis":"like Science-Tokyo 2025 'support farmer adoption'; Tsinghua 2025 customer acquisition cost",
 "dom":"biomanufacturing",
 "deep":0,
-"id":"q205"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q226"
 },
 {
 "type":"impact",
@@ -6263,7 +7702,10 @@ var QUESTIONS = [
 "basis":"like BWYA/ICT-Mumbai 2025: 'how scalable is the product?'; GEMS-Taiwan 2024 'How could you scale this?'",
 "dom":"biomanufacturing",
 "deep":0,
-"id":"q206"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q227"
 },
 {
 "type":"impact",
@@ -6292,7 +7734,10 @@ var QUESTIONS = [
 "basis":"Table 18 on laws-and-regulations; like NUS 2021 biomanufacturing 'what would you need to validate'",
 "dom":"biomanufacturing",
 "deep":0,
-"id":"q207"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q228"
 },
 {
 "type":"impact",
@@ -6322,7 +7767,212 @@ var QUESTIONS = [
 "basis":"Table 18 'Business model and licensing exposure'; like Hardware bank 2025 'maintain service quality at scale'",
 "dom":"biomanufacturing",
 "deep":0,
-"id":"q208"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q229"
+},
+{
+"q_en":"What is special about your solution in biomanufacturing?",
+"q_zh":"你們的方案在生物製造上特別在哪裡？",
+"type":"history",
+"tier":"A",
+"deep":1,
+"star":1,
+"pages":[
+"biomanufacturing",
+"hardware-bioreactor#2.2",
+"measurement#Software algorithm calibration"
+],
+"seat":"hw",
+"backup":"biz",
+"kw_en":[
+"one unit operation",
+"containment is the product path",
+"instruments we had to build"
+],
+"kw_zh":[
+"同一個單元操作",
+"圍阻就是產品路徑",
+"儀器是我們自己做的"
+],
+"a_en":"Production, recovery and containment are one unit operation: the same 0.2 micrometre hollow-fibre wall that holds the cells in is the wall the product crosses to leave, so there is no separate downstream step and nothing is lysed. It runs at the point of use, so the protectant never enters a cold chain, and keeping the organism in the machine splits the regulation in two — contained use for the strain, and a plant-biostimulant route for the cell-free output. We also had to build our own instruments because nobody sells them at one litre: an in-line photometer that read a 434-hour culture with no sample withdrawn, and a signal-processing study whose eleven algorithms and eight predictions were committed to the repository before the calibration run. What I would not claim is titre: 2.5 to 6.5 micrograms per millilitre on the shell side is low for a bioprocess, and longer runs do not mean bigger harvests.",
+"a_zh":"生產、回收和圍阻是同一個單元操作：那層把細胞擋住的 0.2 微米中空纖維壁，也正是產品穿出去的那道壁，所以沒有獨立的下游步驟，也不需要把細胞打破。它在使用現場運轉，所以保護蛋白從來不進冷鏈；而把生物體留在機器裡，等於把法規切成兩條路——菌株走封閉使用，無細胞產出走植物生物刺激劑或肥料。我們也必須自己做儀器，因為一公升這個尺度沒有人賣：一台在 434 小時裡不抽一次樣的線上光度計，以及一份在校正實驗之前就把十一個演算法和八個預測提交進版本庫的訊號處理研究。我不會主張的是效價：殼側 2.5 到 6.5 微克每毫升，對一個生物製程來說是低的，而且跑得更久不代表收得更多。",
+"trap_en":"Claiming hollow-fibre perfusion as the novelty. It is not new; the claim is the three functions in one unit operation at this scale, with the instruments and the pre-registration.",
+"trap_zh":"把中空纖維灌流當成新穎之處。那不是新東西；主張是「在這個尺度上三個功能合成一個單元操作」，加上儀器和預先登記。",
+"nodes":[
+"Z_CONTAIN",
+"C_MEM",
+"C_CF"
+],
+"figs":[
+"n01",
+"h03"
+],
+"basis":"instructor's priority set, 30 Oct read-through of Results, Hardware and Plants",
+"dom":"biomanufacturing",
+"id":"q230"
+},
+{
+"q_en":"You claim you are developing a decentralised bioreactor for everyone to use. What is the advantage, and what is the disadvantage?",
+"q_zh":"你們說要做一台讓每個人都能用的去中心化生物反應器。優點是什麼，缺點是什麼？",
+"type":"compare",
+"tier":"A",
+"deep":1,
+"star":1,
+"pages":[
+"biomanufacturing#Field Deployment",
+"entrepreneurship#Break-even analysis",
+"hardware-bioreactor#2.3"
+],
+"seat":"biz",
+"backup":"hw",
+"kw_en":[
+"no cold chain, fresh and known dose",
+"one machine per farm",
+"no field trial, no TEA"
+],
+"kw_zh":[
+"沒有冷鏈、新鮮且劑量已知",
+"每個農場要一台",
+"沒有田間試驗、沒有 TEA"
+],
+"a_en":"The advantage is that the protectant is made on the day it is needed, so there is no refrigerated storage, no refrigerated transport and no shelf life to manage, and the farmer buys a consumable rather than a cold-chain product. The disadvantage is that every farm then needs its own machine: capital is US$2,280 per hectare in the business plan and US$3,800 in our own Math Model, and the maintenance, sterility and leak-watching move to someone who is not a microbiologist. We have no field trial and no techno-economic analysis, and our own model's payback at efficacy one is sixty-eight years against the Geospatial analysis's 4.9 — a factor of fourteen our pages name and do not resolve. That is why the plan is five to ten pilot units for one growing season before any sale, and why cooperative purchase, seasonal rental and a cartridge subscription are all still on the table.",
+"a_zh":"優點是保護蛋白在需要的那一天才製造，所以沒有冷藏儲存、沒有冷藏運輸、沒有效期要管，而農民買的是消耗品而不是冷鏈產品。缺點是每個農場都要一台機器：商業計畫裡每公頃資本是 US$2,280，我們自己的數學模型算出來是 US$3,800，而維護、無菌和盯洩漏這些工作會落到一個不是微生物學家的人身上。我們沒有田間試驗也沒有技術經濟分析，而我們自己模型在效力為 1 時的回收期是六十八年，對上地理空間分析的 4.9 年——相差十四倍，我們頁面上把這件事指出來、但沒有解決。這也是為什麼計畫是先做五到十台試驗機、跑一個生長季再談銷售，以及為什麼合作社共購、季節租賃和卡匣訂閱都還在選項裡。",
+"trap_en":"Giving a soft disadvantage like farmers need training. The real ones are the capital per hectare, the payback disagreement, and that no unit has ever run on a farm.",
+"trap_zh":"給一個軟性的缺點，例如「農民需要訓練」。真正的缺點是每公頃資本、回收期的不一致，以及從來沒有一台機器真的在農場上運轉過。",
+"nodes":[
+"Z_FARMER",
+"C_SCALE",
+"B_BREAK"
+],
+"figs":[
+"n02",
+"b02"
+],
+"basis":"instructor's priority set, 30 Oct read-through of Results, Hardware and Plants",
+"dom":"biomanufacturing",
+"id":"q231"
+},
+{
+"q_en":"If I wanted to scale up the bioreactor instead of using multiple units, what factors should be considered?",
+"q_zh":"如果我要把反應器放大，而不是用很多台，要考慮哪些因素？",
+"type":"impact",
+"tier":"A",
+"deep":1,
+"star":1,
+"pages":[
+"biomanufacturing#Scaling",
+"hardware-bioreactor#9.2.7",
+"hardware-bioreactor#4.1"
+],
+"seat":"hw",
+"backup":"dry",
+"kw_en":[
+"every length-scale quantity re-established",
+"wall shear sets the critical flux",
+"we scale out instead"
+],
+"kw_zh":[
+"每個跟尺度有關的量都要重做",
+"壁面剪切決定臨界通量",
+"我們改成平行複製"
+],
+"a_en":"Scaling up one vessel means re-establishing every quantity that depends on a length scale: oxygen transfer, where we need a kLa of 12.5 per hour at OD 1.45, heat removal, mixing time, membrane area per unit volume, and the wall shear rate that sets the critical flux and the fouling margin. We scale out instead, because tangential-flow filtration has a formal linear method — hold wall shear and transmembrane pressure constant, increase only the channel count — and a scale-down hollow-fibre module has the same fibre length as an industrial one, so our module is the unit cell to be replicated. Worked from one module to eight, the membrane is the last thing to bind; what binds first is medium draw at 0.96 rising to 7.7 litres a day, eight continuous cross-flow pumps, and energy from 3 to 8 watts rising to 24 to 64 against a 45 watt panel that harvests 101 watt-hours a day. Running the recirculation pump on a duty cycle relieves three of those four at once, and the cost is settling in the fibres during the off phase, which is the first experiment we would run.",
+"a_zh":"放大單一容器意味著每一個跟尺度有關的量都要重新建立：氧氣傳遞（OD 1.45 時我們需要 kLa 12.5 每小時）、散熱、混合時間、單位體積的膜面積，以及決定臨界通量和結垢餘裕的壁面剪切速率。我們改成平行複製，因為切向流過濾有一套正式的線性放大方法——固定壁面剪切和跨膜壓，只增加通道數——而且縮小型中空纖維模組和工業型的纖維長度相同，所以我們的模組本身就是要被複製的單元。從一個模組推到八個，膜是最後才成為限制的；先成為限制的是培養基用量（0.96 升／天升到 7.7）、八台連續運轉的切向流泵，以及能耗（3 到 8 瓦升到 24 到 64 瓦，而一片 45 瓦的太陽能板一天收 101 瓦時）。把循環泵改成間歇運轉可以一次緩解其中三項，代價是停泵期間纖維內的沉降，那就是我們會先做的實驗。",
+"trap_en":"Listing scale-up factors without saying we chose scale-out and why. The method, not the list, is the answer.",
+"trap_zh":"把放大的因素列一串，但沒說我們選了平行複製以及為什麼。答案是那套方法，不是清單。",
+"nodes":[
+"C_SCALE",
+"H_TMP"
+],
+"figs":[
+"m09",
+"h03"
+],
+"basis":"instructor's priority set, 30 Oct read-through of Results, Hardware and Plants",
+"dom":"biomanufacturing",
+"id":"q232"
+},
+{
+"q_en":"Have you tested how long the protectant lasts before it is delivered to the crop? Could it degrade before it reaches the plant?",
+"q_zh":"你們測過保護蛋白在送到作物之前能撐多久嗎？會不會在到達植物之前就降解掉？",
+"type":"boundary",
+"tier":"A",
+"deep":1,
+"star":1,
+"pages":[
+"results#Product in the permeate",
+"plant#The updated model",
+"model"
+],
+"seat":"wet2",
+"backup":"dry",
+"kw_en":[
+"inside the machine, yes, to 72 hours",
+"a harvested preparation, never",
+"0.7 to 1.5 hours against rising over 8"
+],
+"kw_zh":[
+"機器內有，撐到 72 小時",
+"採收後的製劑從沒測過",
+"0.7 到 1.5 小時 vs 八小時上升"
+],
+"a_en":"Inside the machine, yes: the shell permeate held ACC deaminase above 2 micrograms per millilitre through seventy-two hours, and specific activity sat between 5 and 8.4 units per milligram from eighteen hours to the end of the run, so it is not falling apart in the reactor. Outside the machine, no, and this is one of our declared gaps. Our two stability readings point opposite ways: one tube fell from 0.5503 to 0.1414 millimolar alpha-ketobutyrate between three and six hours, giving an apparent half-time of 0.7 to 1.5 hours, while a replicated run rose across its first eight hours — and the tube that fell was read once. Neither measured a harvested preparation, which is the quantity that decides whether stock can be banked, and that matters because ten twenty-litre reactors need 5.4 days to make one hectare's dose against a three-day forecast, so the system has to run on banked stock; if it cannot be banked, stabilisation becomes the limiting problem.",
+"a_zh":"在機器裡面有：殼側透過液的 ACC 去胺酶在七十二小時內都維持在 2 微克每毫升以上，比活性從十八小時到實驗結束都在 5 到 8.4 U/mg 之間，所以它在反應器裡並沒有崩掉。在機器外面沒有，而這是我們自己列出來的缺口。我們兩個穩定性讀值方向相反：有一管在三到六小時之間從 0.5503 掉到 0.1414 毫莫耳 α-ketobutyrate，推出 0.7 到 1.5 小時的表觀半衰期，而另一次有重複的實驗在前八小時是上升的——而掉下來那一管只讀了一次。兩者都不是在測「採收後的製劑」，而那才是決定能不能備庫的量；這件事很重要，因為十台二十公升的反應器需要 5.4 天才能做出一公頃的用量，而預報只看得到三天，所以系統必須靠備庫運轉。如果不能備庫，穩定化就會變成限制性的問題。",
+"trap_en":"Answering only with the 72-hour reactor data. The question is about the harvested material in a tank or an irrigation line, and that has never been measured.",
+"trap_zh":"只用反應器 72 小時的數據回答。問題問的是採收後在桶子或灌溉管線裡的材料，而那從來沒有被量過。",
+"nodes":[
+"M_ACT",
+"D_TIMING",
+"C_CF"
+],
+"figs":[
+"m07"
+],
+"basis":"instructor's priority set, 30 Oct read-through of Results, Hardware and Plants",
+"dom":"biomanufacturing",
+"id":"q233"
+},
+{
+"q_en":"Name the two links in your chain that have never been demonstrated.",
+"q_zh":"說出你們整條鏈上從來沒有被展示過的兩個環節。",
+"type":"integrate",
+"tier":"A",
+"deep":1,
+"star":1,
+"pages":[
+"results#Overview",
+"results#Stress detection",
+"plant#Application"
+],
+"seat":"hw",
+"backup":"dry",
+"kw_en":[
+"forecast to light",
+"permeate to irrigation",
+"each has a smallest closing experiment"
+],
+"kw_zh":[
+"預測到燈",
+"透過液到灌溉",
+"各有一個最小的收口實驗"
+],
+"a_en":"Forecast to light, and permeate to irrigation. No forecast has ever driven a light that reached a culture — the models were scored on recorded runs and the green strip was never fitted inside the reactor, so that stage is not joined to the next end to end. And every plant trial applied the material by hand, so the irrigation line with its mixing point and drip emitters is a design, not a result. The smallest experiment that closes the first is one reactor run where the stress index sets the lamp level automatically and the light is logged alongside OD and activity; for the second it is one hydroponic bed fed from the shell side through the mixing point, with the protectant measured at the emitter rather than at the reactor.",
+"a_zh":"預測到燈，以及透過液到灌溉。從來沒有任何一次預測驅動的燈照到過培養液——模型是在已記錄的實驗上評分的，而綠光燈條也從來沒有裝進反應器本體，所以這一段和下一段並沒有端到端接起來。另外每一次植物試驗都是手動施用，所以那條帶著混合點和滴灌出水口的灌溉管線是一個設計，不是一個結果。收掉第一個的最小實驗是：跑一次反應器，讓逆境指數自動決定燈的強度，並把光照和 OD、活性一起記錄下來；第二個則是用殼側經過混合點去餵一張水耕床，並且在出水口而不是在反應器量保護蛋白。",
+"trap_en":"Naming weak links instead of missing ones. These two are absent, not weak, and a judge values hearing them volunteered.",
+"trap_zh":"講出「比較弱的環節」而不是「缺失的環節」。這兩個是完全不存在，不是弱；評審重視你主動講出來。",
+"nodes":[
+"Z_CONTAIN",
+"C_GATE",
+"D_TIMING"
+],
+"figs":[
+"n01"
+],
+"basis":"instructor's follow-up set, 30 Oct",
+"dom":"biomanufacturing",
+"id":"q234"
 },
 {
 "q_en":"Where do you see your product in the greater market, and how will you implement it?",
@@ -6352,7 +8002,10 @@ var QUESTIONS = [
 "basis":"like GEMS-TAIWAN 2025: where in the greater market?",
 "dom":"entrepreneurship",
 "deep":0,
-"id":"q209"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q235"
 },
 {
 "q_en":"Have you identified funding sources or investors who could de-risk the technology enough to bring it to market?",
@@ -6381,7 +8034,10 @@ var QUESTIONS = [
 "basis":"like GEMS-TAIWAN 2025: investors to de-risk",
 "dom":"entrepreneurship",
 "deep":0,
-"id":"q210"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q236"
 },
 {
 "q_en":"How would you improve the project if you were given funding?",
@@ -6410,7 +8066,10 @@ var QUESTIONS = [
 "basis":"like GEMS-TAIWAN 2025: improve if given funding",
 "dom":"entrepreneurship",
 "deep":0,
-"id":"q211"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q237"
 },
 {
 "q_en":"May I ask about the cost?",
@@ -6439,7 +8098,10 @@ var QUESTIONS = [
 "basis":"like GEMS-TAIWAN 2024: may I ask about the cost?",
 "dom":"entrepreneurship",
 "deep":0,
-"id":"q212"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q238"
 },
 {
 "q_en":"How could you scale this?",
@@ -6470,7 +8132,10 @@ var QUESTIONS = [
 "basis":"like GEMS-TAIWAN 2024: how could you scale this?",
 "dom":"entrepreneurship",
 "deep":0,
-"id":"q213"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q239"
 },
 {
 "q_en":"Why a social enterprise and not a conventional business, and what drove that choice?",
@@ -6499,7 +8164,10 @@ var QUESTIONS = [
 "basis":"like Timmy's website: why a social enterprise",
 "dom":"entrepreneurship",
 "deep":0,
-"id":"q214"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q240"
 },
 {
 "q_en":"How big is your market, and how did you work that out?",
@@ -6528,7 +8196,10 @@ var QUESTIONS = [
 "basis":"like ICJFLS 2025: unmet market needs",
 "dom":"entrepreneurship",
 "deep":0,
-"id":"q215"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q241"
 },
 {
 "q_en":"How did you validate your business model?",
@@ -6558,7 +8229,10 @@ var QUESTIONS = [
 "basis":"like KU Leuven 2025: how did you validate your business model?",
 "dom":"entrepreneurship",
 "deep":0,
-"id":"q216"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q242"
 },
 {
 "q_en":"What is your cost advantage over existing products?",
@@ -6587,7 +8261,10 @@ var QUESTIONS = [
 "basis":"like ICJFLS 2025: what is your cost advantage?",
 "dom":"entrepreneurship",
 "deep":0,
-"id":"q217"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q243"
 },
 {
 "q_en":"Why do small farms matter for your business, and what do the numbers say?",
@@ -6617,7 +8294,10 @@ var QUESTIONS = [
 "basis":"like ICJFLS 2025: unmet market needs",
 "dom":"entrepreneurship",
 "deep":0,
-"id":"q218"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q244"
 },
 {
 "q_en":"Why did you set the price at twice your cost, the same for every farm?",
@@ -6646,7 +8326,10 @@ var QUESTIONS = [
 "basis":"design-check on pricing",
 "dom":"entrepreneurship",
 "deep":0,
-"id":"q219"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q245"
 },
 {
 "q_en":"Walk me through how you calculated your break-even point.",
@@ -6675,7 +8358,10 @@ var QUESTIONS = [
 "basis":"like KU Leuven 2025: business model validation",
 "dom":"entrepreneurship",
 "deep":0,
-"id":"q220"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q246"
 },
 {
 "q_en":"How do you know farmers will actually pay for this?",
@@ -6705,7 +8391,10 @@ var QUESTIONS = [
 "basis":"like Science-Tokyo 2025: support farmer adoption",
 "dom":"entrepreneurship",
 "deep":0,
-"id":"q221"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q247"
 },
 {
 "q_en":"What happens to the business if you sell much less than planned?",
@@ -6734,7 +8423,10 @@ var QUESTIONS = [
 "basis":"like Tsinglan 2025: long-term funding challenges",
 "dom":"entrepreneurship",
 "deep":0,
-"id":"q222"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q248"
 },
 {
 "q_en":"Can ReLEAF be used on organic farms?",
@@ -6764,7 +8456,10 @@ var QUESTIONS = [
 "basis":"boundary on organic farming; Biomanufacturing says 'built around organic', see gaps",
 "dom":"entrepreneurship",
 "deep":0,
-"id":"q223"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q249"
 },
 {
 "q_en":"Why did you pick tomato as your target crop?",
@@ -6795,7 +8490,10 @@ var QUESTIONS = [
 "basis":"like NUS_Singapore 2021: validate before farmer use",
 "dom":"entrepreneurship",
 "deep":0,
-"id":"q224"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q250"
 },
 {
 "q_en":"Why not just sell the protectant in a bottle, or use an irrigation controller like Agriweather's?",
@@ -6825,7 +8523,10 @@ var QUESTIONS = [
 "basis":"alternatives probe: why not X (Mr. Lu, Agriweather)",
 "dom":"entrepreneurship",
 "deep":0,
-"id":"q225"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q251"
 },
 {
 "q_en":"How do you compete with cheap chemical pesticides and fertilizers?",
@@ -6854,7 +8555,10 @@ var QUESTIONS = [
 "basis":"like TSINGHUA 2025: customer acquisition and cost",
 "dom":"entrepreneurship",
 "deep":0,
-"id":"q226"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q252"
 },
 {
 "q_en":"Your Math Model says individual ownership is out of reach, yet your business plan sells a package to a one-hectare farm. Which is it?",
@@ -6885,7 +8589,10 @@ var QUESTIONS = [
 "basis":"like KU Leuven 2025: business model coherence",
 "dom":"entrepreneurship",
 "deep":0,
-"id":"q227"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q253"
 },
 {
 "q_en":"How does your Math Model change your cost and dose assumptions?",
@@ -6915,7 +8622,10 @@ var QUESTIONS = [
 "basis":"model-to-business integration",
 "dom":"entrepreneurship",
 "deep":0,
-"id":"q228"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q254"
 },
 {
 "q_en":"How did your conversations with experts change your business plan?",
@@ -6945,7 +8655,10 @@ var QUESTIONS = [
 "basis":"integration probe: HP to business plan",
 "dom":"entrepreneurship",
 "deep":0,
-"id":"q229"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q255"
 },
 {
 "q_en":"What if the regulator classes your product as a pesticide or a GMO release?",
@@ -6975,7 +8688,10 @@ var QUESTIONS = [
 "basis":"regulatory boundary probe",
 "dom":"entrepreneurship",
 "deep":0,
-"id":"q230"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q256"
 },
 {
 "q_en":"What does regulation cost you in time and money?",
@@ -7005,7 +8721,10 @@ var QUESTIONS = [
 "basis":"regulatory cost as a barrier",
 "dom":"entrepreneurship",
 "deep":0,
-"id":"q231"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q257"
 },
 {
 "q_en":"Which Taiwanese laws and regulators decide whether you can sell this?",
@@ -7035,7 +8754,10 @@ var QUESTIONS = [
 "basis":"regulatory fact check",
 "dom":"entrepreneurship",
 "deep":0,
-"id":"q232"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q258"
 },
 {
 "q_en":"Is your containment-based regulatory pathway confirmed in Taiwan?",
@@ -7065,7 +8787,10 @@ var QUESTIONS = [
 "basis":"inconsistency between Entrepreneurship and Laws pages",
 "dom":"entrepreneurship",
 "deep":0,
-"id":"q233"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q259"
 },
 {
 "q_en":"Why the Philippines after Taiwan, and not the United States or Europe?",
@@ -7095,7 +8820,10 @@ var QUESTIONS = [
 "basis":"like ICT-MUMBAI 2025: go-to-market strategy",
 "dom":"entrepreneurship",
 "deep":0,
-"id":"q234"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q260"
 },
 {
 "q_en":"What are your milestones from here to commercialization?",
@@ -7125,7 +8853,10 @@ var QUESTIONS = [
 "basis":"like BWYA 2025: when commercially available",
 "dom":"entrepreneurship",
 "deep":0,
-"id":"q235"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q261"
 },
 {
 "q_en":"Small farmers cannot afford US$5,550 upfront. How will they pay?",
@@ -7155,7 +8886,10 @@ var QUESTIONS = [
 "basis":"like Science-Tokyo 2025: support farmer adoption",
 "dom":"entrepreneurship",
 "deep":0,
-"id":"q236"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q262"
 },
 {
 "q_en":"What is your relationship with CH Biotech: partner or competitor?",
@@ -7186,7 +8920,10 @@ var QUESTIONS = [
 "basis":"partnership probe",
 "dom":"entrepreneurship",
 "deep":0,
-"id":"q237"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q263"
 },
 {
 "q_en":"Do you plan to patent ReLEAF, or will it be open?",
@@ -7217,7 +8954,10 @@ var QUESTIONS = [
 "basis":"IP and openness probe",
 "dom":"entrepreneurship",
 "deep":0,
-"id":"q238"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q264"
 },
 {
 "q_en":"What does one dose of protectant cost you to make?",
@@ -7247,7 +8987,10 @@ var QUESTIONS = [
 "basis":"like Leiden 2023: what reduces cost?",
 "dom":"entrepreneurship",
 "deep":0,
-"id":"q239"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q265"
 },
 {
 "q_en":"What is the biggest risk to your business?",
@@ -7276,7 +9019,10 @@ var QUESTIONS = [
 "basis":"like Tsinglan 2025: long-term challenges",
 "dom":"entrepreneurship",
 "deep":0,
-"id":"q240"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q266"
 },
 {
 "q_en":"Why should an investor believe your 24% return?",
@@ -7305,7 +9051,10 @@ var QUESTIONS = [
 "basis":"financial credibility probe",
 "dom":"entrepreneurship",
 "deep":0,
-"id":"q241"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q267"
 },
 {
 "q_en":"How does making culture medium from hay change your economics?",
@@ -7336,7 +9085,50 @@ var QUESTIONS = [
 "basis":"like SUS-TECH 2025: cut costs",
 "dom":"entrepreneurship",
 "deep":0,
-"id":"q242"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q268"
+},
+{
+"q_en":"Your financial projection runs five years, your initial investment looks low when it is unusual to make money in the first three or four years, and there is no terminal value anywhere in it. What makes you think the projection is reasonable?",
+"q_zh":"你們的財務預測只做五年，初始投資看起來很低——但前三四年賺不到錢其實才是常態——而且整份裡面沒有任何終值。你們憑什麼覺得這份預測合理？",
+"type":"boundary",
+"tier":"A",
+"deep":1,
+"star":1,
+"pages":[
+"entrepreneurship#Break-even analysis",
+"entrepreneurship#Return for investors",
+"entrepreneurship#Investment Cost"
+],
+"seat":"biz",
+"backup":"dry",
+"kw_en":[
+"a cash plan, not a valuation",
+"peak funding US$196k, break-even Year 4",
+"70 percent case goes to Year 6 and minus 7 percent"
+],
+"kw_zh":[
+"這是現金計畫不是估值",
+"資金低點 19.6 萬美金、第 4 年損益兩平",
+"七成情境變第 6 年、IRR −7%"
+],
+"a_en":"Because it is a cash plan and not a valuation: we are a social enterprise asking what funding gets us to self-sustaining, so we report the peak cash low point of minus US$196,000 in Year 1 and break-even at 226 hectares against US$627,000 of fixed cost in Years 0 to 4, rather than a terminal value we would have to invent a multiple for. We also took the harder version on purpose — we could have sold to industrial farms in the first four years to reach break-even faster and chose not to, and our price is fixed at twice our cost. Where I would want to be judged is the sensitivity case: at seventy percent of planned hectares, break-even moves to Year 6 and the internal rate of return goes to about minus seven percent, which is exactly why our own subsidy to farmers only starts after cumulative cash turns positive. And the number that should worry you most is not the terminal value — it is that the capital line uses US$2,280 per hectare while our own Math Model derives US$3,800, and this analysis has not been rebuilt on that figure.",
+"a_zh":"因為這是一份現金計畫而不是估值：我們是社會企業，問的是「要多少資金才能走到自給自足」，所以我們報的是第 1 年的現金低點 −19.6 萬美金、以及在第 0 到 4 年 62.7 萬美金固定成本下、226 公頃的損益兩平點，而不是一個得自己發明倍數的終值。我們也刻意選了比較難的版本——我們本來可以在前四年賣給工業化農場、更快達到損益兩平，但我們沒有，而且定價固定在成本的兩倍。我希望被檢驗的是敏感度情境：在計畫公頃數的七成時，損益兩平延到第 6 年、內部報酬率掉到大約 −7%，這也正是為什麼我們自己對農民的補貼要等到累積現金轉正之後才開始。而最該讓你擔心的數字不是終值——是資本那一行用的是每公頃 US$2,280，而我們自己的數學模型算出來是 US$3,800，而這份分析還沒有用後面那個數字重做過。",
+"trap_en":"Defending the low initial investment. Year 0 is a build year, the US$627,000 is cumulative over five years, and Year 1 assumes twenty paying hectares before any field data exists.",
+"trap_zh":"替「初始投資很低」辯護。第 0 年是建置年、62.7 萬是五年累積，而第 1 年假設在沒有任何田間數據之前就賣出二十公頃。",
+"nodes":[
+"B_BREAK",
+"C_MKT",
+"C_SCALE"
+],
+"figs":[
+"b02"
+],
+"basis":"instructor's priority set, 30 Oct read-through of Results, Hardware and Plants",
+"dom":"entrepreneurship",
+"id":"q269"
 },
 {
 "q_en":"Why did you use Arabidopsis as your model plant?",
@@ -7366,7 +9158,10 @@ var QUESTIONS = [
 "basis":"like IISER-Kolkata 2025: why use __ as your model organism?",
 "dom":"plant",
 "deep":0,
-"id":"q243"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q270"
 },
 {
 "q_en":"Which stresses did you test, and how did you apply them?",
@@ -7395,7 +9190,10 @@ var QUESTIONS = [
 "basis":"recorded pattern: what exactly did you measure / how did you apply it",
 "dom":"plant",
 "deep":0,
-"id":"q244"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q271"
 },
 {
 "q_en":"What did you measure on the plants?",
@@ -7425,7 +9223,10 @@ var QUESTIONS = [
 "basis":"recorded pattern: which readouts and why",
 "dom":"plant",
 "deep":0,
-"id":"q245"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q272"
 },
 {
 "q_en":"What is each of your three protectants meant to do in the plant?",
@@ -7455,7 +9256,10 @@ var QUESTIONS = [
 "basis":"recorded pattern: mechanism of your protein",
 "dom":"plant",
 "deep":0,
-"id":"q246"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q273"
 },
 {
 "q_en":"Why 100 mM NaCl as your working stress?",
@@ -7484,7 +9288,10 @@ var QUESTIONS = [
 "basis":"recorded pattern: why this concentration",
 "dom":"plant",
 "deep":0,
-"id":"q247"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q274"
 },
 {
 "q_en":"Why test the protectant before, with and after the stress?",
@@ -7514,7 +9321,10 @@ var QUESTIONS = [
 "basis":"like Munich 2025: why did you choose this design",
 "dom":"plant",
 "deep":0,
-"id":"q248"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q275"
 },
 {
 "q_en":"Why did you use agar, hydroponics and soil instead of one system?",
@@ -7543,7 +9353,10 @@ var QUESTIONS = [
 "basis":"recorded pattern: why this platform",
 "dom":"plant",
 "deep":0,
-"id":"q249"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q276"
 },
 {
 "q_en":"Why did you move soil tests from one-month-old to two-week-old plants?",
@@ -7572,7 +9385,10 @@ var QUESTIONS = [
 "basis":"like HPi-Potsdam 2025: expert judgement behind your choice",
 "dom":"plant",
 "deep":0,
-"id":"q250"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q277"
 },
 {
 "q_en":"Why did you spray ACC deaminase on the shoots instead of the roots?",
@@ -7601,7 +9417,10 @@ var QUESTIONS = [
 "basis":"recorded pattern: why this application method",
 "dom":"plant",
 "deep":0,
-"id":"q251"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q278"
 },
 {
 "q_en":"How many plants per group, and how many replicates did you run?",
@@ -7631,7 +9450,10 @@ var QUESTIONS = [
 "basis":"like Munich 2025: do you do any replicates?",
 "dom":"plant",
 "deep":0,
-"id":"q252"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q279"
 },
 {
 "q_en":"What controls did you run?",
@@ -7660,7 +9482,10 @@ var QUESTIONS = [
 "basis":"recorded pattern: what were your controls",
 "dom":"plant",
 "deep":0,
-"id":"q253"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q280"
 },
 {
 "q_en":"What statistics did you use?",
@@ -7690,7 +9515,10 @@ var QUESTIONS = [
 "basis":"recorded pattern: statistics and significance",
 "dom":"plant",
 "deep":0,
-"id":"q254"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q281"
 },
 {
 "q_en":"How do you know ACC deaminase really rescued plants under salt?",
@@ -7720,7 +9548,10 @@ var QUESTIONS = [
 "basis":"like Munich 2025: replicates? plus how do you know",
 "dom":"plant",
 "deep":0,
-"id":"q255"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q282"
 },
 {
 "q_en":"How do you know your stress treatment actually reached the plants?",
@@ -7749,7 +9580,10 @@ var QUESTIONS = [
 "basis":"recorded pattern: how do you know the stress worked",
 "dom":"plant",
 "deep":0,
-"id":"q256"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q283"
 },
 {
 "q_en":"Your trehalose result says 8.7-fold chlorophyll. Why should we trust that number?",
@@ -7779,7 +9613,10 @@ var QUESTIONS = [
 "basis":"recorded pattern: how do you know the result is real",
 "dom":"plant",
 "deep":0,
-"id":"q257"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q284"
 },
 {
 "q_en":"Is your hydroponic dilution series a real dose-response?",
@@ -7808,7 +9645,10 @@ var QUESTIONS = [
 "basis":"recorded pattern: dose and concentration choice",
 "dom":"plant",
 "deep":0,
-"id":"q258"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q285"
 },
 {
 "q_en":"How does your protectant compare with the commercial CH Bio peptide?",
@@ -7838,7 +9678,10 @@ var QUESTIONS = [
 "basis":"recorded pattern: why not use the existing product",
 "dom":"plant",
 "deep":0,
-"id":"q259"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q286"
 },
 {
 "q_en":"Why not just put the beneficial bacteria into the soil?",
@@ -7867,7 +9710,10 @@ var QUESTIONS = [
 "basis":"like Technion 2022: why not the simpler route",
 "dom":"plant",
 "deep":0,
-"id":"q260"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q287"
 },
 {
 "q_en":"Why not use trehalose, which worked at 5 mM, as your protectant?",
@@ -7896,7 +9742,10 @@ var QUESTIONS = [
 "basis":"recorded pattern: why not the alternative",
 "dom":"plant",
 "deep":0,
-"id":"q261"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q288"
 },
 {
 "q_en":"Would this work on rice or tomato?",
@@ -7927,7 +9776,10 @@ var QUESTIONS = [
 "basis":"like NUS 2021: what would you need to validate before a farmer could use this",
 "dom":"plant",
 "deep":0,
-"id":"q262"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q289"
 },
 {
 "q_en":"What about drought, or other stresses?",
@@ -7957,7 +9809,10 @@ var QUESTIONS = [
 "basis":"recorded pattern: have you considered other stresses",
 "dom":"plant",
 "deep":0,
-"id":"q263"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q290"
 },
 {
 "q_en":"If a farmer only treats after the damage shows, does it still help?",
@@ -7987,7 +9842,10 @@ var QUESTIONS = [
 "basis":"recorded pattern: what if conditions differ",
 "dom":"plant",
 "deep":0,
-"id":"q264"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q291"
 },
 {
 "q_en":"Can the protectants hurt a plant that is not stressed?",
@@ -8016,7 +9874,10 @@ var QUESTIONS = [
 "basis":"like NUS 2021: what are the risks",
 "dom":"plant",
 "deep":0,
-"id":"q265"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q292"
 },
 {
 "q_en":"How did the plant data change your math model?",
@@ -8046,7 +9907,10 @@ var QUESTIONS = [
 "basis":"like Great Bay 2025: model and real testing correlation",
 "dom":"plant",
 "deep":0,
-"id":"q266"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q293"
 },
 {
 "q_en":"How did outside experts change your plant protocol?",
@@ -8076,7 +9940,10 @@ var QUESTIONS = [
 "basis":"like HPi-Potsdam 2025: expert input that changed the work",
 "dom":"plant",
 "deep":0,
-"id":"q267"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q294"
 },
 {
 "q_en":"How did your hydroponic hardware change what the plant team could test?",
@@ -8106,7 +9973,10 @@ var QUESTIONS = [
 "basis":"recorded pattern: how did hardware serve the experiment",
 "dom":"plant",
 "deep":0,
-"id":"q268"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q295"
 },
 {
 "q_en":"Does your timing result support the forecast and sensor part of ReLEAF?",
@@ -8136,7 +10006,10 @@ var QUESTIONS = [
 "basis":"recorded pattern: integration of lab result with system design",
 "dom":"plant",
 "deep":0,
-"id":"q269"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q296"
 },
 {
 "q_en":"What went wrong in your plant experiments?",
@@ -8165,7 +10038,10 @@ var QUESTIONS = [
 "basis":"recorded pattern: what failed",
 "dom":"plant",
 "deep":0,
-"id":"q270"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q297"
 },
 {
 "q_en":"Your headline says pre and post rescue but co-treatment does not. Do all your runs agree?",
@@ -8195,7 +10071,10 @@ var QUESTIONS = [
 "basis":"recorded pattern: do your results hold up",
 "dom":"plant",
 "deep":0,
-"id":"q271"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q298"
 },
 {
 "q_en":"Did you show that ACC deaminase lowers ethylene in your plants?",
@@ -8225,7 +10104,10 @@ var QUESTIONS = [
 "basis":"recorded pattern: how do you know the mechanism",
 "dom":"plant",
 "deep":0,
-"id":"q272"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q299"
 },
 {
 "q_en":"Did the protectants work in soil, which is closest to a farm?",
@@ -8255,7 +10137,10 @@ var QUESTIONS = [
 "basis":"recorded pattern: honesty probe on limits",
 "dom":"plant",
 "deep":0,
-"id":"q273"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q300"
 },
 {
 "q_en":"Which protectant worked best?",
@@ -8285,7 +10170,10 @@ var QUESTIONS = [
 "basis":"recorded pattern: which result is strongest",
 "dom":"plant",
 "deep":0,
-"id":"q274"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q301"
 },
 {
 "q_en":"How much protectant would a farmer need to apply?",
@@ -8315,7 +10203,10 @@ var QUESTIONS = [
 "basis":"recorded pattern: scale and dose",
 "dom":"plant",
 "deep":0,
-"id":"q275"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q302"
 },
 {
 "q_en":"What is your next plant experiment?",
@@ -8344,7 +10235,10 @@ var QUESTIONS = [
 "basis":"recorded pattern: what is your next step",
 "dom":"plant",
 "deep":0,
-"id":"q276"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q303"
 },
 {
 "q_en":"You report that the CH peptide, a product sold against drought, also confers salinity tolerance. What are the candidate molecular mechanisms, and which of them can your data actually distinguish?",
@@ -8377,7 +10271,10 @@ var QUESTIONS = [
 "author_zh":"Kyle Peng（植物顧問）",
 "basis":"from Kyle Peng's 24 Oct research-highlights note, CH peptide mechanism inquiry",
 "dom":"plant",
-"id":"q277"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q304"
 },
 {
 "q_en":"How do you experimentally exclude the confounding hypothesis that a protectant preparation acted simply as a nitrogen-rich nutrient source, that is, a fertilisation effect rather than protection?",
@@ -8410,7 +10307,10 @@ var QUESTIONS = [
 "author_zh":"Kyle Peng（植物顧問）",
 "basis":"from Kyle Peng's 24 Oct research-highlights note, fertilisation-effect confound",
 "dom":"plant",
-"id":"q278"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q305"
 },
 {
 "q_en":"Your enzyme's own reaction products are ammonia and alpha-ketobutyrate. On a plate, how do you separate ACC deaminase activity from the nitrogen the reaction releases?",
@@ -8443,7 +10343,10 @@ var QUESTIONS = [
 "author_zh":"Kyle Peng（植物顧問）",
 "basis":"from Kyle Peng's 24 Oct research-highlights note, nitrogen-source confound applied to ACCD",
 "dom":"plant",
-"id":"q279"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q306"
 },
 {
 "q_en":"Resource allocation theory posits a trade-off between vegetative growth rate and stress tolerance. Did your tolerance gains come with a fitness cost, and in which arm of your design would that cost appear?",
@@ -8476,7 +10379,10 @@ var QUESTIONS = [
 "author_zh":"Kyle Peng（植物顧問）",
 "basis":"from Kyle Peng's 24 Oct research-highlights note, growth versus tolerance trade-off",
 "dom":"plant",
-"id":"q280"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q307"
 },
 {
 "q_en":"Did the tolerance gain compromise defence against biotic stresses, such as phytophagous insects or pathogens? BoPEP4 in particular is an elicitor, so what would you predict?",
@@ -8509,7 +10415,10 @@ var QUESTIONS = [
 "author_zh":"Kyle Peng（植物顧問）",
 "basis":"from Kyle Peng's 24 Oct research-highlights note, biotic-defence half of the trade-off question",
 "dom":"plant",
-"id":"q281"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q308"
 },
 {
 "q_en":"What are the stability profiles and degradation half-lives of your bioprotectants in soil, in hydroponic medium and on a foliar surface?",
@@ -8542,7 +10451,10 @@ var QUESTIONS = [
 "author_zh":"Kyle Peng（植物顧問）",
 "basis":"from Kyle Peng's 24 Oct research-highlights note, stability and degradation half-life inquiry",
 "dom":"plant",
-"id":"q282"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q309"
 },
 {
 "q_en":"Is there empirical evidence confirming cellular uptake and systemic translocation of these intact molecules by the host plant?",
@@ -8575,7 +10487,10 @@ var QUESTIONS = [
 "author_zh":"Kyle Peng（植物顧問）",
 "basis":"from Kyle Peng's 24 Oct research-highlights note, uptake and systemic translocation inquiry",
 "dom":"plant",
-"id":"q283"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q310"
 },
 {
 "q_en":"Most high-molecular-weight proteins cannot passively traverse the plant cell wall. By what mechanism, then, does exogenous ACC deaminase provide abiotic stress tolerance, given the enzyme's native intracellular localisation and its substrate accessibility?",
@@ -8608,7 +10523,10 @@ var QUESTIONS = [
 "author_zh":"Kyle Peng（植物顧問）",
 "basis":"from Kyle Peng's 24 Oct research-highlights note, cell-wall barrier and ACCD localisation inquiry",
 "dom":"plant",
-"id":"q284"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q311"
 },
 {
 "q_en":"You sprayed the enzyme onto shoots. The rhizosphere account you have just described is a root-zone argument, so how does a sprayed leaf fit the mechanism you are claiming?",
@@ -8641,7 +10559,10 @@ var QUESTIONS = [
 "author_zh":"Kyle Peng（植物顧問）",
 "basis":"derived from Kyle Peng's 24 Oct note: his substrate-accessibility point pressed on the foliar route",
 "dom":"plant",
-"id":"q285"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q312"
 },
 {
 "q_en":"Glutathione is known to enhance adaptation to heat, salinity and drought. Do your three bioprotectants act through glutathione-related pathways, or by upregulating the plant's own glutathione homeostasis?",
@@ -8674,7 +10595,10 @@ var QUESTIONS = [
 "author_zh":"Kyle Peng（植物顧問）",
 "basis":"from Kyle Peng's 24 Oct research-highlights note, shared GSH-pathway inquiry",
 "dom":"plant",
-"id":"q286"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q313"
 },
 {
 "q_en":"Your first highlight credits crude, unpurified ACC deaminase and BoPEP4 from your own bioreactor with the anticipated protective effects. State precisely what that rests on, and where it stops.",
@@ -8707,7 +10631,10 @@ var QUESTIONS = [
 "author_zh":"Kyle Peng（植物顧問）",
 "basis":"from Kyle Peng's 24 Oct research-highlights note, laboratory-production highlight and its limit",
 "dom":"plant",
-"id":"q287"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q314"
 },
 {
 "q_en":"Crude culture or purified protein, which is your active ingredient? And what does working with a crude preparation cost you in attribution?",
@@ -8740,7 +10667,10 @@ var QUESTIONS = [
 "author_zh":"Kyle Peng（植物顧問）",
 "basis":"derived from Kyle Peng's 24 Oct note: his crude-preparation highlight read as an active-ingredient question",
 "dom":"plant",
-"id":"q288"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q315"
 },
 {
 "q_en":"Your second highlight says sequence-modified protectants maintained bioactivity. Which modification was tested, and if a variant performs like wild type, is that evidence of robustness or of a method that cannot resolve a difference?",
@@ -8773,7 +10703,10 @@ var QUESTIONS = [
 "author_zh":"Kyle Peng（植物顧問）",
 "basis":"derived from Kyle Peng's 24 Oct note: his structural-modification highlight read as a method-resolution question",
 "dom":"plant",
-"id":"q289"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q316"
 },
 {
 "q_en":"You propose isolating active polypeptide motifs and scaling up toward field application. In practice, what breaks first when you try that?",
@@ -8806,7 +10739,10 @@ var QUESTIONS = [
 "author_zh":"Kyle Peng（植物顧問）",
 "basis":"from Kyle Peng's 24 Oct research-highlights note, spectrum-expansion and scale-up highlight",
 "dom":"plant",
-"id":"q290"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q317"
 },
 {
 "q_en":"Before we come to your data: what does ethylene actually do to a plant under stress, and why would taking its precursor away help?",
@@ -8837,7 +10773,10 @@ var QUESTIONS = [
 "basis":"the hormone the whole project is aimed at",
 "dom":"plant",
 "deep":0,
-"id":"q291"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q318"
 },
 {
 "q_en":"Salt stress is often called two stresses in one. What are the two, and which one does your 100 mM plate deliver first?",
@@ -8868,7 +10807,10 @@ var QUESTIONS = [
 "basis":"the stress the whole screen is built on",
 "dom":"plant",
 "deep":0,
-"id":"q292"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q319"
 },
 {
 "q_en":"Chlorophyll is your main number. When chlorophyll falls, what has actually happened in the leaf?",
@@ -8900,7 +10842,10 @@ var QUESTIONS = [
 "basis":"the readout most of the plant claims rest on",
 "dom":"plant",
 "deep":0,
-"id":"q293"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q320"
 },
 {
 "q_en":"Your hydroponic box is supposed to control things a soil pot cannot. Name them, and then tell me what your box failed to control.",
@@ -8931,7 +10876,10 @@ var QUESTIONS = [
 "basis":"a nominated-area system the judges will probe",
 "dom":"plant",
 "deep":0,
-"id":"q294"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q321"
 },
 {
 "q_en":"Why does a root grow away from salt, and what did looking for that buy you?",
@@ -8962,7 +10910,10 @@ var QUESTIONS = [
 "basis":"a classic warm-up with a hidden design limit",
 "dom":"plant",
 "deep":0,
-"id":"q295"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q322"
 },
 {
 "q_en":"Nine seedlings on one plate, and that plate has one position on the rack. Tell me what your n of nine is actually counting.",
@@ -8994,7 +10945,10 @@ var QUESTIONS = [
 "trap_zh":"把 n=9 說成九個生物重複，而不承認平板才是單位、而且位置效應跟著它一起走。",
 "basis":"pseudo-replication is the first thing a statistician checks",
 "dom":"plant",
-"id":"q296"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q323"
 },
 {
 "q_en":"Which test produced the asterisks on your figures, and what exactly do those asterisks compare?",
@@ -9025,7 +10979,10 @@ var QUESTIONS = [
 "trap_zh":"拿四顆星當作保護劑有效的證據，但那些星號比較的是同一處理組內的鹽濃度；也忘了 1.74 是每克的數值。",
 "basis":"the figure's significance does not test the claim",
 "dom":"plant",
-"id":"q297"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q324"
 },
 {
 "q_en":"Suppose chlorophyll per gram goes up forty per cent and fresh weight does not move. What has changed in that plant, and what has not?",
@@ -9056,7 +11013,10 @@ var QUESTIONS = [
 "trap_zh":"把每克的百分比直接講成生長、拯救或產量的結論。",
 "basis":"the normalisation trap in the team's own figures",
 "dom":"plant",
-"id":"q298"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q325"
 },
 {
 "q_en":"Dose, concentration and total amount applied are three different things across your sets. Walk me through them.",
@@ -9088,7 +11048,10 @@ var QUESTIONS = [
 "trap_zh":"引用某一個噴灑體積當劑量卻不說是哪種平板的單位面積量，或把它說成最低有效劑量。",
 "basis":"the bioreactor is sized from this number",
 "dom":"plant",
-"id":"q299"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q326"
 },
 {
 "q_en":"Your three timing arms are one day apart. What can one day actually change in an Arabidopsis seedling, and what is that arm really asking?",
@@ -9120,7 +11083,10 @@ var QUESTIONS = [
 "trap_zh":"把最佳施用時機講成已經確定，但瓊脂偏向預先處理、土壤那一輪偏向事後處理。",
 "basis":"timing is the result the AIoT forecast is justified by",
 "dom":"plant",
-"id":"q300"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q327"
 },
 {
 "q_en":"Rescue and priming are not the same claim. Which one are you testing, and which one could your assay even detect?",
@@ -9152,7 +11118,10 @@ var QUESTIONS = [
 "trap_zh":"用單一逆境、單一終點的實驗去主張 priming 機制。",
 "basis":"an advisor redirected the project from rescue to prevention",
 "dom":"plant",
-"id":"q301"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q328"
 },
 {
 "q_en":"ACC and the step that makes ethylene are inside the plant cell, and a cell wall will not pass a forty-kilodalton enzyme. So how is a sprayed ACC deaminase supposed to lower ethylene at all?",
@@ -9184,7 +11153,10 @@ var QUESTIONS = [
 "trap_zh":"說酵素進到植物裡、或直接作用在 ethylene 上，而不是解釋根外的 ACC 消耗端與外排梯度。",
 "basis":"the mechanism a plant postdoc will test first",
 "dom":"plant",
-"id":"q302"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q329"
 },
 {
 "q_en":"Distinguish the apoplastic ACC pool from the intracellular one. Which pool does your enzyme see, and what follows for how much of it you need to make?",
@@ -9216,7 +11188,10 @@ var QUESTIONS = [
 "trap_zh":"以為酵素越多效果就越好，而沒看出限速的是植物把 ACC 排出去的速率。",
 "basis":"the dose target the bioreactor is sized against",
 "dom":"plant",
-"id":"q303"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q330"
 },
 {
 "q_en":"ACC has signalling roles of its own, independent of ethylene. What does that do to your mechanism?",
@@ -9247,7 +11222,10 @@ var QUESTIONS = [
 "trap_zh":"把 ACC 只當成 ethylene 的前驅物，因此沒意識到生長指標無法歸因效果來源。",
 "basis":"attribution of the effect to ethylene is not established",
 "dom":"plant",
-"id":"q304"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q331"
 },
 {
 "q_en":"Under salt the plant has to manage its stomata and its sodium to potassium ratio. Which of those could your protectant touch, and which did you measure?",
@@ -9278,7 +11256,10 @@ var QUESTIONS = [
 "trap_zh":"籠統地說保護劑提升耐鹽性，但數據裡完全沒有任何離子平衡的證據。",
 "basis":"half of salt stress is outside the proposed mechanism",
 "dom":"plant",
-"id":"q305"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q332"
 },
 {
 "q_en":"A thermo-priming treatment rewrites a transcriptome within hours. Your readouts are a weight and a pigment on day seventeen. What sits in that gap, and what does the far end look like for a farmer?",
@@ -9310,7 +11291,10 @@ var QUESTIONS = [
 "trap_zh":"拿終點的葉綠素當 priming 機制的證據，中間完全沒有早期的生化讀值。",
 "basis":"no measurement sits between the treatment and the phenotype",
 "dom":"plant",
-"id":"q306"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q333"
 },
 {
 "q_en":"BoPEP4 works through PEPR1-type receptor kinases, which switch on immunity. Would you expect that to cost the plant growth?",
@@ -9342,7 +11326,10 @@ var QUESTIONS = [
 "trap_zh":"把 BoPEP4 講成和另外兩個一樣的第三種保護劑，又跳過無逆境時觀察到的花青素。",
 "basis":"a defence elicitor is not a protectant in the same sense",
 "dom":"plant",
-"id":"q307"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q334"
 },
 {
 "q_en":"Exogenous spraying of plant protectants is already a commercial business. What exists on the market today, and what in your approach is actually new?",
@@ -9374,7 +11361,10 @@ var QUESTIONS = [
 "trap_zh":"說外源噴施保護劑是新的，但自己的對照就是照廠商稀釋倍數使用的商品。",
 "basis":"positioning against the product the team benchmarked against",
 "dom":"plant",
-"id":"q308"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q335"
 },
 {
 "q_en":"In soil at 300 mM, two of your three timings came out below the untreated control. Walk me through that.",
@@ -9406,7 +11396,10 @@ var QUESTIONS = [
 "trap_zh":"只引用事後處理多百分之十三，卻不說預先和同時處理其實低於未處理對照。",
 "basis":"soil is the system closest to a field and it reverses the agar ranking",
 "dom":"plant",
-"id":"q309"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q336"
 },
 {
 "q_en":"Nothing in your project measures ethylene. What is the longest chain you can actually defend, and where exactly does it break?",
@@ -9438,7 +11431,249 @@ var QUESTIONS = [
 "trap_zh":"拿 DNPH 的數字當作植物體內 ethylene 下降的證據，但它量的是試管裡的反應產物，而且低於定量下限。",
 "basis":"the project's central mechanism has no in-plant measurement",
 "dom":"plant",
-"id":"q310"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q337"
+},
+{
+"q_en":"Nine seedlings on one plate is n = 1, not n = 9. What happens to your p below 0.0001?",
+"q_zh":"一盤九棵苗，那是 n = 1 不是 n = 9。你們那個 p < 0.0001 還剩下什麼？",
+"type":"gap",
+"tier":"A",
+"deep":1,
+"star":1,
+"pages":[
+"plant#Results",
+"results#Agar-based salinity stress",
+"plant#Independent replicates"
+],
+"seat":"plant",
+"backup":"dry",
+"kw_en":[
+"seedlings in a plate are pseudoreplicates",
+"the plate is the unit",
+"the trend survives, the p value does not"
+],
+"kw_zh":[
+"同盤的苗是偽重複",
+"盤才是實驗單位",
+"趨勢還在，p 值沒了"
+],
+"a_en":"You are right, and it is the single biggest weakness in our plant work: seedlings inside one plate share their medium, their salt and their position in the chamber, so the plate is the experimental unit and the p value computed across nine seedlings is an overstatement. What survives is the trend rather than the statistic — the salt ladder is monotone across four levels, 74.95, 34.77, 11.00 and 1.36 millimetres of root length at 0, 75, 100 and 150 millimolar, and a dose response that clean does not depend on the test. What does not survive is any single-plate comparison between a treated and an untreated condition, which is why the Results page says no protectant of ours has a validated rescue while the Plants page reports what we saw. The fix is on our future-work list and it is specific: at least three independent plates per condition, so an improvement is a property of the condition and not of one plate.",
+"a_zh":"你說得對，而這是我們植物實驗最大的單一弱點：同一盤裡的苗共用培養基、共用鹽、也共用在生長箱裡的位置，所以盤才是實驗單位，用九棵苗算出來的 p 值是誇大的。還站得住的是趨勢而不是統計量——鹽度梯度在四個濃度上是單調的，0、75、100、150 mM 對應的主根長是 74.95、34.77、11.00、1.36 毫米，這麼乾淨的劑量反應不依賴任何檢定。站不住的是任何「單一盤的處理組對未處理組」的比較，這也是為什麼 Results 頁寫「我們沒有任何保護蛋白有經驗證的 rescue」，而 Plants 頁只報我們看到的現象。補救方式在我們的 future work 上，而且很具體：每個條件至少三個獨立的盤，讓改善成為條件的性質，而不是某一盤的性質。",
+"trap_en":"Defending the n. Concede the pseudoreplication first, then point at the monotone ladder as the result that does not need the test.",
+"trap_zh":"替 n 辯護。先承認偽重複，再指向那條單調的鹽度梯度——那是不需要檢定的結果。",
+"nodes":[
+"C_PSR",
+"P_LADDER"
+],
+"figs":[
+"p03",
+"p02"
+],
+"basis":"instructor's follow-up set, 30 Oct",
+"dom":"plant",
+"id":"q338"
+},
+{
+"q_en":"Your clearest rescues are trehalose at 8.7-fold and a commercial peptide. Neither is yours. Why should I believe your proteins do anything?",
+"q_zh":"你們最清楚的 rescue 是 8.7 倍的海藻糖和一個商業胜肽，兩個都不是你們做的。那我憑什麼相信你們的蛋白有用？",
+"type":"gap",
+"tier":"A",
+"deep":1,
+"star":1,
+"pages":[
+"plant#Pretests: trehalose",
+"plant#Testing the efficacy of commercial CH Bio peptide",
+"results#Protectant function"
+],
+"seat":"plant",
+"backup":"wet2",
+"kw_en":[
+"they are reference compounds",
+"they prove the assay can see a rescue",
+"ours are positives without replicates"
+],
+"kw_zh":[
+"那是參考化合物",
+"證明這套 assay 看得到 rescue",
+"我們的是沒有重複的正向結果"
+],
+"a_en":"You should not believe it yet, and we say so on the Results page. Trehalose and the CH Biotech peptide are reference compounds, and their job in our work is to show the assay can detect a rescue at all — trehalose at 5 millimolar raised chlorophyll about 8.7-fold at 100 millimolar sodium chloride with a clean dose series behind it. Our own positives are real but thin: ACC deaminase pre-treatment held about seventy percent more chlorophyll at 100 millimolar, ACC deaminase post-treatment was fourteen percent above the heat control, and BoPep4 at one in forty kept hydroponic seedlings green under salt — each one plate or one pot per condition, with the best timing differing between trials. So the claim is that we built an assay that can see a rescue and have not yet run our own proteins through it with the replication a claim needs.",
+"a_zh":"你現在還不該相信，而我們在 Results 頁上就是這樣寫的。海藻糖和正瀚的胜肽是參考化合物，它們在我們的工作裡的任務是證明「這套 assay 偵測得到 rescue」——5 mM 海藻糖在 100 mM NaCl 下讓葉綠素提高大約 8.7 倍，而且背後有一條乾淨的劑量系列。我們自己的正向結果是真的，但很薄：ACC 去胺酶事前處理在 100 mM 下多保住大約七成葉綠素、ACC 去胺酶事後處理比熱逆境對照高 14%、BoPep4 1/40 讓水耕苗在鹽逆境下維持綠色——每一個都是一個條件一盤或一盆，而且最佳時機在不同 trial 之間還不一致。所以我們的主張是：我們做出了一套看得到 rescue 的 assay，但還沒有用一個主張所需要的重複數把自己的蛋白跑過一遍。",
+"trap_en":"Inflating our own positives to match the reference compounds. The strength of this answer is the order: assay first, our results second, with their n stated.",
+"trap_zh":"把自己的正向結果吹到跟參考化合物一樣強。這題的力量在順序：先講 assay，再講我們的結果，並且把 n 講出來。",
+"nodes":[
+"P_TREH",
+"C_PSR"
+],
+"figs":[
+"p01",
+"p02"
+],
+"basis":"instructor's follow-up set, 30 Oct",
+"dom":"plant",
+"id":"q339"
+},
+{
+"q_en":"Your hydroponic data show the host culture alone stresses the plants, and you voided the ACC deaminase salinity run because culture volume was not standardised. How do you know any rescue is the protein and not the medium?",
+"q_zh":"你們的水耕數據顯示光是宿主菌培養液就會讓植物有壓力，而且你們因為各組培養液體積沒有統一而把 ACC 去胺酶的鹽逆境實驗作廢。那你們怎麼知道 rescue 是蛋白而不是培養基？",
+"type":"validate",
+"tier":"A",
+"deep":1,
+"star":1,
+"pages":[
+"plant#WB800 culture (protectant-negative control)",
+"plant#Hydroponics",
+"results#Hydroponic salinity stress"
+],
+"seat":"plant",
+"backup":"wet2",
+"kw_en":[
+"WB800 is the protectant-negative control",
+"diluted at least sixteen times",
+"volume was not standardised, so one run is void"
+],
+"kw_zh":[
+"WB800 是無保護蛋白對照",
+"至少稀釋十六倍",
+"體積沒統一，所以那次作廢"
+],
+"a_en":"The control is built for exactly that: every protectant arm is matched against WB800 culture carrying no protectant construct, at the same dilution, so a difference between those two is the protein and not the broth. That control is also what told us the vehicle itself stresses the plants, which is why everything is diluted at least sixteen-fold and one in forty became the working dose — in the salinity run at 100 millimolar the one in forty BoPep4 group stayed green with the highest fresh weight and chlorophyll while the one in forty WB800 group did not. Where the control was not enough is the run Dr. Peng voided: culture volume differed between arms, so the groups also differed in how much broth they received and a dilution series cannot be read as a dose. Our future work names the three things that fix it — a fixed interval for changing the medium, the same culture volume in every group, and evaporation accounted for instead of topped up.",
+"a_zh":"對照組就是為這件事設計的：每一個保護蛋白組都對上「不帶保護蛋白構築」的 WB800 培養液，而且稀釋倍數相同，所以這兩組之間的差異是蛋白、不是培養液。也正是這個對照告訴我們載體本身會讓植物有壓力，所以所有東西至少稀釋十六倍，1/40 成為工作劑量——在 100 mM 的鹽逆境實驗裡，1/40 的 BoPep4 組維持綠色、鮮重和葉綠素都最高，而 1/40 的 WB800 組沒有。對照不夠用的地方就是彭博士判定作廢的那次：各組培養液體積不同，所以組與組之間連「拿到多少培養液」都不一樣，稀釋系列就不能當劑量讀。我們的 future work 寫出了修正它的三件事——固定換液間隔、每組相同的培養液體積，以及把蒸發計入而不是直接補水。",
+"trap_en":"Saying the control settles it. It settles the matched comparisons; it does not rescue the run where the volume varied, and that run is void.",
+"trap_zh":"說有對照組就解決了。對照組解決的是配對比較；它救不了體積不一致那一次，而那一次是作廢的。",
+"nodes":[
+"P_HYDRO",
+"C_CTRL"
+],
+"figs":[
+"p05",
+"p06"
+],
+"basis":"instructor's follow-up set, 30 Oct",
+"dom":"plant",
+"id":"q340"
+},
+{
+"q_en":"Everything you applied to a plant was 0.22 micrometre filtered crude supernatant with no activity number behind the batch. So what was the dose?",
+"q_zh":"你們施用到植物上的全部都是 0.22 微米過濾的粗上清，而且每一批背後都沒有活性數字。那劑量到底是多少？",
+"type":"boundary",
+"tier":"A",
+"deep":1,
+"star":1,
+"pages":[
+"plant#Application",
+"plant#How much protectant",
+"plant#Effective dose"
+],
+"seat":"plant",
+"backup":"wet2",
+"kw_en":[
+"filtered crude supernatant, not purified enzyme",
+"dose is a dilution and a volume",
+"no minimum effective dose exists"
+],
+"kw_zh":[
+"過濾粗上清，不是純化酵素",
+"劑量是稀釋倍數加體積",
+"沒有最小有效劑量"
+],
+"a_en":"The dose is a dilution and a volume, not an activity, and I want to be exact about the material: it was 0.22 micrometre filtered crude supernatant, so if any page of ours says the purified enzyme, that is a wording slip. What we can state is the geometry — three sprays delivered 1.67 millilitres onto a 78.5 square centimetre plate, which is the same rate as 2126 litres per hectare, and in hydroponics the arms are dilutions of one in forty to one in a hundred against a matched WB800 culture. The model turns that into 37.6 kilounits per hectare per application by multiplying the sprayed volume by one measured secreted activity, and it is the dose that worked rather than the smallest that works, because our sets varied salt level and timing but never the applied amount. No dilution series was ever run in soil, so there is no minimum effective dose, and that is the first experiment on the plant side.",
+"a_zh":"劑量是稀釋倍數加體積，不是活性，而我想把材料講精確：那是 0.22 微米過濾的粗上清，所以如果我們任何一頁寫「純化酵素」，那是用詞失誤。我們能講的是幾何——三次噴灑把 1.67 毫升施到 78.5 平方公分的盤上，相當於每公頃 2126 公升；水耕那邊各組是 1/40 到 1/100 的稀釋，對上相同稀釋的 WB800 培養液。模型把這個換成每公頃每次施用 37.6 kU，做法是噴灑體積乘上一個量到的分泌活性，而那是「有效的劑量」而不是「最小有效劑量」，因為我們的實驗組變動的是鹽度和時機，從來沒有變動施用量。土壤裡從來沒有做過稀釋系列，所以不存在最小有效劑量，那也是植物端的第一個實驗。",
+"trap_en":"Quoting 37.6 kilounits per hectare as a measured dose. It is a volume multiplied by one activity reading; say so, and say the minimum effective dose does not exist yet.",
+"trap_zh":"把每公頃 37.6 kU 當成量到的劑量報出來。那是體積乘上一個活性讀值；要講清楚，並且說最小有效劑量目前還不存在。",
+"nodes":[
+"C_CF",
+"P_ACCD"
+],
+"figs":[
+"p10",
+"p03"
+],
+"basis":"instructor's follow-up set, 30 Oct",
+"dom":"plant",
+"id":"q341"
+},
+{
+"q_en":"BoPep4 co-treatment harmed the plants even without salt, and your own page says the protectant brings harm when released without demand. Is that not an argument against a machine that produces continuously?",
+"q_zh":"BoPep4 同時處理在沒有鹽的情況下也傷害植物，而你們頁面上自己寫「在沒有需求時釋放反而造成傷害」。這不正好是反對一台持續生產的機器嗎？",
+"type":"integrate",
+"tier":"A",
+"deep":1,
+"star":1,
+"pages":[
+"plant#Evaluating BoPEP4 rescue efficacy",
+"results#Hydroponic salinity stress",
+"plant#Evaluating AtLEA14 rescue efficacy"
+],
+"seat":"plant",
+"backup":"wet1",
+"kw_en":[
+"it argues for the gate, not against it",
+"growth against tolerance",
+"the dose window is owed"
+],
+"kw_zh":[
+"這是支持那道閘門，不是反對",
+"生長 vs 耐受",
+"還欠劑量窗口"
+],
+"a_en":"It is an argument for the gate rather than against it, and it is the strongest one we have from our own data. Every BoPep4 co-treated plate was chlorotic, and the unstressed co-treated plate sat below the mock control on both weight and chlorophyll, which is the growth-versus-tolerance trade-off appearing in our own plants: an elicitor peptide that switches a plant into defence costs it growth when there is nothing to defend against. That is precisely why the decision of when to produce sits in the field, in a forecast and a light, instead of being wired into a constitutive strain — a machine that produced continuously would be delivering this penalty all season. What it also means is that we owe a dose and timing window before any of this is deployable, and that window is the measurement, not the mechanism, that we are missing.",
+"a_zh":"這是支持那道閘門的論據，而不是反對它的，而且這是我們從自己數據裡拿到最強的一條。每一盤 BoPep4 同時處理的都出現黃化，而沒有加鹽的同時處理組在鮮重和葉綠素上都低於 mock 對照——這就是「生長 vs 耐受」的取捨出現在我們自己的植物上：一個把植物切進防禦狀態的 elicitor peptide，在沒有東西要防禦的時候會讓它付出生長的代價。這正是為什麼「什麼時候生產」這個決定放在田裡、放在預測和一盞燈上，而不是接進一株組成型的菌裡——一台持續生產的機器會整季都在交付這個代價。它同時也意味著：在任何部署之前我們還欠一個劑量與時機窗口，而我們缺的是那個量測，不是機制。",
+"trap_en":"Treating this as a weakness to be minimised. It is the project's own evidence for why the light gate exists; lead with that and then concede the missing dose window.",
+"trap_zh":"把這題當成要淡化的弱點。它是這個專案自己拿出來、說明為什麼需要光閘門的證據；先講這個，再承認缺少劑量窗口。",
+"nodes":[
+"P_BOPEP",
+"C_THR"
+],
+"figs":[
+"p06"
+],
+"basis":"instructor's follow-up set, 30 Oct",
+"dom":"plant",
+"id":"q342"
+},
+{
+"q_en":"ACC deaminase post-treatment falls below the heat control in both soil trials, and your two agar heat trials disagree on which timing is best. What do you actually claim about timing?",
+"q_zh":"ACC 去胺酶事後處理在兩次土壤試驗裡都低於熱逆境對照，而你們兩次 agar 熱逆境試驗對「哪個時機最好」的結論又相反。那你們對時機到底主張什麼？",
+"type":"gap",
+"tier":"A",
+"deep":1,
+"star":1,
+"pages":[
+"plant#Evaluating ACC deaminase rescue efficacy under prolonged 37",
+"results#Agar-based heat stress",
+"plant#Soil"
+],
+"seat":"plant",
+"backup":"dry",
+"kw_en":[
+"timing decides the sign, not the size",
+"the two trials disagree",
+"efficacy is an axis in the model"
+],
+"kw_zh":[
+"時機決定正負號，不是大小",
+"兩次 trial 結論相反",
+"模型把效力當成一個軸"
+],
+"a_en":"Only that timing decides the sign of the effect, not which timing is best. Our runs do not agree: on agar at 75 millimolar pre-treatment gave the highest fresh weight, 0.164 against 0.144 grams for co-treatment; in the agar heat set trial 1 favoured pre-treatment and trial 2 favoured post-treatment at plus fourteen percent chlorophyll; and in soil heat, post-treatment fell below the heat control in both trials. What is consistent across the whole programme is that co-treatment is the worst option and that applying a protectant with no stress present can hurt, which is a direction rather than a number. That is why the model treats efficacy as an axis instead of a fixed value, and why the experiment we owe is the three timings against a standardised salt load with three independent replicates each, so the timings can be compared on equal terms.",
+"a_zh":"我們只主張「時機決定效果的正負號」，不主張哪個時機最好。我們的實驗彼此不一致：agar 75 mM 下事前處理鮮重最高，0.164 對同時處理的 0.144 公克；agar 熱逆境 trial 1 偏向事前處理、trial 2 偏向事後處理（葉綠素高出 14%）；而土壤熱逆境裡，事後處理在兩次試驗都低於熱逆境對照。整個計畫裡一致的是「同時處理是最差的選項」以及「在沒有逆境時施用保護蛋白可能有害」，那是一個方向而不是一個數字。這也是為什麼模型把效力當成一個軸而不是固定值，以及為什麼我們欠的實驗是：在標準化鹽負荷下比較三個時機，每組三個獨立重複，讓時機能在同一條件下被比較。",
+"trap_en":"Picking a best timing to sound decisive. The honest claim is the sign, plus naming the soil result that goes against us.",
+"trap_zh":"為了聽起來果斷而挑一個最佳時機。誠實的主張是正負號，再加上主動講出那個對我們不利的土壤結果。",
+"nodes":[
+"P_SOIL",
+"C_THR"
+],
+"figs":[
+"p07",
+"p03"
+],
+"basis":"instructor's follow-up set, 30 Oct",
+"dom":"plant",
+"id":"q343"
 },
 {
 "q_en":"How does your CcaSR light switch work, step by step?",
@@ -9468,7 +11703,10 @@ var QUESTIONS = [
 "basis":"like standard 'walk us through the circuit' openers",
 "dom":"wetlab",
 "deep":0,
-"id":"q311"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q344"
 },
 {
 "q_en":"What are your three protectants, and what does each one do?",
@@ -9499,7 +11737,10 @@ var QUESTIONS = [
 "basis":"like Munich 2025: 'what exactly does your product do'",
 "dom":"wetlab",
 "deep":0,
-"id":"q312"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q345"
 },
 {
 "q_en":"What are Level 0, Level 1 and Level 2 in your Golden Gate assembly?",
@@ -9529,7 +11770,10 @@ var QUESTIONS = [
 "basis":"like standard 'explain your assembly standard'",
 "dom":"wetlab",
 "deep":0,
-"id":"q313"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q346"
 },
 {
 "q_en":"Which of your three proteins was secreted most, and by how much?",
@@ -9558,7 +11802,10 @@ var QUESTIONS = [
 "basis":"like Munich 2025: 'which is higher and by how much'",
 "dom":"wetlab",
 "deep":0,
-"id":"q314"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q347"
 },
 {
 "q_en":"What is PLP, and why do you add it to your activity assay?",
@@ -9588,7 +11835,10 @@ var QUESTIONS = [
 "basis":"like standard 'what controls did the assay have'",
 "dom":"wetlab",
 "deep":0,
-"id":"q315"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q348"
 },
 {
 "q_en":"What did you find when you optimised electroporation?",
@@ -9618,7 +11868,10 @@ var QUESTIONS = [
 "basis":"like standard 'optimisation of a protocol'",
 "dom":"wetlab",
 "deep":0,
-"id":"q316"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q349"
 },
 {
 "q_en":"Why is CcaR on the Pveg promoter, and the photoreceptor on PliaG or PlepA?",
@@ -9649,7 +11902,10 @@ var QUESTIONS = [
 "basis":"like standard 'why this promoter'",
 "dom":"wetlab",
 "deep":0,
-"id":"q317"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q350"
 },
 {
 "q_en":"Why did you choose WB800 instead of wild-type 168?",
@@ -9679,7 +11935,10 @@ var QUESTIONS = [
 "basis":"like Munich 2025: 'why this chassis'",
 "dom":"wetlab",
 "deep":0,
-"id":"q318"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q351"
 },
 {
 "q_en":"Why did you rebuild module 1 with a different promoter, RBS and terminator?",
@@ -9708,7 +11967,10 @@ var QUESTIONS = [
 "basis":"like standard 'what did you change after a failure and why'",
 "dom":"wetlab",
 "deep":0,
-"id":"q319"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q352"
 },
 {
 "q_en":"Why did you build every cargo with a constitutive promoter before testing it under light?",
@@ -9738,7 +12000,10 @@ var QUESTIONS = [
 "basis":"like standard 'is your final system what you tested'",
 "dom":"wetlab",
 "deep":0,
-"id":"q320"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q353"
 },
 {
 "q_en":"How do you know your Level 2 plasmid is correct? Is it sequenced?",
@@ -9768,7 +12033,10 @@ var QUESTIONS = [
 "basis":"like Munich 2025: 'how do you know your construct is right'",
 "dom":"wetlab",
 "deep":0,
-"id":"q321"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q354"
 },
 {
 "q_en":"How did you screen colonies, and is a correct-sized band enough?",
@@ -9798,7 +12066,10 @@ var QUESTIONS = [
 "basis":"like standard 'how did you verify your clones'",
 "dom":"wetlab",
 "deep":0,
-"id":"q322"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q355"
 },
 {
 "q_en":"How do you know your ELISA numbers are your protein and not background?",
@@ -9828,7 +12099,10 @@ var QUESTIONS = [
 "basis":"like Munich 2025: 'what is your negative control reading'",
 "dom":"wetlab",
 "deep":0,
-"id":"q323"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q356"
 },
 {
 "q_en":"How do you know the ACC deaminase is active, and not just present?",
@@ -9858,7 +12132,10 @@ var QUESTIONS = [
 "basis":"like standard 'protein present vs functional'",
 "dom":"wetlab",
 "deep":0,
-"id":"q324"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q357"
 },
 {
 "q_en":"How do you know the transformed Bacillus colonies carry your construct?",
@@ -9888,7 +12165,10 @@ var QUESTIONS = [
 "basis":"like standard 'how do you know it is in the cell'",
 "dom":"wetlab",
 "deep":0,
-"id":"q325"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q358"
 },
 {
 "q_en":"How strong is your evidence that no cells get through to the shell side?",
@@ -9918,7 +12198,10 @@ var QUESTIONS = [
 "basis":"like Munich 2025: 'how many replicates for the safety claim'",
 "dom":"wetlab",
 "deep":0,
-"id":"q326"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q359"
 },
 {
 "q_en":"Why did you not stay with MoClo 2.0?",
@@ -9947,7 +12230,10 @@ var QUESTIONS = [
 "basis":"like standard 'why not use the standard kit'",
 "dom":"wetlab",
 "deep":0,
-"id":"q327"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q360"
 },
 {
 "q_en":"Which signal peptide is better, Csn or SamyQ?",
@@ -9977,7 +12263,10 @@ var QUESTIONS = [
 "basis":"like standard 'which variant is best and how do you know'",
 "dom":"wetlab",
 "deep":0,
-"id":"q328"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q361"
 },
 {
 "q_en":"Why light as the switch? Why not a chemical inducer or a temperature-sensing promoter?",
@@ -10007,7 +12296,10 @@ var QUESTIONS = [
 "basis":"like standard 'why this input signal'",
 "dom":"wetlab",
 "deep":0,
-"id":"q329"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q362"
 },
 {
 "q_en":"Why Bacillus subtilis and not E. coli to make the protein?",
@@ -10038,7 +12330,10 @@ var QUESTIONS = [
 "basis":"like standard 'why this chassis over the usual one'",
 "dom":"wetlab",
 "deep":0,
-"id":"q330"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q363"
 },
 {
 "q_en":"Why electroporation? Why not natural transformation?",
@@ -10067,7 +12362,10 @@ var QUESTIONS = [
 "basis":"like standard 'why not the alternative method'",
 "dom":"wetlab",
 "deep":0,
-"id":"q331"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q364"
 },
 {
 "q_en":"Why do you test culture supernatant and not purified protein?",
@@ -10097,7 +12395,10 @@ var QUESTIONS = [
 "basis":"like standard 'what exactly did you apply to the plants'",
 "dom":"wetlab",
 "deep":0,
-"id":"q332"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q365"
 },
 {
 "q_en":"Can your system make proteins other than these three?",
@@ -10128,7 +12429,10 @@ var QUESTIONS = [
 "basis":"like standard 'is the platform general'",
 "dom":"wetlab",
 "deep":0,
-"id":"q333"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q366"
 },
 {
 "q_en":"Could you put BoPep4 or LEA14 under the light switch?",
@@ -10159,7 +12463,10 @@ var QUESTIONS = [
 "basis":"like standard 'what if you swap the cargo'",
 "dom":"wetlab",
 "deep":0,
-"id":"q334"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q367"
 },
 {
 "q_en":"Would your strain keep the plasmid on a farm, without antibiotic?",
@@ -10189,7 +12496,10 @@ var QUESTIONS = [
 "basis":"like standard 'what about real-world deployment'",
 "dom":"wetlab",
 "deep":0,
-"id":"q335"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q368"
 },
 {
 "q_en":"How did low protein yield change what you did in the lab?",
@@ -10219,7 +12529,10 @@ var QUESTIONS = [
 "basis":"like standard 'how did modelling change experiments'",
 "dom":"wetlab",
 "deep":0,
-"id":"q336"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q369"
 },
 {
 "q_en":"How did protein design change what you built? For example, where does the His tag go on BoPep4?",
@@ -10250,7 +12563,10 @@ var QUESTIONS = [
 "basis":"like Munich 2025: 'how did the model change the build'",
 "dom":"wetlab",
 "deep":0,
-"id":"q337"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q370"
 },
 {
 "q_en":"How did the reactor results change your wet-lab plan?",
@@ -10279,7 +12595,10 @@ var QUESTIONS = [
 "basis":"like standard 'how did one subsystem feed back to another'",
 "dom":"wetlab",
 "deep":0,
-"id":"q338"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q371"
 },
 {
 "q_en":"Is your switch leaky? What does it do in the dark or under red light?",
@@ -10309,7 +12628,10 @@ var QUESTIONS = [
 "basis":"like standard 'how leaky is your inducible system'",
 "dom":"wetlab",
 "deep":0,
-"id":"q339"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q372"
 },
 {
 "q_en":"Is your electroporation optimisation statistically solid?",
@@ -10339,7 +12661,10 @@ var QUESTIONS = [
 "basis":"like Munich 2025: 'is the difference significant'",
 "dom":"wetlab",
 "deep":0,
-"id":"q340"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q373"
 },
 {
 "q_en":"Your construct predicts an ACC deaminase of about 35 kDa. Why do some of your light-plate blots show a band just under 100?",
@@ -10370,7 +12695,10 @@ var QUESTIONS = [
 "regrounded":"2026-10-25",
 "dom":"wetlab",
 "deep":0,
-"id":"q341"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q374"
 },
 {
 "q_en":"What is the next step for protein yield?",
@@ -10400,7 +12728,10 @@ var QUESTIONS = [
 "basis":"like standard 'what is next'",
 "dom":"wetlab",
 "deep":0,
-"id":"q342"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q375"
 },
 {
 "q_en":"What can a future iGEM team reuse from your wet-lab work?",
@@ -10431,7 +12762,10 @@ var QUESTIONS = [
 "basis":"like standard 'contribution to the community'",
 "dom":"wetlab",
 "deep":0,
-"id":"q343"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q376"
 },
 {
 "q_en":"If you redid the cloning, what would you change first?",
@@ -10460,7 +12794,10 @@ var QUESTIONS = [
 "basis":"like standard 'what would you do differently'",
 "dom":"wetlab",
 "deep":0,
-"id":"q344"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q377"
 },
 {
 "q_en":"Your Parts page calls AcdS 2.1 the same enzyme with its first fifteen codons recoded. Tell me precisely what that recoding changed, and what it could not change.",
@@ -10491,7 +12828,10 @@ var QUESTIONS = [
 "trap_zh":"說最佳化讓蛋白質變好或更耐田間環境。同義重編碼不可能動到蛋白質序列。",
 "basis":"design check: what a synonymous change can and cannot do",
 "dom":"wetlab",
-"id":"q345"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q378"
 },
 {
 "q_en":"Your ordered cassettes span codon adaptation index 0.59 to 0.81 against 0.85 to 0.87 for the wild types. You made them worse on that measure. Why?",
@@ -10521,7 +12861,10 @@ var QUESTIONS = [
 "trap_zh":"把 CAI 越高當成設計越好。另外要注意，我們自己的頁面在文字裡把 0.87 掛在 BoPep4 上，在表格裡卻是野生型。",
 "basis":"the team's own finding that contradicts standard practice",
 "dom":"wetlab",
-"id":"q346"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q379"
 },
 {
 "q_en":"Why did you spend the optimisation on the first fifteen bases and the Shine-Dalgarno core, rather than on the whole gene?",
@@ -10551,7 +12894,10 @@ var QUESTIONS = [
 "trap_zh":"說你們有模擬延伸期的 ramp。我們只模擬起始，而把信號肽重編碼反而會把那裡的 ramp 拿掉。",
 "basis":"design check: the objective function the team actually ranked on",
 "dom":"wetlab",
-"id":"q347"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q380"
 },
 {
 "q_en":"Name what synonymous recoding can break. Which of those did you screen for, and what did your screen miss?",
@@ -10581,7 +12927,10 @@ var QUESTIONS = [
 "trap_zh":"說篩查做得很完整。同聚物只被記成警告、不是排除標準：八個卡匣裡有三個帶 6 個連續 A。",
 "basis":"judge pattern: what could this have broken, and did you look",
 "dom":"wetlab",
-"id":"q348"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q381"
 },
 {
 "q_en":"Suppose you ran your recoded ACC deaminase against the wild-type-codon version, same promoter, same signal peptide, same reactor. Predict the result, and tell me which way you would bet.",
@@ -10612,7 +12961,10 @@ var QUESTIONS = [
 "trap_zh":"預測會有大幅提升。我們自己的文字就說，start+15 較高只表示這個構築值得測試，不預測產量。",
 "basis":"reasoning: predict an experiment the team never ran, from what they do know",
 "dom":"wetlab",
-"id":"q349"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q382"
 },
 {
 "q_en":"Which of your sequence choices has ever been tested against its alternative in the lab?",
@@ -10643,7 +12995,10 @@ var QUESTIONS = [
 "trap_zh":"把 ELISA 的濃度當成密碼子比較。那些數字只定量了一個構築，沒有比較兩個基因序列。",
 "basis":"team's own gap: the comparison the order set was designed for is still owed an assay",
 "dom":"wetlab",
-"id":"q350"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q383"
 },
 {
 "q_en":"If you could only do one of three things to raise titre, codon optimisation, a stronger promoter or a better signal peptide, which one and why?",
@@ -10674,7 +13029,10 @@ var QUESTIONS = [
 "trap_zh":"選啟動子。我們自己的結果說蛋白表達並沒有隨綠光穩定上升，所以可靠的光控還沒被證實。",
 "basis":"judge pattern: force a single prioritised intervention with a reason",
 "dom":"wetlab",
-"id":"q351"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q384"
 },
 {
 "q_en":"Assume the codons are fine. What else is holding your yield down, and in what order would you bet on them?",
@@ -10705,7 +13063,10 @@ var QUESTIONS = [
 "trap_zh":"背一串教科書清單。每一項都要講出我們自己記錄裡的證據，並說出哪些我們沒辦法支持。",
 "basis":"boundary: what the codon model explicitly does not cover",
 "dom":"wetlab",
-"id":"q352"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q385"
 },
 {
 "q_en":"Your pages mix silent recoding with real amino-acid changes. Tell me which is which, and what evidence each kind owes us.",
@@ -10736,7 +13097,10 @@ var QUESTIONS = [
 "trap_zh":"把重編碼和突變當成同一類修改。一個欠產量、一個欠活性，而且沒有任何酵素變異體真的下訂。",
 "basis":"design check: what evidence each class of sequence change requires",
 "dom":"wetlab",
-"id":"q353"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q386"
 },
 {
 "q_en":"Codon optimisation is a button on every synthesis vendor's website. What did yours add?",
@@ -10766,7 +13130,10 @@ var QUESTIONS = [
 "trap_zh":"籠統地說這個流程很新。新的部分是目標函數、可編輯的信號肽，以及成對訂購，而且都還沒被驗證。",
 "basis":"positioning: what a team adds over a vendor's default optimiser",
 "dom":"wetlab",
-"id":"q354"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q387"
 },
 {
 "q_en":"Your Level 0 entry uses BbsI, Level 1 uses BsaI, and the Level 2 fusion into pSTK-EXP2 uses BsmBI. Walk me through why the hierarchy needs a different enzyme at each level, and what the recognition sites are doing to themselves as you go up.",
@@ -10797,7 +13164,10 @@ var QUESTIONS = [
 "trap_zh":"把 BbsI 和 BpiI 當成兩種不同的酶。我們 Engineering 的文字 Level 0 兩個都列，但 GAAGAC 是同一個辨識序列、兩家廠商的名字；真正不同的三個是 BbsI、BsaI 和 BsmBI。",
 "basis":"nested type IIS logic is the first thing a cloning examiner tests",
 "dom":"wetlab",
-"id":"q355"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q388"
 },
 {
 "q_en":"Your primer tails set four-base fusion sites: CTGA and GAGG at Level 0, and TATG, TGTC, ACAT, AGAG, ATGT at Level 1. What does a set like that have to satisfy, and what does it have to avoid?",
@@ -10827,7 +13197,10 @@ var QUESTIONS = [
 "trap_zh":"把 ACAT 和 ATGT 當成這組裡的衝突。它們是同一個接點、從互補的兩條股寫出來的，forward primer 寫上股、reverse 寫下股。真正的失敗模式是兩個不同的接點共用同一個突出端。",
 "basis":"fusion-site fidelity is where a four-base standard actually fails",
 "dom":"wetlab",
-"id":"q356"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q389"
 },
 {
 "q_en":"Your codon pipeline threw out any synonymous variant that introduced a BsaI, EcoRI, XbaI, SpeI, PstI, NotI or HindIII site, but you state it did not screen for BpiI or BsmBI. Those are the enzymes you assemble with at Level 0 and Level 2. What follows from that?",
@@ -10857,7 +13230,10 @@ var QUESTIONS = [
 "trap_zh":"說 domestication 不重要，因為蛋白質序列沒變。內部位點是在組裝反應裡就把零件毀掉了，根本還沒到表現那一步。",
 "basis":"the team's own stated limit on its restriction-site scan",
 "dom":"wetlab",
-"id":"q357"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q390"
 },
 {
 "q_en":"On a Level 1 plate, how do you tell a correct assembly from an empty vector or a partial ligation, before you sequence anything?",
@@ -10887,7 +13263,10 @@ var QUESTIONS = [
 "trap_zh":"說你們是用肉眼看綠白菌落篩的。dropout 只是在載體名字裡，我們報告的每一次篩選都是菌落 PCR 跑膠；我們沒有用顏色篩 Level 1 菌落的記錄。",
 "basis":"selection and dropout logic is what makes Golden Gate screenable",
 "dom":"wetlab",
-"id":"q358"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q391"
 },
 {
 "q_en":"Three consecutive Level 2 Golden Gate rounds returned nothing with no design change between them. Then you swept the insert-to-vector ratio to 1:5 and 1:7 and both worked. Why would a molar excess of insert rescue a reaction where every end is already defined?",
@@ -10917,7 +13296,10 @@ var QUESTIONS = [
 "trap_zh":"說插入片段越多產物就越多。它改變的是五方正確組裝和載體自封之間的競爭；超過某個過量之後，多的插入片段只會增加順序錯誤的產物。",
 "basis":"the one stoichiometry change that unblocked Level 2",
 "dom":"wetlab",
-"id":"q359"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q392"
 },
 {
 "q_en":"You have a colony PCR band at the expected size. Be precise with me: what has that excluded, and what has it not?",
@@ -10948,7 +13330,10 @@ var QUESTIONS = [
 "trap_zh":"說條帶正確再加一個酶切就等於定序。酶切只是用另一種方式回答同一個長度問題，兩個都沒有讀到任何一個鹼基。",
 "basis":"gels carry most of the project's cloning evidence",
 "dom":"wetlab",
-"id":"q360"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q393"
 },
 {
 "q_en":"For the Level 2 you have three junction PCRs on three clones and a double digest that gave 10,293 base pairs with EcoRI and 7,543 with EcoRI plus BtsI. What would end-to-end sequencing add that those two checks cannot give you?",
@@ -10979,7 +13364,10 @@ var QUESTIONS = [
 "trap_zh":"因為兩個數字都對，就把雙酶切當成等同定序。兩個正確的片段大小只是兩次長度量測；模組內部一對互相補償的錯誤，會讓這兩個數字都不變。",
 "basis":"the project's strongest cloning evidence is also its most over-read",
 "dom":"wetlab",
-"id":"q361"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q394"
 },
 {
 "q_en":"Your Results construct table ticks a Sequenced column for both Level 2 devices, clone 2 and clone 1. Your Engineering page says no Level 2 construct has been sequenced end to end and the sequencing cell is empty for both. Which is it?",
@@ -11010,7 +13398,10 @@ var QUESTIONS = [
 "trap_zh":"因為有附 clone 編號就替那個勾辯護，或是猜讀了哪一段。也要小心數字漂移：Biomanufacturing 還寫九個 Level 1 模組，Results 的總結說十四個構築，而它總結的那張表其實有十五列。",
 "basis":"two pages on main disagree about Level 2 sequencing",
 "dom":"wetlab",
-"id":"q362"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q395"
 },
 {
 "q_en":"A Sanger trace comes back clean for two hundred bases and then every position shows two peaks. What do you conclude, and what do you do next?",
@@ -11040,7 +13431,10 @@ var QUESTIONS = [
 "trap_zh":"說那是異型合子的點突變。帶多拷貝質體的細菌出現混合圖譜是因為模板混了，而且連續雙峰而不是單一個雙峰，指向的是插入缺失或兩種質體。",
 "basis":"reading a trace honestly is a skill a judge can test in one minute",
 "dom":"wetlab",
-"id":"q363"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q396"
 },
 {
 "q_en":"Your double digest would catch a Level 2 that lost a whole module. What kind of rearrangement would it still miss, and how would you go after that?",
@@ -11070,7 +13464,10 @@ var QUESTIONS = [
 "trap_zh":"回答說再多做幾個接點 PCR。同一種接點做再多，只增加對順序的信心，對拷貝數毫無幫助；判讀必須跨過一段你算得出長度的區域，或者直接讀鹼基。",
 "basis":"repeated regulatory parts were the team's own stated recombination worry",
 "dom":"wetlab",
-"id":"q364"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q397"
 },
 {
 "q_en":"In your 116-hour run the culture plateaued near forty hours and grew again from about forty-seven. You explain that as the erythromycin degrading and cells losing the plasmid. How would you turn that explanation into a measurement?",
@@ -11101,7 +13498,10 @@ var QUESTIONS = [
 "trap_zh":"當場猜複製起點的類型或拷貝數。兩個都不在我們的 wiki 上，在台上編一個數字比承認空缺更糟；講清楚兩種不穩定的模式和各自的檢查。",
 "basis":"the project's one observed hint of plasmid loss is unmeasured",
 "dom":"wetlab",
-"id":"q365"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q398"
 },
 {
 "q_en":"WB800 has eight extracellular proteases deleted. What does that buy you for a secreted product, what does it cost, and how far do your own data take the comparison with 168?",
@@ -11132,7 +13532,10 @@ var QUESTIONS = [
 "trap_zh":"把兩株的菌落數直接拿來比。WB800 高密度的盤是 1:2,000,000 稀釋塗的，168 的盤沒有稀釋，而我們自己的圖註就寫著菌落數只能在同一組內比較、不能跨稀釋比較。我們的總結也寫著 WB800 和 168 在相同條件下仍未測試。",
 "basis":"the production strain arrived late and was never benchmarked",
 "dom":"wetlab",
-"id":"q366"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q399"
 },
 {
 "q_en":"Your own learn step says electroporating a Level 2 over ten kilobases was extremely difficult and that you should look at natural transformation instead. Take that seriously for me: what would that route actually require, and would you also move the circuit into the chromosome?",
@@ -11163,7 +13566,10 @@ var QUESTIONS = [
 "trap_zh":"說自然轉形就是比較簡單。它需要自己的培養液和時機，對一個十千鹼基的複製型質體也不見得更好，而且我們 wiki 上沒有任何測試。",
 "basis":"the team names the alternative but never tries it",
 "dom":"wetlab",
-"id":"q367"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q400"
 },
 {
 "q_en":"You check every construct with SignalP before ordering it. What are the two things that check is actually for, and what does cleavage leave you with at the mature N-terminus?",
@@ -11194,7 +13600,10 @@ var QUESTIONS = [
 "trap_zh":"說 Csn 和 SamyQ 有正面比較過。兩個都在零件集裡，但唯一的分部證據是 8 月 2 日 Csn-ACC deaminase 構築的墨點，上清有條帶、兩個沉澱都沒有，而且從來沒有把 CSN 構築和優化版放在一起檢測。",
 "basis":"the secretion tag is the one part the whole reactor design assumes works",
 "dom":"wetlab",
-"id":"q368"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q401"
 },
 {
 "q_en":"Asn23's free carboxylate is BoPep4's anchor, and you moved the His tag to the N-terminus for constructs ordered after sixteen August. Yet your variant panel is written as carrying a C-terminal tag. Where does that leave the molecule you actually built?",
@@ -11225,7 +13634,10 @@ var QUESTIONS = [
 "trap_zh":"把 Arg491 說成第二個錨點。我們自己跑的 PDBePISA 顯示它完全沒有氫鍵也沒有鹽橋，只埋了十二平方埃，所以我們不再用它來評分模型。",
 "basis":"the tag that makes the peptide measurable is the tag that kills it",
 "dom":"wetlab",
-"id":"q369"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q402"
 },
 {
 "q_en":"Set the biology aside. Your assembly sits on the SubtiToolKit and on eleven earlier Registry parts. What in your cloning work is genuinely new, and what did you simply inherit?",
@@ -11256,7 +13668,10 @@ var QUESTIONS = [
 "trap_zh":"把 Golden Gate 的層級架構說成是自己的貢獻。層級、酶和突出端標準都是套件的；貢獻是放進去的零件，以及把它們放進去那段失敗的記錄。",
 "basis":"a judge will ask what is yours and what came in the box",
 "dom":"wetlab",
-"id":"q370"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q403"
 },
 {
 "q_en":"Take me through the phosphorelay itself. Where does the phosphate come from, where does it go, and what happens to it when you take the green light away?",
@@ -11288,7 +13703,10 @@ var QUESTIONS = [
 "trap_zh":"說 CcaS-m3 自己去結合啟動子，或把文獻的動力學講得像是團隊自己量過的。",
 "basis":"tests whether the student owns the chemistry, not the cartoon",
 "dom":"wetlab",
-"id":"q371"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q404"
 },
 {
 "q_en":"Suppose the circuit works tomorrow. What physically sets the floor and the ceiling of what you can get out of PcpcG2-veg?",
@@ -11320,7 +13738,10 @@ var QUESTIONS = [
 "trap_zh":"只談光強度，忘了自己的墨點上全功率紅光本來就有訊號。",
 "basis":"dynamic range is a design consequence they can reason about",
 "dom":"wetlab",
-"id":"q372"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q405"
 },
 {
 "q_en":"CcaS, CcaR and PcpcG2 are cyanobacterial. What did you have to change to run them in Bacillus subtilis, and what did you deliberately leave alone?",
@@ -11352,7 +13773,10 @@ var QUESTIONS = [
 "trap_zh":"說自己重新設計或密碼子最佳化了 sensor 蛋白；其實只有調控環境和發色團供應是他們做的。",
 "basis":"a judge will test whether they know what a port actually involves",
 "dom":"wetlab",
-"id":"q373"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q406"
 },
 {
 "q_en":"Bacillus subtilis runs plenty of its own two-component systems. What stops one of its histidine kinases from phosphorylating CcaR, and how would you find out?",
@@ -11383,7 +13807,10 @@ var QUESTIONS = [
 "trap_zh":"因為零件是外來的就斷言系統正交，而不是講出能證明的對照。",
 "basis":"orthogonality is assumed everywhere and tested nowhere",
 "dom":"wetlab",
-"id":"q374"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q407"
 },
 {
 "q_en":"Your sensor only works with the chromophore attached. How would you show that the CcaS-m3 in your cells is holoprotein and not apoprotein?",
@@ -11415,7 +13842,10 @@ var QUESTIONS = [
 "trap_zh":"把 ho1-pcyA 模組定序確認當成 PCB 已經做出來並裝到 sensor 上的證據。",
 "basis":"the chromophore is the one component with no readout at all",
 "dom":"wetlab",
-"id":"q375"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q408"
 },
 {
 "q_en":"If phycocyanobilin runs short in the cell, what happens to your switch? And why might it run short?",
@@ -11446,7 +13876,10 @@ var QUESTIONS = [
 "trap_zh":"說開關會變漏。發色團不足是壓掉 ON，不是把 OFF 拉高。",
 "basis":"distinguishes a sensitivity failure from a leak failure",
 "dom":"wetlab",
-"id":"q376"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q409"
 },
 {
 "q_en":"You put CcaR on Pveg and CcaS-m3 on PliaG or PlepA, which are not the same strength. Why that way round, and what breaks if the ratio is wrong?",
@@ -11477,7 +13910,10 @@ var QUESTIONS = [
 "trap_zh":"說越強越好，或把兩個啟動子當成備援，而不是一個還沒測的變數。",
 "basis":"stoichiometry is the classic two-component failure mode",
 "dom":"wetlab",
-"id":"q377"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q410"
 },
 {
 "q_en":"Your device puts four transcription units on one plasmid, and you deliberately diversified the RBS and terminator in module one. What does a construct that size cost the host, and what in your own data speaks to it?",
@@ -11509,7 +13945,10 @@ var QUESTIONS = [
 "trap_zh":"拿那六組當作質體沒有負擔的證據；那六組帶同一個質體，而且孔間還漏光。",
 "basis":"they have growth data that does not answer the burden question",
 "dom":"wetlab",
-"id":"q378"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q411"
 },
 {
 "q_en":"Your light plate shines up through a two millilitre tube. The reactor is a stirred loop whose culture reaches OD600 of 3.8. What does green light actually do in there?",
@@ -11541,7 +13980,10 @@ var QUESTIONS = [
 "trap_zh":"把光盤的結果直接當成可以搬到反應器，或忘了反應器根本沒有誘導光源。",
 "basis":"the light plate and the reactor are different optical problems",
 "dom":"wetlab",
-"id":"q379"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q412"
 },
 {
 "q_en":"CcaS and CcaR have been used by other teams and are published as a Bacillus toolkit. What did ReLEAF add beyond re-using them?",
@@ -11573,7 +14015,10 @@ var QUESTIONS = [
 "trap_zh":"把光開關說成原創貢獻，或只報零件數量而不講哪些是沿用的。",
 "basis":"positioning against prior art the judges already know",
 "dom":"wetlab",
-"id":"q380"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q413"
 },
 {
 "q_en":"Your whole project is light-controlled production. Tell me precisely what your green-versus-red data establish, and what they do not.",
@@ -11605,7 +14050,10 @@ var QUESTIONS = [
 "trap_zh":"拿 ELISA 那一對講太多。它比的是全功率綠對全功率紅，對分級系列什麼都沒講。",
 "basis":"the central claim of the project, and the data are nearly there",
 "dom":"wetlab",
-"id":"q381"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q414"
 },
 {
 "q_en":"Your constitutive blot puts ACC deaminase at about 37 kilodaltons, but the light-plate bands run between 63 and 100. Why, and how would you settle it?",
@@ -11637,7 +14085,10 @@ var QUESTIONS = [
 "trap_zh":"把二聚體講成就是答案。wiki 說那是一種可能、要再驗證，學生也該這樣講。",
 "basis":"a band twice the expected size needs an answer, not a guess",
 "dom":"wetlab",
-"id":"q382"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q415"
 },
 {
 "q_en":"You built reporter cassettes so you could read the switch out quickly. What happened to them, and what did that cost you?",
@@ -11668,7 +14119,10 @@ var QUESTIONS = [
 "trap_zh":"把 kit 的 sfGFP dropout 說成他們的電路報導基因；那是選殖篩選，不是 PcpcG2 的讀出。",
 "basis":"the fast readout failed, and that shaped every later experiment",
 "dom":"wetlab",
-"id":"q383"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q416"
 },
 {
 "q_en":"Name the experiment that would turn your light response into a control signal, in enough detail that I could run it tomorrow.",
@@ -11700,7 +14154,10 @@ var QUESTIONS = [
 "trap_zh":"直接說要多做重複。漏光和 lux 換算到光子通量沒解決之前，重複沒有意義。",
 "basis":"judges reward a specific closing experiment over an apology",
 "dom":"wetlab",
-"id":"q384"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q417"
 },
 {
 "q_en":"Your blots and your ELISA both read a whole culture at once. What could that miss entirely?",
@@ -11731,7 +14188,10 @@ var QUESTIONS = [
 "trap_zh":"只回答「要多做重複」。重複多次的平均值還是平均值。",
 "basis":"bulk readouts cannot see an all-or-none population",
 "dom":"wetlab",
-"id":"q385"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q418"
 },
 {
 "q_en":"Suppose you set up a Level 1 Golden Gate reaction and forgot to add the BsaI, but everything else went in and you plated it as usual. What would you expect on the plate and on the colony PCR gel, and why?",
@@ -11762,7 +14222,10 @@ var QUESTIONS = [
 "trap_zh":"回答說不會長菌落。沒被切的目標載體自己就帶抗性基因，所以還是會長；真正露出破綿的是帶的大小，不是平板。",
 "basis":"reasoning question; no answer written on the wiki",
 "dom":"wetlab",
-"id":"q386"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q419"
 },
 {
 "q_en":"Imagine a single extra base slipped into codon five of the SamyQ signal peptide during PCR. What would your anti-His blot and your Level 0 colony PCR each show, and which step in your workflow catches it?",
@@ -11793,7 +14256,10 @@ var QUESTIONS = [
 "trap_zh":"預期會出現一條分子量稍低的帶，好像位移只是把蛋白乾淨地截短。位移會把下游整段打亂，抗體要認的抗原決定位根本不存在。",
 "basis":"derive it in the room; nothing written down for this case",
 "dom":"wetlab",
-"id":"q387"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q420"
 },
 {
 "q_en":"You run a Level 1 assembly with a pSTK-0C donor and a pSTK-1 destination, and by mistake you plate on chloramphenicol instead of ampicillin. What grows, and what will your screen tell you?",
@@ -11823,7 +14289,10 @@ var QUESTIONS = [
 "trap_zh":"以為那盤就是不會長、回答沒有菌落。供給質體本身就帶 chloramphenicol 抗性，所以盤上滿是錯的細胞，比空盤更容易誤導人。",
 "basis":"no wiki answer; worked out from the team's own marker map",
 "dom":"wetlab",
-"id":"q388"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q421"
 },
 {
 "q_en":"Your no-DNA negative control plate comes up as a lawn. Give me the two most likely causes and the one experiment that tells them apart.",
@@ -11853,7 +14322,10 @@ var QUESTIONS = [
 "trap_zh":"把問題歸到酵素或接合反應。不加 DNA 的對照裡根本沒有 DNA，組裝反應的化學完全解釋不了它為什麼會長。",
 "basis":"standard bench diagnosis; the wiki never describes this failure",
 "dom":"wetlab",
-"id":"q389"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q422"
 },
 {
 "q_en":"Your light-plate blots put the ACC deaminase band near 70 kDa when the monomer is about 35, and you offer a homodimer as the explanation. What else could put a band there, and what would settle it?",
@@ -11884,7 +14356,10 @@ var QUESTIONS = [
 "trap_zh":"因為數字剛好就接受二聚體的說法。兩份同樣符合二聚體、重複插入和沒有完全變性的樣品，而這些 blot 也沒有不帶質體的對照道可以排除宿主的帶。",
 "basis":"the wiki names one possibility and leaves the reasoning open",
 "dom":"wetlab",
-"id":"q390"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q423"
 },
 {
 "q_en":"Suppose you repeat the August fractionation and this time the ACC deaminase sits in the pellet lanes with a blank supernatant. What are the two most likely causes, and how would you tell which it is?",
@@ -11915,7 +14390,10 @@ var QUESTIONS = [
 "trap_zh":"說構築是壞的。沉澱裡有帶就表示蛋白做出來了，失敗的是分泌或切割，那是不同的問題、不同的解法。",
 "basis":"hypothetical outcome; nothing on the wiki covers it",
 "dom":"wetlab",
-"id":"q391"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q424"
 },
 {
 "q_en":"Your His-tag ELISA standard curve runs from 3 down to 0.093 µg/mL, and you report ACC deaminase at 13.5 to 19.1. What is wrong with that number, and what would you do to the sample?",
@@ -11945,7 +14423,10 @@ var QUESTIONS = [
 "trap_zh":"因為是從擬合曲線讀出來的，就把 13.5 到 19.1 當成產量。擬合只在標準品之間有效，而 1:2 稀釋根本不足以把十六微克的樣品帶進範圍內。",
 "basis":"arithmetic the wiki implies but never works through",
 "dom":"wetlab",
-"id":"q392"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q425"
 },
 {
 "q_en":"Your six light arms on the nineteenth of September all grow between nought point two eight and nought point three two per hour, and you read that as no growth penalty. Estimate the burden you would expect from carrying the Level 2 device, and tell me whether that experiment could have seen it.",
@@ -11976,7 +14457,10 @@ var QUESTIONS = [
 "trap_zh":"拿那六組當作沒有負擔的證據。它們共用同一個質體，整個比較沒有不帶質體的參考點，答不了被問的問題。",
 "basis":"reasoning from the team's own numbers; conclusion stated nowhere",
 "dom":"wetlab",
-"id":"q393"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q426"
 },
 {
 "q_en":"On the His-tag ELISA your untransformed WB800 control reads about five micrograms per millilitre, the same range as four of your six constructs. Reason out what is producing that, and what you would do about it.",
@@ -12006,7 +14490,10 @@ var QUESTIONS = [
 "trap_zh":"把宿主的讀值從每個構築裡減掉。相減的前提是兩個訊號可以相加，而這個對照質疑的正是這一點。",
 "basis":"the wiki reports the control; the explanation is not written",
 "dom":"wetlab",
-"id":"q394"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q427"
 },
 {
 "q_en":"You ran green and red at three intensities and the protein did not track intensity. Leaving aside the loading control and the plasmid-free lane you already name, what arms is that experiment still missing?",
@@ -12037,7 +14524,10 @@ var QUESTIONS = [
 "trap_zh":"把全強度的紅光當成陰性對照。紅光是透過同一個受體主動把系統關掉，所以它測的是關閉狀態，不是沒有輸入的基線。",
 "basis":"experiment design beyond what the page already lists",
 "dom":"wetlab",
-"id":"q395"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q428"
 },
 {
 "q_en":"Take a cysteine-rich plant defensin with four disulfide bonds and put it through your own route, SamyQ and Bacillus subtilis into the supernatant. What breaks first?",
@@ -12068,7 +14558,10 @@ var QUESTIONS = [
 "trap_zh":"以為障礙在選殖或密碼子最佳化。那些決定的是前驅蛋白做多少；這個分子是離開細胞之後才失敗的。",
 "basis":"transfer question; outside everything the team built",
 "dom":"wetlab",
-"id":"q396"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q429"
 },
 {
 "q_en":"Your fresh-culture arm gained signal from two to eight hours, but the arm you grew overnight first was strong at three and six hours and weaker at eight. Reason that out for me.",
@@ -12099,7 +14592,10 @@ var QUESTIONS = [
 "trap_zh":"把 8 小時的下降說成蛋白降解。WB800 是刪掉蛋白酶的菌株，所以降解是比較不可能的那一個；而且沒有上樣對照，那張 blot 根本分不出來。",
 "basis":"the wiki records the pattern and offers no explanation",
 "dom":"wetlab",
-"id":"q397"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q430"
 },
 {
 "q_en":"Your reactor supernatant holds three point four to six point five micrograms per millilitre of ACC deaminase. Roughly how many molecules has each cell had to make to get there?",
@@ -12130,7 +14626,10 @@ var QUESTIONS = [
 "trap_zh":"把濃度當成每個細胞的速率。那是整段運轉在培養液裡累積的總量，所以要除以細胞數，不是除以每小時的細胞數。",
 "basis":"an order-of-magnitude the wiki never attempts",
 "dom":"wetlab",
-"id":"q398"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q431"
 },
 {
 "q_en":"The Level 2 reaction gives no colonies at all, three rounds running. What are the two most likely causes, and the one experiment that separates them?",
@@ -12161,7 +14660,10 @@ var QUESTIONS = [
 "trap_zh":"先把問題推給勝任細胞。轉形效率拿一個對照質體一個下午就能驗，但它解釋不了用在 Level 1 成功過的細胞、連續三輪都失敗。",
 "basis":"diagnosis exercise; the cause is not written out on any page",
 "dom":"wetlab",
-"id":"q399"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q432"
 },
 {
 "q_en":"Suppose you had to move one of these inserts by classical single-enzyme restriction and ligation, and you forgot to dephosphorylate the cut vector. What would the plate look like, and why does your Golden Gate workflow not need that step?",
@@ -12191,7 +14693,280 @@ var QUESTIONS = [
 "trap_zh":"說 Golden Gate 乾淨是因為酵素比較專一。重點不是專一性，而是方向性的黏端加上錯的產物會被持續切回去，這兩件事才讓去磷酸化變成不必要。",
 "basis":"method the project never used; reason it out from first principles",
 "dom":"wetlab",
-"id":"q400"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q433"
+},
+{
+"q_en":"Why optogenetics at all? Is the light control in your system necessary — you could have used constitutive expression instead.",
+"q_zh":"為什麼要用光遺傳學？你們系統裡的光控制真的必要嗎？直接用組成型表現不就好了。",
+"type":"design",
+"tier":"A",
+"deep":1,
+"star":1,
+"pages":[
+"biomanufacturing#Optogenetics for bioproduction",
+"results#Optogenetic control",
+"hardware-bioreactor#2.2"
+],
+"seat":"wet1",
+"backup":"dry",
+"kw_en":[
+"threshold out of the cell",
+"nothing added, nothing left",
+"signals through a sealed vessel"
+],
+"kw_zh":[
+"閾值搬出細胞",
+"不加東西、不留殘留",
+"訊號穿過密閉容器"
+],
+"a_en":"Because the decision of when to make the protectant belongs in the field, not inside the cell: rice photosynthesis is inhibited above about 25 degrees while sorghum stays optimal to about 32.5, so stress sensing built into the bacterium would have to be re-engineered for every crop we sell into. Light is how a number from our model reaches the cells — nothing is added to the culture, nothing is left in a product sprayed on food, and an LED signals through a sealed vessel without opening the 0.2 micrometre membrane that is our containment. It also separates growth from production, and we checked the trigger is cheap: across six light arms the growth rates ran 0.279 to 0.317 per hour, all within one standard error of each other. We did build constitutive versions of every cargo and they are our controls, not our product, which is how a negative result gets assigned to the protectant rather than to the light system.",
+"a_zh":"因為「什麼時候該做保護蛋白」這個決定屬於田裡，不屬於細胞裡：水稻的光合作用大約 25 度以上就開始受抑制，高粱要到約 32.5 度才離開最適範圍，所以把逆境感測做進菌體裡，等於每換一種作物就要重新改造菌株。光是模型算出來的數字抵達細胞的方式——不必往培養液裡加任何東西、噴在食用作物上的產品不會有殘留，而且 LED 可以在容器密閉的狀態下送訊號，不必打開那層 0.2 微米、也就是我們唯一圍阻的膜。它同時把生長和生產分開，而我們確認過這個觸發本身很便宜：六組光照條件下生長速率落在每小時 0.279 到 0.317 之間，彼此都在一個標準誤以內。我們每一個產物都另外做了組成型版本，那是我們的對照組、不是我們的產品，這樣一個陰性結果才能歸因到保護蛋白本身而不是光反應系統。",
+"trap_en":"Saying optogenetics was chosen because it is novel, or implying the switch has been shown to work. The reasons are crop-specific thresholds and a sealed vessel; on the evidence the honest sentence is supported at 13 hours, unresolved at 16 hours, n = 2.",
+"trap_zh":"說選光遺傳學是因為它比較新，或暗示光開關已經證明有效。理由是作物閾值和密閉容器；證據上誠實的說法是「13 小時支持、16 小時未定、n = 2」。",
+"nodes":[
+"W_LIGHT",
+"C_GATE",
+"I_BROPHY"
+],
+"figs":[
+"h07",
+"n01"
+],
+"basis":"instructor's priority set, 30 Oct read-through of Results, Hardware and Plants",
+"dom":"wetlab",
+"id":"q434"
+},
+{
+"q_en":"Why do you think AmilCP failed? The culture never changed colour at all.",
+"q_zh":"你們覺得 AmilCP 為什麼失敗？培養液從頭到尾都沒有變色。",
+"type":"gap",
+"tier":"A",
+"deep":1,
+"star":1,
+"pages":[
+"results#The chromoprotein reporter"
+],
+"seat":"wet1",
+"backup":"wet2",
+"kw_en":[
+"A588 0.081 against 0.082",
+"beta-barrel folds fast, Sec needs unfolded",
+"we stopped building a proxy"
+],
+"kw_zh":[
+"A588 0.081 對 0.082",
+"β-barrel 折太快，Sec 要未折疊",
+"我們停下來不再做替代指標"
+],
+"a_en":"It never coloured anything: the medium stayed colourless and absorbance at 588 nanometres was 0.081 with the construct against 0.082 without, so there is no chromogenic AmilCP in either the medium or the cells. Our explanation is secretion rather than expression — AmilCP is a beta-barrel that folds rapidly in the cytoplasm, and the Bacillus subtilis Sec pathway requires a protein to stay unfolded during translocation, which is a documented bottleneck for heterologous cargo in Bacillus. Rather than repeat it we reasoned to that mechanism, moved to GanA, failed that too, and then abandoned reporters entirely and measured the protectants directly by ELISA and the DNPH assay. Knowing when to stop building a proxy was the engineering result.",
+"a_zh":"它完全沒有顯色：培養液始終無色，588 奈米吸光帶構築是 0.081、不帶是 0.082，所以培養液和菌體裡都沒有會顯色的 AmilCP。我們的解釋是分泌而不是表現——AmilCP 是 β-barrel，在細胞質裡折疊得很快，而 B. subtilis 的 Sec 途徑要求蛋白在轉運過程中保持未折疊，這在 Bacillus 的異源蛋白文獻裡是已知的瓶頸。我們沒有重複做，而是推到這個機制、轉向 GanA、那個也失敗，最後完全放棄報告蛋白，直接用 ELISA 和 DNPH 測保護蛋白本身。知道什麼時候該停止做替代指標，本身就是一個工程結果。",
+"trap_en":"Claiming we proved it is a folding problem. We ran no cytoplasmic-versus-secreted comparison, so never made has not been excluded; say our explanation is secretion, not that we showed it.",
+"trap_zh":"說我們證明了這是折疊問題。我們沒有做細胞質內 vs 分泌的對照，所以「根本沒做出來」還沒被排除；要說「我們的解釋是分泌」，不是「我們證明了」。",
+"nodes":[
+"C_SEC",
+"W_SEC"
+],
+"figs":[
+"m08"
+],
+"basis":"instructor's priority set, 30 Oct read-through of Results, Hardware and Plants",
+"dom":"wetlab",
+"id":"q435"
+},
+{
+"q_en":"Why did you choose these three protectants — ACC deaminase, BoPep4 and LEA14?",
+"q_zh":"你們為什麼選這三個保護蛋白——ACC 去胺酶、BoPep4 和 LEA14？",
+"type":"design",
+"tier":"A",
+"deep":1,
+"star":1,
+"pages":[
+"protein-design",
+"results#Protectant production",
+"plant#Stress protocols"
+],
+"seat":"wet1",
+"backup":"plant",
+"kw_en":[
+"three mechanisms",
+"catalytic, stoichiometric, amplifying",
+"all secretable"
+],
+"kw_zh":[
+"三種機制",
+"催化／化學計量／放大",
+"三個都能分泌"
+],
+"a_en":"Three different mechanisms, so the failure of one is not the failure of the idea. ACC deaminase is a true catalyst: it degrades ACC, the ethylene precursor, before ACC oxidase can make ethylene, so one molecule works many times, which is why every bench result on the wiki was produced with it. LEA14 is stoichiometric, an intrinsically disordered hydrophilin that protects membranes and proteins through dehydration, so the only levers are more copies or more work per copy; BoPep4 is a twenty-three-amino-acid Brassica elicitor peptide that triggers the plant's own salt-tolerance programme through PEPR1, which is amplification rather than substitution. All three are small secreted proteins, and that is what lets one 0.2 micrometre membrane be both the containment and the delivery path.",
+"a_zh":"三種不同的機制，所以其中一個失敗不等於整個想法失敗。ACC 去胺酶是真正的催化劑：它在 ACC 氧化酶把 ACC 轉成乙烯之前就先把 ACC 分解掉，一個分子可以做很多次反應，這也是為什麼 wiki 上每一個實驗結果都是用它做的。LEA14 是化學計量型的，是一個內在無序的 hydrophilin，在脫水過程中保護膜和蛋白，所以能動的只有「更多份」或「每一份做更多事」；BoPep4 是 23 個胺基酸的 Brassica elicitor peptide，透過 PEPR1 啟動植物自己的耐鹽程式，是放大而不是替代。三個都是小的分泌型蛋白，這正是為什麼一層 0.2 微米的膜可以同時是圍阻和輸送路徑。",
+"trap_en":"Presenting the three as equally evidenced. ACC deaminase has reactor data; BoPep4 has one hydroponic working dilution at 1/40; LEA14 has one agar set where 75 millimolar was best. Say which is which.",
+"trap_zh":"把三個講得證據一樣強。ACC 去胺酶有反應器數據；BoPep4 只有一個水耕工作稀釋 1/40；LEA14 只有一組 agar，75 mM 表現最好。要說清楚哪個是哪個。",
+"nodes":[
+"W_THREE",
+"C_CF"
+],
+"figs":[
+"n01",
+"r01"
+],
+"basis":"instructor's priority set, 30 Oct read-through of Results, Hardware and Plants",
+"dom":"wetlab",
+"id":"q436"
+},
+{
+"q_en":"You used codon optimisation to make protectant synthesis more efficient. What did you observe in your results, and what do you conclude?",
+"q_zh":"你們用了密碼子優化來讓保護蛋白合成更有效率。結果觀察到什麼，結論是什麼？",
+"type":"validate",
+"tier":"A",
+"deep":1,
+"star":1,
+"pages":[
+"results#ELISA: wild-type and codon-optimized variants",
+"results#Protein expression"
+],
+"seat":"wet1",
+"backup":"wet2",
+"kw_en":[
+"per OD600 it went the wrong way",
+"1.45 times wild type",
+"signal peptide confounds it"
+],
+"kw_zh":[
+"除以 OD600 後方向是反的",
+"野生型是 1.45 倍",
+"訊號肽把它confound掉"
+],
+"a_en":"For ACC deaminase, per OD600 it went the wrong way: wild-type Csn-ACCD read about 1.45 times the optimised arm, 29.9 against 19.5 at eight hours and 21.2 against 15.5 at twelve. For BoPep4 it went our way, with both optimised variants above wild type at twelve hours, 6.3 and 5.4 against 4.7 micrograms per millilitre. The comparison is confounded and we say so: our two ACC deaminase constructs differ in codon usage and in signal peptide, Csn against SamyQ, and the only thing that flips the direction is a 2.66-fold correction taken from published secretion efficiencies for other cargoes, which is not our measurement. So codon optimisation is not demonstrated to raise yield here; the optimised construct was kept for a practical reason, that the wild-type strain could not be recovered from glycerol stock, and the experiment owed is the matched pair, one signal peptide and both codon versions.",
+"a_zh":"ACC 去胺酶這邊，除以 OD600 之後方向是反的：野生型 Csn-ACCD 大約是優化版的 1.45 倍，8 小時 29.9 對 19.5，12 小時 21.2 對 15.5。BoPep4 這邊方向是對我們有利的，兩個優化版在 12 小時都高於野生型，6.3 和 5.4 對 4.7 微克每毫升。這個比較被confound了，我們也寫出來：兩個 ACC 去胺酶構築同時換了密碼子和訊號肽（Csn 對 SamyQ），而唯一能把方向翻過來的是一個 2.66 倍的修正，那是從別的蛋白的文獻分泌效率推來的，不是我們量的。所以密碼子優化在這裡沒有被證明能提高產量；留下優化版是務實理由——野生型菌株無法從甘油保存液救回來——而該補的實驗是對照組：同一個訊號肽、兩種密碼子版本。",
+"trap_en":"Saying codon optimisation worked. Per OD600 it is 1.45-fold the other way for ACC deaminase, and the 2.66 correction is literature, not data.",
+"trap_zh":"說密碼子優化有效。ACC 去胺酶除以 OD600 後是反方向的 1.45 倍，而 2.66 的修正是文獻值不是我們的數據。",
+"nodes":[
+"W_CODON",
+"C_SEC"
+],
+"figs":[
+"m06"
+],
+"basis":"instructor's priority set, 30 Oct read-through of Results, Hardware and Plants",
+"dom":"wetlab",
+"id":"q437"
+},
+{
+"q_en":"SamyQ with PLP gives 2.19 times the net product of Csn with PLP. Is that secretion, expression, or folding?",
+"q_zh":"SamyQ 加 PLP 的淨產物是 Csn 加 PLP 的 2.19 倍。這是分泌、表現，還是折疊的差別？",
+"type":"reason",
+"tier":"A",
+"deep":1,
+"star":1,
+"pages":[
+"results#DNPH assay",
+"results#Protein expression"
+],
+"seat":"wet1",
+"backup":"wet2",
+"kw_en":[
+"this experiment cannot tell",
+"supernatant activity only",
+"need the cell-associated fraction"
+],
+"kw_zh":[
+"這個實驗分不出來",
+"只量了上清活性",
+"要量細胞內那一份"
+],
+"a_en":"This experiment cannot tell them apart, and I would rather say that than pick one. What we measured is activity in the culture supernatant — 89.7 nanomoles of total product for SamyQ with PLP against the Csn with PLP arm — so the number is everything that happened upstream of the medium rolled into one: how much was transcribed and translated, how much crossed the membrane, and how much of what crossed folded into an active multimer. Separating them means assaying the cell-associated fraction and the total alongside the supernatant on the same culture, which we did not do. Until then SamyQ is the better signal peptide for this cargo in our hands, and that is the whole claim.",
+"a_zh":"這個實驗分不出來，我寧願這樣講，而不是挑一個講。我們量的是培養上清的活性——SamyQ 加 PLP 的總產物是 89.7 奈莫耳，高於 Csn 加 PLP 那一組——所以這個數字把進入培養液之前發生的所有事情全部壓在一起：轉錄轉譯了多少、有多少穿過膜、穿過去的裡面有多少折成有活性的多聚體。要分開就得在同一批培養裡同時測細胞結合的那一份和總量，這件事我們沒做。在那之前，我們能講的就只有「在我們手上，對這個蛋白來說 SamyQ 是比較好的訊號肽」。",
+"trap_en":"Answering secretion with confidence. Only the supernatant was assayed, so expression and folding are inside the same number.",
+"trap_zh":"很有自信地回答「是分泌」。只量了上清，所以表現和折疊都還混在同一個數字裡。",
+"nodes":[
+"C_SEC",
+"W_CODON"
+],
+"figs":[
+"m08"
+],
+"basis":"instructor's follow-up set, 30 Oct",
+"dom":"wetlab",
+"id":"q438"
+},
+{
+"q_en":"Your short-term ELISA baseline before any light is already 3.0 micrograms per millilitre against 1.3 for the plasmid-free control. So the circuit leaks in the dark. How much, and does it matter on a farm?",
+"q_zh":"你們短期實驗在還沒照光前，ELISA 基線就已經是 3.0 微克每毫升，而無質體對照是 1.3。所以這個線路在黑暗中就會漏表現。漏多少？在田裡會有影響嗎？",
+"type":"boundary",
+"tier":"A",
+"deep":1,
+"star":1,
+"pages":[
+"results#Short-term light response",
+"results#What it settles"
+],
+"seat":"wet1",
+"backup":"wet2",
+"kw_en":[
+"baseline above control",
+"dark state not clean",
+"640 against 672 nanometres"
+],
+"kw_zh":[
+"基線高於對照",
+"off 狀態不乾淨",
+"640 對 672 奈米"
+],
+"a_en":"Yes, there is signal before the light goes on: about 3.0 micrograms per millilitre at baseline against about 1.3 for the plasmid-free control, so roughly twice the host background with no illumination. We read that as the off state not being clean rather than as production, and the hardware gives a reason: CcaSR needs about 672 nanometres to switch off and our red LEDs emit at 640, so the cultures were never driven to a true off in any of these runs. On a farm it matters as wasted chassis resource and as protectant made when no stress has been forecast, which is the thing the architecture exists to avoid. Since the freeze we have built a 670 nanometre plate precisely to measure the dark state against a real off, and until that run exists the size of the leak is not something we can quote.",
+"a_zh":"是，照光之前就有訊號：基線大約 3.0 微克每毫升，無質體對照大約 1.3，所以在完全沒照光的情況下大約是宿主背景的兩倍。我們把這個讀成「off 狀態不乾淨」而不是「有在生產」，而硬體給了理由：CcaSR 需要大約 672 奈米才關得掉，我們的紅光 LED 是 640 奈米，所以這幾次實驗從來沒有把培養推到真正的 off。在田裡這代表兩件事：底盤資源的浪費，以及在沒有預測到逆境時仍然在做保護蛋白——而那正是整個架構要避免的事。凍結之後我們做了 670 奈米的板子，就是為了拿真正的 off 來量這個暗態；在那次實驗跑出來之前，漏多少我們沒辦法報一個數字。",
+"trap_en":"Calling the baseline noise. It is twice the plasmid-free control on the same plate, so it is signal; the honest frame is an unclean off state we have not yet measured properly.",
+"trap_zh":"把基線講成雜訊。它是同一塊盤上無質體對照的兩倍，所以那是訊號；誠實的框架是「off 狀態不乾淨，而我們還沒有好好量過」。",
+"nodes":[
+"W_LIGHT",
+"C_GATE"
+],
+"figs":[
+"h07"
+],
+"basis":"instructor's follow-up set, 30 Oct",
+"dom":"wetlab",
+"id":"q439"
+},
+{
+"q_en":"Your light-plate data is n = 2 with no statistics. What is the smallest experiment that would let you say green controls ACC deaminase and mean it?",
+"q_zh":"你們光板的數據是 n = 2 而且沒有統計。最小需要什麼實驗，才能真的講「綠光控制 ACC 去胺酶」？",
+"type":"validate",
+"tier":"A",
+"deep":1,
+"star":1,
+"pages":[
+"results#What it settles",
+"results#Optogenetic control"
+],
+"seat":"wet1",
+"backup":"dry",
+"kw_en":[
+"three biological replicates",
+"a real off at 670 nanometres",
+"one primary endpoint, named first"
+],
+"kw_zh":[
+"三個生物重複",
+"670 奈米的真 off",
+"先指定一個主要指標"
+],
+"a_en":"Three biological replicates per arm, a true off state, and a primary endpoint named before the run. The off state is the part people forget: our red LEDs are at 640 nanometres and CcaSR needs about 672, so the comparison has to be green against the 670 nanometre plate we built after the freeze, not green against our old red. The plate also needs a plasmid-free WB800 lane and a loading control, because the blots we have carry neither, and the endpoint has to be fixed in advance — activity by DNPH, with ELISA as the protein denominator — so that a green-high, red-low result at one time point cannot be chosen after the fact. That is about one week of plate work, and it is the single experiment that converts our strongest claim from partial to shown.",
+"a_zh":"每組三個生物重複、一個真正的 off 狀態，以及在實驗開始前就指定好的主要指標。off 狀態是大家最容易忘的部分：我們的紅光是 640 奈米，而 CcaSR 需要大約 672，所以比較必須是綠光對上凍結之後做的那塊 670 奈米板子，不是綠光對上我們舊的紅光。那塊板子還需要一個無質體的 WB800 lane 和一個 loading control，因為我們現有的 blot 兩個都沒有；指標也要事先定好——用 DNPH 的活性當主要指標、ELISA 當蛋白的分母——這樣就不會事後挑一個綠高紅低的時間點來講。這大約是一週的板子工作，而它是唯一能把我們最強的主張從 partial 變成 shown 的實驗。",
+"trap_en":"Answering with more repeats alone. Without a 670 nanometre off state the extra replicates just measure the same unclean comparison more precisely.",
+"trap_zh":"只回答「多做幾次重複」。沒有 670 奈米的 off 狀態，多做重複只是把同一個不乾淨的比較量得更精準而已。",
+"nodes":[
+"W_LIGHT",
+"C_CTRL"
+],
+"figs":[
+"h07"
+],
+"basis":"instructor's follow-up set, 30 Oct",
+"dom":"wetlab",
+"id":"q440"
 },
 {
 "q_en":"How many parts did you put on the Registry, and how are they organised?",
@@ -12220,7 +14995,10 @@ var QUESTIONS = [
 "basis":"the first thing a judge checks against the organisation page",
 "dom":"registry",
 "deep":0,
-"id":"q401"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q441"
 },
 {
 "q_en":"Which of your parts are you proudest of, and why that one?",
@@ -12250,7 +15028,10 @@ var QUESTIONS = [
 "basis":"standard opener; the answer decides whether the next ten minutes are yours",
 "dom":"registry",
 "deep":0,
-"id":"q402"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q442"
 },
 {
 "q_en":"Two of your parts have exactly the same title. Did you upload the same thing twice?",
@@ -12279,7 +15060,10 @@ var QUESTIONS = [
 "basis":"visible from the organisation listing without opening anything",
 "dom":"registry",
 "deep":0,
-"id":"q403"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q443"
 },
 {
 "q_en":"Five of your published parts have no documentation at all. Why those five?",
@@ -12308,7 +15092,10 @@ var QUESTIONS = [
 "basis":"one click from the organisation listing",
 "dom":"registry",
 "deep":0,
-"id":"q404"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q444"
 },
 {
 "q_en":"Walk me up your assembly levels. What is the difference between a Level 1 cassette and a Level 2 system?",
@@ -12338,7 +15125,10 @@ var QUESTIONS = [
 "basis":"the structure question that sets up everything after it",
 "dom":"registry",
 "deep":0,
-"id":"q405"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q445"
 },
 {
 "q_en":"Fourteen of the parts in your constructs are not yours. What did you actually add?",
@@ -12368,7 +15158,10 @@ var QUESTIONS = [
 "basis":"positioning question; the composition tab makes it unavoidable",
 "dom":"registry",
 "deep":0,
-"id":"q406"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q446"
 },
 {
 "q_en":"Who wrote your part documentation?",
@@ -12398,7 +15191,10 @@ var QUESTIONS = [
 "basis":"asked when a collection looks uneven",
 "dom":"registry",
 "deep":0,
-"id":"q407"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q447"
 },
 {
 "q_en":"If another team wanted to build on your work tomorrow, which part would you tell them to take?",
@@ -12428,7 +15224,10 @@ var QUESTIONS = [
 "basis":"the contribution question, asked through the parts",
 "dom":"registry",
 "deep":0,
-"id":"q408"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q448"
 },
 {
 "q_en":"Your cassette page says the insert is 906 base pairs. The deposited sequence is 712. Which is right?",
@@ -12458,7 +15257,10 @@ var QUESTIONS = [
 "trap_zh":"替寫下來的數字辯護。它不可能對，序列就在同一頁上。",
 "basis":"arithmetic a judge can do from the Sequence tab",
 "dom":"registry",
-"id":"q409"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q449"
 },
 {
 "q_en":"This page says the expected band is 1145 base pairs, and the caption underneath says 7767. Same gel.",
@@ -12488,7 +15290,10 @@ var QUESTIONS = [
 "basis":"a page that contradicts itself eight lines apart",
 "dom":"registry",
 "deep":0,
-"id":"q410"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q450"
 },
 {
 "q_en":"Two of your parts state the same insert length, 1122 base pairs, but they carry different signal peptides. How can both be right?",
@@ -12517,7 +15322,10 @@ var QUESTIONS = [
 "trap_zh":"不知道兩個訊號肽的長度。十五個鹼基對就是整個答案。",
 "basis":"two sibling tabs open side by side",
 "dom":"registry",
-"id":"q411"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q451"
 },
 {
 "q_en":"I pulled the sequence of this cassette. There is an sfGFP coding sequence in the middle of it. Why?",
@@ -12547,7 +15355,10 @@ var QUESTIONS = [
 "trap_zh":"說那是命名慣例。載體名稱上的後綴是，但上傳序列裡面那 868 個鹼基不是。",
 "basis":"the worst thing in the collection, and visible to anyone who opens the sequence",
 "dom":"registry",
-"id":"q412"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q452"
 },
 {
 "q_en":"This is registered as a coding sequence and it has neither a start nor a stop codon. Explain.",
@@ -12576,7 +15387,10 @@ var QUESTIONS = [
 "basis":"a role-versus-sequence mismatch any curator notices",
 "dom":"registry",
 "deep":0,
-"id":"q413"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q453"
 },
 {
 "q_en":"SamyQ is a registered part on your pages. Csn is not. Where is Csn?",
@@ -12605,7 +15419,10 @@ var QUESTIONS = [
 "basis":"a dead end a judge hits while comparing the two signal peptides",
 "dom":"registry",
 "deep":0,
-"id":"q414"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q454"
 },
 {
 "q_en":"One of your Csn fusions starts ATG-ATG. Why are there two start codons?",
@@ -12634,7 +15451,10 @@ var QUESTIONS = [
 "trap_zh":"說那是類似 Kozak 的元件。枯草桿菌沒有這種東西，而頁面上什麼都沒寫。",
 "basis":"base-by-base comparison of two sibling fusions",
 "dom":"registry",
-"id":"q415"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q455"
 },
 {
 "q_en":"How do you know your Level 2 assembly is actually correct?",
@@ -12664,7 +15484,10 @@ var QUESTIONS = [
 "basis":"the obvious follow-up to any assembly claim",
 "dom":"registry",
 "deep":0,
-"id":"q416"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q456"
 },
 {
 "q_en":"If I gave you an hour before this session, what would you fix on the Registry first?",
@@ -12693,7 +15516,10 @@ var QUESTIONS = [
 "basis":"asked to see whether you know your own weak points by rank",
 "dom":"registry",
 "deep":0,
-"id":"q417"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q457"
 },
 {
 "q_en":"Your own simulation says a C-terminal His tag abolishes the contact BoPep4 works through. Every BoPep4 part you registered has one.",
@@ -12723,7 +15549,10 @@ var QUESTIONS = [
 "trap_zh":"說植物有效果就證明標籤沒問題。一個沒有重複的稀釋倍數推翻不了你們自己的模型。",
 "basis":"the sharpest juxtaposition in the collection",
 "dom":"registry",
-"id":"q418"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q458"
 },
 {
 "q_en":"Your page says the His tag is fused N-terminally and the description says C-terminus. Which is it?",
@@ -12752,7 +15581,10 @@ var QUESTIONS = [
 "basis":"a page that contradicts itself in two adjacent fields",
 "dom":"registry",
 "deep":0,
-"id":"q419"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q459"
 },
 {
 "q_en":"You built a negative control that was supposed to fail. What happened?",
@@ -12782,7 +15614,10 @@ var QUESTIONS = [
 "trap_zh":"把它講成一次成功。它的價值在於那是一次你們公開留著的失敗。",
 "basis":"the strongest honesty card on the collection",
 "dom":"registry",
-"id":"q420"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q460"
 },
 {
 "q_en":"Your codon figure stars a sequence. Is that the sequence you actually ordered?",
@@ -12812,7 +15647,10 @@ var QUESTIONS = [
 "trap_zh":"說那張圖只是示意。它就放在 part 頁面上，讀者會當成那個 part 自己的重編碼。",
 "basis":"a figure and a sequence that do not match, on one page",
 "dom":"registry",
-"id":"q421"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q461"
 },
 {
 "q_en":"Your design page says this recoding ranks one out of forty-three thousand. Is that a result?",
@@ -12842,7 +15680,10 @@ var QUESTIONS = [
 "trap_zh":"把百分位數當產量引用。模擬池裡的前 0.002% 不是蛋白。",
 "basis":"a number that looks like a measurement and is not",
 "dom":"registry",
-"id":"q422"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q462"
 },
 {
 "q_en":"Did any of your modelling change what you actually built?",
@@ -12873,7 +15714,10 @@ var QUESTIONS = [
 "basis":"the dry-lab-to-wet-lab question, asked through the deposits",
 "dom":"registry",
 "deep":0,
-"id":"q423"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q463"
 },
 {
 "q_en":"There are unfilled square brackets on your pages. What are those?",
@@ -12902,7 +15746,10 @@ var QUESTIONS = [
 "basis":"visible on most pages without scrolling",
 "dom":"registry",
 "deep":0,
-"id":"q424"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q464"
 },
 {
 "q_en":"Your strain is written in square brackets on twenty-four pages. Do you know which strain you used?",
@@ -12932,7 +15779,10 @@ var QUESTIONS = [
 "basis":"a bracket on the most basic fact in the collection",
 "dom":"registry",
 "deep":0,
-"id":"q425"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q465"
 },
 {
 "q_en":"Three of your reference links end in a chatgpt tracking tag. Do you want to explain that?",
@@ -12962,7 +15812,10 @@ var QUESTIONS = [
 "basis":"the kind of detail a careful reader notices and remembers",
 "dom":"registry",
 "deep":0,
-"id":"q426"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q466"
 },
 {
 "q_en":"You use codenames like ABDI and ABDQ in your figure captions. What are they?",
@@ -12992,7 +15845,10 @@ var QUESTIONS = [
 "basis":"undefined shorthand in public figure captions",
 "dom":"registry",
 "deep":0,
-"id":"q427"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q467"
 },
 {
 "q_en":"Could another team reproduce your assembly from the Registry alone?",
@@ -13023,7 +15879,10 @@ var QUESTIONS = [
 "trap_zh":"直接回答可以。可重現性這題，獎勵的是說得出缺了哪一半的人。",
 "basis":"the real test of a parts collection",
 "dom":"registry",
-"id":"q428"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q468"
 },
 {
 "q_en":"You wrote two collection documents and never created them on the Registry. Why not?",
@@ -13053,7 +15912,10 @@ var QUESTIONS = [
 "basis":"asked when a collection reads repetitive",
 "dom":"registry",
 "deep":0,
-"id":"q429"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q469"
 },
 {
 "q_en":"What does your Registry entry give the community that your wiki does not?",
@@ -13083,7 +15945,10 @@ var QUESTIONS = [
 "basis":"the contribution question, in its positioning form",
 "dom":"registry",
 "deep":0,
-"id":"q430"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q470"
 },
 {
 "q_en":"Your part pages carry claims with no figure, no citation and no cross-reference. Which ones?",
@@ -13112,7 +15977,10 @@ var QUESTIONS = [
 "trap_zh":"說想不出來。主動點出三個，價值高於替四十一個辯護。",
 "basis":"the honesty question, aimed at the collection",
 "dom":"registry",
-"id":"q431"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q471"
 },
 {
 "q_en":"You say the output cassette is replaceable. Have you ever replaced it?",
@@ -13142,7 +16010,10 @@ var QUESTIONS = [
 "basis":"the reuse claim, tested",
 "dom":"registry",
 "deep":0,
-"id":"q432"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q472"
 },
 {
 "q_en":"A judge tells you your Registry upload is very impressive. What do you say next?",
@@ -13171,7 +16042,10 @@ var QUESTIONS = [
 "basis":"the move that decides what the next five minutes are about",
 "dom":"registry",
 "deep":0,
-"id":"q433"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q473"
 },
 {
 "q_en":"You can very clearly see a double band on your Western blots against the His tag. Could you comment on that?",
@@ -13202,7 +16076,10 @@ var QUESTIONS = [
 "trap_zh":"順著回答「那是降解產物」。說「我猜」的評審就是在猜，順著一個你撐不起來的猜測，比直接更正還糟。",
 "basis":"asked verbatim of another team at a 2025 judging session",
 "dom":"registry",
-"id":"q434"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q474"
 },
 {
 "q_en":"Your blot says the band is at seventy-five kilodaltons and your other pages say this protein is thirty-seven. Explain.",
@@ -13232,7 +16109,10 @@ var QUESTIONS = [
 "trap_zh":"把二聚體當事實講。沒有交聯、沒有原生膠、沒有無質體對照道，它只能是假說。",
 "basis":"five molecular weights across the part pages, none reconciled",
 "dom":"registry",
-"id":"q435"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q475"
 },
 {
 "q_en":"How do you know the band on that blot is your protein and not something the host makes?",
@@ -13262,7 +16142,10 @@ var QUESTIONS = [
 "trap_zh":"說 His 標籤就證明了專一性。抗 His 抗體可能交叉反應，而那正是少掉的那一道要檢驗的事。",
 "basis":"the control question, asked of any blot",
 "dom":"registry",
-"id":"q436"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q476"
 },
 {
 "q_en":"Two of your part pages describe the same two blots and reach opposite conclusions. Which caption do I believe?",
@@ -13292,7 +16175,10 @@ var QUESTIONS = [
 "basis":"two sibling part pages for the same Level 2 construct",
 "dom":"registry",
 "deep":0,
-"id":"q437"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q477"
 },
 {
 "q_en":"You have one purification panel. What did it actually tell you?",
@@ -13322,7 +16208,10 @@ var QUESTIONS = [
 "basis":"follows any mention of a His tag",
 "dom":"registry",
 "deep":0,
-"id":"q438"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q478"
 },
 {
 "q_en":"Your colony PCR has an extra bright band at 250 base pairs. What is it?",
@@ -13352,7 +16241,10 @@ var QUESTIONS = [
 "basis":"the easiest figure-level question on the collection",
 "dom":"registry",
 "deep":0,
-"id":"q439"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q479"
 },
 {
 "q_en":"Your fractionation blot has two lanes both labelled S. What is the difference between them?",
@@ -13382,7 +16274,10 @@ var QUESTIONS = [
 "basis":"four lanes, two of them identically labelled",
 "dom":"registry",
 "deep":0,
-"id":"q440"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q480"
 },
 {
 "q_en":"On your flagship light blot, what did the red control lane do at eight hours?",
@@ -13412,7 +16307,10 @@ var QUESTIONS = [
 "trap_zh":"照著圖說講綠光那幾道。這題問的是圖說跳過的那一道。",
 "basis":"the control the flagship caption goes silent on",
 "dom":"registry",
-"id":"q441"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q481"
 },
 {
 "q_en":"This gel screened ten colonies and your next figure says clone fourteen. Where did clone fourteen come from?",
@@ -13443,7 +16341,10 @@ var QUESTIONS = [
 "ev_zh":"BBa_269A97I7 的 Figure 1：十一道，編號 9 到 19，帶在第 14 道。",
 "dom":"registry",
 "deep":0,
-"id":"q442"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q482"
 },
 {
 "q_en":"Which construct's supernatant actually went on the plants?",
@@ -13473,7 +16374,10 @@ var QUESTIONS = [
 "basis":"two pages that point at each other",
 "dom":"registry",
 "deep":0,
-"id":"q443"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q483"
 },
 {
 "q_en":"Your Application section says this part helped plants under salinity. Did you put this part on a plant?",
@@ -13503,7 +16407,10 @@ var QUESTIONS = [
 "basis":"the claim that sits on twenty Application sections",
 "dom":"registry",
 "deep":0,
-"id":"q444"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q484"
 },
 {
 "q_en":"Your vehicle control suppresses plant growth by a factor of ten. What does that do to your protectant results?",
@@ -13532,7 +16439,10 @@ var QUESTIONS = [
 "trap_zh":"把載體那張圖當成要辯解掉的問題。它正是讓其他結果可讀的那個對照。",
 "basis":"a figure the team published themselves, and should lead with",
 "dom":"registry",
-"id":"q445"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q485"
 },
 {
 "q_en":"Your heat-stressed untreated plate is marked contaminated on the figure itself. What is the claim then?",
@@ -13562,7 +16472,10 @@ var QUESTIONS = [
 "basis":"the team's own legend writes the judge's question for them",
 "dom":"registry",
 "deep":0,
-"id":"q446"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q486"
 },
 {
 "q_en":"Your BoPep4 helped plants at one dilution out of four. Is that a result?",
@@ -13592,7 +16505,10 @@ var QUESTIONS = [
 "basis":"dose-response with one responder and no repeat",
 "dom":"registry",
 "deep":0,
-"id":"q447"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q487"
 },
 {
 "q_en":"Only six of your forty-one parts have a characterisation section. Why so few?",
@@ -13622,7 +16538,10 @@ var QUESTIONS = [
 "basis":"a coverage gap visible from the collection index",
 "dom":"registry",
 "deep":0,
-"id":"q448"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q488"
 },
 {
 "q_en":"Your DNPH assay shows a fourteen-fold light response at thirteen hours and the opposite at sixteen. What happened?",
@@ -13652,7 +16571,10 @@ var QUESTIONS = [
 "trap_zh":"用十四倍這個數字開場。那正是評審會要你辯護的那一個。",
 "basis":"a single-well result with a reversal three hours later",
 "dom":"registry",
-"id":"q449"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q489"
 },
 {
 "q_en":"What is the single piece of evidence on your Registry you would stake the project on?",
@@ -13682,7 +16604,10 @@ var QUESTIONS = [
 "basis":"asked when a panel wants your strongest card",
 "dom":"registry",
 "deep":0,
-"id":"q450"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q490"
 },
 {
 "q_en":"What is the virtual model in your digital twin? If I unplug the sensors, what does it still know?",
@@ -13712,7 +16637,10 @@ var QUESTIONS = [
 "basis":"team's own question, Bioreactors sheet (Timmy); answer assembled from software, no direct wiki statement",
 "dom":"drylab",
 "deep":0,
-"id":"q451"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q491"
 },
 {
 "q_en":"What does your fault-detection autoencoder do, and how early did it catch a problem?",
@@ -13742,7 +16670,10 @@ var QUESTIONS = [
 "basis":"like INSA Lyon 2022: how do hardware and software work together",
 "dom":"drylab",
 "deep":0,
-"id":"q452"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q492"
 },
 {
 "q_en":"How do you know your forecast is better than just assuming nothing changes?",
@@ -13772,7 +16703,10 @@ var QUESTIONS = [
 "basis":"like TAU-Israel 2025: how do you validate predictive accuracy",
 "dom":"drylab",
 "deep":0,
-"id":"q453"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q493"
 },
 {
 "q_en":"You say you pre-registered a prediction. What exactly did you register, and did it pass?",
@@ -13802,7 +16736,10 @@ var QUESTIONS = [
 "basis":"like TAU-Israel 2025: pre-registered; partial blind test",
 "dom":"drylab",
 "deep":0,
-"id":"q454"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q494"
 },
 {
 "q_en":"Why does your autoencoder have two separate axes?",
@@ -13831,7 +16768,10 @@ var QUESTIONS = [
 "basis":"design check",
 "dom":"drylab",
 "deep":0,
-"id":"q455"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q495"
 },
 {
 "q_en":"Why did you choose a Kalman filter instead of a simple fitted curve or a bigger model?",
@@ -13860,7 +16800,10 @@ var QUESTIONS = [
 "basis":"like SUSTech 2025: could a simpler model have done it",
 "dom":"drylab",
 "deep":0,
-"id":"q456"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q496"
 },
 {
 "q_en":"Why build your own twin instead of using commercial bioprocess software?",
@@ -13889,7 +16832,10 @@ var QUESTIONS = [
 "basis":"like INSA Lyon 2022: software and hardware together",
 "dom":"drylab",
 "deep":0,
-"id":"q457"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q497"
 },
 {
 "q_en":"Would your digital twin work on a different organism or a bigger reactor?",
@@ -13919,7 +16865,10 @@ var QUESTIONS = [
 "basis":"like Estonia/XJTLU: why this organism; scale-up probe",
 "dom":"drylab",
 "deep":0,
-"id":"q458"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q498"
 },
 {
 "q_en":"How did the light plate experiment change what your twin does?",
@@ -13949,7 +16898,10 @@ var QUESTIONS = [
 "basis":"like Heidelberg 2025: both directions, lab changes model",
 "dom":"drylab",
 "deep":0,
-"id":"q459"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q499"
 },
 {
 "q_en":"What can your twin not do yet?",
@@ -13979,7 +16931,10 @@ var QUESTIONS = [
 "basis":"honesty probe",
 "dom":"drylab",
 "deep":0,
-"id":"q460"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q500"
 },
 {
 "q_en":"How accurate is your leaf sensor?",
@@ -14009,7 +16964,10 @@ var QUESTIONS = [
 "basis":"like Munich 2025: replicates / calibration",
 "dom":"drylab",
 "deep":0,
-"id":"q461"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q501"
 },
 {
 "q_en":"Could another team actually run your software?",
@@ -14038,7 +16996,10 @@ var QUESTIONS = [
 "basis":"like Peking 2025: did you publish the code; NJU: has anyone used it",
 "dom":"drylab",
 "deep":0,
-"id":"q462"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q502"
 },
 {
 "q_en":"How did you build your stress index, and how do you know it works?",
@@ -14067,7 +17028,10 @@ var QUESTIONS = [
 "basis":"like TAU-Israel 2025: trend baseline; 32 percent reduction",
 "dom":"drylab",
 "deep":0,
-"id":"q463"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q503"
 },
 {
 "q_en":"Your Math Model and Geospatial Analysis disagree on payback. Which one is right?",
@@ -14097,7 +17061,10 @@ var QUESTIONS = [
 "basis":"honesty probe; model vs geospatial tension",
 "dom":"drylab",
 "deep":0,
-"id":"q464"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q504"
 },
 {
 "q_en":"What is your climate volatility index and how was it built?",
@@ -14126,7 +17093,10 @@ var QUESTIONS = [
 "basis":"design check",
 "dom":"drylab",
 "deep":0,
-"id":"q465"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q505"
 },
 {
 "q_en":"How did the geospatial work change your project?",
@@ -14157,7 +17127,10 @@ var QUESTIONS = [
 "basis":"like Heidelberg 2025: HP and model in both directions",
 "dom":"drylab",
 "deep":0,
-"id":"q466"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q506"
 },
 {
 "q_en":"Where would you deploy ReLEAF first?",
@@ -14187,7 +17160,10 @@ var QUESTIONS = [
 "basis":"scale / next step",
 "dom":"drylab",
 "deep":0,
-"id":"q467"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q507"
 },
 {
 "q_en":"Does the night-time heat finding, 10 percent yield loss per degree, apply to Taiwan?",
@@ -14216,7 +17192,10 @@ var QUESTIONS = [
 "basis":"like IZJU 2025: literature values from a different system",
 "dom":"drylab",
 "deep":0,
-"id":"q468"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q508"
 },
 {
 "q_en":"How much protectant does one hectare need, and what does the equipment cost?",
@@ -14245,7 +17224,10 @@ var QUESTIONS = [
 "basis":"like Peking 2025: how much of your product is needed",
 "dom":"drylab",
 "deep":0,
-"id":"q469"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q509"
 },
 {
 "q_en":"Why did you anchor the dose on the experiment that worked rather than the smallest effective dose?",
@@ -14274,7 +17256,10 @@ var QUESTIONS = [
 "basis":"like Munich 2025: minimum production; never varied dose",
 "dom":"drylab",
 "deep":0,
-"id":"q470"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q510"
 },
 {
 "q_en":"How long does the enzyme last after the reactor makes it?",
@@ -14303,7 +17288,10 @@ var QUESTIONS = [
 "basis":"honesty probe",
 "dom":"drylab",
 "deep":0,
-"id":"q471"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q511"
 },
 {
 "q_en":"How did wet lab data change the math model?",
@@ -14333,7 +17321,10 @@ var QUESTIONS = [
 "basis":"like DTU 2025: model changed lab; lab changed model",
 "dom":"drylab",
 "deep":0,
-"id":"q472"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q512"
 },
 {
 "q_en":"Can a single farm own a ReLEAF reactor?",
@@ -14363,7 +17354,10 @@ var QUESTIONS = [
 "basis":"scale / real world",
 "dom":"drylab",
 "deep":0,
-"id":"q473"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q513"
 },
 {
 "q_en":"What happens if the forecast only gives you three days notice?",
@@ -14392,7 +17386,10 @@ var QUESTIONS = [
 "basis":"like Heidelberg 2025: forecast not reactive",
 "dom":"drylab",
 "deep":0,
-"id":"q474"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q514"
 },
 {
 "q_en":"What did molecular dynamics tell you about your purification tag?",
@@ -14422,7 +17419,10 @@ var QUESTIONS = [
 "basis":"like Peng 2025 style: concrete example of dry lab changing the build",
 "dom":"drylab",
 "deep":0,
-"id":"q475"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q515"
 },
 {
 "q_en":"How reliable is your molecular dynamics? Did you run replicates?",
@@ -14452,7 +17452,10 @@ var QUESTIONS = [
 "basis":"like PekingHSC 2025: verification vs validation",
 "dom":"drylab",
 "deep":0,
-"id":"q476"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q516"
 },
 {
 "q_en":"Why did you pick the 9-23 version of BoPEP4 as the production peptide?",
@@ -14483,7 +17486,10 @@ var QUESTIONS = [
 "basis":"design check",
 "dom":"drylab",
 "deep":0,
-"id":"q477"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q517"
 },
 {
 "q_en":"Why didn't you just rank your peptide designs by docking score?",
@@ -14513,7 +17519,10 @@ var QUESTIONS = [
 "basis":"like Toronto 2025: other modelling approaches",
 "dom":"drylab",
 "deep":0,
-"id":"q478"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q518"
 },
 {
 "q_en":"Why didn't you engineer a better ACC deaminase?",
@@ -14543,7 +17552,10 @@ var QUESTIONS = [
 "basis":"like Great Bay 2025: why structural modeling of the protein",
 "dom":"drylab",
 "deep":0,
-"id":"q479"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q519"
 },
 {
 "q_en":"What failed in your protein design work?",
@@ -14573,7 +17585,10 @@ var QUESTIONS = [
 "basis":"honesty probe",
 "dom":"drylab",
 "deep":0,
-"id":"q480"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q520"
 },
 {
 "q_en":"Does a good docking score mean the peptide will protect the plant?",
@@ -14603,7 +17618,10 @@ var QUESTIONS = [
 "basis":"like Great Bay 2025: correlation between predictions and testing",
 "dom":"drylab",
 "deep":0,
-"id":"q481"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q521"
 },
 {
 "q_en":"What from your protein design was actually validated in the lab, and what only in silico?",
@@ -14635,7 +17653,10 @@ var QUESTIONS = [
 "basis":"like Great Bay 2025: correlation between modeling predictions and real testing",
 "dom":"drylab",
 "deep":0,
-"id":"q482"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q522"
 },
 {
 "q_en":"How did the dry lab change which protectant constructs the wet lab built?",
@@ -14666,7 +17687,10 @@ var QUESTIONS = [
 "basis":"like Heidelberg 2025: both directions",
 "dom":"drylab",
 "deep":0,
-"id":"q483"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q523"
 },
 {
 "q_en":"What are the next experiments for your protein design?",
@@ -14696,7 +17720,10 @@ var QUESTIONS = [
 "basis":"next step; stated on wiki",
 "dom":"drylab",
 "deep":0,
-"id":"q484"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q524"
 },
 {
 "q_en":"Can your protein design pipeline be applied to other proteins?",
@@ -14726,7 +17753,10 @@ var QUESTIONS = [
 "basis":"boundary probe",
 "dom":"drylab",
 "deep":0,
-"id":"q485"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q525"
 },
 {
 "q_en":"In one sentence, how does your protein design pipeline work?",
@@ -14756,7 +17786,10 @@ var QUESTIONS = [
 "basis":"orientation question",
 "dom":"drylab",
 "deep":0,
-"id":"q486"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q526"
 },
 {
 "q_en":"Your truncation series was ranked on HADDOCK score. Take me inside that number: what is it a sum of, and what does it leave out that matters for a flexible peptide?",
@@ -14786,7 +17819,10 @@ var QUESTIONS = [
 "trap_zh":"替兩個階梯之間的分數差辯護。鏈越長埋藏面積越大，光是這一點就讓分數變好。",
 "basis":"judge pattern: make them define the metric their own figure is drawn on",
 "dom":"drylab",
-"id":"q487"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q527"
 },
 {
 "q_en":"Your methodology page says nine two-body docking runs on BoPEP4 produced nothing usable. What went wrong, and what did you do instead?",
@@ -14816,7 +17852,10 @@ var QUESTIONS = [
 "trap_zh":"把 docking 說成成功的預測。它沒有重現晶體，頁面上也這樣寫。",
 "basis":"the negative result the team published about its own main tool",
 "dom":"drylab",
-"id":"q488"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q528"
 },
 {
 "q_en":"Your cross-run table reports backbone RMSD. What is that actually tracking, and why do you refuse to rank constructs on it?",
@@ -14846,7 +17885,10 @@ var QUESTIONS = [
 "trap_zh":"把低 RMSD 當成複合體穩定。在我們這一套裡，看起來最穩的那個 run 就是壞掉的構築。",
 "basis":"the metric a judge will see on the figure and read as stability",
 "dom":"drylab",
-"id":"q489"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q529"
 },
 {
 "q_en":"Thirty nanoseconds, one seed per system. Put a number on the gap between that and the process you care about, and tell me what the single seed costs you.",
@@ -14876,7 +17918,10 @@ var QUESTIONS = [
 "trap_zh":"把 30 奈秒說成穩定性的量測，或把兩個單種子 run 之間的差異當成結果。",
 "basis":"judge pattern: how long, how many, and what does that buy",
 "dom":"drylab",
-"id":"q490"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q530"
 },
 {
 "q_en":"You report AlphaFold confidence for these complexes. What did the 0.73 against 0.74 result tell you, and what did you change because of it?",
@@ -14906,7 +17951,10 @@ var QUESTIONS = [
 "trap_zh":"拿信心值當作肽會結合的證據。文獻的 benchmark 也把受體—肽—共受體這類組裝列為較難的案例。",
 "basis":"confidence scores read as activity is the commonest in-silico overclaim",
 "dom":"drylab",
-"id":"q491"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q531"
 },
 {
 "q_en":"You cut eight residues off the front for the 9-23 candidate. Tell me what each part of that segment was doing, and what your own MD says about cutting at nine.",
@@ -14937,7 +17985,10 @@ var QUESTIONS = [
 "trap_zh":"說 1 到 8 什麼都沒做。Lys7 跟 Lys8 不一樣，而我們自己的頁面對 7-23 有沒有訂也說法不一。",
 "basis":"the production molecule's boundary is the one design choice the bench inherits",
 "dom":"drylab",
-"id":"q492"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q532"
 },
 {
 "q_en":"Suppose I grant you the structural work. Design me the bench experiment that decides whether that short motif is sufficient, and name what makes it interpretable.",
@@ -14968,7 +18019,10 @@ var QUESTIONS = [
 "trap_zh":"描述一個沒有定量分母的墨點。每毫升上清液的蛋白量不等於每毫克酵素的活性。",
 "basis":"judge pattern: turn an in-silico claim into a falsifiable experiment",
 "dom":"drylab",
-"id":"q493"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q533"
 },
 {
 "q_en":"Six histidines on a peptide this short. Beyond the anchor contact you have told me about, what is that tag doing?",
@@ -14999,7 +18053,10 @@ var QUESTIONS = [
 "trap_zh":"說所有構築都是 N 端。Engineering 的設計文字寫 C 端、構築表寫 N 端，而且兩個方向的 primer 都有。",
 "basis":"the project's own caught-in-time mistake, pushed one step further",
 "dom":"drylab",
-"id":"q494"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q534"
 },
 {
 "q_en":"Of everything on your protein design pages, what has an experimental counterpart?",
@@ -15031,7 +18088,10 @@ var QUESTIONS = [
 "trap_zh":"說什麼都還沒測。ACC deaminase 現在有定量的 ELISA 和植物結果，講得太低反而低估了真正做過的工作。",
 "basis":"team's own gap: two of three designed protectants have no bench counterpart",
 "dom":"drylab",
-"id":"q495"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q535"
 },
 {
 "q_en":"AlphaFold and HADDOCK are free, and every team in your village can run them. What in this work is yours?",
@@ -15061,7 +18121,10 @@ var QUESTIONS = [
 "trap_zh":"說這個流程很新。流程是標準的；現在一支隊伍能加上的，是對照、抓到的錯誤，以及我們拒絕使用的那個工具。",
 "basis":"positioning: everyone runs the same tools, so what counts is the control",
 "dom":"drylab",
-"id":"q496"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q536"
 },
 {
 "q_en":"Write down the state vector of your Kalman filter for me, and tell me what the process noise term and the measurement noise term mean physically in your bioreactor.",
@@ -15091,7 +18154,10 @@ var QUESTIONS = [
 "trap_zh":"把 state 說成「生物量和生長速率」，其實是光學讀值；或把 covariance 數值講得好像頁面上有寫。",
 "basis":"a filter is only as defensible as its state and noise model",
 "dom":"drylab",
-"id":"q497"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q537"
 },
 {
 "q_en":"Bacterial growth is exponential and then saturates, which is not linear, and your noise is not obviously Gaussian. Why is a linear filter defensible here at all, and what happens when your covariance settings are wrong for a run?",
@@ -15120,7 +18186,10 @@ var QUESTIONS = [
 "trap_zh":"把 41% 講成兩次實驗都成立；同樣設定下 run 7 的兩小時優勢是零。",
 "basis":"model misspecification is the first thing a modeller is examined on",
 "dom":"drylab",
-"id":"q498"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q538"
 },
 {
 "q_en":"Given the sensors you actually have working on the bioreactor, which states are genuinely inferable and which are not? And when a reading fails its own checks mid-run, what does the filter actually receive?",
@@ -15150,7 +18219,10 @@ var QUESTIONS = [
 "trap_zh":"說 twin 知道生物量，或說壞掉的讀值會留空；gate 是沿用上一筆好值，反而把資訊損失藏起來。",
 "basis":"observability decides what the twin may legitimately claim",
 "dom":"drylab",
-"id":"q499"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q539"
 },
 {
 "q_en":"Your forecast beats persistence, which is a very low bar. What was it tested on that it had not seen, how is the error measured, and did you ever compare it against a fitted growth curve?",
@@ -15179,7 +18251,10 @@ var QUESTIONS = [
 "trap_zh":"只講 41% 這個標題數字、不講 run 7 那一欄；還把 persistence 當成足夠的對照基準。",
 "basis":"a baseline that is too weak makes a real result look bigger than it is",
 "dom":"drylab",
-"id":"q500"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q540"
 },
 {
 "q_en":"You registered a growth forecast before the run instead of fitting it afterwards. What did that commit you to, and what exactly passed?",
@@ -15208,7 +18283,10 @@ var QUESTIONS = [
 "trap_zh":"說整份登記都通過了。只有速率有計分，而那個速率是擬合在五個小時上，那段期間直線跟指數一樣貼合讀值。",
 "basis":"pre-registration is only worth something if you report the unscored endpoints too",
 "dom":"drylab",
-"id":"q501"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q541"
 },
 {
 "q_en":"Your autoencoder learns what a healthy run looks like and flags departures. So what does it do on a fault it has never seen, what is your false positive rate, and how much of that 26.7 hours did the network actually buy you?",
@@ -15238,7 +18316,10 @@ var QUESTIONS = [
 "trap_zh":"把 26.7 小時歸功於 autoencoder。線性方法也做得到；真正的設計巧思是參考通道，不是網路。",
 "basis":"anomaly detection on one healthy stretch cannot report a detection rate",
 "dom":"drylab",
-"id":"q502"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q542"
 },
 {
 "q_en":"Take me from a milliunit per millilitre on a plate assay to litres per hectare in a field, step by step, and tell me which step carries the most uncertainty.",
@@ -15269,7 +18350,10 @@ var QUESTIONS = [
 "trap_zh":"把 5,188 公升說成驗證過的劑量；或忘了 2,126 是「有效的劑量」，不是「最小有效劑量」。",
 "basis":"the headline litres per hectare is the number a judge will pull apart",
 "dom":"drylab",
-"id":"q503"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q543"
 },
 {
 "q_en":"You give me a payback period as a single number. Why is a point estimate the wrong way to report that, and if you ran a sensitivity analysis, what would it put first?",
@@ -15300,7 +18384,10 @@ var QUESTIONS = [
 "trap_zh":"替某一個回收期數字辯護；或引用 2.0 年卻不說它建立在 Math Model 並不採信的 Geospatial 效益上。",
 "basis":"a decision number without its spread is not a model output",
 "dom":"drylab",
-"id":"q504"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q544"
 },
 {
 "q_en":"What is the spatial resolution of your input layers against the size of a real Taiwanese farm, and how does an index built from that relate to what one plant in one field actually experiences?",
@@ -15331,7 +18418,10 @@ var QUESTIONS = [
 "trap_zh":"因為地塊數字很大就講得好像地圖是地塊級解析；279 萬筆地塊最後還是縮成 346 個節點。",
 "basis":"township and county layers cannot support farm-level claims",
 "dom":"drylab",
-"id":"q505"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q545"
 },
 {
 "q_en":"Neighbouring counties share the same typhoon and the same light deficit. How many independent observations does your stress index really have, and would your deployment picture survive a different weighting?",
@@ -15361,7 +18451,10 @@ var QUESTIONS = [
 "trap_zh":"替波動指數的權重辯護，頁面只列了項目、沒公布權重；或把四個縣市的盲測當成已驗證。",
 "basis":"spatial and temporal correlation inflate apparent confidence",
 "dom":"drylab",
-"id":"q506"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q546"
 },
 {
 "q_en":"Your Math Model and your Geospatial Analysis put a completely different price on a stressed hectare. How far apart are they, and which number do you stand behind?",
@@ -15391,7 +18484,10 @@ var QUESTIONS = [
 "trap_zh":"同時替兩個數字辯護或取平均。它們不是對同一公頃的兩個估計，而 US$1,931 這個數字在 Geospatial 頁上根本沒有出現。",
 "basis":"two pages of the same wiki giving incompatible economics",
 "dom":"drylab",
-"id":"q507"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q547"
 },
 {
 "q_en":"Somebody on your team has quoted holding 86.3 percent and 25.3 percent of unstressed performance at two salt levels. Show me the measurement those came from.",
@@ -15422,7 +18518,10 @@ var QUESTIONS = [
 "trap_zh":"試著用文獻曲線把這兩個數字湊出來，或說「大致上對」；兩者都追不到我們自己的任何量測。",
 "basis":"an untraceable headline percentage is the fastest way to lose a judge's trust",
 "dom":"drylab",
-"id":"q508"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q548"
 },
 {
 "q_en":"Digital twins, Kalman filters and reconstruction-error fault detection are routine in industrial bioprocess. What in your implementation is actually new, and what is honestly just a re-implementation?",
@@ -15453,7 +18552,10 @@ var QUESTIONS = [
 "trap_zh":"說 twin 本身是創新，或說迴路已經閉合；頁面寫的是每個決定還是由人做。",
 "basis":"positioning a student build honestly against standard industrial practice",
 "dom":"drylab",
-"id":"q509"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q549"
 },
 {
 "q_en":"Suppose next year's second crop is hit by a record heat wave rather than by wind or badly timed water. What does your chain predict happens, and why?",
@@ -15484,6 +18586,125 @@ var QUESTIONS = [
 "trap_zh":"替指數編一個對高溫的反應；或假設鹽害的 0.58 效能可以套用到高溫。",
 "basis":"a scenario the index was selected against exposes whether the chain is understood",
 "dom":"drylab",
-"id":"q510"
+"star":0,
+"nodes":[],
+"figs":[],
+"id":"q550"
+},
+{
+"q_en":"Your forecast beats persistence by 41 percent at two hours, but you say most of the run sits above the range where OD is linear in cell count. So you are forecasting the photometer reading. Why is that useful?",
+"q_zh":"你們的預測在兩小時尺度上比 persistence 好 41%，但你們自己說大部分的實驗都在 OD 與細胞數不成線性的範圍之上。所以你們預測的是光度計讀值。那這有什麼用？",
+"type":"boundary",
+"tier":"A",
+"deep":1,
+"star":1,
+"pages":[
+"results#Forecast skill",
+"results#Stress detection",
+"software"
+],
+"seat":"dry",
+"backup":"hw",
+"kw_en":[
+"the control loop acts on the reading",
+"all five models forecast the same signal",
+"cell count needs plate counts"
+],
+"kw_zh":[
+"控制迴路用的就是讀值",
+"五個模型預測的是同一個訊號",
+"細胞數要靠塗盤計數"
+],
+"a_en":"Because the decisions it feeds are made on the reading, not on a cell count: when to harvest, when to feed, when to switch the light, and whether the instrument is still telling the truth. For those, a two-hour forecast with an RMSE of 0.040 against 0.067 for persistence is directly useful, and the gain survives to twelve hours at 0.310 against 0.373. The ranking is also unaffected by the non-linearity, because all five models forecast the same signal, so the comparison is fair even where the signal is not proportional to biomass. What we cannot do is call it a biomass forecast — converting optical density into cell counts needs a calibration against plate counts that we have not run, and the page states that limit next to the result.",
+"a_zh":"因為它餵的那些決策本來就是用讀值做的：什麼時候採收、什麼時候補料、什麼時候切燈，以及儀器還有沒有在講實話。對這些來說，兩小時 RMSE 0.040 對 persistence 的 0.067 是直接有用的，而且這個優勢撐到十二小時，0.310 對 0.373。非線性也不影響排名，因為五個模型預測的是同一個訊號，所以即使訊號跟生物量不成比例，比較仍然是公平的。我們不能做的是把它叫成生物量預測——把光密度換成細胞數需要對塗盤計數做校正，而那個校正我們沒做，頁面上也把這個限制寫在結果旁邊。",
+"trap_en":"Defending it as a growth forecast. Say what the loop actually acts on, and that the cell-count conversion has not been done.",
+"trap_zh":"把它當成生長預測來辯護。要講清楚控制迴路實際作用在什麼上面，以及細胞數的換算還沒做。",
+"nodes":[
+"D_RUNS",
+"M_CURVE"
+],
+"figs":[
+"s02"
+],
+"basis":"instructor's follow-up set, 30 Oct",
+"dom":"drylab",
+"id":"q551"
+},
+{
+"q_en":"You registered three endpoints on 1 October. One passed and two were not scored. Is reporting the one that passed not exactly what pre-registration is supposed to prevent?",
+"q_zh":"你們 10 月 1 日登記了三個指標，一個通過、兩個未評分。只報通過的那一個，不正是預先登記本來要防止的事嗎？",
+"type":"gap",
+"tier":"A",
+"deep":1,
+"star":1,
+"pages":[
+"results#The registered prediction",
+"measurement#Pre-registered before measurement"
+],
+"seat":"dry",
+"backup":"hw",
+"kw_en":[
+"the two were unscorable when written",
+"no cross-calibration to the inline cuvette",
+"the primary has its own boundary"
+],
+"kw_zh":[
+"那兩個在登記時就無法評分",
+"與線上流通池沒有互校",
+"主要指標自己也有邊界"
+],
+"a_en":"It would be, if the two had been dropped after we saw the data — they were declared unscorable in the registration itself, for the reason that both depend on plate-reader quantities with no cross-calibration to the inline cuvette, and that sentence was written before the run. What was scored is the primary endpoint: a specific growth rate of 0.2986 per hour with a 90 percent interval of 0.2705 to 0.3300, against an observed 0.286 plus or minus 0.010 thirteen days later in a one-litre perfusion loop. I would rather volunteer the boundary on that than defend it: the fit runs over five hours in which a straight line describes the readings as well as an exponential does, so the rate comes from a stretch where the two shapes cannot be told apart. The same pre-registration discipline is why the algorithm study reports all eight predictions including the five that failed.",
+"a_zh":"如果那兩個是在看到數據之後才被拿掉，那就會是——但它們在登記文件本身就被宣告為無法評分，理由是兩者都依賴盤式讀值、而盤式讀值和線上流通池之間沒有互校，而那句話是在實驗之前寫的。被評分的是主要指標：比生長速率 0.2986 每小時、90% 區間 0.2705 到 0.3300，對上十三天後在一公升灌流迴路裡觀測到的 0.286 ± 0.010。這一點的邊界我寧願自己講出來而不是替它辯護：那個擬合只跑五小時，在那段時間裡直線和指數同樣能描述讀值，所以速率來自一段分不出兩種形狀的區間。同樣的預先登記紀律，也是演算法研究把八個預測全部報出來、包括失敗的五個的原因。",
+"trap_en":"Getting defensive. The answer is that the exclusion was pre-dated and written down, and then volunteering the limit of the endpoint that did pass.",
+"trap_zh":"變得防衛。答案是「那個排除是事前寫下來的」，然後主動講出通過那個指標自己的限制。",
+"nodes":[
+"M_PREREG",
+"D_FROZEN"
+],
+"figs":[
+"s02"
+],
+"basis":"instructor's follow-up set, 30 Oct",
+"dom":"drylab",
+"id":"q552"
+},
+{
+"q_en":"Your model says heat adds nothing to the second-crop stress index once wind, light and badly timed water are in. That does not support your wet lab's heat programme. Who is right?",
+"q_zh":"你們的模型說，當風、光和時機不對的水分都放進去之後，熱對第二期作的逆境指數沒有額外貢獻。這並不支持濕實驗室的熱逆境計畫。誰對？",
+"type":"integrate",
+"tier":"A",
+"deep":1,
+"star":1,
+"pages":[
+"model",
+"results#Agar-based heat stress",
+"plant#Soil heat schedule"
+],
+"seat":"dry",
+"backup":"plant",
+"kw_en":[
+"different questions, both answered",
+"county yield against one plant",
+"it changes priority, not validity"
+],
+"kw_zh":[
+"兩個問題都被回答了",
+"縣級產量 vs 單株生理",
+"改變的是優先順序不是有效性"
+],
+"a_en":"Both are right about different questions, and the page says the disagreement out loud rather than hiding it. The model asks which weather terms reduce county-level rice yield error over twenty-five years, and heat drops out of the second crop once wind, radiation and badly timed water are in; the wet lab asks whether a protectant changes how one Arabidopsis plant survives 37 degrees, and it does. So the model is not saying heat is harmless to a plant, it is saying heat is not the limiting economic signal in that crop and that season. What it changes is priority: if we had another season of wet-lab time, the model would send it to salinity and to water timing before heat, and that is the kind of redirection we want a model for.",
+"a_zh":"兩邊各自回答不同的問題，而頁面把這個不一致明講出來，沒有藏起來。模型問的是「哪些天氣項能降低二十五年來縣級稻作產量的預測誤差」，而在風、輻射和時機不對的水分都放進去之後，熱在第二期作就掉出來了；濕實驗室問的是「保護蛋白會不會改變單株阿拉伯芥在 37 度下的存活」，而答案是會。所以模型沒有說熱對植物無害，它說的是「在那個作物、那個季節裡，熱不是限制性的經濟訊號」。它改變的是優先順序：如果我們還有一季的濕實驗室時間，模型會建議先投到鹽度和水分時機，而不是熱——而這正是我們要一個模型來做的事。",
+"trap_en":"Choosing a side. The useful answer separates the economic signal from the physiological one and then says what the model would reprioritise.",
+"trap_zh":"選一邊站。有價值的答案是把經濟訊號和生理訊號分開，然後說模型會把優先順序改成什麼。",
+"nodes":[
+"D_INDEX",
+"C_THR"
+],
+"figs":[
+"d01"
+],
+"basis":"instructor's follow-up set, 30 Oct",
+"dom":"drylab",
+"id":"q553"
 }
 ];

@@ -17,8 +17,9 @@ Static HTML and vanilla JavaScript: no build step to view it, no server, works o
 |---|---|
 | **280 facts** | Every checkable number in the project, each linked to the wiki page it came from |
 | **306 terms** | From DNPH to hollow fiber to contained use, three keywords then one compact definition |
-| **510 questions** | Written for this project, in ten question types, with a model answer and the likely mistake |
-| **140 deep** | Graduate-level: mechanism, trade-offs, and numbers with their uncertainty. The Deep end deck drills these alone |
+| **553 questions** | Written for this project, in ten question types, with a model answer and the likely mistake |
+| **43 must-drill** | The priority set: picked after reading Results, Hardware and Plants end to end on 30 October 2026, and marked `star` in the source. They glow on every page that shows them, carry the figures a judge would point at and the map nodes they are asked about, and every drill deck weaves them in at about one question in three |
+| **199 deep** | Graduate-level: mechanism, trade-offs, and numbers with their uncertainty. The Deep end deck drills these alone |
 | **34 reasoning** | No answer anywhere on the wiki. The student is given a premise and has to get to the end of it |
 | **12 positioning** | Hollow fibre and DIY OD meters are old news — what did this team actually add? |
 | **14 from the adviser** | Kyle Peng's research highlights and open questions, 24 October, marked with his name |
@@ -43,8 +44,8 @@ sheet is where `source/bank.json` came from, and the Question Bank page links to
 1. **Start** — the session facts, the countdown, and five rules that decide the twenty minutes.
 2. **Facts** — searchable fact base, plus the ten numbers to know by heart, plus the honest list.
 3. **Terms** — big search, and a quiz box that keeps rotating. Space reveals, right arrow moves on.
-4. **Question Bank** — all 510 questions in one searchable place, tagged by area, by kind of question,
-   and by tier, deep end or adviser. The three keywords are set larger than anything else on the card
+4. **Question Bank** — all 553 questions in one searchable place, tagged by area, by kind of question,
+   and by tier, deep end, adviser or the must-drill set. The three keywords are set larger than anything else on the card
    because at this stage nobody says a model answer back from memory; the full answer, the likely
    mistake and the wiki sources fold away underneath. Each question also shows the figures published on
    the pages its answer comes from, so you can see what a judge might be pointing at while asking, and
@@ -126,6 +127,11 @@ Reads the per-domain JSON in `source/` and writes `docs/data/*.js`. Each source 
 `facts`, `terms`, `questions` and `gaps` for one domain; a domain may be split across
 `<domain>_*.json` chunks and they are merged. Duplicate facts, questions and gaps are dropped
 on the way in.
+
+A question marked `"star": 1` joins the priority set. It may also name `figs`, the figure
+ids a judge would be pointing at while asking it, and `nodes`, the knowledge-map nodes it is
+asked about; the build fails on an id that does not exist, marks each named figure `prio` so
+the Figure Room can glow and weight it, and counts the set into `docs/data/index.js`.
 
 `docs/data/ten.js` is the hand-picked list of ten headline numbers, and `docs/data/content.js`
 holds the written coaching material. Both are edited by hand, not generated.

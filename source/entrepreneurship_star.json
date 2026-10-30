@@ -1,0 +1,25 @@
+{
+  "domain": "entrepreneurship",
+  "questions": [
+    {
+      "q_en": "Your financial projection runs five years, your initial investment looks low when it is unusual to make money in the first three or four years, and there is no terminal value anywhere in it. What makes you think the projection is reasonable?",
+      "q_zh": "你們的財務預測只做五年，初始投資看起來很低——但前三四年賺不到錢其實才是常態——而且整份裡面沒有任何終值。你們憑什麼覺得這份預測合理？",
+      "type": "boundary",
+      "tier": "A",
+      "deep": 1,
+      "star": 1,
+      "pages": ["entrepreneurship#Break-even analysis", "entrepreneurship#Return for investors", "entrepreneurship#Investment Cost"],
+      "seat": "biz",
+      "backup": "dry",
+      "kw_en": ["a cash plan, not a valuation", "peak funding US$196k, break-even Year 4", "70 percent case goes to Year 6 and minus 7 percent"],
+      "kw_zh": ["這是現金計畫不是估值", "資金低點 19.6 萬美金、第 4 年損益兩平", "七成情境變第 6 年、IRR −7%"],
+      "a_en": "Because it is a cash plan and not a valuation: we are a social enterprise asking what funding gets us to self-sustaining, so we report the peak cash low point of minus US$196,000 in Year 1 and break-even at 226 hectares against US$627,000 of fixed cost in Years 0 to 4, rather than a terminal value we would have to invent a multiple for. We also took the harder version on purpose — we could have sold to industrial farms in the first four years to reach break-even faster and chose not to, and our price is fixed at twice our cost. Where I would want to be judged is the sensitivity case: at seventy percent of planned hectares, break-even moves to Year 6 and the internal rate of return goes to about minus seven percent, which is exactly why our own subsidy to farmers only starts after cumulative cash turns positive. And the number that should worry you most is not the terminal value — it is that the capital line uses US$2,280 per hectare while our own Math Model derives US$3,800, and this analysis has not been rebuilt on that figure.",
+      "a_zh": "因為這是一份現金計畫而不是估值：我們是社會企業，問的是「要多少資金才能走到自給自足」，所以我們報的是第 1 年的現金低點 −19.6 萬美金、以及在第 0 到 4 年 62.7 萬美金固定成本下、226 公頃的損益兩平點，而不是一個得自己發明倍數的終值。我們也刻意選了比較難的版本——我們本來可以在前四年賣給工業化農場、更快達到損益兩平，但我們沒有，而且定價固定在成本的兩倍。我希望被檢驗的是敏感度情境：在計畫公頃數的七成時，損益兩平延到第 6 年、內部報酬率掉到大約 −7%，這也正是為什麼我們自己對農民的補貼要等到累積現金轉正之後才開始。而最該讓你擔心的數字不是終值——是資本那一行用的是每公頃 US$2,280，而我們自己的數學模型算出來是 US$3,800，而這份分析還沒有用後面那個數字重做過。",
+      "trap_en": "Defending the low initial investment. Year 0 is a build year, the US$627,000 is cumulative over five years, and Year 1 assumes twenty paying hectares before any field data exists.",
+      "trap_zh": "替「初始投資很低」辯護。第 0 年是建置年、62.7 萬是五年累積，而第 1 年假設在沒有任何田間數據之前就賣出二十公頃。",
+      "nodes": ["B_BREAK", "C_MKT", "C_SCALE"],
+      "figs": ["b02"],
+      "basis": "instructor's priority set, 30 Oct read-through of Results, Hardware and Plants"
+    }
+  ]
+}

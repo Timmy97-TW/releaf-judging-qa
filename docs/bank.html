@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Question Bank · ReLEAF Judging Trainer</title>
 <meta name="description" content="Every question written for the GEMS Taiwan judging session: three keywords first, then the full answer, then the figures a judge could point at while asking it.">
-<link rel="stylesheet" href="assets/css/base.css?v=202610300100">
-<link rel="stylesheet" href="assets/css/pages.css?v=202610300100">
-<link rel="stylesheet" href="assets/css/theme.css?v=202610300100">
+<link rel="stylesheet" href="assets/css/base.css?v=202610301821">
+<link rel="stylesheet" href="assets/css/pages.css?v=202610301821">
+<link rel="stylesheet" href="assets/css/theme.css?v=202610301821">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M4 20c0-8 5.5-14.5 16-15.5C19.5 14 14 20 4 20Z' fill='%231a7f45'/%3E%3C/svg%3E">
 </head>
 <body>
@@ -96,11 +96,11 @@
   </div>
 </div>
 
-<script src="assets/js/site.js?v=202610300100"></script>
-<script src="data/meta.js?v=202610300100"></script>
-<script src="data/bank.js?v=202610300100"></script>
-<script src="data/figures.js?v=202610300100"></script>
-<script src="data/recorded.js?v=202610300100"></script>
+<script src="assets/js/site.js?v=202610301821"></script>
+<script src="data/meta.js?v=202610301821"></script>
+<script src="data/bank.js?v=202610301821"></script>
+<script src="data/figures.js?v=202610301821"></script>
+<script src="data/recorded.js?v=202610301821"></script>
 <script>
 (function () {
   'use strict';
@@ -136,26 +136,36 @@
 
   function figsFor(q) {
     var fam = FAM[q.dom] || [], seen = {}, hit = [], j, k;
+    /* a priority question names the figures a judge would be pointing at while
+       asking it, written by hand rather than inferred from the page. Those come
+       first and keep their own mark. */
+    var named = {};
+    for (j = 0; j < (q.figs || []).length; j++) {
+      var nf = byId[q.figs[j]];
+      if (nf && !seen[nf.id]) { seen[nf.id] = 1; named[nf.id] = 1; hit.push(nf); }
+    }
+    var lead = hit.length;
     for (j = 0; j < q.pages.length; j++) {
       var list = byPage[String(q.pages[j]).split('#')[0].trim()] || [];
       for (k = 0; k < list.length; k++) {
         if (!seen[list[k].id]) { seen[list[k].id] = 1; hit.push(list[k]); }
       }
     }
-    if (hit.length) {
-      hit.sort(function (a, b) {
+    if (hit.length > lead || lead) {
+      var rest = hit.slice(lead);
+      rest.sort(function (a, b) {
         var da = fam.indexOf(a.dom), db = fam.indexOf(b.dom);
         if (da < 0) da = 99;
         if (db < 0) db = 99;
         return da - db || (a.id < b.id ? -1 : 1);
       });
-      return { kind: 'page', items: hit };
+      return { kind: lead ? 'named' : 'page', items: hit.slice(0, lead).concat(rest), named: named };
     }
     for (j = 0; j < fam.length; j++) {
       var dl = byDom[fam[j]] || [];
       for (k = 0; k < dl.length; k++) if (!seen[dl[k].id]) { seen[dl[k].id] = 1; hit.push(dl[k]); }
     }
-    return { kind: 'area', items: hit };
+    return { kind: 'area', items: hit, named: named };
   }
 
   /* ── state ───────────────────────────────────────────────────────────── */
@@ -164,13 +174,14 @@
   var state = {
     q: decodeURIComponent(param('q') || ''),
     doms: {}, types: {},
-    tierA: false, deep: false, kyle: false,
+    tierA: false, deep: false, kyle: false, star: false,
     mode: S.load('bank-mode', 'kw'),
     rq: '', rsheet: 'all'
   };
   if (param('dom')) state.doms[param('dom')] = 1;
   if (param('type')) state.types[param('type')] = 1;
   if (param('deep')) state.deep = true;
+  if (param('star')) state.star = true;
   if (['kw', 'quiz', 'all'].indexOf(state.mode) < 0) state.mode = 'kw';
 
   var revealed = {};                 // question ids whose keywords are showing in quiz mode
@@ -206,6 +217,7 @@
     if (state.tierA && q.tier !== 'A') return false;
     if (state.deep && !q.deep) return false;
     if (state.kyle && !q.author) return false;
+    if (state.star && !q.star) return false;
     var needle = state.q.toLowerCase().trim();
     if (needle && hay(q).indexOf(needle) < 0) return false;
     return true;
@@ -225,6 +237,7 @@
     var tags = '<span class="pill pill-domc" style="--c:var(--dom-' + q.dom + ')">' +
                  S.esc(domName(q.dom)) + '</span>' +
                '<span class="pill">' + S.esc(typeName(q.type)) + '</span>';
+    if (q.star) tags += '<span class="pill pill-star"><i>★</i>' + (zh ? '必練' : 'must drill') + '</span>';
     if (q.tier === 'A') tags += '<span class="pill pill-line">' + (zh ? 'A 級' : 'tier A') + '</span>';
     if (q.deep) tags += '<span class="pill pill-deep">' + (zh ? '深水區' : 'deep end') + '</span>';
     if (q.author) tags += '<span class="pill pill-author">' + S.esc(zh ? (q.author_zh || q.author) : q.author) + '</span>';
@@ -239,7 +252,7 @@
     }
 
     var open = state.mode === 'all' ? ' open' : '';
-    return '<article class="qb" id="' + q.id + '">' +
+    return '<article class="qb' + (q.star ? ' is-star' : '') + '" id="' + q.id + '">' +
       '<div class="qb-top">' + tags + '<span class="qid">' + q.id + '</span></div>' +
       '<p class="qb-q">' + mark(S.t(q, 'q'), needle) + '</p>' +
       body +
@@ -262,14 +275,16 @@
     var r = figsFor(q), zh = S.lang === 'zh';
     if (!r.items.length) return '';
     var show = all ? r.items : r.items.slice(0, FIGCAP);
-    var lab = r.kind === 'page'
+    var lab = r.kind === 'named'
+      ? (zh ? '這題評審最可能指著的圖，排在最前面' : 'The figures a judge would most likely point at, first')
+      : r.kind === 'page'
       ? (zh ? '同一頁上的圖' : 'Figures on the pages this answer comes from')
       : (zh ? '同一領域的圖' : 'Figures from the same area');
     var h = '<p class="lab">' + lab + ' <span class="src">' + show.length + ' / ' + r.items.length + '</span></p>' +
       '<div class="qb-figgrid">';
     for (var n = 0; n < show.length; n++) {
       var f = show[n];
-      h += '<button class="qb-figbtn" type="button" data-fig="' + f.id + '">' +
+      h += '<button class="qb-figbtn' + (r.named[f.id] ? ' is-star' : '') + '" type="button" data-fig="' + f.id + '">' +
         '<img loading="lazy" decoding="async" src="assets/img/' + (f.dir || 'fq') + '/' + f.img + '" alt="">' +
         '<span>' + S.esc(S.t(f, 'ask')) + '</span></button>';
     }
@@ -310,13 +325,16 @@
     }
     document.getElementById('types').innerHTML = h;
 
-    var nA = 0, nD = 0, nK = 0;
+    var nA = 0, nD = 0, nK = 0, nS = 0;
     for (n = 0; n < QUESTIONS.length; n++) {
       if (QUESTIONS[n].tier === 'A') nA++;
       if (QUESTIONS[n].deep) nD++;
       if (QUESTIONS[n].author) nK++;
+      if (QUESTIONS[n].star) nS++;
     }
     document.getElementById('flags').innerHTML =
+      '<button class="chip chip-star" data-f="star" aria-pressed="' + state.star + '">' +
+        (zh ? '★ 必練題' : '★ The must-drill set') + '<span class="c">' + nS + '</span></button>' +
       '<button class="chip" data-f="tierA" aria-pressed="' + state.tierA + '">' +
         (zh ? '提名與最常問的領域' : 'Nominated and most-asked areas') + '<span class="c">' + nA + '</span></button>' +
       '<button class="chip" data-f="deep" aria-pressed="' + state.deep + '">' +
@@ -342,6 +360,11 @@
       if (!pass(q)) continue;
       if (!groups[q.dom]) { groups[q.dom] = []; order.push(q.dom); }
       groups[q.dom].push(q); shown++;
+    }
+    /* the must-drill set sits at the top of its own area, so it is the first
+       thing read in every group rather than something you scroll past */
+    for (n = 0; n < order.length; n++) {
+      groups[order[n]].sort(function (a, b) { return (b.star || 0) - (a.star || 0); });
     }
     order.sort(function (a, b) {
       var ia = 99, ib = 99, m;
@@ -460,7 +483,7 @@
   document.getElementById('flags').addEventListener('click', function (e) {
     var b = e.target.closest('.chip'); if (!b) return;
     var f = b.getAttribute('data-f');
-    if (f === 'reset') { state.doms = {}; state.types = {}; state.tierA = state.deep = state.kyle = false; }
+    if (f === 'reset') { state.doms = {}; state.types = {}; state.tierA = state.deep = state.kyle = state.star = false; }
     else state[f] = !state[f];
     drawChips(); drawList();
   });

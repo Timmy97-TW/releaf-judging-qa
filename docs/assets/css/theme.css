@@ -208,3 +208,104 @@ footer a, .site-foot a { color: rgba(255, 255, 255, .78); }
   box-shadow: 0 0 0 1px rgba(255, 255, 255, .28), 0 0 24px rgba(0, 212, 146, .4);
   color: #fff;
 }
+
+/* ── the priority set ─────────────────────────────────────────────────────
+ * Questions the instructor marked must-drill after the 30 October read-through
+ * of Results, Hardware and Plants, and the figures those questions point at.
+ * They look different everywhere they appear, and every drill deck weaves
+ * them in, so nobody has to remember which ones mattered.
+ */
+:root {
+  --star: #9A6B00;
+  --star-hot: #F0A800;
+  --star-wash: #FFF7E3;
+  --star-line: rgba(240, 168, 0, .55);
+}
+
+@keyframes starglow {
+  0%, 100% { box-shadow: 0 0 0 1px var(--star-line), 0 0 0 rgba(240, 168, 0, .42), 0 6px 20px rgba(240, 168, 0, .12); }
+  50%      { box-shadow: 0 0 0 1px var(--star-line), 0 0 22px 2px rgba(240, 168, 0, .42), 0 6px 20px rgba(240, 168, 0, .2); }
+}
+@keyframes starsheen {
+  from { background-position: -140% 0; }
+  to   { background-position: 240% 0; }
+}
+
+/* the badge, on a card or a stage */
+.pill-star {
+  position: relative; overflow: hidden;
+  background: linear-gradient(100deg, #F0A800, #E07B00);
+  color: #fff; border: 0; font-weight: 700; letter-spacing: .01em;
+}
+.pill-star::after {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(100deg, transparent 20%, rgba(255, 255, 255, .55) 50%, transparent 80%);
+  background-size: 60% 100%; background-repeat: no-repeat;
+  animation: starsheen 2.6s linear infinite;
+}
+.pill-star i { font-style: normal; margin-right: .25rem; }
+
+/* a question card in the bank */
+.qb.is-star {
+  background: linear-gradient(180deg, var(--star-wash), #fff 58%);
+  border-color: var(--star-line);
+  animation: starglow 3.4s ease-in-out infinite;
+}
+.qb.is-star .qb-q { color: #4A3300; }
+.qb.is-star .qb-kw > li > b { background: var(--star-hot); color: #fff; }
+
+/* the live stage in the mock room and the figure room */
+.bubble.is-star {
+  border-color: var(--star-line);
+  animation: starglow 3.4s ease-in-out infinite;
+}
+.bubble.is-star::before {
+  content: attr(data-star); position: absolute; top: -.72rem; right: 1.25rem;
+  background: linear-gradient(100deg, #F0A800, #E07B00); color: #fff;
+  font-size: .6875rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase;
+  padding: .18rem .55rem; border-radius: 999px; z-index: 2;
+}
+
+/* a chip that filters to the set, and the figure thumbnails it names */
+.chip.chip-star[aria-pressed="true"] {
+  background: linear-gradient(100deg, #F0A800, #E07B00); color: #fff; border-color: transparent;
+}
+.chip.chip-star[aria-pressed="false"] { border-color: var(--star-line); color: var(--star); }
+.qb-figbtn.is-star { outline: 2px solid var(--star-hot); outline-offset: 1px; border-radius: 10px; }
+.fq-star { color: var(--star); font-weight: 700; }
+
+/* the must-drill block on a knowledge-map card */
+.mstar {
+  margin: 1rem 0 0; padding: .85rem .95rem;
+  background: var(--star-wash); border: 1px solid var(--star-line); border-radius: 14px;
+}
+.mstar h3 {
+  margin: 0 0 .55rem; font-size: .75rem; letter-spacing: .06em; text-transform: uppercase;
+  color: var(--star);
+}
+.mstar a {
+  display: block; text-decoration: none; color: inherit;
+  padding: .5rem 0; border-top: 1px solid rgba(240, 168, 0, .3);
+}
+.mstar a:first-of-type { border-top: 0; padding-top: 0; }
+.mstar b { display: block; font-size: .9375rem; line-height: 1.35; color: #3A2800; font-weight: 600; }
+.mstar span { display: block; margin-top: .22rem; font-size: .8125rem; color: var(--star); }
+.mstar a:hover b { text-decoration: underline; }
+
+/* the start page card */
+.starbox {
+  display: flex; gap: 1.1rem; align-items: center; flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 1.25rem 1.4rem; border-radius: var(--r-lg);
+  background: linear-gradient(180deg, var(--star-wash), #fff 70%);
+  border: 1px solid var(--star-line);
+  animation: starglow 3.4s ease-in-out infinite;
+}
+.starbox h3 { margin: 0 0 .3rem; font-family: var(--font-display); font-size: 1.1875rem; letter-spacing: -.016em; }
+.starbox p { margin: 0; color: var(--ink-2); max-width: 62ch; font-size: .9375rem; }
+.starbox .btn-row { flex-wrap: wrap; }
+
+@media (prefers-reduced-motion: reduce) {
+  .qb.is-star, .bubble.is-star, .starbox { animation: none; box-shadow: 0 0 0 1px var(--star-line), 0 0 18px rgba(240, 168, 0, .3); }
+  .pill-star::after { animation: none; opacity: 0; }
+}

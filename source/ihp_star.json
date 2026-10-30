@@ -1,0 +1,45 @@
+{
+  "domain": "ihp",
+  "questions": [
+    {
+      "q_en": "I see you only have physical biosafety and no engineered containment method. Why?",
+      "q_zh": "我看到你們只有物理性的生物安全，沒有任何基因層面的圍阻機制。為什麼？",
+      "type": "design",
+      "tier": "A",
+      "deep": 1,
+      "star": 1,
+      "pages": ["safety-and-security#Bioreactor safety", "hardware-bioreactor#Containment & Safety", "human-practices"],
+      "seat": "ihp",
+      "backup": "hw",
+      "kw_en": ["Brophy: switches mutate and fail", "a pore does not depend on genotype", "layers are planned, not present"],
+      "kw_zh": ["Brophy：開關會突變、會失效", "孔徑不依賴基因型", "多層是規劃中，不是現在就有"],
+      "a_en": "Because Dr. Jennifer Brophy told us to make physical containment the primary mechanism rather than relying on a kill switch, and we took it: a biological switch is a piece of DNA under selection, so it mutates and fails, while a 0.2 micrometre pore does not depend on the organism's genotype at all. In our architecture the barrier is also the product path, so monitoring the membrane is monitoring containment — which is why transmembrane pressure, flow and leak detection are on the instrument list, and why a plate is required after every module change. A kill step sitting on that path would also have to be kept away from the protein we are trying to harvest. I will not claim this is finished: the planned layers are a pressure trip that stops the pump and opens the pinch valve, and a droplet sensor under the loop, and genetic containment sits on the 2027 roadmap.",
+      "a_zh": "因為 Jennifer Brophy 博士建議我們把物理圍阻當成主要機制，而不是依賴自殺開關，而我們接受了：生物性的開關是一段處在選擇壓力下的 DNA，所以它會突變、會失效，而 0.2 微米的孔徑完全不依賴生物體的基因型。在我們的架構裡，那道屏障同時也是產品路徑，所以監看膜就等於監看圍阻——這也是為什麼跨膜壓、流量和洩漏偵測都在儀器清單上，以及為什麼每次換模組之後都必須塗一次盤。而一個放在那條路徑上的滅殺步驟，還得想辦法不要碰到我們正要採收的蛋白。我不會說這件事已經完成：規劃中的層次是「會停泵並打開夾管閥的壓力跳脫」和「迴路下方的液滴感測器」，而基因層面的圍阻在 2027 年的路線圖上。",
+      "trap_en": "Present tense on the layers. Entrepreneurship says redundancy with genetic and membrane containment and schedules kill switches for 2027; if a judge quotes it, say the present tense on that page is wrong and the future plan is fine.",
+      "trap_zh": "把多層講成現在就有。Entrepreneurship 頁寫「genetic 與 membrane 的冗餘」並把自殺開關排在 2027；如果評審引用，就說那一頁的現在式寫錯了，未來計畫本身沒問題。",
+      "nodes": ["C_MEM", "I_BROPHY", "Z_CONTAIN"],
+      "figs": ["i06", "f01"],
+      "basis": "instructor's priority set, 30 Oct read-through of Results, Hardware and Plants"
+    },
+    {
+      "q_en": "Through the whole project, which experts gave you the most valuable feedback, and how did they reshape the project?",
+      "q_zh": "整個專案走下來，哪些專家給了你們最有價值的回饋？他們怎麼改變了這個專案？",
+      "type": "integrate",
+      "tier": "A",
+      "deep": 1,
+      "star": 1,
+      "pages": ["human-practices", "hardware-bioreactor#6.1", "hardware-bioreactor#6.3"],
+      "seat": "ihp",
+      "backup": "hw",
+      "kw_en": ["Chen: keep it in a vessel, sell the consumable", "Brophy: no kill switch", "Chang: nothing drove the product across"],
+      "kw_zh": ["陳：留在容器裡、賣消耗品", "Brophy：不要自殺開關", "張：沒有東西推產品過膜"],
+      "a_en": "Professor Chen Wen-liang in April: he told us engineered bacteria released into open soil are hard to defend, so keep them in a vessel and sell the consumable rather than the device — that killed our transgenic rhizobacterium plan and is the reason a bioreactor exists at all. Dr. Jennifer Brophy then removed our kill switch, which made the membrane the containment and changed what the hardware has to monitor. Professor Chang Jo-Shu found the gap that would have sunk the first build: nothing in our design pushed the protectant from the lumen to the shell, because a higher flow rate only recirculates — hence the pinch valve, a smaller membrane, and the pressure and flow instruments that show fouling. And two reviewers changed things we had not asked about: Teacher He of Owl Lab replaced our two-board plan with one mainboard, which also ended the unstable pressure readings, and Dr. Peng voided one of our own hydroponic runs because culture volume was not standardised across arms.",
+      "a_zh": "四月的陳文亮教授：他告訴我們「放到開放土壤裡的基改菌很難辯護，所以把它留在容器裡，賣消耗品而不是賣機器」——這句話殺掉了我們的轉基因根圈菌計畫，也正是為什麼今天會有一台生物反應器。接著 Jennifer Brophy 博士拿掉了我們的自殺開關，這讓膜成為圍阻本身，也改變了硬體需要監看什麼。張嘉修教授找出了會讓第一版報廢的缺口：我們的設計裡沒有任何東西把保護蛋白從 lumen 推到 shell，因為提高流速只是讓液體循環——於是有了夾管閥、更小的膜，以及顯示結垢的壓力與流量儀器。還有兩位審閱者改掉了我們根本沒問的東西：貓頭鷹實驗室的何老師把我們的雙板設計換成一塊主板，順手終結了壓力讀值不穩的問題；而彭博士因為各組培養液體積沒有統一，判定我們自己一次水耕實驗作廢。",
+      "trap_en": "Listing names without the before and after. Pair every expert with one concrete change, and include Dr. Peng voiding our own run — a judge rates that higher than praise.",
+      "trap_zh": "只列名字而沒有前後對照。每一位專家都要配一個具體的改變，而且要包含彭博士判定我們自己的實驗作廢——評審看重這個勝過讚美。",
+      "nodes": ["I_BROPHY", "I_CHEN", "I_CHANG"],
+      "figs": ["i05", "i06"],
+      "basis": "instructor's priority set, 30 Oct read-through of Results, Hardware and Plants"
+    }
+  ]
+}

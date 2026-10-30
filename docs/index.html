@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ReLEAF Judging Trainer · GEMS Taiwan iGEM 2026</title>
 <meta name="description" content="Twenty minutes of questions, seven students, one wiki. Preparation for the GEMS Taiwan judging session at the iGEM 2026 Grand Jamboree.">
-<link rel="stylesheet" href="assets/css/base.css?v=202610300100">
-<link rel="stylesheet" href="assets/css/pages.css?v=202610300100">
-<link rel="stylesheet" href="assets/css/theme.css?v=202610300100">
+<link rel="stylesheet" href="assets/css/base.css?v=202610301821">
+<link rel="stylesheet" href="assets/css/pages.css?v=202610301821">
+<link rel="stylesheet" href="assets/css/theme.css?v=202610301821">
 <link rel="icon" href="assets/img/releaf-logo.png">
 <style>
 .sheet { max-width: 1060px; margin: 0 auto; padding: 0 24px; }
@@ -113,6 +113,24 @@ section { padding: 0; }
 <main class="sheet">
 
   <section class="band">
+    <div class="starbox">
+      <div>
+        <h3 data-en="★ Start with the must-drill set"
+            data-zh="★ 先練必練題"></h3>
+        <p id="starline"></p>
+      </div>
+      <div class="btn-row">
+        <a class="btn btn-accent" href="bank.html?star=1"
+           data-en="Read the set" data-zh="看完整題目"></a>
+        <a class="btn btn-line" href="mock.html?mode=star"
+           data-en="Drill it in the mock room" data-zh="在模擬會場練"></a>
+        <a class="btn btn-ghost" href="figures.html?tier=prio"
+           data-en="See the figures it points at" data-zh="看它指著的圖"></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
     <p class="kick" data-en="The session" data-zh="這一場"></p>
     <h2 data-en="Room J03, first shift of the day." data-zh="J03 會場，當天第一場。"></h2>
     <p class="sub" data-en="Nobody will be warmed up, including the panel. The first answer sets the tone for the whole twenty minutes."
@@ -180,10 +198,10 @@ section { padding: 0; }
 
 </main>
 
-<script src="assets/js/site.js?v=202610300100"></script>
-<script src="data/content.js?v=202610300100"></script>
-<script src="data/index.js?v=202610300100"></script>
-<script src="data/map.js?v=202610300100"></script>
+<script src="assets/js/site.js?v=202610301821"></script>
+<script src="data/content.js?v=202610301821"></script>
+<script src="data/index.js?v=202610301821"></script>
+<script src="data/map.js?v=202610301821"></script>
 <script>
 (function () {
   var S = window.Site;
@@ -206,9 +224,25 @@ section { padding: 0; }
     document.getElementById('rooms').innerHTML = h;
   }
 
+  /* the priority set leads the page, because it is the one list that is not
+     optional: the questions the instructor marked after reading Results,
+     Hardware and Plants end to end on 30 October */
+  function starline() {
+    var c = window.INDEX_COUNTS || {}, zh = S.lang === 'zh';
+    document.getElementById('starline').textContent = zh
+      ? (c.star || 0) + ' 題，是 10 月 30 日把 Results、Hardware、Plants 從頭讀完之後挑出來的——'
+        + '評審最可能問、而我們最容易答錯的那些。它們在每一頁都會發光，'
+        + (c.starfigs || 0) + ' 張相關的圖也一起標了，而且每一局練習都會抽到它們。'
+      : (c.star || 0) + ' questions, picked after reading Results, Hardware and Plants end to end on '
+        + '30 October: the ones a judge is most likely to ask and we are most likely to get wrong. '
+        + 'They glow wherever they appear, ' + (c.starfigs || 0) + ' figures are marked with them, '
+        + 'and every drill run draws from them.';
+  }
+
   function drills() {
     var c = window.INDEX_COUNTS || {}, zh = S.lang === 'zh';
     var rows = [
+      { n: c.star || 0, href: 'mock.html?mode=star', col: '#F0A800', en: '★ Must drill', zh: '★ 必練題' },
       { n: c.deep || 0, href: 'mock.html?mode=deep', col: '#00B87A', en: 'Deep end', zh: '深水區' },
       { n: c.reason || 0, href: 'mock.html?type=reason', col: '#0167EF', en: 'Reasoning, not recall', zh: '推理題' },
       { n: c.history || 0, href: 'mock.html?type=history', col: '#00A3C4', en: 'Where we stand', zh: '我們站在哪裡' },
@@ -242,7 +276,7 @@ section { padding: 0; }
     document.getElementById('counts').innerHTML = h;
   }
 
-  function all() { rooms(); drills(); rules(); counts(); }
+  function all() { starline(); rooms(); drills(); rules(); counts(); }
   S.onLang(all); all();
 
   /* the live map, drawn small ------------------------------------------ */

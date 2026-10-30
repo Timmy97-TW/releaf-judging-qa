@@ -113,7 +113,8 @@ var FIGURES = {
 "n":162,
 "t1":50,
 "t2":36,
-"t3":76
+"t3":76,
+"prio":32
 },
 "items":[
 {
@@ -570,7 +571,8 @@ var FIGURES = {
 "ans":0,
 "trap_en":"Describing the blue line as waste. It is the product: the shell-side permeate is what the farm actually uses.",
 "trap_zh":"把藍色那條說成廢液。那是產品：殼側透過液才是最後用到田裡的東西。",
-"dom":"hardware"
+"dom":"hardware",
+"prio":1
 },
 {
 "id":"h03",
@@ -608,7 +610,8 @@ var FIGURES = {
 "ans":0,
 "trap_en":"Overclaiming. Say what it is: one plating, from one run, after 24 hours. It is the only containment evidence the project has.",
 "trap_zh":"把話說得太滿。要講清楚它是什麼：一次實驗、24 小時後、一次塗盤。這是整個專題唯一的圍堵證據。",
-"dom":"hardware"
+"dom":"hardware",
+"prio":1
 },
 {
 "id":"h04",
@@ -646,7 +649,8 @@ var FIGURES = {
 "ans":0,
 "trap_en":"Treating TMP as a fourth sensor reading. There is no TMP sensor; it is arithmetic on three real ones.",
 "trap_zh":"把 TMP 當成第四個感測器讀值。沒有 TMP 感測器，它是用三個真實讀值算出來的。",
-"dom":"hardware"
+"dom":"hardware",
+"prio":1
 },
 {
 "id":"h05",
@@ -722,7 +726,8 @@ var FIGURES = {
 "ans":0,
 "trap_en":"Confusing it with the pinch valve. The pinch valve is on the culture return and makes the pressure; this one is on the shell side and opens the product path.",
 "trap_zh":"跟夾管閥搞混。夾管閥在菌液回流端、負責製造壓力；這一個在殼側，負責打開產物的通路。",
-"dom":"hardware"
+"dom":"hardware",
+"prio":1
 },
 {
 "id":"h07",
@@ -760,7 +765,8 @@ var FIGURES = {
 "ans":0,
 "trap_en":"Mixing up the LPA with the photometer. The LPA puts light into cultures; the photometer reads light through one.",
 "trap_zh":"把 LPA 跟光度計搞混。LPA 是把光打進菌液，光度計是讓光穿過菌液去讀值。",
-"dom":"hardware"
+"dom":"hardware",
+"prio":1
 },
 {
 "id":"h08",
@@ -836,7 +842,8 @@ var FIGURES = {
 "ans":0,
 "trap_en":"Hiding the unproven part. The repair is a design change that has not been re-tested; say so before a judge finds it.",
 "trap_zh":"把還沒驗證的部分藏起來。這個修正是尚未重測的設計變更；在評審問出來之前自己先講。",
-"dom":"hardware"
+"dom":"hardware",
+"prio":1
 },
 {
 "id":"h10",
@@ -1064,7 +1071,8 @@ var FIGURES = {
 "ans":0,
 "trap_en":"Naming a visit without naming what changed. Every IHP photo should come with a before and an after.",
 "trap_zh":"只講拜訪了誰，卻沒講改了什麼。每一張人文實踐的照片都應該附上「之前」與「之後」。",
-"dom":"ihp"
+"dom":"ihp",
+"prio":1
 },
 {
 "id":"i06",
@@ -1102,7 +1110,8 @@ var FIGURES = {
 "ans":0,
 "trap_en":"Saying the kill switch was abandoned outright. The page says physical containment is primary while whether an additional kill switch is necessary is still being evaluated.",
 "trap_zh":"說自殺開關被完全放棄。頁面寫的是以實體圍堵為主，是否還需要額外的自殺開關仍在評估。",
-"dom":"ihp"
+"dom":"ihp",
+"prio":1
 },
 {
 "id":"i07",
@@ -1292,7 +1301,8 @@ var FIGURES = {
 "ans":0,
 "trap_en":"Equating sensitivity with accuracy. More sensitive is not more linear, and this figure separates the two.",
 "trap_zh":"把靈敏度當成準確度。比較靈敏不等於比較線性，這張圖剛好把兩件事分開。",
-"dom":"measurement"
+"dom":"measurement",
+"prio":1
 },
 {
 "id":"m02",
@@ -1330,7 +1340,8 @@ var FIGURES = {
 "ans":0,
 "trap_en":"Claiming bubbles are 'handled' in general. This is one controlled challenge on the bench, with its own worst-case numbers; quote them.",
 "trap_zh":"籠統地說氣泡「已經處理好了」。這是實驗桌上一次受控的挑戰測試，有自己的最壞值；把數字講出來。",
-"dom":"measurement"
+"dom":"measurement",
+"prio":1
 },
 {
 "id":"m03",
@@ -1368,7 +1379,8 @@ var FIGURES = {
 "ans":0,
 "trap_en":"Blaming rounding on output. The raw samples are stored; the shape of this histogram is about how the channel was sampled, not how it was printed.",
 "trap_zh":"推說是輸出時四捨五入。原始取樣都有存下來；這張直方圖的形狀講的是通道怎麼取樣，不是怎麼列印。",
-"dom":"measurement"
+"dom":"measurement",
+"prio":1
 },
 {
 "id":"m04",
@@ -1406,7 +1418,8 @@ var FIGURES = {
 "ans":0,
 "trap_en":"Reading the steps as real growth. The point of the figure is that they are not; this is the team catching its own instrument out.",
 "trap_zh":"把那些階梯當成真的生長。這張圖的重點正好相反：是團隊自己抓到儀器的問題。",
-"dom":"measurement"
+"dom":"measurement",
+"prio":1
 },
 {
 "id":"m05",
@@ -1444,7 +1457,8 @@ var FIGURES = {
 "ans":0,
 "trap_en":"Claiming the gate improved the biology. It improved how much of the record is usable, nothing more.",
 "trap_zh":"宣稱關卡讓生物表現變好。它只是讓紀錄中可用的比例變高，僅此而已。",
-"dom":"measurement"
+"dom":"measurement",
+"prio":1
 },
 {
 "id":"m06",
@@ -1482,7 +1496,8 @@ var FIGURES = {
 "ans":0,
 "trap_en":"Quoting the logarithmic equation as the one that produced our numbers. It is drawn on the figure; the tables come from the four-parameter logistic fit.",
 "trap_zh":"把圖上那條對數方程式說成我們數字的來源。那只是畫在圖上的趨勢線；表格裡的數字來自四參數邏輯斯擬合。",
-"dom":"measurement"
+"dom":"measurement",
+"prio":1
 },
 {
 "id":"m07",
@@ -1520,7 +1535,8 @@ var FIGURES = {
 "ans":0,
 "trap_en":"Confusing activity with concentration. DNPH measures what the enzyme does; ELISA measures how much of it is there. The two time courses are not the same figure.",
 "trap_zh":"把活性跟濃度搞混。DNPH 測的是酵素做了什麼，ELISA 測的是有多少酵素。這兩條時間序列不是同一張圖。",
-"dom":"measurement"
+"dom":"measurement",
+"prio":1
 },
 {
 "id":"m08",
@@ -1558,7 +1574,8 @@ var FIGURES = {
 "ans":0,
 "trap_en":"Using this blot as proof of secretion into the shell. It is not; the shell-side evidence is the ELISA and DNPH on the permeate, not this blot.",
 "trap_zh":"拿這張 blot 當作分泌到殼側的證據。它不是；殼側的證據是透過液的 ELISA 與 DNPH，不是這張 blot。",
-"dom":"measurement"
+"dom":"measurement",
+"prio":1
 },
 {
 "id":"m09",
@@ -1596,7 +1613,8 @@ var FIGURES = {
 "ans":0,
 "trap_en":"Quoting the measured drop as the membrane's. Most of it is plumbing until you subtract the background.",
 "trap_zh":"把量到的壓降直接說成薄膜的壓降。在扣掉背景之前，大部分其實是管路造成的。",
-"dom":"measurement"
+"dom":"measurement",
+"prio":1
 },
 {
 "id":"m10",
@@ -1672,7 +1690,8 @@ var FIGURES = {
 "ans":0,
 "trap_en":"Reading a plate grid without saying which way the dose runs. Always name the rows and the columns before the conclusion.",
 "trap_zh":"讀培養盤矩陣卻不講清楚劑量往哪個方向跑。先把行與列講出來，再講結論。",
-"dom":"plant"
+"dom":"plant",
+"prio":1
 },
 {
 "id":"p02",
@@ -1710,7 +1729,8 @@ var FIGURES = {
 "ans":0,
 "trap_en":"Generalising one significant condition into a general claim about trehalose.",
 "trap_zh":"把一個顯著的條件推廣成海藻糖的通論。",
-"dom":"plant"
+"dom":"plant",
+"prio":1
 },
 {
 "id":"p03",
@@ -1748,7 +1768,8 @@ var FIGURES = {
 "ans":0,
 "trap_en":"Glossing over the ND. A missing cell in a timing grid is exactly what a judge will ask about; say what happened to it.",
 "trap_zh":"把 ND 含糊帶過。時機矩陣裡缺一格正是評審會問的；直接講清楚那一盤發生了什麼事。",
-"dom":"plant"
+"dom":"plant",
+"prio":1
 },
 {
 "id":"p04",
@@ -1824,7 +1845,8 @@ var FIGURES = {
 "ans":0,
 "trap_en":"Showing an 'after' photo on its own. A phenotype picture without its matched 'before' or its control row is not evidence.",
 "trap_zh":"只拿「處理後」的照片出來。表型照片沒有配對的「處理前」或對照排，就不是證據。",
-"dom":"plant"
+"dom":"plant",
+"prio":1
 },
 {
 "id":"p06",
@@ -1862,7 +1884,8 @@ var FIGURES = {
 "ans":0,
 "trap_en":"Forgetting the WB800 control. The untransformed supernatant is what separates a protectant effect from a medium effect.",
 "trap_zh":"忘了 WB800 對照。未轉形菌的上清液才是把「保護劑效果」跟「培養基效果」分開的關鍵。",
-"dom":"plant"
+"dom":"plant",
+"prio":1
 },
 {
 "id":"p07",
@@ -1900,7 +1923,8 @@ var FIGURES = {
 "ans":0,
 "trap_en":"Naming the method without naming who it came from. This protocol came out of a Human Practices visit, which is worth a sentence.",
 "trap_zh":"只講方法卻不講它從哪來。這個流程來自一次人文實踐的拜訪，值得用一句話交代。",
-"dom":"plant"
+"dom":"plant",
+"prio":1
 },
 {
 "id":"p08",
@@ -2014,7 +2038,8 @@ var FIGURES = {
 "ans":0,
 "trap_en":"Describing the timings without anchoring them to the stress day. The whole design hangs on that one date.",
 "trap_zh":"講時機卻沒有把它們錨定在施加逆境的那一天。整個設計就掛在那一個日期上。",
-"dom":"plant"
+"dom":"plant",
+"prio":1
 },
 {
 "id":"q01",
@@ -5054,7 +5079,8 @@ var FIGURES = {
 ],
 "ans":0,
 "trap_en":"Quoting 226 hectares as a fact. Say the assumption in the same breath, or a judge will ask what price it assumes.",
-"trap_zh":"把 226 公頃當成事實來引用。講數字時要一起講假設，否則評審一定會問「這是用什麼價格算的」。"
+"trap_zh":"把 226 公頃當成事實來引用。講數字時要一起講假設，否則評審一定會問「這是用什麼價格算的」。",
+"prio":1
 },
 {
 "id":"b03",
@@ -5244,7 +5270,8 @@ var FIGURES = {
 ],
 "ans":0,
 "trap_en":"Reading the ranking as importance in the final model. It ranks what each variable does to the error when added, which is not the same thing.",
-"trap_zh":"把排名當成在最終模型中的重要性。它排的是「加進來對誤差造成什麼影響」，那不是同一件事。"
+"trap_zh":"把排名當成在最終模型中的重要性。它排的是「加進來對誤差造成什麼影響」，那不是同一件事。",
+"prio":1
 },
 {
 "id":"d02",
@@ -5358,7 +5385,8 @@ var FIGURES = {
 ],
 "ans":0,
 "trap_en":"Describing the pipeline as 'we used AlphaFold'. AI co-folding is one lane beside the docking lane; the validation stage is what decides between them.",
-"trap_zh":"把整套流程講成「我們用了 AlphaFold」。AI 共摺疊只是對接之外的另一條線；真正決定取捨的是驗證階段。"
+"trap_zh":"把整套流程講成「我們用了 AlphaFold」。AI 共摺疊只是對接之外的另一條線；真正決定取捨的是驗證階段。",
+"prio":1
 },
 {
 "id":"r02",
@@ -5510,7 +5538,8 @@ var FIGURES = {
 ],
 "ans":0,
 "trap_en":"Showing only the clean run. Publishing all seven, with the unusable stretches marked, is the stronger answer.",
-"trap_zh":"只拿乾淨的那一次出來。把七次全部放上去、並標出不可用的段落，才是更強的回答。"
+"trap_zh":"只拿乾淨的那一次出來。把七次全部放上去、並標出不可用的段落，才是更強的回答。",
+"prio":1
 },
 {
 "id":"s03",
@@ -5586,7 +5615,8 @@ var FIGURES = {
 ],
 "ans":0,
 "trap_en":"Saying ACC deaminase 'blocks ethylene'. It removes the precursor; it does not touch the receptor or the hormone itself.",
-"trap_zh":"說 ACC 去胺酶「阻斷乙烯」。它移除的是前驅物，不碰受體，也不碰乙烯本身。"
+"trap_zh":"說 ACC 去胺酶「阻斷乙烯」。它移除的是前驅物，不碰受體，也不碰乙烯本身。",
+"prio":1
 },
 {
 "id":"n02",
@@ -5624,7 +5654,8 @@ var FIGURES = {
 ],
 "ans":0,
 "trap_en":"Stopping the story at the membrane. The delivery loop is the part that answers 'and then what reaches the field'.",
-"trap_zh":"故事講到薄膜就停了。輸送迴路才是回答「然後呢，到底什麼東西到得了田裡」的部分。"
+"trap_zh":"故事講到薄膜就停了。輸送迴路才是回答「然後呢，到底什麼東西到得了田裡」的部分。",
+"prio":1
 },
 {
 "id":"n03",
@@ -5662,7 +5693,8 @@ var FIGURES = {
 ],
 "ans":0,
 "trap_en":"Blurring 'built' and 'designed'. The wiki keeps the two apart in every hardware section; keep them apart out loud too.",
-"trap_zh":"把「做出來的」跟「設計的」混在一起講。wiki 在每個硬體章節都把兩者分開；講話時也要分開。"
+"trap_zh":"把「做出來的」跟「設計的」混在一起講。wiki 在每個硬體章節都把兩者分開；講話時也要分開。",
+"prio":1
 },
 {
 "id":"f01",
@@ -5700,7 +5732,8 @@ var FIGURES = {
 ],
 "ans":0,
 "trap_en":"Calling this a validated containment system. It is a single, honest result and we say so on the page.",
-"trap_zh":"把它說成已驗證的圍堵系統。它是單一一次、我們誠實標示出來的結果，頁面上就是這樣寫的。"
+"trap_zh":"把它說成已驗證的圍堵系統。它是單一一次、我們誠實標示出來的結果，頁面上就是這樣寫的。",
+"prio":1
 },
 {
 "id":"f02",
