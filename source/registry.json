@@ -71,17 +71,6 @@
   "trap_zh": "只列你們做了什麼，卻不說哪些是借的。讀過組成的評審早就知道了。",
   "basis": "positioning question; the composition tab makes it unavoidable" },
 
-{ "q_en": "Who wrote your part documentation?",
-  "q_zh": "你們的 part 文件是誰寫的？",
-  "type": "fact", "tier": "B", "pages": ["parts", "team"], "seat": "wet1", "backup": "ihp",
-  "kw_en": ["one author", "17 and 18 October", "visible in the edit record"],
-  "kw_zh": ["一位作者", "10 月 17、18 日", "編輯紀錄上看得到"],
-  "a_en": "I did, all forty-one pages, mostly across the seventeenth and eighteenth of October. That is in the Registry's own edit record so there is no point saying otherwise, and it is also the honest answer to why five pages are empty. The science on them is the whole team's; the writing was two days and one person.",
-  "a_zh": "我寫的，四十一頁全部，主要集中在十月十七和十八日。這在 Registry 自己的編輯紀錄上就看得到，沒有必要講別的；這也誠實地回答了為什麼有五頁是空的。頁面上的科學是整個團隊的，但寫作是兩天、一個人。",
-  "trap_en": "Spreading the credit vaguely. The record is public and checking it takes one click.",
-  "trap_zh": "含糊地把功勞分給大家。紀錄是公開的，點一下就查得到。",
-  "basis": "asked when a collection looks uneven" },
-
 { "q_en": "If another team wanted to build on your work tomorrow, which part would you tell them to take?",
   "q_zh": "如果別的隊伍明天想接著你們做，你會叫他們拿哪一個 part？",
   "type": "impact", "tier": "A", "pages": ["parts", "contribution"], "seat": "wet1", "backup": "biz",

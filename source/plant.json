@@ -995,61 +995,7 @@
    "trap_zh": "因為 CH Bio 是抗旱產品就說有測乾旱。",
    "basis": "recorded pattern: what exactly did you measure / how did you apply it"
   },
-  {
-   "q_en": "What did you measure on the plants?",
-   "q_zh": "你們在植物上量測什麼？",
-   "type": "fact",
-   "tier": "A",
-   "pages": [
-    "plant",
-    "geospatial-analysis"
-   ],
-   "seat": "plant",
-   "backup": "wet2",
-   "kw_en": [
-    "chlorophyll",
-    "fresh weight",
-    "root length"
-   ],
-   "kw_zh": [
-    "葉綠素",
-    "鮮重",
-    "主根長度"
-   ],
-   "a_en": "Three numbers. Chlorophyll from an 80% acetone extract read at 645 and 663 nm, fresh weight of the harvested seedlings, and primary root length traced by hand in ImageJ. Leaf colour, anthocyanin and bleaching were recorded by eye. We did not score germination rate or a wilting scale. Leaf area stays qualitative because leaves overlap.",
-   "a_zh": "三個數字。葉綠素用 80% 丙酮萃取後讀 645 與 663 nm，收成後幼苗的鮮重，以及用 ImageJ 手動描繪的主根長度。葉色、花青素與白化用肉眼記錄。我們沒有計算發芽率或萎凋分級。葉面積因為葉片重疊，只能做質性描述。",
-   "trap_en": "Listing germination or a wilting score, which the wiki does not report.",
-   "trap_zh": "把發芽率或萎凋評分說成有做，但維基上沒有。",
-   "basis": "recorded pattern: which readouts and why"
-  },
-  {
-   "q_en": "What is each of your three protectants meant to do in the plant?",
-   "q_zh": "你們三種保護劑各自想在植物裡做什麼？",
-   "type": "fact",
-   "tier": "A",
-   "pages": [
-    "description",
-    "plant"
-   ],
-   "seat": "plant",
-   "backup": "dry",
-   "kw_en": [
-    "ACCD cuts ethylene",
-    "LEA14 protects proteins",
-    "BoPEP4 defences"
-   ],
-   "kw_zh": [
-    "ACCD 降乙烯",
-    "LEA14 護蛋白",
-    "BoPEP4 防禦"
-   ],
-   "a_en": "ACC deaminase breaks down ACC, the precursor of ethylene, so a stressed plant makes less of the stress hormone. LEA14 is aimed at the damage drought and salt do to proteins. BoPEP4 is a broccoli elicitor peptide meant to switch on the plant's own defences. ACC deaminase is the one carried to the reactor. We never measured ethylene in the plants.",
-   "a_zh": "ACC deaminase 分解乙烯的前驅物 ACC，讓受逆境的植物少產生這個壓力荷爾蒙。LEA14 針對乾旱與鹽害對蛋白質的傷害。BoPEP4 是花椰菜的誘導肽，想啟動植物自己的防禦。ACC deaminase 是我們帶進反應器的那一個。我們沒有在植物上量過乙烯。",
-   "trap_en": "Saying ethylene was measured, or that all three were integrated into the circuit.",
-   "trap_zh": "說有量乙烯，或說三個都已整合進電路。",
-   "basis": "recorded pattern: mechanism of your protein"
-  },
-  {
+      {
    "q_en": "Why 100 mM NaCl as your working stress?",
    "q_zh": "為什麼把 100 mM NaCl 當作主要逆境？",
    "type": "design",
@@ -1102,33 +1048,7 @@
    "trap_zh": "把時機說成已經解決，但我們的結果彼此不一致。",
    "basis": "like Munich 2025: why did you choose this design"
   },
-  {
-   "q_en": "Why did you use agar, hydroponics and soil instead of one system?",
-   "q_zh": "為什麼用瓊脂、水耕和土壤，而不是只用一種？",
-   "type": "design",
-   "tier": "A",
-   "pages": [
-    "plant"
-   ],
-   "seat": "plant",
-   "backup": "hw",
-   "kw_en": [
-    "control vs realism",
-    "screen then confirm",
-    "delivery route"
-   ],
-   "kw_zh": [
-    "控制與真實",
-    "先篩再驗證",
-    "給藥途徑"
-   ],
-   "a_en": "Each trades control for realism. Agar gives uniform nutrients and exact stress, so we screened there first. Hydroponics sits between and matches delivery through circulating water. Soil is closest to a farm. The limit is that the systems did not get the same tests: only ACC deaminase and BoPEP4 reached hydroponics, and soil only saw ACC deaminase.",
-   "a_zh": "每一種在控制與真實之間取捨。瓊脂養分一致、逆境精準，所以先在那裡篩選。水耕介於中間，也貼近透過循環水給藥。土壤最接近農田。限制是三個系統做的測試不一樣：水耕只有 ACC deaminase 和 BoPEP4，土壤只測了 ACC deaminase。",
-   "trap_en": "Saying the same assay was repeated across all three systems.",
-   "trap_zh": "說同一個實驗在三個系統都重複過。",
-   "basis": "recorded pattern: why this platform"
-  },
-  {
+    {
    "q_en": "Why did you move soil tests from one-month-old to two-week-old plants?",
    "q_zh": "為什麼把土壤實驗從一個月大改成兩週大的植株？",
    "type": "design",

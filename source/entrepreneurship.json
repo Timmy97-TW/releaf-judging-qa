@@ -975,33 +975,7 @@
    "trap_zh": "把所有未來點子都列出來。只排出三項：密閉性、田間試點、補充匣。",
    "basis": "like GEMS-TAIWAN 2025: improve if given funding"
   },
-  {
-   "q_en": "May I ask about the cost?",
-   "q_zh": "請問成本是多少？",
-   "type": "fact",
-   "tier": "A",
-   "pages": [
-    "entrepreneurship"
-   ],
-   "seat": "biz",
-   "backup": "hw",
-   "kw_en": [
-    "US$5550 first year",
-    "US$90 refills",
-    "planning estimate"
-   ],
-   "kw_zh": [
-    "第一年 5550 美元",
-    "每年 90 美元補充匣",
-    "規劃估算"
-   ],
-   "a_en": "For a one-hectare farm, about US$5,550 in Year 1, which is NT$175,400: two bioreactors, three moisture sensors, one cartridge, plus freight, set-up and warranty. After that, about US$90 a year for the refill cartridge. That price is twice our own cost of about US$2,775. These are planning estimates, not quotes, and they rest on a dose assumption that no crop has tested yet.",
-   "a_zh": "一公頃的農場第一年約 5,550 美元，也就是 NT$175,400：包含兩台生物反應器、三個濕度感測器、一個補充匣，加上運費、安裝與保固。之後每年補充匣約 90 美元。這個價格是我們成本約 2,775 美元的兩倍。這些是規劃估算，不是報價，而且建立在一個還沒有任何作物測試過的劑量假設上。",
-   "trap_en": "Quoting only the US$2280 bioreactor and forgetting the sensors, cartridge and set-up.",
-   "trap_zh": "只講 2280 美元的反應器，漏掉感測器、補充匣與安裝。",
-   "basis": "like GEMS-TAIWAN 2024: may I ask about the cost?"
-  },
-  {
+    {
    "q_en": "How could you scale this?",
    "q_zh": "你們要怎麼擴大規模？",
    "type": "impact",
@@ -1266,34 +1240,7 @@
    "trap_zh": "隱藏不利情境。評審會尊重有展示它的團隊。",
    "basis": "like Tsinglan 2025: long-term funding challenges"
   },
-  {
-   "q_en": "Can ReLEAF be used on organic farms?",
-   "q_zh": "ReLEAF 可以用在有機農場嗎？",
-   "type": "boundary",
-   "tier": "A",
-   "pages": [
-    "entrepreneurship",
-    "laws-and-regulations"
-   ],
-   "seat": "biz",
-   "backup": "ihp",
-   "kw_en": [
-    "No",
-    "GMO products excluded",
-    "conventional smallholders"
-   ],
-   "kw_zh": [
-    "不可以",
-    "排除基改產品",
-    "慣行小農"
-   ],
-   "a_en": "No, and we say so plainly. Taiwan's Organic Agriculture Promotion Act excludes genetically modified organisms and their products, and US and EU rules are similar, so a sealed membrane does not make the output organic. We target conventional and sustainable smallholders and will make no organic claim without written approval from authorities. Only about 3.47% of Taiwan's farmland is organic. Note that our largest farmer interview round, over 30 farmers, was with organic farmers.",
-   "a_zh": "不可以，我們直接說明。台灣有機農業促進法排除基改生物及其產品，美國和歐盟規範類似，所以即使有密閉薄膜，產物也不能算有機。我們的對象是慣行與永續的小農，沒有主管機關的書面核准，我們不會做任何有機宣稱。台灣只有約 3.47% 的農地是有機。要注意的是，我們最大的一輪農民訪談，超過 30 位，訪問的是有機農民。",
-   "trap_en": "Saying 'cell-free means organic is fine'. The production method itself is restricted.",
-   "trap_zh": "說「無細胞所以有機也行」。生產方式本身就受限。",
-   "basis": "boundary on organic farming; Biomanufacturing says 'built around organic', see gaps"
-  },
-  {
+    {
    "q_en": "Why did you pick tomato as your target crop?",
    "q_zh": "為什麼選番茄作為目標作物？",
    "type": "design",

@@ -1152,35 +1152,7 @@
    "trap_zh": "說是雙向交流，卻舉不出一個具體改變。",
    "basis": "like Great Bay 2025: two-way dialogue back into the work"
   },
-  {
-   "q_en": "Could ReLEAF be used on organic farms?",
-   "q_zh": "ReLEAF 可以用在有機農場嗎？",
-   "type": "boundary",
-   "tier": "A",
-   "pages": [
-    "human-practices",
-    "entrepreneurship",
-    "laws-and-regulations"
-   ],
-   "seat": "ihp",
-   "backup": "biz",
-   "kw_en": [
-    "engineered inputs excluded",
-    "cell-free not automatic",
-    "conventional first"
-   ],
-   "kw_zh": [
-    "排除基改投入",
-    "無細胞也不自動符合",
-    "先做慣行農"
-   ],
-   "a_en": "No, we do not target them. Organic standards in Taiwan and the United States exclude inputs made with genetic engineering, and our protectants come from engineered Bacillus subtilis. A cell-free product is not automatically eligible, and our laws page lists organic compatibility in the Philippines as unresolved. A farmer raised this at the September 5 forum. We start with conventional and sustainable farms.",
-   "a_zh": "不行，我們不以有機農場為目標。台灣和美國的有機標準都排除基因工程製造的投入，而我們的保護劑來自工程枯草桿菌。無細胞產物也不會自動符合資格，法規頁把菲律賓的有機相容性列為尚未確認。這個問題是 9 月 5 日論壇上有農民提出的。我們先從慣行與永續農場開始。",
-   "trap_en": "Answering 'yes, because the bacteria stay inside the membrane'.",
-   "trap_zh": "回答「可以，因為細菌留在膜裡面」。",
-   "basis": "wiki-derived"
-  },
-  {
+    {
    "q_en": "What if a typhoon or an animal destroys the bioreactor?",
    "q_zh": "如果颱風或動物把生物反應器破壞了怎麼辦？",
    "type": "boundary",

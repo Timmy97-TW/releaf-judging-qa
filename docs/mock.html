@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Mock Judging Room · ReLEAF Judging Trainer</title>
-<link rel="stylesheet" href="assets/css/base.css?v=202610301821">
-<link rel="stylesheet" href="assets/css/pages.css?v=202610301821">
-<link rel="stylesheet" href="assets/css/theme.css?v=202610301821">
+<link rel="stylesheet" href="assets/css/base.css?v=202610311557">
+<link rel="stylesheet" href="assets/css/pages.css?v=202610311557">
+<link rel="stylesheet" href="assets/css/theme.css?v=202610311557">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M4 20c0-8 5.5-14.5 16-15.5C19.5 14 14 20 4 20Z' fill='%231a7f45'/%3E%3C/svg%3E">
 </head>
 <body class="mock-page">
@@ -63,10 +63,9 @@
       <p class="qq" id="qq" data-en="Ready when you are." data-zh="準備好就開始。"></p>
       <div class="meta" id="meta"></div>
 
-      <div class="btn-row" style="margin-top:1.1rem">
+      <div class="btn-row act-row">
         <button class="btn btn-accent" id="start" type="button"></button>
-        <button class="btn btn-ghost" id="show" type="button" hidden></button>
-        <button class="btn btn-line" id="nextq" type="button" hidden></button>
+        <button class="btn btn-accent" id="show" type="button" hidden></button>
         <button class="btn btn-ghost btn-sm" id="endrun" type="button" hidden></button>
         <span class="ring" id="ringwrap" hidden>
           <span class="timer" id="timer">1:30</span>
@@ -74,17 +73,21 @@
         </span>
       </div>
 
-      <div class="guessbox" id="guessbox" hidden>
-        <h4 id="whoq"></h4>
-        <p class="hint" id="whohint"></p>
-        <div class="chips" id="seatchips"></div>
-      </div>
+      <div class="answer" id="ans" hidden>
+        <h4 data-en="How to answer it" data-zh="怎麼回答"></h4>
+        <div class="kw" id="akw"></div>
+        <p class="a-text" id="atext"></p>
+        <div class="trap" id="atrap" hidden><b data-en="Likely mistake" data-zh="容易犯的錯"></b><span id="atrapt"></span></div>
+        <div class="owner" id="aseat"></div>
+        <div class="meta srcs" id="asrc"></div>
 
-      <div class="guessres" id="guessres" hidden></div>
-
-      <div class="btn-row" id="marks" hidden style="margin-top:.9rem">
-        <button class="btn btn-ghost btn-sm" id="mgood" type="button"></button>
-        <button class="btn btn-ghost btn-sm" id="mbad" type="button"></button>
+        <div class="markrow" id="marks" hidden>
+          <p class="marklab" id="marklab"></p>
+          <div class="btn-row">
+            <button class="btn btn-mark btn-good" id="mgood" type="button"></button>
+            <button class="btn btn-mark btn-bad" id="mbad" type="button"></button>
+          </div>
+        </div>
       </div>
 
       <div class="fubox" id="fubox" hidden>
@@ -96,12 +99,8 @@
         </div>
       </div>
 
-      <div class="answer" id="ans" hidden>
-        <h4 data-en="How to answer it" data-zh="怎麼回答"></h4>
-        <div class="kw" id="akw"></div>
-        <p class="a-text" id="atext"></p>
-        <div class="trap" id="atrap" hidden><b data-en="Likely mistake" data-zh="容易犯的錯"></b><span id="atrapt"></span></div>
-        <div class="meta" id="asrc" style="margin-top:.9rem"></div>
+      <div class="nextrow">
+        <button class="btn btn-accent" id="nextq" type="button" hidden></button>
       </div>
 
       <div class="prog" id="prog"></div>
@@ -174,12 +173,12 @@
   </details>
 </section>
 
-<script src="assets/js/site.js?v=202610301821"></script>
-<script src="data/meta.js?v=202610301821"></script>
-<script src="data/roster.js?v=202610301821"></script>
-<script src="data/bank.js?v=202610301821"></script>
-<script src="data/recorded.js?v=202610301821"></script>
-<script src="assets/js/panel.js?v=202610301821"></script>
-<script src="assets/js/mock.js?v=202610301821"></script>
+<script src="assets/js/site.js?v=202610311557"></script>
+<script src="data/meta.js?v=202610311557"></script>
+<script src="data/roster.js?v=202610311557"></script>
+<script src="data/bank.js?v=202610311557"></script>
+<script src="data/recorded.js?v=202610311557"></script>
+<script src="assets/js/panel.js?v=202610311557"></script>
+<script src="assets/js/mock.js?v=202610311557"></script>
 </body>
 </html>

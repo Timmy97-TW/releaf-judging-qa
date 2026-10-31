@@ -1,0 +1,432 @@
+{
+ "note": "Questions cut from the bank on 31 October 2026 as too straightforward to rehearse, or as duplicates of a fuller version elsewhere. Kept here so the decision is visible and reversible; build/build.py does not read this file.",
+ "removed": [
+  {
+   "from": "plant.json",
+   "q_en": "What did you measure on the plants?",
+   "q_zh": "你們在植物上量測什麼？",
+   "why": "recall of the readout list; replicates, controls and statistics are asked properly in the three questions after it",
+   "question": {
+    "q_en": "What did you measure on the plants?",
+    "q_zh": "你們在植物上量測什麼？",
+    "type": "fact",
+    "tier": "A",
+    "pages": [
+     "plant",
+     "geospatial-analysis"
+    ],
+    "seat": "plant",
+    "backup": "wet2",
+    "kw_en": [
+     "chlorophyll",
+     "fresh weight",
+     "root length"
+    ],
+    "kw_zh": [
+     "葉綠素",
+     "鮮重",
+     "主根長度"
+    ],
+    "a_en": "Three numbers. Chlorophyll from an 80% acetone extract read at 645 and 663 nm, fresh weight of the harvested seedlings, and primary root length traced by hand in ImageJ. Leaf colour, anthocyanin and bleaching were recorded by eye. We did not score germination rate or a wilting scale. Leaf area stays qualitative because leaves overlap.",
+    "a_zh": "三個數字。葉綠素用 80% 丙酮萃取後讀 645 與 663 nm，收成後幼苗的鮮重，以及用 ImageJ 手動描繪的主根長度。葉色、花青素與白化用肉眼記錄。我們沒有計算發芽率或萎凋分級。葉面積因為葉片重疊，只能做質性描述。",
+    "trap_en": "Listing germination or a wilting score, which the wiki does not report.",
+    "trap_zh": "把發芽率或萎凋評分說成有做，但維基上沒有。",
+    "basis": "recorded pattern: which readouts and why"
+   }
+  },
+  {
+   "from": "plant.json",
+   "q_en": "What is each of your three protectants meant to do in the plant?",
+   "q_zh": "你們三種保護劑各自想在植物裡做什麼？",
+   "why": "same ground as the Cloning question 'What are your three protectants, and what does each one do?', which is fuller",
+   "question": {
+    "q_en": "What is each of your three protectants meant to do in the plant?",
+    "q_zh": "你們三種保護劑各自想在植物裡做什麼？",
+    "type": "fact",
+    "tier": "A",
+    "pages": [
+     "description",
+     "plant"
+    ],
+    "seat": "plant",
+    "backup": "dry",
+    "kw_en": [
+     "ACCD cuts ethylene",
+     "LEA14 protects proteins",
+     "BoPEP4 defences"
+    ],
+    "kw_zh": [
+     "ACCD 降乙烯",
+     "LEA14 護蛋白",
+     "BoPEP4 防禦"
+    ],
+    "a_en": "ACC deaminase breaks down ACC, the precursor of ethylene, so a stressed plant makes less of the stress hormone. LEA14 is aimed at the damage drought and salt do to proteins. BoPEP4 is a broccoli elicitor peptide meant to switch on the plant's own defences. ACC deaminase is the one carried to the reactor. We never measured ethylene in the plants.",
+    "a_zh": "ACC deaminase 分解乙烯的前驅物 ACC，讓受逆境的植物少產生這個壓力荷爾蒙。LEA14 針對乾旱與鹽害對蛋白質的傷害。BoPEP4 是花椰菜的誘導肽，想啟動植物自己的防禦。ACC deaminase 是我們帶進反應器的那一個。我們沒有在植物上量過乙烯。",
+    "trap_en": "Saying ethylene was measured, or that all three were integrated into the circuit.",
+    "trap_zh": "說有量乙烯，或說三個都已整合進電路。",
+    "basis": "recorded pattern: mechanism of your protein"
+   }
+  },
+  {
+   "from": "plant.json",
+   "q_en": "Why did you use agar, hydroponics and soil instead of one system?",
+   "q_zh": "為什麼用瓊脂、水耕和土壤，而不是只用一種？",
+   "why": "names the three systems and what each is for; no decision, no number, no limit a judge could press on",
+   "question": {
+    "q_en": "Why did you use agar, hydroponics and soil instead of one system?",
+    "q_zh": "為什麼用瓊脂、水耕和土壤，而不是只用一種？",
+    "type": "design",
+    "tier": "A",
+    "pages": [
+     "plant"
+    ],
+    "seat": "plant",
+    "backup": "hw",
+    "kw_en": [
+     "control vs realism",
+     "screen then confirm",
+     "delivery route"
+    ],
+    "kw_zh": [
+     "控制與真實",
+     "先篩再驗證",
+     "給藥途徑"
+    ],
+    "a_en": "Each trades control for realism. Agar gives uniform nutrients and exact stress, so we screened there first. Hydroponics sits between and matches delivery through circulating water. Soil is closest to a farm. The limit is that the systems did not get the same tests: only ACC deaminase and BoPEP4 reached hydroponics, and soil only saw ACC deaminase.",
+    "a_zh": "每一種在控制與真實之間取捨。瓊脂養分一致、逆境精準，所以先在那裡篩選。水耕介於中間，也貼近透過循環水給藥。土壤最接近農田。限制是三個系統做的測試不一樣：水耕只有 ACC deaminase 和 BoPEP4，土壤只測了 ACC deaminase。",
+    "trap_en": "Saying the same assay was repeated across all three systems.",
+    "trap_zh": "說同一個實驗在三個系統都重複過。",
+    "basis": "recorded pattern: why this platform"
+   }
+  },
+  {
+   "from": "wetlab.json",
+   "q_en": "What are Level 0, Level 1 and Level 2 in your Golden Gate assembly?",
+   "q_zh": "你們 Golden Gate 組裝裡的 Level 0、Level 1、Level 2 是什麼？",
+   "why": "definition of a standard method; the Registry question walks the same levels and names the enzymes",
+   "question": {
+    "q_en": "What are Level 0, Level 1 and Level 2 in your Golden Gate assembly?",
+    "q_zh": "你們 Golden Gate 組裝裡的 Level 0、Level 1、Level 2 是什麼？",
+    "type": "fact",
+    "tier": "A",
+    "pages": [
+     "engineering",
+     "parts"
+    ],
+    "seat": "wet1",
+    "backup": "wet2",
+    "kw_en": [
+     "L0 single part",
+     "L1 transcription unit",
+     "L2 four units"
+    ],
+    "kw_zh": [
+     "L0 單一零件",
+     "L1 轉錄單元",
+     "L2 四個單元"
+    ],
+    "a_en": "Level 0 holds one part, for example a cargo with its signal peptide and His tag, cut with BbsI into pSTK-0, which is chloramphenicol resistant. Level 1 joins promoter, RBS, coding sequence and terminator into one transcription unit with BsaI, in ampicillin vectors. Level 2 joins four Level 1 units into one plasmid of about 10 kb: PCB production, CcaS-m3, CcaR, and the green-light cassette.",
+    "a_zh": "Level 0 放單一零件，例如帶訊號肽與 His 標籤的目標蛋白，用 BbsI 接進有氯黴素抗性的 pSTK-0。Level 1 用 BsaI 把啟動子、RBS、編碼序列、終止子接成一個轉錄單元，放在安比西林抗性的載體。Level 2 把四個 Level 1 單元接成一個約 10 kb 的質體：PCB 生產、CcaS-m3、CcaR 與綠光卡匣。",
+    "trap_en": "Mixing up which enzyme goes with which level, or forgetting the antibiotic markers differ.",
+    "trap_zh": "搞混哪種酵素對應哪個層級，或忘記各層抗生素標記不同。",
+    "basis": "like standard 'explain your assembly standard'"
+   }
+  },
+  {
+   "from": "hardware.json",
+   "q_en": "What wavelength does your photometer use, and why that one?",
+   "q_zh": "你們的光度計用什麼波長？為什麼選它？",
+   "why": "duplicate of 'Why 600 nanometres and an amber LED?' on Measurement and of the photometer design question",
+   "question": {
+    "q_en": "What wavelength does your photometer use, and why that one?",
+    "q_zh": "你們的光度計用什麼波長？為什麼選它？",
+    "type": "fact",
+    "tier": "A",
+    "pages": [
+     "hardware-photometer"
+    ],
+    "seat": "hw",
+    "backup": "dry",
+    "kw_en": [
+     "600 nm amber",
+     "standard OD600",
+     "between CcaS peaks"
+    ],
+    "kw_zh": [
+     "600 nm 琥珀光",
+     "標準 OD600",
+     "位於 CcaS 兩峰之間"
+    ],
+    "a_en": "600 nm, from an amber LED through a 2 mm flow cuvette. Software scales the reading by five to the standard 1 cm path. We chose it for three reasons: OD600 is the standard so readings compare with the BioDrop, at 600 nm the culture dims the beam mainly by scattering, and amber sits between the green and red peaks of CcaS/CcaR, so the photometer does not switch production on or off.",
+    "a_zh": "600 nm，用琥珀色 LED 穿過 2 mm 的流動比色槽。軟體把讀值乘五，換算成標準 1 cm 光徑。選它有三個理由：OD600 是標準，所以能和 BioDrop 比較；600 nm 下菌液主要靠散射使光變弱；琥珀光位於 CcaS/CcaR 的綠光與紅光峰之間，所以光度計不會誤開關生產。",
+    "trap_en": "Mixing it up with the 520 or 535 nm green that drives the circuit. The photometer light is deliberately a different color.",
+    "trap_zh": "把它和啟動電路的 520 或 535 nm 綠光搞混。光度計的光刻意選不同顏色。",
+    "basis": "like INSA 2022: why that sensor"
+   }
+  },
+  {
+   "from": "hardware.json",
+   "q_en": "How do you know your photometer is accurate?",
+   "q_zh": "你們怎麼知道光度計是準的？",
+   "why": "one of three identical copies; the Measurement/photometer version keeps the slope with the blank and the OD 2.5 limit",
+   "question": {
+    "q_en": "How do you know your photometer is accurate?",
+    "q_zh": "你們怎麼知道光度計是準的？",
+    "type": "validate",
+    "tier": "A",
+    "pages": [
+     "hardware-photometer",
+     "measurement"
+    ],
+    "seat": "hw",
+    "backup": "dry",
+    "kw_en": [
+     "TiO2 median 3.8%",
+     "silica slope 1.001",
+     "no cells tested"
+    ],
+    "kw_zh": [
+     "TiO2 中位差 3.8%",
+     "矽膠斜率 1.001",
+     "沒用細胞測"
+    ],
+    "a_en": "We checked it against the BioDrop with two standards. On titanium dioxide in August, the raw output was a median 3.8% from the BioDrop, with no transform applied. On silica in October the Pro ran parallel to the BioDrop, slope 1.001, but about 0.12 OD low. The limits: both are particle standards, not bacteria at known densities, and above about OD 2.5 the Pro reads low.",
+    "a_zh": "我們用兩種標準品和 BioDrop 對照。8 月用二氧化鈦，未做任何轉換，原始輸出與 BioDrop 的中位數差距 3.8%。10 月用矽膠珠，Pro 與 BioDrop 平行，斜率 1.001，但整體約低 0.12 OD。限制是：兩者都是顆粒標準品，不是已知密度的細菌，而且 OD 2.5 以上 Pro 讀值偏低。",
+    "trap_en": "Quoting a different slope. The wiki shows 0.942, 1.018 and 0.995 on other pages; know which test each belongs to.",
+    "trap_zh": "引用不同的斜率。wiki 其他頁還有 0.942、1.018、0.995；要知道各屬於哪個實驗。",
+    "basis": "like UPenn 2021: validate against a commercial instrument"
+   }
+  },
+  {
+   "from": "hardware.json",
+   "q_en": "How did outside experts change your hardware?",
+   "q_zh": "外部專家如何改變了你們的硬體？",
+   "why": "duplicate; the other version names four changes and three reviewers instead of two",
+   "question": {
+    "q_en": "How did outside experts change your hardware?",
+    "q_zh": "外部專家如何改變了你們的硬體？",
+    "type": "integrate",
+    "tier": "A",
+    "pages": [
+     "hardware-bioreactor"
+    ],
+    "seat": "hw",
+    "backup": "ihp",
+    "kw_en": [
+     "Chang: pinch valve",
+     "Owl Lab: STS3215 and mainboard",
+     "mainboard fixed pressure noise"
+    ],
+    "kw_zh": [
+     "張教授：夾管閥",
+     "Owl Lab：STS3215 與主板",
+     "主板解決壓力不穩"
+    ],
+    "a_en": "Two reviewers changed it most. Prof. Chang found nothing drove product across the membrane, so we added the pinch valve, and he said to watch flow and pressure for fouling, so we added the transducers and flow meter. Teacher He at Owl Lab found the servo driver unreliable and the power supply too weak, so we moved to STS3215 servos and then his single mainboard, which also ended our unstable pressure readings.",
+    "a_zh": "兩位審查者的影響最大。張教授發現沒有東西推動產物過膜，所以我們加了夾管閥；他也說要監看流量與壓力以判斷污垢，所以我們加了壓力傳送器與流量計。Owl Lab 的何老師發現伺服驅動板不可靠、電源太弱，所以我們換成 STS3215 伺服，再採用他設計的單一主板，這也解決了壓力讀值不穩的問題。",
+    "trap_en": "Listing feedback without saying what changed on the rig. Each point should end on the part we built.",
+    "trap_zh": "只列意見卻沒說裝置改了什麼。每一點都應該以我們做出的零件作結。",
+    "basis": "like LCG 2024 / Cambridge 2024: expert changed a requirement"
+   }
+  },
+  {
+   "from": "measurement.json",
+   "q_en": "How do you know your photometer is accurate?",
+   "q_zh": "你們怎麼知道光度計是準的？",
+   "why": "one of three identical copies; kept the version that names what it was checked against",
+   "question": {
+    "q_en": "How do you know your photometer is accurate?",
+    "q_zh": "你們怎麼知道光度計是準的？",
+    "type": "validate",
+    "tier": "A",
+    "pages": [
+     "measurement",
+     "hardware-photometer"
+    ],
+    "seat": "hw",
+    "backup": "dry",
+    "kw_en": [
+     "weighed mass standards",
+     "3.8% from BioDrop",
+     "constant 0.12 OD offset"
+    ],
+    "kw_zh": [
+     "稱重質量標準",
+     "與 BioDrop 差 3.8%",
+     "固定低 0.12 OD"
+    ],
+    "a_en": "We judged it against mass, not only against another instrument. On 23 August we added titanium dioxide by weight, and raw Pro output agreed with the BioDrop to a median 3.8 percent, R squared 0.9999. On 10 October we repeated with 1 micron silica. The honest limit: on silica the Pro ran a constant 0.12 OD below the BioDrop, and neither standard is a living cell.",
+    "a_zh": "我們用質量來評斷，不只是跟另一台儀器比。8 月 23 日我們依重量加入二氧化鈦，Pro 原始輸出與 BioDrop 的差距中位數是 3.8%，R 平方 0.9999。10 月 10 日我們用 1 微米二氧化矽重做。誠實的限制是：在二氧化矽上 Pro 固定比 BioDrop 低約 0.12 OD，而且兩種標準品都不是活細胞。",
+    "trap_en": "Saying 'within 3.8% of the BioDrop' with no mention of the 0.12 OD offset or that the BioDrop is the weaker reference above OD 1.",
+    "trap_zh": "只說『跟 BioDrop 差 3.8%』，卻沒提 0.12 OD 的偏移，也沒提 BioDrop 在 OD 1 以上是比較弱的參考。",
+    "basis": "Hardware 2021 UPenn: how did you validate against a commercial instrument and how close"
+   }
+  },
+  {
+   "from": "hardware_q2.json",
+   "q_en": "What went wrong in your 434-hour photometer run?",
+   "q_zh": "你們 434 小時的光度計運轉出了什麼問題？",
+   "why": "duplicate; the Measurement version keeps the fault detector flagging it at 216 hours",
+   "question": {
+    "q_en": "What went wrong in your 434-hour photometer run?",
+    "q_zh": "你們 434 小時的光度計運轉出了什麼問題？",
+    "type": "gap",
+    "tier": "A",
+    "pages": [
+     "hardware-photometer",
+     "measurement",
+     "results"
+    ],
+    "seat": "hw",
+    "backup": "dry",
+    "kw_en": [
+     "clean to about 240 h",
+     "reference channel failed",
+     "whole-count steps"
+    ],
+    "kw_zh": [
+     "約 240 小時前正常",
+     "參考通道故障",
+     "整數計數造成階梯"
+    ],
+    "a_en": "The first 240 hours or so read as a clean growth curve. After that the reference channel failed, around when the recirculation pump was replaced, and noise rose five to tenfold, so we do not read that stretch as growth. A later reanalysis found the reference sat near 32 sensor counts, so single-count steps made OD jump; 91.5% of readings were whole integers. We added two bubble gates afterwards.",
+    "a_zh": "前面約 240 小時可以當成乾淨的生長曲線。之後參考通道故障，時間大約是更換循環幫浦的時候，雜訊增加五到十倍，所以那一段我們不當作生長來解讀。事後重新分析發現參考感測器只在約 32 個計數附近，單一計數的跳動就讓 OD 出現階梯，91.5% 的讀值都是整數。之後我們加了兩道氣泡閘門。",
+    "trap_en": "Saying the whole 434 hours is a valid growth curve.",
+    "trap_zh": "說整段 434 小時都是有效的生長曲線。",
+    "basis": "honesty probe: what failed in the flagship run"
+   }
+  },
+  {
+   "from": "entrepreneurship.json",
+   "q_en": "May I ask about the cost?",
+   "q_zh": "請問成本是多少？",
+   "why": "too vague to rehearse; the upfront price, the cost per dose, the cost advantage and the break-even are four separate questions",
+   "question": {
+    "q_en": "May I ask about the cost?",
+    "q_zh": "請問成本是多少？",
+    "type": "fact",
+    "tier": "A",
+    "pages": [
+     "entrepreneurship"
+    ],
+    "seat": "biz",
+    "backup": "hw",
+    "kw_en": [
+     "US$5550 first year",
+     "US$90 refills",
+     "planning estimate"
+    ],
+    "kw_zh": [
+     "第一年 5550 美元",
+     "每年 90 美元補充匣",
+     "規劃估算"
+    ],
+    "a_en": "For a one-hectare farm, about US$5,550 in Year 1, which is NT$175,400: two bioreactors, three moisture sensors, one cartridge, plus freight, set-up and warranty. After that, about US$90 a year for the refill cartridge. That price is twice our own cost of about US$2,775. These are planning estimates, not quotes, and they rest on a dose assumption that no crop has tested yet.",
+    "a_zh": "一公頃的農場第一年約 5,550 美元，也就是 NT$175,400：包含兩台生物反應器、三個濕度感測器、一個補充匣，加上運費、安裝與保固。之後每年補充匣約 90 美元。這個價格是我們成本約 2,775 美元的兩倍。這些是規劃估算，不是報價，而且建立在一個還沒有任何作物測試過的劑量假設上。",
+    "trap_en": "Quoting only the US$2280 bioreactor and forgetting the sensors, cartridge and set-up.",
+    "trap_zh": "只講 2280 美元的反應器，漏掉感測器、補充匣與安裝。",
+    "basis": "like GEMS-TAIWAN 2024: may I ask about the cost?"
+   }
+  },
+  {
+   "from": "entrepreneurship.json",
+   "q_en": "Can ReLEAF be used on organic farms?",
+   "q_zh": "ReLEAF 可以用在有機農場嗎？",
+   "why": "one of three copies; kept the Biomanufacturing framing, which puts the containment premise in the question",
+   "question": {
+    "q_en": "Can ReLEAF be used on organic farms?",
+    "q_zh": "ReLEAF 可以用在有機農場嗎？",
+    "type": "boundary",
+    "tier": "A",
+    "pages": [
+     "entrepreneurship",
+     "laws-and-regulations"
+    ],
+    "seat": "biz",
+    "backup": "ihp",
+    "kw_en": [
+     "No",
+     "GMO products excluded",
+     "conventional smallholders"
+    ],
+    "kw_zh": [
+     "不可以",
+     "排除基改產品",
+     "慣行小農"
+    ],
+    "a_en": "No, and we say so plainly. Taiwan's Organic Agriculture Promotion Act excludes genetically modified organisms and their products, and US and EU rules are similar, so a sealed membrane does not make the output organic. We target conventional and sustainable smallholders and will make no organic claim without written approval from authorities. Only about 3.47% of Taiwan's farmland is organic. Note that our largest farmer interview round, over 30 farmers, was with organic farmers.",
+    "a_zh": "不可以，我們直接說明。台灣有機農業促進法排除基改生物及其產品，美國和歐盟規範類似，所以即使有密閉薄膜，產物也不能算有機。我們的對象是慣行與永續的小農，沒有主管機關的書面核准，我們不會做任何有機宣稱。台灣只有約 3.47% 的農地是有機。要注意的是，我們最大的一輪農民訪談，超過 30 位，訪問的是有機農民。",
+    "trap_en": "Saying 'cell-free means organic is fine'. The production method itself is restricted.",
+    "trap_zh": "說「無細胞所以有機也行」。生產方式本身就受限。",
+    "basis": "boundary on organic farming; Biomanufacturing says 'built around organic', see gaps"
+   }
+  },
+  {
+   "from": "ihp.json",
+   "q_en": "Could ReLEAF be used on organic farms?",
+   "q_zh": "ReLEAF 可以用在有機農場嗎？",
+   "why": "one of three copies; kept the Biomanufacturing framing",
+   "question": {
+    "q_en": "Could ReLEAF be used on organic farms?",
+    "q_zh": "ReLEAF 可以用在有機農場嗎？",
+    "type": "boundary",
+    "tier": "A",
+    "pages": [
+     "human-practices",
+     "entrepreneurship",
+     "laws-and-regulations"
+    ],
+    "seat": "ihp",
+    "backup": "biz",
+    "kw_en": [
+     "engineered inputs excluded",
+     "cell-free not automatic",
+     "conventional first"
+    ],
+    "kw_zh": [
+     "排除基改投入",
+     "無細胞也不自動符合",
+     "先做慣行農"
+    ],
+    "a_en": "No, we do not target them. Organic standards in Taiwan and the United States exclude inputs made with genetic engineering, and our protectants come from engineered Bacillus subtilis. A cell-free product is not automatically eligible, and our laws page lists organic compatibility in the Philippines as unresolved. A farmer raised this at the September 5 forum. We start with conventional and sustainable farms.",
+    "a_zh": "不行，我們不以有機農場為目標。台灣和美國的有機標準都排除基因工程製造的投入，而我們的保護劑來自工程枯草桿菌。無細胞產物也不會自動符合資格，法規頁把菲律賓的有機相容性列為尚未確認。這個問題是 9 月 5 日論壇上有農民提出的。我們先從慣行與永續農場開始。",
+    "trap_en": "Answering 'yes, because the bacteria stay inside the membrane'.",
+    "trap_zh": "回答「可以，因為細菌留在膜裡面」。",
+    "basis": "wiki-derived"
+   }
+  },
+  {
+   "from": "registry.json",
+   "q_en": "Who wrote your part documentation?",
+   "q_zh": "你們的 part 文件是誰寫的？",
+   "why": "trivia about authorship; the five empty pages are asked directly in the question before it",
+   "question": {
+    "q_en": "Who wrote your part documentation?",
+    "q_zh": "你們的 part 文件是誰寫的？",
+    "type": "fact",
+    "tier": "B",
+    "pages": [
+     "parts",
+     "team"
+    ],
+    "seat": "wet1",
+    "backup": "ihp",
+    "kw_en": [
+     "one author",
+     "17 and 18 October",
+     "visible in the edit record"
+    ],
+    "kw_zh": [
+     "一位作者",
+     "10 月 17、18 日",
+     "編輯紀錄上看得到"
+    ],
+    "a_en": "I did, all forty-one pages, mostly across the seventeenth and eighteenth of October. That is in the Registry's own edit record so there is no point saying otherwise, and it is also the honest answer to why five pages are empty. The science on them is the whole team's; the writing was two days and one person.",
+    "a_zh": "我寫的，四十一頁全部，主要集中在十月十七和十八日。這在 Registry 自己的編輯紀錄上就看得到，沒有必要講別的；這也誠實地回答了為什麼有五頁是空的。頁面上的科學是整個團隊的，但寫作是兩天、一個人。",
+    "trap_en": "Spreading the credit vaguely. The record is public and checking it takes one click.",
+    "trap_zh": "含糊地把功勞分給大家。紀錄是公開的，點一下就查得到。",
+    "basis": "asked when a collection looks uneven"
+   }
+  }
+ ]
+}

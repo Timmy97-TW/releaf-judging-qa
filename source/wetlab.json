@@ -1157,34 +1157,7 @@
    "trap_zh": "說三個都「整合進系統」；實際只有 ACCD。",
    "basis": "like Munich 2025: 'what exactly does your product do'"
   },
-  {
-   "q_en": "What are Level 0, Level 1 and Level 2 in your Golden Gate assembly?",
-   "q_zh": "你們 Golden Gate 組裝裡的 Level 0、Level 1、Level 2 是什麼？",
-   "type": "fact",
-   "tier": "A",
-   "pages": [
-    "engineering",
-    "parts"
-   ],
-   "seat": "wet1",
-   "backup": "wet2",
-   "kw_en": [
-    "L0 single part",
-    "L1 transcription unit",
-    "L2 four units"
-   ],
-   "kw_zh": [
-    "L0 單一零件",
-    "L1 轉錄單元",
-    "L2 四個單元"
-   ],
-   "a_en": "Level 0 holds one part, for example a cargo with its signal peptide and His tag, cut with BbsI into pSTK-0, which is chloramphenicol resistant. Level 1 joins promoter, RBS, coding sequence and terminator into one transcription unit with BsaI, in ampicillin vectors. Level 2 joins four Level 1 units into one plasmid of about 10 kb: PCB production, CcaS-m3, CcaR, and the green-light cassette.",
-   "a_zh": "Level 0 放單一零件，例如帶訊號肽與 His 標籤的目標蛋白，用 BbsI 接進有氯黴素抗性的 pSTK-0。Level 1 用 BsaI 把啟動子、RBS、編碼序列、終止子接成一個轉錄單元，放在安比西林抗性的載體。Level 2 把四個 Level 1 單元接成一個約 10 kb 的質體：PCB 生產、CcaS-m3、CcaR 與綠光卡匣。",
-   "trap_en": "Mixing up which enzyme goes with which level, or forgetting the antibiotic markers differ.",
-   "trap_zh": "搞混哪種酵素對應哪個層級，或忘記各層抗生素標記不同。",
-   "basis": "like standard 'explain your assembly standard'"
-  },
-  {
+    {
    "q_en": "Which of your three proteins was secreted most, and by how much?",
    "q_zh": "三種蛋白中哪一個分泌最多？多多少？",
    "type": "fact",

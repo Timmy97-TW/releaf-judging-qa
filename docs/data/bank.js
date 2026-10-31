@@ -263,39 +263,6 @@ var QUESTIONS = [
 "id":"q008"
 },
 {
-"q_en":"How do you know your photometer is accurate?",
-"q_zh":"你們怎麼知道光度計是準的？",
-"type":"validate",
-"tier":"A",
-"pages":[
-"measurement",
-"hardware-photometer"
-],
-"seat":"hw",
-"backup":"dry",
-"kw_en":[
-"weighed mass standards",
-"3.8% from BioDrop",
-"constant 0.12 OD offset"
-],
-"kw_zh":[
-"稱重質量標準",
-"與 BioDrop 差 3.8%",
-"固定低 0.12 OD"
-],
-"a_en":"We judged it against mass, not only against another instrument. On 23 August we added titanium dioxide by weight, and raw Pro output agreed with the BioDrop to a median 3.8 percent, R squared 0.9999. On 10 October we repeated with 1 micron silica. The honest limit: on silica the Pro ran a constant 0.12 OD below the BioDrop, and neither standard is a living cell.",
-"a_zh":"我們用質量來評斷，不只是跟另一台儀器比。8 月 23 日我們依重量加入二氧化鈦，Pro 原始輸出與 BioDrop 的差距中位數是 3.8%，R 平方 0.9999。10 月 10 日我們用 1 微米二氧化矽重做。誠實的限制是：在二氧化矽上 Pro 固定比 BioDrop 低約 0.12 OD，而且兩種標準品都不是活細胞。",
-"trap_en":"Saying 'within 3.8% of the BioDrop' with no mention of the 0.12 OD offset or that the BioDrop is the weaker reference above OD 1.",
-"trap_zh":"只說『跟 BioDrop 差 3.8%』，卻沒提 0.12 OD 的偏移，也沒提 BioDrop 在 OD 1 以上是比較弱的參考。",
-"basis":"Hardware 2021 UPenn: how did you validate against a commercial instrument and how close",
-"dom":"measurement",
-"deep":0,
-"star":0,
-"nodes":[],
-"figs":[],
-"id":"q009"
-},
-{
 "q_en":"Your reference, the BioDrop, loses accuracy above OD 1. How did you handle that?",
 "q_zh":"你們的對照儀器 BioDrop 在 OD 1 以上會失準，你們怎麼處理？",
 "type":"validate",
@@ -326,7 +293,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q010"
+"id":"q009"
 },
 {
 "q_en":"How did you avoid tuning the analysis after seeing the data?",
@@ -358,7 +325,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q011"
+"id":"q010"
 },
 {
 "q_en":"Do you do any replicates in your protein assays?",
@@ -391,7 +358,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q012"
+"id":"q011"
 },
 {
 "q_en":"How do you know the DNPH signal is really ACC deaminase activity?",
@@ -423,7 +390,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q013"
+"id":"q012"
 },
 {
 "q_en":"How many replicates and what statistics sit behind your plant data?",
@@ -456,7 +423,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q014"
+"id":"q013"
 },
 {
 "q_en":"What controls do your plant assays use?",
@@ -488,7 +455,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q015"
+"id":"q014"
 },
 {
 "q_en":"Why build your own photometer instead of using a commercial spectrophotometer?",
@@ -521,7 +488,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q016"
+"id":"q015"
 },
 {
 "q_en":"Why a competitive His-tag ELISA and not Bradford or a sandwich ELISA?",
@@ -553,7 +520,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q017"
+"id":"q016"
 },
 {
 "q_en":"Why measure the product with DNPH and not detect the ammonia?",
@@ -585,7 +552,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q018"
+"id":"q017"
 },
 {
 "q_en":"What happens above OD 2.5? Could the photometer follow a much denser culture?",
@@ -619,7 +586,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q019"
+"id":"q018"
 },
 {
 "q_en":"Does your silica calibration tell you the number of bacteria?",
@@ -652,7 +619,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q020"
+"id":"q019"
 },
 {
 "q_en":"Could another team use your His-tag ELISA for their own protein?",
@@ -684,7 +651,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q021"
+"id":"q020"
 },
 {
 "q_en":"How does the photometer data feed into your digital twin and models?",
@@ -717,7 +684,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q022"
+"id":"q021"
 },
 {
 "q_en":"Did anything in your lab test change how the photometer works?",
@@ -750,7 +717,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q023"
+"id":"q022"
 },
 {
 "q_en":"How did outside feedback change your measurements?",
@@ -783,7 +750,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q024"
+"id":"q023"
 },
 {
 "q_en":"How do your assays fit together, from Western blot to plant test?",
@@ -816,7 +783,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q025"
+"id":"q024"
 },
 {
 "q_en":"Your negative control reads about 5 micrograms per millilitre in the ELISA. What does that mean?",
@@ -849,7 +816,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q026"
+"id":"q025"
 },
 {
 "q_en":"Are your ACC deaminase concentrations real quantities?",
@@ -882,7 +849,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q027"
+"id":"q026"
 },
 {
 "q_en":"Does green light really give you a dial for protectant production?",
@@ -915,7 +882,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q028"
+"id":"q027"
 },
 {
 "q_en":"What went wrong in your 434 hour photometer run?",
@@ -949,7 +916,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q029"
+"id":"q028"
 },
 {
 "q_en":"Run 6 looks clean. Is that the acceptance gate, or did something else change?",
@@ -982,7 +949,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q030"
+"id":"q029"
 },
 {
 "q_en":"Your blot shows ACC deaminase at 37 kDa, but other blots show other sizes. Why?",
@@ -1016,7 +983,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q031"
+"id":"q030"
 },
 {
 "q_en":"Could another team reproduce your measurements?",
@@ -1049,7 +1016,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q032"
+"id":"q031"
 },
 {
 "q_en":"What measurement would you do next to make your claims stronger?",
@@ -1082,7 +1049,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q033"
+"id":"q032"
 },
 {
 "q_en":"What can your fault detection give a farmer in practice?",
@@ -1115,7 +1082,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q034"
+"id":"q033"
 },
 {
 "q_en":"Your own page says the OD600 reading is purely turbidity and not absorbed light. Beer's law is a law about absorption, so on what grounds do you take a logarithm at all, and where does that stop working?",
@@ -1149,7 +1116,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q035"
+"id":"q034"
 },
 {
 "q_en":"Before the silica run you predicted your in-line builds would read below the benchtop instrument. Explain the geometry behind that prediction, and then tell me where each instrument's usable range actually ends.",
@@ -1183,7 +1150,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q036"
+"id":"q035"
 },
 {
 "q_en":"Walk me through what the reference channel removes from a reading and what it cannot. Where do LED temperature drift, LED spectral width and detector dark current each land in that answer?",
@@ -1217,7 +1184,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q037"
+"id":"q036"
 },
 {
 "q_en":"Explain why median and MAD beat mean and standard deviation inside a burst, then tell me what a bubble does to one sample as against to a whole window, and what your filtering could hide.",
@@ -1251,7 +1218,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q038"
+"id":"q037"
 },
 {
 "q_en":"How does your pipeline tell a slow drift from a step change, and what are your limit of detection and limit of quantification?",
@@ -1285,7 +1252,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q039"
+"id":"q038"
 },
 {
 "q_en":"Your calibration ladder is one micron silica beads. A Bacillus subtilis cell is not that. Name the ways they differ optically, and tell me which direction those differences push your reading.",
@@ -1319,7 +1286,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q040"
+"id":"q039"
 },
 {
 "q_en":"Suppose a judge wants your number in cells per millilitre rather than in OD. What would you have to measure, and what does the iGEM measurement work on absolute units ask for that you have not done?",
@@ -1353,7 +1320,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q041"
+"id":"q040"
 },
 {
 "q_en":"Your His-tag ELISA is a competitive format. Explain what that does to the shape of the curve, where the usable window sits, and what your untransformed host control reading of about five micrograms per millilitre means quantitatively.",
@@ -1387,7 +1354,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q042"
+"id":"q041"
 },
 {
 "q_en":"Both your ELISA and your Western blot read the same polyhistidine tag. A band at about 37 kilodaltons is a size, not an identity. What else could an anti-His antibody be binding, and what would make the identification stick?",
@@ -1421,7 +1388,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q043"
+"id":"q042"
 },
 {
 "q_en":"What does DNPH actually derivatise in your assay, why is an overnight endpoint reading not a rate, and why do your two activity figures differ fourteenfold?",
@@ -1455,7 +1422,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q044"
+"id":"q043"
 },
 {
 "q_en":"In-line turbidity probes are sold for bioreactors and open-source OD meters are almost a genre in iGEM. What in your photometer is therefore not new, and how much of that prior work did you actually survey?",
@@ -1489,7 +1456,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q045"
+"id":"q044"
 },
 {
 "q_en":"Grant that the parts are all old. What did your team actually add that someone reading your pages could not have got from the designs that already existed?",
@@ -1523,7 +1490,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q046"
+"id":"q045"
 },
 {
 "q_en":"A benchtop spectrophotometer is a better instrument than yours in every optical respect. Why build this at all, and please be careful with the cost comparison.",
@@ -1557,7 +1524,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q047"
+"id":"q046"
 },
 {
 "q_en":"Your silica concentration axis is set by pipetted volume. The measurement page gives the loop volume as 50 millilitres and the photometer page as 500. Does your calibration survive that?",
@@ -1591,7 +1558,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q048"
+"id":"q047"
 },
 {
 "q_en":"Your summary line says: within 3.8 percent of the benchtop BioDrop with no transform fitted, slope 1.001 against it. Take that apart for me, and then state the result the way a metrologist would.",
@@ -1625,7 +1592,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q049"
+"id":"q048"
 },
 {
 "q_en":"You have never run a dilution series of washed Bacillus subtilis at known densities against this photometer. Predict what you would see, and say what result would surprise you.",
@@ -1659,7 +1626,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q050"
+"id":"q049"
 },
 {
 "q_en":"In your light-plate assay the bacteria should respond differently to red and to green. What did you actually observe — do they stop producing under red and start under green?",
@@ -1700,7 +1667,7 @@ var QUESTIONS = [
 ],
 "basis":"instructor's priority set, 30 Oct read-through of Results, Hardware and Plants",
 "dom":"measurement",
-"id":"q051"
+"id":"q050"
 },
 {
 "q_en":"After thirteen hours we see a rise in production under the red light. How would you explain that rise?",
@@ -1739,7 +1706,7 @@ var QUESTIONS = [
 ],
 "basis":"instructor's priority set, 30 Oct read-through of Results, Hardware and Plants",
 "dom":"measurement",
-"id":"q052"
+"id":"q051"
 },
 {
 "q_en":"In your Western blot data the signal sits close to 100 kilodaltons, when ACC deaminase should be near 35 to 40. How do you explain that?",
@@ -1778,7 +1745,7 @@ var QUESTIONS = [
 ],
 "basis":"instructor's priority set, 30 Oct read-through of Results, Hardware and Plants",
 "dom":"measurement",
-"id":"q053"
+"id":"q052"
 },
 {
 "q_en":"Crucial: your ELISA shows no difference between green and red light, but your DNPH assay does. How do you explain that?",
@@ -1819,7 +1786,7 @@ var QUESTIONS = [
 ],
 "basis":"instructor's priority set, 30 Oct read-through of Results, Hardware and Plants",
 "dom":"measurement",
-"id":"q054"
+"id":"q053"
 },
 {
 "q_en":"You built two photometers, and one ran a twenty-day record. On the measurement page you tried different algorithms for the final OD value. What did you find after running all the algorithm tests?",
@@ -1860,7 +1827,7 @@ var QUESTIONS = [
 ],
 "basis":"instructor's priority set, 30 Oct read-through of Results, Hardware and Plants",
 "dom":"measurement",
-"id":"q055"
+"id":"q054"
 },
 {
 "q_en":"Your plasmid-free WB800 control reads 4.5 to 5.5 micrograms per millilitre on the same ELISA, and several samples sit above the top of the standard curve. What is your limit of quantification, and which conclusions survive it?",
@@ -1898,7 +1865,7 @@ var QUESTIONS = [
 ],
 "basis":"instructor's follow-up set, 30 Oct",
 "dom":"measurement",
-"id":"q056"
+"id":"q055"
 },
 {
 "q_en":"In your PLP experiment the csn arm without PLP gives about 21 and the WB800 control gives about 32. The control is higher than the sample, yet your page says they are nearly identical. Which is it?",
@@ -1936,7 +1903,7 @@ var QUESTIONS = [
 ],
 "basis":"instructor's follow-up set, 30 Oct",
 "dom":"measurement",
-"id":"q057"
+"id":"q056"
 },
 {
 "q_en":"ELISA peaks at twelve hours and activity at eighteen, and you call it post-secretory maturation. Give me one experiment that separates maturation from a protease clipping the His tag, and one that separates it from an assay artefact.",
@@ -1974,7 +1941,7 @@ var QUESTIONS = [
 ],
 "basis":"instructor's follow-up set, 30 Oct",
 "dom":"measurement",
-"id":"q058"
+"id":"q057"
 },
 {
 "q_en":"91.5 percent of your reference readings in the 434-hour run fell on an exact integer count, and 26 of the OD jumps came from the pipeline rather than the culture. Everything before October was read through that pipeline. Which published numbers change?",
@@ -2013,7 +1980,7 @@ var QUESTIONS = [
 ],
 "basis":"instructor's follow-up set, 30 Oct",
 "dom":"measurement",
-"id":"q059"
+"id":"q058"
 },
 {
 "q_en":"Your photometer's working limit is about OD 2.5 and the 5.57 scaling factor comes from one silica run. Your reactor runs report 2.71 and 3.77. What is the 3.77 worth?",
@@ -2052,7 +2019,7 @@ var QUESTIONS = [
 ],
 "basis":"instructor's follow-up set, 30 Oct",
 "dom":"measurement",
-"id":"q060"
+"id":"q059"
 },
 {
 "q_en":"Two things changed between run 5 and run 6 — the acceptance gate went on and the permeate draw was halved. How do you separate them?",
@@ -2089,7 +2056,7 @@ var QUESTIONS = [
 ],
 "basis":"instructor's follow-up set, 30 Oct",
 "dom":"measurement",
-"id":"q061"
+"id":"q060"
 },
 {
 "q_en":"Your jump gate accepts a new level once three readings agree. An air slug lasting longer than ninety seconds therefore gets accepted. What is the fix?",
@@ -2126,7 +2093,7 @@ var QUESTIONS = [
 ],
 "basis":"instructor's follow-up set, 30 Oct",
 "dom":"measurement",
-"id":"q062"
+"id":"q061"
 },
 {
 "q_en":"What membrane do you use in the bioreactor, and what exactly does it do?",
@@ -2158,7 +2125,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q063"
+"id":"q062"
 },
 {
 "q_en":"What does your bioreactor cost to build?",
@@ -2191,7 +2158,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q064"
+"id":"q063"
 },
 {
 "q_en":"How big is the commercial unit, and has it been built?",
@@ -2224,39 +2191,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q065"
-},
-{
-"q_en":"What wavelength does your photometer use, and why that one?",
-"q_zh":"你們的光度計用什麼波長？為什麼選它？",
-"type":"fact",
-"tier":"A",
-"pages":[
-"hardware-photometer"
-],
-"seat":"hw",
-"backup":"dry",
-"kw_en":[
-"600 nm amber",
-"standard OD600",
-"between CcaS peaks"
-],
-"kw_zh":[
-"600 nm 琥珀光",
-"標準 OD600",
-"位於 CcaS 兩峰之間"
-],
-"a_en":"600 nm, from an amber LED through a 2 mm flow cuvette. Software scales the reading by five to the standard 1 cm path. We chose it for three reasons: OD600 is the standard so readings compare with the BioDrop, at 600 nm the culture dims the beam mainly by scattering, and amber sits between the green and red peaks of CcaS/CcaR, so the photometer does not switch production on or off.",
-"a_zh":"600 nm，用琥珀色 LED 穿過 2 mm 的流動比色槽。軟體把讀值乘五，換算成標準 1 cm 光徑。選它有三個理由：OD600 是標準，所以能和 BioDrop 比較；600 nm 下菌液主要靠散射使光變弱；琥珀光位於 CcaS/CcaR 的綠光與紅光峰之間，所以光度計不會誤開關生產。",
-"trap_en":"Mixing it up with the 520 or 535 nm green that drives the circuit. The photometer light is deliberately a different color.",
-"trap_zh":"把它和啟動電路的 520 或 535 nm 綠光搞混。光度計的光刻意選不同顏色。",
-"basis":"like INSA 2022: why that sensor",
-"dom":"hardware",
-"deep":0,
-"star":0,
-"nodes":[],
-"figs":[],
-"id":"q066"
+"id":"q064"
 },
 {
 "q_en":"How many bioreactor runs have you done, and what was the longest?",
@@ -2290,7 +2225,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q067"
+"id":"q065"
 },
 {
 "q_en":"Why did you move from releasing bacteria on the roots to a bioreactor?",
@@ -2323,7 +2258,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q068"
+"id":"q066"
 },
 {
 "q_en":"Why did you add a pinch valve to the bioreactor?",
@@ -2355,7 +2290,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q069"
+"id":"q067"
 },
 {
 "q_en":"Why did you build an in-line photometer with a reference channel and a 2 mm path?",
@@ -2387,7 +2322,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q070"
+"id":"q068"
 },
 {
 "q_en":"How did you deal with bubbles in the photometer?",
@@ -2420,7 +2355,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q071"
+"id":"q069"
 },
 {
 "q_en":"Why do you use PWM and LED matching in the light plate?",
@@ -2452,7 +2387,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q072"
+"id":"q070"
 },
 {
 "q_en":"Why did you design a floating plate for hydroponics?",
@@ -2484,7 +2419,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q073"
+"id":"q071"
 },
 {
 "q_en":"What safety did you build into the hardware?",
@@ -2518,7 +2453,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q074"
+"id":"q072"
 },
 {
 "q_en":"How do you know the membrane really keeps the bacteria in?",
@@ -2551,7 +2486,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q075"
+"id":"q073"
 },
 {
 "q_en":"How do you know your pressure and flow readings can be trusted?",
@@ -2584,7 +2519,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q076"
+"id":"q074"
 },
 {
 "q_en":"How do you know the loop is sterile after cleaning without an autoclave?",
@@ -2617,7 +2552,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q077"
+"id":"q075"
 },
 {
 "q_en":"How do you know the protectant actually crosses the membrane?",
@@ -2650,7 +2585,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q078"
+"id":"q076"
 },
 {
 "q_en":"Why not just buy a commercial spectrophotometer instead of building a photometer?",
@@ -2683,7 +2618,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q079"
+"id":"q077"
 },
 {
 "q_en":"Which photometer should someone use, the Pro or the Slim?",
@@ -2715,7 +2650,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q080"
+"id":"q078"
 },
 {
 "q_en":"Your light plate follows an existing open design. What did you add, and is it better than a commercial plate?",
@@ -2748,7 +2683,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q081"
+"id":"q079"
 },
 {
 "q_en":"Why use a peristaltic pump? Did you try anything else?",
@@ -2780,7 +2715,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q082"
+"id":"q080"
 },
 {
 "q_en":"What happens if a fiber breaks or a tube leaks?",
@@ -2814,7 +2749,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q083"
+"id":"q081"
 },
 {
 "q_en":"Your photometer was calibrated on silica beads. Does that hold for real bacteria at high density?",
@@ -2847,7 +2782,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q084"
+"id":"q082"
 },
 {
 "q_en":"Can your leaf sensor tell that a plant in the field is stressed?",
@@ -2881,7 +2816,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q085"
+"id":"q083"
 },
 {
 "q_en":"Would the bioreactor work at the temperature of a real farm?",
@@ -2915,39 +2850,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q086"
-},
-{
-"q_en":"How did outside experts change your hardware?",
-"q_zh":"外部專家如何改變了你們的硬體？",
-"type":"integrate",
-"tier":"A",
-"pages":[
-"hardware-bioreactor"
-],
-"seat":"hw",
-"backup":"ihp",
-"kw_en":[
-"Chang: pinch valve",
-"Owl Lab: STS3215 and mainboard",
-"mainboard fixed pressure noise"
-],
-"kw_zh":[
-"張教授：夾管閥",
-"Owl Lab：STS3215 與主板",
-"主板解決壓力不穩"
-],
-"a_en":"Two reviewers changed it most. Prof. Chang found nothing drove product across the membrane, so we added the pinch valve, and he said to watch flow and pressure for fouling, so we added the transducers and flow meter. Teacher He at Owl Lab found the servo driver unreliable and the power supply too weak, so we moved to STS3215 servos and then his single mainboard, which also ended our unstable pressure readings.",
-"a_zh":"兩位審查者的影響最大。張教授發現沒有東西推動產物過膜，所以我們加了夾管閥；他也說要監看流量與壓力以判斷污垢，所以我們加了壓力傳送器與流量計。Owl Lab 的何老師發現伺服驅動板不可靠、電源太弱，所以我們換成 STS3215 伺服，再採用他設計的單一主板，這也解決了壓力讀值不穩的問題。",
-"trap_en":"Listing feedback without saying what changed on the rig. Each point should end on the part we built.",
-"trap_zh":"只列意見卻沒說裝置改了什麼。每一點都應該以我們做出的零件作結。",
-"basis":"like LCG 2024 / Cambridge 2024: expert changed a requirement",
-"dom":"hardware",
-"deep":0,
-"star":0,
-"nodes":[],
-"figs":[],
-"id":"q087"
+"id":"q084"
 },
 {
 "q_en":"How did what you learned in the bioreactor change the photometer?",
@@ -2980,7 +2883,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q088"
+"id":"q085"
 },
 {
 "q_en":"How did the light plate results feed into your digital twin?",
@@ -3013,7 +2916,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q089"
+"id":"q086"
 },
 {
 "q_en":"How did farmer and expert feedback shape the design of the commercial unit?",
@@ -3045,7 +2948,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q090"
+"id":"q087"
 },
 {
 "q_en":"What was the most serious thing that went wrong with the bioreactor?",
@@ -3078,7 +2981,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q091"
+"id":"q088"
 },
 {
 "q_en":"What does your light plate not show?",
@@ -3111,7 +3014,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q092"
+"id":"q089"
 },
 {
 "q_en":"Which of your sensors or monitoring channels do not work or were never tested?",
@@ -3145,7 +3048,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q093"
+"id":"q090"
 },
 {
 "q_en":"Your Safety page lists leak detection and pressure alerts. Are they actually built?",
@@ -3179,7 +3082,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q094"
+"id":"q091"
 },
 {
 "q_en":"You recommend 263 mL/min at 0.30 bar TMP. Did you actually measure that TMP in a run?",
@@ -3213,7 +3116,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q095"
+"id":"q092"
 },
 {
 "q_en":"How would you scale this up, and what limits you?",
@@ -3246,7 +3149,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q096"
+"id":"q093"
 },
 {
 "q_en":"Could another team rebuild your hardware from your documentation?",
@@ -3281,7 +3184,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q097"
+"id":"q094"
 },
 {
 "q_en":"Before we go deep: what physically drives liquid across the fibre wall, and what sets how much permeate you actually get?",
@@ -3315,7 +3218,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q098"
+"id":"q095"
 },
 {
 "q_en":"You report the fouling trend as permeability halving from 2,520 to 1,210, and you also say no fouling threshold was reached, with the alarm set at seventy per cent of steady state. Reconcile those two for me.",
@@ -3349,7 +3252,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q099"
+"id":"q096"
 },
 {
 "q_en":"Your pages name the duty-cycled recirculation pump as the next experiment and say you have not run it. Predict for me what happens inside the fibres during the off phase.",
@@ -3383,7 +3286,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q100"
+"id":"q097"
 },
 {
 "q_en":"A 0.2 micron pore and a protein running at about forty kilodaltons. Explain why the protein goes through and a cell does not, and then tell me what else goes through.",
@@ -3418,7 +3321,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q101"
+"id":"q098"
 },
 {
 "q_en":"Your bioreactor page headlines that the lumen and shell sides read the same, 10.7 against 10.5 by ELISA. Your Results page says the port each sample came from was never recorded. Which is it, and what sieving coefficient do you have?",
@@ -3453,7 +3356,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q102"
+"id":"q099"
 },
 {
 "q_en":"What is the pinch valve really for? Convince me it is not just a tap.",
@@ -3487,7 +3390,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q103"
+"id":"q100"
 },
 {
 "q_en":"Where does your culture see the most shear, in the pump head or in the fibre lumen, and how do you know it is tolerable?",
@@ -3521,7 +3424,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q104"
+"id":"q101"
 },
 {
 "q_en":"Distinguish for me your recirculation rate from the residence time that actually matters to the biology, and tell me which one limits your control loop.",
@@ -3555,7 +3458,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q105"
+"id":"q102"
 },
 {
 "q_en":"Tell me how oxygen and carbon dioxide get into and out of a closed recirculating loop, and what you measured.",
@@ -3590,7 +3493,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q106"
+"id":"q103"
 },
 {
 "q_en":"Why is a Bacillus culture in your recirculating loop not the same organism it is in a shake flask?",
@@ -3624,7 +3527,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q107"
+"id":"q104"
 },
 {
 "q_en":"Is this a chemostat? Tell me the washout condition for your reactor, what a steady state would look like in your own data, and what your longest run actually demonstrated.",
@@ -3658,7 +3561,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q108"
+"id":"q105"
 },
 {
 "q_en":"Your Safety page says automated alerts trigger containment protocols on transmembrane pressure and that droplet leakage is detected. Your bioreactor page calls both of those planned. Which is true, and what does containment rest on today?",
@@ -3693,7 +3596,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q109"
+"id":"q106"
 },
 {
 "q_en":"You scale out rather than up. Name the quantity that does not come along for free, and tell me where the first wall is.",
@@ -3727,7 +3630,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q110"
+"id":"q107"
 },
 {
 "q_en":"Hollow-fibre perfusion is a mature industrial technology. Tell me honestly what is not novel about your reactor.",
@@ -3761,7 +3664,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q111"
+"id":"q108"
 },
 {
 "q_en":"What previous iGEM work and open hardware does this build on, and what did you add on top of it?",
@@ -3796,7 +3699,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q112"
+"id":"q109"
 },
 {
 "q_en":"Last question. Why should I be impressed by this rig rather than by a bought one?",
@@ -3831,7 +3734,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q113"
+"id":"q110"
 },
 {
 "q_en":"In one minute, how does your bioreactor keep the bacteria in but let the protein out?",
@@ -3864,7 +3767,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q114"
+"id":"q111"
 },
 {
 "q_en":"Why a hollow-fiber perfusion bioreactor, instead of releasing the bacteria on the roots or using a normal stirred tank?",
@@ -3897,7 +3800,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q115"
+"id":"q112"
 },
 {
 "q_en":"How did you arrive at 263 mL/min and a TMP of 0.30 bar as the operating point?",
@@ -3929,7 +3832,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q116"
+"id":"q113"
 },
 {
 "q_en":"Did you ever actually run the bioreactor at your recommended operating point?",
@@ -3962,7 +3865,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q117"
+"id":"q114"
 },
 {
 "q_en":"Your design flux is 2 LMH but your runs drew 36 to 72 LMH. Is that above your own fouling limit?",
@@ -3996,7 +3899,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q118"
+"id":"q115"
 },
 {
 "q_en":"Your pages give two different pressure drops at 263 mL/min. Which one is right?",
@@ -4031,7 +3934,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q119"
+"id":"q116"
 },
 {
 "q_en":"The bioreactor page reports DNPH activity of 0.037 mU/mL, but Results says about 30 nmol per mL per hour. Which is it?",
@@ -4065,7 +3968,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q120"
+"id":"q117"
 },
 {
 "q_en":"How strong is your containment evidence, and how big are B. subtilis cells compared with your 0.2 µm pores?",
@@ -4100,7 +4003,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q121"
+"id":"q118"
 },
 {
 "q_en":"Your Safety page says you have automated TMP alerts and droplet leak detection. Do you?",
@@ -4135,7 +4038,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q122"
+"id":"q119"
 },
 {
 "q_en":"What else can cross a 0.2 µm membrane besides your protein, and what happens if a fiber breaks?",
@@ -4169,7 +4072,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q123"
+"id":"q120"
 },
 {
 "q_en":"How did expert feedback change your hardware?",
@@ -4201,7 +4104,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q124"
+"id":"q121"
 },
 {
 "q_en":"Why build your own instead of buying a commercial system, and did you compare against one?",
@@ -4236,7 +4139,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q125"
+"id":"q122"
 },
 {
 "q_en":"How does your photometer read OD600 without taking a sample?",
@@ -4269,7 +4172,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q126"
+"id":"q123"
 },
 {
 "q_en":"Why 600 nm, and why do you need a reference beam?",
@@ -4301,7 +4204,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q127"
+"id":"q124"
 },
 {
 "q_en":"How do you know your photometer is accurate, and against what?",
@@ -4335,7 +4238,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q128"
+"id":"q125"
 },
 {
 "q_en":"How does your Slim photometer compare with the Pro and with a commercial spectrophotometer?",
@@ -4368,7 +4271,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q129"
+"id":"q126"
 },
 {
 "q_en":"You say the leaf sensor reads 1.2 to 1.9 °C warm. How was that tested, and can a farmer trust it?",
@@ -4402,7 +4305,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q130"
+"id":"q127"
 },
 {
 "q_en":"Have you shown that your LPA light intensities give different gene expression, and what light dose is it?",
@@ -4436,7 +4339,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q131"
+"id":"q128"
 },
 {
 "q_en":"What wavelengths are your green and red LEDs, exactly?",
@@ -4472,7 +4375,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q132"
+"id":"q129"
 },
 {
 "q_en":"Is your green-light control actually running in the bioreactor?",
@@ -4507,7 +4410,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q133"
+"id":"q130"
 },
 {
 "q_en":"How did the LPA connect to your digital twin?",
@@ -4541,7 +4444,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q134"
+"id":"q131"
 },
 {
 "q_en":"How does your floating hydroponic plate work?",
@@ -4573,7 +4476,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q135"
+"id":"q132"
 },
 {
 "q_en":"How do you know the plate floats at the height you calculated, and did your plant experiments use it?",
@@ -4607,7 +4510,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q136"
+"id":"q133"
 },
 {
 "q_en":"Which sensors does your bioreactor really have, and which ones are missing?",
@@ -4641,7 +4544,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q137"
+"id":"q134"
 },
 {
 "q_en":"Your pages disagree about some runs: the pH in run 2, the volume in run 1, and the first Western blot. What actually happened?",
@@ -4676,7 +4579,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q138"
+"id":"q135"
 },
 {
 "q_en":"A valve broke at 38 hours and leaked into the incubator. What broke it, and do you actually know?",
@@ -4710,7 +4613,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q139"
+"id":"q136"
 },
 {
 "q_en":"How reliable are your pressure readings? Do you have three transducers or four?",
@@ -4745,7 +4648,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q140"
+"id":"q137"
 },
 {
 "q_en":"Is US$1022.67 really what your bioreactor costs?",
@@ -4780,7 +4683,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q141"
+"id":"q138"
 },
 {
 "q_en":"Could this scale to a real farm? What limits it?",
@@ -4813,7 +4716,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q142"
+"id":"q139"
 },
 {
 "q_en":"What is the next step before a farmer could actually use it?",
@@ -4847,7 +4750,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q143"
+"id":"q140"
 },
 {
 "q_en":"Would your system work for a different or larger protein, or another organism?",
@@ -4881,7 +4784,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q144"
+"id":"q141"
 },
 {
 "q_en":"What is the upper limit of your photometer, and what happens in a denser culture?",
@@ -4916,7 +4819,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q145"
+"id":"q142"
 },
 {
 "q_en":"How do your hardware sensors feed the digital twin?",
@@ -4950,7 +4853,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q146"
+"id":"q143"
 },
 {
 "q_en":"Why a peristaltic pump, and which pump model do you actually use?",
@@ -4984,7 +4887,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q147"
+"id":"q144"
 },
 {
 "q_en":"How do you sterilize the loop, and how do you handle the waste?",
@@ -5018,7 +4921,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q148"
+"id":"q145"
 },
 {
 "q_en":"What is special about your bioreactor?",
@@ -5059,7 +4962,7 @@ var QUESTIONS = [
 ],
 "basis":"instructor's priority set, 30 Oct read-through of Results, Hardware and Plants",
 "dom":"hardware",
-"id":"q149"
+"id":"q146"
 },
 {
 "q_en":"You integrated a pH sensor. What have you learned from it, and what does it bring to your results on top of the OD?",
@@ -5099,7 +5002,7 @@ var QUESTIONS = [
 ],
 "basis":"instructor's priority set, 30 Oct read-through of Results, Hardware and Plants",
 "dom":"hardware",
-"id":"q150"
+"id":"q147"
 },
 {
 "q_en":"What would you do if the bacteria leaked?",
@@ -5139,7 +5042,7 @@ var QUESTIONS = [
 ],
 "basis":"instructor's priority set, 30 Oct read-through of Results, Hardware and Plants",
 "dom":"hardware",
-"id":"q151"
+"id":"q148"
 },
 {
 "q_en":"You say the similar ELISA values may come from light leaking between neighbouring light-plate wells. The whole selling point of that plate is independently programmable wells. Which claim do you drop?",
@@ -5177,7 +5080,7 @@ var QUESTIONS = [
 ],
 "basis":"instructor's follow-up set, 30 Oct",
 "dom":"hardware",
-"id":"q152"
+"id":"q149"
 },
 {
 "q_en":"Your bioreactor page gives 0.037 milliunits per millilitre at eighteen hours and your Results page gives about 30 nanomoles per millilitre per hour for the same sample. Those differ by a factor of roughly a thousand. Which is right?",
@@ -5215,7 +5118,7 @@ var QUESTIONS = [
 ],
 "basis":"instructor's follow-up set, 30 Oct",
 "dom":"hardware",
-"id":"q153"
+"id":"q150"
 },
 {
 "q_en":"Your leak happened at the lowest-pressure point in the loop, and the lumen pressure rose instead of falling. If pressure cannot see a leak, what is your planned pressure layer actually protecting you from?",
@@ -5255,7 +5158,7 @@ var QUESTIONS = [
 ],
 "basis":"instructor's follow-up set, 30 Oct",
 "dom":"hardware",
-"id":"q154"
+"id":"q151"
 },
 {
 "q_en":"Your refill plan ships a spore cartridge at room temperature. Have you shown WB800 sporulates, germinates, and keeps a 10 kilobase plasmid through that?",
@@ -5293,7 +5196,7 @@ var QUESTIONS = [
 ],
 "basis":"instructor's follow-up set, 30 Oct",
 "dom":"hardware",
-"id":"q155"
+"id":"q152"
 },
 {
 "q_en":"Give us one example where an expert's advice changed your design, not just your plan.",
@@ -5327,7 +5230,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q156"
+"id":"q153"
 },
 {
 "q_en":"You met Prof. Chen Wen-Liang three times. What did each meeting change?",
@@ -5360,7 +5263,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q157"
+"id":"q154"
 },
 {
 "q_en":"Why did you move away from hydroponics as your main plant system?",
@@ -5393,7 +5296,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q158"
+"id":"q155"
 },
 {
 "q_en":"Dr. Sattely told you your proof of concept might not work. What did you do about it?",
@@ -5426,7 +5329,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q159"
+"id":"q156"
 },
 {
 "q_en":"How did the farmers you interviewed change who you are building for?",
@@ -5459,7 +5362,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q160"
+"id":"q157"
 },
 {
 "q_en":"Your homepage quotes a farmer in Tamsui. How did she shape ReLEAF?",
@@ -5493,7 +5396,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q161"
+"id":"q158"
 },
 {
 "q_en":"What business changes came directly from your interviews?",
@@ -5527,7 +5430,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q162"
+"id":"q159"
 },
 {
 "q_en":"What hardware changes came from outside reviewers?",
@@ -5560,7 +5463,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q163"
+"id":"q160"
 },
 {
 "q_en":"Where did your hay-based culture medium idea come from?",
@@ -5594,7 +5497,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q164"
+"id":"q161"
 },
 {
 "q_en":"How did feedback from your school lessons change the next lesson?",
@@ -5626,41 +5529,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q165"
-},
-{
-"q_en":"Could ReLEAF be used on organic farms?",
-"q_zh":"ReLEAF 可以用在有機農場嗎？",
-"type":"boundary",
-"tier":"A",
-"pages":[
-"human-practices",
-"entrepreneurship",
-"laws-and-regulations"
-],
-"seat":"ihp",
-"backup":"biz",
-"kw_en":[
-"engineered inputs excluded",
-"cell-free not automatic",
-"conventional first"
-],
-"kw_zh":[
-"排除基改投入",
-"無細胞也不自動符合",
-"先做慣行農"
-],
-"a_en":"No, we do not target them. Organic standards in Taiwan and the United States exclude inputs made with genetic engineering, and our protectants come from engineered Bacillus subtilis. A cell-free product is not automatically eligible, and our laws page lists organic compatibility in the Philippines as unresolved. A farmer raised this at the September 5 forum. We start with conventional and sustainable farms.",
-"a_zh":"不行，我們不以有機農場為目標。台灣和美國的有機標準都排除基因工程製造的投入，而我們的保護劑來自工程枯草桿菌。無細胞產物也不會自動符合資格，法規頁把菲律賓的有機相容性列為尚未確認。這個問題是 9 月 5 日論壇上有農民提出的。我們先從慣行與永續農場開始。",
-"trap_en":"Answering 'yes, because the bacteria stay inside the membrane'.",
-"trap_zh":"回答「可以，因為細菌留在膜裡面」。",
-"basis":"wiki-derived",
-"dom":"ihp",
-"deep":0,
-"star":0,
-"nodes":[],
-"figs":[],
-"id":"q166"
+"id":"q162"
 },
 {
 "q_en":"What if a typhoon or an animal destroys the bioreactor?",
@@ -5693,7 +5562,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q167"
+"id":"q163"
 },
 {
 "q_en":"Would this work on crops other than Arabidopsis, for example rice?",
@@ -5727,7 +5596,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q168"
+"id":"q164"
 },
 {
 "q_en":"Farmers told you pests and diseases were their biggest problem. Does ReLEAF deal with them?",
@@ -5761,7 +5630,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q169"
+"id":"q165"
 },
 {
 "q_en":"What if farmers are not comfortable with technology?",
@@ -5793,7 +5662,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q170"
+"id":"q166"
 },
 {
 "q_en":"Which country do you go to first outside Taiwan?",
@@ -5827,7 +5696,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q171"
+"id":"q167"
 },
 {
 "q_en":"How strong is your evidence that the bacteria cannot escape?",
@@ -5861,7 +5730,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q172"
+"id":"q168"
 },
 {
 "q_en":"Which expert advice did you not follow, or not manage to follow?",
@@ -5895,7 +5764,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q173"
+"id":"q169"
 },
 {
 "q_en":"Your booth survey says 95% agreed it helped. Why should we trust that?",
@@ -5928,7 +5797,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q174"
+"id":"q170"
 },
 {
 "q_en":"Only 30% of students got DNA base pairing right. Did the lesson fail?",
@@ -5960,7 +5829,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q175"
+"id":"q171"
 },
 {
 "q_en":"How do you know farmers actually want ReLEAF?",
@@ -5993,7 +5862,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q176"
+"id":"q172"
 },
 {
 "q_en":"How do you know your lessons actually worked?",
@@ -6025,7 +5894,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q177"
+"id":"q173"
 },
 {
 "q_en":"How do you know plants really make sounds?",
@@ -6058,7 +5927,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q178"
+"id":"q174"
 },
 {
 "q_en":"Which ideas were yours and which came from your advisors?",
@@ -6092,7 +5961,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q179"
+"id":"q175"
 },
 {
 "q_en":"Why not rely on a kill switch, as many iGEM teams do?",
@@ -6126,7 +5995,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q180"
+"id":"q176"
 },
 {
 "q_en":"Automated systems like Agriweather do everything for the farmer. Why would a farmer pick yours?",
@@ -6159,7 +6028,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q181"
+"id":"q177"
 },
 {
 "q_en":"What is your next step after the Jamboree?",
@@ -6194,7 +6063,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q182"
+"id":"q178"
 },
 {
 "q_en":"How will your education work last beyond this year?",
@@ -6228,7 +6097,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q183"
+"id":"q179"
 },
 {
 "q_en":"Small farmers cannot afford new technology. How does ReLEAF avoid widening that gap?",
@@ -6262,7 +6131,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q184"
+"id":"q180"
 },
 {
 "q_en":"You work in Taiwan. Why did your project start with Ghana?",
@@ -6295,7 +6164,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q185"
+"id":"q181"
 },
 {
 "q_en":"Why did you choose SDGs 2, 4, 10, 12 and 15, and not 13?",
@@ -6327,7 +6196,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q186"
+"id":"q182"
 },
 {
 "q_en":"Why build a map and a sound exhibit instead of a poster?",
@@ -6360,7 +6229,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q187"
+"id":"q183"
 },
 {
 "q_en":"What biosafety level do you work at, and how are students trained?",
@@ -6392,7 +6261,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q188"
+"id":"q184"
 },
 {
 "q_en":"Who is the 'Farmer Chen' on your homepage?",
@@ -6425,7 +6294,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q189"
+"id":"q185"
 },
 {
 "q_en":"In one minute: what is ReLEAF, and what did Human Practices do for it?",
@@ -6458,7 +6327,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q190"
+"id":"q186"
 },
 {
 "q_en":"You list 47 team members but only seven of you are here. Who did what?",
@@ -6492,7 +6361,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q191"
+"id":"q187"
 },
 {
 "q_en":"I see you only have physical biosafety and no engineered containment method. Why?",
@@ -6533,7 +6402,7 @@ var QUESTIONS = [
 ],
 "basis":"instructor's priority set, 30 Oct read-through of Results, Hardware and Plants",
 "dom":"ihp",
-"id":"q192"
+"id":"q188"
 },
 {
 "q_en":"Through the whole project, which experts gave you the most valuable feedback, and how did they reshape the project?",
@@ -6574,7 +6443,7 @@ var QUESTIONS = [
 ],
 "basis":"instructor's priority set, 30 Oct read-through of Results, Hardware and Plants",
 "dom":"ihp",
-"id":"q193"
+"id":"q189"
 },
 {
 "type":"fact",
@@ -6608,7 +6477,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q194"
+"id":"q190"
 },
 {
 "type":"fact",
@@ -6641,7 +6510,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q195"
+"id":"q191"
 },
 {
 "type":"fact",
@@ -6673,7 +6542,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q196"
+"id":"q192"
 },
 {
 "type":"fact",
@@ -6706,7 +6575,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q197"
+"id":"q193"
 },
 {
 "type":"fact",
@@ -6739,7 +6608,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q198"
+"id":"q194"
 },
 {
 "type":"design",
@@ -6773,7 +6642,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q199"
+"id":"q195"
 },
 {
 "type":"design",
@@ -6807,7 +6676,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q200"
+"id":"q196"
 },
 {
 "type":"design",
@@ -6840,7 +6709,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q201"
+"id":"q197"
 },
 {
 "type":"design",
@@ -6873,7 +6742,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q202"
+"id":"q198"
 },
 {
 "type":"design",
@@ -6905,7 +6774,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q203"
+"id":"q199"
 },
 {
 "type":"validate",
@@ -6939,7 +6808,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q204"
+"id":"q200"
 },
 {
 "type":"validate",
@@ -6971,7 +6840,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q205"
+"id":"q201"
 },
 {
 "type":"validate",
@@ -7005,7 +6874,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q206"
+"id":"q202"
 },
 {
 "type":"validate",
@@ -7038,7 +6907,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q207"
+"id":"q203"
 },
 {
 "type":"compare",
@@ -7073,7 +6942,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q208"
+"id":"q204"
 },
 {
 "type":"compare",
@@ -7106,7 +6975,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q209"
+"id":"q205"
 },
 {
 "type":"compare",
@@ -7139,7 +7008,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q210"
+"id":"q206"
 },
 {
 "type":"compare",
@@ -7171,7 +7040,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q211"
+"id":"q207"
 },
 {
 "type":"compare",
@@ -7203,7 +7072,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q212"
+"id":"q208"
 },
 {
 "type":"boundary",
@@ -7237,7 +7106,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q213"
+"id":"q209"
 },
 {
 "type":"boundary",
@@ -7271,7 +7140,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q214"
+"id":"q210"
 },
 {
 "type":"boundary",
@@ -7303,7 +7172,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q215"
+"id":"q211"
 },
 {
 "type":"boundary",
@@ -7337,7 +7206,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q216"
+"id":"q212"
 },
 {
 "type":"boundary",
@@ -7369,7 +7238,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q217"
+"id":"q213"
 },
 {
 "type":"integrate",
@@ -7402,7 +7271,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q218"
+"id":"q214"
 },
 {
 "type":"integrate",
@@ -7435,7 +7304,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q219"
+"id":"q215"
 },
 {
 "type":"integrate",
@@ -7469,7 +7338,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q220"
+"id":"q216"
 },
 {
 "type":"gap",
@@ -7503,7 +7372,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q221"
+"id":"q217"
 },
 {
 "type":"gap",
@@ -7536,7 +7405,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q222"
+"id":"q218"
 },
 {
 "type":"gap",
@@ -7570,7 +7439,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q223"
+"id":"q219"
 },
 {
 "type":"gap",
@@ -7604,7 +7473,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q224"
+"id":"q220"
 },
 {
 "type":"impact",
@@ -7638,7 +7507,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q225"
+"id":"q221"
 },
 {
 "type":"impact",
@@ -7672,7 +7541,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q226"
+"id":"q222"
 },
 {
 "type":"impact",
@@ -7705,7 +7574,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q227"
+"id":"q223"
 },
 {
 "type":"impact",
@@ -7737,7 +7606,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q228"
+"id":"q224"
 },
 {
 "type":"impact",
@@ -7770,7 +7639,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q229"
+"id":"q225"
 },
 {
 "q_en":"What is special about your solution in biomanufacturing?",
@@ -7811,7 +7680,7 @@ var QUESTIONS = [
 ],
 "basis":"instructor's priority set, 30 Oct read-through of Results, Hardware and Plants",
 "dom":"biomanufacturing",
-"id":"q230"
+"id":"q226"
 },
 {
 "q_en":"You claim you are developing a decentralised bioreactor for everyone to use. What is the advantage, and what is the disadvantage?",
@@ -7852,7 +7721,7 @@ var QUESTIONS = [
 ],
 "basis":"instructor's priority set, 30 Oct read-through of Results, Hardware and Plants",
 "dom":"biomanufacturing",
-"id":"q231"
+"id":"q227"
 },
 {
 "q_en":"If I wanted to scale up the bioreactor instead of using multiple units, what factors should be considered?",
@@ -7892,7 +7761,7 @@ var QUESTIONS = [
 ],
 "basis":"instructor's priority set, 30 Oct read-through of Results, Hardware and Plants",
 "dom":"biomanufacturing",
-"id":"q232"
+"id":"q228"
 },
 {
 "q_en":"Have you tested how long the protectant lasts before it is delivered to the crop? Could it degrade before it reaches the plant?",
@@ -7932,7 +7801,7 @@ var QUESTIONS = [
 ],
 "basis":"instructor's priority set, 30 Oct read-through of Results, Hardware and Plants",
 "dom":"biomanufacturing",
-"id":"q233"
+"id":"q229"
 },
 {
 "q_en":"Name the two links in your chain that have never been demonstrated.",
@@ -7972,7 +7841,7 @@ var QUESTIONS = [
 ],
 "basis":"instructor's follow-up set, 30 Oct",
 "dom":"biomanufacturing",
-"id":"q234"
+"id":"q230"
 },
 {
 "q_en":"Where do you see your product in the greater market, and how will you implement it?",
@@ -8005,7 +7874,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q235"
+"id":"q231"
 },
 {
 "q_en":"Have you identified funding sources or investors who could de-risk the technology enough to bring it to market?",
@@ -8037,7 +7906,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q236"
+"id":"q232"
 },
 {
 "q_en":"How would you improve the project if you were given funding?",
@@ -8069,39 +7938,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q237"
-},
-{
-"q_en":"May I ask about the cost?",
-"q_zh":"請問成本是多少？",
-"type":"fact",
-"tier":"A",
-"pages":[
-"entrepreneurship"
-],
-"seat":"biz",
-"backup":"hw",
-"kw_en":[
-"US$5550 first year",
-"US$90 refills",
-"planning estimate"
-],
-"kw_zh":[
-"第一年 5550 美元",
-"每年 90 美元補充匣",
-"規劃估算"
-],
-"a_en":"For a one-hectare farm, about US$5,550 in Year 1, which is NT$175,400: two bioreactors, three moisture sensors, one cartridge, plus freight, set-up and warranty. After that, about US$90 a year for the refill cartridge. That price is twice our own cost of about US$2,775. These are planning estimates, not quotes, and they rest on a dose assumption that no crop has tested yet.",
-"a_zh":"一公頃的農場第一年約 5,550 美元，也就是 NT$175,400：包含兩台生物反應器、三個濕度感測器、一個補充匣，加上運費、安裝與保固。之後每年補充匣約 90 美元。這個價格是我們成本約 2,775 美元的兩倍。這些是規劃估算，不是報價，而且建立在一個還沒有任何作物測試過的劑量假設上。",
-"trap_en":"Quoting only the US$2280 bioreactor and forgetting the sensors, cartridge and set-up.",
-"trap_zh":"只講 2280 美元的反應器，漏掉感測器、補充匣與安裝。",
-"basis":"like GEMS-TAIWAN 2024: may I ask about the cost?",
-"dom":"entrepreneurship",
-"deep":0,
-"star":0,
-"nodes":[],
-"figs":[],
-"id":"q238"
+"id":"q233"
 },
 {
 "q_en":"How could you scale this?",
@@ -8135,7 +7972,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q239"
+"id":"q234"
 },
 {
 "q_en":"Why a social enterprise and not a conventional business, and what drove that choice?",
@@ -8167,7 +8004,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q240"
+"id":"q235"
 },
 {
 "q_en":"How big is your market, and how did you work that out?",
@@ -8199,7 +8036,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q241"
+"id":"q236"
 },
 {
 "q_en":"How did you validate your business model?",
@@ -8232,7 +8069,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q242"
+"id":"q237"
 },
 {
 "q_en":"What is your cost advantage over existing products?",
@@ -8264,7 +8101,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q243"
+"id":"q238"
 },
 {
 "q_en":"Why do small farms matter for your business, and what do the numbers say?",
@@ -8297,7 +8134,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q244"
+"id":"q239"
 },
 {
 "q_en":"Why did you set the price at twice your cost, the same for every farm?",
@@ -8329,7 +8166,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q245"
+"id":"q240"
 },
 {
 "q_en":"Walk me through how you calculated your break-even point.",
@@ -8361,7 +8198,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q246"
+"id":"q241"
 },
 {
 "q_en":"How do you know farmers will actually pay for this?",
@@ -8394,7 +8231,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q247"
+"id":"q242"
 },
 {
 "q_en":"What happens to the business if you sell much less than planned?",
@@ -8426,40 +8263,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q248"
-},
-{
-"q_en":"Can ReLEAF be used on organic farms?",
-"q_zh":"ReLEAF 可以用在有機農場嗎？",
-"type":"boundary",
-"tier":"A",
-"pages":[
-"entrepreneurship",
-"laws-and-regulations"
-],
-"seat":"biz",
-"backup":"ihp",
-"kw_en":[
-"No",
-"GMO products excluded",
-"conventional smallholders"
-],
-"kw_zh":[
-"不可以",
-"排除基改產品",
-"慣行小農"
-],
-"a_en":"No, and we say so plainly. Taiwan's Organic Agriculture Promotion Act excludes genetically modified organisms and their products, and US and EU rules are similar, so a sealed membrane does not make the output organic. We target conventional and sustainable smallholders and will make no organic claim without written approval from authorities. Only about 3.47% of Taiwan's farmland is organic. Note that our largest farmer interview round, over 30 farmers, was with organic farmers.",
-"a_zh":"不可以，我們直接說明。台灣有機農業促進法排除基改生物及其產品，美國和歐盟規範類似，所以即使有密閉薄膜，產物也不能算有機。我們的對象是慣行與永續的小農，沒有主管機關的書面核准，我們不會做任何有機宣稱。台灣只有約 3.47% 的農地是有機。要注意的是，我們最大的一輪農民訪談，超過 30 位，訪問的是有機農民。",
-"trap_en":"Saying 'cell-free means organic is fine'. The production method itself is restricted.",
-"trap_zh":"說「無細胞所以有機也行」。生產方式本身就受限。",
-"basis":"boundary on organic farming; Biomanufacturing says 'built around organic', see gaps",
-"dom":"entrepreneurship",
-"deep":0,
-"star":0,
-"nodes":[],
-"figs":[],
-"id":"q249"
+"id":"q243"
 },
 {
 "q_en":"Why did you pick tomato as your target crop?",
@@ -8493,7 +8297,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q250"
+"id":"q244"
 },
 {
 "q_en":"Why not just sell the protectant in a bottle, or use an irrigation controller like Agriweather's?",
@@ -8526,7 +8330,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q251"
+"id":"q245"
 },
 {
 "q_en":"How do you compete with cheap chemical pesticides and fertilizers?",
@@ -8558,7 +8362,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q252"
+"id":"q246"
 },
 {
 "q_en":"Your Math Model says individual ownership is out of reach, yet your business plan sells a package to a one-hectare farm. Which is it?",
@@ -8592,7 +8396,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q253"
+"id":"q247"
 },
 {
 "q_en":"How does your Math Model change your cost and dose assumptions?",
@@ -8625,7 +8429,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q254"
+"id":"q248"
 },
 {
 "q_en":"How did your conversations with experts change your business plan?",
@@ -8658,7 +8462,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q255"
+"id":"q249"
 },
 {
 "q_en":"What if the regulator classes your product as a pesticide or a GMO release?",
@@ -8691,7 +8495,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q256"
+"id":"q250"
 },
 {
 "q_en":"What does regulation cost you in time and money?",
@@ -8724,7 +8528,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q257"
+"id":"q251"
 },
 {
 "q_en":"Which Taiwanese laws and regulators decide whether you can sell this?",
@@ -8757,7 +8561,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q258"
+"id":"q252"
 },
 {
 "q_en":"Is your containment-based regulatory pathway confirmed in Taiwan?",
@@ -8790,7 +8594,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q259"
+"id":"q253"
 },
 {
 "q_en":"Why the Philippines after Taiwan, and not the United States or Europe?",
@@ -8823,7 +8627,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q260"
+"id":"q254"
 },
 {
 "q_en":"What are your milestones from here to commercialization?",
@@ -8856,7 +8660,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q261"
+"id":"q255"
 },
 {
 "q_en":"Small farmers cannot afford US$5,550 upfront. How will they pay?",
@@ -8889,7 +8693,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q262"
+"id":"q256"
 },
 {
 "q_en":"What is your relationship with CH Biotech: partner or competitor?",
@@ -8923,7 +8727,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q263"
+"id":"q257"
 },
 {
 "q_en":"Do you plan to patent ReLEAF, or will it be open?",
@@ -8957,7 +8761,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q264"
+"id":"q258"
 },
 {
 "q_en":"What does one dose of protectant cost you to make?",
@@ -8990,7 +8794,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q265"
+"id":"q259"
 },
 {
 "q_en":"What is the biggest risk to your business?",
@@ -9022,7 +8826,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q266"
+"id":"q260"
 },
 {
 "q_en":"Why should an investor believe your 24% return?",
@@ -9054,7 +8858,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q267"
+"id":"q261"
 },
 {
 "q_en":"How does making culture medium from hay change your economics?",
@@ -9088,7 +8892,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q268"
+"id":"q262"
 },
 {
 "q_en":"Your financial projection runs five years, your initial investment looks low when it is unusual to make money in the first three or four years, and there is no terminal value anywhere in it. What makes you think the projection is reasonable?",
@@ -9128,7 +8932,7 @@ var QUESTIONS = [
 ],
 "basis":"instructor's priority set, 30 Oct read-through of Results, Hardware and Plants",
 "dom":"entrepreneurship",
-"id":"q269"
+"id":"q263"
 },
 {
 "q_en":"Why did you use Arabidopsis as your model plant?",
@@ -9161,7 +8965,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q270"
+"id":"q264"
 },
 {
 "q_en":"Which stresses did you test, and how did you apply them?",
@@ -9193,73 +8997,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q271"
-},
-{
-"q_en":"What did you measure on the plants?",
-"q_zh":"你們在植物上量測什麼？",
-"type":"fact",
-"tier":"A",
-"pages":[
-"plant",
-"geospatial-analysis"
-],
-"seat":"plant",
-"backup":"wet2",
-"kw_en":[
-"chlorophyll",
-"fresh weight",
-"root length"
-],
-"kw_zh":[
-"葉綠素",
-"鮮重",
-"主根長度"
-],
-"a_en":"Three numbers. Chlorophyll from an 80% acetone extract read at 645 and 663 nm, fresh weight of the harvested seedlings, and primary root length traced by hand in ImageJ. Leaf colour, anthocyanin and bleaching were recorded by eye. We did not score germination rate or a wilting scale. Leaf area stays qualitative because leaves overlap.",
-"a_zh":"三個數字。葉綠素用 80% 丙酮萃取後讀 645 與 663 nm，收成後幼苗的鮮重，以及用 ImageJ 手動描繪的主根長度。葉色、花青素與白化用肉眼記錄。我們沒有計算發芽率或萎凋分級。葉面積因為葉片重疊，只能做質性描述。",
-"trap_en":"Listing germination or a wilting score, which the wiki does not report.",
-"trap_zh":"把發芽率或萎凋評分說成有做，但維基上沒有。",
-"basis":"recorded pattern: which readouts and why",
-"dom":"plant",
-"deep":0,
-"star":0,
-"nodes":[],
-"figs":[],
-"id":"q272"
-},
-{
-"q_en":"What is each of your three protectants meant to do in the plant?",
-"q_zh":"你們三種保護劑各自想在植物裡做什麼？",
-"type":"fact",
-"tier":"A",
-"pages":[
-"description",
-"plant"
-],
-"seat":"plant",
-"backup":"dry",
-"kw_en":[
-"ACCD cuts ethylene",
-"LEA14 protects proteins",
-"BoPEP4 defences"
-],
-"kw_zh":[
-"ACCD 降乙烯",
-"LEA14 護蛋白",
-"BoPEP4 防禦"
-],
-"a_en":"ACC deaminase breaks down ACC, the precursor of ethylene, so a stressed plant makes less of the stress hormone. LEA14 is aimed at the damage drought and salt do to proteins. BoPEP4 is a broccoli elicitor peptide meant to switch on the plant's own defences. ACC deaminase is the one carried to the reactor. We never measured ethylene in the plants.",
-"a_zh":"ACC deaminase 分解乙烯的前驅物 ACC，讓受逆境的植物少產生這個壓力荷爾蒙。LEA14 針對乾旱與鹽害對蛋白質的傷害。BoPEP4 是花椰菜的誘導肽，想啟動植物自己的防禦。ACC deaminase 是我們帶進反應器的那一個。我們沒有在植物上量過乙烯。",
-"trap_en":"Saying ethylene was measured, or that all three were integrated into the circuit.",
-"trap_zh":"說有量乙烯，或說三個都已整合進電路。",
-"basis":"recorded pattern: mechanism of your protein",
-"dom":"plant",
-"deep":0,
-"star":0,
-"nodes":[],
-"figs":[],
-"id":"q273"
+"id":"q265"
 },
 {
 "q_en":"Why 100 mM NaCl as your working stress?",
@@ -9291,7 +9029,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q274"
+"id":"q266"
 },
 {
 "q_en":"Why test the protectant before, with and after the stress?",
@@ -9324,39 +9062,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q275"
-},
-{
-"q_en":"Why did you use agar, hydroponics and soil instead of one system?",
-"q_zh":"為什麼用瓊脂、水耕和土壤，而不是只用一種？",
-"type":"design",
-"tier":"A",
-"pages":[
-"plant"
-],
-"seat":"plant",
-"backup":"hw",
-"kw_en":[
-"control vs realism",
-"screen then confirm",
-"delivery route"
-],
-"kw_zh":[
-"控制與真實",
-"先篩再驗證",
-"給藥途徑"
-],
-"a_en":"Each trades control for realism. Agar gives uniform nutrients and exact stress, so we screened there first. Hydroponics sits between and matches delivery through circulating water. Soil is closest to a farm. The limit is that the systems did not get the same tests: only ACC deaminase and BoPEP4 reached hydroponics, and soil only saw ACC deaminase.",
-"a_zh":"每一種在控制與真實之間取捨。瓊脂養分一致、逆境精準，所以先在那裡篩選。水耕介於中間，也貼近透過循環水給藥。土壤最接近農田。限制是三個系統做的測試不一樣：水耕只有 ACC deaminase 和 BoPEP4，土壤只測了 ACC deaminase。",
-"trap_en":"Saying the same assay was repeated across all three systems.",
-"trap_zh":"說同一個實驗在三個系統都重複過。",
-"basis":"recorded pattern: why this platform",
-"dom":"plant",
-"deep":0,
-"star":0,
-"nodes":[],
-"figs":[],
-"id":"q276"
+"id":"q267"
 },
 {
 "q_en":"Why did you move soil tests from one-month-old to two-week-old plants?",
@@ -9388,7 +9094,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q277"
+"id":"q268"
 },
 {
 "q_en":"Why did you spray ACC deaminase on the shoots instead of the roots?",
@@ -9420,7 +9126,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q278"
+"id":"q269"
 },
 {
 "q_en":"How many plants per group, and how many replicates did you run?",
@@ -9453,7 +9159,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q279"
+"id":"q270"
 },
 {
 "q_en":"What controls did you run?",
@@ -9485,7 +9191,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q280"
+"id":"q271"
 },
 {
 "q_en":"What statistics did you use?",
@@ -9518,7 +9224,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q281"
+"id":"q272"
 },
 {
 "q_en":"How do you know ACC deaminase really rescued plants under salt?",
@@ -9551,7 +9257,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q282"
+"id":"q273"
 },
 {
 "q_en":"How do you know your stress treatment actually reached the plants?",
@@ -9583,7 +9289,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q283"
+"id":"q274"
 },
 {
 "q_en":"Your trehalose result says 8.7-fold chlorophyll. Why should we trust that number?",
@@ -9616,7 +9322,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q284"
+"id":"q275"
 },
 {
 "q_en":"Is your hydroponic dilution series a real dose-response?",
@@ -9648,7 +9354,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q285"
+"id":"q276"
 },
 {
 "q_en":"How does your protectant compare with the commercial CH Bio peptide?",
@@ -9681,7 +9387,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q286"
+"id":"q277"
 },
 {
 "q_en":"Why not just put the beneficial bacteria into the soil?",
@@ -9713,7 +9419,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q287"
+"id":"q278"
 },
 {
 "q_en":"Why not use trehalose, which worked at 5 mM, as your protectant?",
@@ -9745,7 +9451,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q288"
+"id":"q279"
 },
 {
 "q_en":"Would this work on rice or tomato?",
@@ -9779,7 +9485,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q289"
+"id":"q280"
 },
 {
 "q_en":"What about drought, or other stresses?",
@@ -9812,7 +9518,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q290"
+"id":"q281"
 },
 {
 "q_en":"If a farmer only treats after the damage shows, does it still help?",
@@ -9845,7 +9551,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q291"
+"id":"q282"
 },
 {
 "q_en":"Can the protectants hurt a plant that is not stressed?",
@@ -9877,7 +9583,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q292"
+"id":"q283"
 },
 {
 "q_en":"How did the plant data change your math model?",
@@ -9910,7 +9616,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q293"
+"id":"q284"
 },
 {
 "q_en":"How did outside experts change your plant protocol?",
@@ -9943,7 +9649,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q294"
+"id":"q285"
 },
 {
 "q_en":"How did your hydroponic hardware change what the plant team could test?",
@@ -9976,7 +9682,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q295"
+"id":"q286"
 },
 {
 "q_en":"Does your timing result support the forecast and sensor part of ReLEAF?",
@@ -10009,7 +9715,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q296"
+"id":"q287"
 },
 {
 "q_en":"What went wrong in your plant experiments?",
@@ -10041,7 +9747,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q297"
+"id":"q288"
 },
 {
 "q_en":"Your headline says pre and post rescue but co-treatment does not. Do all your runs agree?",
@@ -10074,7 +9780,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q298"
+"id":"q289"
 },
 {
 "q_en":"Did you show that ACC deaminase lowers ethylene in your plants?",
@@ -10107,7 +9813,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q299"
+"id":"q290"
 },
 {
 "q_en":"Did the protectants work in soil, which is closest to a farm?",
@@ -10140,7 +9846,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q300"
+"id":"q291"
 },
 {
 "q_en":"Which protectant worked best?",
@@ -10173,7 +9879,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q301"
+"id":"q292"
 },
 {
 "q_en":"How much protectant would a farmer need to apply?",
@@ -10206,7 +9912,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q302"
+"id":"q293"
 },
 {
 "q_en":"What is your next plant experiment?",
@@ -10238,7 +9944,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q303"
+"id":"q294"
 },
 {
 "q_en":"You report that the CH peptide, a product sold against drought, also confers salinity tolerance. What are the candidate molecular mechanisms, and which of them can your data actually distinguish?",
@@ -10274,7 +9980,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q304"
+"id":"q295"
 },
 {
 "q_en":"How do you experimentally exclude the confounding hypothesis that a protectant preparation acted simply as a nitrogen-rich nutrient source, that is, a fertilisation effect rather than protection?",
@@ -10310,7 +10016,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q305"
+"id":"q296"
 },
 {
 "q_en":"Your enzyme's own reaction products are ammonia and alpha-ketobutyrate. On a plate, how do you separate ACC deaminase activity from the nitrogen the reaction releases?",
@@ -10346,7 +10052,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q306"
+"id":"q297"
 },
 {
 "q_en":"Resource allocation theory posits a trade-off between vegetative growth rate and stress tolerance. Did your tolerance gains come with a fitness cost, and in which arm of your design would that cost appear?",
@@ -10382,7 +10088,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q307"
+"id":"q298"
 },
 {
 "q_en":"Did the tolerance gain compromise defence against biotic stresses, such as phytophagous insects or pathogens? BoPEP4 in particular is an elicitor, so what would you predict?",
@@ -10418,7 +10124,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q308"
+"id":"q299"
 },
 {
 "q_en":"What are the stability profiles and degradation half-lives of your bioprotectants in soil, in hydroponic medium and on a foliar surface?",
@@ -10454,7 +10160,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q309"
+"id":"q300"
 },
 {
 "q_en":"Is there empirical evidence confirming cellular uptake and systemic translocation of these intact molecules by the host plant?",
@@ -10490,7 +10196,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q310"
+"id":"q301"
 },
 {
 "q_en":"Most high-molecular-weight proteins cannot passively traverse the plant cell wall. By what mechanism, then, does exogenous ACC deaminase provide abiotic stress tolerance, given the enzyme's native intracellular localisation and its substrate accessibility?",
@@ -10526,7 +10232,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q311"
+"id":"q302"
 },
 {
 "q_en":"You sprayed the enzyme onto shoots. The rhizosphere account you have just described is a root-zone argument, so how does a sprayed leaf fit the mechanism you are claiming?",
@@ -10562,7 +10268,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q312"
+"id":"q303"
 },
 {
 "q_en":"Glutathione is known to enhance adaptation to heat, salinity and drought. Do your three bioprotectants act through glutathione-related pathways, or by upregulating the plant's own glutathione homeostasis?",
@@ -10598,7 +10304,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q313"
+"id":"q304"
 },
 {
 "q_en":"Your first highlight credits crude, unpurified ACC deaminase and BoPEP4 from your own bioreactor with the anticipated protective effects. State precisely what that rests on, and where it stops.",
@@ -10634,7 +10340,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q314"
+"id":"q305"
 },
 {
 "q_en":"Crude culture or purified protein, which is your active ingredient? And what does working with a crude preparation cost you in attribution?",
@@ -10670,7 +10376,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q315"
+"id":"q306"
 },
 {
 "q_en":"Your second highlight says sequence-modified protectants maintained bioactivity. Which modification was tested, and if a variant performs like wild type, is that evidence of robustness or of a method that cannot resolve a difference?",
@@ -10706,7 +10412,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q316"
+"id":"q307"
 },
 {
 "q_en":"You propose isolating active polypeptide motifs and scaling up toward field application. In practice, what breaks first when you try that?",
@@ -10742,7 +10448,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q317"
+"id":"q308"
 },
 {
 "q_en":"Before we come to your data: what does ethylene actually do to a plant under stress, and why would taking its precursor away help?",
@@ -10776,7 +10482,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q318"
+"id":"q309"
 },
 {
 "q_en":"Salt stress is often called two stresses in one. What are the two, and which one does your 100 mM plate deliver first?",
@@ -10810,7 +10516,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q319"
+"id":"q310"
 },
 {
 "q_en":"Chlorophyll is your main number. When chlorophyll falls, what has actually happened in the leaf?",
@@ -10845,7 +10551,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q320"
+"id":"q311"
 },
 {
 "q_en":"Your hydroponic box is supposed to control things a soil pot cannot. Name them, and then tell me what your box failed to control.",
@@ -10879,7 +10585,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q321"
+"id":"q312"
 },
 {
 "q_en":"Why does a root grow away from salt, and what did looking for that buy you?",
@@ -10913,7 +10619,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q322"
+"id":"q313"
 },
 {
 "q_en":"Nine seedlings on one plate, and that plate has one position on the rack. Tell me what your n of nine is actually counting.",
@@ -10948,7 +10654,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q323"
+"id":"q314"
 },
 {
 "q_en":"Which test produced the asterisks on your figures, and what exactly do those asterisks compare?",
@@ -10982,7 +10688,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q324"
+"id":"q315"
 },
 {
 "q_en":"Suppose chlorophyll per gram goes up forty per cent and fresh weight does not move. What has changed in that plant, and what has not?",
@@ -11016,7 +10722,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q325"
+"id":"q316"
 },
 {
 "q_en":"Dose, concentration and total amount applied are three different things across your sets. Walk me through them.",
@@ -11051,7 +10757,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q326"
+"id":"q317"
 },
 {
 "q_en":"Your three timing arms are one day apart. What can one day actually change in an Arabidopsis seedling, and what is that arm really asking?",
@@ -11086,7 +10792,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q327"
+"id":"q318"
 },
 {
 "q_en":"Rescue and priming are not the same claim. Which one are you testing, and which one could your assay even detect?",
@@ -11121,7 +10827,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q328"
+"id":"q319"
 },
 {
 "q_en":"ACC and the step that makes ethylene are inside the plant cell, and a cell wall will not pass a forty-kilodalton enzyme. So how is a sprayed ACC deaminase supposed to lower ethylene at all?",
@@ -11156,7 +10862,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q329"
+"id":"q320"
 },
 {
 "q_en":"Distinguish the apoplastic ACC pool from the intracellular one. Which pool does your enzyme see, and what follows for how much of it you need to make?",
@@ -11191,7 +10897,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q330"
+"id":"q321"
 },
 {
 "q_en":"ACC has signalling roles of its own, independent of ethylene. What does that do to your mechanism?",
@@ -11225,7 +10931,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q331"
+"id":"q322"
 },
 {
 "q_en":"Under salt the plant has to manage its stomata and its sodium to potassium ratio. Which of those could your protectant touch, and which did you measure?",
@@ -11259,7 +10965,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q332"
+"id":"q323"
 },
 {
 "q_en":"A thermo-priming treatment rewrites a transcriptome within hours. Your readouts are a weight and a pigment on day seventeen. What sits in that gap, and what does the far end look like for a farmer?",
@@ -11294,7 +11000,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q333"
+"id":"q324"
 },
 {
 "q_en":"BoPEP4 works through PEPR1-type receptor kinases, which switch on immunity. Would you expect that to cost the plant growth?",
@@ -11329,7 +11035,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q334"
+"id":"q325"
 },
 {
 "q_en":"Exogenous spraying of plant protectants is already a commercial business. What exists on the market today, and what in your approach is actually new?",
@@ -11364,7 +11070,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q335"
+"id":"q326"
 },
 {
 "q_en":"In soil at 300 mM, two of your three timings came out below the untreated control. Walk me through that.",
@@ -11399,7 +11105,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q336"
+"id":"q327"
 },
 {
 "q_en":"Nothing in your project measures ethylene. What is the longest chain you can actually defend, and where exactly does it break?",
@@ -11434,7 +11140,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q337"
+"id":"q328"
 },
 {
 "q_en":"Nine seedlings on one plate is n = 1, not n = 9. What happens to your p below 0.0001?",
@@ -11474,7 +11180,7 @@ var QUESTIONS = [
 ],
 "basis":"instructor's follow-up set, 30 Oct",
 "dom":"plant",
-"id":"q338"
+"id":"q329"
 },
 {
 "q_en":"Your clearest rescues are trehalose at 8.7-fold and a commercial peptide. Neither is yours. Why should I believe your proteins do anything?",
@@ -11514,7 +11220,7 @@ var QUESTIONS = [
 ],
 "basis":"instructor's follow-up set, 30 Oct",
 "dom":"plant",
-"id":"q339"
+"id":"q330"
 },
 {
 "q_en":"Your hydroponic data show the host culture alone stresses the plants, and you voided the ACC deaminase salinity run because culture volume was not standardised. How do you know any rescue is the protein and not the medium?",
@@ -11554,7 +11260,7 @@ var QUESTIONS = [
 ],
 "basis":"instructor's follow-up set, 30 Oct",
 "dom":"plant",
-"id":"q340"
+"id":"q331"
 },
 {
 "q_en":"Everything you applied to a plant was 0.22 micrometre filtered crude supernatant with no activity number behind the batch. So what was the dose?",
@@ -11594,7 +11300,7 @@ var QUESTIONS = [
 ],
 "basis":"instructor's follow-up set, 30 Oct",
 "dom":"plant",
-"id":"q341"
+"id":"q332"
 },
 {
 "q_en":"BoPep4 co-treatment harmed the plants even without salt, and your own page says the protectant brings harm when released without demand. Is that not an argument against a machine that produces continuously?",
@@ -11633,7 +11339,7 @@ var QUESTIONS = [
 ],
 "basis":"instructor's follow-up set, 30 Oct",
 "dom":"plant",
-"id":"q342"
+"id":"q333"
 },
 {
 "q_en":"ACC deaminase post-treatment falls below the heat control in both soil trials, and your two agar heat trials disagree on which timing is best. What do you actually claim about timing?",
@@ -11673,7 +11379,7 @@ var QUESTIONS = [
 ],
 "basis":"instructor's follow-up set, 30 Oct",
 "dom":"plant",
-"id":"q343"
+"id":"q334"
 },
 {
 "q_en":"How does your CcaSR light switch work, step by step?",
@@ -11706,7 +11412,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q344"
+"id":"q335"
 },
 {
 "q_en":"What are your three protectants, and what does each one do?",
@@ -11740,40 +11446,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q345"
-},
-{
-"q_en":"What are Level 0, Level 1 and Level 2 in your Golden Gate assembly?",
-"q_zh":"你們 Golden Gate 組裝裡的 Level 0、Level 1、Level 2 是什麼？",
-"type":"fact",
-"tier":"A",
-"pages":[
-"engineering",
-"parts"
-],
-"seat":"wet1",
-"backup":"wet2",
-"kw_en":[
-"L0 single part",
-"L1 transcription unit",
-"L2 four units"
-],
-"kw_zh":[
-"L0 單一零件",
-"L1 轉錄單元",
-"L2 四個單元"
-],
-"a_en":"Level 0 holds one part, for example a cargo with its signal peptide and His tag, cut with BbsI into pSTK-0, which is chloramphenicol resistant. Level 1 joins promoter, RBS, coding sequence and terminator into one transcription unit with BsaI, in ampicillin vectors. Level 2 joins four Level 1 units into one plasmid of about 10 kb: PCB production, CcaS-m3, CcaR, and the green-light cassette.",
-"a_zh":"Level 0 放單一零件，例如帶訊號肽與 His 標籤的目標蛋白，用 BbsI 接進有氯黴素抗性的 pSTK-0。Level 1 用 BsaI 把啟動子、RBS、編碼序列、終止子接成一個轉錄單元，放在安比西林抗性的載體。Level 2 把四個 Level 1 單元接成一個約 10 kb 的質體：PCB 生產、CcaS-m3、CcaR 與綠光卡匣。",
-"trap_en":"Mixing up which enzyme goes with which level, or forgetting the antibiotic markers differ.",
-"trap_zh":"搞混哪種酵素對應哪個層級，或忘記各層抗生素標記不同。",
-"basis":"like standard 'explain your assembly standard'",
-"dom":"wetlab",
-"deep":0,
-"star":0,
-"nodes":[],
-"figs":[],
-"id":"q346"
+"id":"q336"
 },
 {
 "q_en":"Which of your three proteins was secreted most, and by how much?",
@@ -11805,7 +11478,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q347"
+"id":"q337"
 },
 {
 "q_en":"What is PLP, and why do you add it to your activity assay?",
@@ -11838,7 +11511,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q348"
+"id":"q338"
 },
 {
 "q_en":"What did you find when you optimised electroporation?",
@@ -11871,7 +11544,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q349"
+"id":"q339"
 },
 {
 "q_en":"Why is CcaR on the Pveg promoter, and the photoreceptor on PliaG or PlepA?",
@@ -11905,7 +11578,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q350"
+"id":"q340"
 },
 {
 "q_en":"Why did you choose WB800 instead of wild-type 168?",
@@ -11938,7 +11611,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q351"
+"id":"q341"
 },
 {
 "q_en":"Why did you rebuild module 1 with a different promoter, RBS and terminator?",
@@ -11970,7 +11643,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q352"
+"id":"q342"
 },
 {
 "q_en":"Why did you build every cargo with a constitutive promoter before testing it under light?",
@@ -12003,7 +11676,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q353"
+"id":"q343"
 },
 {
 "q_en":"How do you know your Level 2 plasmid is correct? Is it sequenced?",
@@ -12036,7 +11709,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q354"
+"id":"q344"
 },
 {
 "q_en":"How did you screen colonies, and is a correct-sized band enough?",
@@ -12069,7 +11742,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q355"
+"id":"q345"
 },
 {
 "q_en":"How do you know your ELISA numbers are your protein and not background?",
@@ -12102,7 +11775,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q356"
+"id":"q346"
 },
 {
 "q_en":"How do you know the ACC deaminase is active, and not just present?",
@@ -12135,7 +11808,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q357"
+"id":"q347"
 },
 {
 "q_en":"How do you know the transformed Bacillus colonies carry your construct?",
@@ -12168,7 +11841,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q358"
+"id":"q348"
 },
 {
 "q_en":"How strong is your evidence that no cells get through to the shell side?",
@@ -12201,7 +11874,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q359"
+"id":"q349"
 },
 {
 "q_en":"Why did you not stay with MoClo 2.0?",
@@ -12233,7 +11906,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q360"
+"id":"q350"
 },
 {
 "q_en":"Which signal peptide is better, Csn or SamyQ?",
@@ -12266,7 +11939,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q361"
+"id":"q351"
 },
 {
 "q_en":"Why light as the switch? Why not a chemical inducer or a temperature-sensing promoter?",
@@ -12299,7 +11972,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q362"
+"id":"q352"
 },
 {
 "q_en":"Why Bacillus subtilis and not E. coli to make the protein?",
@@ -12333,7 +12006,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q363"
+"id":"q353"
 },
 {
 "q_en":"Why electroporation? Why not natural transformation?",
@@ -12365,7 +12038,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q364"
+"id":"q354"
 },
 {
 "q_en":"Why do you test culture supernatant and not purified protein?",
@@ -12398,7 +12071,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q365"
+"id":"q355"
 },
 {
 "q_en":"Can your system make proteins other than these three?",
@@ -12432,7 +12105,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q366"
+"id":"q356"
 },
 {
 "q_en":"Could you put BoPep4 or LEA14 under the light switch?",
@@ -12466,7 +12139,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q367"
+"id":"q357"
 },
 {
 "q_en":"Would your strain keep the plasmid on a farm, without antibiotic?",
@@ -12499,7 +12172,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q368"
+"id":"q358"
 },
 {
 "q_en":"How did low protein yield change what you did in the lab?",
@@ -12532,7 +12205,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q369"
+"id":"q359"
 },
 {
 "q_en":"How did protein design change what you built? For example, where does the His tag go on BoPep4?",
@@ -12566,7 +12239,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q370"
+"id":"q360"
 },
 {
 "q_en":"How did the reactor results change your wet-lab plan?",
@@ -12598,7 +12271,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q371"
+"id":"q361"
 },
 {
 "q_en":"Is your switch leaky? What does it do in the dark or under red light?",
@@ -12631,7 +12304,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q372"
+"id":"q362"
 },
 {
 "q_en":"Is your electroporation optimisation statistically solid?",
@@ -12664,7 +12337,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q373"
+"id":"q363"
 },
 {
 "q_en":"Your construct predicts an ACC deaminase of about 35 kDa. Why do some of your light-plate blots show a band just under 100?",
@@ -12698,7 +12371,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q374"
+"id":"q364"
 },
 {
 "q_en":"What is the next step for protein yield?",
@@ -12731,7 +12404,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q375"
+"id":"q365"
 },
 {
 "q_en":"What can a future iGEM team reuse from your wet-lab work?",
@@ -12765,7 +12438,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q376"
+"id":"q366"
 },
 {
 "q_en":"If you redid the cloning, what would you change first?",
@@ -12797,7 +12470,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q377"
+"id":"q367"
 },
 {
 "q_en":"Your Parts page calls AcdS 2.1 the same enzyme with its first fifteen codons recoded. Tell me precisely what that recoding changed, and what it could not change.",
@@ -12831,7 +12504,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q378"
+"id":"q368"
 },
 {
 "q_en":"Your ordered cassettes span codon adaptation index 0.59 to 0.81 against 0.85 to 0.87 for the wild types. You made them worse on that measure. Why?",
@@ -12864,7 +12537,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q379"
+"id":"q369"
 },
 {
 "q_en":"Why did you spend the optimisation on the first fifteen bases and the Shine-Dalgarno core, rather than on the whole gene?",
@@ -12897,7 +12570,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q380"
+"id":"q370"
 },
 {
 "q_en":"Name what synonymous recoding can break. Which of those did you screen for, and what did your screen miss?",
@@ -12930,7 +12603,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q381"
+"id":"q371"
 },
 {
 "q_en":"Suppose you ran your recoded ACC deaminase against the wild-type-codon version, same promoter, same signal peptide, same reactor. Predict the result, and tell me which way you would bet.",
@@ -12964,7 +12637,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q382"
+"id":"q372"
 },
 {
 "q_en":"Which of your sequence choices has ever been tested against its alternative in the lab?",
@@ -12998,7 +12671,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q383"
+"id":"q373"
 },
 {
 "q_en":"If you could only do one of three things to raise titre, codon optimisation, a stronger promoter or a better signal peptide, which one and why?",
@@ -13032,7 +12705,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q384"
+"id":"q374"
 },
 {
 "q_en":"Assume the codons are fine. What else is holding your yield down, and in what order would you bet on them?",
@@ -13066,7 +12739,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q385"
+"id":"q375"
 },
 {
 "q_en":"Your pages mix silent recoding with real amino-acid changes. Tell me which is which, and what evidence each kind owes us.",
@@ -13100,7 +12773,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q386"
+"id":"q376"
 },
 {
 "q_en":"Codon optimisation is a button on every synthesis vendor's website. What did yours add?",
@@ -13133,7 +12806,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q387"
+"id":"q377"
 },
 {
 "q_en":"Your Level 0 entry uses BbsI, Level 1 uses BsaI, and the Level 2 fusion into pSTK-EXP2 uses BsmBI. Walk me through why the hierarchy needs a different enzyme at each level, and what the recognition sites are doing to themselves as you go up.",
@@ -13167,7 +12840,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q388"
+"id":"q378"
 },
 {
 "q_en":"Your primer tails set four-base fusion sites: CTGA and GAGG at Level 0, and TATG, TGTC, ACAT, AGAG, ATGT at Level 1. What does a set like that have to satisfy, and what does it have to avoid?",
@@ -13200,7 +12873,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q389"
+"id":"q379"
 },
 {
 "q_en":"Your codon pipeline threw out any synonymous variant that introduced a BsaI, EcoRI, XbaI, SpeI, PstI, NotI or HindIII site, but you state it did not screen for BpiI or BsmBI. Those are the enzymes you assemble with at Level 0 and Level 2. What follows from that?",
@@ -13233,7 +12906,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q390"
+"id":"q380"
 },
 {
 "q_en":"On a Level 1 plate, how do you tell a correct assembly from an empty vector or a partial ligation, before you sequence anything?",
@@ -13266,7 +12939,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q391"
+"id":"q381"
 },
 {
 "q_en":"Three consecutive Level 2 Golden Gate rounds returned nothing with no design change between them. Then you swept the insert-to-vector ratio to 1:5 and 1:7 and both worked. Why would a molar excess of insert rescue a reaction where every end is already defined?",
@@ -13299,7 +12972,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q392"
+"id":"q382"
 },
 {
 "q_en":"You have a colony PCR band at the expected size. Be precise with me: what has that excluded, and what has it not?",
@@ -13333,7 +13006,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q393"
+"id":"q383"
 },
 {
 "q_en":"For the Level 2 you have three junction PCRs on three clones and a double digest that gave 10,293 base pairs with EcoRI and 7,543 with EcoRI plus BtsI. What would end-to-end sequencing add that those two checks cannot give you?",
@@ -13367,7 +13040,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q394"
+"id":"q384"
 },
 {
 "q_en":"Your Results construct table ticks a Sequenced column for both Level 2 devices, clone 2 and clone 1. Your Engineering page says no Level 2 construct has been sequenced end to end and the sequencing cell is empty for both. Which is it?",
@@ -13401,7 +13074,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q395"
+"id":"q385"
 },
 {
 "q_en":"A Sanger trace comes back clean for two hundred bases and then every position shows two peaks. What do you conclude, and what do you do next?",
@@ -13434,7 +13107,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q396"
+"id":"q386"
 },
 {
 "q_en":"Your double digest would catch a Level 2 that lost a whole module. What kind of rearrangement would it still miss, and how would you go after that?",
@@ -13467,7 +13140,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q397"
+"id":"q387"
 },
 {
 "q_en":"In your 116-hour run the culture plateaued near forty hours and grew again from about forty-seven. You explain that as the erythromycin degrading and cells losing the plasmid. How would you turn that explanation into a measurement?",
@@ -13501,7 +13174,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q398"
+"id":"q388"
 },
 {
 "q_en":"WB800 has eight extracellular proteases deleted. What does that buy you for a secreted product, what does it cost, and how far do your own data take the comparison with 168?",
@@ -13535,7 +13208,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q399"
+"id":"q389"
 },
 {
 "q_en":"Your own learn step says electroporating a Level 2 over ten kilobases was extremely difficult and that you should look at natural transformation instead. Take that seriously for me: what would that route actually require, and would you also move the circuit into the chromosome?",
@@ -13569,7 +13242,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q400"
+"id":"q390"
 },
 {
 "q_en":"You check every construct with SignalP before ordering it. What are the two things that check is actually for, and what does cleavage leave you with at the mature N-terminus?",
@@ -13603,7 +13276,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q401"
+"id":"q391"
 },
 {
 "q_en":"Asn23's free carboxylate is BoPep4's anchor, and you moved the His tag to the N-terminus for constructs ordered after sixteen August. Yet your variant panel is written as carrying a C-terminal tag. Where does that leave the molecule you actually built?",
@@ -13637,7 +13310,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q402"
+"id":"q392"
 },
 {
 "q_en":"Set the biology aside. Your assembly sits on the SubtiToolKit and on eleven earlier Registry parts. What in your cloning work is genuinely new, and what did you simply inherit?",
@@ -13671,7 +13344,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q403"
+"id":"q393"
 },
 {
 "q_en":"Take me through the phosphorelay itself. Where does the phosphate come from, where does it go, and what happens to it when you take the green light away?",
@@ -13706,7 +13379,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q404"
+"id":"q394"
 },
 {
 "q_en":"Suppose the circuit works tomorrow. What physically sets the floor and the ceiling of what you can get out of PcpcG2-veg?",
@@ -13741,7 +13414,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q405"
+"id":"q395"
 },
 {
 "q_en":"CcaS, CcaR and PcpcG2 are cyanobacterial. What did you have to change to run them in Bacillus subtilis, and what did you deliberately leave alone?",
@@ -13776,7 +13449,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q406"
+"id":"q396"
 },
 {
 "q_en":"Bacillus subtilis runs plenty of its own two-component systems. What stops one of its histidine kinases from phosphorylating CcaR, and how would you find out?",
@@ -13810,7 +13483,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q407"
+"id":"q397"
 },
 {
 "q_en":"Your sensor only works with the chromophore attached. How would you show that the CcaS-m3 in your cells is holoprotein and not apoprotein?",
@@ -13845,7 +13518,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q408"
+"id":"q398"
 },
 {
 "q_en":"If phycocyanobilin runs short in the cell, what happens to your switch? And why might it run short?",
@@ -13879,7 +13552,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q409"
+"id":"q399"
 },
 {
 "q_en":"You put CcaR on Pveg and CcaS-m3 on PliaG or PlepA, which are not the same strength. Why that way round, and what breaks if the ratio is wrong?",
@@ -13913,7 +13586,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q410"
+"id":"q400"
 },
 {
 "q_en":"Your device puts four transcription units on one plasmid, and you deliberately diversified the RBS and terminator in module one. What does a construct that size cost the host, and what in your own data speaks to it?",
@@ -13948,7 +13621,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q411"
+"id":"q401"
 },
 {
 "q_en":"Your light plate shines up through a two millilitre tube. The reactor is a stirred loop whose culture reaches OD600 of 3.8. What does green light actually do in there?",
@@ -13983,7 +13656,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q412"
+"id":"q402"
 },
 {
 "q_en":"CcaS and CcaR have been used by other teams and are published as a Bacillus toolkit. What did ReLEAF add beyond re-using them?",
@@ -14018,7 +13691,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q413"
+"id":"q403"
 },
 {
 "q_en":"Your whole project is light-controlled production. Tell me precisely what your green-versus-red data establish, and what they do not.",
@@ -14053,7 +13726,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q414"
+"id":"q404"
 },
 {
 "q_en":"Your constitutive blot puts ACC deaminase at about 37 kilodaltons, but the light-plate bands run between 63 and 100. Why, and how would you settle it?",
@@ -14088,7 +13761,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q415"
+"id":"q405"
 },
 {
 "q_en":"You built reporter cassettes so you could read the switch out quickly. What happened to them, and what did that cost you?",
@@ -14122,7 +13795,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q416"
+"id":"q406"
 },
 {
 "q_en":"Name the experiment that would turn your light response into a control signal, in enough detail that I could run it tomorrow.",
@@ -14157,7 +13830,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q417"
+"id":"q407"
 },
 {
 "q_en":"Your blots and your ELISA both read a whole culture at once. What could that miss entirely?",
@@ -14191,7 +13864,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q418"
+"id":"q408"
 },
 {
 "q_en":"Suppose you set up a Level 1 Golden Gate reaction and forgot to add the BsaI, but everything else went in and you plated it as usual. What would you expect on the plate and on the colony PCR gel, and why?",
@@ -14225,7 +13898,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q419"
+"id":"q409"
 },
 {
 "q_en":"Imagine a single extra base slipped into codon five of the SamyQ signal peptide during PCR. What would your anti-His blot and your Level 0 colony PCR each show, and which step in your workflow catches it?",
@@ -14259,7 +13932,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q420"
+"id":"q410"
 },
 {
 "q_en":"You run a Level 1 assembly with a pSTK-0C donor and a pSTK-1 destination, and by mistake you plate on chloramphenicol instead of ampicillin. What grows, and what will your screen tell you?",
@@ -14292,7 +13965,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q421"
+"id":"q411"
 },
 {
 "q_en":"Your no-DNA negative control plate comes up as a lawn. Give me the two most likely causes and the one experiment that tells them apart.",
@@ -14325,7 +13998,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q422"
+"id":"q412"
 },
 {
 "q_en":"Your light-plate blots put the ACC deaminase band near 70 kDa when the monomer is about 35, and you offer a homodimer as the explanation. What else could put a band there, and what would settle it?",
@@ -14359,7 +14032,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q423"
+"id":"q413"
 },
 {
 "q_en":"Suppose you repeat the August fractionation and this time the ACC deaminase sits in the pellet lanes with a blank supernatant. What are the two most likely causes, and how would you tell which it is?",
@@ -14393,7 +14066,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q424"
+"id":"q414"
 },
 {
 "q_en":"Your His-tag ELISA standard curve runs from 3 down to 0.093 µg/mL, and you report ACC deaminase at 13.5 to 19.1. What is wrong with that number, and what would you do to the sample?",
@@ -14426,7 +14099,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q425"
+"id":"q415"
 },
 {
 "q_en":"Your six light arms on the nineteenth of September all grow between nought point two eight and nought point three two per hour, and you read that as no growth penalty. Estimate the burden you would expect from carrying the Level 2 device, and tell me whether that experiment could have seen it.",
@@ -14460,7 +14133,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q426"
+"id":"q416"
 },
 {
 "q_en":"On the His-tag ELISA your untransformed WB800 control reads about five micrograms per millilitre, the same range as four of your six constructs. Reason out what is producing that, and what you would do about it.",
@@ -14493,7 +14166,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q427"
+"id":"q417"
 },
 {
 "q_en":"You ran green and red at three intensities and the protein did not track intensity. Leaving aside the loading control and the plasmid-free lane you already name, what arms is that experiment still missing?",
@@ -14527,7 +14200,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q428"
+"id":"q418"
 },
 {
 "q_en":"Take a cysteine-rich plant defensin with four disulfide bonds and put it through your own route, SamyQ and Bacillus subtilis into the supernatant. What breaks first?",
@@ -14561,7 +14234,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q429"
+"id":"q419"
 },
 {
 "q_en":"Your fresh-culture arm gained signal from two to eight hours, but the arm you grew overnight first was strong at three and six hours and weaker at eight. Reason that out for me.",
@@ -14595,7 +14268,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q430"
+"id":"q420"
 },
 {
 "q_en":"Your reactor supernatant holds three point four to six point five micrograms per millilitre of ACC deaminase. Roughly how many molecules has each cell had to make to get there?",
@@ -14629,7 +14302,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q431"
+"id":"q421"
 },
 {
 "q_en":"The Level 2 reaction gives no colonies at all, three rounds running. What are the two most likely causes, and the one experiment that separates them?",
@@ -14663,7 +14336,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q432"
+"id":"q422"
 },
 {
 "q_en":"Suppose you had to move one of these inserts by classical single-enzyme restriction and ligation, and you forgot to dephosphorylate the cut vector. What would the plate look like, and why does your Golden Gate workflow not need that step?",
@@ -14696,7 +14369,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q433"
+"id":"q423"
 },
 {
 "q_en":"Why optogenetics at all? Is the light control in your system necessary — you could have used constitutive expression instead.",
@@ -14737,7 +14410,7 @@ var QUESTIONS = [
 ],
 "basis":"instructor's priority set, 30 Oct read-through of Results, Hardware and Plants",
 "dom":"wetlab",
-"id":"q434"
+"id":"q424"
 },
 {
 "q_en":"Why do you think AmilCP failed? The culture never changed colour at all.",
@@ -14774,7 +14447,7 @@ var QUESTIONS = [
 ],
 "basis":"instructor's priority set, 30 Oct read-through of Results, Hardware and Plants",
 "dom":"wetlab",
-"id":"q435"
+"id":"q425"
 },
 {
 "q_en":"Why did you choose these three protectants — ACC deaminase, BoPep4 and LEA14?",
@@ -14814,7 +14487,7 @@ var QUESTIONS = [
 ],
 "basis":"instructor's priority set, 30 Oct read-through of Results, Hardware and Plants",
 "dom":"wetlab",
-"id":"q436"
+"id":"q426"
 },
 {
 "q_en":"You used codon optimisation to make protectant synthesis more efficient. What did you observe in your results, and what do you conclude?",
@@ -14852,7 +14525,7 @@ var QUESTIONS = [
 ],
 "basis":"instructor's priority set, 30 Oct read-through of Results, Hardware and Plants",
 "dom":"wetlab",
-"id":"q437"
+"id":"q427"
 },
 {
 "q_en":"SamyQ with PLP gives 2.19 times the net product of Csn with PLP. Is that secretion, expression, or folding?",
@@ -14890,7 +14563,7 @@ var QUESTIONS = [
 ],
 "basis":"instructor's follow-up set, 30 Oct",
 "dom":"wetlab",
-"id":"q438"
+"id":"q428"
 },
 {
 "q_en":"Your short-term ELISA baseline before any light is already 3.0 micrograms per millilitre against 1.3 for the plasmid-free control. So the circuit leaks in the dark. How much, and does it matter on a farm?",
@@ -14928,7 +14601,7 @@ var QUESTIONS = [
 ],
 "basis":"instructor's follow-up set, 30 Oct",
 "dom":"wetlab",
-"id":"q439"
+"id":"q429"
 },
 {
 "q_en":"Your light-plate data is n = 2 with no statistics. What is the smallest experiment that would let you say green controls ACC deaminase and mean it?",
@@ -14966,7 +14639,7 @@ var QUESTIONS = [
 ],
 "basis":"instructor's follow-up set, 30 Oct",
 "dom":"wetlab",
-"id":"q440"
+"id":"q430"
 },
 {
 "q_en":"How many parts did you put on the Registry, and how are they organised?",
@@ -14998,7 +14671,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q441"
+"id":"q431"
 },
 {
 "q_en":"Which of your parts are you proudest of, and why that one?",
@@ -15031,7 +14704,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q442"
+"id":"q432"
 },
 {
 "q_en":"Two of your parts have exactly the same title. Did you upload the same thing twice?",
@@ -15063,7 +14736,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q443"
+"id":"q433"
 },
 {
 "q_en":"Five of your published parts have no documentation at all. Why those five?",
@@ -15095,7 +14768,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q444"
+"id":"q434"
 },
 {
 "q_en":"Walk me up your assembly levels. What is the difference between a Level 1 cassette and a Level 2 system?",
@@ -15128,7 +14801,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q445"
+"id":"q435"
 },
 {
 "q_en":"Fourteen of the parts in your constructs are not yours. What did you actually add?",
@@ -15161,40 +14834,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q446"
-},
-{
-"q_en":"Who wrote your part documentation?",
-"q_zh":"你們的 part 文件是誰寫的？",
-"type":"fact",
-"tier":"B",
-"pages":[
-"parts",
-"team"
-],
-"seat":"wet1",
-"backup":"ihp",
-"kw_en":[
-"one author",
-"17 and 18 October",
-"visible in the edit record"
-],
-"kw_zh":[
-"一位作者",
-"10 月 17、18 日",
-"編輯紀錄上看得到"
-],
-"a_en":"I did, all forty-one pages, mostly across the seventeenth and eighteenth of October. That is in the Registry's own edit record so there is no point saying otherwise, and it is also the honest answer to why five pages are empty. The science on them is the whole team's; the writing was two days and one person.",
-"a_zh":"我寫的，四十一頁全部，主要集中在十月十七和十八日。這在 Registry 自己的編輯紀錄上就看得到，沒有必要講別的；這也誠實地回答了為什麼有五頁是空的。頁面上的科學是整個團隊的，但寫作是兩天、一個人。",
-"trap_en":"Spreading the credit vaguely. The record is public and checking it takes one click.",
-"trap_zh":"含糊地把功勞分給大家。紀錄是公開的，點一下就查得到。",
-"basis":"asked when a collection looks uneven",
-"dom":"registry",
-"deep":0,
-"star":0,
-"nodes":[],
-"figs":[],
-"id":"q447"
+"id":"q436"
 },
 {
 "q_en":"If another team wanted to build on your work tomorrow, which part would you tell them to take?",
@@ -15227,7 +14867,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q448"
+"id":"q437"
 },
 {
 "q_en":"Your cassette page says the insert is 906 base pairs. The deposited sequence is 712. Which is right?",
@@ -15260,7 +14900,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q449"
+"id":"q438"
 },
 {
 "q_en":"This page says the expected band is 1145 base pairs, and the caption underneath says 7767. Same gel.",
@@ -15293,7 +14933,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q450"
+"id":"q439"
 },
 {
 "q_en":"Two of your parts state the same insert length, 1122 base pairs, but they carry different signal peptides. How can both be right?",
@@ -15325,7 +14965,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q451"
+"id":"q440"
 },
 {
 "q_en":"I pulled the sequence of this cassette. There is an sfGFP coding sequence in the middle of it. Why?",
@@ -15358,7 +14998,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q452"
+"id":"q441"
 },
 {
 "q_en":"This is registered as a coding sequence and it has neither a start nor a stop codon. Explain.",
@@ -15390,7 +15030,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q453"
+"id":"q442"
 },
 {
 "q_en":"SamyQ is a registered part on your pages. Csn is not. Where is Csn?",
@@ -15422,7 +15062,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q454"
+"id":"q443"
 },
 {
 "q_en":"One of your Csn fusions starts ATG-ATG. Why are there two start codons?",
@@ -15454,7 +15094,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q455"
+"id":"q444"
 },
 {
 "q_en":"How do you know your Level 2 assembly is actually correct?",
@@ -15487,7 +15127,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q456"
+"id":"q445"
 },
 {
 "q_en":"If I gave you an hour before this session, what would you fix on the Registry first?",
@@ -15519,7 +15159,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q457"
+"id":"q446"
 },
 {
 "q_en":"Your own simulation says a C-terminal His tag abolishes the contact BoPep4 works through. Every BoPep4 part you registered has one.",
@@ -15552,7 +15192,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q458"
+"id":"q447"
 },
 {
 "q_en":"Your page says the His tag is fused N-terminally and the description says C-terminus. Which is it?",
@@ -15584,7 +15224,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q459"
+"id":"q448"
 },
 {
 "q_en":"You built a negative control that was supposed to fail. What happened?",
@@ -15617,7 +15257,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q460"
+"id":"q449"
 },
 {
 "q_en":"Your codon figure stars a sequence. Is that the sequence you actually ordered?",
@@ -15650,7 +15290,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q461"
+"id":"q450"
 },
 {
 "q_en":"Your design page says this recoding ranks one out of forty-three thousand. Is that a result?",
@@ -15683,7 +15323,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q462"
+"id":"q451"
 },
 {
 "q_en":"Did any of your modelling change what you actually built?",
@@ -15717,7 +15357,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q463"
+"id":"q452"
 },
 {
 "q_en":"There are unfilled square brackets on your pages. What are those?",
@@ -15749,7 +15389,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q464"
+"id":"q453"
 },
 {
 "q_en":"Your strain is written in square brackets on twenty-four pages. Do you know which strain you used?",
@@ -15782,7 +15422,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q465"
+"id":"q454"
 },
 {
 "q_en":"Three of your reference links end in a chatgpt tracking tag. Do you want to explain that?",
@@ -15815,7 +15455,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q466"
+"id":"q455"
 },
 {
 "q_en":"You use codenames like ABDI and ABDQ in your figure captions. What are they?",
@@ -15848,7 +15488,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q467"
+"id":"q456"
 },
 {
 "q_en":"Could another team reproduce your assembly from the Registry alone?",
@@ -15882,7 +15522,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q468"
+"id":"q457"
 },
 {
 "q_en":"You wrote two collection documents and never created them on the Registry. Why not?",
@@ -15915,7 +15555,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q469"
+"id":"q458"
 },
 {
 "q_en":"What does your Registry entry give the community that your wiki does not?",
@@ -15948,7 +15588,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q470"
+"id":"q459"
 },
 {
 "q_en":"Your part pages carry claims with no figure, no citation and no cross-reference. Which ones?",
@@ -15980,7 +15620,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q471"
+"id":"q460"
 },
 {
 "q_en":"You say the output cassette is replaceable. Have you ever replaced it?",
@@ -16013,7 +15653,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q472"
+"id":"q461"
 },
 {
 "q_en":"A judge tells you your Registry upload is very impressive. What do you say next?",
@@ -16045,7 +15685,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q473"
+"id":"q462"
 },
 {
 "q_en":"You can very clearly see a double band on your Western blots against the His tag. Could you comment on that?",
@@ -16079,7 +15719,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q474"
+"id":"q463"
 },
 {
 "q_en":"Your blot says the band is at seventy-five kilodaltons and your other pages say this protein is thirty-seven. Explain.",
@@ -16112,7 +15752,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q475"
+"id":"q464"
 },
 {
 "q_en":"How do you know the band on that blot is your protein and not something the host makes?",
@@ -16145,7 +15785,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q476"
+"id":"q465"
 },
 {
 "q_en":"Two of your part pages describe the same two blots and reach opposite conclusions. Which caption do I believe?",
@@ -16178,7 +15818,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q477"
+"id":"q466"
 },
 {
 "q_en":"You have one purification panel. What did it actually tell you?",
@@ -16211,7 +15851,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q478"
+"id":"q467"
 },
 {
 "q_en":"Your colony PCR has an extra bright band at 250 base pairs. What is it?",
@@ -16244,7 +15884,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q479"
+"id":"q468"
 },
 {
 "q_en":"Your fractionation blot has two lanes both labelled S. What is the difference between them?",
@@ -16277,7 +15917,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q480"
+"id":"q469"
 },
 {
 "q_en":"On your flagship light blot, what did the red control lane do at eight hours?",
@@ -16310,7 +15950,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q481"
+"id":"q470"
 },
 {
 "q_en":"This gel screened ten colonies and your next figure says clone fourteen. Where did clone fourteen come from?",
@@ -16344,7 +15984,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q482"
+"id":"q471"
 },
 {
 "q_en":"Which construct's supernatant actually went on the plants?",
@@ -16377,7 +16017,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q483"
+"id":"q472"
 },
 {
 "q_en":"Your Application section says this part helped plants under salinity. Did you put this part on a plant?",
@@ -16410,7 +16050,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q484"
+"id":"q473"
 },
 {
 "q_en":"Your vehicle control suppresses plant growth by a factor of ten. What does that do to your protectant results?",
@@ -16442,7 +16082,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q485"
+"id":"q474"
 },
 {
 "q_en":"Your heat-stressed untreated plate is marked contaminated on the figure itself. What is the claim then?",
@@ -16475,7 +16115,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q486"
+"id":"q475"
 },
 {
 "q_en":"Your BoPep4 helped plants at one dilution out of four. Is that a result?",
@@ -16508,7 +16148,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q487"
+"id":"q476"
 },
 {
 "q_en":"Only six of your forty-one parts have a characterisation section. Why so few?",
@@ -16541,7 +16181,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q488"
+"id":"q477"
 },
 {
 "q_en":"Your DNPH assay shows a fourteen-fold light response at thirteen hours and the opposite at sixteen. What happened?",
@@ -16574,7 +16214,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q489"
+"id":"q478"
 },
 {
 "q_en":"What is the single piece of evidence on your Registry you would stake the project on?",
@@ -16607,7 +16247,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q490"
+"id":"q479"
 },
 {
 "q_en":"What is the virtual model in your digital twin? If I unplug the sensors, what does it still know?",
@@ -16640,7 +16280,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q491"
+"id":"q480"
 },
 {
 "q_en":"What does your fault-detection autoencoder do, and how early did it catch a problem?",
@@ -16673,7 +16313,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q492"
+"id":"q481"
 },
 {
 "q_en":"How do you know your forecast is better than just assuming nothing changes?",
@@ -16706,7 +16346,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q493"
+"id":"q482"
 },
 {
 "q_en":"You say you pre-registered a prediction. What exactly did you register, and did it pass?",
@@ -16739,7 +16379,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q494"
+"id":"q483"
 },
 {
 "q_en":"Why does your autoencoder have two separate axes?",
@@ -16771,7 +16411,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q495"
+"id":"q484"
 },
 {
 "q_en":"Why did you choose a Kalman filter instead of a simple fitted curve or a bigger model?",
@@ -16803,7 +16443,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q496"
+"id":"q485"
 },
 {
 "q_en":"Why build your own twin instead of using commercial bioprocess software?",
@@ -16835,7 +16475,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q497"
+"id":"q486"
 },
 {
 "q_en":"Would your digital twin work on a different organism or a bigger reactor?",
@@ -16868,7 +16508,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q498"
+"id":"q487"
 },
 {
 "q_en":"How did the light plate experiment change what your twin does?",
@@ -16901,7 +16541,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q499"
+"id":"q488"
 },
 {
 "q_en":"What can your twin not do yet?",
@@ -16934,7 +16574,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q500"
+"id":"q489"
 },
 {
 "q_en":"How accurate is your leaf sensor?",
@@ -16967,7 +16607,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q501"
+"id":"q490"
 },
 {
 "q_en":"Could another team actually run your software?",
@@ -16999,7 +16639,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q502"
+"id":"q491"
 },
 {
 "q_en":"How did you build your stress index, and how do you know it works?",
@@ -17031,7 +16671,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q503"
+"id":"q492"
 },
 {
 "q_en":"Your Math Model and Geospatial Analysis disagree on payback. Which one is right?",
@@ -17064,7 +16704,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q504"
+"id":"q493"
 },
 {
 "q_en":"What is your climate volatility index and how was it built?",
@@ -17096,7 +16736,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q505"
+"id":"q494"
 },
 {
 "q_en":"How did the geospatial work change your project?",
@@ -17130,7 +16770,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q506"
+"id":"q495"
 },
 {
 "q_en":"Where would you deploy ReLEAF first?",
@@ -17163,7 +16803,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q507"
+"id":"q496"
 },
 {
 "q_en":"Does the night-time heat finding, 10 percent yield loss per degree, apply to Taiwan?",
@@ -17195,7 +16835,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q508"
+"id":"q497"
 },
 {
 "q_en":"How much protectant does one hectare need, and what does the equipment cost?",
@@ -17227,7 +16867,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q509"
+"id":"q498"
 },
 {
 "q_en":"Why did you anchor the dose on the experiment that worked rather than the smallest effective dose?",
@@ -17259,7 +16899,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q510"
+"id":"q499"
 },
 {
 "q_en":"How long does the enzyme last after the reactor makes it?",
@@ -17291,7 +16931,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q511"
+"id":"q500"
 },
 {
 "q_en":"How did wet lab data change the math model?",
@@ -17324,7 +16964,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q512"
+"id":"q501"
 },
 {
 "q_en":"Can a single farm own a ReLEAF reactor?",
@@ -17357,7 +16997,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q513"
+"id":"q502"
 },
 {
 "q_en":"What happens if the forecast only gives you three days notice?",
@@ -17389,7 +17029,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q514"
+"id":"q503"
 },
 {
 "q_en":"What did molecular dynamics tell you about your purification tag?",
@@ -17422,7 +17062,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q515"
+"id":"q504"
 },
 {
 "q_en":"How reliable is your molecular dynamics? Did you run replicates?",
@@ -17455,7 +17095,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q516"
+"id":"q505"
 },
 {
 "q_en":"Why did you pick the 9-23 version of BoPEP4 as the production peptide?",
@@ -17489,7 +17129,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q517"
+"id":"q506"
 },
 {
 "q_en":"Why didn't you just rank your peptide designs by docking score?",
@@ -17522,7 +17162,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q518"
+"id":"q507"
 },
 {
 "q_en":"Why didn't you engineer a better ACC deaminase?",
@@ -17555,7 +17195,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q519"
+"id":"q508"
 },
 {
 "q_en":"What failed in your protein design work?",
@@ -17588,7 +17228,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q520"
+"id":"q509"
 },
 {
 "q_en":"Does a good docking score mean the peptide will protect the plant?",
@@ -17621,7 +17261,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q521"
+"id":"q510"
 },
 {
 "q_en":"What from your protein design was actually validated in the lab, and what only in silico?",
@@ -17656,7 +17296,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q522"
+"id":"q511"
 },
 {
 "q_en":"How did the dry lab change which protectant constructs the wet lab built?",
@@ -17690,7 +17330,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q523"
+"id":"q512"
 },
 {
 "q_en":"What are the next experiments for your protein design?",
@@ -17723,7 +17363,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q524"
+"id":"q513"
 },
 {
 "q_en":"Can your protein design pipeline be applied to other proteins?",
@@ -17756,7 +17396,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q525"
+"id":"q514"
 },
 {
 "q_en":"In one sentence, how does your protein design pipeline work?",
@@ -17789,7 +17429,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q526"
+"id":"q515"
 },
 {
 "q_en":"Your truncation series was ranked on HADDOCK score. Take me inside that number: what is it a sum of, and what does it leave out that matters for a flexible peptide?",
@@ -17822,7 +17462,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q527"
+"id":"q516"
 },
 {
 "q_en":"Your methodology page says nine two-body docking runs on BoPEP4 produced nothing usable. What went wrong, and what did you do instead?",
@@ -17855,7 +17495,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q528"
+"id":"q517"
 },
 {
 "q_en":"Your cross-run table reports backbone RMSD. What is that actually tracking, and why do you refuse to rank constructs on it?",
@@ -17888,7 +17528,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q529"
+"id":"q518"
 },
 {
 "q_en":"Thirty nanoseconds, one seed per system. Put a number on the gap between that and the process you care about, and tell me what the single seed costs you.",
@@ -17921,7 +17561,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q530"
+"id":"q519"
 },
 {
 "q_en":"You report AlphaFold confidence for these complexes. What did the 0.73 against 0.74 result tell you, and what did you change because of it?",
@@ -17954,7 +17594,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q531"
+"id":"q520"
 },
 {
 "q_en":"You cut eight residues off the front for the 9-23 candidate. Tell me what each part of that segment was doing, and what your own MD says about cutting at nine.",
@@ -17988,7 +17628,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q532"
+"id":"q521"
 },
 {
 "q_en":"Suppose I grant you the structural work. Design me the bench experiment that decides whether that short motif is sufficient, and name what makes it interpretable.",
@@ -18022,7 +17662,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q533"
+"id":"q522"
 },
 {
 "q_en":"Six histidines on a peptide this short. Beyond the anchor contact you have told me about, what is that tag doing?",
@@ -18056,7 +17696,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q534"
+"id":"q523"
 },
 {
 "q_en":"Of everything on your protein design pages, what has an experimental counterpart?",
@@ -18091,7 +17731,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q535"
+"id":"q524"
 },
 {
 "q_en":"AlphaFold and HADDOCK are free, and every team in your village can run them. What in this work is yours?",
@@ -18124,7 +17764,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q536"
+"id":"q525"
 },
 {
 "q_en":"Write down the state vector of your Kalman filter for me, and tell me what the process noise term and the measurement noise term mean physically in your bioreactor.",
@@ -18157,7 +17797,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q537"
+"id":"q526"
 },
 {
 "q_en":"Bacterial growth is exponential and then saturates, which is not linear, and your noise is not obviously Gaussian. Why is a linear filter defensible here at all, and what happens when your covariance settings are wrong for a run?",
@@ -18189,7 +17829,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q538"
+"id":"q527"
 },
 {
 "q_en":"Given the sensors you actually have working on the bioreactor, which states are genuinely inferable and which are not? And when a reading fails its own checks mid-run, what does the filter actually receive?",
@@ -18222,7 +17862,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q539"
+"id":"q528"
 },
 {
 "q_en":"Your forecast beats persistence, which is a very low bar. What was it tested on that it had not seen, how is the error measured, and did you ever compare it against a fitted growth curve?",
@@ -18254,7 +17894,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q540"
+"id":"q529"
 },
 {
 "q_en":"You registered a growth forecast before the run instead of fitting it afterwards. What did that commit you to, and what exactly passed?",
@@ -18286,7 +17926,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q541"
+"id":"q530"
 },
 {
 "q_en":"Your autoencoder learns what a healthy run looks like and flags departures. So what does it do on a fault it has never seen, what is your false positive rate, and how much of that 26.7 hours did the network actually buy you?",
@@ -18319,7 +17959,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q542"
+"id":"q531"
 },
 {
 "q_en":"Take me from a milliunit per millilitre on a plate assay to litres per hectare in a field, step by step, and tell me which step carries the most uncertainty.",
@@ -18353,7 +17993,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q543"
+"id":"q532"
 },
 {
 "q_en":"You give me a payback period as a single number. Why is a point estimate the wrong way to report that, and if you ran a sensitivity analysis, what would it put first?",
@@ -18387,7 +18027,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q544"
+"id":"q533"
 },
 {
 "q_en":"What is the spatial resolution of your input layers against the size of a real Taiwanese farm, and how does an index built from that relate to what one plant in one field actually experiences?",
@@ -18421,7 +18061,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q545"
+"id":"q534"
 },
 {
 "q_en":"Neighbouring counties share the same typhoon and the same light deficit. How many independent observations does your stress index really have, and would your deployment picture survive a different weighting?",
@@ -18454,7 +18094,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q546"
+"id":"q535"
 },
 {
 "q_en":"Your Math Model and your Geospatial Analysis put a completely different price on a stressed hectare. How far apart are they, and which number do you stand behind?",
@@ -18487,7 +18127,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q547"
+"id":"q536"
 },
 {
 "q_en":"Somebody on your team has quoted holding 86.3 percent and 25.3 percent of unstressed performance at two salt levels. Show me the measurement those came from.",
@@ -18521,7 +18161,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q548"
+"id":"q537"
 },
 {
 "q_en":"Digital twins, Kalman filters and reconstruction-error fault detection are routine in industrial bioprocess. What in your implementation is actually new, and what is honestly just a re-implementation?",
@@ -18555,7 +18195,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q549"
+"id":"q538"
 },
 {
 "q_en":"Suppose next year's second crop is hit by a record heat wave rather than by wind or badly timed water. What does your chain predict happens, and why?",
@@ -18589,7 +18229,7 @@ var QUESTIONS = [
 "star":0,
 "nodes":[],
 "figs":[],
-"id":"q550"
+"id":"q539"
 },
 {
 "q_en":"Your forecast beats persistence by 41 percent at two hours, but you say most of the run sits above the range where OD is linear in cell count. So you are forecasting the photometer reading. Why is that useful?",
@@ -18628,7 +18268,7 @@ var QUESTIONS = [
 ],
 "basis":"instructor's follow-up set, 30 Oct",
 "dom":"drylab",
-"id":"q551"
+"id":"q540"
 },
 {
 "q_en":"You registered three endpoints on 1 October. One passed and two were not scored. Is reporting the one that passed not exactly what pre-registration is supposed to prevent?",
@@ -18666,7 +18306,7 @@ var QUESTIONS = [
 ],
 "basis":"instructor's follow-up set, 30 Oct",
 "dom":"drylab",
-"id":"q552"
+"id":"q541"
 },
 {
 "q_en":"Your model says heat adds nothing to the second-crop stress index once wind, light and badly timed water are in. That does not support your wet lab's heat programme. Who is right?",
@@ -18705,6 +18345,6 @@ var QUESTIONS = [
 ],
 "basis":"instructor's follow-up set, 30 Oct",
 "dom":"drylab",
-"id":"q553"
+"id":"q542"
 }
 ];

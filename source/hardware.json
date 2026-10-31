@@ -1125,33 +1125,7 @@
    "trap_zh": "把機櫃說成已測試的原型。我們實際跑的都是在培養箱裡的實驗台。",
    "basis": "like NUS 2021: does it scale beyond a flask"
   },
-  {
-   "q_en": "What wavelength does your photometer use, and why that one?",
-   "q_zh": "你們的光度計用什麼波長？為什麼選它？",
-   "type": "fact",
-   "tier": "A",
-   "pages": [
-    "hardware-photometer"
-   ],
-   "seat": "hw",
-   "backup": "dry",
-   "kw_en": [
-    "600 nm amber",
-    "standard OD600",
-    "between CcaS peaks"
-   ],
-   "kw_zh": [
-    "600 nm 琥珀光",
-    "標準 OD600",
-    "位於 CcaS 兩峰之間"
-   ],
-   "a_en": "600 nm, from an amber LED through a 2 mm flow cuvette. Software scales the reading by five to the standard 1 cm path. We chose it for three reasons: OD600 is the standard so readings compare with the BioDrop, at 600 nm the culture dims the beam mainly by scattering, and amber sits between the green and red peaks of CcaS/CcaR, so the photometer does not switch production on or off.",
-   "a_zh": "600 nm，用琥珀色 LED 穿過 2 mm 的流動比色槽。軟體把讀值乘五，換算成標準 1 cm 光徑。選它有三個理由：OD600 是標準，所以能和 BioDrop 比較；600 nm 下菌液主要靠散射使光變弱；琥珀光位於 CcaS/CcaR 的綠光與紅光峰之間，所以光度計不會誤開關生產。",
-   "trap_en": "Mixing it up with the 520 or 535 nm green that drives the circuit. The photometer light is deliberately a different color.",
-   "trap_zh": "把它和啟動電路的 520 或 535 nm 綠光搞混。光度計的光刻意選不同顏色。",
-   "basis": "like INSA 2022: why that sensor"
-  },
-  {
+    {
    "q_en": "How many bioreactor runs have you done, and what was the longest?",
    "q_zh": "你們跑了幾次生物反應器？最長多久？",
    "type": "fact",
@@ -1392,34 +1366,7 @@
    "trap_zh": "說『零細菌通過』。結論只是在測試條件下沒有菌落；孔徑也會讓囊泡通過。",
    "basis": "like Munich 2025: replicates?"
   },
-  {
-   "q_en": "How do you know your photometer is accurate?",
-   "q_zh": "你們怎麼知道光度計是準的？",
-   "type": "validate",
-   "tier": "A",
-   "pages": [
-    "hardware-photometer",
-    "measurement"
-   ],
-   "seat": "hw",
-   "backup": "dry",
-   "kw_en": [
-    "TiO2 median 3.8%",
-    "silica slope 1.001",
-    "no cells tested"
-   ],
-   "kw_zh": [
-    "TiO2 中位差 3.8%",
-    "矽膠斜率 1.001",
-    "沒用細胞測"
-   ],
-   "a_en": "We checked it against the BioDrop with two standards. On titanium dioxide in August, the raw output was a median 3.8% from the BioDrop, with no transform applied. On silica in October the Pro ran parallel to the BioDrop, slope 1.001, but about 0.12 OD low. The limits: both are particle standards, not bacteria at known densities, and above about OD 2.5 the Pro reads low.",
-   "a_zh": "我們用兩種標準品和 BioDrop 對照。8 月用二氧化鈦，未做任何轉換，原始輸出與 BioDrop 的中位數差距 3.8%。10 月用矽膠珠，Pro 與 BioDrop 平行，斜率 1.001，但整體約低 0.12 OD。限制是：兩者都是顆粒標準品，不是已知密度的細菌，而且 OD 2.5 以上 Pro 讀值偏低。",
-   "trap_en": "Quoting a different slope. The wiki shows 0.942, 1.018 and 0.995 on other pages; know which test each belongs to.",
-   "trap_zh": "引用不同的斜率。wiki 其他頁還有 0.942、1.018、0.995；要知道各屬於哪個實驗。",
-   "basis": "like UPenn 2021: validate against a commercial instrument"
-  },
-  {
+    {
    "q_en": "How do you know your pressure and flow readings can be trusted?",
    "q_zh": "你們怎麼知道壓力與流量讀值可信？",
    "type": "validate",
@@ -1717,33 +1664,7 @@
    "trap_zh": "把機櫃『可控溫』說成測試過的功能。控溫容器是設計，探頭也沒在運作。",
    "basis": "like Cambridge 2024: separate effects from heat"
   },
-  {
-   "q_en": "How did outside experts change your hardware?",
-   "q_zh": "外部專家如何改變了你們的硬體？",
-   "type": "integrate",
-   "tier": "A",
-   "pages": [
-    "hardware-bioreactor"
-   ],
-   "seat": "hw",
-   "backup": "ihp",
-   "kw_en": [
-    "Chang: pinch valve",
-    "Owl Lab: STS3215 and mainboard",
-    "mainboard fixed pressure noise"
-   ],
-   "kw_zh": [
-    "張教授：夾管閥",
-    "Owl Lab：STS3215 與主板",
-    "主板解決壓力不穩"
-   ],
-   "a_en": "Two reviewers changed it most. Prof. Chang found nothing drove product across the membrane, so we added the pinch valve, and he said to watch flow and pressure for fouling, so we added the transducers and flow meter. Teacher He at Owl Lab found the servo driver unreliable and the power supply too weak, so we moved to STS3215 servos and then his single mainboard, which also ended our unstable pressure readings.",
-   "a_zh": "兩位審查者的影響最大。張教授發現沒有東西推動產物過膜，所以我們加了夾管閥；他也說要監看流量與壓力以判斷污垢，所以我們加了壓力傳送器與流量計。Owl Lab 的何老師發現伺服驅動板不可靠、電源太弱，所以我們換成 STS3215 伺服，再採用他設計的單一主板，這也解決了壓力讀值不穩的問題。",
-   "trap_en": "Listing feedback without saying what changed on the rig. Each point should end on the part we built.",
-   "trap_zh": "只列意見卻沒說裝置改了什麼。每一點都應該以我們做出的零件作結。",
-   "basis": "like LCG 2024 / Cambridge 2024: expert changed a requirement"
-  },
-  {
+    {
    "q_en": "How did what you learned in the bioreactor change the photometer?",
    "q_zh": "你們在生物反應器學到的東西如何改變了光度計？",
    "type": "integrate",

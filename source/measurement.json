@@ -1244,34 +1244,7 @@
    "trap_zh": "說參考通道什麼都能修；在 Pro 上兩條光路的反應並不一致。",
    "basis": "Hardware 2021 UPenn: sensor drift"
   },
-  {
-   "q_en": "How do you know your photometer is accurate?",
-   "q_zh": "你們怎麼知道光度計是準的？",
-   "type": "validate",
-   "tier": "A",
-   "pages": [
-    "measurement",
-    "hardware-photometer"
-   ],
-   "seat": "hw",
-   "backup": "dry",
-   "kw_en": [
-    "weighed mass standards",
-    "3.8% from BioDrop",
-    "constant 0.12 OD offset"
-   ],
-   "kw_zh": [
-    "稱重質量標準",
-    "與 BioDrop 差 3.8%",
-    "固定低 0.12 OD"
-   ],
-   "a_en": "We judged it against mass, not only against another instrument. On 23 August we added titanium dioxide by weight, and raw Pro output agreed with the BioDrop to a median 3.8 percent, R squared 0.9999. On 10 October we repeated with 1 micron silica. The honest limit: on silica the Pro ran a constant 0.12 OD below the BioDrop, and neither standard is a living cell.",
-   "a_zh": "我們用質量來評斷，不只是跟另一台儀器比。8 月 23 日我們依重量加入二氧化鈦，Pro 原始輸出與 BioDrop 的差距中位數是 3.8%，R 平方 0.9999。10 月 10 日我們用 1 微米二氧化矽重做。誠實的限制是：在二氧化矽上 Pro 固定比 BioDrop 低約 0.12 OD，而且兩種標準品都不是活細胞。",
-   "trap_en": "Saying 'within 3.8% of the BioDrop' with no mention of the 0.12 OD offset or that the BioDrop is the weaker reference above OD 1.",
-   "trap_zh": "只說『跟 BioDrop 差 3.8%』，卻沒提 0.12 OD 的偏移，也沒提 BioDrop 在 OD 1 以上是比較弱的參考。",
-   "basis": "Hardware 2021 UPenn: how did you validate against a commercial instrument and how close"
-  },
-  {
+    {
    "q_en": "Your reference, the BioDrop, loses accuracy above OD 1. How did you handle that?",
    "q_zh": "你們的對照儀器 BioDrop 在 OD 1 以上會失準，你們怎麼處理？",
    "type": "validate",

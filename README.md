@@ -17,7 +17,7 @@ Static HTML and vanilla JavaScript: no build step to view it, no server, works o
 |---|---|
 | **280 facts** | Every checkable number in the project, each linked to the wiki page it came from |
 | **306 terms** | From DNPH to hollow fiber to contained use, three keywords then one compact definition |
-| **553 questions** | Written for this project, in ten question types, with a model answer and the likely mistake |
+| **542 questions** | Written for this project, in ten question types, with a model answer and the likely mistake |
 | **43 must-drill** | The priority set: picked after reading Results, Hardware and Plants end to end on 30 October 2026, and marked `star` in the source. They glow on every page that shows them, carry the figures a judge would point at and the map nodes they are asked about, and every drill deck weaves them in at about one question in three |
 | **199 deep** | Graduate-level: mechanism, trade-offs, and numbers with their uncertainty. The Deep end deck drills these alone |
 | **34 reasoning** | No answer anywhere on the wiki. The student is given a premise and has to get to the end of it |
@@ -44,7 +44,7 @@ sheet is where `source/bank.json` came from, and the Question Bank page links to
 1. **Start** — the session facts, the countdown, and five rules that decide the twenty minutes.
 2. **Facts** — searchable fact base, plus the ten numbers to know by heart, plus the honest list.
 3. **Terms** — big search, and a quiz box that keeps rotating. Space reveals, right arrow moves on.
-4. **Question Bank** — all 553 questions in one searchable place, tagged by area, by kind of question,
+4. **Question Bank** — all 542 questions in one searchable place, tagged by area, by kind of question,
    and by tier, deep end, adviser or the must-drill set. The three keywords are set larger than anything else on the card
    because at this stage nobody says a model answer back from memory; the full answer, the likely
    mistake and the wiki sources fold away underneath. Each question also shows the figures published on
@@ -57,8 +57,10 @@ sheet is where `source/bank.json` came from, and the Question Bank page links to
    five documentation slots and a filing drill, the figures a judge can point at with every band read
    off them, the numbers that are public under the team's name, seventeen soft spots ranked by how
    little work they take to find, and a drill in the genre. Built from a live API pull, not from the wiki.
-6. **Mock Room** — a panel generated for the session, a question whose domain stays hidden until you
-   call a seat, points, streaks, twenty-second follow-ups, and a card to post when the run ends.
+6. **Mock Room** — a panel generated for the session, a question whose domain, type and owning seat
+   stay hidden until you open the answer, points, streaks, twenty-second follow-ups, and a card to
+   post when the run ends. You say your answer out loud, open the model answer, and only then tell
+   the room whether you had it.
 7. **Figure Room** — the same four judges, but they point at a picture. 162 figures, ten to a run,
    filterable by wave and by domain: two waves off the wiki and a third, 76 strong, off our own
    Registry part pages. Two modes: say what it is out loud and mark

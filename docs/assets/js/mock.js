@@ -31,16 +31,11 @@
     resume: { en: 'Resume', zh: '繼續' },
     good:   { en: 'I had that', zh: '我答得出來' },
     bad:    { en: 'Mark shaky', zh: '標為不熟' },
+    marklab:{ en: 'How did yours compare?', zh: '跟你講的比起來如何？' },
     clear:  { en: 'Clear', zh: '清除' },
     empty:  { en: 'Nothing here yet. Run a few questions first.', zh: '這裡還沒有東西。先練幾題。' },
     answers:{ en: 'answers', zh: '回答' },
     backup: { en: 'backup', zh: '備援' },
-    whoq:   { en: 'Who takes this one?', zh: '這題誰接？' },
-    whohint:{ en: 'Say it out loud first. Keys 1 to 7 pick, Space opens the answer, Enter moves on.',
-              zh: '先出聲回答。鍵盤 1 到 7 選人，空白鍵翻開答案，Enter 下一題。' },
-    right:  { en: 'Right seat', zh: '位置正確' },
-    close:  { en: 'That is the backup seat', zh: '那是備援的位置' },
-    wrong:  { en: 'Not this one', zh: '不是這個位置' },
     owns:   { en: 'It belongs to', zh: '這題屬於' },
     deck:   { en: 'in this deck', zh: '題在這組' },
     score:  { en: 'Points', zh: '分數' },
@@ -53,9 +48,8 @@
     again:  { en: 'Go again', zh: '再來一次' },
     reroll: { en: 'New panel', zh: '換一組評審' },
     rerolled:{ en: 'Four new judges. Nobody owns a subject.', zh: '四位新評審。沒有人固定負責哪個主題。' },
-    seatacc:{ en: 'right seat', zh: '位置答對' },
     conf:   { en: 'answered', zh: '答得出來' },
-    secs:   { en: 's left on average', zh: '秒（平均剩餘）' },
+    secs:   { en: 'avg time left', zh: '平均剩餘' },
     playing:{ en: 'Playing as', zh: '玩家名稱' },
     yourname:{ en: 'your name', zh: '你的名字' },
     endrun: { en: 'End the run and save', zh: '結束並記分' },
@@ -108,7 +102,6 @@
     ihp:   { en: 'Human Practices', zh: '人文實踐', n: 7 },
     any:   { en: 'Anyone', zh: '任何人', n: 0 }
   };
-  var SEAT_ORDER = ['plant', 'wet1', 'wet2', 'hw', 'dry', 'biz', 'ihp'];
 
   /* what a judge throws at you after you have answered */
   var FOLLOWUPS = [
@@ -136,7 +129,7 @@
     type: urlType,
     deck: [],
     i: -1,
-    phase: 'idle',          /* idle | guess | answer | followup */
+    phase: 'idle',          /* idle | ask | answer | followup */
     shown: false,
     shaky: S.load('shaky', []),
     seconds: 90,
@@ -149,11 +142,8 @@
     score: 0,
     streak: 0,
     best: 0,
-    seatRight: 0,
-    seatTried: 0,
     confident: 0,
     timeLeftSum: 0,
-    guess: null,
     marked: false,
     last: null,
     verdict: null,
@@ -387,9 +377,8 @@
     if (state.i + 1 >= state.deck.length) { finish(); return; }
     state.i++;
     state.shown = false;
-    state.guess = null;
     state.marked = false;
-    state.phase = 'guess';
+    state.phase = 'ask';
     state.asker = Math.floor(Math.random() * 4);
     paint();
     startTimer(90);
@@ -416,58 +405,34 @@
        it says pay attention without saying whose question it is */
     markStar(q.star);
 
-    /* nothing about the question is revealed until the seat is called */
+    /* the question stands on its own: what kind of question it is, which domain
+       it comes from and who owns it all wait until the answer is open, so the
+       first thing said out loud is not read off a label */
     el('meta').innerHTML = '';
-    el('guessbox').hidden = false;
-    el('guessres').hidden = true;
     el('ans').hidden = true;
-    el('show').hidden = true;
+    el('show').hidden = false;
+    el('show').textContent = S.p(L.show);
+    el('show').className = 'btn btn-accent';
     el('nextq').hidden = true;
     el('fubox').hidden = true;
     el('marks').hidden = true;
     el('ringwrap').hidden = false;
     el('start').hidden = true;
-    paintSeatChips();
+    el('endrun').hidden = false;
+    el('endrun').textContent = S.p(L.endrun);
     paintScore();
     drawProg();
   }
 
-  function paintSeatChips() {
-    var h = '', i;
-    for (i = 0; i < SEAT_ORDER.length; i++) {
-      var id = SEAT_ORDER[i];
-      h += '<button class="chip seatchip" data-seat="' + id + '">' +
-        '<span class="sn">' + SEATS[id].n + '</span> ' +
-        S.esc(seatName(id).replace(/&amp;/g, '&')) + '</button>';
-    }
-    h += '<button class="chip seatchip" data-seat="any">' + S.esc(seatName('any')) + '</button>';
-    el('seatchips').innerHTML = h;
-  }
-
-  function callSeat(seat) {
-    if (state.phase !== 'guess') return;
+  function reveal() {
     var q = state.deck[state.i];
-    state.guess = seat;
-    state.phase = 'answer';
-    state.seatTried++;
+    state.shown = !state.shown;
+    el('ans').hidden = !state.shown;
+    el('show').textContent = state.shown ? S.p(L.hide) : S.p(L.show);
+    el('show').className = state.shown ? 'btn btn-ghost btn-sm' : 'btn btn-accent';
+    if (!state.shown) return;
 
-    var exact = seat === q.seat;
-    var backup = !exact && q.backup && seat === q.backup;
-    var pts = exact ? 10 : backup ? 4 : 0;
-    if (exact) { state.seatRight++; state.streak++; if (state.streak > state.best) state.best = state.streak; }
-    else state.streak = 0;
-    addPoints(pts, exact ? S.p(L.right) : backup ? S.p(L.close) : S.p(L.wrong));
-
-    var cls = exact ? 'ok' : backup ? 'near' : 'no';
-    var head = exact ? S.p(L.right) : backup ? S.p(L.close) : S.p(L.wrong);
-    el('guessres').className = 'guessres ' + cls;
-    el('guessres').innerHTML = '<b>' + S.esc(head) + '</b> · ' + S.esc(S.p(L.owns)) + ' ' +
-      '<span class="seat-badge"><span class="n">' + seatNum(q.seat) + '</span>' +
-      S.esc(seatName(q.seat).replace(/&amp;/g, '&')) + '</span>' +
-      (q.backup && SEATS[q.backup] ? ' <span class="pill pill-line">' + S.p(L.backup) + ': ' +
-        S.esc(seatName(q.backup).replace(/&amp;/g, '&')) + '</span>' : '');
-    el('guessres').hidden = false;
-    el('guessbox').hidden = true;
+    if (state.phase === 'ask') state.phase = 'answer';
 
     /* only now does the room tell you what kind of question it was */
     el('meta').innerHTML =
@@ -479,19 +444,18 @@
       (q.author ? '<span class="pill pill-author">' + S.esc(S.lang === 'zh' && q.author_zh ? q.author_zh : q.author) +
         (S.lang === 'zh' ? '' : ' asks') + '</span>' : '');
 
-    el('show').hidden = false;
-    el('show').textContent = S.p(L.show);
-    el('marks').hidden = false;
-    el('mgood').textContent = S.p(L.good);
-    el('mbad').textContent = S.p(L.bad);
-  }
+    el('aseat').innerHTML = '<span class="olab">' + S.esc(S.p(L.owns)) + '</span>' +
+      '<span class="seat-badge"><span class="n">' + seatNum(q.seat) + '</span>' +
+      S.esc(seatName(q.seat).replace(/&amp;/g, '&')) + '</span>' +
+      (q.backup && SEATS[q.backup] ? '<span class="pill pill-line">' + S.p(L.backup) + ': ' +
+        S.esc(seatName(q.backup).replace(/&amp;/g, '&')) + '</span>' : '');
 
-  function reveal() {
-    var q = state.deck[state.i];
-    state.shown = !state.shown;
-    el('ans').hidden = !state.shown;
-    el('show').textContent = state.shown ? S.p(L.hide) : S.p(L.show);
-    if (!state.shown) return;
+    if (!state.marked) {
+      el('marks').hidden = false;
+      el('marklab').textContent = S.p(L.marklab);
+      el('mgood').textContent = S.p(L.good);
+      el('mbad').textContent = S.p(L.bad);
+    }
     var kw = (S.lang === 'zh' && q.kw_zh && q.kw_zh.length ? q.kw_zh : q.kw_en) || [];
     var kh = '';
     for (var i = 0; i < kw.length; i++) kh += '<span>' + S.esc(kw[i]) + '</span>';
@@ -508,7 +472,7 @@
 
   function mark(good) {
     var q = state.deck[state.i];
-    if (!q || state.phase === 'guess' || state.marked) return;
+    if (!q || !state.shown || state.marked) return;
     state.marked = true;
     el('marks').hidden = true;
     var at = state.shaky.indexOf(q.id);
@@ -518,8 +482,11 @@
     drawShaky();
 
     var pts = good ? 10 : 2;                      /* honesty still scores */
-    if (good) state.confident++;
-    else state.streak = 0;
+    if (good) {
+      state.confident++;
+      state.streak++;
+      if (state.streak > state.best) state.best = state.streak;
+    } else state.streak = 0;
     var speed = state.left >= 45 ? 5 : state.left >= 15 ? 3 : state.left >= 0 ? 1 : 0;
     state.timeLeftSum += Math.max(0, state.left);
     addPoints(pts + speed, good ? S.p({ en: 'answered', zh: '答得出來' }) : S.p({ en: 'honest', zh: '誠實' }));
@@ -608,12 +575,12 @@
   };
 
   var FLAWLESS = [
-    { en: 'Every microphone went to the right person.', zh: '每一支麥克風都交到對的人手上。' },
-    { en: 'Perfect routing. The Mic Map is in your head.', zh: '完美分工。麥克風地圖已經在你腦子裡了。' }
+    { en: 'Every question answered, every time. Say it like that in Paris.', zh: '每一題都答得出來。在巴黎就照這樣講。' },
+    { en: 'Nothing on that deck caught you out.', zh: '這組題目沒有一題難倒你。' }
   ];
-  var NOSEAT = [
-    { en: 'Not one question went to the right seat.', zh: '沒有一題交到對的位置。' },
-    { en: 'You answered everything. None of it was yours.', zh: '你全部都答了。但沒有一題是你的。' }
+  var NOTHING = [
+    { en: 'Not one answer came out. That is the whole shaky list.', zh: '一題都沒答出來。整組都進了不熟清單。' },
+    { en: 'Everything went on the shaky list. Honest, and a lot of reading to do.', zh: '全部標成不熟。很誠實，但要讀的東西很多。' }
   ];
   var BEST = [
     { en: 'Your best yet, by {d}. Do that again on 13 November.', zh: '你的最佳紀錄，多了 {d} 分。11 月 13 日再做一次。' },
@@ -643,8 +610,8 @@
       var line = pickLine(BEST, 'best');
       return { en: line.en.replace('{d}', r.gain), zh: line.zh.replace('{d}', r.gain) };
     }
-    if (r.n >= 4 && r.acc === 100) return pickLine(FLAWLESS, 'flawless');
-    if (r.n >= 4 && r.acc === 0) return pickLine(NOSEAT, 'noseat');
+    if (r.n >= 4 && r.conf === 100) return pickLine(FLAWLESS, 'flawless');
+    if (r.n >= 4 && r.conf === 0) return pickLine(NOTHING, 'nothing');
     var b = band(r.pct);
     return pickLine(VERDICTS[b], b);
   }
@@ -653,13 +620,12 @@
     stopTimer();
     /* a run you stopped early is scored on what you actually took */
     var n = Math.max(1, Math.min(state.deck.length, state.i + 1));
-    var max = n * 31;                        /* 10 seat + 10 answer + 5 speed + 6 follow-up */
+    var max = n * 21;                        /* 10 answer + 5 speed + 6 follow-up */
     var p0 = who(), key = 'pb-' + (p0 ? (p0.s || p0.n) : 'anon') + '-' + (state.len || 0);
     var prev = S.load(key, 0);
     state.last = {
       n: n,
       pct: Math.min(1, state.score / max),
-      acc: state.seatTried ? Math.round(100 * state.seatRight / state.seatTried) : 0,
       conf: Math.round(100 * state.confident / n),
       avg: Math.round(state.timeLeftSum / n),
       prev: prev,
@@ -668,8 +634,6 @@
     if (state.score > prev) S.save(key, state.score);
     state.verdict = verdict(state.last);
     state.phase = 'idle';
-    el('guessbox').hidden = true;
-    el('guessres').hidden = true;
     el('ans').hidden = true;
     el('show').hidden = true;
     el('nextq').hidden = true;
@@ -730,7 +694,7 @@
   }
 
   function cardData() {
-    var r = state.last || { n: 1, pct: 0, acc: 0, conf: 0, avg: 0 }, k;
+    var r = state.last || { n: 1, pct: 0, conf: 0, avg: 0 }, k;
     var mode = '';
     for (k = 0; k < MODES.length; k++) if (MODES[k].id === state.mode) mode = S.p(MODES[k]);
     var p = who() || { n: S.lang === 'zh' ? '匿名' : 'Anonymous', own: [], mem: [], guest: true };
@@ -740,9 +704,9 @@
       grade: S.p(state.verdict || { en: '', zh: '' }),
       pct: r.pct,
       stats: [
-        [r.acc + '%', S.p(L.seatacc)],
         [r.conf + '%', S.p(L.conf)],
-        [String(state.best), S.p(L.streak)]
+        [String(state.best), S.p(L.streak)],
+        [r.avg + 's', S.p(L.secs)]
       ],
       foot: [mode, r.n + (S.lang === 'zh' ? ' 題' : ' questions'), localDay(),
              'GEMS Taiwan · iGEM 2026'].join('  ·  ')
@@ -825,21 +789,35 @@
     while (vs > 22 && c.measureText(d.grade).width > 700);
     c.fillText(d.grade, 64, 534);
 
+    /* each stat takes the width it needs, so a long label in either language
+       cannot run into the next column or into the footer */
     var sx = 64;
     for (i = 0; i < d.stats.length; i++) {
-      c.fillStyle = '#1d1d1f';
       c.font = '700 32px ' + FD;
+      var vw = c.measureText(d.stats[i][0]).width;
+      c.fillStyle = '#1d1d1f';
       c.fillText(d.stats[i][0], sx, 584);
-      c.fillStyle = '#86868b';
       c.font = '400 20px ' + FD;
+      var lw = c.measureText(d.stats[i][1]).width;
+      c.fillStyle = '#86868b';
       c.fillText(d.stats[i][1], sx, 608);
-      sx += 190;
+      sx += Math.max(150, Math.max(vw, lw) + 44);
     }
 
+    /* the footer takes what is left of the line, and drops to two lines
+       rather than overlap the last stat */
     c.fillStyle = '#a1a1a6';
-    c.font = '400 19px ' + FD;
     c.textAlign = 'right';
-    c.fillText(d.foot, W - 64, 608);
+    var room = (W - 64) - (sx + 8), fs = 19;
+    while (fs > 14) { c.font = '400 ' + fs + 'px ' + FD; if (c.measureText(d.foot).width <= room) break; fs -= 1; }
+    if (c.measureText(d.foot).width <= room) {
+      c.fillText(d.foot, W - 64, 608);
+    } else {
+      var half = d.foot.split('  ·  ');
+      c.font = '400 16px ' + FD;
+      c.fillText(half.slice(0, 2).join('  ·  '), W - 64, 590);
+      c.fillText(half.slice(2).join('  ·  '), W - 64, 612);
+    }
     c.textAlign = 'start';
 
     /* the photograph at work */
@@ -1086,10 +1064,6 @@
     drawChips(); buildDeck();
   });
   el('show').addEventListener('click', reveal);
-  el('seatchips').addEventListener('click', function (e) {
-    var b = e.target.closest('.seatchip'); if (!b) return;
-    callSeat(b.getAttribute('data-seat'));
-  });
   el('pause').addEventListener('click', function () {
     if (state.running) { stopTimer(); this.textContent = S.p(L.resume); }
     else {
@@ -1161,9 +1135,7 @@
   /* keyboard: 1-7 call a seat, space reveals, enter moves on */
   document.addEventListener('keydown', function (e) {
     if (/input|textarea/i.test((e.target.tagName || ''))) return;
-    if (state.phase === 'guess' && e.key >= '1' && e.key <= '7') {
-      callSeat(SEAT_ORDER[parseInt(e.key, 10) - 1]); e.preventDefault();
-    } else if (e.code === 'Space' && !el('show').hidden) { reveal(); e.preventDefault(); }
+    if (e.code === 'Space' && !el('show').hidden) { reveal(); e.preventDefault(); }
     else if (e.key === 'Enter' && !el('nextq').hidden) { next(); e.preventDefault(); }
   });
 
@@ -1187,8 +1159,6 @@
     el('dlimg').textContent = S.p(L.dlimg);
     el('imghint').textContent = S.p(L.imghint);
 
-    el('whoq').textContent = S.p(L.whoq);
-    el('whohint').textContent = S.p(L.whohint);
     el('reroll').textContent = S.p(L.reroll);
     el('l-score').textContent = S.p(L.score);
     el('l-streak').textContent = S.p(L.streak);
